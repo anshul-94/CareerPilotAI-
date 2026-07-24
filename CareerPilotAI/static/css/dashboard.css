@@ -50,8 +50,8 @@
     border-radius: 3px 3px 0 0;
 }
 
-.dash-stat.primary::before { background: var(--gradient-primary); }
-.dash-stat.accent::before { background: var(--gradient-accent); }
+.dash-stat.primary::before { background: var(--primary); }
+.dash-stat.accent::before { background: var(--primary); }
 .dash-stat.warning::before { background: var(--warning); }
 .dash-stat.danger::before { background: var(--danger); }
 .dash-stat.info::before { background: var(--info); }
@@ -59,8 +59,8 @@
 
 .dash-stat:hover {
     border-color: var(--border-light);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .dash-stat .stat-icon {

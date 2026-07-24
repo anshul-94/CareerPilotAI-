@@ -108,7 +108,7 @@
     border-color: var(--border-light);
     background: var(--bg-card-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    box-shadow: var(--shadow-lg);
 }
 
 .card-header {
@@ -274,13 +274,13 @@
 
 .progress-fill {
     height: 100%;
-    background: var(--gradient-primary);
+    background: var(--primary);
     border-radius: 4px;
     transition: width 1s ease;
 }
 
 .progress-fill.accent {
-    background: var(--gradient-accent);
+    background: var(--primary);
 }
 
 /* ── Score Circle ────────────────────────────── */
@@ -406,7 +406,7 @@
 
 /* ── Skeleton Loader ─────────────────────────── */
 .skeleton {
-    background: linear-gradient(90deg, var(--bg-tertiary) 25%, rgba(255,255,255,0.08) 50%, var(--bg-tertiary) 75%);
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, #222 50%, var(--bg-tertiary) 75%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
     border-radius: var(--radius-sm);
@@ -426,7 +426,7 @@
 /* ── Chat Bubbles ────────────────────────────── */
 .chat-message {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
     animation: fadeInUp 0.3s ease;
 }
@@ -436,46 +436,47 @@
 }
 
 .chat-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-full);
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
     flex-shrink: 0;
 }
 
 .chat-message.assistant .chat-avatar {
-    background: var(--gradient-primary);
-    color: white;
+    background: var(--primary);
+    color: var(--bg-primary);
 }
 
 .chat-message.user .chat-avatar {
-    background: var(--accent-glow);
-    color: var(--accent);
+    background: var(--bg-tertiary);
+    color: var(--primary);
+    border: 1px solid var(--border);
 }
 
 .chat-bubble {
-    max-width: 75%;
-    padding: 1rem 1.25rem;
+    max-width: 80%;
+    padding: 0.8rem 1.2rem;
     border-radius: var(--radius-lg);
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .chat-message.assistant .chat-bubble {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-bottom-left-radius: 4px;
-    color: var(--text-secondary);
+    background: transparent;
+    padding: 0.2rem 0;
+    color: var(--text-primary);
 }
 
 .chat-message.user .chat-bubble {
-    background: var(--gradient-primary);
-    color: white;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
     border-bottom-right-radius: 4px;
+    border: 1px solid var(--border);
 }
 
 .chat-bubble h1, .chat-bubble h2, .chat-bubble h3,

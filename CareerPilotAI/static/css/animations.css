@@ -300,23 +300,24 @@
 /* ── Gradient Border Animation ───────────────── */
 .gradient-border {
     position: relative;
-    background: var(--bg-secondary);
+    background: var(--bg-card);
     border-radius: var(--radius-lg);
+    z-index: 1;
 }
 
 .gradient-border::before {
     content: '';
     position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    background: var(--gradient-primary);
+    inset: -2px;
+    background: var(--primary);
+    border-radius: calc(var(--radius-lg) + 2px);
     z-index: -1;
     opacity: 0;
     transition: opacity var(--transition-normal);
 }
 
 .gradient-border:hover::before {
-    opacity: 1;
+    opacity: 0.15;
 }
 
 /* ── Notification Pop ────────────────────────── */
