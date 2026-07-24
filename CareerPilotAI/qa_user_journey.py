@@ -67,8 +67,14 @@ def run_journey():
         page = context.new_page()
 
         # Monitor errors
+        def handle_response(response):
+            if response.status >= 400 and response.url.startswith(BASE_URL):
+                print(f"[HTTP Error] {response.status} at {response.url}")
+                if response.status == 500:
+                    raise Exception(f"HTTP 500 Internal Server Error at {response.url}")
+
         page.on("console", lambda msg: print(f"[Browser Console] {msg.type}: {msg.text}") if msg.type == "error" else None)
-        page.on("response", lambda response: print(f"[HTTP Error] {response.status} at {response.url}") if response.status >= 400 and response.url.startswith(BASE_URL) else None)
+        page.on("response", handle_response)
 
         try:
             print("[Step 1] Start Application (Hit homepage)")
@@ -111,34 +117,39 @@ def run_journey():
 
             print("[Step 6] Chat with AI")
             page.goto("/chat/")
-            page.fill("input#chatInput", "Hello, I want to become a Senior Dev.")
-            page.click("button#sendBtn")
-            page.wait_for_selector(".bot-message", timeout=60000)
+            page.fill("#chatInput", "Hello, I want to become a Senior Dev.")
+            with page.expect_response("**/chat/send", timeout=60000) as response_info:
+                page.click("#sendBtn")
+            assert response_info.value.ok, "Chat response failed"
             
             print("[Step 7] Generate Learning Roadmap")
             page.goto("/learning/")
-            page.fill("input#targetRole", "Senior Backend Developer")
-            page.fill("input#currentSkills", "Python, SQL, Flask")
-            page.click("button#generateRoadmapBtn")
-            page.wait_for_selector(".roadmap-module", timeout=60000)
+            page.fill("#targetRole", "Senior Backend Developer")
+            page.fill("#currentSkills", "Python, SQL, Flask")
+            with page.expect_response("**/learning/generate", timeout=120000) as response_info:
+                page.click("#generateRoadmap")
+            assert response_info.value.ok, "Roadmap generation failed"
 
             print("[Step 8] Generate Mock Interview")
             page.goto("/interview/")
-            page.fill("input#interviewRole", "Backend Developer")
-            page.click("button#startInterviewBtn")
-            page.wait_for_selector(".question-card", timeout=60000)
+            page.fill("#interviewRole", "Backend Developer")
+            with page.expect_response("**/interview/start", timeout=120000) as response_info:
+                page.click("#startInterview")
+            assert response_info.value.ok, "Interview start failed"
 
             print("[Step 9] Generate Project")
             page.goto("/projects/")
-            page.fill("input#projectDomain", "E-commerce")
-            page.click("button#generateProjectsBtn")
-            page.wait_for_selector(".project-card", timeout=60000)
+            page.fill("#projectDomain", "E-commerce")
+            with page.expect_response("**/projects/generate", timeout=120000) as response_info:
+                page.click("#generateProjectBtn")
+            assert response_info.value.ok, "Project generation failed"
 
             print("[Step 10] Search Jobs")
             page.goto("/jobs/")
-            page.fill("input#jobRole", "Backend Engineer")
-            page.click("button#searchJobsBtn")
-            page.wait_for_selector(".job-card", timeout=60000)
+            page.fill("#jobRole", "Backend Engineer")
+            with page.expect_response("**/jobs/search", timeout=60000) as response_info:
+                page.click("#searchJobsBtn")
+            assert response_info.value.ok, "Job search failed"
 
             print("[Step 11] Open History")
             page.goto("/profile/history")

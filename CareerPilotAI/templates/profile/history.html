@@ -24,7 +24,7 @@
                                 <div class="activity-title">{{ item.role }}</div>
                                 <span>Score: {{ item.overall_score }}</span>
                             </div>
-                            <div class="activity-desc">{{ item.created_at.split(' ')[0] }} • {{ item.difficulty | title }}</div>
+                            <div class="activity-desc">{{ item.created_at.split(' ')[0] if item.created_at else 'Unknown' }} • {{ item.difficulty | title }}</div>
                         </div>
                     </li>
                     {% endfor %}
@@ -44,8 +44,8 @@
                     {% for item in chats[:10] %}
                     <li class="activity-item">
                         <div class="activity-content">
-                            <div class="activity-title text-truncate" style="max-width: 250px;">{{ item.last_message }}</div>
-                            <div class="activity-desc">{{ item.created_at.split(' ')[0] }}</div>
+                            <div class="activity-title text-truncate" style="max-width: 250px;">Session {{ item.session_id[:8] }}</div>
+                            <div class="activity-desc">{{ item.started_at.split(' ')[0] if item.started_at else 'Unknown' }}</div>
                         </div>
                     </li>
                     {% endfor %}
@@ -66,7 +66,7 @@
                     <li class="activity-item">
                         <div class="activity-content">
                             <div class="activity-title">{{ item.original_name }}</div>
-                            <div class="activity-desc">{{ item.uploaded_at.split(' ')[0] }}</div>
+                            <div class="activity-desc">{{ item.uploaded_at.split(' ')[0] if item.uploaded_at else 'Unknown' }}</div>
                         </div>
                     </li>
                     {% endfor %}

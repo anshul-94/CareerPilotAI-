@@ -27,20 +27,20 @@
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
-    color: white;
-    box-shadow: 0 4px 15px var(--primary-glow);
+    background: var(--primary);
+    color: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px var(--primary-glow);
+    transform: scale(0.98);
+    background: var(--primary-dark);
 }
 
 .btn-accent {
-    background: var(--gradient-accent);
-    color: white;
-    box-shadow: 0 4px 15px var(--accent-glow);
+    background: var(--primary);
+    color: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-outline {
