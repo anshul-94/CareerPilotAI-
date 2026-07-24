@@ -1,9 +1,9 @@
 """
 CareerPilot AI — Conversation Manager
-Handles the flow of messages between User, Memory, AgentPlanner, and local Ollama.
+Handles the flow of messages between User, Memory, AgentPlanner, and the active AI provider.
 """
 from backend.ai.agent_planner import AgentPlanner
-from backend.ai.ollama_service import ollama
+from backend.ai.providers import ai_gateway
 from backend.models.chat import ChatModel
 from backend.prompts.career_prompt import get_career_chat_prompt
 
@@ -31,8 +31,8 @@ class ConversationManager:
         # 4. Build Prompt
         messages = get_career_chat_prompt(message, history_msgs, user_context)
         
-        # 5. Call LLM
-        response = ollama.chat(messages, temperature=0.7)
+        # 5. Call LLM via active provider
+        response = ai_gateway.chat(messages, temperature=0.7)
         
         ai_message = response.get("content", "I'm unable to reach the AI service right now.")
         
@@ -60,9 +60,9 @@ class ConversationManager:
         # 3. Build Prompt
         messages = get_career_chat_prompt(message, history_msgs, user_context)
         
-        # 4. Stream LLM
+        # 4. Stream via active provider
         full_response = []
-        for chunk in ollama.stream_chat(messages, temperature=0.7):
+        for chunk in ai_gateway.stream_chat(messages, temperature=0.7):
             full_response.append(chunk)
             yield chunk
             

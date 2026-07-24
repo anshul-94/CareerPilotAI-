@@ -210,3 +210,9 @@ Traceback (most recent call last):
   File "/opt/anaconda3/lib/python3.13/site-packages/requests/adapters.py", line 713, in send
     raise ReadTimeout(e, request=request)
 requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+2026-07-24 16:04:26,826 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-24 16:04:42,557 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-24 16:04:59,143 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-24 16:05:09,546 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-24 16:08:30,164 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-24 16:08:30,164 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b

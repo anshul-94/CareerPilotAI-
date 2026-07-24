@@ -1,10 +1,13 @@
 """
 CareerPilot AI — AI Service
-Orchestrates AI calls for career coaching, roadmaps, code review, SQL coaching, and projects using local Ollama.
+Orchestrates AI calls for career coaching, roadmaps, code review, SQL coaching,
+and projects using the active AI provider (Ollama locally, Groq in production).
+
+Routes call ONLY this service — never the underlying provider directly.
 """
 
 from typing import Generator
-from backend.ai.ollama_service import ollama
+from backend.ai.providers import ai_gateway
 from backend.ai.response_parser import parse_json_response, format_markdown_to_html
 from backend.ai.conversation_manager import ConversationManager
 from backend.prompts.career_prompt import get_suggested_questions
@@ -18,7 +21,7 @@ from backend.prompts.interview_prompt import (
 
 
 class AIService:
-    """Orchestrates all AI operations across modules using local Ollama."""
+    """Orchestrates all AI operations across modules via the active AI provider."""
 
     # ── Career Coach ──────────────────────────────────────────────
     
@@ -45,7 +48,7 @@ class AIService:
                          experience_level: str = "beginner") -> dict:
         """Generate a personalized learning roadmap using LLM."""
         messages = get_roadmap_prompt(current_skills, target_role, experience_level)
-        response = ollama.chat(messages, temperature=0.5, json_mode=True)
+        response = ai_gateway.chat(messages, temperature=0.5, json_mode=True)
         
         if response.get("success"):
             roadmap = parse_json_response(response["content"], fallback_structure={
@@ -66,7 +69,7 @@ class AIService:
         messages = get_interview_questions_prompt(
             role, difficulty, experience_years, interview_type
         )
-        response = ollama.chat(messages, temperature=0.6, json_mode=True)
+        response = ai_gateway.chat(messages, temperature=0.6, json_mode=True)
         
         if response.get("success"):
             data = parse_json_response(response["content"], fallback_structure={"questions": []})
@@ -79,7 +82,7 @@ class AIService:
     def evaluate_answer(question: str, answer: str, role: str = "") -> dict:
         """Evaluate a candidate's interview answer."""
         messages = get_answer_evaluation_prompt(question, answer, role)
-        response = ollama.chat(messages, temperature=0.3, json_mode=True)
+        response = ai_gateway.chat(messages, temperature=0.3, json_mode=True)
         
         if response.get("success"):
             evaluation = parse_json_response(response["content"], fallback_structure={
@@ -99,7 +102,7 @@ class AIService:
     def review_code(code: str, language: str = "python") -> dict:
         """Perform a real AI code review."""
         messages = get_code_review_prompt(code, language)
-        response = ollama.chat(messages, temperature=0.3, json_mode=True)
+        response = ai_gateway.chat(messages, temperature=0.3, json_mode=True)
         
         if response.get("success"):
             review = parse_json_response(response["content"], fallback_structure={
@@ -114,9 +117,9 @@ class AIService:
     
     @staticmethod
     def analyze_sql(query: str) -> dict:
-        """Analyze and optimize a SQL query using local Ollama."""
+        """Analyze and optimize a SQL query using the active AI provider."""
         messages = get_sql_analysis_prompt(query)
-        response = ollama.chat(messages, temperature=0.3, json_mode=True)
+        response = ai_gateway.chat(messages, temperature=0.3, json_mode=True)
         
         if response.get("success"):
             analysis = parse_json_response(response["content"], fallback_structure={
@@ -156,7 +159,7 @@ Respond ONLY in JSON format:
             {"role": "user", "content": f"Domain: {domain}\nSkills: {', '.join(skills)}\nLevel: {experience_level}"}
         ]
         
-        response = ollama.chat(messages, temperature=0.7, json_mode=True)
+        response = ai_gateway.chat(messages, temperature=0.7, json_mode=True)
         
         if response.get("success"):
             data = parse_json_response(response["content"], fallback_structure={"projects": []})

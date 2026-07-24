@@ -1,8 +1,9 @@
 """
 CareerPilot AI — Agent Planner
 Intelligently decides which sub-module or action to trigger based on user intent.
+Uses the active AI provider via the provider gateway.
 """
-from backend.ai.ollama_service import ollama
+from backend.ai.providers import ai_gateway
 from backend.ai.response_parser import parse_json_response
 
 class AgentPlanner:
@@ -39,8 +40,8 @@ Return ONLY a JSON response in the following format:
             {"role": "user", "content": user_input}
         ]
 
-        # Call Ollama API
-        response = ollama.chat(messages, temperature=0.1, json_mode=True)
+        # Call active AI provider (Ollama locally, Groq in production)
+        response = ai_gateway.chat(messages, temperature=0.1, json_mode=True)
         
         fallback = {
             "selected_module": "career_coach",
