@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>🎯 Mock Interview Pro</h1>
+        <p class="page-subtitle">Practice with a tough AI interviewer tailored to your target role.</p>
+    </div>
+
+    <!-- Setup View -->
+    <div id="interviewSetup" class="reveal delay-1">
+        <div class="dashboard-grid" style="margin-bottom: 2rem;">
+            <div class="dash-stat primary">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <div class="stat-value">{{ stats.total_interviews }}</div>
+                    <div class="stat-label">Total Interviews</div>
+                </div>
+            </div>
+            <div class="dash-stat accent">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <div class="stat-value">{{ stats.avg_overall }}</div>
+                    <div class="stat-label">Average Score</div>
+                </div>
+            </div>
+            <div class="dash-stat info">
+                <div class="stat-icon">🗣️</div>
+                <div class="stat-info">
+                    <div class="stat-value">{{ stats.avg_comm }}</div>
+                    <div class="stat-label">Avg Communication</div>
+                </div>
+            </div>
+            <div class="dash-stat warning">
+                <div class="stat-icon">💻</div>
+                <div class="stat-info">
+                    <div class="stat-value">{{ stats.avg_tech }}</div>
+                    <div class="stat-label">Avg Technical</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Start New Interview -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Start New Session</h3>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="interviewRole">Target Role</label>
+                    <input type="text" id="interviewRole" class="form-input" placeholder="e.g., Frontend Developer" value="Software Developer">
+                </div>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="interviewDifficulty">Difficulty</label>
+                        <select id="interviewDifficulty" class="form-select">
+                            <option value="easy">Easy</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="interviewExperience">Years of Experience</label>
+                        <input type="number" id="interviewExperience" class="form-input" min="0" max="20" value="0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="interviewType">Interview Type</label>
+                    <select id="interviewType" class="form-select">
+                        <option value="technical">Technical</option>
+                        <option value="behavioral">Behavioral (HR)</option>
+                        <option value="system_design">System Design</option>
+                        <option value="mixed">Mixed</option>
+                    </select>
+                </div>
+                
+                <button id="startInterview" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                    🎯 Start Interview
+                </button>
+            </div>
+
+            <!-- History -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent History</h3>
+                </div>
+                {% if history %}
+                    <ul class="activity-list">
+                        {% for session in history[:5] %}
+                        <li class="activity-item">
+                            <div class="activity-icon" style="background: var(--bg-tertiary);">🎙️</div>
+                            <div class="activity-content">
+                                <div class="flex-between">
+                                    <div class="activity-title">{{ session.role }}</div>
+                                    <span class="badge badge-{% if session.overall_score >= 80 %}success{% elif session.overall_score >= 60 %}warning{% else %}danger{% endif %}">
+                                        Score: {{ session.overall_score }}
+                                    </span>
+                                </div>
+                                <div class="activity-desc">
+                                    {{ session.difficulty | title }} • {{ session.interview_type | title }} • {{ session.created_at.split(' ')[0] }}
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="empty-state">
+                        <div class="empty-icon">📝</div>
+                        <p>No interviews completed yet.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Session View (Hidden by default) -->
+    <div id="interviewSession" style="display: none;">
+        <div class="interview-session">
+            <div class="flex-between" style="margin-bottom: 2rem;">
+                <h2>Live Interview Session</h2>
+                <button class="btn btn-ghost btn-sm" onclick="location.reload()">Abort Session</button>
+            </div>
+            
+            <div id="questionContainer">
+                <!-- Questions rendered by JS -->
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/interview.js') }}"></script>
+{% endblock %}

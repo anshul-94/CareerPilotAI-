@@ -1,0 +1,262 @@
+/* ============================================
+   CareerPilot AI — Dashboard Styles
+   Grid layouts, stat cards, chart containers
+   ============================================ */
+
+/* ── Dashboard Grid ──────────────────────────── */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ── Dashboard Stat Card ─────────────────────── */
+.dash-stat {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.dash-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+}
+
+.dash-stat.primary::before { background: var(--gradient-primary); }
+.dash-stat.accent::before { background: var(--gradient-accent); }
+.dash-stat.warning::before { background: var(--warning); }
+.dash-stat.danger::before { background: var(--danger); }
+.dash-stat.info::before { background: var(--info); }
+.dash-stat.success::before { background: var(--success); }
+
+.dash-stat:hover {
+    border-color: var(--border-light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.dash-stat .stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.dash-stat.primary .stat-icon { background: var(--primary-glow); color: var(--primary-light); }
+.dash-stat.accent .stat-icon { background: var(--accent-glow); color: var(--accent); }
+.dash-stat.warning .stat-icon { background: rgba(255, 179, 71, 0.15); color: var(--warning); }
+.dash-stat.danger .stat-icon { background: rgba(255, 107, 107, 0.15); color: var(--danger); }
+.dash-stat.info .stat-icon { background: rgba(59, 130, 246, 0.15); color: var(--info); }
+.dash-stat.success .stat-icon { background: rgba(0, 212, 170, 0.15); color: var(--success); }
+
+.dash-stat .stat-info .stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-primary);
+}
+
+.dash-stat .stat-info .stat-label {
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+    margin-top: 0.25rem;
+}
+
+/* ── Chart Container ─────────────────────────── */
+.chart-container {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.chart-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.chart-header .chart-legend {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chart-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+}
+
+.chart-legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 250px;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+}
+
+/* ── Activity List ───────────────────────────── */
+.activity-list {
+    list-style: none;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-content .activity-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+}
+
+.activity-content .activity-desc {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* ── Quick Actions ───────────────────────────── */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.quick-action:hover {
+    border-color: var(--primary);
+    background: var(--primary-glow);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+.quick-action .action-icon {
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.quick-action:hover .action-icon {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.quick-action .action-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ── Responsive Dashboard ────────────────────── */
+@media (max-width: 1200px) {
+    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .dashboard-grid-2 { grid-template-columns: 1fr; }
+    .dashboard-grid-3 { grid-template-columns: 1fr; }
+    .quick-actions { grid-template-columns: repeat(2, 1fr); }
+}

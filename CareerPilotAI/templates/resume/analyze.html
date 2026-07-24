@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal flex-between">
+        <div>
+            <h1>🔍 Resume Analysis</h1>
+            <p class="page-subtitle">Analyzing: <strong>{{ resume.original_name }}</strong></p>
+        </div>
+        <div>
+            <a href="{{ url_for('resume.upload') }}" class="btn btn-ghost">← Back to Uploads</a>
+        </div>
+    </div>
+
+    <!-- AI Controls -->
+    <div class="card reveal delay-1" style="margin-bottom: 2rem; background: var(--bg-secondary);">
+        <div class="flex-between" style="flex-wrap: wrap; gap: 1rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <label class="form-label" for="targetRole">Target Role (Optional, for tailored feedback)</label>
+                <input type="text" id="targetRole" class="form-input" placeholder="e.g., Senior Full Stack Engineer">
+            </div>
+            <div style="padding-top: 1.5rem;">
+                <button id="analyzeBtn" class="btn btn-primary" data-resume-id="{{ resume.id }}">
+                    🔍 Run AI Analysis
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Container -->
+    <div id="analysisResults" class="reveal delay-2">
+        {% if analysis %}
+            <!-- Existing Analysis (Loaded from DB) -->
+            <div class="analysis-header">
+                <div class="score-circle" id="atsScoreCircle" data-score="{{ analysis.ats_score }}">
+                    <svg viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6C63FF"/>
+                                <stop offset="100%" style="stop-color:#00D4AA"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="circle-bg" cx="60" cy="60" r="50"/>
+                        <circle class="circle-progress" cx="60" cy="60" r="50"/>
+                    </svg>
+                    <span class="score-value">{{ analysis.ats_score }}</span>
+                    <span class="score-label">ATS Score</span>
+                </div>
+                <div>
+                    <h2>Previous Analysis Results</h2>
+                    <p>{{ analysis.summary }}</p>
+                </div>
+            </div>
+
+            <div class="analysis-grid">
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">✅ Strong Skills</h3></div>
+                    <ul class="skill-list">
+                        {% for skill in analysis.strong_skills %}
+                            <li><span class="skill-icon" style="color:var(--success)">●</span> {{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">⚠️ Weak Areas</h3></div>
+                    <ul class="skill-list">
+                        {% for skill in analysis.weak_skills %}
+                            <li><span class="skill-icon" style="color:var(--warning)">●</span> {{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">🔑 Missing Keywords</h3></div>
+                    <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                        {% for kw in analysis.missing_keywords %}
+                            <span class="tag">{{ kw }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">📝 Grammar & Style</h3></div>
+                    <ul class="skill-list">
+                        {% for issue in analysis.grammar_issues %}
+                            <li><span class="skill-icon" style="color:var(--info)">●</span> {{ issue }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem;">
+                <div class="card-header"><h3 class="card-title">🎯 Action Plan</h3></div>
+                <ol style="padding-left: 1.25rem; color: var(--text-secondary);">
+                    {% for action in analysis.action_plan %}
+                        <li style="margin-bottom: 0.5rem;">{{ action }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        {% else %}
+            <!-- Empty State -->
+            <div class="empty-state">
+                <div class="empty-icon">✨</div>
+                <h3>Ready to analyze</h3>
+                <p>Click the "Run AI Analysis" button above to get comprehensive feedback on your resume.</p>
+            </div>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/resume.js') }}"></script>
+{% endblock %}

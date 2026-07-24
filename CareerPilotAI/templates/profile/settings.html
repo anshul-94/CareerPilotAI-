@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>⚙️ Account Settings</h1>
+        <p class="page-subtitle">Configure your preferences and security settings.</p>
+    </div>
+
+    <div class="grid-2 reveal delay-1">
+        <!-- Preferences -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Career Preferences</h3>
+            </div>
+            
+            <form action="{{ url_for('profile.settings') }}" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="preferred_role">Target Job Title</label>
+                    <input type="text" id="preferred_role" name="preferred_role" class="form-input" value="{{ settings.preferred_role if settings else '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="preferred_location">Preferred Location</label>
+                    <input type="text" id="preferred_location" name="preferred_location" class="form-input" value="{{ settings.preferred_location if settings else '' }}">
+                </div>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="experience_level">Experience Level</label>
+                        <select id="experience_level" name="experience_level" class="form-select">
+                            <option value="fresher" {% if settings and settings.experience_level == 'fresher' %}selected{% endif %}>Fresher (0 yrs)</option>
+                            <option value="junior" {% if settings and settings.experience_level == 'junior' %}selected{% endif %}>Junior (1-3 yrs)</option>
+                            <option value="mid" {% if settings and settings.experience_level == 'mid' %}selected{% endif %}>Mid-Level (3-5 yrs)</option>
+                            <option value="senior" {% if settings and settings.experience_level == 'senior' %}selected{% endif %}>Senior (5+ yrs)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="expected_salary">Expected Salary (USD)</label>
+                        <input type="number" id="expected_salary" name="expected_salary" class="form-input" value="{{ settings.expected_salary if settings else '' }}">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label class="flex" style="align-items: center; gap: 0.5rem; cursor: pointer;">
+                        <input type="checkbox" name="email_alerts" value="1" {% if settings and settings.email_alerts %}checked{% endif %}>
+                        <span style="font-size: 0.9rem;">Send me email alerts for matching jobs</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Save Preferences</button>
+            </form>
+        </div>
+
+        <!-- Security -->
+        <div class="card" style="align-self: start;">
+            <div class="card-header">
+                <h3 class="card-title">Security Settings</h3>
+            </div>
+            
+            <form action="{{ url_for('profile.change_password') }}" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="current_password">Current Password</label>
+                    <input type="password" id="current_password" name="current_password" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="new_password">New Password</label>
+                    <input type="password" id="new_password" name="new_password" class="form-input" required minlength="6">
+                </div>
+                
+                <button type="submit" class="btn btn-outline" style="margin-top: 0.5rem;">Change Password</button>
+            </form>
+        </div>
+        <!-- AI Integration Status -->
+        <div class="card" style="align-self: start;">
+            <div class="card-header">
+                <h3 class="card-title">🦙 Ollama Integration Status</h3>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <p><strong>Host:</strong> <span style="font-family: monospace; color: var(--text-secondary);">{{ host }}</span></p>
+                <p><strong>Model:</strong> <span style="font-family: monospace; color: var(--text-secondary);">{{ model_name }}</span></p>
+            </div>
+            
+            <div id="ai-test-results" style="margin-bottom: 1rem; font-size: 0.9rem; padding: 0.75rem; background: var(--bg-primary); border-radius: 8px; border: 1px solid var(--border-color); display: none;">
+                <!-- Test results will appear here -->
+            </div>
+            
+            <button id="test-ai-btn" class="btn btn-outline" style="width: 100%;">Test Connection</button>
+        </div>
+    </div>
+</main>
+
+<script>
+document.getElementById('test-ai-btn').addEventListener('click', async function() {
+    const btn = this;
+    const resultsDiv = document.getElementById('ai-test-results');
+    
+    btn.textContent = "Testing Connection...";
+    btn.disabled = true;
+    resultsDiv.style.display = "block";
+    resultsDiv.innerHTML = "<em>Pinging Ollama...</em>";
+    
+    try {
+        const response = await fetch("{{ url_for('profile.test_ollama') }}");
+        const data = await response.json();
+        
+        if (data.success) {
+            resultsDiv.innerHTML = `
+                <div style="color: #4ade80; margin-bottom: 0.5rem;"><strong>✅ Ollama is Running</strong></div>
+                <div style="color: var(--text-secondary);">
+                    <div><strong>Version:</strong> ${data.version}</div>
+                    <div><strong>Model:</strong> ${data.model} (Found)</div>
+                    <div><strong>Response Time:</strong> ${data.latency_ms} ms</div>
+                </div>
+            `;
+        } else {
+            let errorHtml = `<div style="color: #ef4444;"><strong>❌ Connection Failed</strong></div>`;
+            if (data.running && !data.model_found) {
+                 errorHtml = `<div style="color: #f59e0b;"><strong>⚠️ Model Missing</strong></div>`;
+            }
+            resultsDiv.innerHTML = `
+                ${errorHtml}
+                <div style="color: var(--text-secondary); margin-top: 0.25rem;">${data.error}</div>
+            `;
+        }
+    } catch (err) {
+        resultsDiv.innerHTML = `
+            <div style="color: #ef4444;"><strong>❌ Network Error</strong></div>
+            <div style="color: var(--text-secondary); margin-top: 0.25rem;">${err.message}</div>
+        `;
+    } finally {
+        btn.textContent = "Test Connection";
+        btn.disabled = false;
+    }
+});
+</script>
+{% endblock %}

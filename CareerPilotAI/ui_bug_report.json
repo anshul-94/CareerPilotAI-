@@ -1,0 +1,33 @@
+{
+    "scanned_urls": [
+        "/dashboard",
+        "/resume/builder",
+        "/",
+        "/jobs/",
+        "/code-review",
+        "/profile/",
+        "/sql-coach",
+        "/register",
+        "/projects/",
+        "/resume/upload",
+        "/learning/",
+        "/profile/settings",
+        "/interview/",
+        "/profile/history",
+        "/chat/"
+    ],
+    "network_errors": [],
+    "console_errors": [
+        {
+            "url": "http://127.0.0.1:5001/jobs/",
+            "text": "API Error: TypeError: Failed to fetch\n    at Object.api (http://127.0.0.1:5001/static/js/app.js:120:36)\n    at HTMLButtonElement.searchJobs (http://127.0.0.1:5001/static/js/jobs.js:27:40)",
+            "type": "error"
+        },
+        {
+            "url": "http://127.0.0.1:5001/interview/",
+            "text": "API Error: TypeError: Failed to fetch\n    at Object.api (http://127.0.0.1:5001/static/js/app.js:120:36)\n    at HTMLButtonElement.startInterview (http://127.0.0.1:5001/static/js/interview.js:27:40)",
+            "type": "error"
+        }
+    ],
+    "broken_buttons": []
+}

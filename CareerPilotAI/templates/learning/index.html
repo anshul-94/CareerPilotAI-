@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal flex-between">
+        <div>
+            <h1>🗺️ AI Learning Roadmap</h1>
+            <p class="page-subtitle">Generate a personalized learning path to reach your career goals.</p>
+        </div>
+    </div>
+
+    <div class="grid-2 reveal delay-1">
+        <!-- Generator Form -->
+        <div class="card" style="align-self: start;">
+            <div class="card-header">
+                <h3 class="card-title">Create New Roadmap</h3>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="targetRole">Target Role</label>
+                <input type="text" id="targetRole" class="form-input" placeholder="e.g., Data Scientist" value="{{ current_user.target_role if current_user.target_role else '' }}">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="currentSkills">Current Skills (comma-separated)</label>
+                <textarea id="currentSkills" class="form-textarea" rows="3" placeholder="e.g., Python, SQL, basic stats">{{ current_user.skills|join(', ') if current_user.skills else '' }}</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="experienceLevel">Experience Level</label>
+                <select id="experienceLevel" class="form-select">
+                    <option value="beginner">Beginner / Fresher</option>
+                    <option value="intermediate">Intermediate (1-3 years)</option>
+                    <option value="advanced">Advanced (3+ years)</option>
+                </select>
+            </div>
+            
+            <button id="generateRoadmap" class="btn btn-primary" style="width: 100%;">
+                🗺️ Generate Roadmap
+            </button>
+        </div>
+
+        <!-- Results Area -->
+        <div id="roadmapResults">
+            {% if active_roadmap %}
+                <!-- Display Active Roadmap -->
+                <div style="animation: fadeInUp 0.5s ease;">
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <div class="flex-between">
+                            <h3>🎯 {{ active_roadmap.target_role }} Learning Roadmap</h3>
+                            <span class="badge badge-primary">{{ active_roadmap.roadmap_data.estimated_duration | default('N/A') }}</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <div class="flex-between" style="margin-bottom: 0.5rem; font-size: 0.85rem;">
+                                <span>Progress</span>
+                                <span>{{ active_roadmap.progress_percent }}%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill accent" style="width: {{ active_roadmap.progress_percent }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if active_roadmap.roadmap_data.weekly_plan %}
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <div class="card-header"><h3 class="card-title">📊 Weekly Plan</h3></div>
+                        {% for w in active_roadmap.roadmap_data.weekly_plan %}
+                            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
+                                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; color: white; flex-shrink: 0;">{{ loop.index }}</div>
+                                <div style="flex: 1;">
+                                    <div style="font-weight: 600; font-size: 0.9rem;">{{ w.week }}</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-tertiary);">{{ w.focus }}</div>
+                                </div>
+                                <span class="badge badge-primary">{{ w.hours }}h</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon">🧭</div>
+                    <h3>No Active Roadmap</h3>
+                    <p>Fill out the form on the left to generate a personalized learning path tailored to your skills and goals.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/learning.js') }}"></script>
+{% endblock %}

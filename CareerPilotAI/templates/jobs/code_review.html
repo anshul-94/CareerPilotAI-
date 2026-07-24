@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>💻 AI Code Reviewer</h1>
+        <p class="page-subtitle">Paste your code for instant bug detection, optimization, and complexity analysis.</p>
+    </div>
+
+    <div class="grid-2 reveal delay-1">
+        <!-- Input Form -->
+        <div class="card" style="align-self: start;">
+            <div class="card-header">
+                <h3 class="card-title">Submit Code for Review</h3>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="codeLang">Language</label>
+                <select id="codeLang" class="form-select">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="go">Go</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="codeInput">Source Code</label>
+                <textarea id="codeInput" class="form-textarea" rows="15" placeholder="Paste your function or class here..." style="font-family: var(--font-mono);"></textarea>
+            </div>
+            
+            <button id="reviewCodeBtn" class="btn btn-primary" style="width: 100%;">
+                🔍 Review Code
+            </button>
+        </div>
+
+        <!-- Results Area -->
+        <div id="reviewResults">
+            <div class="empty-state">
+                <div class="empty-icon">👀</div>
+                <h3>Awaiting Code</h3>
+                <p>Paste your code on the left to get a comprehensive AI review covering bugs, optimizations, and best practices.</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/code-review.js') }}"></script>
+{% endblock %}

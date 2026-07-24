@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>Welcome back, {{ user.full_name or user.username }} 👋</h1>
+        <p class="page-subtitle">{{ greeting }}. Here's your career progress at a glance.</p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="dashboard-grid reveal delay-1">
+        <div class="dash-stat primary">
+            <div class="stat-icon">📄</div>
+            <div class="stat-info">
+                <div class="stat-value" data-counter="{{ resume_score }}">0</div>
+                <div class="stat-label">Resume ATS Score</div>
+            </div>
+        </div>
+        
+        <div class="dash-stat accent">
+            <div class="stat-icon">💼</div>
+            <div class="stat-info">
+                <div class="stat-value" data-counter="{{ job_stats.total_jobs }}">0</div>
+                <div class="stat-label">Jobs Matched</div>
+            </div>
+        </div>
+        
+        <div class="dash-stat info">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-info">
+                <div class="stat-value" data-counter="{{ interview_stats.total_interviews }}">0</div>
+                <div class="stat-label">Mock Interviews</div>
+            </div>
+        </div>
+        
+        <div class="dash-stat warning">
+            <div class="stat-icon">🗺️</div>
+            <div class="stat-info">
+                <div class="stat-value">{{ learning_progress }}%</div>
+                <div class="stat-label">Roadmap Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid-2 reveal delay-2">
+        <!-- Quick Actions -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">⚡ Quick Actions</h3>
+            </div>
+            <div class="quick-actions">
+                <a href="{{ url_for('resume.upload') }}" class="quick-action">
+                    <div class="action-icon">📄</div>
+                    <div class="action-label">Upload Resume</div>
+                </a>
+                <a href="{{ url_for('jobs.index') }}" class="quick-action">
+                    <div class="action-icon">💼</div>
+                    <div class="action-label">Find Jobs</div>
+                </a>
+                <a href="{{ url_for('chat.index') }}" class="quick-action">
+                    <div class="action-icon">💬</div>
+                    <div class="action-label">Ask Coach</div>
+                </a>
+                <a href="{{ url_for('interview.index') }}" class="quick-action">
+                    <div class="action-icon">🎯</div>
+                    <div class="action-label">Practice Interview</div>
+                </a>
+                <a href="{{ url_for('learning.index') }}" class="quick-action">
+                    <div class="action-icon">🗺️</div>
+                    <div class="action-label">Learning Path</div>
+                </a>
+                <a href="{{ url_for('code.code_review') }}" class="quick-action">
+                    <div class="action-icon">💻</div>
+                    <div class="action-label">Review Code</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Performance Chart -->
+        <div class="chart-container">
+            <div class="chart-header">
+                <h3>📈 Interview Performance Trend</h3>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="interviewScoreChart" data-scores='{{ interview_scores | tojson | safe }}'></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid-3 reveal delay-3">
+        <!-- Skills Radar -->
+        <div class="chart-container">
+            <div class="chart-header">
+                <h3>🕸️ Skill Analysis</h3>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="skillRadarChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Application Pipeline -->
+        <div class="chart-container">
+            <div class="chart-header">
+                <h3>📊 Job Pipeline</h3>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="applicationsChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="card" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="card-header">
+                <h3 class="card-title">🕒 Recent Activity</h3>
+                <a href="{{ url_for('profile.history') }}" style="font-size: 0.8rem;">View All</a>
+            </div>
+            <div class="card-body" style="overflow-y: auto;">
+                {% if recent_chats %}
+                <ul class="activity-list">
+                    {% for chat in recent_chats %}
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: var(--primary-glow); color: var(--primary-light);">💬</div>
+                        <div class="activity-content">
+                            <div class="activity-title">Chat with AI Coach</div>
+                            <div class="activity-desc text-truncate" style="max-width: 200px;">{{ chat.message }}</div>
+                        </div>
+                        <div class="activity-time">Recent</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <p>No recent activity.<br>Start by uploading a resume!</p>
+                    <a href="{{ url_for('resume.upload') }}" class="btn btn-sm btn-primary">Upload Resume</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal flex-between">
+        <div>
+            <h1>💼 Job Finder</h1>
+            <p class="page-subtitle">AI scours the web to find high-paying roles that match your skills.</p>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="card reveal delay-1" style="margin-bottom: 2rem; background: var(--bg-secondary);">
+        <form id="jobSearchForm" class="flex gap-2" style="align-items: flex-end; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <label class="form-label" for="jobQuery">Search Keywords (Optional)</label>
+                <input type="text" id="jobQuery" class="form-input" placeholder="e.g., Python Developer, Remote">
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <label class="form-label" for="jobRole">Target Role</label>
+                <input type="text" id="jobRole" class="form-input" placeholder="e.g., Data Engineer">
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <label class="form-label" for="jobLocation">Location</label>
+                <input type="text" id="jobLocation" class="form-input" placeholder="e.g., Remote, India">
+            </div>
+            <div>
+                <button type="submit" id="searchJobsBtn" class="btn btn-primary" style="height: 44px; padding: 0 2rem;">
+                    🔍 Search Jobs
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Results Section -->
+    <div class="reveal delay-2">
+        <div class="flex-between" style="margin-bottom: 1.5rem;">
+            <h2 style="font-size: 1.25rem;">Search Results</h2>
+            <span class="text-tertiary" id="jobCount">{{ recent_jobs|length }} recent jobs</span>
+        </div>
+
+        <div id="jobResults" class="grid-2">
+            {% if recent_jobs %}
+                {% for job in recent_jobs %}
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">{{ job.title }}</div>
+                            <div class="job-company">{{ job.company }}</div>
+                        </div>
+                        <div class="job-match">
+                            <span class="match-score">{{ job.match_score | default(0) }}%</span>
+                            <span class="match-label">Match</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-meta">
+                        <span>📍 {{ job.location }}</span>
+                        <span>💰 {{ job.salary or 'Not disclosed' }}</span>
+                        <span>🏢 {{ job.job_type or 'Full-time' }}</span>
+                    </div>
+
+                    {% if job.skills_required %}
+                    <div class="job-tags">
+                        {% for skill in job.skills_required[:6] %}
+                            <span class="tag">{{ skill }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 1rem;">
+                        {{ job.description[:150] }}...
+                    </p>
+
+                    <div class="job-footer">
+                        <span class="badge badge-info">{{ job.source or 'Web' }}</span>
+                        <div class="flex gap-1">
+                            <button class="btn btn-sm btn-ghost" onclick="saveJob({{ job.id }})">💾 Save</button>
+                            <a href="{{ job.apply_link or '#' }}" target="_blank" class="btn btn-sm btn-primary">Apply →</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state" style="grid-column: 1 / -1;">
+                    <div class="empty-icon">🔍</div>
+                    <h3>No jobs to display</h3>
+                    <p>Enter your search criteria above and let AI find the best matches for you.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/jobs.js') }}"></script>
+{% endblock %}

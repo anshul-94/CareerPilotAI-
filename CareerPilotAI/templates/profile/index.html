@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>👤 My Profile</h1>
+        <p class="page-subtitle">Manage your personal information and online presence.</p>
+    </div>
+
+    <div class="profile-header reveal delay-1">
+        <div class="profile-avatar">
+            {{ user.full_name[0]|upper if user.full_name else user.username[0]|upper }}
+        </div>
+        <div>
+            <h2>{{ user.full_name or user.username }}</h2>
+            <p style="color: var(--text-tertiary); margin-bottom: 0.5rem;">{{ user.email }}</p>
+            <span class="badge badge-primary">Member since {{ user.created_at.split(' ')[0] }}</span>
+        </div>
+    </div>
+
+    <div class="grid-2 reveal delay-2">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Personal Details</h3>
+            </div>
+            
+            <form action="{{ url_for('profile.update') }}" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="full_name">Full Name</label>
+                    <input type="text" id="full_name" name="full_name" class="form-input" value="{{ user.full_name or '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="bio">Professional Summary / Bio</label>
+                    <textarea id="bio" name="bio" class="form-textarea" rows="4">{{ user.bio or '' }}</textarea>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" class="form-input" value="{{ user.phone or '' }}">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="location">Location</label>
+                        <input type="text" id="location" name="location" class="form-input" value="{{ user.location or '' }}">
+                    </div>
+                </div>
+                
+                <h3 style="margin: 1.5rem 0 1rem; font-size: 1.1rem;">Online Links</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="linkedin_url">LinkedIn URL</label>
+                    <input type="url" id="linkedin_url" name="linkedin_url" class="form-input" value="{{ user.linkedin_url or '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="github_url">GitHub URL</label>
+                    <input type="url" id="github_url" name="github_url" class="form-input" value="{{ user.github_url or '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="portfolio_url">Portfolio Website</label>
+                    <input type="url" id="portfolio_url" name="portfolio_url" class="form-input" value="{{ user.portfolio_url or '' }}">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Save Profile</button>
+            </form>
+        </div>
+        
+        <div class="card" style="align-self: start;">
+            <div class="card-header">
+                <h3 class="card-title">Career Snapshot</h3>
+            </div>
+            
+            {% if settings %}
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Target Role</div>
+                    <div style="font-weight: 600;">{{ settings.preferred_role or 'Not set' }}</div>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Experience Level</div>
+                    <div style="font-weight: 600; text-transform: capitalize;">{{ settings.experience_level or 'Not set' }}</div>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Expected Salary</div>
+                    <div style="font-weight: 600;">${{ "{:,}".format(settings.expected_salary) if settings.expected_salary else 'Not set' }}</div>
+                </div>
+                
+                <a href="{{ url_for('profile.settings') }}" class="btn btn-outline btn-sm">Edit Career Preferences</a>
+            {% else %}
+                <p style="color: var(--text-tertiary);">No career preferences set yet.</p>
+                <a href="{{ url_for('profile.settings') }}" class="btn btn-outline btn-sm">Setup Preferences</a>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

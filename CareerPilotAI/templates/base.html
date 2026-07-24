@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CareerPilot AI — AI-Powered Career Intelligence Platform. Learn. Build. Get Hired.">
+    <meta name="keywords" content="AI, Career, Resume, Jobs, Interview, Learning, Career Coach">
+    <meta name="author" content="CareerPilot AI">
+    <title>{% block title %}{{ app_name }}{% endblock %} — AI Career Intelligence</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div id="notifications" style="position:fixed;top:80px;right:20px;z-index:3000;display:flex;flex-direction:column;gap:8px;max-width:400px;">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <span>{{ message }}</span>
+                        <button class="alert-close" onclick="this.parentElement.remove()">×</button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    {% block body %}
+    <!-- Navbar -->
+    {% block navbar %}
+    <nav class="navbar" id="mainNavbar">
+        <a href="{{ url_for('home') }}" class="navbar-brand">
+            <div class="brand-icon">🚀</div>
+            <span>CareerPilot <span class="text-gradient">AI</span></span>
+        </a>
+        
+        {% if not current_user.is_authenticated %}
+        <ul class="navbar-nav">
+            <li><a href="{{ url_for('home') }}#features" class="nav-link">Features</a></li>
+            <li><a href="{{ url_for('home') }}#showcase" class="nav-link">AI Showcase</a></li>
+            <li><a href="{{ url_for('home') }}#testimonials" class="nav-link">Testimonials</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <a href="{{ url_for('auth.login') }}" class="btn btn-ghost">Log In</a>
+            <a href="{{ url_for('auth.register') }}" class="btn btn-primary">Get Started</a>
+        </div>
+        {% else %}
+        <ul class="navbar-nav">
+            <li><a href="{{ url_for('dashboard.index') }}" class="nav-link">Dashboard</a></li>
+            <li><a href="{{ url_for('jobs.index') }}" class="nav-link">Jobs</a></li>
+            <li><a href="{{ url_for('chat.index') }}" class="nav-link">AI Coach</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <span style="color: var(--text-secondary); font-size: 0.85rem;">{{ current_user.full_name }}</span>
+            <a href="{{ url_for('auth.logout') }}" class="btn btn-ghost btn-sm">Logout</a>
+        </div>
+        {% endif %}
+        
+        <button class="navbar-toggle" id="sidebarToggle">☰</button>
+    </nav>
+    {% endblock %}
+    
+    <!-- Page Content -->
+    {% block content %}{% endblock %}
+    
+    {% endblock %}
+    
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/particles-config.js') }}"></script>
+    
+    {% block extra_js %}{% endblock %}
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100
+                });
+            }
+        });
+    </script>
+</body>
+</html>

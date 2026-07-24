@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content" style="padding-bottom: 0;">
+    <div class="chat-layout reveal">
+        <!-- Chat History Sidebar -->
+        <div class="chat-sidebar">
+            <div class="flex-between" style="margin-bottom: 1rem;">
+                <h3 style="font-size: 1rem; margin: 0;">Recent Chats</h3>
+                <a href="{{ url_for('chat.index') }}" class="btn btn-sm btn-ghost" title="New Chat">➕</a>
+            </div>
+            
+            <div class="activity-list">
+                {% if sessions %}
+                    {% for session in sessions %}
+                    <a href="{{ url_for('chat.index', session_id=session.session_id) }}" class="activity-item" style="padding: 0.75rem; border-radius: var(--radius-sm); border: none; background: {% if session.session_id == session_id %}var(--primary-glow){% else %}transparent{% endif %}; text-decoration: none;">
+                        <div class="activity-icon" style="background: var(--bg-tertiary);">💬</div>
+                        <div class="activity-content">
+                            <div class="activity-title text-truncate" style="max-width: 150px; font-size: 0.85rem;">{{ session.last_message }}</div>
+                            <div class="activity-time">{{ session.created_at.split(' ')[0] if session.created_at else 'Recent' }}</div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                {% else %}
+                    <p style="font-size: 0.85rem; color: var(--text-tertiary); text-align: center; margin-top: 2rem;">No chat history.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Chat Main Area -->
+        <div class="chat-main">
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message assistant">
+                    <div class="chat-avatar">🤖</div>
+                    <div class="chat-bubble">
+                        Hello {{ current_user.full_name.split()[0] if current_user.full_name else 'there' }}! 👋<br><br>
+                        I'm your AI Career Coach. I can help you with:<br>
+                        <ul>
+                            <li>Resume reviews and keyword optimization</li>
+                            <li>Interview preparation and behavioral questions</li>
+                            <li>Salary negotiation strategies</li>
+                            <li>Skill development planning</li>
+                        </ul>
+                        How can I help you accelerate your career today?
+                    </div>
+                </div>
+
+                {% for msg in messages %}
+                <div class="chat-message {{ msg.role }}">
+                    <div class="chat-avatar">{{ '👤' if msg.role == 'user' else '🤖' }}</div>
+                    <div class="chat-bubble">
+                        {{ msg.message | safe }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Suggestions -->
+            <div class="chat-suggestions">
+                {% for suggestion in suggestions %}
+                <button class="chat-suggestion-btn">{{ suggestion }}</button>
+                {% endfor %}
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <form id="chatForm">
+                    <input type="hidden" id="sessionId" value="{{ session_id }}">
+                    <div class="chat-input-wrapper">
+                        <textarea id="chatInput" class="form-input" placeholder="Type your message... (Shift+Enter for new line)" required></textarea>
+                        <button type="submit" id="sendBtn" class="btn btn-primary" style="height: 44px; padding: 0 1.5rem;">Send 🚀</button>
+                    </div>
+                </form>
+                <div style="text-align: center; margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-tertiary);">
+                    AI can make mistakes. Consider verifying important career advice.
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

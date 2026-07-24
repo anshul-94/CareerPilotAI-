@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal flex-between">
+        <div>
+            <h1>💼 Saved Jobs</h1>
+            <p class="page-subtitle">Track job saving activity across the platform.</p>
+        </div>
+        <a href="{{ url_for('admin.index') }}" class="btn btn-ghost">← Back to Admin</a>
+    </div>
+
+    <div class="card reveal delay-1">
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">ID</th>
+                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">User ID</th>
+                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Job ID</th>
+                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Status</th>
+                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Saved At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for job in jobs %}
+                    <tr style="border-bottom: 1px solid var(--border); transition: background 0.2s ease;" onmouseover="this.style.background='var(--bg-tertiary)'" onmouseout="this.style.background='transparent'">
+                        <td style="padding: 1rem;">{{ job.id }}</td>
+                        <td style="padding: 1rem; font-weight: 600;">{{ job.user_id }}</td>
+                        <td style="padding: 1rem;">{{ job.job_id }}</td>
+                        <td style="padding: 1rem;">
+                            <span class="badge badge-success">{{ job.status }}</span>
+                        </td>
+                        <td style="padding: 1rem;">{{ job.created_at }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="5" style="padding: 2rem; text-align: center; color: var(--text-tertiary);">No saved jobs found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}

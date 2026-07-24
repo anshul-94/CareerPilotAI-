@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Animated Background -->
+<div id="particles-js"></div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-down">
+            <span class="badge-icon">✨</span>
+            <span>Powered by Ollama AI & Tavily</span>
+        </div>
+        
+        <h1 data-aos="fade-up" data-aos-delay="100">
+            Supercharge Your <br>
+            <span class="text-gradient">Career Trajectory</span>
+        </h1>
+        
+        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="200">
+            Learn. Build. Get Hired.
+        </p>
+        
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+            CareerPilot AI is your personal career copilot. From optimizing your resume to mastering mock interviews and finding hidden job opportunities—all powered by advanced AI.
+        </p>
+        
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+            <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">Start Free Trial</a>
+            <a href="#showcase" class="btn btn-ghost btn-lg">See How It Works</a>
+        </div>
+    </div>
+    
+    <!-- Floating Elements -->
+    <div class="float-element">📄 Resume ATS Check: 98%</div>
+    <div class="float-element">💼 Found 12 matching jobs</div>
+    <div class="float-element">🎯 Interview Score: 85/100</div>
+    <div class="float-element">🚀 New Python Project Generated</div>
+</section>
+
+<!-- Features Section -->
+<section class="section" id="features">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-badge">Platform Features</span>
+        <h2>Everything you need to land your dream job</h2>
+        <p>A complete suite of AI-powered tools designed specifically for modern job seekers.</p>
+    </div>
+    
+    <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">📄</div>
+            <h3>Smart Resume Analyzer</h3>
+            <p>Get instant ATS scores, keyword optimization, and line-by-line feedback to bypass automated filters.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">💼</div>
+            <h3>AI Job Matchmaker</h3>
+            <p>Our agent scours the web to find high-paying roles that perfectly match your extracted skills.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">🎯</div>
+            <h3>Mock Interview Pro</h3>
+            <p>Practice with a tough AI interviewer that adapts to your role and gives actionable scoring.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">🗺️</div>
+            <h3>Dynamic Roadmaps</h3>
+            <p>Generate week-by-week learning plans to bridge the gap between your current skills and target role.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">💻</div>
+            <h3>Code & SQL Coach</h3>
+            <p>Paste your technical interview solutions and get instant code reviews and optimizations.</p>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">💬</div>
+            <h3>24/7 Career Coach</h3>
+            <p>Chat anytime with an AI coach trained on the latest industry hiring trends and salary data.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section stats-section">
+    <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="stat-number" data-counter="50000">0</div>
+            <div class="stat-text">Resumes Analyzed</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-number" data-counter="120000">0</div>
+            <div class="stat-text">Jobs Matched</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number" data-counter="85000">0</div>
+            <div class="stat-text">Interviews Conducted</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-number" data-counter="98">%</div>
+            <div class="stat-text">Success Rate</div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-badge">Success Stories</span>
+        <h2>Loved by job seekers worldwide</h2>
+        <p>See how CareerPilot AI is transforming careers.</p>
+    </div>
+    
+    <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="quote">"The resume analyzer pointed out exactly why I wasn't getting callbacks. After applying its suggestions, I landed 3 interviews in a week."</div>
+            <div class="author">
+                <div class="author-avatar">S</div>
+                <div>
+                    <div class="author-name">Sarah Jenkins</div>
+                    <div class="author-role">Frontend Developer</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="quote">"The mock interview feature is brutally honest but incredibly helpful. It prepared me perfectly for the behavioral rounds at Amazon."</div>
+            <div class="author">
+                <div class="author-avatar">M</div>
+                <div>
+                    <div class="author-name">Michael Chen</div>
+                    <div class="author-role">Data Scientist</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="quote">"I love the job matching. It finds roles that actually fit my weird mix of skills rather than just doing a basic keyword search."</div>
+            <div class="author">
+                <div class="author-avatar">A</div>
+                <div>
+                    <div class="author-name">Priya Patel</div>
+                    <div class="author-role">Product Manager</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section" data-aos="fade-up">
+    <div class="cta-box">
+        <h2>Ready to upgrade your career?</h2>
+        <p>Join thousands of professionals landing better jobs with AI assistance.</p>
+        <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">Create Free Account</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">🚀 CareerPilot AI</div>
+            <p style="color: var(--text-tertiary); font-size: 0.9rem; max-width: 250px;">
+                The ultimate AI-powered career intelligence platform.
+            </p>
+        </div>
+        <div>
+            <h4>Product</h4>
+            <ul class="footer-links">
+                <li><a href="#">Resume Analyzer</a></li>
+                <li><a href="#">Job Search</a></li>
+                <li><a href="#">Mock Interviews</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Resources</h4>
+            <ul class="footer-links">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Career Guides</a></li>
+                <li><a href="#">Interview Tips</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 CareerPilot AI. All rights reserved. A Portfolio Project.
+    </div>
+</footer>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Initialize animated counters on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('[data-counter]');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.counter);
+                    const isPercentage = el.textContent === '%';
+                    
+                    let start = 0;
+                    const duration = 2000;
+                    const startTime = performance.now();
+                    
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 4); // ease out quart
+                        
+                        const current = Math.round(start + (target - start) * eased);
+                        
+                        if (isPercentage) {
+                            el.textContent = current + '%';
+                        } else if (target > 1000) {
+                            el.textContent = (current / 1000).toFixed(0) + 'K+';
+                        } else {
+                            el.textContent = current;
+                        }
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        }
+                    }
+                    
+                    requestAnimationFrame(updateCounter);
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => observer.observe(counter));
+    });
+</script>
+{% endblock %}

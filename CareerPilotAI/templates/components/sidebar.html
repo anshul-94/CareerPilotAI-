@@ -1,0 +1,86 @@
+<!-- CareerPilot AI — Sidebar Component -->
+<aside class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+        <li class="nav-label">Main</li>
+        <li class="nav-item">
+            <a href="{{ url_for('dashboard.index') }}" class="nav-link {% if request.path == '/dashboard' %}active{% endif %}">
+                <span class="nav-icon">📊</span> Dashboard
+            </a>
+        </li>
+        
+        <li class="nav-label">AI Tools</li>
+        <li class="nav-item">
+            <a href="{{ url_for('resume.upload') }}" class="nav-link {% if '/resume' in request.path %}active{% endif %}">
+                <span class="nav-icon">📄</span> Resume Analyzer
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('chat.index') }}" class="nav-link {% if '/chat' in request.path %}active{% endif %}">
+                <span class="nav-icon">🤖</span> AI Career Coach
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('learning.index') }}" class="nav-link {% if '/learning' in request.path %}active{% endif %}">
+                <span class="nav-icon">🗺️</span> Learning Roadmap
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('interview.index') }}" class="nav-link {% if '/interview' in request.path %}active{% endif %}">
+                <span class="nav-icon">🎯</span> Mock Interview
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('jobs.index') }}" class="nav-link {% if request.path == '/jobs/' or request.path == '/jobs' %}active{% endif %}">
+                <span class="nav-icon">💼</span> Job Finder
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('resume.builder') }}" class="nav-link {% if '/resume/builder' in request.path %}active{% endif %}">
+                <span class="nav-icon">📝</span> Resume Builder
+            </a>
+        </li>
+        
+        <li class="nav-label">More Tools</li>
+        <li class="nav-item">
+            <a href="{{ url_for('code.code_review') }}" class="nav-link {% if '/code-review' in request.path %}active{% endif %}">
+                <span class="nav-icon">💻</span> Code Reviewer
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('code.sql_coach') }}" class="nav-link {% if '/sql-coach' in request.path %}active{% endif %}">
+                <span class="nav-icon">🗃️</span> SQL Coach
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('projects.index') }}" class="nav-link {% if '/projects' in request.path %}active{% endif %}">
+                <span class="nav-icon">🚀</span> Project Generator
+            </a>
+        </li>
+        
+        <li class="nav-label">Account</li>
+        <li class="nav-item">
+            <a href="{{ url_for('profile.index') }}" class="nav-link {% if request.path == '/profile/' %}active{% endif %}">
+                <span class="nav-icon">👤</span> Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('profile.history') }}" class="nav-link {% if '/profile/history' in request.path %}active{% endif %}">
+                <span class="nav-icon">📜</span> History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('profile.settings') }}" class="nav-link {% if '/profile/settings' in request.path %}active{% endif %}">
+                <span class="nav-icon">⚙️</span> Settings
+            </a>
+        </li>
+        
+        {% if current_user.is_admin %}
+        <li class="nav-label">Admin</li>
+        <li class="nav-item">
+            <a href="{{ url_for('admin.index') }}" class="nav-link {% if '/admin' in request.path %}active{% endif %}">
+                <span class="nav-icon">🛡️</span> Admin Panel
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</aside>

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal flex-between">
+        <div>
+            <h1>📝 Resume Builder</h1>
+            <p class="page-subtitle">Build a beautiful, ATS-friendly resume in minutes.</p>
+        </div>
+        <div>
+            <button id="downloadPdfBtn" class="btn btn-primary" onclick="alert('PDF generation not fully implemented in demo')">
+                ⬇️ Download PDF
+            </button>
+        </div>
+    </div>
+
+    <div class="builder-layout reveal delay-1">
+        <!-- Form Side -->
+        <div class="builder-form" style="max-height: calc(100vh - 150px); overflow-y: auto;">
+            <h3 style="margin-bottom: 1.5rem;">Personal Information</h3>
+            <div class="grid-2">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" id="b_name" value="{{ user.full_name or '' }}">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="b_email" value="{{ user.email or '' }}">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-input" id="b_phone" value="{{ user.phone or '' }}">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-input" id="b_location" value="{{ user.location or '' }}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Professional Summary</label>
+                <textarea class="form-textarea" id="b_summary" rows="4">{{ user.bio or '' }}</textarea>
+            </div>
+
+            <h3 style="margin-bottom: 1.5rem; margin-top: 2rem;">Experience</h3>
+            <div id="experienceList">
+                <div class="card" style="margin-bottom: 1rem; padding: 1rem;">
+                    <input type="text" class="form-input" placeholder="Company Name" style="margin-bottom: 0.5rem;" value="TechCorp Inc.">
+                    <input type="text" class="form-input" placeholder="Job Title" style="margin-bottom: 0.5rem;" value="Software Engineer">
+                    <div class="grid-2" style="margin-bottom: 0.5rem;">
+                        <input type="text" class="form-input" placeholder="Start Date" value="Jan 2024">
+                        <input type="text" class="form-input" placeholder="End Date" value="Present">
+                    </div>
+                    <textarea class="form-textarea" rows="3" placeholder="Description/Achievements">- Developed microservices using Python and Flask&#10;- Improved API response times by 40%</textarea>
+                </div>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="alert('Add experience logic goes here')">+ Add Experience</button>
+
+            <h3 style="margin-bottom: 1.5rem; margin-top: 2rem;">Education</h3>
+            <div id="educationList">
+                <div class="card" style="margin-bottom: 1rem; padding: 1rem;">
+                    <input type="text" class="form-input" placeholder="University Name" style="margin-bottom: 0.5rem;" value="State University">
+                    <input type="text" class="form-input" placeholder="Degree" style="margin-bottom: 0.5rem;" value="B.S. Computer Science">
+                    <div class="grid-2">
+                        <input type="text" class="form-input" placeholder="Graduation Year" value="2023">
+                        <input type="text" class="form-input" placeholder="GPA" value="3.8/4.0">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="alert('Add education logic goes here')">+ Add Education</button>
+        </div>
+
+        <!-- Preview Side (Live rendering concept) -->
+        <div class="builder-preview">
+            <h1 style="text-align: center; margin-bottom: 0.25rem;">{{ user.full_name or 'Your Name' }}</h1>
+            <p style="text-align: center; margin-bottom: 1.5rem;">{{ user.email }} | {{ user.phone or '123-456-7890' }} | {{ user.location or 'City, State' }}</p>
+            
+            <h2>SUMMARY</h2>
+            <p style="margin-top: 0.5rem;">{{ user.bio or 'Experienced software engineer specializing in backend development and AI integration.' }}</p>
+            
+            <h2>EXPERIENCE</h2>
+            <div style="margin-top: 0.5rem;">
+                <div style="display: flex; justify-content: space-between; font-weight: bold;">
+                    <span>Software Engineer, TechCorp Inc.</span>
+                    <span>Jan 2024 - Present</span>
+                </div>
+                <ul style="padding-left: 1.25rem; margin-top: 0.25rem; font-size: 0.85rem; color: #555;">
+                    <li>Developed microservices using Python and Flask</li>
+                    <li>Improved API response times by 40%</li>
+                </ul>
+            </div>
+            
+            <h2>EDUCATION</h2>
+            <div style="margin-top: 0.5rem;">
+                <div style="display: flex; justify-content: space-between; font-weight: bold;">
+                    <span>State University</span>
+                    <span>2023</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">B.S. Computer Science (GPA: 3.8/4.0)</div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

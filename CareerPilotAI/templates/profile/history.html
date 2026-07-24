@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>📜 Activity History</h1>
+        <p class="page-subtitle">A log of all your interactions with CareerPilot AI.</p>
+    </div>
+
+    <div class="grid-3 reveal delay-1">
+        <!-- Interviews -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">🎯 Mock Interviews</h3>
+            </div>
+            {% if interviews %}
+                <ul class="activity-list">
+                    {% for item in interviews[:10] %}
+                    <li class="activity-item">
+                        <div class="activity-content">
+                            <div class="flex-between">
+                                <div class="activity-title">{{ item.role }}</div>
+                                <span>Score: {{ item.overall_score }}</span>
+                            </div>
+                            <div class="activity-desc">{{ item.created_at.split(' ')[0] }} • {{ item.difficulty | title }}</div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p style="color: var(--text-tertiary); font-size: 0.9rem;">No mock interviews recorded.</p>
+            {% endif %}
+        </div>
+        
+        <!-- Chats -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">💬 Coaching Sessions</h3>
+            </div>
+            {% if chats %}
+                <ul class="activity-list">
+                    {% for item in chats[:10] %}
+                    <li class="activity-item">
+                        <div class="activity-content">
+                            <div class="activity-title text-truncate" style="max-width: 250px;">{{ item.last_message }}</div>
+                            <div class="activity-desc">{{ item.created_at.split(' ')[0] }}</div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p style="color: var(--text-tertiary); font-size: 0.9rem;">No chat history.</p>
+            {% endif %}
+        </div>
+        
+        <!-- Resumes -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">📄 Resumes Analyzed</h3>
+            </div>
+            {% if resumes %}
+                <ul class="activity-list">
+                    {% for item in resumes[:10] %}
+                    <li class="activity-item">
+                        <div class="activity-content">
+                            <div class="activity-title">{{ item.original_name }}</div>
+                            <div class="activity-desc">{{ item.uploaded_at.split(' ')[0] }}</div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p style="color: var(--text-tertiary); font-size: 0.9rem;">No resumes uploaded.</p>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

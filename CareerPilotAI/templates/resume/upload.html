@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header reveal">
+        <h1>📄 Upload Resume</h1>
+        <p class="page-subtitle">Upload your resume for AI-powered ATS analysis and skill extraction.</p>
+    </div>
+
+    <div class="grid-2 reveal delay-1">
+        <!-- Upload Form -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Upload New Resume</h3>
+            </div>
+            
+            <form id="uploadForm" action="{{ url_for('resume.upload') }}" method="POST" enctype="multipart/form-data">
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">📄</div>
+                    <h3>Drag & Drop your resume here</h3>
+                    <p>or click to browse files (PDF only, max 10MB)</p>
+                </div>
+                <input type="file" id="resumeFile" name="resume" accept="application/pdf" style="display: none;">
+            </form>
+            
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-tertiary); font-size: 0.85rem;">
+                <span style="color: var(--primary-light);">🔒</span> Your data is private and secure. We never share your resume.
+            </div>
+        </div>
+
+        <!-- History -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Uploaded Resumes</h3>
+                <span class="badge badge-info">{{ resumes|length }}</span>
+            </div>
+            
+            {% if resumes %}
+                <ul class="activity-list">
+                    {% for resume in resumes %}
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: var(--bg-tertiary);">📄</div>
+                        <div class="activity-content">
+                            <div class="flex-between">
+                                <div class="activity-title">{{ resume.original_name }}</div>
+                                {% if resume.is_primary %}
+                                    <span class="badge badge-primary">Primary</span>
+                                {% endif %}
+                            </div>
+                            <div class="activity-desc">
+                                Uploaded on {{ resume.uploaded_at.split(' ')[0] if resume.uploaded_at else 'Unknown' }} • 
+                                {{ (resume.file_size / 1024)|round(1) }} KB
+                            </div>
+                            
+                            <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem;">
+                                <a href="{{ url_for('resume.analyze', resume_id=resume.id) }}" class="btn btn-sm btn-outline">
+                                    {% if resume.has_analysis %}
+                                        View Analysis (Score: {{ resume.ats_score }})
+                                    {% else %}
+                                        Run AI Analysis
+                                    {% endif %}
+                                </a>
+                                <form action="{{ url_for('resume.delete', resume_id=resume.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this resume?');">
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon">📂</div>
+                    <p>No resumes uploaded yet.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/resume.js') }}"></script>
+{% endblock %}
