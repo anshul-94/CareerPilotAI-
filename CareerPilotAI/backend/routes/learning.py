@@ -1,11 +1,13 @@
 """
 CareerPilot AI — Learning Routes
 AI-powered learning roadmap generation.
+Auto-prefills target role and skills from Career DNA profile.
 """
 
 from flask import Blueprint, render_template, request, session, jsonify
 from backend.utils.decorators import login_required, api_login_required
 from backend.services.learning_service import LearningService
+from backend.services.career_profile_service import CareerProfileService
 
 learning_bp = Blueprint('learning', __name__, url_prefix='/learning')
 
@@ -13,14 +15,16 @@ learning_bp = Blueprint('learning', __name__, url_prefix='/learning')
 @learning_bp.route('/')
 @login_required
 def index():
-    """Learning roadmap page."""
-    user_id = session['user_id']
+    """Learning roadmap page — auto-prefilled from Career DNA profile."""
+    user_id  = session['user_id']
     roadmaps = LearningService.get_user_roadmaps(user_id)
-    active = LearningService.get_active_roadmap(user_id)
-    
+    active   = LearningService.get_active_roadmap(user_id)
+    prefill  = CareerProfileService.get_prefill_for_module(user_id, 'learning')
+
     return render_template('learning/index.html',
-                         roadmaps=roadmaps,
-                         active_roadmap=active)
+                           roadmaps=roadmaps,
+                           active_roadmap=active,
+                           prefill=prefill)
 
 
 @learning_bp.route('/generate', methods=['POST'])

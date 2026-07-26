@@ -1,31 +1,42 @@
 {
     "scanned_urls": [
         "/dashboard",
+        "/resume/upload",
+        "/chat/",
+        "/code-review",
+        "/projects/",
+        "/learning/",
+        "/interview/",
         "/resume/builder",
+        "/profile/",
+        "/profile/history",
+        "/profile/settings",
         "/",
         "/jobs/",
-        "/code-review",
-        "/profile/",
         "/sql-coach",
-        "/register",
-        "/projects/",
-        "/resume/upload",
-        "/learning/",
-        "/profile/settings",
-        "/interview/",
-        "/profile/history",
-        "/chat/"
+        "/register"
     ],
-    "network_errors": [],
+    "network_errors": [
+        {
+            "url": "http://127.0.0.1:5001/interview/",
+            "resource": "http://127.0.0.1:5001/interview/evaluate",
+            "status": 400
+        }
+    ],
     "console_errors": [
         {
-            "url": "http://127.0.0.1:5001/jobs/",
-            "text": "API Error: TypeError: Failed to fetch\n    at Object.api (http://127.0.0.1:5001/static/js/app.js:120:36)\n    at HTMLButtonElement.searchJobs (http://127.0.0.1:5001/static/js/jobs.js:27:40)",
+            "url": "http://127.0.0.1:5001/interview/",
+            "text": "Failed to load resource: the server responded with a status of 400 (BAD REQUEST)",
             "type": "error"
         },
         {
             "url": "http://127.0.0.1:5001/interview/",
-            "text": "API Error: TypeError: Failed to fetch\n    at Object.api (http://127.0.0.1:5001/static/js/app.js:120:36)\n    at HTMLButtonElement.startInterview (http://127.0.0.1:5001/static/js/interview.js:27:40)",
+            "text": "API Error: Error: No questions found for this session\n    at Object.api (http://127.0.0.1:5001/static/js/app.js:124:23)\n    at async submitAllAnswers (http://127.0.0.1:5001/static/js/interview.js:133:22)",
+            "type": "error"
+        },
+        {
+            "url": "http://127.0.0.1:5001/jobs/",
+            "text": "API Error: TypeError: Failed to fetch\n    at Object.api (http://127.0.0.1:5001/static/js/app.js:120:36)\n    at HTMLButtonElement.searchJobs (http://127.0.0.1:5001/static/js/jobs.js:27:40)",
             "type": "error"
         }
     ],

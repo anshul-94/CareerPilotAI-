@@ -6,6 +6,8 @@ Resume upload, analysis, and builder.
 from flask import Blueprint, render_template, request, redirect, url_for, session, flash, jsonify
 from backend.utils.decorators import login_required, api_login_required, handle_errors
 from backend.services.resume_service import ResumeService
+from backend.services.resume_intelligence_service import ResumeIntelligenceService
+from backend.services.career_profile_service import CareerProfileService
 from backend.models.resume import ResumeModel
 from backend.utils.helpers import safe_json_loads
 
@@ -88,25 +90,58 @@ def run_analysis():
 @resume_bp.route('/builder')
 @login_required
 def builder():
-    """Resume builder page."""
+    """AI Resume Intelligence Dashboard."""
     user_id = session['user_id']
     from backend.models.user import UserModel
     user = UserModel.get_by_id(user_id)
-    return render_template('resume/builder.html', user=user)
-
-
-@resume_bp.route('/builder/generate', methods=['POST'])
-@api_login_required
-def generate_resume():
-    """API: Generate a PDF resume from builder data."""
-    data = request.json
     
-    try:
-        from backend.services.resume_builder import ResumeBuilderService
-        pdf_path = ResumeBuilderService.generate_pdf(data)
-        return jsonify({"success": True, "pdf_url": pdf_path})
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
+    # Pre-fetch the latest AI version if it exists
+    latest_version = ResumeIntelligenceService.get_latest_version(user_id)
+    profile = CareerProfileService.get_profile(user_id)
+    
+    return render_template('resume/intelligence.html', 
+                           user=user, 
+                           latest_version=latest_version,
+                           profile=profile)
+
+
+@resume_bp.route('/api/intelligence/generate', methods=['POST'])
+@api_login_required
+def intelligence_generate():
+    """API: Trigger AI to rewrite and optimize the resume."""
+    user_id = session['user_id']
+    data = request.json
+    target_role = data.get('target_role', 'Software Developer')
+    template = data.get('template', 'modern')
+    
+    result = ResumeIntelligenceService.generate_optimized_resume(user_id, target_role, template)
+    
+    if "error" in result:
+        return jsonify({"success": False, "error": result["error"]}), 500
+        
+    return jsonify(result)
+
+
+@resume_bp.route('/api/intelligence/versions', methods=['GET'])
+@api_login_required
+def intelligence_versions():
+    """API: Fetch version history."""
+    user_id = session['user_id']
+    versions = ResumeIntelligenceService.get_version_history(user_id)
+    return jsonify({"success": True, "versions": versions})
+
+
+@resume_bp.route('/api/intelligence/daily-optimize', methods=['POST'])
+@api_login_required
+def intelligence_daily_optimize():
+    """API: Trigger the daily background optimization manually for demo purposes."""
+    user_id = session['user_id']
+    result = ResumeIntelligenceService.run_daily_optimization(user_id)
+    
+    if "error" in result:
+        return jsonify({"success": False, "error": result["error"]}), 500
+        
+    return jsonify(result)
 
 
 @resume_bp.route('/delete/<int:resume_id>', methods=['POST'])

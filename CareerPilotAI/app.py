@@ -32,6 +32,17 @@ def create_app() -> Flask:
     db_path = Config.DATABASE_PATH
     if not os.path.exists(db_path):
         init_db(db_path)
+        
+    # Run dynamic migrations
+    from backend.models.career_profile import migrate_career_profile_table
+    from backend.models.resume_version import migrate_resume_versions_table
+    from backend.models.job_notification import migrate_notification_tables
+    from backend.models.chat import migrate_chat_sessions_table
+    
+    migrate_career_profile_table()
+    migrate_resume_versions_table()
+    migrate_notification_tables()
+    migrate_chat_sessions_table()
     
     # ── Register Blueprints ───────────────────────────────────────
     from backend.routes.auth import auth_bp
@@ -45,6 +56,7 @@ def create_app() -> Flask:
     from backend.routes.projects import projects_bp
     from backend.routes.profile import profile_bp
     from backend.routes.admin import admin_bp
+    from backend.routes.notifications import notifications_bp
     
     app.register_blueprint(auth_bp)
     app.register_blueprint(dashboard_bp)
@@ -57,6 +69,7 @@ def create_app() -> Flask:
     app.register_blueprint(projects_bp)
     app.register_blueprint(profile_bp)
     app.register_blueprint(admin_bp)
+    app.register_blueprint(notifications_bp)
     
     # ── Landing Page Route ────────────────────────────────────────
     @app.route('/')
@@ -99,6 +112,8 @@ def create_app() -> Flask:
     
     @app.errorhandler(500)
     def server_error(e):
+        import traceback
+        traceback.print_exc()
         error_logger.error(f"500 Server Error: {e}", exc_info=True)
         return render_template('errors/500.html'), 500
     

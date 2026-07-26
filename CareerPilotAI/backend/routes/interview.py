@@ -1,11 +1,13 @@
 """
 CareerPilot AI — Interview Routes
 Mock interview sessions with AI evaluation.
+Auto-prefills role and experience from Career DNA profile.
 """
 
 from flask import Blueprint, render_template, request, session, jsonify
 from backend.utils.decorators import login_required, api_login_required
 from backend.services.interview_service import InterviewService
+from backend.services.career_profile_service import CareerProfileService
 
 interview_bp = Blueprint('interview', __name__, url_prefix='/interview')
 
@@ -13,13 +15,16 @@ interview_bp = Blueprint('interview', __name__, url_prefix='/interview')
 @interview_bp.route('/')
 @login_required
 def index():
-    """Mock interview setup page."""
+    """Mock interview setup page — auto-prefilled from Career DNA profile."""
     user_id = session['user_id']
     history = InterviewService.get_user_history(user_id)
-    stats = InterviewService.get_stats(user_id)
-    
+    stats   = InterviewService.get_stats(user_id)
+    prefill = CareerProfileService.get_prefill_for_module(user_id, 'interview')
+
     return render_template('interview/index.html',
-                         history=history, stats=stats)
+                           history=history,
+                           stats=stats,
+                           prefill=prefill)
 
 
 @interview_bp.route('/start', methods=['POST'])

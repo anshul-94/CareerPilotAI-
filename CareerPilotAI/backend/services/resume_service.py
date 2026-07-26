@@ -18,6 +18,16 @@ from backend.utils.helpers import (
     secure_filename, allowed_file, extract_skills_from_text, safe_json_loads
 )
 
+# Import here to avoid circular imports at module level
+def _sync_career_profile(user_id: int, raw_text: str) -> None:
+    """Background-safe wrapper: sync resume text into the career profile."""
+    try:
+        from backend.services.career_profile_service import CareerProfileService
+        CareerProfileService.sync_from_resume(user_id, raw_text)
+        print(f"[✓] Career profile synced for user {user_id}")
+    except Exception as _e:
+        print(f"[WARN] Career profile sync failed: {_e}")
+
 def parse_resume_analysis(raw_text: str) -> dict:
     """Helper to parse resume analysis specifically"""
     return parse_json_response(raw_text)
@@ -85,8 +95,14 @@ class ResumeService:
             # Set as primary if it's the first resume
             if ResumeModel.count_by_user(user_id) == 1:
                 ResumeModel.set_primary(resume_id, user_id)
-            
-            return True, "Resume uploaded successfully!", resume_id
+
+            # ── Smart Profile Sync ─────────────────────────────────
+            # Automatically extract and populate Career DNA profile.
+            # Runs in the same request (fast due to deterministic fallback).
+            _sync_career_profile(user_id, raw_text)
+            # ─────────────────────────────────────────────────────
+
+            return True, "Resume uploaded and profile synced!", resume_id
             
         except Exception as e:
             # Cleanup on failure
