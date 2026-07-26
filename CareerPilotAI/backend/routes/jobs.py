@@ -55,6 +55,9 @@ def search():
         location = location or prefill.get('preferred_location', '')
 
     result = JobService.search_for_user(user_id, query, role, location)
+    
+    if "error" in result:
+        return jsonify({"success": False, "error": result["error"]}), 500
 
     return jsonify({
         "success":      True,
@@ -90,6 +93,9 @@ def search_override():
                         "error": "Please provide a search term for override."}), 400
 
     result = JobService.search_for_user(user_id, query, role, location)
+    
+    if "error" in result:
+        return jsonify({"success": False, "error": result["error"]}), 500
 
     return jsonify({
         "success":        True,

@@ -12,6 +12,9 @@ from backend.prompts.job_prompt import get_job_match_prompt
 from backend.models.job import JobModel
 from backend.models.resume import ResumeModel
 from backend.utils.helpers import extract_skills_from_text, calculate_match_score, safe_json_loads
+import logging
+
+logger = logging.getLogger("careerpilot.job_service")
 
 
 class JobService:
@@ -33,6 +36,10 @@ class JobService:
         if resume and resume.get('raw_text'):
             skills = extract_skills_from_text(resume['raw_text'])
         
+        logger.info(f"--- [JobService] Search Triggered for User {user_id} ---")
+        logger.info(f"Target Role: '{role}' | Location: '{location}' | Custom Query: '{custom_query}'")
+        logger.info(f"Extracted Skills: {skills}")
+        
         # Build search queries
         if custom_query:
             queries = [custom_query]
@@ -44,8 +51,22 @@ class JobService:
                 experience="fresher"
             )
         
-        # Execute search
-        all_jobs = search_multiple_queries(queries, max_results_per_query=5)
+        logger.info(f"Generated Search Queries: {queries}")
+        
+        # Execute search with error handling
+        try:
+            all_jobs = search_multiple_queries(queries, max_results_per_query=5)
+        except Exception as e:
+            logger.error(f"[JobService] search_multiple_queries completely failed for User {user_id}: {e}")
+            return {
+                "error": str(e),
+                "jobs": [],
+                "total": 0,
+                "queries_used": queries,
+                "user_skills": skills
+            }
+        
+        logger.info(f"Post-search: {len(all_jobs)} raw jobs retrieved.")
         
         # Calculate match scores
         for job in all_jobs:
@@ -62,6 +83,8 @@ class JobService:
         
         # Sort by match score
         all_jobs.sort(key=lambda x: x.get("match_score", 0), reverse=True)
+        
+        logger.info(f"Post-filtering & scoring: {len(all_jobs)} jobs returning to frontend.")
         
         # Save to history
         if all_jobs:

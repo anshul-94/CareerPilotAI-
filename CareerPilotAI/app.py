@@ -50,7 +50,19 @@ Model : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_
         print(f"USE_OLLAMA={Config.USE_OLLAMA}", flush=True)
         print(f"USE_GROQ={Config.USE_GROQ}", flush=True)
         print(f"GROQ_API_KEY exists? {bool(Config.GROQ_API_KEY)}", flush=True)
-        print(f"OLLAMA_BASE_URL={Config.OLLAMA_HOST}\n", flush=True)
+        print(f"OLLAMA_BASE_URL={Config.OLLAMA_HOST}", flush=True)
+        
+        # Extended search/job provider checks for production debugging
+        print(f"DATABASE_URL exists? {bool(os.getenv('DATABASE_URL'))}", flush=True)
+        print(f"JOB_PROVIDER={os.getenv('JOB_PROVIDER', 'tavily')}", flush=True)
+        print(f"SEARCH_PROVIDER={os.getenv('SEARCH_PROVIDER', 'tavily')}", flush=True)
+        print(f"TAVILY_API_KEY exists? {bool(os.getenv('TAVILY_API_KEY'))}", flush=True)
+        print(f"SERP_API_KEY exists? {bool(os.getenv('SERP_API_KEY'))}", flush=True)
+        print(f"RAPID_API_KEY exists? {bool(os.getenv('RAPID_API_KEY'))}", flush=True)
+        print(f"ADZUNA_APP_ID exists? {bool(os.getenv('ADZUNA_APP_ID'))}", flush=True)
+        print(f"ADZUNA_KEY exists? {bool(os.getenv('ADZUNA_KEY'))}", flush=True)
+        print(f"JOOBLE_KEY exists? {bool(os.getenv('JOOBLE_KEY'))}", flush=True)
+        print(f"JSEARCH_KEY exists? {bool(os.getenv('JSEARCH_KEY'))}\n", flush=True)
         
         from backend.database.startup import initialize_database
         initialize_database()

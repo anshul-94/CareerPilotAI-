@@ -9,7 +9,9 @@ import json
 import requests
 from typing import Optional
 
+import logging
 
+logger = logging.getLogger("careerpilot.job_finder")
 
 # Configuration
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY", "")
@@ -41,8 +43,8 @@ def search_jobs(
         Dict with 'success', 'results', and optional 'error' keys
     """
     if not is_api_configured():
-        print("[INFO] Tavily API not configured.")
-        return _get_fallback_results(query, "Tavily API not configured.")
+        logger.error("[Tavily] API key is missing. Ensure TAVILY_API_KEY is set.")
+        raise ValueError("Tavily API key is missing. Please set it in your environment variables.")
     
     if include_domains is None:
         include_domains = [
@@ -65,15 +67,23 @@ def search_jobs(
     }
     
     try:
+        logger.info(f"[Tavily] Calling {TAVILY_API_URL} | Query: '{query}' | Domains: {len(include_domains)}")
         response = requests.post(
             TAVILY_API_URL,
             json=payload,
             timeout=REQUEST_TIMEOUT
         )
         
+        logger.info(f"[Tavily] HTTP Status: {response.status_code}")
+        
         if response.status_code == 200:
             data = response.json()
             results = _parse_tavily_results(data)
+            logger.info(f"[Tavily] Success! Parsed {len(results)} jobs from {len(data.get('results', []))} raw results.")
+            # Do not log entire raw body, just first 500 chars to avoid overwhelming logs
+            raw_body = json.dumps(data)
+            logger.debug(f"[Tavily] Raw response snippet: {raw_body[:500]}...")
+            
             return {
                 "success": True,
                 "results": results,
@@ -82,25 +92,29 @@ def search_jobs(
                 "mock": False
             }
         
-        elif response.status_code == 401:
-            print("[ERROR] Invalid Tavily API key")
-            return _get_fallback_results(query, error="Invalid API key")
+        elif response.status_code in (401, 403):
+            logger.error(f"[Tavily] Authentication/Authorization failed. HTTP {response.status_code}. Response: {response.text[:500]}")
+            raise PermissionError(f"Tavily API auth error (HTTP {response.status_code}). Check your API key or IP whitelist.")
+            
+        elif response.status_code == 429:
+            logger.error("[Tavily] Rate limit exceeded (HTTP 429).")
+            raise ConnectionError("Tavily API rate limit exceeded (HTTP 429).")
             
         else:
-            print(f"[ERROR] Tavily API returned {response.status_code}")
-            return _get_fallback_results(query, error=f"API error ({response.status_code})")
+            logger.error(f"[Tavily] Unexpected API error. HTTP {response.status_code}. Response: {response.text[:500]}")
+            raise Exception(f"Tavily API returned {response.status_code}: {response.text[:100]}")
             
     except requests.exceptions.Timeout:
-        print("[WARN] Tavily request timed out")
-        return _get_fallback_results(query, error="Request timed out")
+        logger.error(f"[Tavily] Request timed out after {REQUEST_TIMEOUT}s.")
+        raise TimeoutError(f"Tavily API connection timed out after {REQUEST_TIMEOUT}s.")
         
     except requests.exceptions.ConnectionError:
-        print("[ERROR] Cannot connect to Tavily API")
-        return _get_fallback_results(query, error="Connection error")
+        logger.error("[Tavily] ConnectionError: Cannot connect to Tavily API.")
+        raise ConnectionError("Failed to connect to Tavily API. Network issue or DNS failure.")
         
     except Exception as e:
-        print(f"[ERROR] Tavily error: {str(e)}")
-        return _get_fallback_results(query, error=str(e))
+        logger.error(f"[Tavily] Unexpected error: {str(e)}")
+        raise
 
 
 def build_job_search_queries(skills: list[str], role: str = "",
@@ -165,16 +179,27 @@ def search_multiple_queries(queries: list[str], max_results_per_query: int = 5) 
     """
     all_results = []
     seen_urls = set()
+    errors = []
     
     for query in queries:
-        result = search_jobs(query, max_results=max_results_per_query)
-        if result["success"]:
-            for job in result["results"]:
-                url = job.get("apply_link", "")
-                if url and url not in seen_urls:
-                    seen_urls.add(url)
-                    all_results.append(job)
+        try:
+            result = search_jobs(query, max_results=max_results_per_query)
+            if result.get("success"):
+                for job in result["results"]:
+                    url = job.get("apply_link", "")
+                    if url and url not in seen_urls:
+                        seen_urls.add(url)
+                        all_results.append(job)
+        except Exception as e:
+            logger.error(f"[Tavily] Query '{query}' failed: {e}")
+            errors.append(str(e))
+            
+    if not all_results and errors:
+        # If no results were found and we hit errors, propagate the most relevant error
+        logger.error("[Tavily] All queries failed. Bubbling up exception.")
+        raise Exception(f"Job search failed: {errors[0]}")
     
+    logger.info(f"[Tavily] search_multiple_queries completed. Total unique jobs found: {len(all_results)}")
     return all_results
 
 

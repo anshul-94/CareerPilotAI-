@@ -2,8 +2,8 @@
  * Debug mode: on
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5001
- * Running on http://192.168.29.212:5001
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.29.212:5002
 Press CTRL+C to quit
  * Restarting with watchdog (fsevents)
 
@@ -19,6 +19,16 @@ USE_OLLAMA=True
 USE_GROQ=False
 GROQ_API_KEY exists? False
 OLLAMA_BASE_URL=http://localhost:11434
+DATABASE_URL exists? False
+JOB_PROVIDER=tavily
+SEARCH_PROVIDER=tavily
+TAVILY_API_KEY exists? True
+SERP_API_KEY exists? False
+RAPID_API_KEY exists? False
+ADZUNA_APP_ID exists? False
+ADZUNA_KEY exists? False
+JOOBLE_KEY exists? False
+JSEARCH_KEY exists? False
 
 
 Initializing database...
@@ -37,5 +47,5 @@ Server Ready.
 =========================
  * Debugger is active!
  * Debugger PIN: 878-874-648
-/opt/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-zrijzfrf'}
+/opt/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-ru1t6ige'}
   warnings.warn(
