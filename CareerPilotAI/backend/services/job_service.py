@@ -6,7 +6,7 @@ Handles job searching, matching, and tracking.
 import json
 from typing import Optional
 from backend.ai.tavily_client import search_jobs, build_job_search_queries, search_multiple_queries
-from backend.ai.ollama_service import ollama
+from backend.services.ai_service import AIService
 from backend.ai.response_parser import parse_json_response
 from backend.prompts.job_prompt import get_job_match_prompt
 from backend.models.job import JobModel
@@ -89,7 +89,7 @@ class JobService:
         description = job.get('description', '') or f"{job['title']} at {job['company']}"
         
         messages = get_job_match_prompt(skills, description)
-        response = ollama.chat(messages, temperature=0.3, json_mode=True)
+        response = AIService.chat_completion(messages, temperature=0.3, json_mode=True)
         
         if response.get("success"):
             analysis = parse_json_response(response["content"], fallback_structure={

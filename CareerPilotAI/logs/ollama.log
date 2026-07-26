@@ -300,3 +300,5 @@ requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434
 2026-07-26 19:58:26,122 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-26 19:59:12,162 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-26 19:59:12,408 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 20:21:08,985 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 20:21:09,310 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b

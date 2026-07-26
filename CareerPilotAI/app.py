@@ -31,16 +31,26 @@ def create_app() -> Flask:
     is_reloader = os.environ.get('WERKZEUG_RUN_MAIN') == 'true'
     if not Config.DEBUG or is_reloader:
         import sys
-        print(f"""
-=========================
-CareerPilot AI
-=========================
+        
+        # Validation checks
+        if Config.AI_PROVIDER == 'groq' and not Config.GROQ_API_KEY:
+            print("ERROR: Missing GROQ_API_KEY", flush=True)
+            sys.exit(1)
 
+        print(f"""
+==========================
+CareerPilot AI
 Environment : {Config.ENVIRONMENT.capitalize()}
-AI Provider : {Config.AI_PROVIDER.capitalize()}
-Model       : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
-Database    : SQLite
-Debug       : {Config.DEBUG}""", flush=True)
+Provider : {Config.AI_PROVIDER.capitalize()}
+Model : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
+==========================""", flush=True)
+
+        print("--- Environment Variables ---", flush=True)
+        print(f"ENVIRONMENT={Config.ENVIRONMENT}", flush=True)
+        print(f"USE_OLLAMA={Config.USE_OLLAMA}", flush=True)
+        print(f"USE_GROQ={Config.USE_GROQ}", flush=True)
+        print(f"GROQ_API_KEY exists? {bool(Config.GROQ_API_KEY)}", flush=True)
+        print(f"OLLAMA_BASE_URL={Config.OLLAMA_HOST}\n", flush=True)
         
         from backend.database.startup import initialize_database
         initialize_database()

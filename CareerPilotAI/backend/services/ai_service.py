@@ -22,6 +22,16 @@ from backend.prompts.interview_prompt import (
 
 class AIService:
     """Orchestrates all AI operations across modules via the active AI provider."""
+    
+    @staticmethod
+    def generate(prompt: str, temperature: float = 0.7, json_mode: bool = False) -> dict:
+        """Universal text generation abstraction."""
+        return ai_gateway.generate(prompt, temperature=temperature, json_mode=json_mode)
+
+    @staticmethod
+    def chat_completion(messages: list, temperature: float = 0.7, json_mode: bool = False) -> dict:
+        """Universal chat completion abstraction (bypasses conversation manager)."""
+        return ai_gateway.chat(messages, temperature=temperature, json_mode=json_mode)
 
     # ── Career Coach ──────────────────────────────────────────────
     

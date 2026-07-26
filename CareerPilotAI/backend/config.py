@@ -26,11 +26,16 @@ class BaseConfig:
     
     @property
     def AI_PROVIDER(self):
+        # Strict logic: Production NEVER uses Ollama
+        if self.ENVIRONMENT == 'production' or os.getenv('RENDER') == 'true':
+            return 'groq'
+            
         if self.USE_OLLAMA:
             return 'ollama'
         elif self.USE_GROQ:
             return 'groq'
-        return 'ollama' # default fallback
+            
+        return 'ollama' # default fallback for local
     
     # Ollama settings
     OLLAMA_HOST = os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')
@@ -58,6 +63,7 @@ class BaseConfig:
 
 class DevelopmentConfig(BaseConfig):
     """Development-specific overrides."""
+    ENVIRONMENT = 'development'
     DEBUG = True
     USE_OLLAMA = True
     USE_GROQ = False
@@ -65,6 +71,7 @@ class DevelopmentConfig(BaseConfig):
 
 class ProductionConfig(BaseConfig):
     """Production-specific overrides."""
+    ENVIRONMENT = 'production'
     DEBUG = False
     USE_OLLAMA = False
     USE_GROQ = True
@@ -72,8 +79,10 @@ class ProductionConfig(BaseConfig):
 
 def get_config():
     """Factory to retrieve the appropriate config based on environment."""
-    env = os.getenv('ENVIRONMENT', 'development').lower()
-    if env == 'production':
+    env = os.getenv('ENVIRONMENT', os.getenv('FLASK_ENV', 'development')).lower()
+    is_render = os.getenv('RENDER', 'false').lower() == 'true'
+    
+    if env == 'production' or is_render:
         return ProductionConfig()
     return DevelopmentConfig()
 

@@ -18,7 +18,7 @@ from typing import Optional
 from backend.models.career_profile import CareerProfileModel, migrate_career_profile_table
 from backend.models.user import UserModel
 from backend.models.project import SettingsModel
-from backend.ai.ollama_service import ollama
+from backend.services.ai_service import AIService
 from backend.ai.response_parser import parse_json_response
 from backend.prompts.profile_extraction_prompt import (
     get_deep_profile_extraction_prompt,
@@ -103,7 +103,7 @@ class CareerProfileService:
 
         # 1. LLM extraction
         messages = get_deep_profile_extraction_prompt(resume_text)
-        response = ollama.chat(messages, temperature=0.1, json_mode=True)
+        response = AIService.chat_completion(messages, temperature=0.1, json_mode=True)
 
         extracted: dict = {}
         if response.get("success"):
@@ -149,7 +149,7 @@ class CareerProfileService:
             return
 
         messages = get_career_health_prompt(profile)
-        response = ollama.chat(messages, temperature=0.2, json_mode=True)
+        response = AIService.chat_completion(messages, temperature=0.2, json_mode=True)
 
         if not response.get("success"):
             return

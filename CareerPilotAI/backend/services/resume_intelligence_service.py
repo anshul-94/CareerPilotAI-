@@ -8,7 +8,7 @@ from typing import Optional, List
 from backend.models.resume_version import ResumeVersionModel, migrate_resume_versions_table
 from backend.services.career_profile_service import CareerProfileService
 from backend.services.job_agent_service import JobNotificationAgent
-from backend.ai.ollama_service import ollama
+from backend.services.ai_service import AIService
 from backend.ai.response_parser import parse_json_response
 from backend.prompts.resume_intelligence_prompt import (
     get_resume_rewrite_prompt,
@@ -44,7 +44,7 @@ class ResumeIntelligenceService:
 
         # 3. Rewrite Resume via AI
         messages = get_resume_rewrite_prompt(profile, target_role, market_insights)
-        response = ollama.chat(messages, temperature=0.3, json_mode=True)
+        response = AIService.chat_completion(messages, temperature=0.3, json_mode=True)
         
         if not response.get("success"):
             return {"error": "AI failed to generate resume. Please try again."}
@@ -55,7 +55,7 @@ class ResumeIntelligenceService:
             
         # 4. Score the generated resume
         score_messages = get_resume_scoring_prompt(rewritten_resume, target_role)
-        score_response = ollama.chat(score_messages, temperature=0.1, json_mode=True)
+        score_response = AIService.chat_completion(score_messages, temperature=0.1, json_mode=True)
         
         scores = {}
         suggestions = []

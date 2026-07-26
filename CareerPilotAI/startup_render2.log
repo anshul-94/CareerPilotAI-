@@ -1,0 +1,72 @@
+
+==========================
+CareerPilot AI
+Environment : Production
+Provider : Groq
+Model : llama-3.3-70b-versatile
+==========================
+--- Environment Variables ---
+ENVIRONMENT=production
+USE_OLLAMA=False
+USE_GROQ=True
+GROQ_API_KEY exists? True
+OLLAMA_BASE_URL=http://localhost:11434
+
+
+Initializing database...
+
+[✓] career_profiles
+
+[✓] resume_versions
+
+[✓] notification_agent
+
+[✓] chat_sessions
+
+Database Ready.
+
+Server Ready.
+=========================
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/app.py", line 171, in <module>
+    app = create_app()
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/app.py", line 61, in create_app
+    from backend.routes.dashboard import dashboard_bp
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/dashboard.py", line 13, in <module>
+    from backend.services.resume_service import ResumeService
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/resume_service.py", line 11, in <module>
+    from backend.services.ai_service import AIService
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/ai_service.py", line 10, in <module>
+    from backend.ai.providers import ai_gateway
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/__init__.py", line 84, in <module>
+    ai_gateway: BaseProvider = get_provider()
+                               ~~~~~~~~~~~~^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/__init__.py", line 56, in get_provider
+    return GroqProvider()
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/groq_provider.py", line 56, in __init__
+    self._client = self._Groq(api_key=self.api_key, timeout=self.timeout)
+                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/groq/_client.py", line 99, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        version=__version__,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        _strict_response_validation=_strict_response_validation,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/groq/_base_client.py", line 824, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ~~~~~~~~~~~~~~~~~~~~~~^
+        base_url=base_url,
+        ^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        follow_redirects=True,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/groq/_base_client.py", line 722, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'

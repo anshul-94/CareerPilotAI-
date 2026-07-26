@@ -8,7 +8,7 @@ import json
 from typing import Tuple, Optional
 from backend.models.resume import ResumeModel
 from backend.models.project import ResumeAnalysisModel
-from backend.ai.ollama_service import ollama
+from backend.services.ai_service import AIService
 from backend.ai.response_parser import parse_json_response
 from backend.prompts.resume_prompt import (
     get_resume_analysis_prompt,
@@ -148,7 +148,7 @@ class ResumeService:
         
         # Build prompt and call AI
         messages = get_resume_analysis_prompt(resume['raw_text'], target_role)
-        response = ollama.chat(messages, temperature=0.3, json_mode=True)
+        response = AIService.chat_completion(messages, temperature=0.3, json_mode=True)
         
         if not response.get("success"):
             return False, "AI analysis failed. Please try again.", None
@@ -196,7 +196,7 @@ class ResumeService:
         # AI-based extraction (more comprehensive)
         try:
             messages = get_skills_extraction_prompt(resume['raw_text'])
-            response = ollama.chat(messages, temperature=0.2, json_mode=True)
+            response = AIService.chat_completion(messages, temperature=0.2, json_mode=True)
             if response.get("success"):
                 data = parse_json_response(response["content"], fallback_structure={"technical_skills": [], "tools": []})
                 ai_skills = data.get("technical_skills", []) + data.get("tools", [])

@@ -16,7 +16,7 @@ import random
 from datetime import datetime
 from typing import Optional
 
-from backend.ai.ollama_service import ollama
+from backend.services.ai_service import AIService
 from backend.ai.tavily_client import search_jobs, search_multiple_queries
 from backend.ai.response_parser import parse_json_response
 from backend.models.resume import ResumeModel
@@ -391,7 +391,7 @@ def _enrich_job_with_scores(job: dict, profile: dict, use_llm: bool = False) -> 
                 salary=job.get("salary_raw", ""),
                 source=job.get("source", "")
             )
-            resp = ollama.chat(messages, temperature=0.2, json_mode=True)
+            resp = AIService.chat_completion(messages, temperature=0.2, json_mode=True)
             if resp.get("success"):
                 llm_result = parse_json_response(resp["content"], fallback_structure={})
         except Exception as e:
@@ -510,7 +510,7 @@ class JobNotificationAgent:
         profile_data = {}
         try:
             messages = get_profile_extraction_prompt(raw_text)
-            resp = ollama.chat(messages, temperature=0.2, json_mode=True)
+            resp = AIService.chat_completion(messages, temperature=0.2, json_mode=True)
             if resp.get("success"):
                 profile_data = parse_json_response(resp["content"], fallback_structure={})
         except Exception as e:
@@ -674,7 +674,7 @@ class JobNotificationAgent:
 
         try:
             messages = get_daily_summary_prompt(profile, stats, top_jobs)
-            resp = ollama.chat(messages, temperature=0.6, json_mode=True)
+            resp = AIService.chat_completion(messages, temperature=0.6, json_mode=True)
             if resp.get("success"):
                 result = parse_json_response(resp["content"], fallback_structure=fallback)
                 return result
@@ -701,7 +701,7 @@ class JobNotificationAgent:
 
         try:
             messages = get_insights_prompt(profile, missing_skills, stats)
-            resp = ollama.chat(messages, temperature=0.5, json_mode=True)
+            resp = AIService.chat_completion(messages, temperature=0.5, json_mode=True)
             if resp.get("success"):
                 parsed = parse_json_response(resp["content"], fallback_structure={})
                 if parsed.get("insights"):
