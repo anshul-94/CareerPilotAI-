@@ -24,6 +24,7 @@ To add a new provider (e.g. Gemini):
 import os
 import logging
 
+from backend.config import Config
 from backend.ai.providers.base_provider import BaseProvider
 
 logger = logging.getLogger("careerpilot.ai")
@@ -42,7 +43,7 @@ def get_provider() -> BaseProvider:
         ImportError: If a required package for the chosen provider is missing.
         ValueError: If required API keys for the chosen provider are missing.
     """
-    provider_name = os.getenv("AI_PROVIDER", "ollama").strip().lower()
+    provider_name = Config.AI_PROVIDER
 
     logger.info(f"[AIProvider] Initializing provider: '{provider_name}'")
 

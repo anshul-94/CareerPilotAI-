@@ -82,9 +82,9 @@ class OllamaService:
         }
 
     def generate(self, prompt: str, temperature: float = 0.7, json_mode: bool = False) -> Dict[str, Any]:
-        """Generate completion using the /api/generate endpoint."""
+        """Single-turn text generation using the /api/generate endpoint."""
         if not self.health():
-            return self._format_error("Ollama server is offline. Run `ollama serve`")
+            return self._format_error("Ollama server is not running.")
 
         payload = {
             "model": self.model,
@@ -114,14 +114,16 @@ class OllamaService:
                     "latency_ms": latency
                 }
             }
+        except requests.exceptions.ConnectionError:
+            return self._format_error("Ollama server is not running.")
         except requests.exceptions.RequestException as e:
-            ai_logger.error(f"Ollama API Error: {e}", exc_info=True)
+            ai_logger.error(f"Ollama API Error: {e}")
             return self._format_error("Failed to communicate with Ollama.")
 
     def chat(self, messages: List[Dict[str, str]], temperature: float = 0.7, json_mode: bool = False) -> Dict[str, Any]:
         """Chat completion using the /api/chat endpoint."""
         if not self.health():
-            return self._format_error("Ollama server is offline. Run `ollama serve`")
+            return self._format_error("Ollama server is not running.")
 
         payload = {
             "model": self.model,
@@ -151,14 +153,16 @@ class OllamaService:
                     "latency_ms": latency
                 }
             }
+        except requests.exceptions.ConnectionError:
+            return self._format_error("Ollama server is not running.")
         except requests.exceptions.RequestException as e:
-            ai_logger.error(f"Ollama API Error: {e}", exc_info=True)
+            ai_logger.error(f"Ollama API Error: {e}")
             return self._format_error("Failed to communicate with Ollama.")
 
     def stream_chat(self, messages: List[Dict[str, str]], temperature: float = 0.7) -> Generator[str, None, None]:
         """Stream chat completion using the /api/chat endpoint."""
         if not self.health():
-            yield "Ollama server is offline. Run `ollama serve`"
+            yield "Ollama server is not running."
             return
 
         payload = {

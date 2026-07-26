@@ -174,17 +174,18 @@ if __name__ == '__main__':
         os.environ['PORT'] = str(port)
         
         # 3. Print the beautiful startup banner
-        url_line = f"   Running on: http://localhost:{port}"
-        debug_line = f"   Debug mode: {'ON' if debug else 'OFF'}"
         print(f"""
-╔══════════════════════════════════════════════════╗
-║           🚀 CareerPilot AI                      ║
-║           AI-Powered Career Intelligence         ║
-║                                                  ║
-║{url_line:<50}║
-║{debug_line:<50}║
-╚══════════════════════════════════════════════════╝
-        """)
+=========================
+CareerPilot AI
+=========================
+
+Environment : {Config.ENVIRONMENT.capitalize()}
+AI Provider : {Config.AI_PROVIDER.capitalize()}
+Model       : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
+Database    : SQLite
+Debug       : {Config.DEBUG}
+
+=========================""")
     else:
         # Child process: Use the port provided by the parent
         port = int(os.environ.get('PORT', preferred_port))

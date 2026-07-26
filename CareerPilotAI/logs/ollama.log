@@ -284,3 +284,9 @@ requests.exceptions.ReadTimeout: HTTPConnectionPool(host='localhost', port=11434
 2026-07-25 13:40:20,236 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-25 13:48:20,737 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-25 13:48:20,737 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 19:36:13,397 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 19:38:51,866 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 19:38:52,132 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 19:39:08,585 - ai - WARNING - [GroqProvider] GROQ_API_KEY is missing! API calls will fail.
+2026-07-26 19:44:50,972 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 19:44:51,260 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b

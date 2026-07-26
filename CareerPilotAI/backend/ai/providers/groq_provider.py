@@ -51,14 +51,17 @@ class GroqProvider(BaseProvider):
         self.timeout = Config.GROQ_TIMEOUT
         self.max_retries = Config.AI_MAX_RETRIES
 
-        if not self.api_key:
-            raise ValueError(
-                "GROQ_API_KEY is not set. Add it to your .env file. "
-                "Get your key at https://console.groq.com"
-            )
-
-        self._client = self._Groq(api_key=self.api_key, timeout=self.timeout)
-        ai_logger.info(f"[GroqProvider] Initialized — model={self.model}")
+        self._client = None
+        if self.api_key:
+            self._client = self._Groq(api_key=self.api_key, timeout=self.timeout)
+            ai_logger.info(f"[GroqProvider] Initialized — model={self.model}")
+        else:
+            ai_logger.warning("[GroqProvider] GROQ_API_KEY is missing! API calls will fail.")
+            
+    def _ensure_client(self):
+        """Raises a safe error string instead of crashing Flask if the key is missing."""
+        if not self._client:
+            raise ValueError("GROQ_API_KEY is missing. Please set it in your .env file.")
 
     # ── Health ────────────────────────────────────────────────────
 
@@ -206,6 +209,12 @@ class GroqProvider(BaseProvider):
         Uses Groq's native streaming (stream=True).
         """
         ai_logger.debug(f"[GroqProvider] stream_chat() | model={self.model}, msgs={len(messages)}")
+
+        try:
+            self._ensure_client()
+        except ValueError as e:
+            yield f"\n\n⚠️ {str(e)}"
+            return
 
         try:
             stream = self._client.chat.completions.create(
