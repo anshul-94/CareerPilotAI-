@@ -35,6 +35,15 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{ url_for('notifications.index') }}" class="nav-link {% if '/notifications' in request.path %}active{% endif %}"
+               style="position:relative;">
+                <span class="nav-icon">🔔</span> AI Job Agent
+                <span style="margin-left:auto;background:linear-gradient(135deg,#6366f1,#8b5cf6);
+                             color:#fff;font-size:0.62rem;font-weight:700;padding:0.15rem 0.45rem;
+                             border-radius:20px;letter-spacing:0.03em;">NEW</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{ url_for('resume.builder') }}" class="nav-link {% if '/resume/builder' in request.path %}active{% endif %}">
                 <span class="nav-icon">📝</span> Resume Builder
             </a>

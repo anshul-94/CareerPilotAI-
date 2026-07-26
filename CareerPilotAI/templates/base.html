@@ -70,6 +70,10 @@
         <ul class="navbar-nav">
             <li><a href="{{ url_for('dashboard.index') }}" class="nav-link">Dashboard</a></li>
             <li><a href="{{ url_for('jobs.index') }}" class="nav-link">Jobs</a></li>
+            <li><a href="{{ url_for('notifications.index') }}" class="nav-link" style="position:relative;">
+                🔔 AI Agent
+                <span id="navNotifBadge" style="position:absolute;top:-6px;right:-10px;background:var(--accent-pink,#f472b6);color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;display:flex;align-items:center;justify-content:center;display:none;">●</span>
+            </a></li>
             <li><a href="{{ url_for('chat.index') }}" class="nav-link">AI Coach</a></li>
         </ul>
         <div class="navbar-actions">

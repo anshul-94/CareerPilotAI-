@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block title %}AI Resume Intelligence — CareerPilot AI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resume-intelligence.css') }}">
+{% endblock %}
+
+{% block content %}
+{% include "components/sidebar.html" %}
+
+<main class="main-content">
+    <div class="page-header flex-between" data-aos="fade-down">
+        <div>
+            <h1>🧠 AI Resume Intelligence Engine</h1>
+            <p class="page-subtitle">Your autonomous AI resume writer. No manual typing required.</p>
+        </div>
+        <div>
+            <button class="btn btn-primary" onclick="alert('PDF generation requires LaTeX or PDF renderer which is mocked in demo')">
+                ⬇️ Download PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="intelligence-dashboard" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Left: Control Panel -->
+        <div class="control-panel">
+            
+            <!-- Generation Control -->
+            <div>
+                <div class="control-section-title">Target Role</div>
+                <div style="display:flex;gap:0.5rem;margin-bottom:0.75rem;">
+                    <select id="targetRole" class="form-input form-select" style="flex:1;">
+                        <option value="{{ profile.preferred_role or 'Software Engineer' }}" selected>
+                            {{ profile.preferred_role or 'Software Engineer' }} (Career DNA)
+                        </option>
+                        <option value="AI Engineer">AI Engineer</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                        <option value="Python Backend Developer">Python Backend Developer</option>
+                        <option value="Prompt Engineer">Prompt Engineer</option>
+                        <option value="Product Manager">Product Manager</option>
+                    </select>
+                </div>
+                <button id="generateBtn" class="btn-generate" onclick="generateResume()">
+                    ✨ Generate AI Resume
+                </button>
+                <div style="font-size:0.72rem;color:var(--text-tertiary);margin-top:0.5rem;text-align:center;">
+                    AI will rewrite your experiences using FAANG standards.
+                </div>
+            </div>
+
+            <hr style="border-color:var(--border-color);">
+
+            <!-- AI Scores -->
+            <div>
+                <div class="control-section-title">Intelligence Scores</div>
+                <div class="score-grid">
+                    <div class="score-card">
+                        <div id="score-ats" class="score-value">0%</div>
+                        <div class="score-label">ATS Parse</div>
+                    </div>
+                    <div class="score-card">
+                        <div id="score-keyword" class="score-value">0%</div>
+                        <div class="score-label">Keywords</div>
+                    </div>
+                    <div class="score-card">
+                        <div id="score-readability" class="score-value">0%</div>
+                        <div class="score-label">Readability</div>
+                    </div>
+                    <div class="score-card">
+                        <div id="score-impact" class="score-value">0%</div>
+                        <div class="score-label">Impact</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggestions -->
+            <div>
+                <div class="control-section-title">AI Suggestions</div>
+                <div id="suggestionsList" class="suggestion-list">
+                    <div style="font-size:0.8rem;color:#94a3b8;">Generate a resume to see suggestions.</div>
+                </div>
+            </div>
+
+            <hr style="border-color:var(--border-color);">
+
+            <!-- Version History -->
+            <div>
+                <div class="control-section-title" style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>Version History</span>
+                    <button class="btn btn-ghost btn-sm" onclick="generateResume(true)" style="padding:0.2rem 0.5rem;font-size:0.7rem;" title="Simulate daily background optimization">
+                        🔄 Daily Optimize
+                    </button>
+                </div>
+                <div id="versionTimeline" class="version-timeline">
+                    <div style="font-size:0.8rem;color:#94a3b8;">No versions generated yet.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right: Preview Panel -->
+        <div style="position:relative; height:100%;">
+            
+            <div id="loadingOverlay" class="ai-loading-overlay" style="display:none;">
+                <div class="ai-spinner"></div>
+                <div style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Analyzing Career DNA...</div>
+                <div style="font-size:0.85rem;color:#cbd5e1;max-width:300px;text-align:center;">
+                    Rewriting experiences, adding impact metrics, and optimizing for ATS keywords.
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <div id="resumePreview">
+                    <div style="text-align:center;padding:5rem 0;color:#94a3b8;">
+                        <div style="font-size:3rem;margin-bottom:1rem;">📄</div>
+                        <h3>No Resume Generated</h3>
+                        <p>Click "Generate AI Resume" to build your professional profile.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    window.USER_NAME = "{{ user.full_name or user.username }}";
+    window.USER_EMAIL = "{{ user.email }}";
+    window.USER_LOCATION = "{{ user.location or '' }}";
+    
+    // Inject latest version data if available so UI renders instantly on load
+    window.INITIAL_RESUME = {{ (latest_version | tojson | safe) if latest_version else 'null' }};
+</script>
+<script src="{{ url_for('static', filename='js/resume-intelligence.js') }}"></script>
+{% endblock %}

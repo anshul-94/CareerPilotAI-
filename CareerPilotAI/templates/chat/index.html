@@ -1,88 +1,189 @@
 {% extends "base.html" %}
 
-{% block content %}
-{% include "components/sidebar.html" %}
+{% block title %}AI Career Coach{% endblock %}
 
-<main class="main-content" style="padding-bottom: 0;">
-    <div class="chat-layout reveal">
-        <!-- Chat History Sidebar -->
-        <div class="chat-sidebar">
-            <div class="flex-between" style="margin-bottom: 1rem;">
-                <h3 style="font-size: 1rem; margin: 0;">Recent Chats</h3>
-                <a href="{{ url_for('chat.index') }}" class="btn btn-sm btn-ghost" title="New Chat">➕</a>
-            </div>
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat-premium.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+{% endblock %}
+
+{% block body %}
+<!-- Body class to hide global overflow -->
+<script>document.body.classList.add('chat-app-mode');</script>
+
+<div class="chat-app-layout">
+    <!-- LEFT SIDEBAR -->
+    <aside class="chat-app-sidebar">
+        <div class="sidebar-header">
+            <a href="{{ url_for('dashboard.index') }}" class="back-to-dash">
+                <i data-lucide="arrow-left" style="width:16px;height:16px;"></i> Back to Dashboard
+            </a>
             
-            <div class="activity-list">
-                {% if sessions %}
-                    {% for session in sessions %}
-                    <a href="{{ url_for('chat.index', session_id=session.session_id) }}" class="activity-item" style="padding: 0.75rem; border-radius: var(--radius-sm); border: none; background: {% if session.session_id == session_id %}var(--primary-glow){% else %}transparent{% endif %}; text-decoration: none;">
-                        <div class="activity-icon" style="background: var(--bg-tertiary);">💬</div>
-                        <div class="activity-content">
-                            <div class="activity-title text-truncate" style="max-width: 150px; font-size: 0.85rem;">{{ session.last_message }}</div>
-                            <div class="activity-time">{{ session.created_at.split(' ')[0] if session.created_at else 'Recent' }}</div>
+            <button class="btn btn-primary w-100 mt-3 d-flex align-items-center justify-content-center gap-2 new-chat-btn" onclick="startNewChat()">
+                <i data-lucide="plus"></i> New Chat
+            </button>
+            
+            <div class="chat-search-wrapper mt-3">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="chatSearch" class="form-control" placeholder="Search conversations...">
+            </div>
+        </div>
+        
+        <div class="sidebar-conversations" id="chatSessionsList">
+            {% if sessions %}
+                <div class="chat-group-title">History</div>
+                <div class="sessions-list">
+                    {% for session_item in sessions %}
+                    <a href="{{ url_for('chat.index', session_id=session_item.session_id) }}" class="session-card {% if session_item.session_id == session_id %}active{% endif %}" data-session-id="{{ session_item.session_id }}" data-title="{{ session_item.title|default('Conversation') }}">
+                        <div class="session-card-content">
+                            <div class="session-title-row">
+                                <span class="session-title">
+                                    {% if session_item.is_pinned %}<i data-lucide="pin" class="pin-icon"></i>{% endif %}
+                                    {{ session_item.title|default('New Conversation') }}
+                                </span>
+                                <span class="session-time">2h</span> <!-- Placeholder timestamp -->
+                            </div>
+                            <div class="session-preview">Career advice and resume...</div>
+                        </div>
+                        
+                        <div class="session-menu-wrapper" onclick="event.preventDefault(); event.stopPropagation();">
+                            <button class="btn-ghost btn-icon-sm menu-trigger" onclick="toggleMenu('menu-{{ session_item.session_id }}')">
+                                <i data-lucide="more-horizontal"></i>
+                            </button>
+                            <div class="session-dropdown" id="menu-{{ session_item.session_id }}">
+                                <button class="dropdown-item" onclick="startRename('{{ session_item.session_id }}')"><i data-lucide="edit-2"></i> Rename</button>
+                                <button class="dropdown-item" onclick="togglePin('{{ session_item.session_id }}', {{ 'true' if not session_item.is_pinned else 'false' }})"><i data-lucide="pin"></i> {% if session_item.is_pinned %}Unpin{% else %}Pin{% endif %}</button>
+                                <button class="dropdown-item danger" onclick="confirmDelete('{{ session_item.session_id }}')"><i data-lucide="trash-2"></i> Delete</button>
+                            </div>
                         </div>
                     </a>
                     {% endfor %}
-                {% else %}
-                    <p style="font-size: 0.85rem; color: var(--text-tertiary); text-align: center; margin-top: 2rem;">No chat history.</p>
-                {% endif %}
-            </div>
+                </div>
+            {% else %}
+                <div class="text-muted text-center" style="font-size: 0.85rem; padding: 2rem 0;">No conversation history</div>
+            {% endif %}
+        </div>
+    </aside>
+
+    <!-- RIGHT MAIN CHAT -->
+    <main class="chat-app-main">
+        <div class="chat-messages" id="chatMessages">
+            {% if not messages %}
+                <div class="chat-empty-state">
+                    <div class="empty-icon-wrapper">
+                        <i data-lucide="sparkles" style="width:32px;height:32px;color:var(--primary);"></i>
+                    </div>
+                    <h2>How can I help you today?</h2>
+                    <p class="empty-subtitle">I'm your AI Career Coach. Ask me anything about your career.</p>
+                    
+                    <div class="empty-suggestions">
+                        <div class="suggestion-card" onclick="setPrompt('Can you review my resume for a Senior Software Engineer role?')">
+                            <div class="sugg-icon"><i data-lucide="file-text"></i></div>
+                            <div class="sugg-text">Review my resume</div>
+                        </div>
+                        <div class="suggestion-card" onclick="setPrompt('Let\'s do a mock interview for a Product Manager position.')">
+                            <div class="sugg-icon"><i data-lucide="mic"></i></div>
+                            <div class="sugg-text">Mock interview</div>
+                        </div>
+                        <div class="suggestion-card" onclick="setPrompt('What is the best way to negotiate a 20% salary increase?')">
+                            <div class="sugg-icon"><i data-lucide="dollar-sign"></i></div>
+                            <div class="sugg-text">Salary negotiation</div>
+                        </div>
+                        <div class="suggestion-card" onclick="setPrompt('Create a 3-month learning roadmap to transition to AI Engineering.')">
+                            <div class="sugg-icon"><i data-lucide="map"></i></div>
+                            <div class="sugg-text">Learning roadmap</div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="chat-message-row text-center mt-3 mb-4">
+                    <span class="chat-date-badge">Today</span>
+                </div>
+                {% for msg in messages %}
+                <div class="chat-message-row {{ msg.role }}" data-id="{{ loop.index }}">
+                    <div class="chat-message">
+                        {% if msg.role == 'assistant' %}
+                            <div class="chat-avatar bg-primary text-white"><i data-lucide="bot"></i></div>
+                        {% endif %}
+                        <div class="chat-content">
+                            <div class="chat-bubble {{ 'markdown-content' if msg.role == 'assistant' else 'user-bubble' }}">
+                                {{ msg.message | safe }}
+                            </div>
+                            <div class="message-toolbar">
+                                {% if msg.role == 'assistant' %}
+                                    <button class="btn btn-ghost btn-icon-sm" onclick="copyMessage(this)" title="Copy"><i data-lucide="copy"></i></button>
+                                    <button class="btn btn-ghost btn-icon-sm" onclick="regenerateLast()" title="Regenerate"><i data-lucide="refresh-cw"></i></button>
+                                    <button class="btn btn-ghost btn-icon-sm" title="Like"><i data-lucide="thumbs-up"></i></button>
+                                    <button class="btn btn-ghost btn-icon-sm" title="Dislike"><i data-lucide="thumbs-down"></i></button>
+                                {% else %}
+                                    <button class="btn btn-ghost btn-icon-sm" onclick="editUserMessage(this)" title="Edit"><i data-lucide="edit-2"></i></button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
         </div>
 
-        <!-- Chat Main Area -->
-        <div class="chat-main">
-            <!-- Messages -->
-            <div class="chat-messages" id="chatMessages">
-                <div class="chat-message assistant">
-                    <div class="chat-avatar">🤖</div>
-                    <div class="chat-bubble">
-                        Hello {{ current_user.full_name.split()[0] if current_user.full_name else 'there' }}! 👋<br><br>
-                        I'm your AI Career Coach. I can help you with:<br>
-                        <ul>
-                            <li>Resume reviews and keyword optimization</li>
-                            <li>Interview preparation and behavioral questions</li>
-                            <li>Salary negotiation strategies</li>
-                            <li>Skill development planning</li>
-                        </ul>
-                        How can I help you accelerate your career today?
-                    </div>
-                </div>
-
-                {% for msg in messages %}
-                <div class="chat-message {{ msg.role }}">
-                    <div class="chat-avatar">{{ '👤' if msg.role == 'user' else '🤖' }}</div>
-                    <div class="chat-bubble">
-                        {{ msg.message | safe }}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <!-- Suggestions -->
-            <div class="chat-suggestions">
-                {% for suggestion in suggestions %}
-                <button class="chat-suggestion-btn">{{ suggestion }}</button>
-                {% endfor %}
-            </div>
-
-            <!-- Input Area -->
-            <div class="chat-input-area">
-                <form id="chatForm">
+        <div class="chat-input-container">
+            <div class="chat-input-box">
+                <form id="chatForm" class="w-100">
                     <input type="hidden" id="sessionId" value="{{ session_id }}">
-                    <div class="chat-input-wrapper">
-                        <textarea id="chatInput" class="form-input" placeholder="Type your message... (Shift+Enter for new line)" required></textarea>
-                        <button type="submit" id="sendBtn" class="btn btn-primary" style="height: 44px; padding: 0 1.5rem;">Send 🚀</button>
+                    <textarea id="chatInput" class="app-input-field" placeholder="Ask anything about your career..." rows="1" required></textarea>
+                    
+                    <div class="input-actions-row">
+                        <div class="input-tools">
+                            <button type="button" class="tool-btn" title="Attach file"><i data-lucide="paperclip"></i></button>
+                            <button type="button" class="tool-btn" title="Voice Input"><i data-lucide="mic"></i></button>
+                        </div>
+                        
+                        <div class="input-send-wrapper">
+                            <span id="charCounter" class="char-counter">0 / 5000</span>
+                            <button type="submit" id="sendBtn" class="send-btn circular" title="Send message" disabled>
+                                <i data-lucide="arrow-up"></i>
+                            </button>
+                        </div>
                     </div>
                 </form>
-                <div style="text-align: center; margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-tertiary);">
-                    AI can make mistakes. Consider verifying important career advice.
-                </div>
             </div>
+            <div class="disclaimer-text">AI can make mistakes. Verify important career advice.</div>
+        </div>
+    </main>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal-overlay" id="deleteModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:var(--bg-glass); backdrop-filter: blur(8px); z-index:100; align-items:center; justify-content:center;">
+    <div class="card p-4" style="width:400px; max-width: 90vw;">
+        <h4 class="mb-2">Delete Conversation?</h4>
+        <p class="text-muted mb-4 text-sm">This conversation will be permanently deleted.<br>This action cannot be undone.</p>
+        <div class="d-flex justify-content-end gap-2">
+            <button class="btn btn-ghost" onclick="closeDeleteModal()">Cancel</button>
+            <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
         </div>
     </div>
-</main>
-{% endblock %}
+</div>
 
-{% block extra_js %}
-<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script src="{{ url_for('static', filename='js/chat-premium.js') }}"></script>
+<script>
+    lucide.createIcons();
+    
+    // Toggle dropdowns
+    function toggleMenu(id) {
+        document.querySelectorAll('.session-dropdown').forEach(d => {
+            if(d.id !== id) d.classList.remove('show');
+        });
+        document.getElementById(id).classList.toggle('show');
+    }
+    
+    // Close dropdowns on click outside
+    document.addEventListener('click', (e) => {
+        if(!e.target.closest('.session-menu-wrapper')) {
+            document.querySelectorAll('.session-dropdown').forEach(d => d.classList.remove('show'));
+        }
+    });
+</script>
 {% endblock %}

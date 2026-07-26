@@ -1,93 +1,187 @@
 {% extends "base.html" %}
+{% block title %}AI Job Finder{% endblock %}
 
 {% block content %}
 {% include "components/sidebar.html" %}
 
 <main class="main-content">
+    <!-- ─── Page Header ───────────────────────────────────── -->
     <div class="page-header reveal flex-between">
         <div>
-            <h1>💼 Job Finder</h1>
-            <p class="page-subtitle">AI scours the web to find high-paying roles that match your skills.</p>
+            <h1>💼 AI Job Finder</h1>
+            <p class="page-subtitle">
+                {% if prefill and prefill.preferred_role %}
+                Searching for <strong style="color:#a5b4fc;">{{ prefill.preferred_role }}</strong> roles in <strong style="color:#a5b4fc;">{{ prefill.preferred_location or 'all locations' }}</strong> — from your Career DNA.
+                {% else %}
+                AI scours LinkedIn, Indeed, Naukri & more to find roles that match your profile.
+                {% endif %}
+            </p>
         </div>
+        {% if prefill and prefill.preferred_role %}
+        <div>
+            <span style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);
+                         color:#86efac;border-radius:10px;padding:0.4rem 0.9rem;
+                         font-size:0.78rem;font-weight:700;">
+                ✅ Using Career DNA Profile
+            </span>
+        </div>
+        {% endif %}
     </div>
 
-    <!-- Search Section -->
-    <div class="card reveal delay-1" style="margin-bottom: 2rem; background: var(--bg-secondary);">
-        <form id="jobSearchForm" class="flex gap-2" style="align-items: flex-end; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px;">
-                <label class="form-label" for="jobQuery">Search Keywords (Optional)</label>
-                <input type="text" id="jobQuery" class="form-input" placeholder="e.g., Python Developer, Remote">
+    <!-- ─── Profile-Based Auto Search ───────────────────── -->
+    {% if prefill and prefill.preferred_role %}
+    <div style="background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.07));
+                border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:1.25rem 1.5rem;
+                margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
+                flex-wrap:wrap;gap:1rem;" class="reveal delay-1">
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <span style="font-size:1.3rem;">🤖</span>
+            <div>
+                <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem;">
+                    Auto-searching: <span style="color:#a5b4fc;">{{ prefill.preferred_role }}</span>
+                </div>
+                <div style="font-size:0.82rem;color:#64748b;">
+                    Skills: {{ (prefill.top_skills or prefill.skills or [])[:5] | join(', ') or 'Not set' }}
+                    &nbsp;·&nbsp;
+                    Location: {{ prefill.preferred_location or 'All locations' }}
+                </div>
             </div>
-            <div style="flex: 1; min-width: 200px;">
-                <label class="form-label" for="jobRole">Target Role</label>
-                <input type="text" id="jobRole" class="form-input" placeholder="e.g., Data Engineer">
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn">
+            ⚡ Search My Jobs
+        </button>
+    </div>
+    {% endif %}
+
+    <!-- ─── Default Search (Profile-Based) ──────────────── -->
+    <div class="card reveal delay-1" style="margin-bottom:1.5rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+            <h3 style="font-size:1rem;font-weight:700;color:#e2e8f0;margin:0;">
+                🔍 Profile-Based Search
+                <span style="font-size:0.7rem;font-weight:600;background:rgba(99,102,241,0.15);
+                             border:1px solid rgba(99,102,241,0.25);color:#a5b4fc;
+                             padding:0.15rem 0.5rem;border-radius:5px;margin-left:0.5rem;">DEFAULT</span>
+            </h3>
+        </div>
+        <form id="jobSearchForm" style="display:flex;gap:1rem;align-items:flex-end;flex-wrap:wrap;">
+            <div style="flex:1;min-width:220px;">
+                <label class="form-label" for="jobQuery">Keywords (optional)</label>
+                <input type="text" id="jobQuery" class="form-input"
+                       placeholder="e.g. Python, React, Machine Learning">
             </div>
-            <div style="flex: 1; min-width: 200px;">
-                <label class="form-label" for="jobLocation">Location</label>
-                <input type="text" id="jobLocation" class="form-input" placeholder="e.g., Remote, India">
+            <div style="flex:1;min-width:200px;">
+                <label class="form-label" for="jobRole">Target Role
+                    {% if prefill and prefill.preferred_role %}<span style="font-size:0.65rem;color:#a5b4fc;margin-left:0.3rem;">AUTO</span>{% endif %}
+                </label>
+                <input type="text" id="jobRole" class="form-input"
+                       value="{{ prefill.preferred_role if prefill else '' }}"
+                       placeholder="e.g. ML Engineer, Backend Dev">
+            </div>
+            <div style="flex:1;min-width:180px;">
+                <label class="form-label" for="jobLocation">Location
+                    {% if prefill and prefill.preferred_location %}<span style="font-size:0.65rem;color:#a5b4fc;margin-left:0.3rem;">AUTO</span>{% endif %}
+                </label>
+                <input type="text" id="jobLocation" class="form-input"
+                       value="{{ prefill.preferred_location if prefill else '' }}"
+                       placeholder="e.g. Bengaluru, Remote">
             </div>
             <div>
-                <button type="submit" id="searchJobsBtn" class="btn btn-primary" style="height: 44px; padding: 0 2rem;">
-                    🔍 Search Jobs
+                <button type="submit" id="searchJobsBtn" class="btn btn-primary" style="height:44px;padding:0 2rem;">
+                    🔍 Search
                 </button>
             </div>
         </form>
     </div>
 
-    <!-- Results Section -->
-    <div class="reveal delay-2">
-        <div class="flex-between" style="margin-bottom: 1.5rem;">
-            <h2 style="font-size: 1.25rem;">Search Results</h2>
-            <span class="text-tertiary" id="jobCount">{{ recent_jobs|length }} recent jobs</span>
+    <!-- ─── Override Search ──────────────────────────────── -->
+    <div class="card reveal delay-2" style="margin-bottom:2rem;
+         background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.2);">
+        <div style="display:flex;align-items:center;justify-content:space-between;
+                    cursor:pointer;" onclick="toggleOverride()" id="overrideToggle">
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+                <span style="font-size:1.1rem;">🔄</span>
+                <div>
+                    <div style="font-weight:700;color:#fde68a;font-size:0.9rem;">Override Search</div>
+                    <div style="font-size:0.75rem;color:#64748b;">
+                        Temporarily search for a different role/tech — won't change your profile
+                    </div>
+                </div>
+            </div>
+            <span id="overrideChevron" style="color:#94a3b8;font-size:1.2rem;transition:transform 0.2s;">▼</span>
+        </div>
+
+        <div id="overridePanel" style="display:none;margin-top:1.25rem;padding-top:1.25rem;
+             border-top:1px solid rgba(245,158,11,0.15);">
+            <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);
+                        border-radius:10px;padding:0.75rem 1rem;margin-bottom:1rem;
+                        font-size:0.82rem;color:#fde68a;display:flex;gap:0.5rem;align-items:center;">
+                ⚠️ Override search is <strong>session-only</strong> and does NOT update your Career DNA profile.
+            </div>
+
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-end;">
+                <div style="flex:1;min-width:200px;">
+                    <label class="form-label" for="overrideRole">Search Role / Technology</label>
+                    <input type="text" id="overrideRole" class="form-input"
+                           placeholder="e.g. MERN Stack, Cyber Security, Java Backend">
+                </div>
+                <div style="flex:1;min-width:180px;">
+                    <label class="form-label" for="overrideLocation">Location (optional)</label>
+                    <input type="text" id="overrideLocation" class="form-input"
+                           placeholder="e.g. Remote, Delhi">
+                </div>
+                <div>
+                    <button onclick="runOverrideSearch()" class="btn btn-warning" style="height:44px;">
+                        🔍 Override Search
+                    </button>
+                </div>
+            </div>
+
+            <!-- Popular override tags -->
+            <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                <span style="font-size:0.72rem;color:#64748b;margin-right:0.25rem;">Quick:</span>
+                {% for tech in ['MERN Stack', 'Django Developer', 'Java Backend', 'DevOps', 'Cyber Security', 'Flutter Developer', 'iOS Developer', 'Data Analyst'] %}
+                <button onclick="setOverrideQuick('{{ tech }}')"
+                        style="font-size:0.72rem;font-weight:600;padding:0.2rem 0.6rem;
+                               border-radius:6px;border:1px solid rgba(245,158,11,0.25);
+                               background:rgba(245,158,11,0.08);color:#fde68a;cursor:pointer;
+                               transition:all 0.2s;">
+                    {{ tech }}
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── Results Area ──────────────────────────────────── -->
+    <div class="reveal delay-3">
+        <div class="flex-between" style="margin-bottom:1.5rem;">
+            <h2 style="font-size:1.25rem;display:flex;align-items:center;gap:0.5rem;">
+                Search Results
+                <span id="searchContextBadge" style="font-size:0.72rem;font-weight:600;
+                      padding:0.15rem 0.55rem;border-radius:6px;
+                      background:rgba(99,102,241,0.15);color:#a5b4fc;
+                      border:1px solid rgba(99,102,241,0.25);display:none;">
+                </span>
+            </h2>
+            <span class="text-tertiary" id="jobCount">{{ recent_jobs|length }} jobs</span>
         </div>
 
         <div id="jobResults" class="grid-2">
             {% if recent_jobs %}
                 {% for job in recent_jobs %}
-                <div class="job-card">
-                    <div class="job-header">
-                        <div>
-                            <div class="job-title">{{ job.title }}</div>
-                            <div class="job-company">{{ job.company }}</div>
-                        </div>
-                        <div class="job-match">
-                            <span class="match-score">{{ job.match_score | default(0) }}%</span>
-                            <span class="match-label">Match</span>
-                        </div>
-                    </div>
-                    
-                    <div class="job-meta">
-                        <span>📍 {{ job.location }}</span>
-                        <span>💰 {{ job.salary or 'Not disclosed' }}</span>
-                        <span>🏢 {{ job.job_type or 'Full-time' }}</span>
-                    </div>
+                {% include "components/job_card.html" ignore missing %}
 
-                    {% if job.skills_required %}
-                    <div class="job-tags">
-                        {% for skill in job.skills_required[:6] %}
-                            <span class="tag">{{ skill }}</span>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                    
-                    <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 1rem;">
-                        {{ job.description[:150] }}...
-                    </p>
-
-                    <div class="job-footer">
-                        <span class="badge badge-info">{{ job.source or 'Web' }}</span>
-                        <div class="flex gap-1">
-                            <button class="btn btn-sm btn-ghost" onclick="saveJob({{ job.id }})">💾 Save</button>
-                            <a href="{{ job.apply_link or '#' }}" target="_blank" class="btn btn-sm btn-primary">Apply →</a>
-                        </div>
-                    </div>
-                </div>
                 {% endfor %}
             {% else %}
-                <div class="empty-state" style="grid-column: 1 / -1;">
+                <div class="empty-state" style="grid-column:1/-1;">
                     <div class="empty-icon">🔍</div>
-                    <h3>No jobs to display</h3>
-                    <p>Enter your search criteria above and let AI find the best matches for you.</p>
+                    <h3>No jobs yet</h3>
+                    <p>Click "Search My Jobs" above to start your AI-powered job search.</p>
+                    {% if not prefill or not prefill.preferred_role %}
+                    <a href="{{ url_for('resume.upload') }}" class="btn btn-sm btn-primary" style="margin-top:0.75rem;">
+                        📄 Upload Resume to Auto-Search
+                    </a>
+                    {% endif %}
                 </div>
             {% endif %}
         </div>
@@ -96,5 +190,169 @@
 {% endblock %}
 
 {% block extra_js %}
+<script>
+// Profile prefill data from server
+const PROFILE_PREFILL = {
+    role:     "{{ (prefill.preferred_role or '') if prefill else '' }}",
+    location: "{{ (prefill.preferred_location or '') if prefill else '' }}",
+    skills:   {{ (prefill.top_skills or prefill.skills or [])[:8] | tojson | safe if prefill else '[]' }}
+};
+
+// ─── Auto search from profile ─────────────────────────────
+async function autoSearchFromProfile() {
+    const btn = document.getElementById('autoSearchBtn');
+    if (btn) { btn.textContent = '⏳ Searching...'; btn.disabled = true; }
+    await runSearch(false);
+    if (btn) { btn.textContent = '⚡ Search My Jobs'; btn.disabled = false; }
+}
+
+// ─── Main search form submit ──────────────────────────────
+document.getElementById('jobSearchForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    await runSearch(false);
+});
+
+async function runSearch(isOverride, overrideRole, overrideLoc) {
+    const btn = document.getElementById('searchJobsBtn');
+    if (btn && !isOverride) { btn.textContent = '⏳ Searching...'; btn.disabled = true; }
+
+    const payload = isOverride ? {
+        override: true,
+        role:     overrideRole || '',
+        location: overrideLoc || '',
+        query:    overrideRole || ''
+    } : {
+        override: false,
+        query:    document.getElementById('jobQuery')?.value || '',
+        role:     document.getElementById('jobRole')?.value || '',
+        location: document.getElementById('jobLocation')?.value || ''
+    };
+
+    try {
+        const endpoint = isOverride ? '/jobs/search/override' : '/jobs/search';
+        const resp = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const data = await resp.json();
+
+        if (data.success) {
+            renderJobResults(data.jobs, data.total, isOverride, data.search_context);
+        } else {
+            alert('Search failed: ' + (data.error || 'Unknown error'));
+        }
+    } catch (err) {
+        console.error('Search error:', err);
+        alert('Network error. Please try again.');
+    } finally {
+        if (btn && !isOverride) { btn.textContent = '🔍 Search'; btn.disabled = false; }
+    }
+}
+
+// ─── Override search ──────────────────────────────────────
+function runOverrideSearch() {
+    const role = document.getElementById('overrideRole')?.value?.trim();
+    const loc  = document.getElementById('overrideLocation')?.value?.trim();
+    if (!role && !loc) {
+        alert('Please enter a role or technology to override search.');
+        return;
+    }
+    runSearch(true, role, loc);
+}
+
+function setOverrideQuick(tech) {
+    document.getElementById('overrideRole').value = tech;
+    // Open panel if not open
+    const panel = document.getElementById('overridePanel');
+    if (panel && panel.style.display === 'none') toggleOverride();
+}
+
+// ─── Override panel toggle ────────────────────────────────
+function toggleOverride() {
+    const panel   = document.getElementById('overridePanel');
+    const chevron = document.getElementById('overrideChevron');
+    if (!panel) return;
+    const open = panel.style.display !== 'none';
+    panel.style.display = open ? 'none' : 'block';
+    if (chevron) chevron.style.transform = open ? '' : 'rotate(180deg)';
+}
+
+// ─── Render results ───────────────────────────────────────
+function renderJobResults(jobs, total, isOverride, ctx) {
+    const grid    = document.getElementById('jobResults');
+    const countEl = document.getElementById('jobCount');
+    const badge   = document.getElementById('searchContextBadge');
+    if (!grid) return;
+
+    if (countEl) countEl.textContent = `${total || jobs.length} jobs found`;
+
+    if (badge && isOverride) {
+        badge.textContent = `🔄 Override: ${ctx?.role || ''}`;
+        badge.style.display = 'inline-flex';
+        badge.style.background = 'rgba(245,158,11,0.15)';
+        badge.style.color = '#fde68a';
+        badge.style.borderColor = 'rgba(245,158,11,0.3)';
+    } else if (badge) {
+        badge.style.display = 'none';
+    }
+
+    if (!jobs.length) {
+        grid.innerHTML = `
+            <div class="empty-state" style="grid-column:1/-1;">
+                <div class="empty-icon">😕</div>
+                <h3>No jobs found</h3>
+                <p>Try different keywords or check your internet connection.</p>
+            </div>`;
+        return;
+    }
+
+    grid.innerHTML = jobs.map(job => `
+    <div class="job-card">
+        <div class="job-header">
+            <div>
+                <div class="job-title">${esc(job.title || job.job_title || '')}</div>
+                <div class="job-company">${esc(job.company || '')}</div>
+            </div>
+            <div class="job-match">
+                <span class="match-score">${job.match_score || 0}%</span>
+                <span class="match-label">Match</span>
+            </div>
+        </div>
+        <div class="job-meta">
+            <span>📍 ${esc(job.location || 'Remote')}</span>
+            <span>💰 ${esc(job.salary || 'Not disclosed')}</span>
+            <span>🏢 ${esc(job.job_type || 'Full-time')}</span>
+        </div>
+        ${(job.skills_required || []).length ? `
+        <div class="job-tags">
+            ${job.skills_required.slice(0,6).map(s => `<span class="tag">${esc(s)}</span>`).join('')}
+        </div>` : ''}
+        <p style="font-size:0.85rem;color:var(--text-tertiary);margin-bottom:1rem;">
+            ${esc((job.description || '').slice(0, 150))}...
+        </p>
+        <div class="job-footer">
+            <span class="badge badge-info">${esc(job.source || 'Web')}</span>
+            <div class="flex gap-1">
+                <button class="btn btn-sm btn-ghost" onclick="saveJob(${job.id})">💾 Save</button>
+                <a href="${job.apply_link || '#'}" target="_blank" class="btn btn-sm btn-primary">Apply →</a>
+            </div>
+        </div>
+    </div>`).join('');
+}
+
+function esc(str) {
+    if (!str) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function saveJob(id) {
+    fetch('/jobs/status', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({job_id: id, status: 'saved'})
+    });
+}
+</script>
 <script src="{{ url_for('static', filename='js/jobs.js') }}"></script>
 {% endblock %}
