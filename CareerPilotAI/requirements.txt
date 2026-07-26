@@ -30,4 +30,4 @@ markdown==3.7
 
 # Groq AI SDK (required for production / Render deployment)
 # Not needed for local Ollama development
-groq==0.9.0
+groq>=0.11.0
