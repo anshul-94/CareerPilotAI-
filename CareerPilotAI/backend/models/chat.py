@@ -24,7 +24,6 @@ def migrate_chat_sessions_table():
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
         )
     """)
-    print("[✓] chat_sessions table created/verified.")
 
 
 class ChatSessionModel:

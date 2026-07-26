@@ -17,13 +17,6 @@ from backend.models.job_notification import (
 notifications_bp = Blueprint('notifications', __name__, url_prefix='/notifications')
 
 
-# ── Run migration on first import ────────────────────────────
-try:
-    migrate_notification_tables()
-except Exception as _e:
-    print(f"[WARN] Notification table migration: {_e}")
-
-
 # ─────────────────────────────────────────────────────────────
 # Page Routes
 # ─────────────────────────────────────────────────────────────

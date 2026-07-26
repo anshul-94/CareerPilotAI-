@@ -38,7 +38,6 @@ def migrate_resume_versions_table() -> None:
     with sqlite3.connect(path) as conn:
         conn.executescript(RESUME_VERSIONS_SCHEMA)
         conn.commit()
-    print("[✓] resume_versions table created/verified.")
 
 
 class ResumeVersionModel:

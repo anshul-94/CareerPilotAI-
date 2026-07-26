@@ -115,7 +115,6 @@ def migrate_notification_tables() -> None:
     with sqlite3.connect(path) as conn:
         conn.executescript(NOTIFICATION_SCHEMA_SQL)
         conn.commit()
-    print("[✓] Notification agent tables created/verified.")
 
 
 # ─────────────────────────────────────────────────────────────

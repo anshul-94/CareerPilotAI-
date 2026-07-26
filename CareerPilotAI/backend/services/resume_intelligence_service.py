@@ -15,13 +15,6 @@ from backend.prompts.resume_intelligence_prompt import (
     get_resume_scoring_prompt
 )
 
-# Run migration on load
-try:
-    migrate_resume_versions_table()
-except Exception as e:
-    print(f"[WARN] Failed to migrate resume_versions: {e}")
-
-
 class ResumeIntelligenceService:
     """Service for autonomous AI resume generation and optimization."""
 

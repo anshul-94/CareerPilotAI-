@@ -1,0 +1,37 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.29.212:5001
+Press CTRL+C to quit
+ * Restarting with watchdog (fsevents)
+
+=========================
+CareerPilot AI
+=========================
+
+Environment : Development
+AI Provider : Ollama
+Model       : llama3.2:3b
+Database    : SQLite
+Debug       : True
+
+Initializing database...
+
+[✓] career_profiles
+
+[✓] resume_versions
+
+[✓] notification_agent
+
+[✓] chat_sessions
+
+Database Ready.
+
+Server Ready.
+=========================
+ * Debugger is active!
+ * Debugger PIN: 878-874-648
+/opt/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-syiy627q'}
+  warnings.warn(

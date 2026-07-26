@@ -28,21 +28,23 @@ def create_app() -> Flask:
     os.makedirs(Config.CACHE_DIR, exist_ok=True)
     
     # ── Database Initialization ───────────────────────────────────
-    from backend.database.schema import init_db
-    db_path = Config.DATABASE_PATH
-    if not os.path.exists(db_path):
-        init_db(db_path)
+    is_reloader = os.environ.get('WERKZEUG_RUN_MAIN') == 'true'
+    if not Config.DEBUG or is_reloader:
+        import sys
+        print(f"""
+=========================
+CareerPilot AI
+=========================
+
+Environment : {Config.ENVIRONMENT.capitalize()}
+AI Provider : {Config.AI_PROVIDER.capitalize()}
+Model       : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
+Database    : SQLite
+Debug       : {Config.DEBUG}""", flush=True)
         
-    # Run dynamic migrations
-    from backend.models.career_profile import migrate_career_profile_table
-    from backend.models.resume_version import migrate_resume_versions_table
-    from backend.models.job_notification import migrate_notification_tables
-    from backend.models.chat import migrate_chat_sessions_table
-    
-    migrate_career_profile_table()
-    migrate_resume_versions_table()
-    migrate_notification_tables()
-    migrate_chat_sessions_table()
+        from backend.database.startup import initialize_database
+        initialize_database()
+        print("=========================", flush=True)
     
     # ── Register Blueprints ───────────────────────────────────────
     from backend.routes.auth import auth_bp
@@ -172,27 +174,9 @@ if __name__ == '__main__':
         
         # Save the found port so the child process uses the same one
         os.environ['PORT'] = str(port)
-        
-        # 3. Print the beautiful startup banner
-        print(f"""
-=========================
-CareerPilot AI
-=========================
-
-Environment : {Config.ENVIRONMENT.capitalize()}
-AI Provider : {Config.AI_PROVIDER.capitalize()}
-Model       : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
-Database    : SQLite
-Debug       : {Config.DEBUG}
-
-=========================""")
     else:
         # Child process: Use the port provided by the parent
         port = int(os.environ.get('PORT', preferred_port))
-    
-    # Suppress default Flask banner if we already printed ours
-    import logging
-    log = logging.getLogger('werkzeug')
-    log.setLevel(logging.ERROR)
+
 
     app.run(host='0.0.0.0', port=port, debug=debug)

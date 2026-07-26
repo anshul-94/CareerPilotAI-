@@ -10,3 +10,5 @@
 2026-07-25 13:35:07,421 - app - ERROR - Error generating title for session 5d1c30fb-9df5-490b-a532-8224e973c676: No module named 'backend.services.ollama_service'
 2026-07-25 13:38:19,525 - app - INFO - Attempting to delete session test-delete-999
 2026-07-25 13:38:19,527 - app - INFO - Successfully deleted session test-delete-999
+2026-07-26 20:05:48,817 - app - ERROR - Error generating title for session d9180390-478c-4fa7-b863-ac7eefeec015: No module named 'backend.services.ollama_service'
+2026-07-26 20:06:08,579 - app - ERROR - Error generating title for session 279b5bfe-fe58-46f6-8eee-2c55000526ff: No module named 'backend.services.ollama_service'

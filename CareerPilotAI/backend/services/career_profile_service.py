@@ -26,13 +26,6 @@ from backend.prompts.profile_extraction_prompt import (
 )
 
 
-# ── Run migration at import time ───────────────────────────────────────────────
-try:
-    migrate_career_profile_table()
-except Exception as _e:
-    print(f"[WARN] career_profiles migration: {_e}")
-
-
 # ─────────────────────────────────────────────────────────────
 # Public Service Class
 # ─────────────────────────────────────────────────────────────

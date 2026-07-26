@@ -89,7 +89,6 @@ def migrate_career_profile_table() -> None:
     with sqlite3.connect(path) as conn:
         conn.executescript(CAREER_PROFILE_SCHEMA)
         conn.commit()
-    print("[✓] career_profiles table created/verified.")
 
 
 # ─────────────────────────────────────────────────────────────
