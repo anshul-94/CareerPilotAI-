@@ -1,0 +1,96 @@
+2026-07-26 23:23:30,777 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3779 ms
+================================
+2026-07-26 23:23:51,636 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3209 ms
+================================
+2026-07-26 23:25:23,792 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3623 ms
+================================
+2026-07-26 23:32:53,987 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 6 ms
+===============================
+2026-07-26 23:32:53,990 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 2 ms
+===============================
+2026-07-26 23:32:54,005 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : 50
+Rows Returned   : 50
+Execution Time  : 14 ms
+===============================
+2026-07-26 23:32:57,256 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3267 ms
+================================
+2026-07-26 23:35:14,255 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : java devloper
+Skills          : 12 extracted
+Location        : pune,banglore,indore,delhi
+Generated Query : java devloper fresher hiring pune,banglore,indore,delhi, Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring pune,banglore,indore,delhi, Java fresher jobs hiring pune,banglore,indore,delhi, AI fresher jobs hiring pune,banglore,indore,delhi
+Provider        : tavily
+Jobs Retrieved  : 25
+Jobs Filtered   : 25
+Jobs Saved      : 20
+Completed in    : 14764 ms
+================================

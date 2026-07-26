@@ -129,6 +129,7 @@ class GroqProvider(BaseProvider):
             f"json_mode={json_mode}, temp={temperature}"
         )
 
+        start_time = time.time()
         kwargs = {
             "model":       self.model,
             "messages":    messages,
@@ -153,6 +154,18 @@ class GroqProvider(BaseProvider):
                     f"[GroqProvider] chat() success | attempt={attempt}, "
                     f"latency={latency:.0f}ms, tokens={usage.total_tokens if usage else 'n/a'}"
                 )
+
+                metrics = {
+                    "latency_ms":         round(latency, 2),
+                    "prompt_tokens":      usage.prompt_tokens      if usage else 0,
+                    "completion_tokens":  usage.completion_tokens  if usage else 0,
+                    "total_tokens":       usage.total_tokens       if usage else 0,
+                    "model":              response.model,
+                    "finish_reason":      response.choices[0].finish_reason,
+                }
+                
+                duration = time.time() - start_time
+                self._log_ai_request("Groq", self.model, str(messages), duration, True, metrics)
 
                 return self._success_response(
                     content=content,

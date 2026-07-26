@@ -105,6 +105,29 @@ class BaseProvider(ABC):
             "provider": self.__class__.__name__,
         }
 
+    def _log_ai_request(self, provider: str, model: str, prompt: str, duration: float, success: bool, metrics: dict):
+        from backend.utils.logger import ai_logger
+        from flask import has_request_context, session
+        
+        user_id = session.get('user_id', 'Unknown') if has_request_context() else 'Background'
+        
+        # Infer a short prompt name from the content
+        snippet = prompt[:40].replace('\n', ' ').strip() + "..." if prompt else "Unknown"
+        status_str = "Success" if success else "Failed"
+        tokens = metrics.get('prompt_tokens', 'N/A')
+        
+        log_msg = f"""
+========== AI REQUEST ==========
+User ID       : {user_id}
+Provider      : {provider}
+Model         : {model}
+Prompt Name   : {snippet}
+Prompt Tokens : {tokens}
+Execution Time: {duration:.2f} sec
+Success/Failed: {status_str}
+================================"""
+        ai_logger.info(log_msg)
+
     # ── Helpers ───────────────────────────────────────────────────
 
     @staticmethod

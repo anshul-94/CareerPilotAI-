@@ -29,16 +29,15 @@ class JobService:
         Returns:
             Dict with 'jobs', 'total', 'query_used'
         """
-        # Get user's primary resume for skill extraction
+        import time
+        start_time = time.time()
+        
         resume = ResumeModel.get_primary(user_id)
         skills = []
+        resume_loaded = "Yes" if resume else "No"
         
         if resume and resume.get('raw_text'):
             skills = extract_skills_from_text(resume['raw_text'])
-        
-        logger.info(f"--- [JobService] Search Triggered for User {user_id} ---")
-        logger.info(f"Target Role: '{role}' | Location: '{location}' | Custom Query: '{custom_query}'")
-        logger.info(f"Extracted Skills: {skills}")
         
         # Build search queries
         if custom_query:
@@ -50,8 +49,6 @@ class JobService:
                 location=location,
                 experience="fresher"
             )
-        
-        logger.info(f"Generated Search Queries: {queries}")
         
         # Execute search with error handling
         try:
@@ -66,7 +63,7 @@ class JobService:
                 "user_skills": skills
             }
         
-        logger.info(f"Post-search: {len(all_jobs)} raw jobs retrieved.")
+        retrieved_count = len(all_jobs)
         
         # Calculate match scores
         for job in all_jobs:
@@ -84,11 +81,34 @@ class JobService:
         # Sort by match score
         all_jobs.sort(key=lambda x: x.get("match_score", 0), reverse=True)
         
-        logger.info(f"Post-filtering & scoring: {len(all_jobs)} jobs returning to frontend.")
-        
+        saved_count = 0
         # Save to history
         if all_jobs:
+            saved_count = len(all_jobs[:20])
             JobModel.bulk_create(user_id, all_jobs[:20])
+            
+        duration = int((time.time() - start_time) * 1000)
+        
+        from backend.utils.logger import jobs_logger
+        import os
+        job_provider = os.getenv('JOB_PROVIDER', 'tavily')
+        
+        log_msg = f"""
+========== JOB SEARCH ==========
+User            : {user_id}
+Career DNA      : Loaded
+Resume Loaded   : {resume_loaded}
+Role            : {role or 'Not specified'}
+Skills          : {len(skills)} extracted
+Location        : {location or 'Not specified'}
+Generated Query : {', '.join(queries)}
+Provider        : {job_provider}
+Jobs Retrieved  : {retrieved_count}
+Jobs Filtered   : {len(all_jobs)}
+Jobs Saved      : {saved_count}
+Completed in    : {duration} ms
+================================"""
+        jobs_logger.info(log_msg)
         
         return {
             "jobs": all_jobs,
@@ -132,13 +152,47 @@ class JobService:
         return JobModel.update_status(job_id, status) > 0
 
     @staticmethod
-    def get_user_jobs(user_id: int, status: str = None) -> list[dict]:
+    def get_user_jobs(
+        user_id: int, 
+        limit: int = None,
+        offset: int = 0,
+        order_by: str = "created_at",
+        descending: bool = True,
+        status: str = None
+    ) -> list[dict]:
         """Get all jobs for a user with parsed match details."""
-        jobs = JobModel.get_by_user(user_id, status)
-        for job in jobs:
-            if isinstance(job.get('match_details'), str):
-                job['match_details'] = safe_json_loads(job['match_details'], {})
-        return jobs
+        import time
+        from backend.utils.logger import jobs_logger
+        
+        start = time.time()
+        
+        try:
+            if limit is not None:
+                limit = int(limit)
+            offset = int(offset)
+            
+            jobs = JobModel.get_by_user(
+                user_id=user_id, 
+                status=status, 
+                limit=limit, 
+                offset=offset, 
+                order_by=order_by, 
+                descending=descending
+            )
+            
+            for job in jobs:
+                if isinstance(job.get('match_details'), str):
+                    job['match_details'] = safe_json_loads(job['match_details'], {})
+            
+            duration = int((time.time() - start) * 1000)
+            log_msg = f"\n========== JOB CACHE ==========\nUser            : {user_id}\nLimit           : {limit if limit is not None else 'All'}\nRows Returned   : {len(jobs)}\nExecution Time  : {duration} ms\n==============================="
+            jobs_logger.info(log_msg)
+            
+            return jobs
+            
+        except Exception as e:
+            jobs_logger.warning(f"Failed to fetch user jobs for User {user_id}: {e}")
+            return []
 
     @staticmethod
     def get_dashboard_stats(user_id: int) -> dict:

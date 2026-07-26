@@ -1,0 +1,88 @@
+2026-07-26 23:23:27,012 - error - ERROR - 
+================ ERROR ================
+Route       : /jobs/
+Function    : jobs.index
+User        : 12
+Reason      : JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+
+=======================================
+2026-07-26 23:23:48,435 - error - ERROR - 
+================ ERROR ================
+Route       : /jobs/
+Function    : jobs.index
+User        : 12
+Reason      : JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+
+=======================================
+2026-07-26 23:24:01,216 - error - ERROR - 
+================ ERROR ================
+Route       : /resume/api/intelligence/generate
+Function    : resume.intelligence_generate
+User        : 12
+Reason      : name 'Config' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/resume.py", line 126, in intelligence_generate
+    result = ResumeIntelligenceService.generate_optimized_resume(user_id, target_role, template)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/resume_intelligence_service.py", line 47, in generate_optimized_resume
+    response = AIService.chat_completion(messages, temperature=0.3, json_mode=True)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/ai_service.py", line 34, in chat_completion
+    return ai_gateway.chat(messages, temperature=temperature, json_mode=json_mode)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/ollama_provider.py", line 76, in chat
+    self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt_snippet, duration, normalized["success"], normalized.get("metrics", {}))
+                                   ^^^^^^
+NameError: name 'Config' is not defined
+
+=======================================
+2026-07-26 23:25:20,182 - error - ERROR - 
+================ ERROR ================
+Route       : /jobs/
+Function    : jobs.index
+User        : 12
+Reason      : JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+
+=======================================

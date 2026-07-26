@@ -38,35 +38,21 @@ def create_app() -> Flask:
             sys.exit(1)
 
         print(f"""
-==========================
+=====================================
 CareerPilot AI
-Environment : {Config.ENVIRONMENT.capitalize()}
-Provider : {Config.AI_PROVIDER.capitalize()}
-Model : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
-==========================""", flush=True)
-
-        print("--- Environment Variables ---", flush=True)
-        print(f"ENVIRONMENT={Config.ENVIRONMENT}", flush=True)
-        print(f"USE_OLLAMA={Config.USE_OLLAMA}", flush=True)
-        print(f"USE_GROQ={Config.USE_GROQ}", flush=True)
-        print(f"GROQ_API_KEY exists? {bool(Config.GROQ_API_KEY)}", flush=True)
-        print(f"OLLAMA_BASE_URL={Config.OLLAMA_HOST}", flush=True)
-        
-        # Extended search/job provider checks for production debugging
-        print(f"DATABASE_URL exists? {bool(os.getenv('DATABASE_URL'))}", flush=True)
-        print(f"JOB_PROVIDER={os.getenv('JOB_PROVIDER', 'tavily')}", flush=True)
-        print(f"SEARCH_PROVIDER={os.getenv('SEARCH_PROVIDER', 'tavily')}", flush=True)
-        print(f"TAVILY_API_KEY exists? {bool(os.getenv('TAVILY_API_KEY'))}", flush=True)
-        print(f"SERP_API_KEY exists? {bool(os.getenv('SERP_API_KEY'))}", flush=True)
-        print(f"RAPID_API_KEY exists? {bool(os.getenv('RAPID_API_KEY'))}", flush=True)
-        print(f"ADZUNA_APP_ID exists? {bool(os.getenv('ADZUNA_APP_ID'))}", flush=True)
-        print(f"ADZUNA_KEY exists? {bool(os.getenv('ADZUNA_KEY'))}", flush=True)
-        print(f"JOOBLE_KEY exists? {bool(os.getenv('JOOBLE_KEY'))}", flush=True)
-        print(f"JSEARCH_KEY exists? {bool(os.getenv('JSEARCH_KEY'))}\n", flush=True)
+Version         : 1.0.0
+Environment     : {Config.ENVIRONMENT.capitalize()}
+Provider        : {Config.AI_PROVIDER.capitalize()}
+Model           : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
+Database        : SQLite
+Scheduler       : Active
+Redis           : Disabled
+Background Jobs : Active
+=====================================""", flush=True)
         
         from backend.database.startup import initialize_database
         initialize_database()
-        print("=========================", flush=True)
+        print("Server Ready.\n=========================", flush=True)
     
     # ── Register Blueprints ───────────────────────────────────────
     from backend.routes.auth import auth_bp
@@ -121,41 +107,56 @@ Model : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_
             }
         }
     
-    # ── Error Handlers ────────────────────────────────────────────
-    from backend.utils.logger import error_logger
-    
-    @app.errorhandler(403)
-    def forbidden(e):
-        error_logger.warning(f"403 Forbidden: {e}")
-        return render_template('errors/403.html'), 403
+    # ── Global Request Logging ────────────────────────────────────
+    import time
+    from flask import request, g
+    from datetime import datetime
+    from backend.utils.logger import app_logger, error_logger
 
-    @app.errorhandler(404)
-    def not_found(e):
-        error_logger.warning(f"404 Not Found: {e}")
-        return render_template('errors/404.html'), 404
-    
-    @app.errorhandler(500)
-    def server_error(e):
-        import traceback
-        traceback.print_exc()
-        error_logger.error(f"500 Server Error: {e}", exc_info=True)
-        return render_template('errors/500.html'), 500
-    
+    @app.before_request
+    def start_timer():
+        g.start = time.time()
+
+    @app.after_request
+    def log_request(response):
+        if request.path.startswith('/static/'):
+            return response
+            
+        if hasattr(g, 'start'):
+            duration = int((time.time() - g.start) * 1000)
+            user_id = session.get('user_id', 'Guest')
+            timestamp = datetime.now().strftime('%H:%M:%S')
+            
+            log_msg = f"\n[{timestamp}]\n{request.method} {request.path}\nUser: {user_id}\nStatus: {response.status_code}\nDuration: {duration}ms"
+            app_logger.info(log_msg)
+            
+        return response
+        
+    # ── Error Handlers ────────────────────────────────────────────
     @app.errorhandler(Exception)
-    def handle_exception(e):
-        # Pass through HTTP errors
+    def handle_global_exception(e):
+        import traceback
+        user_id = session.get('user_id', 'Guest')
+        route = request.path
+        func = request.endpoint or "Unknown"
+        reason = str(e)
+        tb = traceback.format_exc()
+        
+        err_msg = f"\n================ ERROR ================\nRoute       : {route}\nFunction    : {func}\nUser        : {user_id}\nReason      : {reason}\nStack Trace :\n{tb}\n======================================="
+        error_logger.error(err_msg)
+        
+        # Re-raise for Flask's built-in 500 handler if it's an HTTP exception, else return 500
         if isinstance(e, HTTPException):
             return e
-        # Log unexpected exceptions
-        error_logger.error(f"Unhandled Exception: {e}", exc_info=True)
         return render_template('errors/500.html'), 500
-    
-    @app.errorhandler(413)
-    def too_large(e):
-        from flask import flash, redirect, url_for
-        error_logger.warning(f"413 File Too Large: {e}")
-        flash("File is too large. Maximum size is 10MB.", "danger")
-        return redirect(url_for('resume.upload'))
+
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return render_template('errors/404.html'), 404
+        
+    @app.errorhandler(500)
+    def internal_server_error(e):
+        return render_template('errors/500.html'), 500
     
     return app
 

@@ -62,6 +62,11 @@ def update():
 
     session['full_name'] = form_data.get('full_name') or session.get('full_name')
     flash("✅ Profile saved! Your Career DNA has been updated.", 'success')
+    
+    # Smart Synchronization
+    from backend.services.autonomous_agent import AutonomousAgent
+    AutonomousAgent.invalidate_and_regenerate(user_id)
+    
     return redirect(url_for('profile.index'))
 
 
@@ -90,6 +95,11 @@ def settings():
             'seniority_level':    request.form.get('experience_level', ''),
         })
         flash("Settings saved!", 'success')
+        
+        # Smart Synchronization
+        from backend.services.autonomous_agent import AutonomousAgent
+        AutonomousAgent.invalidate_and_regenerate(user_id)
+        
         return redirect(url_for('profile.settings'))
 
     user = UserModel.get_by_id(user_id)

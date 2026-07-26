@@ -65,9 +65,19 @@ def execute_query(query: str, params: tuple = (), db_path: Optional[str] = None)
     Returns:
         List of dictionaries representing rows
     """
+    from backend.utils.logger import db_logger
+    import time
+    start = time.time()
+    
     with get_db(db_path) as db:
         cursor = db.execute(query, params)
         rows = cursor.fetchall()
+        
+        duration = int((time.time() - start) * 1000)
+        table = query.split('FROM')[1].split('WHERE')[0].strip() if 'FROM' in query else 'unknown'
+        log_msg = f"\n[DB]\nSELECT\n{table}\nRows:{len(rows)}\n{duration} ms"
+        db_logger.info(log_msg)
+        
         return [dict(row) for row in rows]
 
 
@@ -83,9 +93,19 @@ def execute_one(query: str, params: tuple = (), db_path: Optional[str] = None) -
     Returns:
         Dictionary representing the row, or None if not found
     """
+    from backend.utils.logger import db_logger
+    import time
+    start = time.time()
+    
     with get_db(db_path) as db:
         cursor = db.execute(query, params)
         row = cursor.fetchone()
+        
+        duration = int((time.time() - start) * 1000)
+        table = query.split('FROM')[1].split('WHERE')[0].strip() if 'FROM' in query else 'unknown'
+        log_msg = f"\n[DB]\nSELECT ONE\n{table}\nRows:{1 if row else 0}\n{duration} ms"
+        db_logger.info(log_msg)
+        
         return dict(row) if row else None
 
 
@@ -101,8 +121,18 @@ def execute_insert(query: str, params: tuple = (), db_path: Optional[str] = None
     Returns:
         The ID of the newly inserted row
     """
+    from backend.utils.logger import db_logger
+    import time
+    start = time.time()
+    
     with get_db(db_path) as db:
         cursor = db.execute(query, params)
+        
+        duration = int((time.time() - start) * 1000)
+        table = query.split('INTO')[1].split('(')[0].strip() if 'INTO' in query else 'unknown'
+        log_msg = f"\n[DB]\nINSERT\n{table}\nRows:1\n{duration} ms"
+        db_logger.info(log_msg)
+        
         return cursor.lastrowid
 
 
@@ -118,8 +148,26 @@ def execute_update(query: str, params: tuple = (), db_path: Optional[str] = None
     Returns:
         Number of rows affected
     """
+    from backend.utils.logger import db_logger
+    import time
+    start = time.time()
+    
     with get_db(db_path) as db:
         cursor = db.execute(query, params)
+        
+        duration = int((time.time() - start) * 1000)
+        # Determine if UPDATE or DELETE
+        op = "UPDATE" if "UPDATE" in query else ("DELETE" if "DELETE" in query else "EXECUTE")
+        if op == "UPDATE":
+            table = query.split('UPDATE')[1].split('SET')[0].strip() if 'UPDATE' in query else 'unknown'
+        elif op == "DELETE":
+            table = query.split('FROM')[1].split('WHERE')[0].strip() if 'FROM' in query else 'unknown'
+        else:
+            table = 'unknown'
+            
+        log_msg = f"\n[DB]\n{op}\n{table}\nRows:{cursor.rowcount}\n{duration} ms"
+        db_logger.info(log_msg)
+        
         return cursor.rowcount
 
 

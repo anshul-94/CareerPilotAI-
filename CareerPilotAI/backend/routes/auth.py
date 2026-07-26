@@ -26,6 +26,10 @@ def login():
             session.update(session_data)
             flash(message, 'success')
             
+            # Fire autonomous background tasks
+            from backend.services.autonomous_agent import AutonomousAgent
+            AutonomousAgent.on_login(user.id)
+            
             next_url = request.args.get('next')
             return redirect(next_url or url_for('dashboard.index'))
         else:

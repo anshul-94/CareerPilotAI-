@@ -1876,3 +1876,87 @@ Traceback (most recent call last):
   File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'dashboard'. Did you mean 'dashboard.index' instead?
+2026-07-26 23:14:00,608 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+2026-07-26 23:14:03,862 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+2026-07-26 23:14:18,604 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+2026-07-26 23:14:38,597 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+2026-07-26 23:15:06,714 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+2026-07-26 23:15:09,344 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+2026-07-26 23:16:07,963 - error - ERROR - Unhandled Exception: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 20, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/jobs.py", line 29, in index
+    all_recent  = JobService.get_user_jobs(user_id, limit=143)
+TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'

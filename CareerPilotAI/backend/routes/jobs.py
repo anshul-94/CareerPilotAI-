@@ -9,17 +9,36 @@ from backend.utils.decorators import login_required, api_login_required
 from backend.services.job_service import JobService
 from backend.services.career_profile_service import CareerProfileService
 
+DEFAULT_RECENT_JOBS = 50
 jobs_bp = Blueprint('jobs', __name__, url_prefix='/jobs')
 
 
 @jobs_bp.route('/')
 @login_required
 def index():
-    """Job finder page — auto-prefilled from Career DNA profile."""
-    user_id      = session['user_id']
+    """Render the Job Finder dashboard."""
+    user_id = session.get('user_id')
+    
+    # Trigger background search (will be skipped if cache is <30 mins old)
+    from backend.services.autonomous_agent import AutonomousAgent
+    AutonomousAgent.trigger_job_search(user_id)
+
     saved_jobs   = JobService.get_user_jobs(user_id, status='saved')
     applied_jobs = JobService.get_user_jobs(user_id, status='applied')
-    recent_jobs  = JobService.get_user_jobs(user_id)[:10]
+    
+    # We now fetch latest 'DEFAULT_RECENT_JOBS' regardless of status, as long as they are recent
+    all_recent  = JobService.get_user_jobs(user_id, limit=DEFAULT_RECENT_JOBS)
+    recent_jobs = all_recent[:26]
+    
+    last_updated = "Never"
+    if all_recent and all_recent[0].get('created_at'):
+        from datetime import datetime
+        try:
+            last_time = datetime.fromisoformat(all_recent[0]['created_at'])
+            diff = int((datetime.now() - last_time).total_seconds() / 60)
+            last_updated = f"{diff} min ago" if diff > 0 else "Just now"
+        except Exception:
+            pass
 
     # Build profile-based prefill (no asking the user again)
     prefill = CareerProfileService.get_prefill_for_module(user_id, 'jobs')
@@ -28,6 +47,8 @@ def index():
                            saved_jobs=saved_jobs,
                            applied_jobs=applied_jobs,
                            recent_jobs=recent_jobs,
+                           total_searched=len(all_recent),
+                           last_updated=last_updated,
                            prefill=prefill)
 
 

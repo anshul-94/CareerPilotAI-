@@ -35,19 +35,43 @@ class JobModel:
         return execute_one("SELECT *, found_at AS created_at FROM job_history WHERE id = ?", (job_id,))
 
     @staticmethod
-    def get_by_user(user_id: int, status: str = None, limit: int = 50) -> list[dict]:
-        """Get jobs for a user, optionally filtered by status."""
+    def get_by_user(
+        user_id: int, 
+        status: str = None, 
+        limit: Optional[int] = None,
+        offset: int = 0,
+        order_by: str = "found_at",
+        descending: bool = True
+    ) -> list[dict]:
+        """Get jobs for a user, with optional filters, limit, offset, and order."""
+        
+        # Whitelist safe order_by columns to prevent SQL injection
+        safe_columns = {"created_at": "found_at", "found_at": "found_at", "match_score": "match_score", "id": "id"}
+        order_col = safe_columns.get(order_by, "found_at")
+        direction = "DESC" if descending else "ASC"
+        
+        query = "SELECT *, found_at AS created_at FROM job_history WHERE user_id = ?"
+        params = [user_id]
+        
         if status:
-            return execute_query(
-                """SELECT *, found_at AS created_at FROM job_history WHERE user_id = ? AND status = ?
-                   ORDER BY match_score DESC, found_at DESC LIMIT ?""",
-                (user_id, status, limit)
-            )
-        return execute_query(
-            """SELECT *, found_at AS created_at FROM job_history WHERE user_id = ?
-               ORDER BY found_at DESC LIMIT ?""",
-            (user_id, limit)
-        )
+            query += " AND status = ?"
+            params.append(status)
+            # If filtering by status, secondary sort by match_score is helpful, but we'll respect order_col
+            if order_col == "found_at":
+                query += f" ORDER BY match_score DESC, {order_col} {direction}"
+            else:
+                query += f" ORDER BY {order_col} {direction}"
+        else:
+            query += f" ORDER BY {order_col} {direction}"
+            
+        if limit is not None:
+            query += " LIMIT ?"
+            params.append(limit)
+            if offset > 0:
+                query += " OFFSET ?"
+                params.append(offset)
+        
+        return execute_query(query, tuple(params))
 
     @staticmethod
     def update_status(job_id: int, status: str) -> int:

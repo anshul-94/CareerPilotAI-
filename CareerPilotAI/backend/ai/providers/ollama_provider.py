@@ -47,9 +47,16 @@ class OllamaProvider(BaseProvider):
         json_mode: bool = False
     ) -> Dict[str, Any]:
         """Single-turn generation via Ollama /api/generate."""
-        ai_logger.debug(f"[OllamaProvider] generate() | json_mode={json_mode}")
+        import time
+        start = time.time()
+        
         result = self._service.generate(prompt, temperature=temperature, json_mode=json_mode)
-        return self._normalize(result)
+        duration = time.time() - start
+        
+        normalized = self._normalize(result)
+        self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt, duration, normalized["success"], normalized.get("metrics", {}))
+        
+        return normalized
 
     def chat(
         self,
@@ -58,9 +65,17 @@ class OllamaProvider(BaseProvider):
         json_mode: bool = False
     ) -> Dict[str, Any]:
         """Multi-turn chat via Ollama /api/chat."""
-        ai_logger.debug(f"[OllamaProvider] chat() | msgs={len(messages)}, json_mode={json_mode}")
+        import time
+        start = time.time()
+        
         result = self._service.chat(messages, temperature=temperature, json_mode=json_mode)
-        return self._normalize(result)
+        duration = time.time() - start
+        
+        normalized = self._normalize(result)
+        prompt_snippet = str(messages[-1].get("content", "")) if messages else ""
+        self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt_snippet, duration, normalized["success"], normalized.get("metrics", {}))
+        
+        return normalized
 
     def stream_chat(
         self,

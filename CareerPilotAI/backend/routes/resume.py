@@ -26,6 +26,11 @@ def upload():
         
         if success:
             flash(message, 'success')
+            
+            # Smart Synchronization: invalidate and regenerate
+            from backend.services.autonomous_agent import AutonomousAgent
+            AutonomousAgent.invalidate_and_regenerate(user_id)
+            
             return redirect(url_for('resume.analyze', resume_id=resume_id))
         else:
             flash(message, 'danger')
@@ -98,6 +103,10 @@ def builder():
     # Pre-fetch the latest AI version if it exists
     latest_version = ResumeIntelligenceService.get_latest_version(user_id)
     profile = CareerProfileService.get_profile(user_id)
+    
+    # Autonomous AI: trigger generation silently (will skip if fresh)
+    from backend.services.autonomous_agent import AutonomousAgent
+    AutonomousAgent.trigger_resume_generation(user_id, profile.get('preferred_role', ''))
     
     return render_template('resume/intelligence.html', 
                            user=user, 

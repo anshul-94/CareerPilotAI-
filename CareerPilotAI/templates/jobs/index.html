@@ -28,8 +28,29 @@
         {% endif %}
     </div>
 
-    <!-- ─── Profile-Based Auto Search ───────────────────── -->
-    {% if prefill and prefill.preferred_role %}
+    <!-- ─── AI Autonomous Status ──────────────────────────── -->
+    {% if total_searched and total_searched > 0 %}
+    <div style="background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.07));
+                border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:1.25rem 1.5rem;
+                margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
+                flex-wrap:wrap;gap:1rem;" class="reveal delay-1">
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+            <span style="font-size:2rem; animation: pulse 2s infinite;">🤖</span>
+            <div>
+                <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem; font-size: 1.1rem;">
+                    AI autonomously ranked <span style="color:#a5b4fc;">{{ total_searched }} jobs</span> for you today.
+                </div>
+                <div style="font-size:0.85rem;color:#94a3b8;">
+                    Showing your top {{ recent_jobs|length }} matches &nbsp;·&nbsp;
+                    Last updated: <span style="color:#fbbf24;">{{ last_updated }}</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn">
+            🔄 Refresh Jobs
+        </button>
+    </div>
+    {% elif prefill and prefill.preferred_role %}
     <div style="background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.07));
                 border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:1.25rem 1.5rem;
                 margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
@@ -38,17 +59,15 @@
             <span style="font-size:1.3rem;">🤖</span>
             <div>
                 <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem;">
-                    Auto-searching: <span style="color:#a5b4fc;">{{ prefill.preferred_role }}</span>
+                    AI is currently searching for: <span style="color:#a5b4fc;">{{ prefill.preferred_role }}</span>
                 </div>
                 <div style="font-size:0.82rem;color:#64748b;">
-                    Skills: {{ (prefill.top_skills or prefill.skills or [])[:5] | join(', ') or 'Not set' }}
-                    &nbsp;·&nbsp;
-                    Location: {{ prefill.preferred_location or 'All locations' }}
+                    Generating background job matches. This usually takes ~10 seconds.
                 </div>
             </div>
         </div>
         <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn">
-            ⚡ Search My Jobs
+            ⚡ Refresh Status
         </button>
     </div>
     {% endif %}

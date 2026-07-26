@@ -12,3 +12,160 @@
 2026-07-25 13:38:19,527 - app - INFO - Successfully deleted session test-delete-999
 2026-07-26 20:05:48,817 - app - ERROR - Error generating title for session d9180390-478c-4fa7-b863-ac7eefeec015: No module named 'backend.services.ollama_service'
 2026-07-26 20:06:08,579 - app - ERROR - Error generating title for session 279b5bfe-fe58-46f6-8eee-2c55000526ff: No module named 'backend.services.ollama_service'
+2026-07-26 23:22:18,137 - app - INFO - 
+[23:22:18]
+GET /
+User: 12
+Status: 200
+Duration: 30ms
+2026-07-26 23:22:22,164 - app - INFO - 
+[23:22:22]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 45ms
+2026-07-26 23:22:23,515 - app - INFO - 
+[23:22:23]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 17ms
+2026-07-26 23:22:25,579 - app - INFO - 
+[23:22:25]
+GET /chat/
+User: 12
+Status: 200
+Duration: 30ms
+2026-07-26 23:22:28,008 - app - INFO - 
+[23:22:28]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 20ms
+2026-07-26 23:22:28,008 - app - ERROR - Error generating title for session 6126c2cc-d9b3-459d-8847-38bc52835870: No module named 'backend.services.ollama_service'
+2026-07-26 23:22:31,754 - app - INFO - 
+[23:22:31]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 46ms
+2026-07-26 23:22:33,419 - app - INFO - 
+[23:22:33]
+GET /chat/
+User: 12
+Status: 200
+Duration: 12ms
+2026-07-26 23:22:36,665 - app - INFO - 
+[23:22:36]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-07-26 23:22:42,088 - app - INFO - 
+[23:22:42]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 21ms
+2026-07-26 23:23:17,745 - app - INFO - 
+[23:23:17]
+GET /chat/
+User: 12
+Status: 200
+Duration: 4ms
+2026-07-26 23:23:25,128 - app - INFO - 
+[23:23:25]
+GET /learning/
+User: 12
+Status: 200
+Duration: 24ms
+2026-07-26 23:23:26,179 - app - INFO - 
+[23:23:26]
+GET /interview/
+User: 12
+Status: 200
+Duration: 12ms
+2026-07-26 23:23:27,014 - app - INFO - 
+[23:23:27]
+GET /jobs/
+User: 12
+Status: 500
+Duration: 33ms
+2026-07-26 23:23:28,922 - app - INFO - 
+[23:23:28]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-07-26 23:23:32,698 - app - INFO - 
+[23:23:32]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-07-26 23:23:34,282 - app - INFO - 
+[23:23:34]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 24ms
+2026-07-26 23:23:35,726 - app - INFO - 
+[23:23:35]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 22ms
+2026-07-26 23:23:35,779 - app - INFO - 
+[23:23:35]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 1ms
+2026-07-26 23:23:48,444 - app - INFO - 
+[23:23:48]
+GET /jobs/
+User: 12
+Status: 500
+Duration: 31ms
+2026-07-26 23:24:01,223 - app - INFO - 
+[23:24:01]
+POST /resume/api/intelligence/generate
+User: 12
+Status: 500
+Duration: 22737ms
+2026-07-26 23:25:16,913 - app - INFO - 
+[23:25:16]
+GET /
+User: 12
+Status: 200
+Duration: 16ms
+2026-07-26 23:25:20,185 - app - INFO - 
+[23:25:20]
+GET /jobs/
+User: 12
+Status: 500
+Duration: 41ms
+2026-07-26 23:32:51,838 - app - INFO - 
+[23:32:51]
+GET /
+User: 12
+Status: 200
+Duration: 18ms
+2026-07-26 23:32:54,030 - app - INFO - 
+[23:32:54]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 55ms
+2026-07-26 23:35:14,255 - app - INFO - 
+[23:35:14]
+POST /jobs/search
+User: 12
+Status: 200
+Duration: 14766ms
+2026-07-26 23:35:34,030 - app - INFO - 
+[23:35:34]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 53ms
