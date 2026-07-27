@@ -215,38 +215,348 @@ class ProblemService:
             return fallback
 
     @staticmethod
+    def analyze_error_ai(user_id: int, problem_id: int, code: str, language: str, status: str, error_message: str, expected_output: str = None, actual_output: str = None) -> dict:
+        """Call AI provider to explain a compilation error, runtime error, or wrong answer logic without fake scores."""
+        problem = ProblemService.get_problem_by_id(problem_id)
+        if not problem:
+            return {}
+            
+        prompt = f"""
+        You are an expert AI Coding Mentor.
+        The user's code failed execution with status: {status}.
+        
+        Problem Title: {problem.get('title', 'Unknown')}
+        Language: {language}
+        
+        User Code:
+        {code}
+        
+        Error/Output Details:
+        {error_message or "No direct stderr output recorded."}
+        """
+        if status == "Wrong Answer":
+            prompt += f"\nExpected Output: {expected_output}\nActual Output: {actual_output}\n"
+            
+        prompt += """
+        Please analyze this failure and provide constructive, detailed feedback.
+        Respond strictly in valid JSON format matching this schema:
+        {
+            "feedback_report": {
+                "explanation": "Clear explanation of the error/failure.",
+                "what_went_well": "Constructive comment on what they got right, or 'None'.",
+                "cleaner_approach": "Conceptual guidance on how to fix this error or logical issue.",
+                "interview_expectation": "How an interviewer would react to this mistake and what they expect."
+            }
+        }
+        """
+        
+        provider = get_provider()
+        try:
+            response_text = provider.generate(prompt)
+            if "```json" in response_text:
+                response_text = response_text.split("```json")[1].split("```")[0].strip()
+            elif "```" in response_text:
+                response_text = response_text.split("```")[1].split("```")[0].strip()
+                
+            data = json.loads(response_text)
+            
+            # Ensure feedback_report and no fake scores
+            feedback = data.get("feedback_report", {})
+            return {
+                "correctness": None,
+                "optimization": None,
+                "time_complexity": None,
+                "space_complexity": None,
+                "readability": None,
+                "naming_convention": None,
+                "interview_quality": None,
+                "feedback_report": {
+                    "explanation": feedback.get("explanation", f"Failed with {status}"),
+                    "what_went_well": feedback.get("what_went_well", "Attempted the solution structure."),
+                    "cleaner_approach": feedback.get("cleaner_approach", "Fix compile/logic errors first."),
+                    "interview_expectation": feedback.get("interview_expectation", "Candidates are expected to resolve syntax and logical issues.")
+                }
+            }
+        except Exception as e:
+            from backend.utils.logger import app_logger
+            app_logger.error(f"[AI Error Analysis] Failed: {str(e)}")
+            return {
+                "correctness": None,
+                "optimization": None,
+                "time_complexity": None,
+                "space_complexity": None,
+                "readability": None,
+                "naming_convention": None,
+                "interview_quality": None,
+                "feedback_report": {
+                    "explanation": f"The judge reported a {status}. Details: {error_message}",
+                    "what_went_well": "You wrote a syntactically structured solution.",
+                    "cleaner_approach": "Review the compiler output/stdout logs to trace the failing test case.",
+                    "interview_expectation": "Interviewers expect code to compile and run against simple cases."
+                }
+            }
+
+    @staticmethod
     def get_dashboard_stats(user_id: int) -> dict:
-        """Retrieve compiled learning metrics and history for problem solving."""
-        # Fetch submissions count
-        subs = execute_query("SELECT status, problem_id FROM problem_submissions WHERE user_id = ?", (user_id,))
-        total_sub = len(subs)
-        accepted_sub = len([s for s in subs if s["status"] == "Accepted"])
+        """Retrieve real SQLite compiled analytics and learning metrics for the user."""
+        # 1. Fetch total problems
+        total_p_row = execute_one("SELECT COUNT(*) as count FROM problems")
+        total_problems = total_p_row["count"] if total_p_row else 150
         
-        # Streak calculations
-        streak_row = execute_one("SELECT streak, confidence_score FROM user_problem_analytics WHERE user_id = ?", (user_id,))
-        streak = streak_row["streak"] if streak_row else 0
-        confidence = streak_row["confidence_score"] if streak_row else 50
-        
-        # Topic breakdown
-        topic_rows = execute_query("SELECT topic, score FROM user_topic_scores WHERE user_id = ?", (user_id,))
-        topic_scores = {r["topic"]: r["score"] for r in topic_rows}
-        
-        # Daily history submissions mapping (past 7 days activity)
-        history = execute_query("""
-            SELECT date(created_at) as day, count(*) as count 
+        # 2. Solved problems count (distinct problem_id where status is 'Accepted')
+        solved_row = execute_one("""
+            SELECT COUNT(DISTINCT problem_id) as count 
             FROM problem_submissions 
-            WHERE user_id = ? AND created_at >= date('now', '-7 days')
-            GROUP BY day
+            WHERE user_id = ? AND status = 'Accepted'
+        """, (user_id,))
+        problems_solved = solved_row["count"] if solved_row else 0
+        
+        # 3. Acceptance rate (Accepted submissions / Total submissions * 100)
+        total_submissions_row = execute_one("SELECT COUNT(*) as count FROM problem_submissions WHERE user_id = ?", (user_id,))
+        total_submissions = total_submissions_row["count"] if total_submissions_row else 0
+        
+        accepted_submissions_row = execute_one("SELECT COUNT(*) as count FROM problem_submissions WHERE user_id = ? AND status = 'Accepted'", (user_id,))
+        accepted_submissions = accepted_submissions_row["count"] if accepted_submissions_row else 0
+        
+        acceptance_rate = round((accepted_submissions / total_submissions * 100), 1) if total_submissions > 0 else 0.0
+        
+        # 4. Streak calculations (consecutive daily accepted submissions)
+        history_dates = execute_query("""
+            SELECT DISTINCT date(created_at) as sub_date 
+            FROM problem_submissions 
+            WHERE user_id = ? AND status = 'Accepted'
+            ORDER BY sub_date DESC
         """, (user_id,))
         
-        daily_activity = {h["day"]: h["count"] for h in history}
+        current_streak = 0
+        if history_dates:
+            from datetime import date, timedelta
+            today_str = date.today().isoformat()
+            yesterday_str = (date.today() - timedelta(days=1)).isoformat()
+            
+            sub_dates_set = {row["sub_date"] for row in history_dates}
+            
+            if today_str in sub_dates_set:
+                current_date = date.today()
+            elif yesterday_str in sub_dates_set:
+                current_date = date.today() - timedelta(days=1)
+            else:
+                current_date = None
+                
+            if current_date:
+                while current_date.isoformat() in sub_dates_set:
+                    current_streak += 1
+                    current_date -= timedelta(days=1)
+                    
+        # 5. Rating algorithm
+        rating = 1000
+        solved_problems = execute_query("""
+            SELECT DISTINCT p.id, p.difficulty, s.execution_time
+            FROM problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id 
+            WHERE s.user_id = ? AND s.status = 'Accepted'
+        """, (user_id,))
         
+        for sp in solved_problems:
+            diff = sp["difficulty"]
+            if diff == "Easy":
+                rating += 10
+            elif diff == "Medium":
+                rating += 30
+            elif diff == "Hard":
+                rating += 60
+                
+            if sp["execution_time"] > 0 and sp["execution_time"] < 50:
+                rating += 5 # Speed bonus
+                
+            all_subs = execute_query("""
+                SELECT status FROM problem_submissions 
+                WHERE user_id = ? AND problem_id = ? 
+                ORDER BY created_at ASC
+            """, (user_id, sp["id"]))
+            
+            if all_subs:
+                if all_subs[0]["status"] == "Accepted":
+                    rating += 5 # First attempt bonus
+                else:
+                    for sub in all_subs:
+                        if sub["status"] == "Accepted":
+                            break
+                        rating -= 2 # Wrong submission penalty
+                        
+        unsolved_wrong_attempts = execute_one("""
+            SELECT COUNT(*) as count FROM problem_submissions
+            WHERE user_id = ? AND status != 'Accepted' 
+              AND problem_id NOT IN (
+                  SELECT DISTINCT problem_id FROM problem_submissions WHERE user_id = ? AND status = 'Accepted'
+              )
+        """, (user_id, user_id))
+        if unsolved_wrong_attempts:
+            rating -= unsolved_wrong_attempts["count"] * 2
+            
+        rating = max(0, rating)
+        
+        # 6. Topic Strength
+        topics = ["Arrays", "Linked List", "DP", "Trees", "Graphs", "Strings", "HashMap", "Binary Search", "Sliding Window", "Greedy"]
+        topic_strength = {topic: 0 for topic in topics}
+        db_topic_scores = execute_query("""
+            SELECT p.topic, COUNT(DISTINCT p.id) as solved_count
+            FROM problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+            WHERE s.user_id = ? AND s.status = 'Accepted'
+            GROUP BY p.topic
+        """, (user_id,))
+        for row in db_topic_scores:
+            t = row["topic"]
+            if t in topic_strength:
+                topic_strength[t] = row["solved_count"]
+            else:
+                topic_strength[t] = row["solved_count"]
+                
+        # 7. Difficulty Distribution
+        difficulty_distribution = {"Easy": 0, "Medium": 0, "Hard": 0}
+        db_diffs = execute_query("""
+            SELECT p.difficulty, COUNT(DISTINCT p.id) as solved_count
+            FROM problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+            WHERE s.user_id = ? AND s.status = 'Accepted'
+            GROUP BY p.difficulty
+        """, (user_id,))
+        for row in db_diffs:
+            d = row["difficulty"]
+            if d in difficulty_distribution:
+                difficulty_distribution[d] = row["solved_count"]
+                
+        # 8. Language Usage
+        language_usage = {}
+        db_languages = execute_query("""
+            SELECT language, COUNT(*) as count 
+            FROM problem_submissions 
+            WHERE user_id = ? 
+            GROUP BY language
+        """, (user_id,))
+        for row in db_languages:
+            language_usage[row["language"]] = row["count"]
+            
+        # 9. Recent Activity (Last 10 submissions)
+        submission_history = []
+        db_history = execute_query("""
+            SELECT s.id, p.title, s.status, s.execution_time as runtime, s.language, s.created_at
+            FROM problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+            WHERE s.user_id = ?
+            ORDER BY s.created_at DESC
+            LIMIT 10
+        """, (user_id,))
+        for row in db_history:
+            submission_history.append({
+                "id": row["id"],
+                "title": row["title"],
+                "status": row["status"],
+                "runtime": row["runtime"],
+                "language": row["language"],
+                "created_at": row["created_at"]
+            })
+            
+        # 10. Daily Heatmap (GitHub style, past 365 days)
+        heatmap_data = execute_query("""
+            SELECT date(created_at) as day, COUNT(*) as count
+            FROM problem_submissions
+            WHERE user_id = ? AND status = 'Accepted' AND created_at >= date('now', '-365 days')
+            GROUP BY day
+        """, (user_id,))
+        heatmap = {h["day"]: h["count"] for h in heatmap_data}
+        
+        # 11. Timeline Graph (last 30 days)
+        timeline_data = execute_query("""
+            SELECT date(created_at) as day, 
+                   SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted,
+                   SUM(CASE WHEN status != 'Accepted' THEN 1 ELSE 0 END) as failed
+            FROM problem_submissions
+            WHERE user_id = ? AND created_at >= date('now', '-30 days')
+            GROUP BY day
+            ORDER BY day ASC
+        """, (user_id,))
+        timeline = [{"day": t["day"], "accepted": t["accepted"], "failed": t["failed"]} for t in timeline_data]
+        
+        # 12. Company Progress
+        company_list = ["Google", "Amazon", "Microsoft", "Meta", "Adobe", "Uber", "Oracle"]
+        company_progress = {comp: 0 for comp in company_list}
+        company_data = execute_query("""
+            SELECT p.companies
+            FROM problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+            WHERE s.user_id = ? AND s.status = 'Accepted'
+        """, (user_id,))
+        for row in company_data:
+            comps = row["companies"]
+            if comps:
+                for c in comps.split(","):
+                    c_clean = c.strip()
+                    if c_clean in company_progress:
+                        company_progress[c_clean] += 1
+                        
+        # 13. AI Learning Insights
+        ai_insights = []
+        strongest = max(topic_strength.items(), key=lambda x: x[1], default=(None, 0))
+        if strongest[1] > 0:
+            ai_insights.append(f"Strong in {strongest[0]} with {strongest[1]} problem(s) solved.")
+        else:
+            ai_insights.append("Solve your first problem to unlock topic strength insights.")
+            
+        unsolved_topics = execute_query("""
+            SELECT DISTINCT p.topic
+            FROM problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+            WHERE s.user_id = ? AND s.status != 'Accepted'
+              AND p.topic NOT IN (
+                  SELECT DISTINCT p2.topic FROM problems p2 JOIN problem_submissions s2 ON p2.id = s2.problem_id WHERE s2.user_id = ? AND s2.status = 'Accepted'
+              )
+        """, (user_id, user_id))
+        if unsolved_topics:
+            ai_insights.append(f"Weak in {unsolved_topics[0]['topic']}, where failures are recorded without success.")
+        else:
+            if difficulty_distribution["Easy"] > difficulty_distribution["Medium"]:
+                ai_insights.append("Recommend solving more Medium problems in your weak topics.")
+            elif difficulty_distribution["Medium"] > difficulty_distribution["Hard"]:
+                ai_insights.append("Ready to solve more Hard level questions to optimize FAANG grading.")
+                
+        comp_errs = execute_one("""
+            SELECT language, COUNT(*) as count 
+            FROM problem_submissions 
+            WHERE user_id = ? AND status = 'Compilation Error'
+            GROUP BY language
+            ORDER BY count DESC LIMIT 1
+        """, (user_id,))
+        if comp_errs:
+            ai_insights.append(f"High compile errors in {comp_errs['language'].capitalize()} submissions.")
+            
+        # Simple runtime trend calculation
+        runtimes = [sp["execution_time"] for sp in solved_problems if sp["execution_time"] > 0]
+        if len(runtimes) >= 4:
+            half = len(runtimes) // 2
+            avg_early = sum(runtimes[:half]) / half
+            avg_late = sum(runtimes[half:]) / half
+            if avg_late < avg_early:
+                ai_insights.append("Runtime efficiency is improving across recent solutions.")
+                
+        if len(ai_insights) < 3:
+            ai_insights.append("Continuously submit solutions to build your learning profile.")
+            
         return {
-            "total_submissions": total_sub,
-            "accepted_submissions": accepted_sub,
-            "acceptance_rate": int((accepted_sub / total_sub) * 100) if total_sub > 0 else 0,
-            "streak": streak,
-            "confidence_score": confidence,
-            "topic_scores": topic_scores,
-            "daily_activity": daily_activity
+            "problems_solved": problems_solved,
+            "total_problems": total_problems,
+            "acceptance_rate": acceptance_rate,
+            "current_streak": current_streak,
+            "rating": rating,
+            "total_submissions": total_submissions,
+            "accepted_submissions": accepted_submissions,
+            "language_usage": language_usage,
+            "difficulty_distribution": difficulty_distribution,
+            "topic_strength": topic_strength,
+            "submission_history": submission_history,
+            "heatmap": heatmap,
+            "timeline": timeline,
+            "company_progress": company_progress,
+            "ai_insights": ai_insights
         }

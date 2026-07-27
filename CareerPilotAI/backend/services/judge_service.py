@@ -12,6 +12,14 @@ class JudgeService:
 
     @staticmethod
     def _create_response(success: bool, status: str, details: str, passed: int = 0, total: int = 0, runtime: int = 0, memory: int = 0, stdout: str = "", stderr: str = "", compiler_output: str = "", failed_case: int = None, expected: str = None, actual: str = None) -> dict:
+        failed_case_dict = None
+        if status == "Wrong Answer" and failed_case is not None:
+            failed_case_dict = {
+                "case_number": failed_case,
+                "expected": expected,
+                "actual": actual
+            }
+
         return {
             "success": success,
             "status": status,
@@ -20,10 +28,18 @@ class JudgeService:
             "runtime": runtime,
             "memory": memory,
             "compile_error": compiler_output if status == "Compilation Error" else None,
-            "runtime_error": stderr if (status == "Runtime Error" or status == "Time Limit Exceeded") else None,
+            "runtime_error": stderr if (status in ["Runtime Error", "Time Limit Exceeded", "Memory Limit Exceeded"]) else None,
             "stderr": stderr,
             "stdout": stdout,
-            "failed_case": failed_case,
+            "failed_case": failed_case_dict,
+            "ai_metrics": {},
+            "execution_details": {
+                "expected": expected,
+                "actual": actual,
+                "compiler_output": compiler_output,
+                "details": details
+            },
+            # Flat attributes for backward compatibility
             "expected": expected,
             "actual": actual,
             "compiler_output": compiler_output,

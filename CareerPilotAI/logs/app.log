@@ -2629,3 +2629,608 @@ GET /problem_solving/problem/1
 User: 13
 Status: 200
 Duration: 16ms
+2026-07-27 16:08:12,098 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 16:08:12,103 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:08:12,167 - app - INFO - [Judge] Evaluating problem 1 in java with 3 cases.
+2026-07-27 16:08:12,167 - app - INFO - [Judge] User function loaded for java
+2026-07-27 16:08:12,171 - app - INFO - [Judge] Driver generated for java
+2026-07-27 16:08:12,172 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpy1vgtcg8/Main.java
+2026-07-27 16:08:12,172 - app - INFO - [Judge] Compilation started for java...
+2026-07-27 16:08:12,668 - app - INFO - [Judge] Compilation finished for java.
+2026-07-27 16:08:12,668 - app - INFO - [Judge] Execution started for java...
+2026-07-27 16:08:12,781 - app - INFO - [Judge] Execution finished for java.
+2026-07-27 16:08:12,781 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:08:12,781 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 16:08:12,781 - app - INFO - [Judge] User function loaded for c
+2026-07-27 16:08:12,782 - app - INFO - [Judge] Driver generated for c
+2026-07-27 16:08:12,783 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpryzco1jx/merged.c
+2026-07-27 16:08:12,783 - app - INFO - [Judge] Compilation started for c...
+2026-07-27 16:08:13,258 - app - INFO - [Judge] Compilation finished for c.
+2026-07-27 16:08:13,259 - app - INFO - [Judge] Execution started for c...
+2026-07-27 16:08:13,996 - app - INFO - [Judge] Execution finished for c.
+2026-07-27 16:08:13,996 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:08:13,996 - app - INFO - [Judge] Evaluating problem 1 in javascript with 3 cases.
+2026-07-27 16:08:13,997 - app - INFO - [Judge] Executing managed loop for node
+2026-07-27 16:08:14,035 - app - INFO - [Judge] Evaluating problem 1 in cpp with 3 cases.
+2026-07-27 16:08:14,035 - app - INFO - [Judge] User function loaded for cpp
+2026-07-27 16:08:14,036 - app - INFO - [Judge] Driver generated for cpp
+2026-07-27 16:08:14,037 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmp807rd8y1/merged.cpp
+2026-07-27 16:08:14,037 - app - INFO - [Judge] Compilation started for cpp...
+2026-07-27 16:08:14,609 - app - INFO - [Judge] Compilation finished for cpp.
+2026-07-27 16:08:14,609 - app - INFO - [Judge] Execution started for cpp...
+2026-07-27 16:08:15,087 - app - INFO - [Judge] Execution finished for cpp.
+2026-07-27 16:08:15,087 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:08:28,087 - app - INFO - 
+[16:08:28]
+GET /
+User: 13
+Status: 200
+Duration: 22ms
+2026-07-27 16:08:57,779 - app - INFO - 
+[16:08:57]
+GET /
+User: 13
+Status: 200
+Duration: 20ms
+2026-07-27 16:09:02,537 - app - INFO - 
+[16:09:02]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 54ms
+2026-07-27 16:09:07,855 - app - INFO - 
+[16:09:07]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 16:09:11,221 - app - INFO - 
+[16:09:11]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:09:12,190 - app - INFO - 
+[16:09:12]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:09:13,052 - app - INFO - 
+[16:09:13]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:09:13,200 - app - INFO - 
+[16:09:13]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:09:13,333 - app - INFO - 
+[16:09:13]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:09:15,541 - app - INFO - 
+[16:09:15]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 26ms
+2026-07-27 16:09:31,252 - app - INFO - 
+[16:09:31]
+GET /problem_solving/problem/3
+User: 13
+Status: 200
+Duration: 14ms
+2026-07-27 16:09:54,106 - app - INFO - 
+[16:09:54]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 16:09:56,830 - app - INFO - 
+[16:09:56]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 16:17:40,702 - app - INFO - 
+[16:17:40]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 16:17:42,104 - app - INFO - 
+[16:17:42]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:17:52,279 - app - INFO - 
+[16:17:52]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 16:19:14,565 - app - INFO - 
+[16:19:14]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 16:19:19,367 - app - INFO - 
+[16:19:19]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 14ms
+2026-07-27 16:19:25,519 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 16:19:25,520 - app - INFO - [IDE Submit] Compiler started. Code size: 183 chars. Language: python
+2026-07-27 16:19:25,520 - app - INFO - [IDE Submit] Execution started...
+2026-07-27 16:19:25,525 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 16:19:25,527 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:19:25,598 - app - INFO - [IDE Submit] Execution finished. Judge finished with status: Wrong Answer
+2026-07-27 16:19:25,598 - app - INFO - [IDE Submit] Database save started...
+2026-07-27 16:19:25,601 - app - INFO - [IDE Submit] Generating AI feedback for failure status Wrong Answer...
+2026-07-27 16:19:31,039 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 16:19:31,041 - app - INFO - [IDE Submit] Compiler started. Code size: 183 chars. Language: python
+2026-07-27 16:19:31,041 - app - INFO - [IDE Submit] Execution started...
+2026-07-27 16:19:31,051 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 16:19:31,053 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:19:31,127 - app - INFO - [IDE Submit] Execution finished. Judge finished with status: Wrong Answer
+2026-07-27 16:19:31,127 - app - INFO - [IDE Submit] Database save started...
+2026-07-27 16:19:31,130 - app - INFO - [IDE Submit] Generating AI feedback for failure status Wrong Answer...
+2026-07-27 16:19:32,103 - app - INFO - [IDE Run] Request received for Problem ID: 2
+2026-07-27 16:19:32,108 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 16:19:32,109 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:19:32,161 - app - INFO - 
+[16:19:32]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 57ms
+2026-07-27 16:19:40,103 - app - ERROR - [AI Error Analysis] Failed: the JSON object must be str, bytes or bytearray, not dict
+2026-07-27 16:19:40,103 - app - INFO - [IDE Submit] AI error feedback generated successfully.
+2026-07-27 16:19:40,103 - app - INFO - [IDE Submit] JSON returned to client.
+2026-07-27 16:19:40,104 - app - INFO - 
+[16:19:40]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 200
+Duration: 14585ms
+2026-07-27 16:19:48,913 - app - ERROR - [AI Error Analysis] Failed: the JSON object must be str, bytes or bytearray, not dict
+2026-07-27 16:19:48,913 - app - INFO - [IDE Submit] AI error feedback generated successfully.
+2026-07-27 16:19:48,913 - app - INFO - [IDE Submit] JSON returned to client.
+2026-07-27 16:19:48,914 - app - INFO - 
+[16:19:48]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 200
+Duration: 17876ms
+2026-07-27 16:23:02,654 - app - INFO - 
+[16:23:02]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 48ms
+2026-07-27 16:23:06,538 - app - INFO - [IDE Run] Request received for Problem ID: 2
+2026-07-27 16:23:06,542 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 16:23:06,545 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:23:06,618 - app - INFO - 
+[16:23:06]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 80ms
+2026-07-27 16:23:09,416 - app - INFO - 
+[16:23:09]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 16:23:17,596 - app - INFO - 
+[16:23:17]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 56ms
+2026-07-27 16:23:20,170 - app - INFO - 
+[16:23:20]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 46ms
+2026-07-27 16:23:20,236 - app - INFO - 
+[16:23:20]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 16:23:21,547 - app - INFO - 
+[16:23:21]
+GET /jobs/
+User: 13
+Status: 200
+Duration: 45ms
+2026-07-27 16:23:23,360 - app - INFO - 
+[16:23:23]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 20ms
+2026-07-27 16:23:23,429 - app - INFO - 
+[16:23:23]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 35ms
+2026-07-27 16:23:25,939 - app - INFO - 
+[16:23:25]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:23:26,011 - app - INFO - 
+[16:23:26]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 16:23:33,287 - app - INFO - 
+[16:23:33]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 51ms
+2026-07-27 16:23:33,344 - app - INFO - 
+[16:23:33]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:26:43,660 - app - INFO - 
+[16:26:43]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 50ms
+2026-07-27 16:26:43,716 - app - INFO - 
+[16:26:43]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 21ms
+2026-07-27 16:28:05,790 - app - INFO - 
+[16:28:05]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 48ms
+2026-07-27 16:28:05,842 - app - INFO - 
+[16:28:05]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 16:28:07,273 - app - INFO - 
+[16:28:07]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 47ms
+2026-07-27 16:28:07,321 - app - INFO - 
+[16:28:07]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 27ms
+2026-07-27 16:28:08,756 - app - INFO - 
+[16:28:08]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 47ms
+2026-07-27 16:28:08,802 - app - INFO - 
+[16:28:08]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 23ms
+2026-07-27 16:28:52,672 - app - INFO - 
+[16:28:52]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 37ms
+2026-07-27 16:28:52,717 - app - INFO - 
+[16:28:52]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 16:29:34,490 - app - INFO - 
+[16:29:34]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 48ms
+2026-07-27 16:29:34,564 - app - INFO - 
+[16:29:34]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 33ms
+2026-07-27 16:30:00,893 - app - INFO - 
+[16:30:00]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 16:30:00,963 - app - INFO - 
+[16:30:00]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:31:27,885 - app - INFO - 
+[16:31:27]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 27ms
+2026-07-27 16:31:27,968 - app - INFO - 
+[16:31:27]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 23ms
+2026-07-27 16:31:29,805 - app - INFO - 
+[16:31:29]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:31:29,861 - app - INFO - 
+[16:31:29]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 30ms
+2026-07-27 16:31:31,369 - app - INFO - 
+[16:31:31]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:31:31,426 - app - INFO - 
+[16:31:31]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:31:32,228 - app - INFO - 
+[16:31:32]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:32,298 - app - INFO - 
+[16:31:32]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:31:33,880 - app - INFO - 
+[16:31:33]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:31:33,947 - app - INFO - 
+[16:31:33]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 16:31:35,445 - app - INFO - 
+[16:31:35]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:35,515 - app - INFO - 
+[16:31:35]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:31:36,683 - app - INFO - 
+[16:31:36]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:36,748 - app - INFO - 
+[16:31:36]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 39ms
+2026-07-27 16:31:38,521 - app - INFO - 
+[16:31:38]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 16:31:38,595 - app - INFO - 
+[16:31:38]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 30ms
+2026-07-27 16:31:39,995 - app - INFO - 
+[16:31:39]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:40,062 - app - INFO - 
+[16:31:40]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 16:31:41,745 - app - INFO - 
+[16:31:41]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:41,807 - app - INFO - 
+[16:31:41]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 32ms
+2026-07-27 16:31:43,213 - app - INFO - 
+[16:31:43]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:43,276 - app - INFO - 
+[16:31:43]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 16:31:44,194 - app - INFO - 
+[16:31:44]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:31:44,265 - app - INFO - 
+[16:31:44]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 30ms
+2026-07-27 16:32:05,279 - app - INFO - 
+[16:32:05]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 16:32:05,349 - app - INFO - 
+[16:32:05]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 16:32:06,078 - app - INFO - 
+[16:32:06]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:32:06,150 - app - INFO - 
+[16:32:06]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:32:07,161 - app - INFO - 
+[16:32:07]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:32:07,236 - app - INFO - 
+[16:32:07]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 32ms
+2026-07-27 16:32:08,097 - app - INFO - 
+[16:32:08]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:32:08,162 - app - INFO - 
+[16:32:08]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 34ms
+2026-07-27 16:32:16,968 - app - INFO - 
+[16:32:16]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:32:17,027 - app - INFO - 
+[16:32:17]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 30ms
+2026-07-27 16:32:34,818 - app - INFO - 
+[16:32:34]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 16:32:34,877 - app - INFO - 
+[16:32:34]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 31ms
+2026-07-27 16:32:37,511 - app - INFO - 
+[16:32:37]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:32:37,581 - app - INFO - 
+[16:32:37]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:32:39,065 - app - INFO - 
+[16:32:39]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:32:39,138 - app - INFO - 
+[16:32:39]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:32:42,052 - app - INFO - 
+[16:32:42]
+GET /problem_solving/problem/3
+User: 13
+Status: 200
+Duration: 14ms
+2026-07-27 16:33:10,187 - app - INFO - 
+[16:33:10]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 16:33:21,042 - app - INFO - 
+[16:33:21]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 36ms

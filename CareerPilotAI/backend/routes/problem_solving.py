@@ -63,15 +63,26 @@ def problem_detail(problem_id: int):
 class JudgeResult:
     @staticmethod
     def validate(result: dict) -> dict:
-        required_keys = ["success", "status", "passed", "total", "runtime", "memory"]
-        missing = [key for key in required_keys if key not in result]
-        if missing:
-            return {
-                "success": False,
-                "status": "Internal Judge Error",
-                "error": f"Judge did not return required keys: {', '.join(missing)}"
-            }
+        required_keys = ["status", "success", "passed", "total", "runtime", "memory"]
+        for key in required_keys:
+            if key not in result:
+                return {
+                    "success": False,
+                    "status": "Internal Judge Error",
+                    "error": f"Judge did not return required key: {key}"
+                }
         return result
+
+@problem_solving_bp.errorhandler(Exception)
+def handle_blueprint_exception(e):
+    from backend.utils.logger import app_logger
+    import traceback
+    app_logger.error(f"[Blueprint Error] {str(e)}\n{traceback.format_exc()}")
+    return jsonify({
+        "success": False,
+        "status": "Internal Error",
+        "error": str(e)
+    }), 200
 
 @problem_solving_bp.route('/api/run/<int:problem_id>', methods=['POST'])
 @api_login_required
@@ -91,13 +102,13 @@ def run_code(problem_id: int):
         result = JudgeResult.validate(raw_result)
         
         if result.get("status") == "Internal Judge Error":
-            return jsonify(result), 500
+            return jsonify(result)
             
         return jsonify(result)
     except Exception as e:
         import traceback
         app_logger.error(f"[IDE Run] Internal error: {str(e)}\n{traceback.format_exc()}")
-        return jsonify({"success": False, "status": "Internal Error", "error": str(e)}), 500
+        return jsonify({"success": False, "status": "Internal Error", "error": str(e)})
 
 @problem_solving_bp.route('/api/submit/<int:problem_id>', methods=['POST'])
 @api_login_required
@@ -127,7 +138,7 @@ def submit_code(problem_id: int):
         app_logger.info(f"[IDE Submit] Execution finished. Judge finished with status: {result.get('status')}")
         
         if result.get("status") == "Internal Judge Error":
-            return jsonify(result), 500
+            return jsonify(result)
             
         # 2. Save submission to database
         app_logger.info(f"[IDE Submit] Database save started...")
@@ -160,37 +171,54 @@ def submit_code(problem_id: int):
             ai_feedback = ProblemService.analyze_submission_ai(user_id, problem_id, code, language, submission_id)
             app_logger.info(f"[IDE Submit] AI review completed successfully.")
         else:
-            app_logger.info(f"[IDE Submit] Skipping AI score generation. Generating basic {result['status']} feedback instead.")
-            ai_feedback = {
-                "correctness": 0, "optimization": 0, "time_complexity": "N/A", "space_complexity": "N/A",
-                "readability": 0, "naming_convention": 0, "interview_quality": 0,
-                "feedback_report": {
-                    "what_went_well": f"You attempted to solve the problem in {language}.",
-                    "cleaner_approach": f"Please resolve the {result['status']} to get detailed optimization advice.",
-                    "interview_expectation": f"A {result['status']} indicates the algorithm does not fully satisfy all test cases or constraints yet.",
-                    "confidence_score": 0
-                }
-            }
+            app_logger.info(f"[IDE Submit] Generating AI feedback for failure status {result['status']}...")
+            error_message = result.get("stderr") or result.get("compile_error") or result.get("runtime_error") or result.get("details", "")
+            ai_feedback = ProblemService.analyze_error_ai(
+                user_id=user_id,
+                problem_id=problem_id,
+                code=code,
+                language=language,
+                status=result["status"],
+                error_message=error_message,
+                expected_output=result.get("expected"),
+                actual_output=result.get("actual")
+            )
+            app_logger.info(f"[IDE Submit] AI error feedback generated successfully.")
         
         result["ai_feedback"] = ai_feedback
+        result["ai_metrics"] = ai_feedback or {}
         app_logger.info(f"[IDE Submit] JSON returned to client.")
         return jsonify(result)
         
     except Exception as e:
         import traceback
         app_logger.error(f"[IDE Submit] Internal error: {str(e)}\n{traceback.format_exc()}")
-        return jsonify({"success": False, "status": "Internal Error", "error": str(e)}), 500
+        return jsonify({"success": False, "status": "Internal Error", "error": str(e)})
 
 @problem_solving_bp.route('/api/unlock_hint/<int:problem_id>', methods=['POST'])
 @api_login_required
 def unlock_hint(problem_id: int):
     """Register hint usage to calculate score penalties."""
-    user_id = session.get('user_id')
-    data = request.get_json() or {}
-    hint_index = data.get('hint_index')
-    
-    if hint_index is None:
-        return jsonify({"success": False, "message": "Hint index is required"}), 400
+    try:
+        user_id = session.get('user_id')
+        data = request.get_json() or {}
+        hint_index = data.get('hint_index')
         
-    ProblemService.unlock_hint(user_id, problem_id, int(hint_index))
-    return jsonify({"success": True})
+        if hint_index is None:
+            return jsonify({"success": False, "status": "Error", "message": "Hint index is required"}), 400
+            
+        ProblemService.unlock_hint(user_id, problem_id, int(hint_index))
+        return jsonify({"success": True})
+    except Exception as e:
+        return jsonify({"success": False, "status": "Internal Error", "error": str(e)})
+
+@problem_solving_bp.route('/api/dashboard', methods=['GET'])
+@api_login_required
+def get_dashboard_api():
+    """REST API endpoint to return full dynamic coding metrics and analytics."""
+    try:
+        user_id = session.get('user_id')
+        stats = ProblemService.get_dashboard_stats(user_id)
+        return jsonify(stats)
+    except Exception as e:
+        return jsonify({"success": False, "status": "Internal Error", "error": str(e)})

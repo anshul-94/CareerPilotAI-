@@ -10585,3 +10585,5481 @@ SELECT ONE
 problem_submissions
 Rows:1
 2 ms
+2026-07-27 16:08:12,171 - db - INFO - 
+[DB]
+SELECT ONE
+problem_templates
+Rows:1
+3 ms
+2026-07-27 16:08:12,782 - db - INFO - 
+[DB]
+SELECT ONE
+problem_templates
+Rows:1
+0 ms
+2026-07-27 16:08:14,036 - db - INFO - 
+[DB]
+SELECT ONE
+problem_templates
+Rows:1
+0 ms
+2026-07-27 16:08:18,415 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+1 ms
+2026-07-27 16:08:18,417 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,418 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,418 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,419 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,420 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,421 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,422 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:18,423 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:51,922 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+1 ms
+2026-07-27 16:08:51,926 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+3 ms
+2026-07-27 16:08:51,930 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-07-27 16:08:51,935 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+4 ms
+2026-07-27 16:08:51,938 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-07-27 16:08:51,944 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+4 ms
+2026-07-27 16:08:51,946 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:51,947 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:08:51,948 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:09:02,487 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+3 ms
+2026-07-27 16:09:02,490 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 16:09:02,494 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+3 ms
+2026-07-27 16:09:02,496 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-27 16:09:02,499 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:5
+2 ms
+2026-07-27 16:09:02,503 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+3 ms
+2026-07-27 16:09:02,506 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-27 16:09:02,508 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-27 16:09:02,510 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-07-27 16:09:02,513 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-07-27 16:09:02,516 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-27 16:09:02,517 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 16:09:07,840 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+2 ms
+2026-07-27 16:09:11,219 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+2 ms
+2026-07-27 16:09:12,188 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+2 ms
+2026-07-27 16:09:13,050 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:09:13,198 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:09:13,331 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:09:15,517 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:09:15,519 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:09:15,524 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:3
+3 ms
+2026-07-27 16:09:15,526 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:09:31,242 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+3 ms
+2026-07-27 16:09:31,245 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+2 ms
+2026-07-27 16:09:31,248 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+1 ms
+2026-07-27 16:09:31,250 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:09:54,103 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+3 ms
+2026-07-27 16:09:56,807 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:15
+2 ms
+2026-07-27 16:09:56,809 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:1
+1 ms
+2026-07-27 16:09:56,815 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+4 ms
+2026-07-27 16:09:56,819 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+3 ms
+2026-07-27 16:17:40,699 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+4 ms
+2026-07-27 16:17:42,101 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:17:52,270 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:15
+4 ms
+2026-07-27 16:17:52,272 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:1
+1 ms
+2026-07-27 16:17:52,275 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+2 ms
+2026-07-27 16:17:52,277 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:19:14,562 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+4 ms
+2026-07-27 16:19:19,355 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:19:19,358 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+2 ms
+2026-07-27 16:19:19,362 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+2 ms
+2026-07-27 16:19:19,365 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:19:25,523 - db - INFO - 
+[DB]
+SELECT
+problem_test_cases
+Rows:3
+3 ms
+2026-07-27 16:19:25,600 - db - INFO - 
+[DB]
+INSERT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:19:25,602 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:19:25,603 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:19:31,050 - db - INFO - 
+[DB]
+SELECT
+problem_test_cases
+Rows:3
+8 ms
+2026-07-27 16:19:31,129 - db - INFO - 
+[DB]
+INSERT
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:19:31,131 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:19:31,133 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:19:32,106 - db - INFO - 
+[DB]
+SELECT
+problem_test_cases
+Rows:3
+2 ms
+2026-07-27 16:21:46,968 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+1 ms
+2026-07-27 16:21:46,969 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,970 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,986 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,987 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,987 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,988 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,989 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:46,991 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,443 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-07-27 16:21:56,444 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,445 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,445 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,446 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,447 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,448 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,449 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:21:56,450 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-27 16:22:40,121 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+4 ms
+2026-07-27 16:22:40,122 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,123 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,124 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,125 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-27 16:22:40,125 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-27 16:22:40,127 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,127 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-27 16:22:40,128 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-27 16:22:40,129 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-27 16:22:40,130 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:0
+0 ms
+2026-07-27 16:22:40,131 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-27 16:22:40,131 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-27 16:22:40,132 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-27 16:22:40,133 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-27 16:22:40,134 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-07-27 16:22:40,135 - db - INFO - 
+[DB]
+INSERT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,136 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:22:40,137 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,138 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,139 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,140 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,141 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:22:40,141 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,142 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,143 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:22:40,144 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:22:40,145 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,145 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:1
+0 ms
+2026-07-27 16:22:40,146 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,147 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:22:40,148 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:22:40,149 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-27 16:22:40,149 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-07-27 16:22:40,150 - db - INFO - 
+[DB]
+DELETE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:02,616 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+10 ms
+2026-07-27 16:23:02,620 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:23:02,622 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+1 ms
+2026-07-27 16:23:02,624 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:06,540 - db - INFO - 
+[DB]
+SELECT
+problem_test_cases
+Rows:3
+1 ms
+2026-07-27 16:23:09,403 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+3 ms
+2026-07-27 16:23:09,407 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:23:09,411 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+3 ms
+2026-07-27 16:23:09,414 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:23:17,543 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+3 ms
+2026-07-27 16:23:17,548 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-07-27 16:23:17,555 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+5 ms
+2026-07-27 16:23:17,557 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-27 16:23:17,560 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:5
+1 ms
+2026-07-27 16:23:17,562 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+2 ms
+2026-07-27 16:23:17,565 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-27 16:23:17,567 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-27 16:23:17,569 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-07-27 16:23:17,573 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+3 ms
+2026-07-27 16:23:17,575 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-27 16:23:17,577 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 16:23:20,126 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:0
+2 ms
+2026-07-27 16:23:20,129 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+2 ms
+2026-07-27 16:23:20,134 - db - INFO - 
+[DB]
+SELECT ONE
+agent_profiles
+Rows:0
+3 ms
+2026-07-27 16:23:20,137 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-07-27 16:23:20,231 - db - INFO - 
+[DB]
+SELECT ONE
+agent_profiles
+Rows:0
+1 ms
+2026-07-27 16:23:20,233 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+1 ms
+2026-07-27 16:23:20,235 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:0
+1 ms
+2026-07-27 16:23:21,515 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+5 ms
+2026-07-27 16:23:21,515 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:1
+5 ms
+2026-07-27 16:23:21,522 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+4 ms
+2026-07-27 16:23:21,522 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+5 ms
+2026-07-27 16:23:21,526 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+3 ms
+2026-07-27 16:23:21,528 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:15
+4 ms
+2026-07-27 16:23:21,531 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-27 16:23:23,342 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+3 ms
+2026-07-27 16:23:23,395 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:23:23,398 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:23,399 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:23,401 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:23,403 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:23,404 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:23:23,406 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:23:23,410 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+3 ms
+2026-07-27 16:23:23,412 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:23,413 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:23:23,414 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:23:23,416 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:23:23,420 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+2 ms
+2026-07-27 16:23:23,421 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:23,423 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:23,425 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:23:23,426 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:23:23,428 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:25,725 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-07-27 16:23:25,728 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 16:23:25,731 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-07-27 16:23:25,733 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 16:23:25,735 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 16:23:25,936 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:23:25,983 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:23:25,985 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:25,987 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:25,990 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:25,993 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:23:25,995 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:23:25,996 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:23:25,997 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:23:25,999 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:26,000 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:23:26,001 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:23:26,002 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:23:26,003 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:23:26,004 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:26,005 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:26,006 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:23:26,007 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:23:26,010 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:23:33,239 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:23:33,242 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:23:33,246 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+3 ms
+2026-07-27 16:23:33,249 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:23:33,254 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+3 ms
+2026-07-27 16:23:33,256 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:23:33,258 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:23:33,260 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:23:33,262 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:33,263 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:23:33,267 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+3 ms
+2026-07-27 16:23:33,270 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:23:33,272 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:23:33,274 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:33,276 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:33,278 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+1 ms
+2026-07-27 16:23:33,280 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:23:33,281 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:33,315 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:23:33,317 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:33,318 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:33,320 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:33,321 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:33,322 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:23:33,323 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:23:33,325 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:23:33,326 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:23:33,327 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:23:33,331 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+3 ms
+2026-07-27 16:23:33,333 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:23:33,335 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:23:33,337 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:33,339 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:23:33,341 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:23:33,342 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:23:33,344 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:26:43,616 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+5 ms
+2026-07-27 16:26:43,619 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:26:43,621 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:26:43,623 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:26:43,625 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:26:43,627 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:26:43,629 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:26:43,632 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+2 ms
+2026-07-27 16:26:43,634 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,635 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:26:43,637 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:26:43,640 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:26:43,643 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:26:43,644 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:26:43,646 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,647 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:26:43,648 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:26:43,652 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:26:43,695 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:26:43,696 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,698 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,700 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,702 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,703 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:26:43,704 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:26:43,705 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:26:43,706 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,707 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:26:43,710 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:26:43,710 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:26:43,711 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:26:43,712 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,713 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:26:43,714 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:26:43,715 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:26:43,716 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:05,746 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+4 ms
+2026-07-27 16:28:05,749 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:05,752 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,755 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,757 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,761 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:28:05,765 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+3 ms
+2026-07-27 16:28:05,767 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:05,769 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,775 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+3 ms
+2026-07-27 16:28:05,777 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:28:05,778 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:05,780 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:28:05,782 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,784 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,786 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:05,788 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:28:05,789 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,814 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:28:05,815 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:05,818 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,819 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:05,820 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:05,821 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:05,823 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:28:05,824 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:28:05,825 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:05,827 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:05,830 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:05,832 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:05,833 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:28:05,834 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:05,835 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:05,836 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:05,837 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:05,840 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:07,228 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:28:07,231 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:07,235 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:07,238 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:07,241 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:07,243 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:28:07,246 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:28:07,248 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:07,250 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:07,253 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:28:07,259 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+4 ms
+2026-07-27 16:28:07,261 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:07,262 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:28:07,263 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,266 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:07,267 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:07,269 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:07,272 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:07,295 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:28:07,296 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,298 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,300 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:07,301 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,302 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:07,304 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:28:07,307 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:07,308 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,310 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:28:07,313 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:28:07,314 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:28:07,315 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:28:07,316 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,317 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:07,318 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:07,319 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:07,321 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:08,711 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:28:08,714 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:08,719 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+3 ms
+2026-07-27 16:28:08,722 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:08,725 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:08,729 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+3 ms
+2026-07-27 16:28:08,731 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:28:08,733 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:08,735 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:08,737 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:28:08,741 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:28:08,744 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:08,745 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:28:08,747 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:08,750 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:08,752 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:08,753 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:08,755 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:08,779 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:28:08,780 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:08,781 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:08,783 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:08,784 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:08,786 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:08,787 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:28:08,789 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:28:08,790 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:08,791 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:08,794 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+2 ms
+2026-07-27 16:28:08,795 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:08,797 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:28:08,798 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:08,799 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:08,799 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:08,800 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:08,802 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,638 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+3 ms
+2026-07-27 16:28:52,641 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:52,644 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:52,646 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,647 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,648 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:52,649 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:28:52,651 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:52,652 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,656 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+2 ms
+2026-07-27 16:28:52,659 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:28:52,661 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:28:52,662 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:28:52,665 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:28:52,667 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,668 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:52,670 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:52,671 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:28:52,694 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:28:52,695 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,696 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,697 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,698 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,699 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:28:52,700 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:28:52,701 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:28:52,703 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,705 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:28:52,708 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:28:52,709 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:28:52,711 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:28:52,712 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,713 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:28:52,714 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:28:52,715 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:28:52,717 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,444 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+3 ms
+2026-07-27 16:29:34,449 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:29:34,452 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,455 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,458 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,463 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+3 ms
+2026-07-27 16:29:34,465 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:29:34,467 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:29:34,469 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,472 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+2 ms
+2026-07-27 16:29:34,474 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:29:34,476 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:29:34,478 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:29:34,480 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,483 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:29:34,484 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:29:34,486 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:29:34,488 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,533 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:29:34,538 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:29:34,541 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:29:34,542 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:29:34,544 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:29:34,545 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:29:34,547 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:29:34,548 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:29:34,549 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:29:34,552 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+2 ms
+2026-07-27 16:29:34,554 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:29:34,555 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:29:34,556 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:29:34,557 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:29:34,559 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:29:34,560 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:29:34,563 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+2 ms
+2026-07-27 16:29:34,564 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:30:00,891 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+5 ms
+2026-07-27 16:30:00,934 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:30:00,935 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:30:00,938 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:30:00,940 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:30:00,941 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:30:00,943 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:30:00,944 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:30:00,946 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:30:00,948 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:30:00,950 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:30:00,952 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:30:00,953 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:30:00,955 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:30:00,956 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:30:00,958 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:30:00,960 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:30:00,961 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:30:00,962 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,861 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+4 ms
+2026-07-27 16:31:27,946 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+0 ms
+2026-07-27 16:31:27,947 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,949 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:27,950 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,951 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,953 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:27,955 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:31:27,956 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:27,957 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,958 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:27,961 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:27,962 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:27,962 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:27,964 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,965 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:27,966 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:27,967 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:27,968 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:29,803 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:31:29,832 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:29,834 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,836 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,838 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,839 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,841 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:29,842 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:29,843 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:29,845 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,849 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:31:29,850 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:29,852 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:29,853 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:31:29,855 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,857 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:29,858 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:29,859 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:29,861 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:31,366 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:2
+1 ms
+2026-07-27 16:31:31,397 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:31,399 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:31,400 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:31,401 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:31,402 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:31,404 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:31:31,406 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:31,407 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:31,412 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+4 ms
+2026-07-27 16:31:31,413 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:31,415 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:31,416 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:31,418 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:31,421 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:31,422 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:31,423 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:31,424 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:31,425 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:32,226 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+1 ms
+2026-07-27 16:31:32,271 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:31:32,273 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:32,275 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:32,278 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:32,279 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:32,280 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:32,281 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:32,282 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:32,283 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:32,284 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:32,286 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:32,289 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:31:32,290 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:32,292 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:32,293 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:32,294 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:32,296 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:32,298 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:33,878 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:2
+2 ms
+2026-07-27 16:31:33,923 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:33,925 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:33,927 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:33,930 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:33,931 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:33,932 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:33,933 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:33,934 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:33,935 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:33,938 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+2 ms
+2026-07-27 16:31:33,940 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:33,940 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:33,941 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:33,942 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:33,943 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:33,944 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:33,945 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:33,946 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:35,444 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:35,488 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:31:35,490 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:35,492 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:35,494 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:35,495 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:35,496 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:35,497 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:35,498 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:35,499 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:35,500 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:35,504 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+2 ms
+2026-07-27 16:31:35,506 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:35,507 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:35,509 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:35,510 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:35,511 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:35,512 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:35,515 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,681 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+2 ms
+2026-07-27 16:31:36,711 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:36,713 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,714 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,716 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,718 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,720 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:36,724 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+3 ms
+2026-07-27 16:31:36,727 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:31:36,729 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,736 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+3 ms
+2026-07-27 16:31:36,738 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:36,739 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:36,741 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:36,742 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:36,744 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:36,746 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:36,747 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:36,748 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:38,519 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+3 ms
+2026-07-27 16:31:38,566 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:38,568 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:38,571 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:31:38,574 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:38,575 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:38,576 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:38,578 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:38,579 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:38,581 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:38,582 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:38,584 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:38,585 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:38,586 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:38,588 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:38,589 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:38,591 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+1 ms
+2026-07-27 16:31:38,593 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:38,595 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:39,993 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:40,038 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:40,040 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:40,042 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:40,044 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:40,045 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:40,046 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:40,048 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:40,049 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:40,050 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:40,051 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:40,052 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:40,054 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+2 ms
+2026-07-27 16:31:40,056 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:40,057 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:40,058 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:40,059 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:40,060 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:40,062 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,743 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:41,776 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:41,778 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:41,779 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,781 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,782 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,784 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:31:41,786 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:41,791 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+4 ms
+2026-07-27 16:31:41,792 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,794 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:41,795 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:41,797 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:41,800 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+2 ms
+2026-07-27 16:31:41,801 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,802 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:41,803 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:41,805 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:41,806 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:43,211 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:43,252 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:31:43,254 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:43,256 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:43,258 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:43,259 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:43,261 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:43,262 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:43,263 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:43,264 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:43,265 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:43,266 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:43,269 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+2 ms
+2026-07-27 16:31:43,270 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:43,271 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:43,272 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:43,273 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:43,274 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:31:43,275 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,192 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+1 ms
+2026-07-27 16:31:44,238 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:31:44,239 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,241 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,244 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:31:44,245 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,246 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:44,248 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:31:44,249 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:44,250 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,251 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:31:44,253 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:44,255 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:31:44,257 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:31:44,258 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,260 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:31:44,261 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:31:44,263 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:31:44,265 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:05,277 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+3 ms
+2026-07-27 16:32:05,322 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:32:05,324 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:05,326 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:05,328 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:05,329 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:05,332 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:32:05,333 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:32:05,334 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:05,335 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:05,338 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:32:05,339 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:05,341 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:05,342 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:32:05,343 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:05,344 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:05,345 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:05,347 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:32:05,349 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:06,076 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+1 ms
+2026-07-27 16:32:06,122 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:32:06,124 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:06,126 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:06,129 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:06,130 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:06,131 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:06,133 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:32:06,134 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:06,135 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:06,138 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+2 ms
+2026-07-27 16:32:06,139 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:06,140 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:06,141 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:32:06,142 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:06,144 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:06,145 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:06,146 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:32:06,149 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:07,160 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+1 ms
+2026-07-27 16:32:07,207 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:32:07,209 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:07,211 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:32:07,213 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:07,214 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:07,216 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:07,217 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:32:07,219 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:07,221 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:07,223 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:32:07,224 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:07,226 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:07,227 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:32:07,228 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:07,229 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:07,231 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+1 ms
+2026-07-27 16:32:07,234 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+2 ms
+2026-07-27 16:32:07,235 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:08,095 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+2 ms
+2026-07-27 16:32:08,130 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:32:08,134 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:32:08,138 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:32:08,140 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:08,141 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:08,143 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:08,145 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:32:08,146 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:08,147 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:08,149 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:08,151 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:32:08,153 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:08,156 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+2 ms
+2026-07-27 16:32:08,157 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:08,158 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:08,159 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:08,161 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:08,162 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:16,966 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+2 ms
+2026-07-27 16:32:16,998 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:32:16,999 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:17,001 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:17,002 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:17,004 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:17,005 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:32:17,007 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:32:17,012 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+4 ms
+2026-07-27 16:32:17,013 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:17,014 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:17,016 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:17,017 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:17,018 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:32:17,022 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:17,023 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:17,024 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:17,025 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:17,026 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:34,816 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+3 ms
+2026-07-27 16:32:34,847 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:32:34,849 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:34,851 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:34,853 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:34,855 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:34,856 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:34,859 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:32:34,862 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-07-27 16:32:34,864 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:34,865 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:34,867 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:34,868 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:34,870 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+1 ms
+2026-07-27 16:32:34,873 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:34,874 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:34,875 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:34,876 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:34,877 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,510 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:0
+1 ms
+2026-07-27 16:32:37,554 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-27 16:32:37,556 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,558 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:37,560 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,561 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,563 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:37,564 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+0 ms
+2026-07-27 16:32:37,565 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:37,566 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,569 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:32:37,571 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:37,572 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:37,573 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:32:37,575 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,576 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:37,577 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:37,579 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+1 ms
+2026-07-27 16:32:37,581 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:39,062 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:3
+2 ms
+2026-07-27 16:32:39,110 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-27 16:32:39,112 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:39,114 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:32:39,116 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:39,117 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:39,119 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+0 ms
+2026-07-27 16:32:39,120 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:9
+1 ms
+2026-07-27 16:32:39,122 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:39,123 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:39,125 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:2
+1 ms
+2026-07-27 16:32:39,127 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:39,128 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-07-27 16:32:39,129 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:10
+0 ms
+2026-07-27 16:32:39,130 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:39,131 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:1
+0 ms
+2026-07-27 16:32:39,132 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:6
+0 ms
+2026-07-27 16:32:39,133 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:1
+0 ms
+2026-07-27 16:32:39,137 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+3 ms
+2026-07-27 16:32:42,041 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+3 ms
+2026-07-27 16:32:42,043 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:32:42,048 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+3 ms
+2026-07-27 16:32:42,050 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-07-27 16:33:10,176 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+3 ms
+2026-07-27 16:33:10,179 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+1 ms
+2026-07-27 16:33:10,182 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+2 ms
+2026-07-27 16:33:10,185 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-07-27 16:33:21,008 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-07-27 16:33:21,011 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 16:33:21,016 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+3 ms
+2026-07-27 16:33:21,019 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-27 16:33:21,022 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:5
+2 ms
+2026-07-27 16:33:21,025 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+1 ms
+2026-07-27 16:33:21,028 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-27 16:33:21,030 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-27 16:33:21,032 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-07-27 16:33:21,034 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-27 16:33:21,037 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-07-27 16:33:21,040 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms

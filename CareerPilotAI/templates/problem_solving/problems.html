@@ -3,129 +3,700 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/problem_solving.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    /* Slate System & Premium variables alignment */
+    :root {
+        --primary: #2E6F95;
+        --primary-light: #4F8DB1;
+        --accent: #D9A441;
+        --bg-primary: #10151B;
+        --bg-secondary: #17212B;
+        --bg-card: #232F3B;
+        --bg-card-hover: #2A3847;
+        --border: #344452;
+        --text-primary: #FFFFFF;
+        --text-secondary: #C8D2DC;
+        --text-muted: #94A3B8;
+        --success: #3BA55C;
+        --warning: #F4B942;
+        --danger: #E25555;
+    }
+
+    body {
+        background-color: var(--bg-primary);
+        color: var(--text-secondary);
+        font-family: 'Inter', sans-serif;
+    }
+
+    .premium-workspace {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* PREMIUM HEADER */
+    .header-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 24px;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header-logo {
+        font-size: 2.2rem;
+        color: var(--primary-light);
+        background: rgba(46,111,149,0.1);
+        border: 1px solid rgba(46,111,149,0.3);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(46,111,149,0.15);
+    }
+
+    .header-title-box h1 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin: 0;
+        letter-spacing: -0.025em;
+    }
+
+    .header-title-box p {
+        color: var(--text-muted);
+        margin-top: 4px;
+        font-size: 15px;
+    }
+
+    /* PERFORMANCE STRIP */
+    .perf-strip {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .perf-strip {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (max-width: 576px) {
+        .perf-strip {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .perf-cell {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .perf-cell:hover {
+        transform: translateY(-2px);
+        border-color: var(--primary-light);
+    }
+
+    .perf-icon-box {
+        font-size: 1.3rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .perf-meta-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .perf-label {
+        font-size: 11px;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+
+    .perf-num {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        line-height: 1.2;
+    }
+
+    .perf-trend {
+        font-size: 10px;
+        font-weight: 600;
+        color: var(--success);
+        margin-top: 1px;
+    }
+
+    /* 70/30 SPLIT CONTENT LAYOUT */
+    .split-layout {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        gap: 32px;
+        align-items: start;
+    }
+
+    @media (max-width: 992px) {
+        .split-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* FILTERS & SEARCH */
+    .filter-pills-row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .filter-label {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        width: 80px;
+    }
+
+    .pill-container {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .pill-btn {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        color: var(--text-secondary);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .pill-btn:hover {
+        border-color: var(--primary-light);
+        color: var(--text-primary);
+    }
+
+    .pill-btn.active {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: var(--text-primary);
+    }
+
+    /* PREMIUM PROBLEM CARD */
+    .premium-problem-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .premium-problem-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--primary-light);
+        box-shadow: 0 8px 24px rgba(46,111,149,0.15);
+    }
+
+    .card-left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-grow: 1;
+    }
+
+    .status-indicator {
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .status-solved { color: var(--success); }
+    .status-attempted { color: var(--warning); }
+    .status-locked { color: var(--text-muted); }
+
+    .problem-info-box {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .problem-title-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .problem-title-row h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .badge-difficulty {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+    }
+
+    .badge-difficulty.easy { background: rgba(59,165,92,0.15); color: #4ade80; border: 1px solid rgba(59,165,92,0.3); }
+    .badge-difficulty.medium { background: rgba(244,185,66,0.15); color: #facc15; border: 1px solid rgba(244,185,66,0.3); }
+    .badge-difficulty.hard { background: rgba(226,85,85,0.15); color: #f87171; border: 1px solid rgba(226,85,85,0.3); }
+
+    .problem-meta-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: var(--text-muted);
+    }
+
+    .meta-chip {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid var(--border);
+        padding: 2px 8px;
+        border-radius: 4px;
+    }
+
+    .card-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* RIGHT SIDE MILESTONE PANEL */
+    .milestone-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Glass Search Bar */
+    .glass-search-box {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    .glass-search-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px 16px 12px 40px;
+        color: var(--text-primary);
+        font-size: 14px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .glass-search-input:focus {
+        outline: none;
+        border-color: var(--primary-light);
+        box-shadow: 0 0 10px rgba(79,141,177,0.15);
+    }
+</style>
 {% endblock %}
 
 {% block content %}
 <div class="container" style="padding-top: 100px; padding-bottom: 50px;">
-    
-    <!-- Top Header -->
-    <div class="dashboard-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
-        <div>
-            <h1><i class="fa-solid fa-code text-gradient" style="margin-right: 0.5rem;"></i> AI Problem Solving</h1>
-            <p>Practice coding interviews with AI-powered personalized mentoring.</p>
+    <div class="premium-workspace">
+        
+        <!-- HEADER -->
+        <div class="header-panel">
+            <div class="header-left">
+                <div class="header-logo"><i class="fa-solid fa-code"></i></div>
+                <div class="header-title-box">
+                    <h1>AI Problem Solving</h1>
+                    <p>Master coding interviews with your personal AI mentor.</p>
+                </div>
+            </div>
+            <a href="{{ url_for('problem_solving.dashboard') }}" class="btn-premium btn-primary-glow">
+                <i class="fa-solid fa-chart-pie"></i> View Analytics
+            </a>
         </div>
-        <a href="{{ url_for('problem_solving.dashboard') }}" class="btn-primary-glow">
-            <i class="fa-solid fa-chart-pie"></i> View Analytics
-        </a>
-    </div>
 
-    <!-- Statistics Cards -->
-    <div class="stats-grid">
-        <div class="stat-card">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="stat-title">Problems Solved</span>
-                <div class="stat-icon" style="background: rgba(59,165,92,.1); color: var(--success);"><i class="fa-solid fa-check-circle"></i></div>
-            </div>
-            <div class="stat-value">24<span style="font-size: 1rem; color: var(--text-tertiary); font-weight: 500;">/150</span></div>
-        </div>
-        <div class="stat-card">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="stat-title">Acceptance %</span>
-                <div class="stat-icon" style="background: rgba(93,169,233,.1); color: var(--info);"><i class="fa-solid fa-bullseye"></i></div>
-            </div>
-            <div class="stat-value">68.5%</div>
-        </div>
-        <div class="stat-card">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="stat-title">Current Streak</span>
-                <div class="stat-icon" style="background: rgba(217,164,65,.1); color: var(--accent);"><i class="fa-solid fa-fire"></i></div>
-            </div>
-            <div class="stat-value">7 <span style="font-size: 1rem; color: var(--text-tertiary); font-weight: 500;">Days</span></div>
-        </div>
-        <div class="stat-card">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="stat-title">Current Rating</span>
-                <div class="stat-icon" style="background: rgba(168,85,247,.1); color: #c084fc;"><i class="fa-solid fa-trophy"></i></div>
-            </div>
-            <div class="stat-value">1450</div>
-        </div>
-    </div>
-
-    <!-- Filter Bar -->
-    <div class="filter-bar">
-        <form method="GET" action="{{ url_for('problem_solving.index') }}" style="display: flex; gap: 1rem; width: 100%; flex-wrap: wrap; align-items: center;">
-            <div style="position: relative; flex-grow: 1; min-width: 250px;">
-                <i class="fa-solid fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-tertiary);"></i>
-                <input type="text" name="search" class="filter-input" style="padding-left: 2.5rem; width: 100%;" placeholder="Search problems...">
-            </div>
+        <!-- PERFORMANCE STRIP -->
+        <div class="perf-strip">
             
-            <select name="difficulty" onchange="this.form.submit()" class="filter-select">
-                <option value="">All Difficulties</option>
-                <option value="Easy" {% if current_difficulty == 'Easy' %}selected{% endif %}>Easy</option>
-                <option value="Medium" {% if current_difficulty == 'Medium' %}selected{% endif %}>Medium</option>
-                <option value="Hard" {% if current_difficulty == 'Hard' %}selected{% endif %}>Hard</option>
-            </select>
-            
-            <select name="topic" onchange="this.form.submit()" class="filter-select">
-                <option value="">All Topics</option>
-                <option value="Arrays" {% if current_topic == 'Arrays' %}selected{% endif %}>Arrays</option>
-                <option value="Linked List" {% if current_topic == 'Linked List' %}selected{% endif %}>Linked List</option>
-                <option value="Sliding Window" {% if current_topic == 'Sliding Window' %}selected{% endif %}>Sliding Window</option>
-            </select>
+            <div class="perf-cell">
+                <div class="perf-icon-box" style="background: rgba(244,185,66,0.1); color: var(--warning);"><i class="fa-solid fa-fire"></i></div>
+                <div class="perf-meta-box">
+                    <span class="perf-label">Daily Streak</span>
+                    <span class="perf-num" id="streak-num">--</span>
+                    <span class="perf-trend">Active</span>
+                </div>
+            </div>
 
-            <select name="company" onchange="this.form.submit()" class="filter-select">
-                <option value="">All Companies</option>
-                <option value="Google" {% if current_company == 'Google' %}selected{% endif %}>Google</option>
-                <option value="Amazon" {% if current_company == 'Amazon' %}selected{% endif %}>Amazon</option>
-                <option value="Meta" {% if current_company == 'Meta' %}selected{% endif %}>Meta</option>
-                <option value="Microsoft" {% if current_company == 'Microsoft' %}selected{% endif %}>Microsoft</option>
-            </select>
-            
-            {% if current_difficulty or current_topic or current_company %}
-                <a href="{{ url_for('problem_solving.index') }}" class="btn-premium"><i class="fa-solid fa-rotate-right"></i> Reset</a>
-            {% endif %}
-        </form>
-    </div>
+            <div class="perf-cell">
+                <div class="perf-icon-box" style="background: rgba(168,85,247,0.1); color: #c084fc;"><i class="fa-solid fa-trophy"></i></div>
+                <div class="perf-meta-box">
+                    <span class="perf-label">Elo Rating</span>
+                    <span class="perf-num" id="rating-num">--</span>
+                    <span class="perf-trend">Rank index</span>
+                </div>
+            </div>
 
-    <!-- Problems List -->
-    <div class="problem-grid">
-        {% if problems %}
-            {% for problem in problems %}
-                <a href="{{ url_for('problem_solving.problem_detail', problem_id=problem.id) }}" class="problem-card">
-                    <div class="pc-left">
-                        <div class="pc-status {% if loop.index == 1 %}solved{% endif %}">
-                            {% if loop.index == 1 %}
-                                <i class="fa-solid fa-check-circle"></i>
-                            {% else %}
-                                <i class="fa-regular fa-circle"></i>
-                            {% endif %}
+            <div class="perf-cell">
+                <div class="perf-icon-box" style="background: rgba(59,165,92,0.1); color: var(--success);"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="perf-meta-box">
+                    <span class="perf-label">Solved</span>
+                    <span class="perf-num"><span id="solved-num">--</span><span style="font-size: 0.8rem; color: var(--text-muted);">/<span id="total-num">--</span></span></span>
+                    <span class="perf-trend">Accepted</span>
+                </div>
+            </div>
+
+            <div class="perf-cell">
+                <div class="perf-icon-box" style="background: rgba(93,169,233,0.1); color: var(--info);"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="perf-meta-box">
+                    <span class="perf-label">Acceptance</span>
+                    <span class="perf-num" id="acceptance-num">--%</span>
+                    <span class="perf-trend">Accuracy</span>
+                </div>
+            </div>
+
+            <div class="perf-cell">
+                <div class="perf-icon-box" style="background: rgba(255,255,255,0.03); color: var(--text-secondary);"><i class="fa-solid fa-clock"></i></div>
+                <div class="perf-meta-box">
+                    <span class="perf-label">Avg Runtime</span>
+                    <span class="perf-num" id="runtime-num">-- ms</span>
+                    <span class="perf-trend">Fast speed</span>
+                </div>
+            </div>
+
+            <div class="perf-cell">
+                <div class="perf-icon-box" style="background: rgba(46,111,149,0.1); color: var(--primary-light);"><i class="fa-solid fa-brain"></i></div>
+                <div class="perf-meta-box">
+                    <span class="perf-label">AI Confidence</span>
+                    <span class="perf-num" id="confidence-num">--%</span>
+                    <span class="perf-trend">FAANG Grade</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 70/30 SPLIT CONTENT -->
+        <div class="split-layout">
+            
+            <!-- LEFT PANEL: Filter, Recommended, Problems -->
+            <div style="display:flex; flex-direction:column; gap:24px;">
+                
+                <!-- SEARCH & FILTER FORM -->
+                <div class="premium-card">
+                    <form method="GET" action="{{ url_for('problem_solving.index') }}" id="filterForm" style="display:flex; flex-direction:column; gap:16px;">
+                        
+                        <!-- Hidden inputs for active state preservation -->
+                        <input type="hidden" name="difficulty" id="hiddenDifficulty" value="{{ current_difficulty or '' }}">
+                        <input type="hidden" name="topic" id="hiddenTopic" value="{{ current_topic or '' }}">
+                        <input type="hidden" name="company" id="hiddenCompany" value="{{ current_company or '' }}">
+
+                        <!-- Glass Search Bar -->
+                        <div class="glass-search-box">
+                            <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size:14px;"></i>
+                            <input type="text" name="search" value="{{ request.args.get('search', '') }}" class="glass-search-input" placeholder="Search by problem name, topic, or company tag...">
                         </div>
-                        <div class="pc-info">
-                            <h4>{{ problem.title }}</h4>
-                            <div class="pc-meta">
-                                <span class="badge-difficulty {{ problem.difficulty.lower() }}">{{ problem.difficulty }}</span>
-                                <span><i class="fa-solid fa-users" style="color:var(--text-muted); margin-right:4px;"></i> {{ (60 + problem.id * 5) }}%</span>
-                                <span><i class="fa-solid fa-clock" style="color:var(--text-muted); margin-right:4px;"></i> {{ problem.estimated_time }} mins</span>
-                                <span class="topic-chip">{{ problem.topic }}</span>
+
+                        <!-- Pill filters -->
+                        <div class="filter-pills-row">
+                            
+                            <!-- Difficulty -->
+                            <div class="filter-group">
+                                <span class="filter-label">Difficulty</span>
+                                <div class="pill-container">
+                                    <button type="button" class="pill-btn {% if not current_difficulty %}active{% endif %}" onclick="setFilter('difficulty', '')">All</button>
+                                    <button type="button" class="pill-btn {% if current_difficulty == 'Easy' %}active{% endif %}" onclick="setFilter('difficulty', 'Easy')">Easy</button>
+                                    <button type="button" class="pill-btn {% if current_difficulty == 'Medium' %}active{% endif %}" onclick="setFilter('difficulty', 'Medium')">Medium</button>
+                                    <button type="button" class="pill-btn {% if current_difficulty == 'Hard' %}active{% endif %}" onclick="setFilter('difficulty', 'Hard')">Hard</button>
+                                </div>
+                            </div>
+
+                            <!-- Topic -->
+                            <div class="filter-group">
+                                <span class="filter-label">Topic</span>
+                                <div class="pill-container">
+                                    <button type="button" class="pill-btn {% if not current_topic %}active{% endif %}" onclick="setFilter('topic', '')">All</button>
+                                    <button type="button" class="pill-btn {% if current_topic == 'Arrays' %}active{% endif %}" onclick="setFilter('topic', 'Arrays')">Arrays</button>
+                                    <button type="button" class="pill-btn {% if current_topic == 'Linked List' %}active{% endif %}" onclick="setFilter('topic', 'Linked List')">Linked List</button>
+                                    <button type="button" class="pill-btn {% if current_topic == 'Sliding Window' %}active{% endif %}" onclick="setFilter('topic', 'Sliding Window')">Sliding Window</button>
+                                    <button type="button" class="pill-btn {% if current_topic == 'DP' %}active{% endif %}" onclick="setFilter('topic', 'DP')">Dynamic Programming</button>
+                                </div>
+                            </div>
+
+                            <!-- Company -->
+                            <div class="filter-group">
+                                <span class="filter-label">Company</span>
+                                <div class="pill-container">
+                                    <button type="button" class="pill-btn {% if not current_company %}active{% endif %}" onclick="setFilter('company', '')">All</button>
+                                    <button type="button" class="pill-btn {% if current_company == 'Google' %}active{% endif %}" onclick="setFilter('company', 'Google')">Google</button>
+                                    <button type="button" class="pill-btn {% if current_company == 'Amazon' %}active{% endif %}" onclick="setFilter('company', 'Amazon')">Amazon</button>
+                                    <button type="button" class="pill-btn {% if current_company == 'Meta' %}active{% endif %}" onclick="setFilter('company', 'Meta')">Meta</button>
+                                    <button type="button" class="pill-btn {% if current_company == 'Microsoft' %}active{% endif %}" onclick="setFilter('company', 'Microsoft')">Microsoft</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- RECOMMENDED SECTION -->
+                <div id="recommendedContainer" style="display:none;">
+                    <h3 style="font-size: 20px; font-weight:700; color:var(--text-primary); margin:0 0 12px 0;"><i class="fa-solid fa-star" style="color:var(--accent);"></i> Recommended For You</h3>
+                    <div id="recommendedCardBox">
+                        <!-- Loaded dynamically based on weak topic -->
+                    </div>
+                </div>
+
+                <!-- PROBLEMS LIST -->
+                <div>
+                    <h3 style="font-size: 20px; font-weight:700; color:var(--text-primary); margin:0 0 16px 0;"><i class="fa-solid fa-list" style="color:var(--primary-light);"></i> Practice Questions</h3>
+                    <div id="problemsList">
+                        {% if problems %}
+                            {% for problem in problems %}
+                                <a href="{{ url_for('problem_solving.problem_detail', problem_id=problem.id) }}" class="premium-problem-card" data-topic="{{ problem.topic }}">
+                                    <div class="card-left">
+                                        <!-- Solved state indicators -->
+                                        <div class="status-indicator status-attempted">
+                                            <i class="fa-solid fa-circle-play"></i>
+                                        </div>
+                                        <div class="problem-info-box">
+                                            <div class="problem-title-row">
+                                                <h4>{{ problem.title }}</h4>
+                                                <span class="badge-difficulty {{ problem.difficulty.lower() }}">{{ problem.difficulty }}</span>
+                                            </div>
+                                            <div class="problem-meta-row">
+                                                <span class="meta-chip"><i class="fa-solid fa-sparkles" style="color:var(--accent);"></i> AI Difficulty: {{ problem.difficulty }}</span>
+                                                <span class="meta-chip"><i class="fa-solid fa-clock" style="color:var(--primary-light);"></i> {{ problem.estimated_time }} mins</span>
+                                                <span class="meta-chip">{{ problem.topic }}</span>
+                                                <span><i class="fa-solid fa-check-double"></i> {{ (60 + problem.id * 5) }}% Accuracy</span>
+                                                <span>• Solved by {{ (problem.id * 3) + 120 }}k users</span>
+                                                <span style="color:var(--accent);">★★★★★</span>
+                                            </div>
+                                            <!-- Company target list -->
+                                            {% if problem.companies %}
+                                                <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:4px;">
+                                                    {% for c in problem.companies.split(",") %}
+                                                        <span style="font-size: 10px; background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--text-secondary); font-weight:600;"><i class="fa-solid fa-building" style="margin-right:3px; font-size:9px;"></i> ${c.trim()}</span>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="card-right">
+                                        <button class="btn-premium" style="background:var(--bg-secondary); border-color:var(--border);"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Mentor</button>
+                                        <button class="btn-premium"><i class="fa-solid fa-play"></i> Solve</button>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        {% else %}
+                            <div style="text-align: center; padding: 5rem; background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border);">
+                                <span style="font-size: 3rem; color: var(--text-muted);"><i class="fa-solid fa-search"></i></span>
+                                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1.1rem;">No coding problems matching the filter criteria were found.</p>
+                                <a href="{{ url_for('problem_solving.index') }}" class="btn-premium" style="margin-top: 1rem;">Clear Filters</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL: Today's target, interview readiness milestones -->
+            <div class="milestone-panel">
+                
+                <!-- Target Goal card -->
+                <div class="premium-card">
+                    <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin:0 0 12px 0;"><i class="fa-solid fa-bullseye" style="color:var(--primary-light);"></i> Today's Goal</h3>
+                    <div style="display:flex; justify-content:space-between; font-size:14px; margin-bottom:8px;">
+                        <span>Target Problems</span>
+                        <strong style="color:var(--success);" id="solvedTargetLabel">-- / 3 solved</strong>
+                    </div>
+                    <div style="height:6px; background:rgba(255,255,255,0.05); border-radius:3px; overflow:hidden;">
+                        <div style="height:100%; width:0%; background:var(--success); border-radius:3px;" id="targetProgressFill"></div>
+                    </div>
+                </div>
+
+                <!-- Interview Readiness Milestone tracker -->
+                <div class="premium-card">
+                    <h3 style="font-size:16px; font-weight:700; color:var(--text-primary); margin:0 0 16px 0;"><i class="fa-solid fa-shield-halved" style="color:var(--primary-light);"></i> Target Milestones</h3>
+                    <div style="display:flex; flex-direction:column; gap:16px;">
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+                                <span>Amazon Readiness</span>
+                                <strong id="valAmazon">--%</strong>
+                            </div>
+                            <div style="height:4px; background:rgba(255,255,255,0.05); border-radius:2px; overflow:hidden;">
+                                <div style="height:100%; width:0%; background:#c084fc; border-radius:2px;" id="barAmazon"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+                                <span>Google Readiness</span>
+                                <strong id="valGoogle">--%</strong>
+                            </div>
+                            <div style="height:4px; background:rgba(255,255,255,0.05); border-radius:2px; overflow:hidden;">
+                                <div style="height:100%; width:0%; background:#c084fc; border-radius:2px;" id="barGoogle"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+                                <span>Meta Readiness</span>
+                                <strong id="valMeta">--%</strong>
+                            </div>
+                            <div style="height:4px; background:rgba(255,255,255,0.05); border-radius:2px; overflow:hidden;">
+                                <div style="height:100%; width:0%; background:#c084fc; border-radius:2px;" id="barMeta"></div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="pc-right">
-                        {% if loop.index == 2 %}
-                            <span style="font-size: 0.75rem; background: linear-gradient(90deg, #8b5cf6, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; display:flex; align-items:center; gap:0.3rem;"><i class="fa-solid fa-sparkles"></i> Recommended</span>
-                        {% endif %}
-                        <button class="btn-premium" style="background:var(--bg-secondary);"><i class="fa-solid fa-play"></i> Solve</button>
-                    </div>
-                </a>
-            {% endfor %}
-        {% else %}
-            <div style="text-align: center; padding: 5rem; background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border);">
-                <span style="font-size: 3rem; color: var(--text-muted);"><i class="fa-solid fa-search"></i></span>
-                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1.1rem;">No coding problems matching the filter criteria were found.</p>
-                <a href="{{ url_for('problem_solving.index') }}" class="btn-premium" style="margin-top: 1rem;">Clear Filters</a>
+                </div>
+
             </div>
-        {% endif %}
+
+        </div>
+
     </div>
 </div>
+
+<script>
+    function setFilter(name, value) {
+        if (name === 'difficulty') document.getElementById('hiddenDifficulty').value = value;
+        else if (name === 'topic') document.getElementById('hiddenTopic').value = value;
+        else if (name === 'company') document.getElementById('hiddenCompany').value = value;
+        document.getElementById('filterForm').submit();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Fetch dashboard statistics dynamically to populate header performance strip and target milestones
+        fetch("/problem_solving/api/dashboard")
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    document.getElementById("streak-num").textContent = data.current_streak ?? 0;
+                    document.getElementById("rating-num").textContent = data.rating ?? 1000;
+                    document.getElementById("solved-num").textContent = data.problems_solved ?? 0;
+                    document.getElementById("total-num").textContent = data.total_problems ?? 150;
+                    document.getElementById("acceptance-num").textContent = (data.acceptance_rate ?? 0) + "%";
+                    
+                    // Avg runtime
+                    document.getElementById("runtime-num").textContent = (data.timeline && data.timeline.length > 0) ? (data.timeline[data.timeline.length - 1].runtime ?? 24) + " ms" : "24 ms";
+                    
+                    // AI Confidence rating
+                    const confidence = Math.min(98, Math.max(50, Math.round((data.rating ?? 1000) / 15)));
+                    document.getElementById("confidence-num").textContent = confidence + "%";
+
+                    // Side Goal card updates
+                    const solved = data.problems_solved ?? 0;
+                    const solvedToday = Math.min(3, solved % 4); // Simulate daily progress based on total
+                    document.getElementById("solvedTargetLabel").textContent = `${solvedToday} / 3 solved`;
+                    document.getElementById("targetProgressFill").style.width = ((solvedToday / 3) * 100) + "%";
+
+                    // Side Milestones updates
+                    const amz = Math.min(95, Math.round(confidence * 0.9));
+                    const goog = Math.min(95, Math.round(confidence * 0.75));
+                    const meta = Math.min(95, Math.round(confidence * 0.65));
+                    
+                    document.getElementById("valAmazon").textContent = amz + "%";
+                    document.getElementById("barAmazon").style.width = amz + "%";
+                    document.getElementById("valGoogle").textContent = goog + "%";
+                    document.getElementById("barGoogle").style.width = goog + "%";
+                    document.getElementById("valMeta").textContent = meta + "%";
+                    document.getElementById("barMeta").style.width = meta + "%";
+
+                    // Dynamic Recommended Card generation based on weakest topic
+                    let weakTopic = "Linked List";
+                    data.ai_insights.forEach(insight => {
+                        if (insight.includes("Weak in")) {
+                            const m = insight.match(/Weak in ([a-zA-Z\s]+)/i);
+                            if (m) weakTopic = m[1].trim();
+                        }
+                    });
+
+                    // Search for a matching problem in the list to recommend
+                    const problemCards = Array.from(document.querySelectorAll("#problemsList .premium-problem-card"));
+                    let recommendedProblem = null;
+                    for (let card of problemCards) {
+                        if (card.getAttribute("data-topic").toLowerCase().includes(weakTopic.toLowerCase())) {
+                            recommendedProblem = card;
+                            break;
+                        }
+                    }
+
+                    if (!recommendedProblem && problemCards.length > 0) {
+                        recommendedProblem = problemCards[0]; // fallback
+                    }
+
+                    if (recommendedProblem) {
+                        const title = recommendedProblem.querySelector("h4").textContent;
+                        const href = recommendedProblem.getAttribute("href");
+                        const diff = recommendedProblem.querySelector(".badge-difficulty").textContent;
+                        const diffClass = recommendedProblem.querySelector(".badge-difficulty").className;
+                        
+                        document.getElementById("recommendedContainer").style.display = "block";
+                        document.getElementById("recommendedCardBox").innerHTML = `
+                            <a href="${href}" class="premium-problem-card" style="border-color:var(--info); background:rgba(93,169,233,0.03);">
+                                <div class="card-left">
+                                    <div class="status-indicator" style="color:var(--info);"><i class="fa-solid fa-star"></i></div>
+                                    <div class="problem-info-box">
+                                        <div class="problem-title-row">
+                                            <h4>${title}</h4>
+                                            <span class="${diffClass}">${diff}</span>
+                                            <span style="font-size:10px; background:rgba(93,169,233,0.15); color:var(--info); padding:2px 8px; border-radius:12px; font-weight:700;">Weak Topic Recommendation</span>
+                                        </div>
+                                        <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">Because you struggled with ${weakTopic} problems in your recent attempts.</div>
+                                    </div>
+                                </div>
+                                <div class="card-right">
+                                    <button class="btn-premium" style="background:var(--info); border-color:var(--info); color:var(--bg-primary);"><i class="fa-solid fa-play"></i> Solve Now</button>
+                                </div>
+                            </a>
+                        `;
+                    }
+                }
+            })
+            .catch(err => console.error("Error fetching homepage dashboard preview:", err));
+    });
+</script>
 {% endblock %}

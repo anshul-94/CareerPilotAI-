@@ -94,3 +94,11 @@ Started     : Yes
 Duration    : 38517 ms
 Result      : Success
 =====================================
+2026-07-27 16:23:25,736 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 13
+Started     : Yes
+Duration    : 4218 ms
+Result      : Success
+=====================================

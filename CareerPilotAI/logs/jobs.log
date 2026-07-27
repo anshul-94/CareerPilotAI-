@@ -232,3 +232,39 @@ Jobs Filtered   : 5
 Jobs Saved      : 5
 Completed in    : 2847 ms
 ================================
+2026-07-27 16:23:21,516 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 13
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 6 ms
+===============================
+2026-07-27 16:23:21,523 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 13
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 6 ms
+===============================
+2026-07-27 16:23:21,530 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 13
+Limit           : 50
+Rows Returned   : 15
+Execution Time  : 6 ms
+===============================
+2026-07-27 16:23:25,736 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 13
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 4218 ms
+================================
