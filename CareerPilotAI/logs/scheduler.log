@@ -38,3 +38,35 @@ Started     : Yes
 Duration    : 13234 ms
 Result      : Success
 =====================================
+2026-07-27 09:39:38,230 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 12
+Started     : Yes
+Duration    : 6484 ms
+Result      : Success
+=====================================
+2026-07-27 09:40:27,951 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 13
+Started     : Yes
+Duration    : 2892 ms
+Result      : Success
+=====================================
+2026-07-27 09:40:48,010 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 13
+Started     : Yes
+Duration    : 1065 ms
+Result      : Success
+=====================================
+2026-07-27 09:40:53,637 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 13
+Started     : Yes
+Duration    : 28578 ms
+Result      : Failed (name 'Config' is not defined)
+=====================================

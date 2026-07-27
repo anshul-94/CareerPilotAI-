@@ -28,7 +28,9 @@ def login():
             
             # Fire autonomous background tasks
             from backend.services.autonomous_agent import AutonomousAgent
-            AutonomousAgent.on_login(user.id)
+            user_id = user.get("id") if isinstance(user, dict) else getattr(user, "id", None)
+            if user_id:
+                AutonomousAgent.on_login(user_id)
             
             next_url = request.args.get('next')
             return redirect(next_url or url_for('dashboard.index'))

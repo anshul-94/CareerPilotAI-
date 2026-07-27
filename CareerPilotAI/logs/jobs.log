@@ -130,3 +130,69 @@ Jobs Filtered   : 19
 Jobs Saved      : 19
 Completed in    : 13233 ms
 ================================
+2026-07-27 09:39:38,230 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 6484 ms
+================================
+2026-07-27 09:40:27,947 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 13
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 2888 ms
+================================
+2026-07-27 09:40:46,943 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 13
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 10 ms
+===============================
+2026-07-27 09:40:46,948 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 13
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 4 ms
+===============================
+2026-07-27 09:40:46,956 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 13
+Limit           : 50
+Rows Returned   : 5
+Execution Time  : 8 ms
+===============================
+2026-07-27 09:40:48,010 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 13
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 1065 ms
+================================

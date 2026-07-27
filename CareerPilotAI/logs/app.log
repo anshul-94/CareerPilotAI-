@@ -529,3 +529,183 @@ POST /login
 User: 12
 Status: 500
 Duration: 296ms
+2026-07-27 09:39:14,935 - app - INFO - 
+[09:39:14]
+GET /
+User: 12
+Status: 200
+Duration: 15ms
+2026-07-27 09:39:20,753 - app - INFO - 
+[09:39:20]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 35ms
+2026-07-27 09:39:22,083 - app - INFO - 
+[09:39:22]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-27 09:39:22,093 - app - INFO - 
+[09:39:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 4ms
+2026-07-27 09:39:31,742 - app - INFO - 
+[09:39:31]
+POST /login
+User: 12
+Status: 302
+Duration: 281ms
+2026-07-27 09:39:31,761 - app - INFO - 
+[09:39:31]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 16ms
+2026-07-27 09:39:44,890 - app - INFO - 
+[09:39:44]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-07-27 09:39:49,869 - app - INFO - 
+[09:39:49]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-27 09:39:49,872 - app - INFO - 
+[09:39:49]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:39:54,167 - app - INFO - 
+[09:39:54]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:39:57,719 - app - INFO - 
+[09:39:57]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:39:59,520 - app - INFO - 
+[09:39:59]
+GET /register
+User: Guest
+Status: 200
+Duration: 3ms
+2026-07-27 09:40:20,375 - app - INFO - 
+[09:40:20]
+POST /register
+User: Guest
+Status: 302
+Duration: 281ms
+2026-07-27 09:40:20,378 - app - INFO - 
+[09:40:20]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:40:25,056 - app - INFO - 
+[09:40:25]
+POST /login
+User: 13
+Status: 302
+Duration: 278ms
+2026-07-27 09:40:25,075 - app - INFO - 
+[09:40:25]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 09:40:34,261 - app - INFO - 
+[09:40:34]
+GET /profile/
+User: 13
+Status: 200
+Duration: 43ms
+2026-07-27 09:40:39,063 - app - INFO - 
+[09:40:39]
+GET /projects/
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 09:40:40,663 - app - INFO - 
+[09:40:40]
+GET /sql-coach
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 09:40:41,010 - app - INFO - 
+[09:40:41]
+GET /code-review
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 09:40:42,395 - app - INFO - 
+[09:40:42]
+GET /resume/builder
+User: 13
+Status: 200
+Duration: 21ms
+2026-07-27 09:40:42,439 - app - INFO - 
+[09:40:42]
+GET /resume/api/intelligence/versions
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 09:40:44,333 - app - INFO - 
+[09:40:44]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 45ms
+2026-07-27 09:40:44,416 - app - INFO - 
+[09:40:44]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 09:40:46,973 - app - INFO - 
+[09:40:46]
+GET /jobs/
+User: 13
+Status: 200
+Duration: 41ms
+2026-07-27 09:40:49,635 - app - INFO - 
+[09:40:49]
+GET /interview/
+User: 13
+Status: 200
+Duration: 37ms
+2026-07-27 09:40:52,243 - app - INFO - 
+[09:40:52]
+GET /learning/
+User: 13
+Status: 200
+Duration: 34ms
+2026-07-27 09:40:53,199 - app - INFO - 
+[09:40:53]
+GET /resume/upload
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 09:40:54,627 - app - INFO - 
+[09:40:54]
+GET /chat/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 09:40:57,695 - app - INFO - 
+[09:40:57]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 34ms
