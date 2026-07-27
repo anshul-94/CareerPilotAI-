@@ -33,7 +33,13 @@ class ProblemService:
             query += " AND companies LIKE ?"
             params.append(f"%{company}%")
             
-        return execute_query(query, tuple(params))
+        problems = execute_query(query, tuple(params))
+        for p in problems:
+            if p.get("companies"):
+                p["companies"] = [c.strip() for c in p["companies"].split(",") if c.strip() and not c.strip().startswith("${")]
+            else:
+                p["companies"] = []
+        return problems
 
     @staticmethod
     def get_problem_by_id(problem_id: int) -> Optional[dict]:
@@ -43,6 +49,11 @@ class ProblemService:
             # Fetch problem templates for all languages
             templates = execute_query("SELECT language, starter_code FROM problem_templates WHERE problem_id = ?", (problem_id,))
             problem["starter_code"] = {t["language"]: t["starter_code"] for t in templates}
+
+            if problem.get("companies"):
+                problem["companies"] = [c.strip() for c in problem["companies"].split(",") if c.strip() and not c.strip().startswith("${")]
+            else:
+                problem["companies"] = []
 
             if problem.get("examples"):
                 try:

@@ -3234,3 +3234,254 @@ GET /dashboard
 User: 13
 Status: 200
 Duration: 36ms
+2026-07-27 16:46:08,042 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 16:46:08,043 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:46:08,067 - app - INFO - [Judge] Evaluating problem 1 in java with 3 cases.
+2026-07-27 16:46:08,067 - app - INFO - [Judge] User function loaded for java
+2026-07-27 16:46:08,071 - app - INFO - [Judge] Driver generated for java
+2026-07-27 16:46:08,072 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpspcend0y/Main.java
+2026-07-27 16:46:08,072 - app - INFO - [Judge] Compilation started for java...
+2026-07-27 16:46:08,422 - app - INFO - [Judge] Compilation finished for java.
+2026-07-27 16:46:08,422 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 16:46:08,422 - app - INFO - [Judge] User function loaded for c
+2026-07-27 16:46:08,424 - app - INFO - [Judge] Driver generated for c
+2026-07-27 16:46:08,425 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmp66ts1txt/merged.c
+2026-07-27 16:46:08,425 - app - INFO - [Judge] Compilation started for c...
+2026-07-27 16:46:08,845 - app - INFO - [Judge] Compilation finished for c.
+2026-07-27 16:46:08,845 - app - INFO - [Judge] Execution started for c...
+2026-07-27 16:46:09,626 - app - INFO - [Judge] Execution finished for c.
+2026-07-27 16:46:09,627 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:46:09,627 - app - INFO - [Judge] Evaluating problem 1 in javascript with 3 cases.
+2026-07-27 16:46:09,627 - app - INFO - [Judge] Executing managed loop for node
+2026-07-27 16:46:09,800 - app - INFO - [Judge] Evaluating problem 1 in cpp with 3 cases.
+2026-07-27 16:46:09,800 - app - INFO - [Judge] User function loaded for cpp
+2026-07-27 16:46:09,801 - app - INFO - [Judge] Driver generated for cpp
+2026-07-27 16:46:09,802 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpc2sfixas/merged.cpp
+2026-07-27 16:46:09,802 - app - INFO - [Judge] Compilation started for cpp...
+2026-07-27 16:46:10,312 - app - INFO - [Judge] Compilation finished for cpp.
+2026-07-27 16:46:10,312 - app - INFO - [Judge] Execution started for cpp...
+2026-07-27 16:46:10,785 - app - INFO - [Judge] Execution finished for cpp.
+2026-07-27 16:46:10,785 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:46:21,174 - app - INFO - 
+[16:46:21]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 43ms
+2026-07-27 16:46:27,219 - app - INFO - 
+[16:46:27]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:46:27,276 - app - INFO - 
+[16:46:27]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 16:46:48,464 - app - INFO - 
+[16:46:48]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 17ms
+2026-07-27 16:46:52,825 - app - INFO - 
+[16:46:52]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 14ms
+2026-07-27 16:46:55,015 - app - INFO - 
+[16:46:55]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 11ms
+2026-07-27 16:47:03,454 - app - INFO - 
+[16:47:03]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 16:47:03,512 - app - INFO - 
+[16:47:03]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 16:47:05,716 - app - INFO - 
+[16:47:05]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:47:05,783 - app - INFO - 
+[16:47:05]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 16:47:06,437 - app - INFO - 
+[16:47:06]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 16:47:06,486 - app - INFO - 
+[16:47:06]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 22ms
+2026-07-27 16:47:09,599 - app - INFO - 
+[16:47:09]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:47:09,668 - app - INFO - 
+[16:47:09]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 26ms
+2026-07-27 16:47:11,999 - app - INFO - 
+[16:47:11]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 16:47:12,068 - app - INFO - 
+[16:47:12]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 16:47:17,157 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 16:47:17,158 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 16:47:17,181 - app - INFO - [Judge] Evaluating problem 1 in java with 3 cases.
+2026-07-27 16:47:17,181 - app - INFO - [Judge] User function loaded for java
+2026-07-27 16:47:17,184 - app - INFO - [Judge] Driver generated for java
+2026-07-27 16:47:17,184 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpjywy17lm/Main.java
+2026-07-27 16:47:17,184 - app - INFO - [Judge] Compilation started for java...
+2026-07-27 16:47:17,657 - app - INFO - [Judge] Compilation finished for java.
+2026-07-27 16:47:17,657 - app - INFO - [Judge] Execution started for java...
+2026-07-27 16:47:17,816 - app - INFO - [Judge] Execution finished for java.
+2026-07-27 16:47:17,816 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:47:17,817 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 16:47:17,817 - app - INFO - [Judge] User function loaded for c
+2026-07-27 16:47:17,818 - app - INFO - [Judge] Driver generated for c
+2026-07-27 16:47:17,818 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmp1hj137c7/merged.c
+2026-07-27 16:47:17,818 - app - INFO - [Judge] Compilation started for c...
+2026-07-27 16:47:18,123 - app - INFO - [Judge] Compilation finished for c.
+2026-07-27 16:47:18,123 - app - INFO - [Judge] Execution started for c...
+2026-07-27 16:47:18,392 - app - INFO - [Judge] Execution finished for c.
+2026-07-27 16:47:18,392 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:47:18,393 - app - INFO - [Judge] Evaluating problem 1 in javascript with 3 cases.
+2026-07-27 16:47:18,393 - app - INFO - [Judge] Executing managed loop for node
+2026-07-27 16:47:18,437 - app - INFO - [Judge] Evaluating problem 1 in cpp with 3 cases.
+2026-07-27 16:47:18,437 - app - INFO - [Judge] User function loaded for cpp
+2026-07-27 16:47:18,439 - app - INFO - [Judge] Driver generated for cpp
+2026-07-27 16:47:18,439 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpw2xo0xve/merged.cpp
+2026-07-27 16:47:18,439 - app - INFO - [Judge] Compilation started for cpp...
+2026-07-27 16:47:18,908 - app - INFO - [Judge] Compilation finished for cpp.
+2026-07-27 16:47:18,908 - app - INFO - [Judge] Execution started for cpp...
+2026-07-27 16:47:19,096 - app - INFO - [Judge] Execution finished for cpp.
+2026-07-27 16:47:19,096 - app - INFO - [Judge] Judge completed.
+2026-07-27 16:47:20,877 - app - INFO - 
+[16:47:20]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 16:47:20,922 - app - INFO - 
+[16:47:20]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 16:47:22,405 - app - INFO - 
+[16:47:22]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 8ms
+2026-07-27 16:47:22,478 - app - INFO - 
+[16:47:22]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 37ms
+2026-07-27 16:47:23,004 - app - INFO - 
+[16:47:23]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 16:47:23,074 - app - INFO - 
+[16:47:23]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 22ms
+2026-07-27 16:47:34,308 - app - INFO - 
+[16:47:34]
+GET /problem_solving/problem/7
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 16:47:52,620 - app - INFO - 
+[16:47:52]
+GET /problem_solving/problem/9
+User: 13
+Status: 200
+Duration: 11ms
+2026-07-27 16:49:20,697 - app - INFO - 
+[16:49:20]
+GET /problem_solving/problem/4
+User: 13
+Status: 200
+Duration: 18ms
+2026-07-27 16:50:19,640 - app - INFO - 
+[16:50:19]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 44ms
+2026-07-27 16:50:19,745 - app - INFO - 
+[16:50:19]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 16:50:25,563 - app - INFO - 
+[16:50:25]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 16:50:25,639 - app - INFO - 
+[16:50:25]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 22ms
+2026-07-27 16:50:49,042 - app - INFO - 
+[16:50:49]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 16:50:49,103 - app - INFO - 
+[16:50:49]
+GET /problem_solving/api/dashboard
+User: 13
+Status: 200
+Duration: 23ms
+2026-07-27 16:50:50,381 - app - INFO - 
+[16:50:50]
+GET /problem_solving/problem/23
+User: 13
+Status: 200
+Duration: 26ms

@@ -64,9 +64,8 @@
                         <h3 class="card-title">💡 Examples</h3>
                         {% for ex in problem.examples %}
                             <div class="example-box">
-                                <div class="example-header">
+                                <div class="example-header" style="margin-bottom: 0.5rem; font-weight: 700; color: var(--text-primary);">
                                     <span>Example {{ loop.index }}</span>
-                                    <button class="btn-action btn-sm" onclick="copyExampleText(this)" style="font-size:0.7rem; padding: 0.15rem 0.4rem;">Copy</button>
                                 </div>
                                 <div class="example-line"><strong>Input:</strong> {{ ex.input }}</div>
                                 <div class="example-line"><strong>Output:</strong> {{ ex.output }}</div>
@@ -677,12 +676,6 @@
     }
 
     // Utilities
-    function copyExampleText(btn) {
-        const pre = btn.parentElement.nextElementSibling;
-        navigator.clipboard.writeText(pre.innerText);
-        btn.textContent = "Copied!";
-        setTimeout(() => btn.textContent = "Copy", 1500);
-    }
     function toggleBookmark() {
         const btn = document.getElementById('bookmarkBtn');
         btn.textContent = btn.textContent === "⭐ Bookmarked" ? "⭐ Bookmark" : "⭐ Bookmarked";

@@ -517,10 +517,12 @@
                                                 <span style="color:var(--accent);">★★★★★</span>
                                             </div>
                                             <!-- Company target list -->
-                                            {% if problem.companies %}
+                                            {% if problem.companies and problem.companies|length > 0 %}
                                                 <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:4px;">
-                                                    {% for c in problem.companies.split(",") %}
-                                                        <span style="font-size: 10px; background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--text-secondary); font-weight:600;"><i class="fa-solid fa-building" style="margin-right:3px; font-size:9px;"></i> ${c.trim()}</span>
+                                                    {% for c in problem.companies %}
+                                                        {% if c and not c.startswith("${") and c.strip() != "" %}
+                                                            <span style="font-size: 10px; background:rgba(255,255,255,0.03); border:1px solid var(--border); padding:2px 8px; border-radius:12px; color:var(--text-secondary); font-weight:600;"><i class="fa-solid fa-building" style="margin-right:3px; font-size:9px;"></i> {{ c }}</span>
+                                                        {% endif %}
                                                     {% endfor %}
                                                 </div>
                                             {% endif %}
