@@ -1,0 +1,695 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/problem_solving.css') }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="ide-workspace">
+    <!-- TOP HEADER -->
+    <header class="ide-topbar">
+        <div class="ide-title-section">
+            <div class="ide-problem-title-row">
+                <span class="ide-problem-number">#{{ problem.id }}</span>
+                <h1 class="ide-problem-title">{{ problem.title }}</h1>
+            </div>
+            <div class="topbar-meta">
+                <span class="badge-difficulty {{ problem.difficulty.lower() }}">{{ problem.difficulty }}</span>
+                <span><i class="fa-solid fa-bullseye text-gradient"></i> Acceptance: 53%</span>
+                <span><i class="fa-solid fa-clock" style="color:var(--text-muted)"></i> {{ problem.estimated_time }} mins</span>
+                <span class="meta-divider">|</span>
+                <span class="company-chip"><i class="fa-brands fa-amazon"></i> Amazon</span>
+                <span class="company-chip"><i class="fa-brands fa-google"></i> Google</span>
+                <span class="topic-chip"><i class="fa-solid fa-layer-group"></i> {{ problem.topic }}</span>
+            </div>
+        </div>
+        <div style="display:flex; gap: 0.75rem; align-items:center;">
+            <button class="btn-premium" onclick="vote(1)"><i class="fa-solid fa-thumbs-up" style="color:var(--success)"></i> 245</button>
+            <button class="btn-premium" onclick="vote(-1)"><i class="fa-solid fa-thumbs-down" style="color:var(--danger)"></i> 12</button>
+            <button class="btn-premium" onclick="toggleBookmark()" id="bookmarkBtn"><i class="fa-solid fa-star" style="color:var(--warning)"></i> Bookmark</button>
+        </div>
+    </header>
+
+    <!-- WORKSPACE BODY -->
+    <div class="ide-body">
+        <!-- LEFT PANEL -->
+        <div class="ide-left-pane">
+            <div class="tab-container">
+                <div class="tab-list">
+                    <button class="tab-btn active" onclick="switchLeftTab(this, 'description')">Description</button>
+                    <button class="tab-btn" onclick="switchLeftTab(this, 'hints')">Hints</button>
+                    <button class="tab-btn" onclick="switchLeftTab(this, 'editorial')">Editorial</button>
+                    <button class="tab-btn" onclick="switchLeftTab(this, 'ai-mentor')">AI Mentor</button>
+                    <button class="tab-btn" onclick="switchLeftTab(this, 'discussion')">Discussion</button>
+                    <button class="tab-btn" onclick="switchLeftTab(this, 'notes')">Notes</button>
+                    <button class="tab-btn" onclick="switchLeftTab(this, 'ai-report')" id="aiReportTabBtn">AI Report</button>
+                </div>
+                <div class="tab-underline" id="leftTabUnderline"></div>
+            </div>
+
+            <!-- Tab Content: Description -->
+            <div class="pane-content-area" id="pane-description">
+                <!-- Problem Statement Card -->
+                <div class="premium-content-card">
+                    <h3 class="card-title">📝 Problem Statement</h3>
+                    <div class="problem-description" style="font-size: 0.95rem; line-height: 1.7; color: #cbd5e1;">
+                        {{ problem.description | safe }}
+                    </div>
+                </div>
+
+                <!-- Examples Card -->
+                {% if problem.examples %}
+                    <div class="premium-content-card">
+                        <h3 class="card-title">💡 Examples</h3>
+                        {% for ex in problem.examples %}
+                            <div class="example-box">
+                                <div class="example-header">
+                                    <span>Example {{ loop.index }}</span>
+                                    <button class="btn-action btn-sm" onclick="copyExampleText(this)" style="font-size:0.7rem; padding: 0.15rem 0.4rem;">Copy</button>
+                                </div>
+                                <div class="example-line"><strong>Input:</strong> {{ ex.input }}</div>
+                                <div class="example-line"><strong>Output:</strong> {{ ex.output }}</div>
+                                {% if ex.explanation %}
+                                    <div class="example-line" style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.5rem;"><strong>Explanation:</strong> {{ ex.explanation }}</div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <!-- Constraints Card -->
+                {% if problem.constraints %}
+                    <div class="premium-content-card">
+                        <h3 class="card-title">⚙️ Constraints</h3>
+                        <div class="constraint-badge-list">
+                            {% for constraint in problem.constraints.split('\n') %}
+                                {% if constraint.strip() %}
+                                    <div class="constraint-badge">
+                                        <span class="check">✓</span> {{ constraint }}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- Tab Content: Hints -->
+            <div class="pane-content-area" id="pane-hints" style="display: none;">
+                <div class="premium-content-card">
+                    <h3 class="card-title">💡 Progressive Hints</h3>
+                    {% if problem.hints %}
+                        {% for hint in problem.hints %}
+                            <div class="hint-box" id="hint-box-{{ loop.index0 }}" style="background: rgba(234, 179, 8, 0.03); border: 1px solid rgba(234, 179, 8, 0.1); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+                                <div class="hint-header" style="display:flex; justify-content:space-between; align-items:center;">
+                                    <span style="font-weight: 700; color: #eab308; font-size: 0.85rem;">Hint {{ loop.index }}</span>
+                                    {% if loop.index0 in hints_used %}
+                                        <span style="font-size: 0.75rem; color: #64748b;">Unlocked</span>
+                                    {% else %}
+                                        <button class="btn-action hint-btn btn-sm" onclick="unlockHint({{ loop.index0 }})" id="btn-hint-{{ loop.index0 }}">Reveal Hint</button>
+                                    {% endif %}
+                                </div>
+                                <p class="hint-text" id="hint-text-{{ loop.index0 }}" style="{% if loop.index0 not in hints_used %}display:none;{% endif %} margin-top: 0.5rem; font-size: 0.88rem; color: #cbd5e1; line-height: 1.5;">
+                                    {{ hint }}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p style="color: #64748b;">No hints available for this problem.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Tab Content: Editorial -->
+            <div class="pane-content-area" id="pane-editorial" style="display: none;">
+                <div class="premium-content-card">
+                    <h3 class="card-title">📚 Optimal Solution Strategy</h3>
+                    <div style="line-height: 1.7; font-size: 0.92rem; color: #94a3b8;">
+                        {{ problem.editorial or 'Editorial explanation is currently not available.' }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: AI Mentor -->
+            <div class="pane-content-area" id="pane-ai-mentor" style="display: none; height: 100%;">
+                <div class="ai-chat-container">
+                    <div class="ai-chat-messages" id="aiChatMessages">
+                        <div class="chat-bubble assistant">
+                            Hi! I am your AI Mentor. I can dry run your code, search for potential bugs, or explain FAANG interview strategies. Ask me anything!
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                        <button class="btn-premium" onclick="sendPrompt('Explain the problem structure simply.')"><i class="fa-solid fa-book-open" style="color:var(--info)"></i> Explain Problem</button>
+                        <button class="btn-premium" onclick="sendPrompt('Can you dry run my current code?')"><i class="fa-solid fa-play" style="color:var(--success)"></i> Dry Run Code</button>
+                        <button class="btn-premium" onclick="sendPrompt('Find any potential bugs in my code.')"><i class="fa-solid fa-bug" style="color:var(--danger)"></i> Find Bug</button>
+                        <button class="btn-premium" onclick="sendPrompt('How can I optimize this code?')"><i class="fa-solid fa-bolt" style="color:var(--warning)"></i> Optimize Code</button>
+                    </div>
+                    <div class="ai-chat-input-bar">
+                        <input type="text" id="aiChatInput" class="ai-chat-input" placeholder="Ask your mentor..." onkeydown="if(event.key === 'Enter') sendUserMessage()">
+                        <button class="ai-chat-send" onclick="sendUserMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Discussion -->
+            <div class="pane-content-area" id="pane-discussion" style="display: none;">
+                <div class="premium-content-card">
+                    <h3 class="card-title">💬 Community Discussion</h3>
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <span>👤 user_991</span>
+                            <span>👍 32 upvotes</span>
+                        </div>
+                        <h4 class="discussion-title">Simple O(N) Hash Map solution (Step by step guide)</h4>
+                        <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Map difference of target - current to its index. Single-pass traversal is the standard approach here.</p>
+                    </div>
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <span>👤 dev_elite</span>
+                            <span>👍 18 upvotes</span>
+                        </div>
+                        <h4 class="discussion-title">Python 3 solution using dict - 99.8% speed percentile</h4>
+                        <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">One-pass dict approach with complete edge-cases analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Notes -->
+            <div class="pane-content-area" id="pane-notes" style="display: none; height: 100%;">
+                <div class="premium-content-card" style="height: calc(100% - 40px); display: flex; flex-direction: column;">
+                    <h3 class="card-title">📝 Private Notes</h3>
+                    <p style="color: #64748b; font-size: 0.8rem; margin-bottom: 0.8rem;">Auto-saves directly to local storage.</p>
+                    <textarea class="notes-textarea" id="notesTextarea" placeholder="Write down notes, pseudocodes, or thoughts here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Tab Content: AI Report -->
+            <div class="pane-content-area" id="pane-ai-report" style="display: none;">
+                <div id="aiReportLoader" style="display: none; text-align: center; padding: 4rem 1rem;">
+                    <span style="font-size: 2.2rem; display: block; animation: floatGlow 2s infinite alternate;">🧠</span>
+                    <p style="color: #94a3b8; margin-top: 1rem; font-size: 0.9rem;">AI Mentor is evaluating your code quality, complexity, and readability...</p>
+                </div>
+                <div id="aiReportBox">
+                    <p style="color: #64748b; text-align: center; padding: 3rem;">Submit your solution to generate a comprehensive AI evaluation report.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL (IDE Editor & Terminal Output) -->
+        <div class="ide-right-pane">
+            <div class="editor-toolbar">
+                <div class="editor-toolbar-left">
+                    <select id="languageSelect" class="editor-select" onchange="changeLanguage()">
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="c">C</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                        <option value="swift">Swift</option>
+                        <option value="kotlin">Kotlin</option>
+                        <option value="php">PHP</option>
+                        <option value="csharp">C#</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                    <button class="btn-premium" onclick="resetStarterCode()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                    <button class="btn-premium" onclick="formatCode()"><i class="fa-solid fa-align-left"></i> Format</button>
+                </div>
+                
+                <div class="editor-toolbar-right">
+                    <select id="fontSizeSelect" class="editor-select" onchange="changeFontSize()">
+                        <option value="12">12px</option>
+                        <option value="14" selected>14px</option>
+                        <option value="16">16px</option>
+                        <option value="18">18px</option>
+                    </select>
+                    <select id="themeSelect" class="editor-select" onchange="changeTheme()">
+                        <option value="vs-dark" selected>VS Dark</option>
+                        <option value="vs-light">VS Light</option>
+                    </select>
+                    <button class="btn-premium" onclick="toggleFullscreen()"><i class="fa-solid fa-expand"></i> Fullscreen</button>
+                </div>
+            </div>
+
+            <div class="editor-area">
+                <div id="monaco-editor-container" style="width:100%; height:100%;"></div>
+            </div>
+
+            <!-- TERMINAL PANEL -->
+            <div class="terminal-panel">
+                <div class="terminal-header">
+                    <div class="terminal-tabs">
+                        <button class="terminal-tab-btn active" onclick="switchTerminalTab(this, 'console')">Console</button>
+                        <button class="terminal-tab-btn" onclick="switchTerminalTab(this, 'testcases')">Testcases</button>
+                    </div>
+                    <div style="display:flex; gap: 0.5rem;">
+                        <button class="btn-primary-glow" onclick="runCode()"><i class="fa-solid fa-play"></i> Run Code</button>
+                        <button class="btn-success-glow" onclick="submitCode()"><i class="fa-solid fa-cloud-arrow-up"></i> Submit</button>
+                    </div>
+                </div>
+                <div class="terminal-body" id="consoleBody">
+                    <span style="color: #475569;">Ready to Run. Waiting...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let editor;
+    const starterCodes = {{ problem.starter_code | tojson | safe }};
+    
+    // Store original templates so we can check if user modified them
+    let currentLang = 'python';
+
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs' }});
+    require(['vs/editor/editor.main'], function() {
+        editor = monaco.editor.create(document.getElementById('monaco-editor-container'), {
+            value: starterCodes['python'] || "// No starter template available for this language.",
+            language: 'python',
+            theme: 'vs-dark',
+            automaticLayout: true,
+            fontSize: 14,
+            minimap: { enabled: true },
+            lineNumbers: "on",
+            wordWrap: "on",
+            folding: true,
+            cursorBlinking: "blink",
+            bracketPairColorization: { enabled: true },
+            renderLineHighlight: "all",
+            quickSuggestions: { other: true, comments: false, strings: false }
+        });
+    });
+
+    function changeLanguage() {
+        const selectEl = document.getElementById('languageSelect');
+        const nextLang = selectEl.value;
+        const currentCode = editor.getValue();
+        const defaultCodeForCurrent = starterCodes[currentLang] || "// No starter template available for this language.";
+
+        // If code was modified from default template
+        if (currentCode.trim() !== defaultCodeForCurrent.trim()) {
+            if (!confirm("You have unsaved code. Switching languages will replace the current template. Proceed?")) {
+                selectEl.value = currentLang; // Revert select
+                return;
+            }
+        }
+
+        currentLang = nextLang;
+        const model = editor.getModel();
+        monaco.editor.setModelLanguage(model, nextLang);
+        editor.setValue(starterCodes[nextLang] || "// No starter template available for this language.");
+    }
+
+    function changeFontSize() {
+        const size = parseInt(document.getElementById('fontSizeSelect').value);
+        editor.updateOptions({ fontSize: size });
+    }
+
+    function changeTheme() {
+        const theme = document.getElementById('themeSelect').value;
+        monaco.editor.setTheme(theme);
+    }
+
+    function resetStarterCode() {
+        const lang = document.getElementById('languageSelect').value;
+        editor.setValue(boilerplates[lang] || "");
+    }
+
+    function formatCode() {
+        editor.getAction('editor.action.formatDocument').run();
+    }
+
+    function toggleFullscreen() {
+        const workspace = document.querySelector('.ide-workspace');
+        if (!document.fullscreenElement) {
+            workspace.requestFullscreen().catch(err => {});
+        } else {
+            document.exitFullscreen();
+        }
+    }
+
+    // Tabs logic with sliding underline indicator
+    function switchLeftTab(btn, paneId) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Adjust underline position dynamically
+        const underline = document.getElementById('leftTabUnderline');
+        underline.style.width = btn.offsetWidth + 'px';
+        underline.style.transform = `translateX(${btn.offsetLeft}px)`;
+
+        // Switch active visibility pane
+        document.querySelectorAll('.pane-content-area').forEach(p => p.style.display = 'none');
+        document.getElementById('pane-' + paneId).style.display = 'block';
+    }
+
+    function switchTerminalTab(tab) {
+        document.querySelectorAll('.terminal-tab-btn').forEach(b => b.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+        
+        const consoleBody = document.getElementById('consoleBody');
+        if (tab === 'testcases') {
+            // Render visible test cases
+            consoleBody.innerHTML = `
+                <div style="font-weight: 700; margin-bottom: 0.5rem; color: #60a5fa;">Available Test Cases:</div>
+                {% if problem.examples %}
+                    {% for ex in problem.examples %}
+                        <div style="background: rgba(255,255,255,0.02); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 4px; font-family: monospace;">
+                            Case {{ loop.index }}: {{ ex.input }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            `;
+        } else if (tab === 'compiler') {
+            consoleBody.innerHTML = '<span style="color: #64748b;">Compiler log empty. Run or submit code to check compilation output.</span>';
+        } else {
+            consoleBody.innerHTML = '<span style="color: #64748b;">Console ready. Waiting...</span>';
+        }
+    }
+
+    // Robust safeFetch wrapper with loading indicators, timeouts, retries, and toasts
+    function safeFetch(url, options = {}, retries = 3, timeoutMs = 60000) {
+        const controller = new AbortController();
+        const id = setTimeout(() => controller.abort(), timeoutMs);
+        
+        return fetch(url, { ...options, signal: controller.signal })
+            .then(res => {
+                clearTimeout(id);
+                if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+                return res.json();
+            })
+            .catch(err => {
+                clearTimeout(id);
+                if (retries > 0 && err.name !== 'AbortError') {
+                    console.warn(`Retrying fetch for ${url}. Attempts remaining: ${retries}`);
+                    return safeFetch(url, options, retries - 1, timeoutMs);
+                }
+                alert(`Network error during request to ${url}: ${err.message || err}. Please try again.`);
+                throw err;
+            });
+    }
+
+    // Initialize underline size on page load
+    window.addEventListener('load', () => {
+        const firstTab = document.querySelector('.tab-btn');
+        const underline = document.getElementById('leftTabUnderline');
+        if (firstTab && underline) {
+            underline.style.width = firstTab.offsetWidth + 'px';
+            underline.style.transform = `translateX(${firstTab.offsetLeft}px)`;
+        }
+    });
+
+    // Unlocking Hints System
+    function unlockHint(index) {
+        safeFetch(`/problem_solving/api/unlock_hint/{{ problem.id }}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ hint_index: index })
+        })
+        .then(data => {
+            if (data.success) {
+                document.getElementById(`btn-hint-${index}`).remove();
+                document.getElementById(`hint-text-${index}`).style.display = 'block';
+            }
+        });
+    }
+
+    // Run Code against public test cases
+    function runCode() {
+        const consoleBody = document.getElementById('consoleBody');
+        consoleBody.innerHTML = '<span style="color: #60a5fa;">$ compiling environment... Running test cases...</span>';
+        
+        safeFetch(`/problem_solving/api/run/{{ problem.id }}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                code: editor.getValue(),
+                language: document.getElementById('languageSelect').value
+            })
+        })
+        .then(data => {
+            if (data.success || true) { // Always format standard response even on failure since we use JSON schema
+                let badgeColor = "#10b981"; // green
+                let status = data.status || "Execution Error";
+                if (status === "Wrong Answer") badgeColor = "#f59e0b"; // orange
+                if (status.includes("Error") || status === "Compilation Error") badgeColor = "#ef4444"; // red
+                if (status.includes("Time Limit")) badgeColor = "#eab308"; // yellow
+                
+                let passed = data.passed ?? 0;
+                let total = data.total ?? 0;
+                let runtime = data.runtime ?? 0;
+                let memory = data.memory ?? 0;
+                let message = data.message || data.details || data.error || "";
+
+                let detailsHtml = "";
+                
+                if (status === "Compilation Error") {
+                    detailsHtml = `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
+                        <div><strong style="color:#ef4444">Compiler Output:</strong></div>
+                        <pre style="margin-top:5px; color:#cbd5e1; font-family: monospace; white-space: pre-wrap; font-size: 0.85rem;">${data.compiler_output || message}</pre>
+                    </div>`;
+                } else {
+                    detailsHtml = `<pre style="color: #e2e8f0; font-family: monospace; white-space: pre-wrap;">${message}</pre>`;
+                    if (status === "Wrong Answer" && data.failed_case) {
+                        detailsHtml += `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
+                            <div><strong style="color:#ef4444">Failed Test Case ${data.failed_case}:</strong></div>
+                            <div style="margin-top:5px; color:#cbd5e1;">Expected: <code style="color:#10b981">${data.expected}</code></div>
+                            <div style="color:#cbd5e1;">Actual: <code style="color:#f87171">${data.actual}</code></div>
+                        </div>`;
+                    }
+                }
+
+                consoleBody.innerHTML = `
+                    <div style="margin-bottom: 0.8rem;">
+                        <span style="display:inline-block; padding:0.25rem 0.6rem; border-radius:4px; font-weight:600; font-size:0.85rem; color:#fff; background-color:${badgeColor};">${status}</span>
+                    </div>
+                    ${status !== "Compilation Error" ? `<div style="color: #64748b; margin-bottom: 0.3rem;">Passed: ${passed}/${total} | Runtime: ${runtime} ms | Memory: ${memory} KB</div>` : ''}
+                    ${detailsHtml}
+                `;
+            }
+        })
+        .catch(err => {
+            consoleBody.innerHTML = `<span style="color: #f87171;">Network Error: ${err.message || err}</span>`;
+        });
+    }
+
+    // Submit solution code
+    function submitCode() {
+        const consoleBody = document.getElementById('consoleBody');
+        consoleBody.innerHTML = '<span style="color: #60a5fa;">$ running hidden test cases... Submitting payload...</span>';
+        
+        // Show AI Loader
+        const aiTabBtn = document.getElementById('aiReportTabBtn');
+        switchLeftTab(aiTabBtn, 'ai-report');
+        document.getElementById('aiReportLoader').style.display = 'block';
+        document.getElementById('aiReportBox').style.display = 'none';
+
+        safeFetch(`/problem_solving/api/submit/{{ problem.id }}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                code: editor.getValue(),
+                language: document.getElementById('languageSelect').value
+            })
+        })
+        .then(data => {
+            document.getElementById('aiReportLoader').style.display = 'none';
+            document.getElementById('aiReportBox').style.display = 'block';
+
+            if (data) {
+                let status = data.status || "Execution Error";
+                let badgeColor = "#10b981";
+                
+                if (status === "Accepted") {
+                    badgeColor = "#10b981";
+                } else if (status === "Compilation Error" || status === "Configuration Error") {
+                    badgeColor = "#ef4444";
+                } else if (status === "Time Limit Exceeded") {
+                    badgeColor = "#eab308";
+                } else if (status === "Runtime Error" || status.includes("Internal")) {
+                    badgeColor = "#ef4444";
+                } else if (status === "Wrong Answer") {
+                    badgeColor = "#f59e0b";
+                }
+                
+                let passed = data.passed ?? 0;
+                let total = data.total ?? 0;
+                let runtime = data.runtime ?? 0;
+                let memory = data.memory ?? 0;
+                let message = data.error || data.stderr || data.runtime_error || data.compile_error || "";
+
+                let detailsHtml = "";
+                
+                if (status === "Compilation Error") {
+                    detailsHtml = `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
+                        <div><strong style="color:#ef4444">Compiler Output:</strong></div>
+                        <pre style="margin-top:5px; color:#cbd5e1; font-family: monospace; white-space: pre-wrap; font-size: 0.85rem;">${data.compiler_output || message}</pre>
+                    </div>`;
+                } else {
+                    if (message) {
+                        detailsHtml = `<pre style="color: #e2e8f0; font-family: monospace; white-space: pre-wrap;">${message}</pre>`;
+                    }
+                    if (status === "Wrong Answer") {
+                        detailsHtml += `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
+                            <div><strong style="color:#ef4444">Failed Test Case:</strong></div>
+                            <div style="margin-top:5px; color:#cbd5e1;">Expected: <code style="color:#10b981">${data.expected}</code></div>
+                            <div style="color:#cbd5e1;">Actual: <code style="color:#f87171">${data.actual}</code></div>
+                        </div>`;
+                    }
+                }
+
+                consoleBody.innerHTML = `
+                    <div style="margin-bottom: 0.8rem;">
+                        <span style="display:inline-block; padding:0.25rem 0.6rem; border-radius:4px; font-weight:600; font-size:0.85rem; color:#fff; background-color:${badgeColor};">${status}</span>
+                    </div>
+                    ${status !== "Compilation Error" ? `<div style="color: #64748b; margin-bottom: 0.3rem;">Passed: ${passed}/${total} | Runtime: ${runtime} ms | Memory: ${memory} KB</div>` : ''}
+                    ${detailsHtml}
+                `;
+
+                // Render AI Report Card only if Accepted
+                if (status === "Accepted" && data.ai_feedback) {
+                    const ai = data.ai_feedback;
+                    const feedback = ai.feedback_report || {};
+                    
+                    document.getElementById('aiReportBox').innerHTML = `
+                        <div class="ai-report-dashboard">
+                            <div class="report-score-circle">
+                                <div class="score-value">${ai.correctness}</div>
+                                <div class="score-label">Overall Correctness</div>
+                            </div>
+                            
+                            <div class="report-metrics-grid">
+                                <div class="metric-card">
+                                    <div class="metric-title"><i class="fa-solid fa-gauge-high"></i> Time Complexity</div>
+                                    <div class="metric-value" style="color:var(--info)">${ai.time_complexity}</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-title"><i class="fa-solid fa-memory"></i> Space Complexity</div>
+                                    <div class="metric-value" style="color:var(--accent)">${ai.space_complexity}</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-title"><i class="fa-solid fa-bolt"></i> Optimization</div>
+                                    <div class="metric-value">${ai.optimization}/100</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-title"><i class="fa-solid fa-briefcase"></i> Interview Score</div>
+                                    <div class="metric-value">${ai.interview_quality}/100</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-title"><i class="fa-solid fa-book"></i> Readability</div>
+                                    <div class="metric-value">${ai.readability}/100</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-title"><i class="fa-solid fa-brain"></i> Confidence</div>
+                                    <div class="metric-value">${feedback.confidence_score}/100</div>
+                                </div>
+                            </div>
+                            
+                            <div class="premium-content-card" style="margin-top: 0.5rem;">
+                                <h4 style="color:var(--success); font-size:1rem; margin-top:0;"><i class="fa-solid fa-star"></i> What Went Well</h4>
+                                <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">${feedback.what_went_well || 'No comments.'}</p>
+                            </div>
+                            
+                            <div class="premium-content-card">
+                                <h4 style="color:var(--warning); font-size:1rem; margin-top:0;"><i class="fa-solid fa-lightbulb"></i> Optimization Suggestions</h4>
+                                <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">${feedback.cleaner_approach || 'No comments.'}</p>
+                            </div>
+                            
+                            <div class="premium-content-card">
+                                <h4 style="color:var(--info); font-size:1rem; margin-top:0;"><i class="fa-brands fa-google"></i> FAANG Feedback</h4>
+                                <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">${feedback.interview_expectation || 'No comments.'}</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    document.getElementById('aiReportBox').innerHTML = `<p style="color: #94a3b8; font-size:0.9rem;">AI Report is only generated for Accepted solutions. Please fix the <strong>${data.status}</strong> first.</p>`;
+                }
+            }
+        })
+        .catch(err => {
+            document.getElementById('aiReportLoader').style.display = 'none';
+            document.getElementById('aiReportBox').style.display = 'block';
+            document.getElementById('aiReportBox').innerHTML = `<p style="color: #f87171;">Connection error. See console for details.</p>`;
+            consoleBody.innerHTML = `<span style="color: #f87171;">Network Error: ${err.message || err}</span>`;
+        });
+    }
+
+    // Markdown Notes Auto-Save
+    const notesTextarea = document.getElementById('notesTextarea');
+    const noteKey = `notes_problem_{{ problem.id }}`;
+    notesTextarea.value = localStorage.getItem(noteKey) || "";
+    notesTextarea.addEventListener('input', () => {
+        localStorage.setItem(noteKey, notesTextarea.value);
+    });
+
+    // AI Mentor Interactive Chat Functions
+    function sendPrompt(promptText) {
+        document.getElementById('aiChatInput').value = promptText;
+        sendUserMessage();
+    }
+
+    function sendUserMessage() {
+        const input = document.getElementById('aiChatInput');
+        const query = input.value.trim();
+        if (!query) return;
+        
+        input.value = "";
+        
+        // Append user bubble
+        const messages = document.getElementById('aiChatMessages');
+        const userBubble = document.createElement('div');
+        userBubble.className = 'chat-bubble user';
+        userBubble.textContent = query;
+        messages.appendChild(userBubble);
+        messages.scrollTop = messages.scrollHeight;
+        
+        // Append assistant loading
+        const loaderBubble = document.createElement('div');
+        loaderBubble.className = 'chat-bubble assistant';
+        loaderBubble.textContent = "AI Mentor is writing...";
+        messages.appendChild(loaderBubble);
+        messages.scrollTop = messages.scrollHeight;
+        
+        // Call backend using safeFetch urlencoded
+        safeFetch('/chat/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+                message: `As my coding mentor on the problem "${document.querySelector('.ide-problem-title').innerText}", please answer: ${query}. (Note: Do not reveal the full code solution immediately)`
+            })
+        })
+        .then(data => {
+            loaderBubble.remove();
+            
+            const replyBubble = document.createElement('div');
+            replyBubble.className = 'chat-bubble assistant';
+            replyBubble.innerHTML = (data.response || "No response received.").replace(/\n/g, '<br>');
+            messages.appendChild(replyBubble);
+            messages.scrollTop = messages.scrollHeight;
+        })
+        .catch(err => {
+            loaderBubble.textContent = "Error calling AI Mentor.";
+        });
+    }
+
+    // Utilities
+    function copyExampleText(btn) {
+        const pre = btn.parentElement.nextElementSibling;
+        navigator.clipboard.writeText(pre.innerText);
+        btn.textContent = "Copied!";
+        setTimeout(() => btn.textContent = "Copy", 1500);
+    }
+    function toggleBookmark() {
+        const btn = document.getElementById('bookmarkBtn');
+        btn.textContent = btn.textContent === "⭐ Bookmarked" ? "⭐ Bookmark" : "⭐ Bookmarked";
+    }
+    function shareProblem() {
+        navigator.clipboard.writeText(window.location.href);
+        alert("Problem link copied to clipboard!");
+    }
+</script>
+{% endblock %}

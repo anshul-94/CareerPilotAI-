@@ -46,7 +46,10 @@ def index():
 def send():
     """API: Send a message to the AI Career Coach."""
     user_id = session['user_id']
-    data = request.json
+    if request.is_json:
+        data = request.get_json(silent=True) or {}
+    else:
+        data = request.form.to_dict()
     
     message = data.get('message', '').strip()
     session_id = data.get('session_id', ChatModel.generate_session_id())
@@ -85,7 +88,10 @@ def send():
 def stream():
     """API: Stream a response from the AI Career Coach."""
     user_id = session['user_id']
-    data = request.json
+    if request.is_json:
+        data = request.get_json(silent=True) or {}
+    else:
+        data = request.form.to_dict()
     
     message = data.get('message', '').strip()
     session_id = data.get('session_id', ChatModel.generate_session_id())

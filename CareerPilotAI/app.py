@@ -67,6 +67,7 @@ Background Jobs : Active
     from backend.routes.profile import profile_bp
     from backend.routes.admin import admin_bp
     from backend.routes.notifications import notifications_bp
+    from backend.routes.problem_solving import problem_solving_bp
     
     app.register_blueprint(auth_bp)
     app.register_blueprint(dashboard_bp)
@@ -80,6 +81,7 @@ Background Jobs : Active
     app.register_blueprint(profile_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(notifications_bp)
+    app.register_blueprint(problem_solving_bp)
     
     # ── Landing Page Route ────────────────────────────────────────
     @app.route('/')

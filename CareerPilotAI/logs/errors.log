@@ -162,3 +162,423 @@ Traceback (most recent call last):
 AttributeError: 'dict' object has no attribute 'id'
 
 =======================================
+2026-07-27 10:43:25,960 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 49, in send
+    data = request.json
+           ^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 560, in json
+    return self.get_json()
+           ~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+    ...<2 lines>...
+    )
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+
+=======================================
+2026-07-27 10:43:28,629 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 49, in send
+    data = request.json
+           ^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 560, in json
+    return self.get_json()
+           ~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+    ...<2 lines>...
+    )
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+
+=======================================
+2026-07-27 10:43:30,609 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 49, in send
+    data = request.json
+           ^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 560, in json
+    return self.get_json()
+           ~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+    ...<2 lines>...
+    )
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+
+=======================================
+2026-07-27 10:44:24,980 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 49, in send
+    data = request.json
+           ^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 560, in json
+    return self.get_json()
+           ~~~~~~~~~~~~~^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/wrappers/request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+    ...<2 lines>...
+    )
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+
+=======================================
+2026-07-27 10:47:49,508 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : name 'Config' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 70, in send
+    result = AIService.chat(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/ai_service.py", line 42, in chat
+    result = ConversationManager.handle_message(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/conversation_manager.py", line 23, in handle_message
+    plan = AgentPlanner.plan_action(message, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/agent_planner.py", line 44, in plan_action
+    response = ai_gateway.chat(messages, temperature=0.1, json_mode=True)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/ollama_provider.py", line 76, in chat
+    self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt_snippet, duration, normalized["success"], normalized.get("metrics", {}))
+                                   ^^^^^^
+NameError: name 'Config' is not defined
+
+=======================================
+2026-07-27 10:47:52,053 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : name 'Config' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 70, in send
+    result = AIService.chat(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/ai_service.py", line 42, in chat
+    result = ConversationManager.handle_message(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/conversation_manager.py", line 23, in handle_message
+    plan = AgentPlanner.plan_action(message, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/agent_planner.py", line 44, in plan_action
+    response = ai_gateway.chat(messages, temperature=0.1, json_mode=True)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/ollama_provider.py", line 76, in chat
+    self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt_snippet, duration, normalized["success"], normalized.get("metrics", {}))
+                                   ^^^^^^
+NameError: name 'Config' is not defined
+
+=======================================
+2026-07-27 10:47:54,465 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : name 'Config' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 70, in send
+    result = AIService.chat(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/ai_service.py", line 42, in chat
+    result = ConversationManager.handle_message(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/conversation_manager.py", line 23, in handle_message
+    plan = AgentPlanner.plan_action(message, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/agent_planner.py", line 44, in plan_action
+    response = ai_gateway.chat(messages, temperature=0.1, json_mode=True)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/ollama_provider.py", line 76, in chat
+    self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt_snippet, duration, normalized["success"], normalized.get("metrics", {}))
+                                   ^^^^^^
+NameError: name 'Config' is not defined
+
+=======================================
+2026-07-27 10:47:56,774 - error - ERROR - 
+================ ERROR ================
+Route       : /chat/send
+Function    : chat.send
+User        : 13
+Reason      : name 'Config' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/chat.py", line 70, in send
+    result = AIService.chat(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/ai_service.py", line 42, in chat
+    result = ConversationManager.handle_message(user_id, message, session_id, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/conversation_manager.py", line 23, in handle_message
+    plan = AgentPlanner.plan_action(message, user_context)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/agent_planner.py", line 44, in plan_action
+    response = ai_gateway.chat(messages, temperature=0.1, json_mode=True)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/ai/providers/ollama_provider.py", line 76, in chat
+    self._log_ai_request("Ollama", Config.OLLAMA_MODEL, prompt_snippet, duration, normalized["success"], normalized.get("metrics", {}))
+                                   ^^^^^^
+NameError: name 'Config' is not defined
+
+=======================================
+2026-07-27 10:57:09,953 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:09,970 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:09,975 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:09,982 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:42,798 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:42,809 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:42,816 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================
+2026-07-27 10:57:42,823 - error - ERROR - 
+================ ERROR ================
+Route       : /problem_solving/api/submit/1
+Function    : problem_solving.submit_code
+User        : 13
+Reason      : name 'json' is not defined
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/utils/decorators.py", line 53, in decorated_function
+    return f(*args, **kwargs)
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 105, in submit_code
+    result.get("runtime", 0), result.get("memory", 1024), json.dumps(metrics)
+                                                          ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+
+=======================================

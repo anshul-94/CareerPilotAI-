@@ -70,3 +70,27 @@ Started     : Yes
 Duration    : 28578 ms
 Result      : Failed (name 'Config' is not defined)
 =====================================
+2026-07-27 10:32:13,763 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 13
+Started     : Yes
+Duration    : 2850 ms
+Result      : Success
+=====================================
+2026-07-27 10:32:40,930 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Resume Build
+User ID     : 13
+Started     : Yes
+Duration    : 28659 ms
+Result      : Failed (name 'Config' is not defined)
+=====================================
+2026-07-27 11:21:12,521 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Resume Build
+User ID     : 13
+Started     : Yes
+Duration    : 38517 ms
+Result      : Success
+=====================================

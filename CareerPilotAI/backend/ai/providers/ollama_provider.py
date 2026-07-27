@@ -11,6 +11,7 @@ from typing import Dict, Any, List, Generator
 from backend.ai.providers.base_provider import BaseProvider
 from backend.ai.ollama_service import OllamaService
 from backend.utils.logger import ai_logger
+from backend.config import Config
 
 
 class OllamaProvider(BaseProvider):

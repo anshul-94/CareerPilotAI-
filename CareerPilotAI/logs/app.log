@@ -709,3 +709,1923 @@ GET /dashboard
 User: 13
 Status: 200
 Duration: 34ms
+2026-07-27 10:26:33,744 - app - INFO - 
+[10:26:33]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 59ms
+2026-07-27 10:26:45,255 - app - INFO - 
+[10:26:45]
+GET /projects/
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 10:26:48,029 - app - INFO - 
+[10:26:48]
+GET /projects/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 10:26:54,172 - app - INFO - 
+[10:26:54]
+GET /
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 10:27:29,663 - app - INFO - 
+[10:27:29]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 55ms
+2026-07-27 10:30:25,246 - app - INFO - 
+[10:30:25]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 39ms
+2026-07-27 10:30:29,878 - app - INFO - 
+[10:30:29]
+GET /
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 10:30:32,290 - app - INFO - 
+[10:30:32]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 30ms
+2026-07-27 10:30:38,178 - app - INFO - 
+[10:30:38]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 44ms
+2026-07-27 10:30:38,209 - app - INFO - 
+[10:30:38]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 10:30:45,937 - app - INFO - 
+[10:30:45]
+GET /code-review
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 10:31:54,225 - app - INFO - 
+[10:31:54]
+GET /
+User: 13
+Status: 200
+Duration: 17ms
+2026-07-27 10:31:56,307 - app - INFO - 
+[10:31:56]
+GET /
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 10:32:01,279 - app - INFO - 
+[10:32:01]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 58ms
+2026-07-27 10:32:03,716 - app - INFO - 
+[10:32:03]
+GET /resume/upload
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 10:32:04,852 - app - INFO - 
+[10:32:04]
+GET /chat/
+User: 13
+Status: 200
+Duration: 21ms
+2026-07-27 10:32:08,805 - app - INFO - 
+[10:32:08]
+GET /learning/
+User: 13
+Status: 200
+Duration: 14ms
+2026-07-27 10:32:10,225 - app - INFO - 
+[10:32:10]
+GET /interview/
+User: 13
+Status: 200
+Duration: 17ms
+2026-07-27 10:32:10,937 - app - INFO - 
+[10:32:10]
+GET /jobs/
+User: 13
+Status: 200
+Duration: 34ms
+2026-07-27 10:32:11,554 - app - INFO - 
+[10:32:11]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 35ms
+2026-07-27 10:32:11,608 - app - INFO - 
+[10:32:11]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 10:32:12,268 - app - INFO - 
+[10:32:12]
+GET /resume/builder
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 10:32:12,311 - app - INFO - 
+[10:32:12]
+GET /resume/api/intelligence/versions
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 10:32:13,427 - app - INFO - 
+[10:32:13]
+GET /code-review
+User: 13
+Status: 200
+Duration: 53ms
+2026-07-27 10:35:37,339 - app - INFO - 
+[10:35:37]
+GET /
+User: 13
+Status: 200
+Duration: 45ms
+2026-07-27 10:35:42,346 - app - INFO - 
+[10:35:42]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 45ms
+2026-07-27 10:35:46,286 - app - INFO - 
+[10:35:46]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 10:35:53,408 - app - INFO - 
+[10:35:53]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 10:35:55,911 - app - INFO - 
+[10:35:55]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 10:36:03,557 - app - INFO - 
+[10:36:03]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 21ms
+2026-07-27 10:36:08,935 - app - INFO - 
+[10:36:08]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 10:36:13,908 - app - INFO - 
+[10:36:13]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 34ms
+2026-07-27 10:36:40,027 - app - INFO - 
+[10:36:40]
+GET /problem_solving
+User: 13
+Status: 308
+Duration: 0ms
+2026-07-27 10:36:40,041 - app - INFO - 
+[10:36:40]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 10:36:43,973 - app - INFO - 
+[10:36:43]
+GET /
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 10:36:46,348 - app - INFO - 
+[10:36:46]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 37ms
+2026-07-27 10:36:50,271 - app - INFO - 
+[10:36:50]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 10:37:03,741 - app - INFO - 
+[10:37:03]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 10:37:16,821 - app - INFO - 
+[10:37:16]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 10:37:46,317 - app - INFO - 
+[10:37:46]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 52ms
+2026-07-27 10:37:46,386 - app - INFO - 
+[10:37:46]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 10:37:47,853 - app - INFO - 
+[10:37:47]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 27ms
+2026-07-27 10:37:51,180 - app - INFO - 
+[10:37:51]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 10:37:55,234 - app - INFO - 
+[10:37:55]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 10:40:57,626 - app - INFO - 
+[10:40:57]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 31ms
+2026-07-27 10:41:08,647 - app - INFO - 
+[10:41:08]
+GET /problem_solving/problem
+User: 13
+Status: 404
+Duration: 3ms
+2026-07-27 10:41:15,109 - app - INFO - 
+[10:41:15]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 10:41:27,938 - app - INFO - 
+[10:41:27]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 10:43:14,283 - app - INFO - 
+[10:43:14]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 10:43:15,289 - app - INFO - 
+[10:43:15]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 10:43:25,961 - app - INFO - 
+[10:43:25]
+POST /chat/send
+User: 13
+Status: 415
+Duration: 8ms
+2026-07-27 10:43:28,630 - app - INFO - 
+[10:43:28]
+POST /chat/send
+User: 13
+Status: 415
+Duration: 2ms
+2026-07-27 10:43:30,610 - app - INFO - 
+[10:43:30]
+POST /chat/send
+User: 13
+Status: 415
+Duration: 1ms
+2026-07-27 10:44:14,502 - app - INFO - 
+[10:44:14]
+GET /
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 10:44:16,384 - app - INFO - 
+[10:44:16]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 57ms
+2026-07-27 10:44:18,223 - app - INFO - 
+[10:44:18]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 10:44:19,673 - app - INFO - 
+[10:44:19]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 10:44:24,981 - app - INFO - 
+[10:44:24]
+POST /chat/send
+User: 13
+Status: 415
+Duration: 7ms
+2026-07-27 10:47:26,637 - app - INFO - 
+[10:47:26]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 42ms
+2026-07-27 10:47:33,035 - app - INFO - 
+[10:47:33]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 11ms
+2026-07-27 10:47:35,220 - app - INFO - 
+[10:47:35]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 27ms
+2026-07-27 10:47:49,516 - app - INFO - 
+[10:47:49]
+POST /chat/send
+User: 13
+Status: 500
+Duration: 7272ms
+2026-07-27 10:47:52,055 - app - INFO - 
+[10:47:52]
+POST /chat/send
+User: 13
+Status: 500
+Duration: 2494ms
+2026-07-27 10:47:54,467 - app - INFO - 
+[10:47:54]
+POST /chat/send
+User: 13
+Status: 500
+Duration: 2400ms
+2026-07-27 10:47:56,777 - app - INFO - 
+[10:47:56]
+POST /chat/send
+User: 13
+Status: 500
+Duration: 2305ms
+2026-07-27 10:51:40,335 - app - INFO - 
+[10:51:40]
+GET /
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 10:51:51,124 - app - INFO - 
+[10:51:51]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 65ms
+2026-07-27 10:51:54,604 - app - INFO - 
+[10:51:54]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 10:51:56,752 - app - INFO - 
+[10:51:56]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 10:52:14,007 - app - INFO - 
+[10:52:14]
+POST /chat/send
+User: 13
+Status: 200
+Duration: 11397ms
+2026-07-27 10:52:14,008 - app - ERROR - Error generating title for session f657b2db-5962-4b15-aff3-c8fcceaf3dec: No module named 'backend.services.ollama_service'
+2026-07-27 10:56:55,398 - app - INFO - 
+[10:56:55]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 39ms
+2026-07-27 10:57:04,063 - app - INFO - 
+[10:57:04]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 10:57:06,127 - app - INFO - 
+[10:57:06]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 10:57:09,962 - app - INFO - 
+[10:57:09]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 33ms
+2026-07-27 10:57:09,970 - app - INFO - 
+[10:57:09]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 5ms
+2026-07-27 10:57:09,976 - app - INFO - 
+[10:57:09]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 3ms
+2026-07-27 10:57:09,982 - app - INFO - 
+[10:57:09]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 2ms
+2026-07-27 10:57:32,324 - app - INFO - 
+[10:57:32]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 38ms
+2026-07-27 10:57:41,592 - app - INFO - 
+[10:57:41]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 10:57:42,802 - app - INFO - 
+[10:57:42]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 10ms
+2026-07-27 10:57:42,810 - app - INFO - 
+[10:57:42]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 3ms
+2026-07-27 10:57:42,817 - app - INFO - 
+[10:57:42]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 3ms
+2026-07-27 10:57:42,823 - app - INFO - 
+[10:57:42]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 3ms
+2026-07-27 11:03:01,810 - app - INFO - 
+[11:03:01]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 11:03:08,796 - app - INFO - 
+[11:03:08]
+GET /
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 11:03:10,690 - app - INFO - 
+[11:03:10]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 43ms
+2026-07-27 11:03:13,857 - app - INFO - 
+[11:03:13]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 21ms
+2026-07-27 11:03:15,576 - app - INFO - 
+[11:03:15]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 11:04:22,442 - app - INFO - 
+[11:04:22]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 11:04:48,733 - app - INFO - 
+[11:04:48]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 22815ms
+2026-07-27 11:05:04,406 - app - INFO - 
+[11:05:04]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 34786ms
+2026-07-27 11:08:31,242 - app - INFO - 
+[11:08:31]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 33ms
+2026-07-27 11:08:32,602 - app - INFO - 
+[11:08:32]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 11:09:13,482 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 11:09:13,485 - app - INFO - [IDE Submit] Code length: 431 characters. Language: java
+2026-07-27 11:09:13,485 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 11:09:13,491 - app - INFO - [IDE Submit] Test run completed. Status: Accepted
+2026-07-27 11:09:13,492 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 11:09:13,498 - app - INFO - [IDE Submit] Invoking AI Code Review...
+2026-07-27 11:09:30,097 - app - INFO - [IDE Submit] AI review completed successfully.
+2026-07-27 11:09:30,098 - app - INFO - 
+[11:09:30]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 16616ms
+2026-07-27 11:09:42,784 - app - INFO - 
+[11:09:42]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 8ms
+2026-07-27 11:10:16,643 - app - INFO - 
+[11:10:16]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 11:10:22,910 - app - INFO - 
+[11:10:22]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 11:10:29,639 - app - INFO - 
+[11:10:29]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 11:10:30,769 - app - INFO - 
+[11:10:30]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 11:10:32,051 - app - INFO - 
+[11:10:32]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:32,620 - app - INFO - 
+[11:10:32]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 11:10:33,016 - app - INFO - 
+[11:10:33]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:33,332 - app - INFO - 
+[11:10:33]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:33,550 - app - INFO - 
+[11:10:33]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:33,804 - app - INFO - 
+[11:10:33]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 11:10:34,300 - app - INFO - 
+[11:10:34]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:34,766 - app - INFO - 
+[11:10:34]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:35,248 - app - INFO - 
+[11:10:35]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 11:10:44,164 - app - INFO - 
+[11:10:44]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 11:10:44,699 - app - INFO - 
+[11:10:44]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:10:44,946 - app - INFO - 
+[11:10:44]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 11:10:45,068 - app - INFO - 
+[11:10:45]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 11:10:45,214 - app - INFO - 
+[11:10:45]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 11:10:45,349 - app - INFO - 
+[11:10:45]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 11:10:45,486 - app - INFO - 
+[11:10:45]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 11:10:46,398 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 11:10:46,401 - app - INFO - [IDE Submit] Code length: 372 characters. Language: java
+2026-07-27 11:10:46,401 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 11:10:46,408 - app - INFO - [IDE Submit] Test run completed. Status: Accepted
+2026-07-27 11:10:46,408 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 11:10:46,414 - app - INFO - [IDE Submit] Invoking AI Code Review...
+2026-07-27 11:11:04,953 - app - INFO - [IDE Submit] AI review completed successfully.
+2026-07-27 11:11:04,955 - app - INFO - 
+[11:11:04]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 18558ms
+2026-07-27 11:11:22,893 - app - INFO - 
+[11:11:22]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 11:11:24,433 - app - INFO - 
+[11:11:24]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 11:11:28,024 - app - INFO - 
+[11:11:28]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 11:11:36,538 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 11:11:36,539 - app - INFO - [IDE Submit] Code length: 367 characters. Language: java
+2026-07-27 11:11:36,539 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 11:11:36,546 - app - INFO - [IDE Submit] Test run completed. Status: Accepted
+2026-07-27 11:11:36,547 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 11:11:36,558 - app - INFO - [IDE Submit] Invoking AI Code Review...
+2026-07-27 11:11:52,603 - app - INFO - [IDE Submit] AI review completed successfully.
+2026-07-27 11:11:52,609 - app - INFO - 
+[11:11:52]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 16069ms
+2026-07-27 11:12:16,988 - app - INFO - 
+[11:12:16]
+POST /chat/send
+User: 13
+Status: 200
+Duration: 12313ms
+2026-07-27 11:12:16,989 - app - ERROR - Error generating title for session e980835f-6832-4e02-9f81-8b6c3f0a9461: No module named 'backend.services.ollama_service'
+2026-07-27 11:20:22,803 - app - INFO - 
+[11:20:22]
+GET /
+User: 13
+Status: 200
+Duration: 17ms
+2026-07-27 11:20:24,520 - app - INFO - 
+[11:20:24]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 55ms
+2026-07-27 11:20:34,002 - app - INFO - 
+[11:20:34]
+GET /resume/builder
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 11:20:34,056 - app - INFO - 
+[11:20:34]
+GET /resume/api/intelligence/versions
+User: 13
+Status: 200
+Duration: 2ms
+2026-07-27 11:20:40,133 - app - INFO - 
+[11:20:40]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 69ms
+2026-07-27 11:20:40,140 - app - INFO - 
+[11:20:40]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 11:20:40,187 - app - INFO - 
+[11:20:40]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 11:20:42,760 - app - INFO - 
+[11:20:42]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 41ms
+2026-07-27 11:21:11,366 - app - INFO - [Judge] Evaluating problem 1 in java with 3 cases.
+2026-07-27 11:21:11,368 - app - INFO - [Judge] Compiling Java code...
+2026-07-27 11:21:11,872 - app - INFO - 
+[11:21:11]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 531ms
+2026-07-27 11:21:24,589 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 11:21:24,590 - app - INFO - [IDE Submit] Code length: 424 characters. Language: java
+2026-07-27 11:21:24,591 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 11:21:24,601 - app - INFO - [Judge] Evaluating problem 1 in java with 3 cases.
+2026-07-27 11:21:24,603 - app - INFO - [Judge] Compiling Java code...
+2026-07-27 11:21:25,029 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 11:21:25,030 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 11:21:25,032 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 11:21:25,032 - app - INFO - 
+[11:21:25]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 443ms
+2026-07-27 11:21:37,328 - app - INFO - 
+[11:21:37]
+POST /problem_solving/api/unlock_hint/1
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 11:23:51,206 - app - INFO - 
+[11:23:51]
+POST /chat/send
+User: 13
+Status: 200
+Duration: 12584ms
+2026-07-27 11:23:51,207 - app - ERROR - Error generating title for session 61b73b11-74d7-4d75-a225-6b7ce06f1d01: No module named 'backend.services.ollama_service'
+2026-07-27 12:03:08,050 - app - INFO - 
+[12:03:08]
+GET /
+User: Guest
+Status: 200
+Duration: 3ms
+2026-07-27 12:03:09,920 - app - INFO - 
+[12:03:09]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 12:24:42,937 - app - INFO - 
+[12:24:42]
+GET /
+User: 13
+Status: 200
+Duration: 22ms
+2026-07-27 12:24:43,137 - app - INFO - 
+[12:24:43]
+GET /favicon.ico
+User: 13
+Status: 404
+Duration: 3ms
+2026-07-27 12:24:47,939 - app - INFO - 
+[12:24:47]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 54ms
+2026-07-27 12:24:51,202 - app - INFO - 
+[12:24:51]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 46ms
+2026-07-27 12:24:51,231 - app - INFO - 
+[12:24:51]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 12:24:55,515 - app - INFO - 
+[12:24:55]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 12:25:04,516 - app - INFO - 
+[12:25:04]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 30ms
+2026-07-27 12:26:32,878 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:26:32,879 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:26:33,142 - app - INFO - 
+[12:26:33]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 278ms
+2026-07-27 12:26:40,533 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 12:26:40,534 - app - INFO - [IDE Submit] Code length: 451 characters. Language: c
+2026-07-27 12:26:40,534 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:26:40,539 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:26:40,540 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:26:40,616 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:26:40,616 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:26:40,622 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:26:40,622 - app - INFO - 
+[12:26:40]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 89ms
+2026-07-27 12:26:44,451 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 12:26:44,452 - app - INFO - [IDE Submit] Code length: 451 characters. Language: c
+2026-07-27 12:26:44,452 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:26:44,455 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:26:44,456 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:26:44,521 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:26:44,522 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:26:44,524 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:26:44,525 - app - INFO - 
+[12:26:44]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 73ms
+2026-07-27 12:26:50,214 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 12:26:50,215 - app - INFO - [IDE Submit] Code length: 451 characters. Language: c
+2026-07-27 12:26:50,215 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:26:50,219 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:26:50,220 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:26:50,283 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:26:50,284 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:26:50,286 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:26:50,286 - app - INFO - 
+[12:26:50]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 200
+Duration: 72ms
+2026-07-27 12:27:00,816 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:27:00,817 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:27:00,884 - app - INFO - 
+[12:27:00]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 70ms
+2026-07-27 12:27:18,978 - app - INFO - 
+[12:27:18]
+POST /chat/send
+User: 13
+Status: 200
+Duration: 14193ms
+2026-07-27 12:27:18,978 - app - ERROR - Error generating title for session 8276ec82-077e-44b3-a224-2555f72f4612: No module named 'backend.services.ollama_service'
+2026-07-27 12:29:29,812 - app - INFO - 
+[12:29:29]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 12:29:41,819 - app - INFO - 
+[12:29:41]
+GET /chat/
+User: 13
+Status: 200
+Duration: 27ms
+2026-07-27 12:29:44,921 - app - INFO - 
+[12:29:44]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 20ms
+2026-07-27 12:29:46,129 - app - INFO - 
+[12:29:46]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 12:29:46,184 - app - INFO - 
+[12:29:46]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 12:29:48,601 - app - INFO - 
+[12:29:48]
+POST /notifications/api/run-agent
+User: 13
+Status: 500
+Duration: 19ms
+2026-07-27 12:29:49,569 - app - INFO - 
+[12:29:49]
+POST /notifications/api/run-agent
+User: 13
+Status: 500
+Duration: 18ms
+2026-07-27 12:29:49,715 - app - INFO - 
+[12:29:49]
+POST /notifications/api/run-agent
+User: 13
+Status: 500
+Duration: 17ms
+2026-07-27 12:29:49,829 - app - INFO - 
+[12:29:49]
+POST /notifications/api/run-agent
+User: 13
+Status: 500
+Duration: 16ms
+2026-07-27 12:29:49,946 - app - INFO - 
+[12:29:49]
+POST /notifications/api/run-agent
+User: 13
+Status: 500
+Duration: 16ms
+2026-07-27 12:29:55,216 - app - INFO - 
+[12:29:55]
+GET /profile/
+User: 13
+Status: 200
+Duration: 44ms
+2026-07-27 12:30:00,524 - app - INFO - 
+[12:30:00]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:30:03,188 - app - INFO - 
+[12:30:03]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 12:30:03,244 - app - INFO - 
+[12:30:03]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 12:30:04,332 - app - INFO - 
+[12:30:04]
+POST /notifications/api/run-agent
+User: 13
+Status: 500
+Duration: 18ms
+2026-07-27 12:35:40,333 - app - INFO - 
+[12:35:40]
+GET /resume/builder
+User: 13
+Status: 200
+Duration: 25ms
+2026-07-27 12:35:40,368 - app - INFO - 
+[12:35:40]
+GET /resume/api/intelligence/versions
+User: 13
+Status: 200
+Duration: 1ms
+2026-07-27 12:35:41,173 - app - INFO - 
+[12:35:41]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 12:36:01,731 - app - INFO - 
+[12:36:01]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 12:36:40,662 - app - INFO - 
+[12:36:40]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 40ms
+2026-07-27 12:36:48,437 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:36:48,438 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:36:48,655 - app - INFO - 
+[12:36:48]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 222ms
+2026-07-27 12:39:16,379 - app - INFO - 
+[12:39:16]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 20ms
+2026-07-27 12:39:36,942 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 12:39:36,942 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:39:37,335 - app - INFO - 
+[12:39:37]
+POST /problem_solving/api/run/1
+User: 13
+Status: 200
+Duration: 399ms
+2026-07-27 12:40:18,118 - app - INFO - 
+[12:40:18]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 12:42:12,321 - app - INFO - 
+[12:42:12]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 43ms
+2026-07-27 12:42:16,483 - app - INFO - 
+[12:42:16]
+GET /resume/builder
+User: 13
+Status: 200
+Duration: 23ms
+2026-07-27 12:42:16,514 - app - INFO - 
+[12:42:16]
+GET /resume/api/intelligence/versions
+User: 13
+Status: 200
+Duration: 1ms
+2026-07-27 12:42:28,546 - app - INFO - 
+[12:42:28]
+GET /profile/
+User: 13
+Status: 200
+Duration: 40ms
+2026-07-27 12:43:23,601 - app - INFO - 
+[12:43:23]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 60ms
+2026-07-27 12:43:25,531 - app - INFO - 
+[12:43:25]
+GET /code-review
+User: 13
+Status: 200
+Duration: 8ms
+2026-07-27 12:43:27,467 - app - INFO - 
+[12:43:27]
+GET /sql-coach
+User: 13
+Status: 200
+Duration: 11ms
+2026-07-27 12:43:28,577 - app - INFO - 
+[12:43:28]
+GET /projects/
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 12:43:30,572 - app - INFO - 
+[12:43:30]
+GET /profile/
+User: 13
+Status: 200
+Duration: 36ms
+2026-07-27 12:44:02,565 - app - INFO - 
+[12:44:02]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 19ms
+2026-07-27 12:44:08,008 - app - INFO - 
+[12:44:08]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 19ms
+2026-07-27 12:44:20,974 - app - INFO - 
+[12:44:20]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 12:44:29,040 - app - INFO - 
+[12:44:29]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 12:46:11,670 - app - INFO - 
+[12:46:11]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 12:46:12,350 - app - INFO - 
+[12:46:12]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 14ms
+2026-07-27 12:46:12,509 - app - INFO - 
+[12:46:12]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 12:46:12,644 - app - INFO - 
+[12:46:12]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 12:46:16,024 - app - INFO - 
+[12:46:16]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 12:46:22,285 - app - INFO - 
+[12:46:22]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 12:46:24,937 - app - INFO - 
+[12:46:24]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 29ms
+2026-07-27 12:47:24,174 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 12:47:24,178 - app - INFO - [IDE Submit] Code length: 406 characters. Language: c
+2026-07-27 12:47:24,178 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:47:24,190 - app - INFO - [IDE Submit] Test run completed. Status: Accepted
+2026-07-27 12:47:24,190 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:47:24,195 - app - INFO - [IDE Submit] Invoking AI Code Review...
+2026-07-27 12:47:28,939 - app - INFO - 
+[12:47:28]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 12:47:39,047 - app - INFO - 
+[12:47:39]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 12:47:39,987 - app - INFO - 
+[12:47:39]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:40,420 - app - INFO - 
+[12:47:40]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:40,586 - app - INFO - 
+[12:47:40]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:40,721 - app - INFO - 
+[12:47:40]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:45,643 - app - INFO - [IDE Submit] AI review completed successfully.
+2026-07-27 12:47:45,644 - app - INFO - 
+[12:47:45]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 200
+Duration: 21470ms
+2026-07-27 12:47:52,798 - app - INFO - 
+[12:47:52]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 12:47:53,222 - app - INFO - 
+[12:47:53]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:53,357 - app - INFO - 
+[12:47:53]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:53,490 - app - INFO - 
+[12:47:53]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:47:53,639 - app - INFO - 
+[12:47:53]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 12:47:58,106 - app - INFO - 
+[12:47:58]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 12ms
+2026-07-27 12:48:07,546 - app - INFO - 
+[12:48:07]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 12:48:08,204 - app - INFO - 
+[12:48:08]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 12:48:14,105 - app - INFO - 
+[12:48:14]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 12:48:17,026 - app - INFO - 
+[12:48:17]
+POST /problem_solving/api/run/2
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 12:52:18,870 - app - INFO - 
+[12:52:18]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 32ms
+2026-07-27 12:52:23,925 - app - INFO - 
+[12:52:23]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 23ms
+2026-07-27 12:52:25,700 - app - INFO - 
+[12:52:25]
+GET /problem_solving/problem/3
+User: 13
+Status: 200
+Duration: 11ms
+2026-07-27 12:54:11,197 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:11,198 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:11,555 - app - INFO - 
+[12:54:11]
+POST /problem_solving/api/run/3
+User: 13
+Status: 200
+Duration: 370ms
+2026-07-27 12:54:15,636 - app - INFO - [IDE Submit] Request received for Problem ID: 3
+2026-07-27 12:54:15,637 - app - INFO - [IDE Submit] Code length: 534 characters. Language: c
+2026-07-27 12:54:15,637 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:54:15,640 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:15,641 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:15,728 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:54:15,729 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:54:15,732 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:54:15,732 - app - INFO - 
+[12:54:15]
+POST /problem_solving/api/submit/3
+User: 13
+Status: 200
+Duration: 95ms
+2026-07-27 12:54:17,718 - app - INFO - [IDE Submit] Request received for Problem ID: 3
+2026-07-27 12:54:17,719 - app - INFO - [IDE Submit] Code length: 534 characters. Language: c
+2026-07-27 12:54:17,719 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:54:17,721 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:17,722 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:17,820 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:54:17,820 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:54:17,821 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:54:17,822 - app - INFO - 
+[12:54:17]
+POST /problem_solving/api/submit/3
+User: 13
+Status: 200
+Duration: 103ms
+2026-07-27 12:54:17,899 - app - INFO - [IDE Submit] Request received for Problem ID: 3
+2026-07-27 12:54:17,900 - app - INFO - [IDE Submit] Code length: 534 characters. Language: c
+2026-07-27 12:54:17,900 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:54:17,902 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:17,902 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:17,969 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:54:17,970 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:54:17,971 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:54:17,971 - app - INFO - 
+[12:54:17]
+POST /problem_solving/api/submit/3
+User: 13
+Status: 200
+Duration: 71ms
+2026-07-27 12:54:18,066 - app - INFO - [IDE Submit] Request received for Problem ID: 3
+2026-07-27 12:54:18,066 - app - INFO - [IDE Submit] Code length: 534 characters. Language: c
+2026-07-27 12:54:18,066 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:54:18,069 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:18,069 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:18,140 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:54:18,140 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:54:18,142 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:54:18,142 - app - INFO - 
+[12:54:18]
+POST /problem_solving/api/submit/3
+User: 13
+Status: 200
+Duration: 76ms
+2026-07-27 12:54:18,182 - app - INFO - [IDE Submit] Request received for Problem ID: 3
+2026-07-27 12:54:18,182 - app - INFO - [IDE Submit] Code length: 534 characters. Language: c
+2026-07-27 12:54:18,183 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 12:54:18,184 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:18,184 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:18,247 - app - INFO - [IDE Submit] Test run completed. Status: Compilation Error
+2026-07-27 12:54:18,247 - app - INFO - [IDE Submit] Logging submission to DB...
+2026-07-27 12:54:18,248 - app - INFO - [IDE Submit] Skipping AI review because status is Compilation Error.
+2026-07-27 12:54:18,249 - app - INFO - 
+[12:54:18]
+POST /problem_solving/api/submit/3
+User: 13
+Status: 200
+Duration: 66ms
+2026-07-27 12:54:21,638 - app - INFO - [Judge] Evaluating problem 3 in c with 3 cases.
+2026-07-27 12:54:21,639 - app - INFO - [Judge] Compiling c code...
+2026-07-27 12:54:21,733 - app - INFO - 
+[12:54:21]
+POST /problem_solving/api/run/3
+User: 13
+Status: 200
+Duration: 97ms
+2026-07-27 13:04:30,986 - app - INFO - 
+[13:04:30]
+GET /
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 13:04:34,869 - app - INFO - 
+[13:04:34]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 45ms
+2026-07-27 13:04:38,720 - app - INFO - 
+[13:04:38]
+GET /notifications/
+User: 13
+Status: 200
+Duration: 45ms
+2026-07-27 13:04:38,778 - app - INFO - 
+[13:04:38]
+GET /notifications/api/insights
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 13:04:40,209 - app - INFO - 
+[13:04:40]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 13:04:42,221 - app - INFO - 
+[13:04:42]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 26ms
+2026-07-27 13:05:23,255 - app - INFO - 
+[13:05:23]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 13:05:26,812 - app - INFO - 
+[13:05:26]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 20ms
+2026-07-27 13:12:26,660 - app - INFO - 
+[13:12:26]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 24ms
+2026-07-27 13:12:27,482 - app - INFO - 
+[13:12:27]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 13:12:27,630 - app - INFO - 
+[13:12:27]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 13:12:33,157 - app - INFO - 
+[13:12:33]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 13:12:36,137 - app - INFO - 
+[13:12:36]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 21ms
+2026-07-27 13:13:43,593 - app - INFO - 
+[13:13:43]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 26ms
+2026-07-27 13:14:31,845 - app - INFO - 
+[13:14:31]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 13:14:33,990 - app - INFO - 
+[13:14:33]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 13:15:26,649 - app - INFO - 
+[13:15:26]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 13:15:31,314 - app - INFO - 
+[13:15:31]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 19ms
+2026-07-27 13:15:44,093 - app - INFO - 
+[13:15:44]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 31ms
+2026-07-27 13:15:59,939 - app - INFO - 
+[13:15:59]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 13:16:17,971 - app - INFO - 
+[13:16:17]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 13:16:18,597 - app - INFO - 
+[13:16:18]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 13:16:18,727 - app - INFO - 
+[13:16:18]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 13:16:18,844 - app - INFO - 
+[13:16:18]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 13:16:18,994 - app - INFO - 
+[13:16:18]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 3ms
+2026-07-27 13:16:22,359 - app - INFO - 
+[13:16:22]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 15ms
+2026-07-27 13:16:25,184 - app - INFO - 
+[13:16:25]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 6ms
+2026-07-27 13:16:27,676 - app - INFO - 
+[13:16:27]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 32ms
+2026-07-27 13:17:07,287 - app - INFO - 
+[13:17:07]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 37ms
+2026-07-27 13:17:07,411 - app - INFO - 
+[13:17:07]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 13:17:07,582 - app - INFO - 
+[13:17:07]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 13:17:07,717 - app - INFO - 
+[13:17:07]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 13:17:13,378 - app - INFO - 
+[13:17:13]
+POST /problem_solving/api/unlock_hint/1
+User: 13
+Status: 200
+Duration: 5ms
+2026-07-27 13:17:15,094 - app - INFO - 
+[13:17:15]
+POST /problem_solving/api/unlock_hint/1
+User: 13
+Status: 200
+Duration: 4ms
+2026-07-27 13:17:37,749 - app - INFO - 
+[13:17:37]
+POST /chat/send
+User: 13
+Status: 200
+Duration: 16573ms
+2026-07-27 13:17:37,749 - app - ERROR - Error generating title for session d9255111-f018-4246-85e2-37e780555b13: No module named 'backend.services.ollama_service'
+2026-07-27 13:18:03,053 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 13:18:03,055 - app - INFO - [IDE Submit] Code length: 68 characters. Language: python
+2026-07-27 13:18:03,055 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:18:03,071 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 13:18:03,074 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:18:03,147 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:18:03,147 - app - INFO - 
+[13:18:03]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 94ms
+2026-07-27 13:18:03,149 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 13:18:03,150 - app - INFO - [IDE Submit] Code length: 68 characters. Language: python
+2026-07-27 13:18:03,150 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:18:03,151 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 13:18:03,151 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:18:03,178 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:18:03,178 - app - INFO - 
+[13:18:03]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 28ms
+2026-07-27 13:18:03,180 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 13:18:03,180 - app - INFO - [IDE Submit] Code length: 68 characters. Language: python
+2026-07-27 13:18:03,180 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:18:03,182 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 13:18:03,182 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:18:03,208 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:18:03,209 - app - INFO - 
+[13:18:03]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 28ms
+2026-07-27 13:18:03,210 - app - INFO - [IDE Submit] Request received for Problem ID: 1
+2026-07-27 13:18:03,211 - app - INFO - [IDE Submit] Code length: 68 characters. Language: python
+2026-07-27 13:18:03,211 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:18:03,212 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 13:18:03,212 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:18:03,239 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:18:03,239 - app - INFO - 
+[13:18:03]
+POST /problem_solving/api/submit/1
+User: 13
+Status: 500
+Duration: 28ms
+2026-07-27 13:18:13,766 - app - INFO - 
+[13:18:13]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 13:18:25,681 - app - INFO - 
+[13:18:25]
+GET /problem_solving/dashboard
+User: 13
+Status: 200
+Duration: 28ms
+2026-07-27 13:18:31,275 - app - INFO - 
+[13:18:31]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 13:19:18,871 - app - INFO - 
+[13:19:18]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 18ms
+2026-07-27 13:19:25,779 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 13:19:25,781 - app - INFO - [IDE Submit] Code length: 183 characters. Language: python
+2026-07-27 13:19:25,781 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:19:25,787 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 13:19:25,788 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:19:25,872 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:19:25,873 - app - INFO - 
+[13:19:25]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 500
+Duration: 93ms
+2026-07-27 13:19:25,875 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 13:19:25,875 - app - INFO - [IDE Submit] Code length: 183 characters. Language: python
+2026-07-27 13:19:25,875 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:19:25,877 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 13:19:25,878 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:19:25,906 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:19:25,906 - app - INFO - 
+[13:19:25]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 500
+Duration: 31ms
+2026-07-27 13:19:25,908 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 13:19:25,909 - app - INFO - [IDE Submit] Code length: 183 characters. Language: python
+2026-07-27 13:19:25,909 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:19:25,911 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 13:19:25,911 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:19:25,935 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:19:25,935 - app - INFO - 
+[13:19:25]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 500
+Duration: 26ms
+2026-07-27 13:19:25,938 - app - INFO - [IDE Submit] Request received for Problem ID: 2
+2026-07-27 13:19:25,938 - app - INFO - [IDE Submit] Code length: 183 characters. Language: python
+2026-07-27 13:19:25,938 - app - INFO - [IDE Submit] Executing tests...
+2026-07-27 13:19:25,940 - app - INFO - [Judge] Evaluating problem 2 in python with 3 cases.
+2026-07-27 13:19:25,940 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:19:25,963 - app - ERROR - [IDE Submit] Internal error: 'status'
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/problem_solving.py", line 116, in submit_code
+    app_logger.info(f"[IDE Submit] Test run completed. Status: {result['status']}")
+                                                                ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+2026-07-27 13:19:25,964 - app - INFO - 
+[13:19:25]
+POST /problem_solving/api/submit/2
+User: 13
+Status: 500
+Duration: 25ms
+2026-07-27 13:20:31,054 - app - INFO - 
+[13:20:31]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 18ms
+2026-07-27 13:20:37,136 - app - INFO - 
+[13:20:37]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 13ms
+2026-07-27 13:27:10,526 - app - INFO - [Judge] Evaluating problem 1 in python with 3 cases.
+2026-07-27 13:27:10,527 - app - INFO - [Judge] Executing managed loop for python3
+2026-07-27 13:27:10,553 - app - INFO - [Judge] Evaluating problem 1 in java with 3 cases.
+2026-07-27 13:27:10,553 - app - INFO - [Judge] User function loaded for java
+2026-07-27 13:27:10,554 - app - INFO - [Judge] Driver generated for java
+2026-07-27 13:27:10,555 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpyw5i16h3/Main.java
+2026-07-27 13:27:10,555 - app - INFO - [Judge] Compilation started for java...
+2026-07-27 13:27:10,973 - app - INFO - [Judge] Compilation finished for java.
+2026-07-27 13:27:10,973 - app - INFO - [Judge] Execution started for java...
+2026-07-27 13:27:11,181 - app - INFO - [Judge] Execution finished for java.
+2026-07-27 13:27:11,181 - app - INFO - [Judge] Judge completed.
+2026-07-27 13:27:11,182 - app - INFO - [Judge] Evaluating problem 1 in c with 3 cases.
+2026-07-27 13:27:11,182 - app - INFO - [Judge] User function loaded for c
+2026-07-27 13:27:11,183 - app - INFO - [Judge] Driver generated for c
+2026-07-27 13:27:11,183 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmpg09pyh7u/merged.c
+2026-07-27 13:27:11,183 - app - INFO - [Judge] Compilation started for c...
+2026-07-27 13:27:11,545 - app - INFO - [Judge] Compilation finished for c.
+2026-07-27 13:27:11,545 - app - INFO - [Judge] Execution started for c...
+2026-07-27 13:27:12,126 - app - INFO - [Judge] Execution finished for c.
+2026-07-27 13:27:12,126 - app - INFO - [Judge] Judge completed.
+2026-07-27 13:27:12,127 - app - INFO - [Judge] Evaluating problem 1 in javascript with 3 cases.
+2026-07-27 13:27:12,127 - app - INFO - [Judge] Executing managed loop for node
+2026-07-27 13:27:12,298 - app - INFO - [Judge] Evaluating problem 1 in cpp with 3 cases.
+2026-07-27 13:27:12,298 - app - INFO - [Judge] User function loaded for cpp
+2026-07-27 13:27:12,299 - app - INFO - [Judge] Driver generated for cpp
+2026-07-27 13:27:12,299 - app - INFO - [Judge] Merged file created at /var/folders/rv/xp4218hj4cbfpt0lwgd8fmy40000gn/T/tmp59fa1haw/merged.cpp
+2026-07-27 13:27:12,299 - app - INFO - [Judge] Compilation started for cpp...
+2026-07-27 13:27:12,766 - app - INFO - [Judge] Compilation finished for cpp.
+2026-07-27 13:27:12,766 - app - INFO - [Judge] Execution started for cpp...
+2026-07-27 13:27:13,246 - app - INFO - [Judge] Execution finished for cpp.
+2026-07-27 13:27:13,246 - app - INFO - [Judge] Judge completed.
+2026-07-27 13:33:15,015 - app - INFO - 
+[13:33:15]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 44ms
+2026-07-27 13:33:15,730 - app - INFO - 
+[13:33:15]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 8ms
+2026-07-27 13:33:15,859 - app - INFO - 
+[13:33:15]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 10ms
+2026-07-27 13:33:15,991 - app - INFO - 
+[13:33:15]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 8ms
+2026-07-27 13:33:18,023 - app - INFO - 
+[13:33:18]
+GET /problem_solving/problem/2
+User: 13
+Status: 200
+Duration: 16ms
+2026-07-27 13:33:21,810 - app - INFO - 
+[13:33:21]
+GET /
+User: 13
+Status: 200
+Duration: 9ms
+2026-07-27 13:33:24,540 - app - INFO - 
+[13:33:24]
+GET /dashboard
+User: 13
+Status: 200
+Duration: 53ms
+2026-07-27 13:33:26,482 - app - INFO - 
+[13:33:26]
+GET /code-review
+User: 13
+Status: 200
+Duration: 7ms
+2026-07-27 13:33:28,476 - app - INFO - 
+[13:33:28]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 18ms
+2026-07-27 13:35:27,998 - app - INFO - 
+[13:35:27]
+GET /problem_solving/
+User: 13
+Status: 200
+Duration: 8ms
+2026-07-27 13:35:32,824 - app - INFO - 
+[13:35:32]
+GET /problem_solving/problem/1
+User: 13
+Status: 200
+Duration: 16ms

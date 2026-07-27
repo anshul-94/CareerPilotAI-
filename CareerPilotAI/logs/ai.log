@@ -34,3 +34,266 @@
 2026-07-27 09:34:17,329 - ai - WARNING - Insights generation failed: name 'Config' is not defined
 2026-07-27 09:38:36,297 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-27 09:38:36,564 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:26:30,115 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:26:30,386 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:27:24,244 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:27:24,502 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:29:41,821 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:29:50,239 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:30:16,116 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:30:16,374 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:31:19,250 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:31:45,257 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:31:45,586 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:31:54,968 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:31:59,316 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:32:03,642 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:32:41,566 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:34:18,471 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:35:07,587 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:35:07,856 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:35:28,513 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:35:28,823 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:43:12,672 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:43:13,086 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:44:13,561 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:44:13,840 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:46:10,208 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:47:25,362 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:47:25,679 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:51:08,040 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:51:08,319 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:51:32,454 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:51:32,841 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:52:05,997 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 3.37 sec
+Success/Failed: Success
+================================
+2026-07-27 10:52:13,993 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 7.99 sec
+Success/Failed: Success
+================================
+2026-07-27 10:57:30,408 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:57:30,720 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 10:59:03,081 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:02:55,060 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:02:55,494 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:04:25,935 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:04:29,707 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:04:48,716 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : You are an expert AI Coding Men...
+Prompt Tokens : N/A
+Execution Time: 22.78 sec
+Success/Failed: Success
+================================
+2026-07-27 11:05:04,385 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : You are an expert AI Coding Men...
+Prompt Tokens : N/A
+Execution Time: 34.68 sec
+Success/Failed: Success
+================================
+2026-07-27 11:06:27,218 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:08:26,130 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:08:26,449 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:09:13,500 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:09:30,089 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : You are an expert AI Coding Men...
+Prompt Tokens : N/A
+Execution Time: 16.59 sec
+Success/Failed: Success
+================================
+2026-07-27 11:10:46,415 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:11:04,943 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : You are an expert AI Coding Men...
+Prompt Tokens : N/A
+Execution Time: 18.52 sec
+Success/Failed: Success
+================================
+2026-07-27 11:11:36,561 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:11:52,590 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : You are an expert AI Coding Men...
+Prompt Tokens : N/A
+Execution Time: 16.03 sec
+Success/Failed: Success
+================================
+2026-07-27 11:12:08,570 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 3.86 sec
+Success/Failed: Success
+================================
+2026-07-27 11:12:16,968 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 8.39 sec
+Success/Failed: Success
+================================
+2026-07-27 11:20:14,129 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:20:14,399 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 11:21:03,965 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 29.95 sec
+Success/Failed: Success
+================================
+2026-07-27 11:21:12,515 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Evaluate this resume for a  position:  {...
+Prompt Tokens : N/A
+Execution Time: 8.55 sec
+Success/Failed: Success
+================================
+2026-07-27 11:23:41,748 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 3.06 sec
+Success/Failed: Success
+================================
+2026-07-27 11:23:51,186 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 9.43 sec
+Success/Failed: Success
+================================
+2026-07-27 12:24:28,371 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:24:28,669 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:27:11,694 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 6.89 sec
+Success/Failed: Success
+================================
+2026-07-27 12:27:18,962 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 7.25 sec
+Success/Failed: Success
+================================
+2026-07-27 12:36:34,703 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:36:34,938 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:38:40,214 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:38:40,512 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:42:38,302 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:42:46,634 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:43:03,083 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:46:20,321 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:46:20,595 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:47:24,196 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:47:45,630 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : You are an expert AI Coding Men...
+Prompt Tokens : N/A
+Execution Time: 21.43 sec
+Success/Failed: Success
+================================
+2026-07-27 12:51:29,147 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:51:38,599 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:52:16,800 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:52:17,050 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:55:25,581 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 12:55:43,033 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:02:25,108 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:02:38,485 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:02:53,896 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:03:04,252 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:03:33,809 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:03:43,172 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:07:06,837 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:08:18,647 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:08:50,235 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:09:03,670 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:09:27,166 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:09:48,692 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:10:28,316 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:13:41,471 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:13:41,728 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:17:28,724 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 7.52 sec
+Success/Failed: Success
+================================
+2026-07-27 13:17:37,723 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 13
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : As my coding mentor on the problem "Two...
+Prompt Tokens : N/A
+Execution Time: 8.98 sec
+Success/Failed: Success
+================================
+2026-07-27 13:21:53,728 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:22:09,197 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:22:16,640 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 13:23:01,317 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b

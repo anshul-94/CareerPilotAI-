@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/problem_solving.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 100px; padding-bottom: 50px;">
+    
+    <!-- Top Header -->
+    <div class="dashboard-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+            <h1><i class="fa-solid fa-code text-gradient" style="margin-right: 0.5rem;"></i> AI Problem Solving</h1>
+            <p>Practice coding interviews with AI-powered personalized mentoring.</p>
+        </div>
+        <a href="{{ url_for('problem_solving.dashboard') }}" class="btn-primary-glow">
+            <i class="fa-solid fa-chart-pie"></i> View Analytics
+        </a>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="stat-title">Problems Solved</span>
+                <div class="stat-icon" style="background: rgba(59,165,92,.1); color: var(--success);"><i class="fa-solid fa-check-circle"></i></div>
+            </div>
+            <div class="stat-value">24<span style="font-size: 1rem; color: var(--text-tertiary); font-weight: 500;">/150</span></div>
+        </div>
+        <div class="stat-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="stat-title">Acceptance %</span>
+                <div class="stat-icon" style="background: rgba(93,169,233,.1); color: var(--info);"><i class="fa-solid fa-bullseye"></i></div>
+            </div>
+            <div class="stat-value">68.5%</div>
+        </div>
+        <div class="stat-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="stat-title">Current Streak</span>
+                <div class="stat-icon" style="background: rgba(217,164,65,.1); color: var(--accent);"><i class="fa-solid fa-fire"></i></div>
+            </div>
+            <div class="stat-value">7 <span style="font-size: 1rem; color: var(--text-tertiary); font-weight: 500;">Days</span></div>
+        </div>
+        <div class="stat-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="stat-title">Current Rating</span>
+                <div class="stat-icon" style="background: rgba(168,85,247,.1); color: #c084fc;"><i class="fa-solid fa-trophy"></i></div>
+            </div>
+            <div class="stat-value">1450</div>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <form method="GET" action="{{ url_for('problem_solving.index') }}" style="display: flex; gap: 1rem; width: 100%; flex-wrap: wrap; align-items: center;">
+            <div style="position: relative; flex-grow: 1; min-width: 250px;">
+                <i class="fa-solid fa-search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-tertiary);"></i>
+                <input type="text" name="search" class="filter-input" style="padding-left: 2.5rem; width: 100%;" placeholder="Search problems...">
+            </div>
+            
+            <select name="difficulty" onchange="this.form.submit()" class="filter-select">
+                <option value="">All Difficulties</option>
+                <option value="Easy" {% if current_difficulty == 'Easy' %}selected{% endif %}>Easy</option>
+                <option value="Medium" {% if current_difficulty == 'Medium' %}selected{% endif %}>Medium</option>
+                <option value="Hard" {% if current_difficulty == 'Hard' %}selected{% endif %}>Hard</option>
+            </select>
+            
+            <select name="topic" onchange="this.form.submit()" class="filter-select">
+                <option value="">All Topics</option>
+                <option value="Arrays" {% if current_topic == 'Arrays' %}selected{% endif %}>Arrays</option>
+                <option value="Linked List" {% if current_topic == 'Linked List' %}selected{% endif %}>Linked List</option>
+                <option value="Sliding Window" {% if current_topic == 'Sliding Window' %}selected{% endif %}>Sliding Window</option>
+            </select>
+
+            <select name="company" onchange="this.form.submit()" class="filter-select">
+                <option value="">All Companies</option>
+                <option value="Google" {% if current_company == 'Google' %}selected{% endif %}>Google</option>
+                <option value="Amazon" {% if current_company == 'Amazon' %}selected{% endif %}>Amazon</option>
+                <option value="Meta" {% if current_company == 'Meta' %}selected{% endif %}>Meta</option>
+                <option value="Microsoft" {% if current_company == 'Microsoft' %}selected{% endif %}>Microsoft</option>
+            </select>
+            
+            {% if current_difficulty or current_topic or current_company %}
+                <a href="{{ url_for('problem_solving.index') }}" class="btn-premium"><i class="fa-solid fa-rotate-right"></i> Reset</a>
+            {% endif %}
+        </form>
+    </div>
+
+    <!-- Problems List -->
+    <div class="problem-grid">
+        {% if problems %}
+            {% for problem in problems %}
+                <a href="{{ url_for('problem_solving.problem_detail', problem_id=problem.id) }}" class="problem-card">
+                    <div class="pc-left">
+                        <div class="pc-status {% if loop.index == 1 %}solved{% endif %}">
+                            {% if loop.index == 1 %}
+                                <i class="fa-solid fa-check-circle"></i>
+                            {% else %}
+                                <i class="fa-regular fa-circle"></i>
+                            {% endif %}
+                        </div>
+                        <div class="pc-info">
+                            <h4>{{ problem.title }}</h4>
+                            <div class="pc-meta">
+                                <span class="badge-difficulty {{ problem.difficulty.lower() }}">{{ problem.difficulty }}</span>
+                                <span><i class="fa-solid fa-users" style="color:var(--text-muted); margin-right:4px;"></i> {{ (60 + problem.id * 5) }}%</span>
+                                <span><i class="fa-solid fa-clock" style="color:var(--text-muted); margin-right:4px;"></i> {{ problem.estimated_time }} mins</span>
+                                <span class="topic-chip">{{ problem.topic }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pc-right">
+                        {% if loop.index == 2 %}
+                            <span style="font-size: 0.75rem; background: linear-gradient(90deg, #8b5cf6, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; display:flex; align-items:center; gap:0.3rem;"><i class="fa-solid fa-sparkles"></i> Recommended</span>
+                        {% endif %}
+                        <button class="btn-premium" style="background:var(--bg-secondary);"><i class="fa-solid fa-play"></i> Solve</button>
+                    </div>
+                </a>
+            {% endfor %}
+        {% else %}
+            <div style="text-align: center; padding: 5rem; background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border);">
+                <span style="font-size: 3rem; color: var(--text-muted);"><i class="fa-solid fa-search"></i></span>
+                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1.1rem;">No coding problems matching the filter criteria were found.</p>
+                <a href="{{ url_for('problem_solving.index') }}" class="btn-premium" style="margin-top: 1rem;">Clear Filters</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

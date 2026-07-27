@@ -30,10 +30,54 @@ Rows:-1
 
 [✓] chat_sessions
 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+
+[✓] problem_solving
+
 Database Ready.
 
 Server Ready.
 Server Ready.
 =========================
-/opt/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-r840ikt3'}
+/opt/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-s_3i6y09'}
   warnings.warn(
