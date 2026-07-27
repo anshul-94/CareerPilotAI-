@@ -21,3 +21,14 @@
 2026-07-26 23:27:55,885 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-26 23:32:47,490 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-26 23:32:47,791 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 23:47:42,762 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-26 23:47:43,033 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 00:15:29,620 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 00:15:29,895 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 00:56:22,370 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 00:56:22,627 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 00:56:56,452 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 00:56:56,756 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 09:32:35,100 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 09:32:35,399 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-27 09:34:17,329 - ai - WARNING - Insights generation failed: name 'Config' is not defined

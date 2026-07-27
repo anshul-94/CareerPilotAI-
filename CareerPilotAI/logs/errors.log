@@ -86,3 +86,79 @@ Traceback (most recent call last):
 TypeError: JobService.get_user_jobs() got an unexpected keyword argument 'limit'
 
 =======================================
+2026-07-26 23:51:21,877 - error - ERROR - 
+================ ERROR ================
+Route       : /login
+Function    : auth.login
+User        : 7
+Reason      : 'dict' object has no attribute 'id'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/auth.py", line 31, in login
+    AutonomousAgent.on_login(user.id)
+                             ^^^^^^^
+AttributeError: 'dict' object has no attribute 'id'
+
+=======================================
+2026-07-26 23:55:31,096 - error - ERROR - 
+================ ERROR ================
+Route       : /login
+Function    : auth.login
+User        : 12
+Reason      : 'dict' object has no attribute 'id'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/auth.py", line 31, in login
+    AutonomousAgent.on_login(user.id)
+                             ^^^^^^^
+AttributeError: 'dict' object has no attribute 'id'
+
+=======================================
+2026-07-27 09:33:51,952 - error - ERROR - 
+================ ERROR ================
+Route       : /login
+Function    : auth.login
+User        : 12
+Reason      : 'dict' object has no attribute 'id'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/auth.py", line 31, in login
+    AutonomousAgent.on_login(user.id)
+                             ^^^^^^^
+AttributeError: 'dict' object has no attribute 'id'
+
+=======================================
+2026-07-27 09:35:50,782 - error - ERROR - 
+================ ERROR ================
+Route       : /login
+Function    : auth.login
+User        : 12
+Reason      : 'dict' object has no attribute 'id'
+Stack Trace :
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/auth.py", line 31, in login
+    AutonomousAgent.on_login(user.id)
+                             ^^^^^^^
+AttributeError: 'dict' object has no attribute 'id'
+
+=======================================

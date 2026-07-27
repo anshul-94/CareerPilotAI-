@@ -1322,3 +1322,1012 @@ SELECT ONE
 resume_analysis
 Rows:0
 1 ms
+2026-07-26 23:47:42,981 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-07-26 23:48:57,282 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+10 ms
+2026-07-26 23:48:57,284 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-26 23:48:57,287 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+2 ms
+2026-07-26 23:48:57,288 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-07-26 23:48:57,290 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+1 ms
+2026-07-26 23:48:57,291 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+0 ms
+2026-07-26 23:48:57,294 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+2 ms
+2026-07-26 23:48:57,295 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-26 23:48:57,297 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-07-26 23:48:57,298 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-26 23:48:57,300 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:48:57,305 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-07-26 23:50:41,471 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+5 ms
+2026-07-26 23:50:41,475 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-07-26 23:50:41,479 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+4 ms
+2026-07-26 23:50:41,482 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-26 23:50:41,485 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+1 ms
+2026-07-26 23:50:41,489 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+2 ms
+2026-07-26 23:50:41,491 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-26 23:50:41,493 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-26 23:50:41,497 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+3 ms
+2026-07-26 23:50:41,501 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-07-26 23:50:41,502 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-07-26 23:50:41,503 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-26 23:50:58,444 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+2 ms
+2026-07-26 23:50:58,447 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+2 ms
+2026-07-26 23:51:08,041 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+3 ms
+2026-07-26 23:51:08,044 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-07-26 23:51:15,358 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+2 ms
+2026-07-26 23:51:15,360 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-07-26 23:51:21,590 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+3 ms
+2026-07-26 23:51:21,593 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:51:21,869 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+1 ms
+2026-07-26 23:51:28,915 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:51:28,918 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-26 23:51:28,922 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+3 ms
+2026-07-26 23:51:28,924 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-26 23:51:28,927 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:5
+1 ms
+2026-07-26 23:51:28,930 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+2 ms
+2026-07-26 23:51:28,933 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-26 23:51:28,935 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-26 23:51:28,937 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-07-26 23:51:28,938 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-26 23:51:28,940 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:51:28,943 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-07-26 23:51:34,058 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:51:34,061 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+1 ms
+2026-07-26 23:51:34,070 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+8 ms
+2026-07-26 23:51:34,072 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:51:34,074 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-26 23:52:49,797 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+5 ms
+2026-07-26 23:52:49,800 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-07-26 23:54:42,517 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+5 ms
+2026-07-26 23:54:42,520 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-07-26 23:55:30,830 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+6 ms
+2026-07-26 23:55:31,093 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+1 ms
+2026-07-26 23:55:35,819 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:55:35,822 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-26 23:55:35,827 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+4 ms
+2026-07-26 23:55:35,829 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-26 23:55:35,831 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+1 ms
+2026-07-26 23:55:35,833 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+1 ms
+2026-07-26 23:55:35,836 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+2 ms
+2026-07-26 23:55:35,838 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-26 23:55:35,840 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-07-26 23:55:35,842 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-26 23:55:35,844 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-26 23:55:35,848 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+3 ms
+2026-07-27 00:15:29,843 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+2 ms
+2026-07-27 00:56:22,578 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-07-27 00:56:56,701 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-07-27 09:32:35,345 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-07-27 09:33:51,678 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+11 ms
+2026-07-27 09:33:51,945 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+1 ms
+2026-07-27 09:33:57,248 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-07-27 09:33:57,251 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 09:33:57,256 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+4 ms
+2026-07-27 09:33:57,259 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-07-27 09:33:57,261 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+1 ms
+2026-07-27 09:33:57,263 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+1 ms
+2026-07-27 09:33:57,267 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-27 09:33:57,269 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-27 09:33:57,271 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-07-27 09:33:57,273 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-27 09:33:57,276 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-07-27 09:33:57,278 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 09:33:58,433 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+4 ms
+2026-07-27 09:33:58,433 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:1
+4 ms
+2026-07-27 09:33:58,438 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+3 ms
+2026-07-27 09:33:58,439 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+3 ms
+2026-07-27 09:33:58,455 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:50
+4 ms
+2026-07-27 09:33:58,458 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-07-27 09:33:59,149 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+2 ms
+2026-07-27 09:33:59,152 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+1 ms
+2026-07-27 09:33:59,157 - db - INFO - 
+[DB]
+SELECT ONE
+agent_profiles
+Rows:1
+3 ms
+2026-07-27 09:33:59,160 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-07-27 09:33:59,303 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+1 ms
+2026-07-27 09:33:59,305 - db - INFO - 
+[DB]
+SELECT ONE
+agent_profiles
+Rows:1
+2 ms
+2026-07-27 09:33:59,306 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+3 ms
+2026-07-27 09:33:59,307 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+0 ms
+2026-07-27 09:33:59,308 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+1 ms
+2026-07-27 09:33:59,308 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+0 ms
+2026-07-27 09:33:59,310 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:10
+2 ms
+2026-07-27 09:33:59,311 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+0 ms
+2026-07-27 09:34:00,468 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+6 ms
+2026-07-27 09:34:00,472 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+2 ms
+2026-07-27 09:34:00,478 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:10
+3 ms
+2026-07-27 09:34:00,479 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+1 ms
+2026-07-27 09:34:03,919 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+22 ms
+2026-07-27 09:34:04,782 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+192 ms
+2026-07-27 09:34:04,786 - db - INFO - 
+[DB]
+SELECT
+chat_sessions cs
+            LEFT JOIN chat_history ch ON cs.session_id = ch.session_id
+Rows:1
+7 ms
+2026-07-27 09:34:04,789 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+5 ms
+2026-07-27 09:34:04,830 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+28 ms
+2026-07-27 09:34:04,832 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-07-27 09:34:04,835 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+0 ms
+2026-07-27 09:34:04,837 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+0 ms
+2026-07-27 09:34:04,840 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-07-27 09:34:04,843 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-07-27 09:34:04,844 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-07-27 09:34:04,848 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-07-27 09:34:04,850 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-07-27 09:34:04,852 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-27 09:34:11,525 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-07-27 09:34:11,529 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-27 09:34:11,531 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+1 ms
+2026-07-27 09:34:11,532 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,533 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+0 ms
+2026-07-27 09:34:11,535 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+1 ms
+2026-07-27 09:34:11,536 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-07-27 09:34:11,539 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-27 09:34:11,540 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,542 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-07-27 09:34:11,543 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-07-27 09:34:11,544 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-27 09:34:11,612 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-07-27 09:34:11,613 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,616 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-07-27 09:34:11,617 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,619 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-07-27 09:34:11,627 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+5 ms
+2026-07-27 09:34:11,630 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-07-27 09:34:11,632 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,633 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,637 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-07-27 09:34:11,643 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-07-27 09:34:11,645 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,647 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,649 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-07-27 09:34:11,651 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,654 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-07-27 09:34:11,665 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,666 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:11,668 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-07-27 09:34:37,569 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+11 ms
+2026-07-27 09:34:37,573 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-07-27 09:34:37,577 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+3 ms
+2026-07-27 09:34:37,579 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-07-27 09:34:37,580 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+1 ms
+2026-07-27 09:34:37,581 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+0 ms
+2026-07-27 09:34:37,583 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-07-27 09:34:37,584 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-07-27 09:34:37,586 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-07-27 09:34:37,594 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+7 ms
+2026-07-27 09:34:37,596 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-07-27 09:34:37,597 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-27 09:35:50,508 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+16 ms
+2026-07-27 09:35:50,777 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+1 ms

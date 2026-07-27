@@ -169,3 +169,363 @@ GET /dashboard
 User: 12
 Status: 200
 Duration: 53ms
+2026-07-26 23:47:52,728 - app - INFO - 
+[23:47:52]
+GET /
+User: 12
+Status: 200
+Duration: 23ms
+2026-07-26 23:47:58,916 - app - INFO - 
+[23:47:58]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-07-26 23:48:57,318 - app - INFO - 
+[23:48:57]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 47ms
+2026-07-26 23:50:41,506 - app - INFO - 
+[23:50:41]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 40ms
+2026-07-26 23:50:42,525 - app - INFO - 
+[23:50:42]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-26 23:50:42,533 - app - INFO - 
+[23:50:42]
+GET /login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-07-26 23:50:47,184 - app - INFO - 
+[23:50:47]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-07-26 23:50:49,694 - app - INFO - 
+[23:50:49]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-26 23:50:58,448 - app - INFO - 
+[23:50:58]
+POST /login
+User: Guest
+Status: 200
+Duration: 11ms
+2026-07-26 23:51:08,045 - app - INFO - 
+[23:51:08]
+POST /login
+User: Guest
+Status: 200
+Duration: 7ms
+2026-07-26 23:51:15,363 - app - INFO - 
+[23:51:15]
+POST /login
+User: Guest
+Status: 200
+Duration: 7ms
+2026-07-26 23:51:21,878 - app - INFO - 
+[23:51:21]
+POST /login
+User: 7
+Status: 500
+Duration: 292ms
+2026-07-26 23:51:28,946 - app - INFO - 
+[23:51:28]
+GET /dashboard
+User: 7
+Status: 200
+Duration: 32ms
+2026-07-26 23:51:34,103 - app - INFO - 
+[23:51:34]
+GET /profile/
+User: 7
+Status: 200
+Duration: 47ms
+2026-07-26 23:51:37,467 - app - INFO - 
+[23:51:37]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-26 23:51:37,471 - app - INFO - 
+[23:51:37]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-26 23:52:49,801 - app - INFO - 
+[23:52:49]
+POST /login
+User: Guest
+Status: 200
+Duration: 10ms
+2026-07-26 23:54:42,522 - app - INFO - 
+[23:54:42]
+POST /login
+User: Guest
+Status: 200
+Duration: 11ms
+2026-07-26 23:55:31,098 - app - INFO - 
+[23:55:31]
+POST /login
+User: 12
+Status: 500
+Duration: 278ms
+2026-07-26 23:55:35,849 - app - INFO - 
+[23:55:35]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 32ms
+2026-07-26 23:55:40,071 - app - INFO - 
+[23:55:40]
+GET /logout
+User: Guest
+Status: 302
+Duration: 1ms
+2026-07-26 23:55:40,086 - app - INFO - 
+[23:55:40]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-26 23:55:49,068 - app - INFO - 
+[23:55:49]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-26 23:55:49,073 - app - INFO - 
+[23:55:49]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-26 23:55:58,598 - app - INFO - 
+[23:55:58]
+GET /
+User: Guest
+Status: 200
+Duration: 2ms
+2026-07-27 00:15:49,025 - app - INFO - 
+[00:15:49]
+GET /
+User: Guest
+Status: 200
+Duration: 18ms
+2026-07-27 00:21:58,724 - app - INFO - 
+[00:21:58]
+GET /
+User: Guest
+Status: 200
+Duration: 2ms
+2026-07-27 00:56:57,671 - app - INFO - 
+[00:56:57]
+GET /
+User: Guest
+Status: 200
+Duration: 24ms
+2026-07-27 00:56:59,358 - app - INFO - 
+[00:56:59]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:32:36,984 - app - INFO - 
+[09:32:36]
+GET /
+User: Guest
+Status: 200
+Duration: 19ms
+2026-07-27 09:32:41,410 - app - INFO - 
+[09:32:41]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:33:35,142 - app - INFO - 
+[09:33:35]
+GET /login
+User: Guest
+Status: 200
+Duration: 11ms
+2026-07-27 09:33:43,916 - app - INFO - 
+[09:33:43]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:33:51,953 - app - INFO - 
+[09:33:51]
+POST /login
+User: 12
+Status: 500
+Duration: 289ms
+2026-07-27 09:33:57,297 - app - INFO - 
+[09:33:57]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 51ms
+2026-07-27 09:33:58,473 - app - INFO - 
+[09:33:58]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 44ms
+2026-07-27 09:33:59,196 - app - INFO - 
+[09:33:59]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 49ms
+2026-07-27 09:33:59,304 - app - INFO - 
+[09:33:59]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 1ms
+2026-07-27 09:33:59,312 - app - INFO - 
+[09:33:59]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 9ms
+2026-07-27 09:34:00,485 - app - INFO - 
+[09:34:00]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 23ms
+2026-07-27 09:34:04,826 - app - INFO - 
+[09:34:04]
+GET /chat/
+User: 12
+Status: 200
+Duration: 931ms
+2026-07-27 09:34:04,856 - app - INFO - 
+[09:34:04]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 266ms
+2026-07-27 09:34:11,545 - app - INFO - 
+[09:34:11]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 22ms
+2026-07-27 09:34:17,331 - app - INFO - 
+[09:34:17]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 18028ms
+2026-07-27 09:34:17,519 - app - INFO - 
+[09:34:17]
+GET /
+User: 12
+Status: 200
+Duration: 2ms
+2026-07-27 09:34:19,055 - app - INFO - 
+[09:34:19]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-07-27 09:34:27,940 - app - INFO - 
+[09:34:27]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-07-27 09:34:37,599 - app - INFO - 
+[09:34:37]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 42ms
+2026-07-27 09:34:38,552 - app - INFO - 
+[09:34:38]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-27 09:34:38,562 - app - INFO - 
+[09:34:38]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-07-27 09:34:48,906 - app - INFO - 
+[09:34:48]
+GET /register
+User: Guest
+Status: 200
+Duration: 15ms
+2026-07-27 09:35:04,826 - app - INFO - 
+[09:35:04]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-27 09:35:04,832 - app - INFO - 
+[09:35:04]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-07-27 09:35:09,609 - app - INFO - 
+[09:35:09]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-07-27 09:35:09,620 - app - INFO - 
+[09:35:09]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-07-27 09:35:15,895 - app - INFO - 
+[09:35:15]
+GET /
+User: Guest
+Status: 200
+Duration: 2ms
+2026-07-27 09:35:20,967 - app - INFO - 
+[09:35:20]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-07-27 09:35:25,277 - app - INFO - 
+[09:35:25]
+GET /login
+User: Guest
+Status: 200
+Duration: 3ms
+2026-07-27 09:35:41,764 - app - INFO - 
+[09:35:41]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-07-27 09:35:50,783 - app - INFO - 
+[09:35:50]
+POST /login
+User: 12
+Status: 500
+Duration: 296ms
