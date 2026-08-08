@@ -57,9 +57,22 @@ def register():
             username, email, password, confirm_password, full_name
         )
         
-        if success:
-            flash(message + " Please log in.", 'success')
-            return redirect(url_for('auth.login'))
+        if success and user_id:
+            from backend.models.user import UserModel
+            user = UserModel.get_by_id(user_id)
+            if user:
+                session_data = AuthService.get_session_data(user)
+                session.update(session_data)
+                flash(message, 'success')
+                
+                # Fire autonomous background tasks
+                from backend.services.autonomous_agent import AutonomousAgent
+                AutonomousAgent.on_login(user_id)
+                
+                return redirect(url_for('dashboard.index'))
+            
+            flash(message, 'success')
+            return redirect(url_for('dashboard.index'))
         else:
             flash(message, 'danger')
     
