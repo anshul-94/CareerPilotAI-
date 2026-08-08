@@ -394,3 +394,192 @@ Jobs Filtered   : 20
 Jobs Saved      : 20
 Completed in    : 3611 ms
 ================================
+2026-08-08 11:27:29,141 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3539 ms
+================================
+2026-08-08 11:28:26,609 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 8 ms
+===============================
+2026-08-08 11:28:26,626 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 16 ms
+===============================
+2026-08-08 11:28:26,634 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : 50
+Rows Returned   : 50
+Execution Time  : 7 ms
+===============================
+2026-08-08 11:28:30,089 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3478 ms
+================================
+2026-08-08 11:33:05,149 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 6 ms
+===============================
+2026-08-08 11:33:05,154 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 4 ms
+===============================
+2026-08-08 11:33:05,166 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : 50
+Rows Returned   : 50
+Execution Time  : 11 ms
+===============================
+2026-08-08 11:33:09,148 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3997 ms
+================================
+2026-08-08 11:42:46,711 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 8 ms
+===============================
+2026-08-08 11:42:46,716 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 5 ms
+===============================
+2026-08-08 11:42:46,731 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : 50
+Rows Returned   : 50
+Execution Time  : 15 ms
+===============================
+2026-08-08 11:42:50,149 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3436 ms
+================================
+2026-08-08 11:50:17,209 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 1
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 3127 ms
+================================
+2026-08-08 12:11:06,424 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 1
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 4611 ms
+================================
+2026-08-08 12:12:09,882 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 15 ms
+===============================
+2026-08-08 12:12:09,886 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 3 ms
+===============================
+2026-08-08 12:12:09,900 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : 50
+Rows Returned   : 50
+Execution Time  : 13 ms
+===============================
+2026-08-08 12:12:23,267 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 13383 ms
+================================

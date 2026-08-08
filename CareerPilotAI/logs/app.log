@@ -4979,3 +4979,2337 @@ GET /.well-known/appspecific/com.chrome.devtools.json
 User: 12
 Status: 404
 Duration: 0ms
+2026-08-08 11:24:53,267 - app - INFO - 
+[11:24:53]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:24:56,225 - app - INFO - 
+[11:24:56]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 46ms
+2026-08-08 11:24:56,993 - app - INFO - 
+[11:24:56]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:24:56,998 - app - INFO - 
+[11:24:56]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:25:00,514 - app - INFO - 
+[11:25:00]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 11:25:06,630 - app - INFO - 
+[11:25:06]
+GET /
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:25:06,674 - app - INFO - 
+[11:25:06]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 1ms
+2026-08-08 11:25:12,774 - app - INFO - 
+[11:25:12]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:25:12,822 - app - INFO - 
+[11:25:12]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 11:26:50,714 - app - INFO - 
+[11:26:50]
+GET /
+User: Guest
+Status: 200
+Duration: 19ms
+2026-08-08 11:26:50,761 - app - INFO - 
+[11:26:50]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 11:27:11,513 - app - INFO - 
+[11:27:11]
+GET /
+User: Guest
+Status: 200
+Duration: 4ms
+2026-08-08 11:27:11,571 - app - INFO - 
+[11:27:11]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 11:27:13,821 - app - INFO - 
+[11:27:13]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:27:13,850 - app - INFO - 
+[11:27:13]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 11:27:25,594 - app - INFO - 
+[11:27:25]
+POST /login
+User: 12
+Status: 302
+Duration: 289ms
+2026-08-08 11:27:25,627 - app - INFO - 
+[11:27:25]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 24ms
+2026-08-08 11:27:25,664 - app - INFO - 
+[11:27:25]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:27:51,014 - app - INFO - 
+[11:27:51]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 17ms
+2026-08-08 11:27:51,077 - app - INFO - 
+[11:27:51]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:27:56,347 - app - INFO - 
+[11:27:56]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:27:56,434 - app - INFO - 
+[11:27:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:27:58,944 - app - INFO - 
+[11:27:58]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 22ms
+2026-08-08 11:27:58,983 - app - INFO - 
+[11:27:58]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:28:03,033 - app - INFO - 
+[11:28:03]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:28:03,076 - app - INFO - 
+[11:28:03]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:28:08,070 - app - INFO - 
+[11:28:08]
+GET /chat/
+User: 12
+Status: 200
+Duration: 19ms
+2026-08-08 11:28:08,124 - app - INFO - 
+[11:28:08]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:28:11,104 - app - INFO - 
+[11:28:11]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:28:11,134 - app - INFO - 
+[11:28:11]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:13,929 - app - INFO - 
+[11:28:13]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:28:13,977 - app - INFO - 
+[11:28:13]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:17,273 - app - INFO - 
+[11:28:17]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:17,293 - app - INFO - 
+[11:28:17]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:28:20,408 - app - INFO - 
+[11:28:20]
+GET /learning/
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:28:20,450 - app - INFO - 
+[11:28:20]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:23,488 - app - INFO - 
+[11:28:23]
+GET /interview/
+User: 12
+Status: 200
+Duration: 12ms
+2026-08-08 11:28:23,531 - app - INFO - 
+[11:28:23]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:28:26,639 - app - INFO - 
+[11:28:26]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 38ms
+2026-08-08 11:28:26,668 - app - INFO - 
+[11:28:26]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:36,073 - app - INFO - 
+[11:28:36]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 20ms
+2026-08-08 11:28:36,136 - app - INFO - 
+[11:28:36]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:28:36,243 - app - INFO - 
+[11:28:36]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:28:36,258 - app - INFO - 
+[11:28:36]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 22ms
+2026-08-08 11:28:36,259 - app - INFO - 
+[11:28:36]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 22ms
+2026-08-08 11:28:37,067 - app - INFO - 
+[11:28:37]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 14ms
+2026-08-08 11:28:46,541 - app - INFO - 
+[11:28:46]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 6ms
+2026-08-08 11:28:46,551 - app - INFO - 
+[11:28:46]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:49,567 - app - INFO - 
+[11:28:49]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 16ms
+2026-08-08 11:28:49,599 - app - INFO - 
+[11:28:49]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 3ms
+2026-08-08 11:28:49,742 - app - INFO - 
+[11:28:49]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 30ms
+2026-08-08 11:28:54,108 - app - INFO - 
+[11:28:54]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:28:54,145 - app - INFO - 
+[11:28:54]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:28:57,932 - app - INFO - 
+[11:28:57]
+GET /code-review
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:28:57,974 - app - INFO - 
+[11:28:57]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:29:02,188 - app - INFO - 
+[11:29:02]
+GET /profile/
+User: 12
+Status: 200
+Duration: 49ms
+2026-08-08 11:29:02,277 - app - INFO - 
+[11:29:02]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:29:10,022 - app - INFO - 
+[11:29:10]
+GET /profile/history
+User: 12
+Status: 200
+Duration: 18ms
+2026-08-08 11:29:10,070 - app - INFO - 
+[11:29:10]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:29:13,496 - app - INFO - 
+[11:29:13]
+GET /profile/settings
+User: 12
+Status: 200
+Duration: 23ms
+2026-08-08 11:29:13,577 - app - INFO - 
+[11:29:13]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:29:22,315 - app - INFO - 
+[11:29:22]
+POST /login
+User: Guest
+Status: 200
+Duration: 238ms
+2026-08-08 11:29:22,317 - app - INFO - 
+[11:29:22]
+GET /dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,319 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,321 - app - INFO - 
+[11:29:22]
+GET /jobs/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,323 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,324 - app - INFO - 
+[11:29:22]
+GET /notifications/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,325 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,327 - app - INFO - 
+[11:29:22]
+GET /chat/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,329 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,331 - app - INFO - 
+[11:29:22]
+GET /problem_solving/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,332 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,333 - app - INFO - 
+[11:29:22]
+GET /resume/upload
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,335 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,336 - app - INFO - 
+[11:29:22]
+GET /resume/builder
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,337 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,338 - app - INFO - 
+[11:29:22]
+GET /interview/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,340 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,341 - app - INFO - 
+[11:29:22]
+GET /learning/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,342 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,343 - app - INFO - 
+[11:29:22]
+GET /code-review
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,344 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,345 - app - INFO - 
+[11:29:22]
+GET /sql-coach
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,347 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,348 - app - INFO - 
+[11:29:22]
+GET /projects/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,350 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,351 - app - INFO - 
+[11:29:22]
+GET /profile/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,352 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,353 - app - INFO - 
+[11:29:22]
+GET /profile/history
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,354 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,356 - app - INFO - 
+[11:29:22]
+GET /profile/settings
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:29:22,357 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,358 - app - INFO - 
+[11:29:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:29:22,361 - app - INFO - 
+[11:29:22]
+GET /register
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:31:28,806 - app - INFO - 
+[11:31:28]
+GET /login
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 11:31:28,851 - app - INFO - 
+[11:31:28]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 41ms
+2026-08-08 11:31:28,900 - app - INFO - 
+[11:31:28]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:31:52,941 - app - INFO - 
+[11:31:52]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-08-08 11:31:52,984 - app - INFO - 
+[11:31:52]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:31:59,382 - app - INFO - 
+[11:31:59]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:31:59,425 - app - INFO - 
+[11:31:59]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:32:02,363 - app - INFO - 
+[11:32:02]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:32:02,408 - app - INFO - 
+[11:32:02]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:32:47,483 - app - INFO - 
+[11:32:47]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:32:47,549 - app - INFO - 
+[11:32:47]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:32:49,118 - app - INFO - 
+[11:32:49]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 45ms
+2026-08-08 11:32:49,159 - app - INFO - 
+[11:32:49]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:32:55,267 - app - INFO - 
+[11:32:55]
+GET /learning/
+User: 12
+Status: 200
+Duration: 12ms
+2026-08-08 11:32:55,310 - app - INFO - 
+[11:32:55]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:33:02,252 - app - INFO - 
+[11:33:02]
+GET /interview/
+User: 12
+Status: 200
+Duration: 14ms
+2026-08-08 11:33:02,307 - app - INFO - 
+[11:33:02]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:33:05,170 - app - INFO - 
+[11:33:05]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 28ms
+2026-08-08 11:33:05,211 - app - INFO - 
+[11:33:05]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:33:14,148 - app - INFO - 
+[11:33:14]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 22ms
+2026-08-08 11:33:14,254 - app - INFO - 
+[11:33:14]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:33:14,381 - app - INFO - 
+[11:33:14]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:33:14,399 - app - INFO - 
+[11:33:14]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 24ms
+2026-08-08 11:33:14,401 - app - INFO - 
+[11:33:14]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 24ms
+2026-08-08 11:33:15,205 - app - INFO - 
+[11:33:15]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:33:56,189 - app - INFO - 
+[11:33:56]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 17ms
+2026-08-08 11:33:56,295 - app - INFO - 
+[11:33:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:33:56,437 - app - INFO - 
+[11:33:56]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 65ms
+2026-08-08 11:34:17,255 - app - INFO - 
+[11:34:17]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:34:17,277 - app - INFO - 
+[11:34:17]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:34:19,192 - app - INFO - 
+[11:34:19]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 23ms
+2026-08-08 11:34:19,245 - app - INFO - 
+[11:34:19]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:34:19,274 - app - INFO - 
+[11:34:19]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 4ms
+2026-08-08 11:34:29,531 - app - INFO - 
+[11:34:29]
+GET /code-review
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:34:29,587 - app - INFO - 
+[11:34:29]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:34:32,437 - app - INFO - 
+[11:34:32]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 12ms
+2026-08-08 11:34:32,479 - app - INFO - 
+[11:34:32]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:34:35,149 - app - INFO - 
+[11:34:35]
+GET /projects/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:34:35,220 - app - INFO - 
+[11:34:35]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:34:38,206 - app - INFO - 
+[11:34:38]
+GET /profile/
+User: 12
+Status: 200
+Duration: 19ms
+2026-08-08 11:34:38,253 - app - INFO - 
+[11:34:38]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:34:52,860 - app - INFO - 
+[11:34:52]
+GET /profile/history
+User: 12
+Status: 200
+Duration: 20ms
+2026-08-08 11:34:52,929 - app - INFO - 
+[11:34:52]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:34:56,171 - app - INFO - 
+[11:34:56]
+GET /profile/settings
+User: 12
+Status: 200
+Duration: 18ms
+2026-08-08 11:34:56,214 - app - INFO - 
+[11:34:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:35:27,175 - app - INFO - 
+[11:35:27]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:35:27,226 - app - INFO - 
+[11:35:27]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 7ms
+2026-08-08 11:35:51,492 - app - INFO - 
+[11:35:51]
+POST /admin/login
+User: 12
+Status: 302
+Duration: 267ms
+2026-08-08 11:35:51,529 - app - INFO - 
+[11:35:51]
+GET /admin/dashboard
+User: 12
+Status: 200
+Duration: 31ms
+2026-08-08 11:35:51,549 - app - INFO - 
+[11:35:51]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:35:59,457 - app - INFO - 
+[11:35:59]
+GET /admin/users
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:35:59,479 - app - INFO - 
+[11:35:59]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:36:06,389 - app - INFO - 
+[11:36:06]
+GET /admin/submissions
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:36:06,417 - app - INFO - 
+[11:36:06]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:36:40,884 - app - INFO - 
+[11:36:40]
+GET /admin/problems
+User: 12
+Status: 200
+Duration: 72ms
+2026-08-08 11:36:40,924 - app - INFO - 
+[11:36:40]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:36:47,209 - app - INFO - 
+[11:36:47]
+GET /admin/ai-analytics
+User: 12
+Status: 200
+Duration: 31ms
+2026-08-08 11:36:47,234 - app - INFO - 
+[11:36:47]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:36:50,904 - app - INFO - 
+[11:36:50]
+GET /admin/activity
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 11:36:50,927 - app - INFO - 
+[11:36:50]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:36:55,086 - app - INFO - 
+[11:36:55]
+GET /admin/audit-logs
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:36:55,111 - app - INFO - 
+[11:36:55]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:37:02,980 - app - INFO - 
+[11:37:02]
+GET /admin/dashboard
+User: 12
+Status: 200
+Duration: 56ms
+2026-08-08 11:37:02,998 - app - INFO - 
+[11:37:02]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:37:09,204 - app - INFO - 
+[11:37:09]
+POST /admin/logout
+User: 12
+Status: 302
+Duration: 10ms
+2026-08-08 11:37:09,210 - app - INFO - 
+[11:37:09]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:37:09,248 - app - INFO - 
+[11:37:09]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:40:51,878 - app - INFO - 
+[11:40:51]
+POST /login
+User: Guest
+Status: 200
+Duration: 250ms
+2026-08-08 11:40:51,881 - app - INFO - 
+[11:40:51]
+GET /dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:40:51,883 - app - INFO - 
+[11:40:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:40:51,885 - app - INFO - 
+[11:40:51]
+GET /jobs/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:40:51,887 - app - INFO - 
+[11:40:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:40:51,888 - app - INFO - 
+[11:40:51]
+GET /notifications/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:40:51,889 - app - INFO - 
+[11:40:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:40:51,890 - app - INFO - 
+[11:40:51]
+GET /chat/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:40:51,892 - app - INFO - 
+[11:40:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:40:51,894 - app - INFO - 
+[11:40:51]
+GET /problem_solving/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:40:51,895 - app - INFO - 
+[11:40:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:40:51,896 - app - INFO - 
+[11:40:51]
+GET /problem_solving/dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:40:51,898 - app - INFO - 
+[11:40:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:40:51,899 - app - INFO - 
+[11:40:51]
+GET /problem_solving/editor/1
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 11:41:02,170 - app - INFO - 
+[11:41:02]
+POST /login
+User: Guest
+Status: 200
+Duration: 242ms
+2026-08-08 11:41:02,173 - app - INFO - 
+[11:41:02]
+GET /dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,175 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,176 - app - INFO - 
+[11:41:02]
+GET /jobs/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,178 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,179 - app - INFO - 
+[11:41:02]
+GET /notifications/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,180 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,181 - app - INFO - 
+[11:41:02]
+GET /chat/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,183 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,185 - app - INFO - 
+[11:41:02]
+GET /problem_solving/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,187 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,188 - app - INFO - 
+[11:41:02]
+GET /problem_solving/dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,190 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,191 - app - INFO - 
+[11:41:02]
+GET /problem_solving/problem/1
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,192 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,193 - app - INFO - 
+[11:41:02]
+GET /resume/upload
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,195 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,196 - app - INFO - 
+[11:41:02]
+GET /resume/builder
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,197 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,199 - app - INFO - 
+[11:41:02]
+GET /interview/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,200 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,202 - app - INFO - 
+[11:41:02]
+GET /learning/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,204 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,205 - app - INFO - 
+[11:41:02]
+GET /profile/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,207 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,208 - app - INFO - 
+[11:41:02]
+GET /profile/history
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,210 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,211 - app - INFO - 
+[11:41:02]
+GET /profile/settings
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,212 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,213 - app - INFO - 
+[11:41:02]
+GET /code-review
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,215 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,216 - app - INFO - 
+[11:41:02]
+GET /sql-coach
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,218 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,219 - app - INFO - 
+[11:41:02]
+GET /projects/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:41:02,221 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,223 - app - INFO - 
+[11:41:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:02,224 - app - INFO - 
+[11:41:02]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:28,290 - app - INFO - 
+[11:41:28]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:41:28,853 - app - INFO - 
+[11:41:28]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:28,998 - app - INFO - 
+[11:41:28]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:29,163 - app - INFO - 
+[11:41:29]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:37,488 - app - INFO - 
+[11:41:37]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:41:37,613 - app - INFO - 
+[11:41:37]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:37,763 - app - INFO - 
+[11:41:37]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:41:43,075 - app - INFO - 
+[11:41:43]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:41:47,958 - app - INFO - 
+[11:41:47]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:41:53,053 - app - INFO - 
+[11:41:53]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 41ms
+2026-08-08 11:41:53,099 - app - INFO - 
+[11:41:53]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:42:01,679 - app - INFO - 
+[11:42:01]
+GET /chat/
+User: 12
+Status: 200
+Duration: 23ms
+2026-08-08 11:42:01,776 - app - INFO - 
+[11:42:01]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:42:19,301 - app - INFO - 
+[11:42:19]
+GET /chat/
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:42:20,029 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 11:42:20,217 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 4ms
+2026-08-08 11:42:20,349 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 4ms
+2026-08-08 11:42:20,504 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:42:20,636 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:42:20,771 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:42:20,922 - app - INFO - 
+[11:42:20]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:42:26,442 - app - INFO - 
+[11:42:26]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 11:42:29,430 - app - INFO - 
+[11:42:29]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 44ms
+2026-08-08 11:42:33,470 - app - INFO - 
+[11:42:33]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 31ms
+2026-08-08 11:42:35,283 - app - INFO - 
+[11:42:35]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:42:38,006 - app - INFO - 
+[11:42:38]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-08-08 11:42:39,121 - app - INFO - 
+[11:42:39]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:42:40,906 - app - INFO - 
+[11:42:40]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-08-08 11:42:43,013 - app - INFO - 
+[11:42:43]
+GET /learning/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:42:44,997 - app - INFO - 
+[11:42:44]
+GET /interview/
+User: 12
+Status: 200
+Duration: 12ms
+2026-08-08 11:42:46,735 - app - INFO - 
+[11:42:46]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 33ms
+2026-08-08 11:42:48,557 - app - INFO - 
+[11:42:48]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 18ms
+2026-08-08 11:42:48,689 - app - INFO - 
+[11:42:48]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 11:42:48,696 - app - INFO - 
+[11:42:48]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:42:48,698 - app - INFO - 
+[11:42:48]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 14ms
+2026-08-08 11:42:49,508 - app - INFO - 
+[11:42:49]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 12ms
+2026-08-08 11:42:52,575 - app - INFO - 
+[11:42:52]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 38ms
+2026-08-08 11:42:52,633 - app - INFO - 
+[11:42:52]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 26ms
+2026-08-08 11:43:03,573 - app - INFO - 
+[11:43:03]
+GET /problem_solving/problem/23
+User: 12
+Status: 200
+Duration: 37ms
+2026-08-08 11:43:08,583 - app - INFO - 
+[11:43:08]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 11:43:08,640 - app - INFO - 
+[11:43:08]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 2ms
+2026-08-08 11:43:10,807 - app - INFO - 
+[11:43:10]
+GET /code-review
+User: 12
+Status: 200
+Duration: 4ms
+2026-08-08 11:43:12,456 - app - INFO - 
+[11:43:12]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 3ms
+2026-08-08 11:43:13,068 - app - INFO - 
+[11:43:13]
+GET /projects/
+User: 12
+Status: 200
+Duration: 3ms
+2026-08-08 11:43:14,400 - app - INFO - 
+[11:43:14]
+GET /profile/
+User: 12
+Status: 200
+Duration: 16ms
+2026-08-08 11:43:15,011 - app - INFO - 
+[11:43:15]
+GET /projects/
+User: 12
+Status: 200
+Duration: 4ms
+2026-08-08 11:43:17,238 - app - INFO - 
+[11:43:17]
+GET /profile/
+User: 12
+Status: 200
+Duration: 19ms
+2026-08-08 11:43:20,162 - app - INFO - 
+[11:43:20]
+GET /profile/history
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:43:22,737 - app - INFO - 
+[11:43:22]
+GET /profile/settings
+User: 12
+Status: 200
+Duration: 18ms
+2026-08-08 11:43:24,440 - app - INFO - 
+[11:43:24]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 36ms
+2026-08-08 11:45:21,754 - app - INFO - 
+[11:45:21]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 5ms
+2026-08-08 11:45:21,759 - app - INFO - 
+[11:45:21]
+POST /admin/login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:45:21,997 - app - INFO - 
+[11:45:21]
+POST /admin/login
+User: Guest
+Status: 200
+Duration: 236ms
+2026-08-08 11:45:25,322 - app - INFO - 
+[11:45:25]
+GET /chat/
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 11:46:16,766 - app - INFO - 
+[11:46:16]
+GET /admin/
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 11:46:16,777 - app - INFO - 
+[11:46:16]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:46:25,723 - app - INFO - 
+[11:46:25]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 245ms
+2026-08-08 11:46:25,769 - app - INFO - 
+[11:46:25]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 42ms
+2026-08-08 11:46:45,153 - app - INFO - 
+[11:46:45]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:46:45,158 - app - INFO - 
+[11:46:45]
+POST /admin/login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:46:45,397 - app - INFO - 
+[11:46:45]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 237ms
+2026-08-08 11:46:45,433 - app - INFO - 
+[11:46:45]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 32ms
+2026-08-08 11:46:45,675 - app - INFO - 
+[11:46:45]
+POST /login
+User: Guest
+Status: 200
+Duration: 240ms
+2026-08-08 11:47:32,633 - app - INFO - 
+[11:47:32]
+POST /login
+User: Guest
+Status: 200
+Duration: 242ms
+2026-08-08 11:47:51,689 - app - INFO - 
+[11:47:51]
+GET /admin
+User: 12
+Status: 308
+Duration: 0ms
+2026-08-08 11:47:51,695 - app - INFO - 
+[11:47:51]
+GET /admin/
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 11:47:51,700 - app - INFO - 
+[11:47:51]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:47:55,999 - app - INFO - 
+[11:47:55]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:47:57,647 - app - INFO - 
+[11:47:57]
+GET /chat
+User: 12
+Status: 308
+Duration: 0ms
+2026-08-08 11:47:57,667 - app - INFO - 
+[11:47:57]
+GET /chat/
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:47:59,674 - app - INFO - 
+[11:47:59]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:47:59,822 - app - INFO - 
+[11:47:59]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:47:59,954 - app - INFO - 
+[11:47:59]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:48:50,663 - app - INFO - 
+[11:48:50]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:48:51,311 - app - INFO - 
+[11:48:51]
+GET /chat/
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:48:51,455 - app - INFO - 
+[11:48:51]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:48:51,588 - app - INFO - 
+[11:48:51]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:48:51,737 - app - INFO - 
+[11:48:51]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:48:51,854 - app - INFO - 
+[11:48:51]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:48:51,954 - app - INFO - 
+[11:48:51]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:48:52,071 - app - INFO - 
+[11:48:52]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:48:57,061 - app - INFO - 
+[11:48:57]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:49:02,010 - app - INFO - 
+[11:49:02]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 39ms
+2026-08-08 11:49:03,959 - app - INFO - 
+[11:49:03]
+GET /learning/
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 11:49:04,745 - app - INFO - 
+[11:49:04]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:50:13,469 - app - INFO - 
+[11:50:13]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:50:13,475 - app - INFO - 
+[11:50:13]
+POST /admin/login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:50:13,797 - app - INFO - 
+[11:50:13]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 320ms
+2026-08-08 11:50:13,834 - app - INFO - 
+[11:50:13]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 34ms
+2026-08-08 11:50:14,078 - app - INFO - 
+[11:50:14]
+POST /login
+User: 1
+Status: 302
+Duration: 241ms
+2026-08-08 11:50:14,104 - app - INFO - 
+[11:50:14]
+GET /dashboard
+User: 1
+Status: 200
+Duration: 23ms
+2026-08-08 11:52:05,154 - app - INFO - 
+[11:52:05]
+GET /chat/
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 11:52:05,610 - app - INFO - 
+[11:52:05]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 11:52:05,756 - app - INFO - 
+[11:52:05]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:52:10,998 - app - INFO - 
+[11:52:10]
+GET /admin/
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 11:52:11,009 - app - INFO - 
+[11:52:11]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:52:21,844 - app - INFO - 
+[11:52:21]
+POST /admin/login
+User: 12
+Status: 302
+Duration: 279ms
+2026-08-08 11:52:21,882 - app - INFO - 
+[11:52:21]
+GET /admin/dashboard
+User: 12
+Status: 200
+Duration: 33ms
+2026-08-08 11:54:26,900 - app - INFO - 
+[11:54:26]
+GET /
+User: 12
+Status: 200
+Duration: 26ms
+2026-08-08 11:59:55,483 - app - INFO - 
+[11:59:55]
+GET /admin/login
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 11:59:55,545 - app - INFO - 
+[11:59:55]
+GET /admin/dashboard
+User: 12
+Status: 200
+Duration: 51ms
+2026-08-08 12:00:04,983 - app - INFO - 
+[12:00:04]
+GET /admin/dashboard
+User: 12
+Status: 200
+Duration: 46ms
+2026-08-08 12:00:10,033 - app - INFO - 
+[12:00:10]
+GET /admin
+User: 12
+Status: 308
+Duration: 0ms
+2026-08-08 12:00:10,040 - app - INFO - 
+[12:00:10]
+GET /admin/
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 12:00:10,066 - app - INFO - 
+[12:00:10]
+GET /admin/dashboard
+User: 12
+Status: 200
+Duration: 23ms
+2026-08-08 12:00:13,098 - app - INFO - 
+[12:00:13]
+POST /admin/logout
+User: 12
+Status: 302
+Duration: 5ms
+2026-08-08 12:00:13,111 - app - INFO - 
+[12:00:13]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 9ms
+2026-08-08 12:00:16,911 - app - INFO - 
+[12:00:16]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 12:00:19,442 - app - INFO - 
+[12:00:19]
+GET /
+User: 12
+Status: 200
+Duration: 21ms
+2026-08-08 12:00:21,987 - app - INFO - 
+[12:00:21]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 51ms
+2026-08-08 12:00:24,207 - app - INFO - 
+[12:00:24]
+GET /chat/
+User: 12
+Status: 200
+Duration: 19ms
+2026-08-08 12:00:59,780 - app - INFO - 
+[12:00:59]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 12:06:00,366 - app - INFO - 
+[12:06:00]
+GET /chat/
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 12:06:00,622 - app - INFO - 
+[12:06:00]
+GET /chat/
+User: 12
+Status: 200
+Duration: 5ms
+2026-08-08 12:06:00,756 - app - INFO - 
+[12:06:00]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:06:00,885 - app - INFO - 
+[12:06:00]
+GET /chat/
+User: 12
+Status: 200
+Duration: 3ms
+2026-08-08 12:06:00,990 - app - INFO - 
+[12:06:00]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:06:01,105 - app - INFO - 
+[12:06:01]
+GET /chat/
+User: 12
+Status: 200
+Duration: 5ms
+2026-08-08 12:06:01,238 - app - INFO - 
+[12:06:01]
+GET /chat/
+User: 12
+Status: 200
+Duration: 5ms
+2026-08-08 12:06:53,817 - app - INFO - 
+[12:06:53]
+GET /chat/
+User: 12
+Status: 200
+Duration: 14ms
+2026-08-08 12:06:53,919 - app - INFO - 
+[12:06:53]
+GET /chat/
+User: 12
+Status: 200
+Duration: 3ms
+2026-08-08 12:06:54,072 - app - INFO - 
+[12:06:54]
+GET /chat/
+User: 12
+Status: 200
+Duration: 5ms
+2026-08-08 12:06:54,240 - app - INFO - 
+[12:06:54]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:06:54,372 - app - INFO - 
+[12:06:54]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:06:54,523 - app - INFO - 
+[12:06:54]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:06:54,639 - app - INFO - 
+[12:06:54]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:06:54,790 - app - INFO - 
+[12:06:54]
+GET /chat/
+User: 12
+Status: 200
+Duration: 3ms
+2026-08-08 12:10:34,645 - app - INFO - 
+[12:10:34]
+POST /login
+User: Guest
+Status: 200
+Duration: 288ms
+2026-08-08 12:10:34,648 - app - INFO - 
+[12:10:34]
+GET /chat/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 12:10:34,653 - app - INFO - 
+[12:10:34]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:11:01,809 - app - INFO - 
+[12:11:01]
+POST /login
+User: 1
+Status: 302
+Duration: 275ms
+2026-08-08 12:11:01,828 - app - INFO - 
+[12:11:01]
+GET /dashboard
+User: 1
+Status: 200
+Duration: 16ms
+2026-08-08 12:11:01,839 - app - INFO - 
+[12:11:01]
+GET /chat/
+User: 1
+Status: 200
+Duration: 7ms
+2026-08-08 12:11:09,193 - app - INFO - 
+[12:11:09]
+GET /
+User: 12
+Status: 200
+Duration: 4ms
+2026-08-08 12:11:09,981 - app - INFO - 
+[12:11:09]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 12:11:10,146 - app - INFO - 
+[12:11:10]
+GET /
+User: 12
+Status: 200
+Duration: 2ms
+2026-08-08 12:11:11,724 - app - INFO - 
+[12:11:11]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 30ms
+2026-08-08 12:11:14,112 - app - INFO - 
+[12:11:14]
+GET /chat/
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 12:11:19,113 - app - INFO - 
+[12:11:19]
+GET /chat/
+User: 12
+Status: 200
+Duration: 12ms
+2026-08-08 12:11:30,851 - app - INFO - 
+[12:11:30]
+GET /chat/
+User: 12
+Status: 200
+Duration: 10ms
+2026-08-08 12:11:31,177 - app - INFO - 
+[12:11:31]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:11:31,326 - app - INFO - 
+[12:11:31]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:11:31,441 - app - INFO - 
+[12:11:31]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:11:31,608 - app - INFO - 
+[12:11:31]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 12:11:37,621 - app - INFO - 
+[12:11:37]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 3ms
+2026-08-08 12:11:46,168 - app - INFO - 
+[12:11:46]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 29ms
+2026-08-08 12:11:46,262 - app - INFO - 
+[12:11:46]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 12ms
+2026-08-08 12:11:56,383 - app - INFO - 
+[12:11:56]
+GET /chat/
+User: 12
+Status: 200
+Duration: 86ms
+2026-08-08 12:11:56,596 - app - INFO - 
+[12:11:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:04,072 - app - INFO - 
+[12:12:04]
+GET /chat
+User: 12
+Status: 308
+Duration: 3ms
+2026-08-08 12:12:04,097 - app - INFO - 
+[12:12:04]
+GET /chat/
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 12:12:04,187 - app - INFO - 
+[12:12:04]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:05,094 - app - INFO - 
+[12:12:05]
+GET /chat/
+User: 12
+Status: 200
+Duration: 11ms
+2026-08-08 12:12:05,171 - app - INFO - 
+[12:12:05]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 12:12:06,328 - app - INFO - 
+[12:12:06]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 35ms
+2026-08-08 12:12:06,419 - app - INFO - 
+[12:12:06]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:09,936 - app - INFO - 
+[12:12:09]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 74ms
+2026-08-08 12:12:10,076 - app - INFO - 
+[12:12:10]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:12,361 - app - INFO - 
+[12:12:12]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 47ms
+2026-08-08 12:12:12,459 - app - INFO - 
+[12:12:12]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:12,651 - app - INFO - 
+[12:12:12]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 26ms
+2026-08-08 12:12:19,235 - app - INFO - 
+[12:12:19]
+GET /problem_solving/problem/6
+User: 12
+Status: 200
+Duration: 25ms
+2026-08-08 12:12:19,325 - app - INFO - 
+[12:12:19]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:25,211 - app - INFO - 
+[12:12:25]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 6ms
+2026-08-08 12:12:25,254 - app - INFO - 
+[12:12:25]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:27,803 - app - INFO - 
+[12:12:27]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 12:12:27,834 - app - INFO - 
+[12:12:27]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 12:12:32,257 - app - INFO - 
+[12:12:32]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 22ms
+2026-08-08 12:12:32,395 - app - INFO - 
+[12:12:32]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 12:12:41,026 - app - INFO - 
+[12:12:41]
+GET /admin
+User: 12
+Status: 308
+Duration: 1ms
+2026-08-08 12:12:41,044 - app - INFO - 
+[12:12:41]
+GET /admin/
+User: 12
+Status: 302
+Duration: 0ms
+2026-08-08 12:12:41,051 - app - INFO - 
+[12:12:41]
+GET /admin/login
+User: 12
+Status: 200
+Duration: 1ms
+2026-08-08 12:12:41,154 - app - INFO - 
+[12:12:41]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 12:12:51,118 - app - INFO - 
+[12:12:51]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 12:12:52,989 - app - INFO - 
+[12:12:52]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 12:12:53,002 - app - INFO - 
+[12:12:53]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:13:00,164 - app - INFO - 
+[12:13:00]
+GET /register
+User: Guest
+Status: 200
+Duration: 14ms

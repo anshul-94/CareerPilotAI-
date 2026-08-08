@@ -219,3 +219,45 @@
     box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
     transform: translateY(-1px);
 }
+
+/* ─── Mobile Responsive Rules ─── */
+@media (max-width: 768px) {
+    .control-panel {
+        padding: 1.25rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .score-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    .preview-panel {
+        padding: 1.5rem 1.25rem;
+        min-height: auto;
+        border-radius: 12px;
+    }
+    
+    .resume-modern h1 {
+        font-size: 1.6rem;
+    }
+    
+    .resume-modern .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .score-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .preview-panel {
+        padding: 1.25rem 0.85rem;
+    }
+    
+    .resume-modern h1 {
+        font-size: 1.35rem;
+    }
+}

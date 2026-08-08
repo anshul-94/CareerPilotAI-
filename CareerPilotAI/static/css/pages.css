@@ -700,18 +700,137 @@
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .chat-layout { grid-template-columns: 1fr; }
     .chat-sidebar { display: none; }
-    .builder-layout { grid-template-columns: 1fr; }
+    .builder-layout { grid-template-columns: 1fr; gap: 1.5rem; }
     .analysis-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    .hero .hero-tagline { font-size: 1.1rem; }
-    .hero-buttons { flex-direction: column; align-items: center; }
+    .hero {
+        padding: 4rem 1.25rem 2rem;
+        min-height: auto;
+    }
+    .hero h1 { font-size: 2rem; }
+    .hero .hero-tagline { font-size: 1.05rem; }
+    .hero .hero-description { font-size: 0.95rem; margin-bottom: 1.75rem; }
+    .hero-buttons { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
+    .hero-buttons .btn { width: 100%; text-align: center; }
     .float-element { display: none; }
     .features-grid { grid-template-columns: 1fr; }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .analysis-header { flex-direction: column; align-items: center; text-align: center; }
-    .profile-header { flex-direction: column; text-align: center; }
+    .stats-grid { grid-template-columns: 1fr; }
+    
+    .analysis-header { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .profile-header { 
+        flex-direction: column; 
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .profile-avatar {
+        width: 72px;
+        height: 72px;
+        font-size: 1.8rem;
+    }
+    
+    /* ── Job Finder Mobile ── */
+    #jobSearchForm, #overridePanel > div:last-child {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    
+    #jobSearchForm > div, #overridePanel > div:last-child > div {
+        min-width: 100% !important;
+        width: 100%;
+    }
+    
+    #jobSearchForm .btn, #overridePanel button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .job-card {
+        padding: 1.15rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .job-card .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .job-card .job-match {
+        align-self: flex-start;
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 0.35rem 0.65rem;
+    }
+    
+    .job-card .job-match .match-score {
+        font-size: 1rem;
+    }
+    
+    .job-card .job-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .job-card .job-footer .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* ── Resume Builder & Upload ── */
+    .upload-zone {
+        padding: 2rem 1rem;
+    }
+    
+    .builder-form {
+        padding: 1.25rem 1rem;
+    }
+    
+    .builder-preview {
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+    
+    /* ── Interview Session ── */
+    .question-card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .question-text {
+        font-size: 1rem;
+    }
+    
+    .question-meta {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.65rem; }
+    .hero-badge { font-size: 0.75rem; padding: 0.3rem 0.85rem; }
+    .builder-preview h1 { font-size: 1.25rem; }
+    .builder-preview h2 { font-size: 0.9rem; }
+    .job-card .job-title { font-size: 0.95rem; }
+    
+    .auth-page {
+        padding: 1rem;
+    }
+    
+    .auth-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: var(--radius-lg);
+    }
 }

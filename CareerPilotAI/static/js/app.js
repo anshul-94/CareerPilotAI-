@@ -30,38 +30,59 @@ const CareerPilot = {
         });
     },
 
-    // ── Sidebar Toggle ──────────────────────────
+    // ── Sidebar & Mobile Navigation ──────────────────────────
     initSidebar() {
         const toggle = document.getElementById('sidebarToggle');
         const sidebar = document.querySelector('.sidebar');
+        const nav = document.querySelector('.navbar-nav');
+        const backdrop = document.getElementById('mobileBackdrop');
         
-        if (toggle && sidebar) {
-            toggle.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-            });
+        const closeAllDrawers = () => {
+            if (sidebar) sidebar.classList.remove('active');
+            if (nav) nav.classList.remove('active');
+            if (backdrop) backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        };
 
-            // Close sidebar on outside click (mobile)
-            document.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768 && 
-                    sidebar.classList.contains('active') &&
-                    !sidebar.contains(e.target) && 
-                    !toggle.contains(e.target)) {
-                    sidebar.classList.remove('active');
+        if (toggle) {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (sidebar) {
+                    const isActive = sidebar.classList.toggle('active');
+                    if (backdrop) backdrop.classList.toggle('active', isActive);
+                    document.body.style.overflow = isActive ? 'hidden' : '';
+                } else if (nav) {
+                    const isActive = nav.classList.toggle('active');
+                    if (backdrop) backdrop.classList.toggle('active', isActive);
+                    document.body.style.overflow = isActive ? 'hidden' : '';
                 }
             });
         }
+
+        if (backdrop) {
+            backdrop.addEventListener('click', closeAllDrawers);
+        }
+
+        // Close when clicking nav links on mobile
+        document.querySelectorAll('.sidebar .nav-link, .navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1024) {
+                    closeAllDrawers();
+                }
+            });
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeAllDrawers();
+            }
+        });
     },
 
-    // ── Mobile Menu ─────────────────────────────
+    // ── Mobile Menu Stub ─────────────────────────────
     initMobileMenu() {
-        const toggle = document.querySelector('.navbar-toggle');
-        const nav = document.querySelector('.navbar-nav');
-        
-        if (toggle && nav) {
-            toggle.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        }
+        // Handled in initSidebar for unified backdrop and drawer management
     },
 
     // ── Auto-dismiss Alerts ─────────────────────

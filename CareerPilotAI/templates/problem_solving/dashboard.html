@@ -401,18 +401,82 @@
     .badge-wa { background: rgba(244,185,66,0.15); color: #facc15; border: 1px solid rgba(244,185,66,0.3); }
     .badge-error { background: rgba(226,85,85,0.15); color: #f87171; border: 1px solid rgba(226,85,85,0.3); }
 
-    /* SECTION 7: AI LEARNING ADVISOR */
-    .ai-insights-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-        margin-top: 16px;
+    /* ── Mobile Responsive Dashboard ── */
+    @media (max-width: 768px) {
+        .dashboard-container {
+            padding: 16px 8px;
+            gap: 20px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .premium-header-card {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+            padding-bottom: 16px;
+        }
+
+        .premium-header-card h1 {
+            font-size: 1.6rem;
+        }
+
+        .header-actions {
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            gap: 8px;
+        }
+
+        .header-actions .btn-premium {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .performance-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .perf-card {
+            padding: 14px 12px;
+        }
+
+        .perf-value {
+            font-size: 1.5rem;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .skills-radar-panel {
+            height: 260px;
+        }
+
+        .languages-grid, .company-progress-grid, .ai-insights-container {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .premium-card {
+            padding: 16px 12px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .performance-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 {% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 100px; padding-bottom: 50px;">
+<div class="container" style="padding-top: 80px; padding-bottom: 40px;">
     <div class="dashboard-container">
         
         <!-- HEADER PANEL -->

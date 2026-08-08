@@ -699,3 +699,53 @@
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
 }
+
+/* ── Mobile Components Rules ─────────────────── */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+    }
+
+    .modal-overlay {
+        padding: 1rem;
+    }
+
+    .modal-content, .modal-dialog, .card.modal-card {
+        max-width: calc(100% - 24px) !important;
+        width: 100% !important;
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+    }
+
+    .form-input, .form-select, .form-textarea, input[type="text"], input[type="password"], input[type="email"], select, textarea {
+        font-size: 16px !important; /* Prevents auto-zoom on mobile Safari */
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem 0.85rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

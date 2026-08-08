@@ -340,11 +340,123 @@
         border-color: var(--primary-light);
         box-shadow: 0 0 10px rgba(79,141,177,0.15);
     }
+
+    /* ── Mobile Responsive Rules ── */
+    @media (max-width: 768px) {
+        .premium-workspace {
+            padding: 16px 8px;
+            gap: 16px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header-panel {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+            padding-bottom: 16px;
+        }
+
+        .header-logo {
+            width: 44px;
+            height: 44px;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .header-title-box h1 {
+            font-size: 1.5rem;
+        }
+
+        .perf-strip {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .perf-cell {
+            padding: 10px 8px;
+            gap: 8px;
+        }
+
+        .perf-icon-box {
+            width: 32px;
+            height: 32px;
+            font-size: 1rem;
+        }
+
+        .perf-num {
+            font-size: 1.15rem;
+        }
+
+        .filter-group {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .filter-label {
+            width: 100%;
+        }
+
+        .premium-problem-card {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+            padding: 16px 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .card-left {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .problem-info-box {
+            width: 100%;
+        }
+
+        .problem-title-row {
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .problem-meta-row {
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 11px;
+        }
+
+        .card-right {
+            width: 100%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border);
+        }
+
+        .card-right .btn-premium {
+            flex: 1;
+            min-width: 110px;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .perf-strip {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 {% endblock %}
 
 {% block content %}
-<div class="container" style="padding-top: 100px; padding-bottom: 50px;">
+<div class="container" style="padding-top: 80px; padding-bottom: 40px;">
     <div class="premium-workspace">
         
         <!-- HEADER -->

@@ -9,55 +9,658 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ─── 3D Admin Console Environment ───────────────────────── */
+        :root {
+            --adm-cyan: #4F8DB1;
+            --adm-blue: #2E6F95;
+            --adm-glow: rgba(79, 141, 177, 0.35);
+            --adm-dark-1: #080c12;
+            --adm-dark-2: #0e151f;
+            --adm-card-glass: rgba(19, 28, 38, 0.78);
+            --adm-border-glass: rgba(79, 141, 177, 0.28);
+        }
+
+        body.admin-body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: var(--adm-dark-1);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            color: #C8D2DC;
+        }
+
+        /* ── Ambient 3D Space Background ── */
+        .admin-3d-scene {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(46, 111, 149, 0.25), transparent 70%),
+                radial-gradient(circle 600px at 85% 75%, rgba(99, 102, 241, 0.12), transparent 70%),
+                radial-gradient(circle 500px at 15% 85%, rgba(46, 111, 149, 0.15), transparent 70%),
+                linear-gradient(180deg, #090e15 0%, #06090e 100%);
+        }
+
+        /* Perspective 3D Grid Plane */
+        .perspective-grid {
+            position: absolute;
+            bottom: -30%;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(79, 141, 177, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79, 141, 177, 0.08) 1px, transparent 1px);
+            background-size: 60px 60px;
+            transform: perspective(600px) rotateX(65deg);
+            transform-origin: center bottom;
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 80%);
+            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 80%);
+            animation: gridFlow 25s linear infinite;
+        }
+
+        @keyframes gridFlow {
+            0% { transform: perspective(600px) rotateX(65deg) translateY(0); }
+            100% { transform: perspective(600px) rotateX(65deg) translateY(60px); }
+        }
+
+        /* Floating 3D Orbs */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.45;
+            animation: orbFloat 14s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(79, 141, 177, 0.4), transparent 70%);
+            top: 10%;
+            left: 15%;
+        }
+
+        .orb-2 {
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 70%);
+            bottom: 15%;
+            right: 15%;
+            animation-duration: 18s;
+            animation-delay: -5s;
+        }
+
+        @keyframes orbFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -25px) scale(1.08); }
+            100% { transform: translate(-25px, 20px) scale(0.95); }
+        }
+
+        /* Floating 3D Geometric Ring */
+        .floating-geo-ring {
+            position: absolute;
+            top: 18%;
+            right: 22%;
+            width: 180px;
+            height: 180px;
+            border: 1.5px solid rgba(79, 141, 177, 0.2);
+            border-radius: 50%;
+            transform: rotateX(60deg) rotateY(20deg);
+            box-shadow: 0 0 30px rgba(79, 141, 177, 0.15), inset 0 0 20px rgba(79, 141, 177, 0.1);
+            animation: ringSpin 20s linear infinite;
+        }
+
+        .floating-geo-ring::after {
+            content: '';
+            position: absolute;
+            inset: 18px;
+            border: 1px dashed rgba(139, 92, 246, 0.25);
+            border-radius: 50%;
+        }
+
+        @keyframes ringSpin {
+            0% { transform: rotateX(60deg) rotateY(20deg) rotateZ(0deg); }
+            100% { transform: rotateX(60deg) rotateY(20deg) rotateZ(360deg); }
+        }
+
+        /* ─── Main Content Container ─────────────────────────────── */
+        .admin-login-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.25rem;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+            perspective: 1200px;
+        }
+
+        /* ─── 3D Elevated Card ───────────────────────────────────── */
+        .admin-3d-card {
+            width: 100%;
+            max-width: 440px;
+            background: linear-gradient(145deg, rgba(23, 33, 45, 0.85) 0%, rgba(14, 20, 28, 0.92) 100%);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--adm-border-glass);
+            border-radius: 24px;
+            padding: 2.75rem 2.25rem 2.25rem;
+            box-shadow: 
+                0 30px 60px -15px rgba(0, 0, 0, 0.85),
+                0 0 40px -10px rgba(46, 111, 149, 0.3),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.15),
+                inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+            box-sizing: border-box;
+        }
+
+        .admin-3d-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(79, 141, 177, 0.8), rgba(139, 92, 246, 0.8), transparent);
+            border-radius: 99px;
+        }
+
+        /* ── 3D Shield Badge ── */
+        .admin-badge-3d {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(79, 141, 177, 0.25) 0%, rgba(46, 111, 149, 0.1) 100%);
+            border: 1px solid rgba(79, 141, 177, 0.5);
+            color: #5DA9E9;
+            font-size: 1.6rem;
+            margin-bottom: 1.25rem;
+            box-shadow: 
+                0 10px 25px -5px rgba(46, 111, 149, 0.4),
+                inset 0 1px 1px rgba(255, 255, 255, 0.3),
+                inset 0 0 15px rgba(79, 141, 177, 0.2);
+            position: relative;
+            transform: translateZ(20px);
+        }
+
+        .admin-badge-3d::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 20px;
+            border: 1px solid rgba(79, 141, 177, 0.15);
+            pointer-events: none;
+        }
+
+        /* ── Typography & Header ── */
+        .admin-header-box {
+            text-align: center;
+            margin-bottom: 2rem;
+            transform: translateZ(15px);
+        }
+
+        .admin-brand-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: -0.025em;
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .admin-brand-title span.accent-ai {
+            background: linear-gradient(135deg, #4F8DB1, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .admin-console-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: rgba(46, 111, 149, 0.15);
+            border: 1px solid rgba(79, 141, 177, 0.35);
+            border-radius: 99px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #8ec3e6;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.6rem;
+        }
+
+        .admin-console-pill .pulse-dot {
+            width: 6px;
+            height: 6px;
+            background: #3BA55C;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #3BA55C;
+            animation: statusPulse 2s infinite;
+        }
+
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .admin-subtitle {
+            font-size: 0.85rem;
+            color: #94A3B8;
+            margin: 0;
+        }
+
+        /* ── Input Styling ── */
+        .adm-form-group {
+            margin-bottom: 1.35rem;
+            position: relative;
+            transform: translateZ(10px);
+        }
+
+        .adm-form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #C8D2DC;
+            margin-bottom: 0.45rem;
+            letter-spacing: 0.01em;
+        }
+
+        .input-icon-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-lead-icon {
+            position: absolute;
+            left: 14px;
+            color: #64748B;
+            font-size: 0.95rem;
+            pointer-events: none;
+            transition: color 0.2s ease;
+        }
+
+        .adm-3d-input {
+            width: 100%;
+            background: rgba(14, 21, 29, 0.85);
+            border: 1px solid rgba(52, 68, 82, 0.9);
+            border-radius: 12px;
+            padding: 0.85rem 1rem 0.85rem 2.65rem;
+            font-size: 0.92rem;
+            color: #FFFFFF;
+            outline: none;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .adm-3d-input:focus {
+            border-color: var(--adm-cyan);
+            background: rgba(18, 27, 38, 0.95);
+            box-shadow: 
+                0 0 0 3px rgba(79, 141, 177, 0.2),
+                0 0 20px rgba(46, 111, 149, 0.25),
+                inset 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .adm-3d-input:focus + .input-lead-icon,
+        .input-icon-wrap:focus-within .input-lead-icon {
+            color: var(--adm-cyan);
+        }
+
+        .pwd-toggle-btn {
+            position: absolute;
+            right: 12px;
+            background: transparent;
+            border: none;
+            color: #64748B;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 6px;
+            transition: color 0.2s, background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pwd-toggle-btn:hover {
+            color: #CBD5E1;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* ── 3D Action Button ── */
+        .adm-3d-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #3C7CA3 0%, #225675 100%);
+            border: 1px solid rgba(125, 186, 222, 0.4);
+            border-radius: 12px;
+            color: #FFFFFF;
+            padding: 0.9rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            box-shadow: 
+                0 10px 20px -5px rgba(34, 86, 117, 0.5),
+                0 4px 6px -2px rgba(0, 0, 0, 0.4),
+                inset 0 1px 1px rgba(255, 255, 255, 0.3);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+            transform: translateZ(12px);
+        }
+
+        .adm-3d-btn:hover {
+            background: linear-gradient(135deg, #4A8DB5 0%, #2A668A 100%);
+            border-color: rgba(145, 205, 240, 0.6);
+            box-shadow: 
+                0 14px 28px -6px rgba(46, 111, 149, 0.65),
+                0 0 25px rgba(79, 141, 177, 0.4),
+                inset 0 1px 1px rgba(255, 255, 255, 0.4);
+            transform: translateZ(12px) translateY(-2px);
+        }
+
+        .adm-3d-btn:active {
+            transform: translateZ(12px) translateY(1px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ── Security Trust Footer ── */
+        .security-badge-footer {
+            margin-top: 1.75rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(52, 68, 82, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.85rem;
+            text-align: center;
+            transform: translateZ(5px);
+        }
+
+        .sec-env-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.74rem;
+            color: #64748B;
+            font-weight: 500;
+        }
+
+        .sec-env-label i {
+            color: #3BA55C;
+            font-size: 0.78rem;
+        }
+
+        .return-link {
+            font-size: 0.82rem;
+            color: #94A3B8;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s, transform 0.2s;
+            font-weight: 500;
+        }
+
+        .return-link:hover {
+            color: #FFFFFF;
+            transform: translateX(-2px);
+        }
+
+        /* ── Flash Alert styling on 3D page ── */
+        .adm-alerts-container {
+            width: 100%;
+            max-width: 440px;
+            margin-bottom: 1.25rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .adm-alert {
+            background: rgba(23, 33, 43, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 0.85rem 1.15rem;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-left: 4px solid;
+            animation: slideInDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .adm-alert-success { border-color: #3BA55C; color: #86EFAC; }
+        .adm-alert-danger, .adm-alert-error { border-color: #E25555; color: #FCA5A5; }
+        .adm-alert-warning { border-color: #F4B942; color: #FDE68A; }
+        .adm-alert-info { border-color: #5DA9E9; color: #BAE6FD; }
+
+        @keyframes slideInDown {
+            from { transform: translateY(-16px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* ── Reduced Motion Preference ── */
+        @media (prefers-reduced-motion: reduce) {
+            .perspective-grid, .ambient-orb, .floating-geo-ring {
+                animation: none !important;
+            }
+            .admin-3d-card {
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* ── Mobile Viewport Adaptations ── */
+        @media (max-width: 480px) {
+            .admin-login-wrapper {
+                padding: 1.25rem 0.85rem;
+            }
+
+            .admin-3d-card {
+                padding: 2rem 1.25rem 1.5rem;
+                border-radius: 20px;
+            }
+
+            .admin-badge-3d {
+                width: 50px;
+                height: 50px;
+                font-size: 1.35rem;
+            }
+
+            .admin-brand-title {
+                font-size: 1.35rem;
+            }
+
+            .floating-geo-ring {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body class="admin-body">
-    <!-- Flash Messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <div class="adm-alerts-container">
-                {% for category, message in messages %}
-                    <div class="adm-alert adm-alert-{{ category }}">
-                        <span>{{ message }}</span>
-                        <button style="background:none;border:none;color:inherit;cursor:pointer;margin-left:12px;font-size:1.1rem;" onclick="this.parentElement.remove()">✕</button>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
 
+    <!-- 3D Environment Background -->
+    <div class="admin-3d-scene">
+        <div class="perspective-grid"></div>
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="floating-geo-ring"></div>
+    </div>
+
+    <!-- Login Container -->
     <div class="admin-login-wrapper">
-        <div class="admin-login-card">
-            <div class="admin-login-header">
-                <div class="admin-login-logo">🛡️</div>
-                <h1 class="admin-login-title">CareerPilot AI</h1>
-                <div style="margin-top: 4px;">
-                    <span class="adm-badge adm-badge-accent">Admin Console</span>
+
+        <!-- Flash Alerts -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="adm-alerts-container">
+                    {% for category, message in messages %}
+                        <div class="adm-alert adm-alert-{{ category }}">
+                            <span><i class="fa-solid fa-circle-info" style="margin-right: 8px;"></i>{{ message }}</span>
+                            <button style="background:none; border:none; color:inherit; cursor:pointer; font-size:1.1rem; padding:0 4px;" onclick="this.parentElement.remove()">✕</button>
+                        </div>
+                    {% endfor %}
                 </div>
-                <p class="admin-login-subtitle">Secure administrator access</p>
+            {% endif %}
+        {% endwith %}
+
+        <!-- 3D Glass Console Card -->
+        <div class="admin-3d-card" id="adminCard">
+            
+            <div class="admin-header-box">
+                <div class="admin-badge-3d">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h1 class="admin-brand-title">
+                    CareerPilot <span class="accent-ai">AI</span>
+                </h1>
+                <div>
+                    <span class="admin-console-pill">
+                        <span class="pulse-dot"></span>
+                        Admin Console
+                    </span>
+                </div>
+                <p class="admin-subtitle">Secure administrator access</p>
             </div>
 
+            <!-- Login Form (Standard Existing Action & Authentication) -->
             <form method="POST" action="{{ url_for('admin.login', next=request.args.get('next', '')) }}">
+                
                 <div class="adm-form-group">
                     <label class="adm-form-label" for="username">Username</label>
-                    <input type="text" id="username" name="username" class="adm-input" placeholder="e.g. adminuser85" required autofocus autocomplete="username">
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-user-shield input-lead-icon"></i>
+                        <input type="text" 
+                               id="username" 
+                               name="username" 
+                               class="adm-3d-input" 
+                               placeholder="Enter your username" 
+                               required 
+                               autofocus 
+                               autocomplete="username">
+                    </div>
                 </div>
 
                 <div class="adm-form-group" style="margin-bottom: 1.75rem;">
                     <label class="adm-form-label" for="password">Password</label>
-                    <input type="password" id="password" name="password" class="adm-input" placeholder="••••••••••••" required autocomplete="current-password">
+                    <div class="input-icon-wrap">
+                        <i class="fa-solid fa-key input-lead-icon"></i>
+                        <input type="password" 
+                               id="password" 
+                               name="password" 
+                               class="adm-3d-input" 
+                               placeholder="Enter your password" 
+                               required 
+                               autocomplete="current-password"
+                               style="padding-right: 2.75rem;">
+                        <button type="button" 
+                                class="pwd-toggle-btn" 
+                                id="togglePwdBtn" 
+                                onclick="togglePasswordVisibility()" 
+                                aria-label="Toggle password visibility">
+                            <i class="fa-solid fa-eye" id="pwdEyeIcon"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <button type="submit" class="adm-btn adm-btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">
+                <button type="submit" class="adm-3d-btn">
+                    <i class="fa-solid fa-lock-open" style="font-size: 0.85rem;"></i>
                     Sign In to Admin Console
                 </button>
             </form>
 
-            <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border); text-align: center;">
-                <a href="/" style="font-size: 0.8rem; color: var(--text-tertiary);">
-                    ← Return to CareerPilot AI
+            <div class="security-badge-footer">
+                <div class="sec-env-label">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Protected administrator environment
+                </div>
+                <a href="/" class="return-link">
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.75rem;"></i>
+                    Return to CareerPilot AI
                 </a>
             </div>
+
         </div>
     </div>
+
+    <!-- Micro-interaction script for 3D Tilt -->
+    <script>
+        // Password Visibility Toggle
+        function togglePasswordVisibility() {
+            const pwdField = document.getElementById('password');
+            const eyeIcon = document.getElementById('pwdEyeIcon');
+            if (!pwdField || !eyeIcon) return;
+            
+            if (pwdField.type === 'password') {
+                pwdField.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                pwdField.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+
+        // Lightweight 3D Cursor Tilt Interaction (Desktop only)
+        (function init3DTilt() {
+            const card = document.getElementById('adminCard');
+            if (!card || window.innerWidth < 1024) return;
+            
+            // Check prefers-reduced-motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            let rafId = null;
+
+            document.addEventListener('mousemove', function(e) {
+                if (rafId) cancelAnimationFrame(rafId);
+
+                rafId = requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    const cardX = rect.left + rect.width / 2;
+                    const cardY = rect.top + rect.height / 2;
+
+                    const deltaX = (e.clientX - cardX) / (window.innerWidth / 2);
+                    const deltaY = (e.clientY - cardY) / (window.innerHeight / 2);
+
+                    // Clamp tilt to max 3 degrees
+                    const rotateY = (deltaX * 3).toFixed(2);
+                    const rotateX = (-deltaY * 3).toFixed(2);
+
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                });
+            });
+
+            document.addEventListener('mouseleave', function() {
+                card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0px)';
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -238,3 +238,99 @@ Started     : Yes
 Duration    : 3611 ms
 Result      : Success
 =====================================
+2026-08-08 11:27:25,616 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 12
+Started     : Yes
+Duration    : 15 ms
+Result      : Success
+=====================================
+2026-08-08 11:27:29,142 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 12
+Started     : Yes
+Duration    : 3540 ms
+Result      : Success
+=====================================
+2026-08-08 11:28:30,089 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 12
+Started     : Yes
+Duration    : 3479 ms
+Result      : Success
+=====================================
+2026-08-08 11:33:09,148 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 12
+Started     : Yes
+Duration    : 3997 ms
+Result      : Success
+=====================================
+2026-08-08 11:34:19,218 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Resume Build
+User ID     : 12
+Started     : Yes
+Duration    : 22 ms
+Result      : Success
+=====================================
+2026-08-08 11:42:50,151 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 12
+Started     : Yes
+Duration    : 3438 ms
+Result      : Success
+=====================================
+2026-08-08 11:43:08,618 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Resume Build
+User ID     : 12
+Started     : Yes
+Duration    : 28 ms
+Result      : Success
+=====================================
+2026-08-08 11:50:14,110 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 1
+Started     : Yes
+Duration    : 28 ms
+Result      : Success
+=====================================
+2026-08-08 11:50:17,209 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 1
+Started     : Yes
+Duration    : 3127 ms
+Result      : Success
+=====================================
+2026-08-08 12:11:06,425 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 1
+Started     : Yes
+Duration    : 4614 ms
+Result      : Success
+=====================================
+2026-08-08 12:11:42,686 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 1
+Started     : Yes
+Duration    : 40874 ms
+Result      : Success
+=====================================
+2026-08-08 12:12:23,268 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 12
+Started     : Yes
+Duration    : 13384 ms
+Result      : Success
+=====================================

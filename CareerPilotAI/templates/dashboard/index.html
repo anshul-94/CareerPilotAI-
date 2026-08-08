@@ -10,17 +10,17 @@
     </div>
 
     <!-- Career Snapshot Widget -->
-    <div class="card reveal delay-1" style="margin-bottom: 2rem; background: linear-gradient(to right, rgba(99,102,241,0.05), rgba(139,92,246,0.05)); border: 1px solid rgba(99,102,241,0.2);">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
-            <div style="display: flex; gap: 1rem; align-items: center;">
-                <div style="width: 50px; height: 50px; background: var(--primary-glow); color: var(--primary-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800;">
+    <div class="card reveal delay-1 career-snapshot-card">
+        <div class="snapshot-top-row">
+            <div class="snapshot-user-meta">
+                <div style="width: 50px; height: 50px; background: var(--primary-glow); color: var(--primary-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; flex-shrink: 0;">
                     {{ (user.full_name or user.username)[0]|upper }}
                 </div>
                 <div>
                     <div style="font-weight: 700; font-size: 1.1rem; color: #e2e8f0;">
                         {{ career_snapshot.preferred_role or 'Career Profile Incomplete' }}
                     </div>
-                    <div style="font-size: 0.85rem; color: #94a3b8; display: flex; gap: 0.5rem; align-items: center; margin-top: 0.2rem;">
+                    <div style="font-size: 0.85rem; color: #94a3b8; display: flex; gap: 0.5rem; align-items: center; margin-top: 0.2rem; flex-wrap: wrap;">
                         <span>📍 {{ career_snapshot.preferred_location or 'Any location' }}</span>
                         <span>•</span>
                         <span>{{ career_snapshot.seniority_level|capitalize }}</span>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             
-            <div style="display: flex; gap: 1.5rem;">
+            <div class="snapshot-stats-row">
                 <div style="text-align: center;">
                     <div style="font-size: 1.25rem; font-weight: 800; color: #a5b4fc;">{{ career_snapshot.profile_completeness or 0 }}%</div>
                     <div style="font-size: 0.7rem; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em;">Profile Complete</div>
@@ -48,7 +48,7 @@
             </div>
         </div>
         
-        <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+        <div class="snapshot-bottom-row">
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                 {% for skill in (career_snapshot.top_skills or [])[:5] %}
                 <span style="font-size: 0.72rem; padding: 0.2rem 0.6rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #cbd5e1;">{{ skill }}</span>
