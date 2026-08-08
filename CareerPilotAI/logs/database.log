@@ -17839,3 +17839,10659 @@ SELECT ONE
 problem_submissions
 Rows:0
 1 ms
+2026-07-28 12:45:03,607 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-07-28 12:45:03,609 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-28 12:45:03,610 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-28 12:45:03,611 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-28 12:45:03,613 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-07-28 12:45:03,614 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-07-28 12:45:03,620 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+4 ms
+2026-07-28 12:45:03,622 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-28 12:45:03,623 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-07-28 12:45:46,965 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+10 ms
+2026-07-28 12:45:47,236 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+1 ms
+2026-07-28 12:45:47,240 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-07-28 12:45:47,241 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:1
+2 ms
+2026-07-28 12:45:47,244 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-07-28 12:45:47,244 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+1 ms
+2026-07-28 12:45:47,249 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+5 ms
+2026-07-28 12:45:47,252 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-07-28 12:45:47,253 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+0 ms
+2026-07-28 12:45:47,253 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-07-28 12:45:47,255 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+0 ms
+2026-07-28 12:45:47,255 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+0 ms
+2026-07-28 12:45:47,257 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-07-28 12:45:47,258 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-07-28 12:45:47,259 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-07-28 12:45:47,260 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-07-28 12:45:47,260 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-07-28 12:45:47,261 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-28 12:46:17,449 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+11 ms
+2026-07-28 12:46:17,451 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-07-28 12:46:20,854 - db - INFO - 
+[DB]
+INSERT
+resume_versions
+Rows:1
+3 ms
+2026-07-28 12:48:28,149 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:105
+10 ms
+2026-07-28 12:48:28,440 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-07-28 12:48:28,454 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+9 ms
+2026-07-28 12:48:28,455 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-28 12:48:28,456 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-28 12:48:28,458 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-28 12:48:28,459 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-28 12:48:28,460 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-07-28 12:48:28,463 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+2 ms
+2026-07-28 12:48:28,464 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-28 12:48:28,465 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-28 12:48:28,466 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:0
+0 ms
+2026-07-28 12:48:28,467 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-28 12:48:28,467 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-07-28 12:48:28,468 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-28 12:48:28,469 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-07-28 12:48:28,470 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-07-28 12:48:31,412 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+2 ms
+2026-07-28 12:48:31,421 - db - INFO - 
+[DB]
+SELECT
+problem_templates
+Rows:5
+7 ms
+2026-07-28 12:48:31,424 - db - INFO - 
+[DB]
+SELECT
+problem_hints_used
+Rows:0
+1 ms
+2026-07-28 12:48:31,426 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-07-28 12:48:39,557 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+3 ms
+2026-07-28 12:48:39,561 - db - INFO - 
+[DB]
+SELECT
+chat_sessions cs
+            LEFT JOIN chat_history ch ON cs.session_id = ch.session_id
+Rows:1
+2 ms
+2026-07-28 12:48:59,246 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-07-28 12:48:59,247 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-07-28 12:48:59,249 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+1 ms
+2026-07-28 12:48:59,251 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-07-28 12:48:59,252 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+0 ms
+2026-07-28 12:48:59,253 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+0 ms
+2026-07-28 12:48:59,254 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-07-28 12:48:59,255 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-07-28 12:48:59,256 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-07-28 12:48:59,257 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-07-28 12:48:59,258 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-07-28 12:48:59,260 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 10:45:49,278 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 10:45:49,279 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,280 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,281 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,282 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,282 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,283 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,284 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:45:49,285 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:49:58,728 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+8 ms
+2026-08-08 10:49:58,729 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-08-08 10:49:58,996 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+2 ms
+2026-08-08 10:49:58,998 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+0 ms
+2026-08-08 10:49:58,999 - db - INFO - 
+[DB]
+INSERT
+settings
+Rows:1
+1 ms
+2026-08-08 10:50:11,945 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 10:50:12,220 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+2 ms
+2026-08-08 10:50:12,229 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+0 ms
+2026-08-08 10:50:12,231 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+2 ms
+2026-08-08 10:50:12,232 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+1 ms
+2026-08-08 10:50:12,236 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+4 ms
+2026-08-08 10:50:12,236 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+4 ms
+2026-08-08 10:50:12,237 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+4 ms
+2026-08-08 10:50:12,238 - db - INFO - 
+[DB]
+INSERT
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:50:12,239 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-08-08 10:50:12,240 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 10:50:12,241 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+0 ms
+2026-08-08 10:50:12,241 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+1 ms
+2026-08-08 10:50:12,242 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-08-08 10:50:12,243 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:50:12,244 - db - INFO - 
+[DB]
+UPDATE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:50:12,245 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:50:12,245 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+2 ms
+2026-08-08 10:50:12,246 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 10:50:12,247 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 10:50:12,248 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 10:50:12,249 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 10:50:12,250 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:50:12,250 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:50:12,252 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 10:50:18,654 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 10:50:18,656 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 10:50:18,658 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 10:50:18,659 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 10:50:18,661 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 10:52:47,270 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 10:52:47,271 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,272 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,272 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,273 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,274 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,275 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,276 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:52:47,276 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:53:36,462 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+2 ms
+2026-08-08 10:53:36,463 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-08-08 10:53:36,700 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+1 ms
+2026-08-08 10:53:36,701 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+0 ms
+2026-08-08 10:53:36,703 - db - INFO - 
+[DB]
+INSERT
+settings
+Rows:1
+1 ms
+2026-08-08 10:53:36,704 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:36,709 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+1 ms
+2026-08-08 10:53:36,709 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+1 ms
+2026-08-08 10:53:36,711 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+1 ms
+2026-08-08 10:53:36,711 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+1 ms
+2026-08-08 10:53:36,715 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+3 ms
+2026-08-08 10:53:36,716 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+6 ms
+2026-08-08 10:53:36,716 - db - INFO - 
+[DB]
+INSERT
+career_profiles
+Rows:1
+3 ms
+2026-08-08 10:53:36,716 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 10:53:36,718 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 10:53:36,718 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+1 ms
+2026-08-08 10:53:36,719 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+0 ms
+2026-08-08 10:53:36,720 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 10:53:36,720 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:53:36,721 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+0 ms
+2026-08-08 10:53:36,722 - db - INFO - 
+[DB]
+UPDATE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:53:36,722 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 10:53:36,723 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:53:36,726 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+4 ms
+2026-08-08 10:53:36,727 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 10:53:36,728 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 10:53:36,729 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:53:36,730 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:36,731 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 10:53:36,746 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:36,747 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 10:53:36,747 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+0 ms
+2026-08-08 10:53:36,749 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 10:53:36,750 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+0 ms
+2026-08-08 10:53:36,751 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 10:53:36,751 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 10:53:36,752 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 10:53:36,753 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 10:53:36,754 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:53:36,755 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:36,755 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 10:53:36,765 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:37,002 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:37,005 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+1 ms
+2026-08-08 10:53:37,005 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+2 ms
+2026-08-08 10:53:37,006 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 10:53:37,006 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:53:37,007 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 10:53:37,009 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+0 ms
+2026-08-08 10:53:37,009 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-08-08 10:53:37,010 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+0 ms
+2026-08-08 10:53:37,011 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 10:53:37,012 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 10:53:37,013 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 10:53:37,014 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 10:53:37,014 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:53:37,015 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:53:37,016 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 10:53:37,623 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 10:53:37,643 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+18 ms
+2026-08-08 10:53:37,645 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 10:53:37,647 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 10:53:37,649 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 10:55:08,869 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+5 ms
+2026-08-08 10:55:40,618 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+3 ms
+2026-08-08 10:55:40,621 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-08-08 10:55:40,893 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+1 ms
+2026-08-08 10:55:40,894 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+0 ms
+2026-08-08 10:55:40,896 - db - INFO - 
+[DB]
+INSERT
+settings
+Rows:1
+1 ms
+2026-08-08 10:55:40,897 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:55:40,899 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+1 ms
+2026-08-08 10:55:40,899 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+1 ms
+2026-08-08 10:55:40,900 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-08-08 10:55:40,901 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-08-08 10:55:40,902 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+2 ms
+2026-08-08 10:55:40,904 - db - INFO - 
+[DB]
+INSERT
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:55:40,904 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:55:40,906 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 10:55:40,906 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 10:55:40,908 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+0 ms
+2026-08-08 10:55:40,909 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:55:40,909 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+2 ms
+2026-08-08 10:55:40,911 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 10:55:40,911 - db - INFO - 
+[DB]
+UPDATE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:55:40,912 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:55:40,912 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+1 ms
+2026-08-08 10:55:40,913 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 10:55:40,914 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 10:55:40,915 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 10:55:40,916 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 10:55:40,918 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 10:55:40,919 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 10:55:40,919 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 10:55:41,886 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-08-08 10:55:41,889 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 10:55:41,893 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-08-08 10:55:41,895 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 10:55:41,898 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 10:57:14,161 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+4 ms
+2026-08-08 10:57:14,167 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-08-08 10:57:14,170 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+2 ms
+2026-08-08 10:57:14,173 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 10:57:14,177 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+3 ms
+2026-08-08 10:57:14,180 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+1 ms
+2026-08-08 10:57:14,182 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-08-08 10:57:14,183 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-08-08 10:57:14,187 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 10:57:14,189 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 10:57:14,191 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 10:57:14,193 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 10:58:20,838 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 10:58:20,838 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,839 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,841 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,842 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,843 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,844 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,844 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:20,845 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,250 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 10:58:28,251 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,252 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,253 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,254 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,255 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,256 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,256 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,257 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:28,259 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:0
+1 ms
+2026-08-08 10:58:28,261 - db - INFO - 
+[DB]
+SELECT
+unknown
+Rows:0
+1 ms
+2026-08-08 10:58:28,262 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:0
+0 ms
+2026-08-08 10:58:28,263 - db - INFO - 
+[DB]
+SELECT
+unknown
+Rows:0
+0 ms
+2026-08-08 10:58:28,264 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:0
+0 ms
+2026-08-08 10:58:28,500 - db - INFO - 
+[DB]
+INSERT
+admin_users
+Rows:1
+2 ms
+2026-08-08 10:58:56,149 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 10:58:56,151 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,153 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-08-08 10:58:56,155 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,156 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,158 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+2 ms
+2026-08-08 10:58:56,160 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,161 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,162 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,163 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:58:56,164 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-08-08 10:58:56,166 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-08-08 10:59:08,620 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 10:59:08,620 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,621 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,622 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,623 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,624 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,625 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,626 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,626 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,627 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,628 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 10:59:08,629 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:01:20,297 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+2 ms
+2026-08-08 11:01:20,298 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+1 ms
+2026-08-08 11:01:20,299 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:01:33,707 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+1 ms
+2026-08-08 11:01:33,943 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:01:33,944 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:01:33,949 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:01:33,950 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:01:33,951 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:01:33,952 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:01:33,953 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:01:33,954 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:01:33,955 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:01:33,956 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:01:33,958 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:01:33,959 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:01:33,960 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:01:33,960 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:01:33,961 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:01:33,962 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:01:33,963 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:01:33,965 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+1 ms
+2026-08-08 11:01:33,967 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:01:33,968 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:01:33,969 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:01:33,970 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:01:33,971 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:01:33,972 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:01:33,973 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:16
+0 ms
+2026-08-08 11:01:33,973 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:01:33,975 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:01:33,988 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-08-08 11:01:33,989 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-08-08 11:01:34,224 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-08-08 11:01:34,226 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+0 ms
+2026-08-08 11:01:34,227 - db - INFO - 
+[DB]
+INSERT
+settings
+Rows:1
+0 ms
+2026-08-08 11:01:34,228 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:01:34,232 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+0 ms
+2026-08-08 11:01:34,232 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-08-08 11:01:34,233 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-08-08 11:01:34,235 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+3 ms
+2026-08-08 11:01:34,235 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:01:34,236 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+1 ms
+2026-08-08 11:01:34,237 - db - INFO - 
+[DB]
+INSERT
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:01:34,238 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-08-08 11:01:34,239 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:01:34,239 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+0 ms
+2026-08-08 11:01:34,240 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+1 ms
+2026-08-08 11:01:34,240 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 11:01:34,241 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+0 ms
+2026-08-08 11:01:34,243 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+1 ms
+2026-08-08 11:01:34,243 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-08-08 11:01:34,244 - db - INFO - 
+[DB]
+UPDATE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:01:34,244 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-08-08 11:01:34,245 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:01:34,247 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+2 ms
+2026-08-08 11:01:34,248 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:01:34,249 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:01:34,250 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:01:34,251 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 11:01:34,266 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+0 ms
+2026-08-08 11:01:34,267 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:17
+0 ms
+2026-08-08 11:01:34,278 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:01:34,279 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:01:34,280 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+0 ms
+2026-08-08 11:01:34,281 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:01:34,281 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+0 ms
+2026-08-08 11:01:34,282 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:01:34,283 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:01:34,284 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:01:34,284 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:01:34,285 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:01:34,286 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:0
+0 ms
+2026-08-08 11:01:34,287 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+0 ms
+2026-08-08 11:01:34,288 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:01:34,291 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:01:34,292 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+0 ms
+2026-08-08 11:01:34,292 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:01:34,303 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:01:34,304 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+0 ms
+2026-08-08 11:01:34,314 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+0 ms
+2026-08-08 11:01:34,315 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+0 ms
+2026-08-08 11:01:34,316 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:01:34,316 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:01:34,317 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:01:34,318 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,319 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,321 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,322 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,322 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,323 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,324 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,325 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,326 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,327 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,327 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,328 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,329 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,331 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:01:34,332 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:01:34,333 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,334 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,335 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,336 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,337 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,338 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,338 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:01:34,339 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:01:34,341 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+1 ms
+2026-08-08 11:01:34,343 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+1 ms
+2026-08-08 11:01:34,343 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:01:34,352 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:01:34,353 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:01:34,354 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:01:34,355 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:01:34,355 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:01:34,356 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:01:34,357 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+0 ms
+2026-08-08 11:01:34,358 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+0 ms
+2026-08-08 11:01:34,359 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+0 ms
+2026-08-08 11:01:34,360 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+0 ms
+2026-08-08 11:01:34,367 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:01:34,368 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:01:34,369 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:01:34,374 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:2
+0 ms
+2026-08-08 11:01:34,375 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:01:34,381 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:01:35,141 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:01:35,143 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:01:35,145 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:01:35,147 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:01:35,149 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:02:01,633 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+3 ms
+2026-08-08 11:02:01,637 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+2 ms
+2026-08-08 11:02:06,389 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+2 ms
+2026-08-08 11:02:06,391 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-08-08 11:04:41,319 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+4 ms
+2026-08-08 11:04:41,592 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:04:41,594 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:04:41,600 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:04:41,602 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:04:41,602 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:04:41,604 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:04:41,604 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:04:41,605 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:04:41,607 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:04:41,608 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:04:41,608 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:04:41,609 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:04:41,610 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:04:41,611 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:04:41,612 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:04:41,612 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:04:41,613 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:04:41,615 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+1 ms
+2026-08-08 11:04:41,616 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:04:41,618 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:04:41,620 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:04:41,620 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:04:41,621 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:04:41,622 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:04:41,623 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:04:41,624 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:04:41,625 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:05:56,369 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+6 ms
+2026-08-08 11:05:56,370 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+0 ms
+2026-08-08 11:06:09,849 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+5 ms
+2026-08-08 11:06:09,853 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:17
+3 ms
+2026-08-08 11:06:12,977 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+2 ms
+2026-08-08 11:06:12,980 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+1 ms
+2026-08-08 11:06:19,445 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+2 ms
+2026-08-08 11:06:19,448 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:17
+2 ms
+2026-08-08 11:06:22,761 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+2 ms
+2026-08-08 11:06:22,764 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+1 ms
+2026-08-08 11:06:29,761 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:06:29,765 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:17
+2 ms
+2026-08-08 11:06:35,993 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:06:35,996 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:06:36,000 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+3 ms
+2026-08-08 11:06:36,002 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:06:36,004 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:06:36,009 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+3 ms
+2026-08-08 11:06:36,011 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:06:36,013 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:06:36,015 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:06:36,017 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:06:36,019 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:0
+1 ms
+2026-08-08 11:06:36,023 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+2 ms
+2026-08-08 11:06:36,024 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:06:36,026 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:06:36,029 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+2 ms
+2026-08-08 11:06:36,031 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:06:52,245 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+3 ms
+2026-08-08 11:06:52,249 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:06:56,411 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:06:56,414 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+1 ms
+2026-08-08 11:06:56,418 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+3 ms
+2026-08-08 11:06:56,420 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:06:56,423 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:06:56,425 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:06:56,428 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:06:56,430 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:06:56,431 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:06:56,433 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:06:56,434 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:0
+1 ms
+2026-08-08 11:06:56,437 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+2 ms
+2026-08-08 11:06:56,438 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:06:56,440 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:06:56,441 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+0 ms
+2026-08-08 11:06:56,443 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:07:09,261 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+3 ms
+2026-08-08 11:07:09,269 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+6 ms
+2026-08-08 11:07:09,272 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+1 ms
+2026-08-08 11:07:09,275 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:07:09,278 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:07:09,280 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:07:09,282 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:07:09,284 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:07:09,286 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:07:09,288 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:07:09,291 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:07:09,293 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+1 ms
+2026-08-08 11:07:09,295 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:07:09,297 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:07:09,298 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:07:09,301 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+2 ms
+2026-08-08 11:07:21,561 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:07:21,563 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:07:21,568 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+3 ms
+2026-08-08 11:07:21,571 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:07:21,574 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:07:21,578 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+3 ms
+2026-08-08 11:07:21,580 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:07:21,582 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:07:21,584 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:07:21,588 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+3 ms
+2026-08-08 11:07:21,591 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:07:21,592 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+1 ms
+2026-08-08 11:07:21,594 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:07:21,597 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:07:21,599 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:07:21,600 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:07:35,679 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+3 ms
+2026-08-08 11:07:35,682 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+1 ms
+2026-08-08 11:07:35,687 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+3 ms
+2026-08-08 11:07:35,690 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:07:35,692 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:07:35,696 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:07:35,698 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:07:35,700 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:07:35,702 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:07:35,706 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+3 ms
+2026-08-08 11:07:35,709 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:07:35,710 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+1 ms
+2026-08-08 11:07:35,712 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:07:35,716 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:07:35,717 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:07:35,719 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:07:52,862 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:07:52,866 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:17
+3 ms
+2026-08-08 11:08:01,027 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:08:01,030 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:08:01,034 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+2 ms
+2026-08-08 11:08:01,036 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:08:01,039 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+1 ms
+2026-08-08 11:08:01,041 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:08:01,045 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+4 ms
+2026-08-08 11:08:01,048 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:08:01,049 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:08:01,051 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:08:01,053 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:08:01,056 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:1
+1 ms
+2026-08-08 11:08:01,058 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:08:01,059 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:08:01,061 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+1 ms
+2026-08-08 11:08:01,063 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:08:38,147 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+5 ms
+2026-08-08 11:08:38,152 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-08-08 11:08:38,154 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+1 ms
+2026-08-08 11:08:38,157 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:08:38,159 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:08:38,161 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:08:38,165 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+3 ms
+2026-08-08 11:08:38,168 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:08:38,169 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:08:38,171 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:08:38,175 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:08:38,176 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+1 ms
+2026-08-08 11:08:38,178 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:08:38,180 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:08:38,181 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:08:38,185 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+3 ms
+2026-08-08 11:09:02,927 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+2 ms
+2026-08-08 11:09:02,930 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+2 ms
+2026-08-08 11:09:07,243 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+4 ms
+2026-08-08 11:09:07,246 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+2 ms
+2026-08-08 11:09:07,250 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:09:07,252 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:09:07,254 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:09:07,256 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,260 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:07,262 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,264 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,265 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,267 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,270 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:07,272 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,274 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,275 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,277 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,279 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,281 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,283 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:07,284 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,286 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,287 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,288 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,291 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:07,292 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,294 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,295 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:07,296 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:09:07,297 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:09:07,299 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+1 ms
+2026-08-08 11:09:07,301 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+1 ms
+2026-08-08 11:09:10,260 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+3 ms
+2026-08-08 11:09:10,263 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+2 ms
+2026-08-08 11:09:10,267 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:10,270 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,272 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,276 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:09:10,279 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,281 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,282 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,284 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,287 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:10,289 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,291 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,293 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,296 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:10,298 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,299 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,301 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,302 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,303 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,304 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,307 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:10,309 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:10,311 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,312 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,313 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,314 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:10,315 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:09:10,318 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+2 ms
+2026-08-08 11:09:10,319 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:09:10,320 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:09:12,478 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+1 ms
+2026-08-08 11:09:12,481 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+2 ms
+2026-08-08 11:09:12,486 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:09:12,488 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,491 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:12,495 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:09:12,498 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,499 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,501 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,504 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:12,507 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,509 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,510 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,512 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,515 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:09:12,517 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,518 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,520 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,521 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:12,522 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:12,527 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:09:12,528 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,530 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:12,531 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:12,532 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:09:12,534 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,536 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:09:12,537 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:09:12,538 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:09:12,540 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:09:12,541 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:09:21,743 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:09:21,746 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:09:21,753 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+6 ms
+2026-08-08 11:09:21,755 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:09:21,759 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+3 ms
+2026-08-08 11:09:21,761 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:09:21,763 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+1 ms
+2026-08-08 11:09:21,766 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+1 ms
+2026-08-08 11:09:21,769 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+2 ms
+2026-08-08 11:09:21,772 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+1 ms
+2026-08-08 11:09:32,864 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+3 ms
+2026-08-08 11:09:32,868 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+2 ms
+2026-08-08 11:09:32,873 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+4 ms
+2026-08-08 11:09:36,779 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:12
+2 ms
+2026-08-08 11:09:36,781 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:09:48,644 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:09:48,646 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:09:48,651 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:09:48,654 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:09:48,656 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:09:48,660 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:09:48,662 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:09:48,664 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:09:48,666 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:09:48,670 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+3 ms
+2026-08-08 11:09:48,672 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:09:48,674 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:09:48,676 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:09:48,678 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+1 ms
+2026-08-08 11:09:48,681 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+3 ms
+2026-08-08 11:09:48,684 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+2 ms
+2026-08-08 11:09:48,685 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:09:48,687 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:09:48,689 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:09:48,692 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+2 ms
+2026-08-08 11:09:48,693 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:09:48,695 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:09:48,696 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:09:48,697 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:09:48,700 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+2 ms
+2026-08-08 11:11:20,744 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+6 ms
+2026-08-08 11:11:20,747 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-08-08 11:12:00,044 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-08-08 11:12:00,045 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,046 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,047 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,048 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,049 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,050 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,051 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,052 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,053 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,054 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-08-08 11:12:00,055 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:12:45,153 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:12:45,155 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:12:45,160 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+4 ms
+2026-08-08 11:12:45,163 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:12:45,165 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:12:45,168 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:12:45,170 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:12:45,172 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:12:45,175 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+2 ms
+2026-08-08 11:12:45,178 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+2 ms
+2026-08-08 11:12:45,180 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:12:45,181 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:12:45,183 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:12:45,185 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+1 ms
+2026-08-08 11:12:45,186 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+1 ms
+2026-08-08 11:12:45,192 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+4 ms
+2026-08-08 11:12:45,194 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:12:45,195 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:12:45,196 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:12:45,199 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+2 ms
+2026-08-08 11:12:45,200 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:12:45,202 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:12:45,203 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:12:45,204 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:12:45,207 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+2 ms
+2026-08-08 11:12:49,663 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+1 ms
+2026-08-08 11:12:49,666 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:17
+2 ms
+2026-08-08 11:12:50,711 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+2 ms
+2026-08-08 11:12:50,713 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+1 ms
+2026-08-08 11:12:51,514 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+4 ms
+2026-08-08 11:12:51,516 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+1 ms
+2026-08-08 11:12:51,520 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:12:51,522 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:12:51,523 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:12:51,525 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,527 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,530 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:12:51,532 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,533 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,535 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,536 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,537 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,542 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:12:51,543 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,544 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,545 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,547 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,548 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,551 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,552 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,553 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,554 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,555 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,556 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:12:51,557 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,559 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:12:51,561 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:12:51,562 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:12:51,563 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:12:51,564 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:12:52,929 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:12:52,931 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:12:52,936 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+3 ms
+2026-08-08 11:12:52,938 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:12:52,941 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:12:52,945 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+3 ms
+2026-08-08 11:12:52,948 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+1 ms
+2026-08-08 11:12:52,951 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+2 ms
+2026-08-08 11:12:52,953 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+1 ms
+2026-08-08 11:12:52,955 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+1 ms
+2026-08-08 11:12:55,027 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+1 ms
+2026-08-08 11:12:55,030 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+2 ms
+2026-08-08 11:12:55,034 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+3 ms
+2026-08-08 11:12:56,062 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:12
+2 ms
+2026-08-08 11:12:56,065 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:12:57,932 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+3 ms
+2026-08-08 11:13:21,971 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+3 ms
+2026-08-08 11:13:22,247 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:13:22,249 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:13:22,252 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:22,253 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:22,254 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:22,255 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:22,256 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:22,256 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:22,258 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:22,258 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:22,259 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:22,262 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:22,262 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:22,263 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:22,264 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:22,265 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:22,266 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:22,268 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+1 ms
+2026-08-08 11:13:22,269 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:22,269 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:22,270 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:22,271 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:22,273 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+2 ms
+2026-08-08 11:13:22,274 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:22,275 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:13:22,276 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:22,278 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:13:31,081 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+4 ms
+2026-08-08 11:13:31,087 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+4 ms
+2026-08-08 11:13:31,089 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,092 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:31,094 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:31,097 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:13:31,099 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:13:31,100 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:13:31,102 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:13:31,103 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:31,105 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:31,107 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:31,110 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,112 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:31,113 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:31,116 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+3 ms
+2026-08-08 11:13:31,119 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:31,120 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:31,121 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:31,122 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:31,123 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:31,124 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:31,125 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:13:31,129 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+2 ms
+2026-08-08 11:13:31,131 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:13:31,840 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,844 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:13:31,847 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:13:31,849 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:31,851 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:31,852 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:31,854 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:13:31,857 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:13:31,862 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+3 ms
+2026-08-08 11:13:31,864 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:31,867 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+2 ms
+2026-08-08 11:13:31,869 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:31,870 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,872 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+1 ms
+2026-08-08 11:13:31,873 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+1 ms
+2026-08-08 11:13:31,875 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+1 ms
+2026-08-08 11:13:31,878 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:13:31,880 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:31,881 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:31,882 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:31,884 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:31,885 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:31,887 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+2 ms
+2026-08-08 11:13:31,890 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+1 ms
+2026-08-08 11:13:31,892 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:13:31,987 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,989 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,990 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:31,992 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:31,994 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:31,995 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:31,996 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:31,997 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:31,999 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:32,001 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:32,003 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:32,005 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:32,006 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:32,007 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:32,009 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+1 ms
+2026-08-08 11:13:32,012 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+2 ms
+2026-08-08 11:13:32,013 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:32,014 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,015 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:32,017 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:32,018 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:32,019 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:32,021 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+2 ms
+2026-08-08 11:13:32,025 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+1 ms
+2026-08-08 11:13:32,026 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:13:32,120 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:32,121 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:32,123 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:32,124 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:32,126 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:32,127 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:32,128 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,129 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,130 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:32,131 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:32,132 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:32,136 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+3 ms
+2026-08-08 11:13:32,137 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:32,138 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:32,139 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:32,140 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+0 ms
+2026-08-08 11:13:32,141 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:32,143 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,145 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+2 ms
+2026-08-08 11:13:32,147 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:32,148 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:32,149 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:32,150 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:13:32,151 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:32,152 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:13:32,303 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:32,305 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:32,307 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:32,308 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:32,309 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:32,310 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:32,311 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,312 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,313 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:32,314 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:32,315 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:32,316 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:32,318 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:32,319 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:32,320 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:32,321 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+0 ms
+2026-08-08 11:13:32,322 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:32,323 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:32,324 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:13:32,325 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:32,327 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:32,330 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+2 ms
+2026-08-08 11:13:32,331 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:13:32,332 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:32,333 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:13:35,590 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:35,594 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:13:35,597 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:35,599 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:35,601 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:35,602 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:35,605 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:13:35,607 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:13:35,609 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:13:35,611 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:35,614 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+2 ms
+2026-08-08 11:13:35,617 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+2 ms
+2026-08-08 11:13:35,619 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:35,621 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+1 ms
+2026-08-08 11:13:35,623 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+1 ms
+2026-08-08 11:13:35,626 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+2 ms
+2026-08-08 11:13:35,628 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:13:35,629 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:13:35,631 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:35,632 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:35,635 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:35,637 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:13:35,638 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:17
+0 ms
+2026-08-08 11:13:35,640 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+1 ms
+2026-08-08 11:13:35,641 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:13:38,849 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+2 ms
+2026-08-08 11:13:53,503 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+1 ms
+2026-08-08 11:13:53,504 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-08-08 11:13:53,740 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+1 ms
+2026-08-08 11:13:53,742 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+0 ms
+2026-08-08 11:13:53,743 - db - INFO - 
+[DB]
+INSERT
+settings
+Rows:1
+0 ms
+2026-08-08 11:13:53,744 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:53,749 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+1 ms
+2026-08-08 11:13:53,750 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:0
+0 ms
+2026-08-08 11:13:53,750 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+2 ms
+2026-08-08 11:13:53,754 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+3 ms
+2026-08-08 11:13:53,754 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+2 ms
+2026-08-08 11:13:53,754 - db - INFO - 
+[DB]
+INSERT
+career_profiles
+Rows:1
+4 ms
+2026-08-08 11:13:53,758 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+3 ms
+2026-08-08 11:13:53,758 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+4 ms
+2026-08-08 11:13:53,758 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:13:53,760 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+0 ms
+2026-08-08 11:13:53,760 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:13:53,761 - db - INFO - 
+[DB]
+UPDATE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:13:53,761 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+2 ms
+2026-08-08 11:13:53,762 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-08-08 11:13:53,764 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+1 ms
+2026-08-08 11:13:53,765 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+3 ms
+2026-08-08 11:13:53,766 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 11:13:53,767 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 11:13:53,768 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 11:13:53,769 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:53,770 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:13:53,770 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:53,771 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 11:13:53,791 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:0
+0 ms
+2026-08-08 11:13:53,792 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,028 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,030 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+0 ms
+2026-08-08 11:13:54,031 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:0
+2 ms
+2026-08-08 11:13:54,033 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:13:54,033 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:13:54,034 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 11:13:54,035 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,036 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,037 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+0 ms
+2026-08-08 11:13:54,038 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:0
+0 ms
+2026-08-08 11:13:54,038 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 11:13:54,039 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 11:13:54,040 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,041 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:13:54,042 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,043 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 11:13:54,048 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:13:54,291 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:13:54,292 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:13:54,296 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,297 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,298 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,299 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:54,300 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,301 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,302 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,303 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,303 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:54,304 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:54,306 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:54,307 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:54,308 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,308 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:54,309 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:54,311 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+1 ms
+2026-08-08 11:13:54,312 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:54,313 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,314 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:54,315 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:54,317 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:54,317 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:54,318 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+0 ms
+2026-08-08 11:13:54,319 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:54,321 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:13:54,325 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+1 ms
+2026-08-08 11:13:54,563 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:13:54,564 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:13:54,568 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,569 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,570 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,570 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,571 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,572 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,573 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,574 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,575 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:54,575 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:54,578 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+2 ms
+2026-08-08 11:13:54,579 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:54,580 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,581 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:54,582 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:54,583 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+0 ms
+2026-08-08 11:13:54,583 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:54,584 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,585 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:54,586 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:54,588 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:13:54,589 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:54,590 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+0 ms
+2026-08-08 11:13:54,591 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:54,592 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:13:54,597 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:13:54,603 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,603 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,604 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,605 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,606 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,608 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,609 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,609 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,610 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:54,611 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:54,612 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:54,612 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:54,613 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:13:54,614 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+0 ms
+2026-08-08 11:13:54,615 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:13:54,616 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+0 ms
+2026-08-08 11:13:54,617 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:13:54,618 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,619 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:13:54,621 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:13:54,622 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:54,622 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:54,623 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+0 ms
+2026-08-08 11:13:54,624 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:54,625 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:13:54,630 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+0 ms
+2026-08-08 11:13:54,631 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+0 ms
+2026-08-08 11:13:54,642 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:13:54,643 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+0 ms
+2026-08-08 11:13:54,660 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+1 ms
+2026-08-08 11:13:54,660 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-08-08 11:13:54,662 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:13:54,662 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+1 ms
+2026-08-08 11:13:54,663 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,665 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,666 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,667 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+4 ms
+2026-08-08 11:13:54,669 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:13:54,670 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:13:54,676 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+4 ms
+2026-08-08 11:13:54,683 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+5 ms
+2026-08-08 11:13:54,688 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,694 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:13:54,695 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,697 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,702 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+4 ms
+2026-08-08 11:13:54,705 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:13:54,705 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,706 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,709 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:13:54,713 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,714 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,714 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,716 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:13:54,717 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,718 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,720 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:13:54,721 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,722 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,723 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,724 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:13:54,725 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:13:54,726 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:13:54,727 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:13:54,728 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:13:54,739 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,740 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:13:54,741 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:13:54,742 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:13:54,743 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:13:54,744 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:13:54,745 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+0 ms
+2026-08-08 11:13:54,745 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+0 ms
+2026-08-08 11:13:54,746 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+0 ms
+2026-08-08 11:13:54,747 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+0 ms
+2026-08-08 11:13:54,755 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+0 ms
+2026-08-08 11:13:54,756 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:13:54,757 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:13:54,762 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:18
+0 ms
+2026-08-08 11:13:54,763 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:14:00,420 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+2 ms
+2026-08-08 11:14:00,705 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:14:00,706 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:14:00,712 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:14:00,712 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:14:00,713 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:14:00,714 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:14:00,715 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:14:00,716 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:14:00,717 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:14:00,719 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:14:00,720 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:14:00,721 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:14:00,722 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:14:00,722 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:14:00,723 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:14:00,725 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+1 ms
+2026-08-08 11:14:00,726 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:14:00,728 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+2 ms
+2026-08-08 11:14:00,730 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:14:00,731 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:14:00,731 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:14:00,732 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:14:00,733 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:14:00,734 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:14:00,735 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+0 ms
+2026-08-08 11:14:00,735 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:14:00,737 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:14:07,927 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:14:07,932 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:14:07,934 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:14:07,936 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:14:07,939 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:14:07,941 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:14:07,945 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:14:07,947 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:14:07,949 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:14:07,950 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:14:07,952 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:14:07,955 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+2 ms
+2026-08-08 11:14:07,958 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:14:07,960 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:5
+1 ms
+2026-08-08 11:14:07,962 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+1 ms
+2026-08-08 11:14:07,966 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+3 ms
+2026-08-08 11:14:07,967 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:14:07,968 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:14:07,970 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:14:07,971 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:14:07,972 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:14:07,974 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:14:07,977 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+1 ms
+2026-08-08 11:14:07,978 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:14:07,980 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:14:12,616 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+2 ms
+2026-08-08 11:14:12,620 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+2 ms
+2026-08-08 11:14:25,277 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+3 ms
+2026-08-08 11:14:25,280 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+1 ms
+2026-08-08 11:14:28,628 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+3 ms
+2026-08-08 11:14:28,631 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+2 ms
+2026-08-08 11:14:28,635 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+3 ms
+2026-08-08 11:14:28,638 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:14:28,640 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:14:28,644 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:14:28,646 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,648 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,650 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,652 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,656 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:14:28,657 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,659 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,661 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,663 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,665 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,666 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,668 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,669 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,670 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,672 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,674 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,676 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:14:28,677 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,679 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,680 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,681 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:14:28,682 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:14:28,684 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+1 ms
+2026-08-08 11:14:28,686 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+1 ms
+2026-08-08 11:14:28,687 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:14:36,845 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:14:36,851 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+4 ms
+2026-08-08 11:14:36,855 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+3 ms
+2026-08-08 11:14:36,858 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:14:36,860 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:14:36,864 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+3 ms
+2026-08-08 11:14:36,866 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+1 ms
+2026-08-08 11:14:36,869 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+2 ms
+2026-08-08 11:14:36,871 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+1 ms
+2026-08-08 11:14:36,875 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+3 ms
+2026-08-08 11:14:43,895 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+2 ms
+2026-08-08 11:14:43,898 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+1 ms
+2026-08-08 11:14:43,902 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+2 ms
+2026-08-08 11:14:47,944 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:19
+2 ms
+2026-08-08 11:14:47,946 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:15:00,977 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:18
+3 ms
+2026-08-08 11:15:00,980 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+2 ms
+2026-08-08 11:15:00,985 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+3 ms
+2026-08-08 11:15:01,845 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:15:01,847 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:15:01,852 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+4 ms
+2026-08-08 11:15:01,855 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:15:01,857 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:15:01,862 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+3 ms
+2026-08-08 11:15:01,864 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+1 ms
+2026-08-08 11:15:01,866 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+1 ms
+2026-08-08 11:15:01,868 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+1 ms
+2026-08-08 11:15:01,871 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+3 ms
+2026-08-08 11:15:07,362 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:15:07,365 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+1 ms
+2026-08-08 11:15:14,463 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:15:14,466 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:15:14,470 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:1
+2 ms
+2026-08-08 11:15:14,472 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:15:14,475 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:15:14,478 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+3 ms
+2026-08-08 11:15:14,482 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:15:14,484 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:15:14,486 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:15:14,489 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+2 ms
+2026-08-08 11:15:14,492 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:15:14,493 - db - INFO - 
+[DB]
+SELECT ONE
+user_problem_analytics
+Rows:0
+1 ms
+2026-08-08 11:15:14,495 - db - INFO - 
+[DB]
+SELECT
+user_topic_scores
+Rows:0
+1 ms
+2026-08-08 11:15:14,497 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:15:14,499 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+Rows:0
+2 ms
+2026-08-08 11:15:14,501 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:15:32,996 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:15:33,001 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+3 ms
+2026-08-08 11:15:42,882 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+4 ms
+2026-08-08 11:15:42,886 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+2 ms
+2026-08-08 11:15:47,012 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+2 ms
+2026-08-08 11:15:47,015 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:15:49,808 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+1 ms
+2026-08-08 11:15:49,812 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+2 ms
+2026-08-08 11:15:52,042 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:15:52,046 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+2 ms
+2026-08-08 11:16:03,756 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+1 ms
+2026-08-08 11:16:03,758 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:15
+1 ms
+2026-08-08 11:16:25,480 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+3 ms
+2026-08-08 11:16:25,483 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:16:25,486 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+2 ms
+2026-08-08 11:16:25,488 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:16:25,491 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:16:25,493 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:16:25,499 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:5
+4 ms
+2026-08-08 11:16:25,501 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+1 ms
+2026-08-08 11:16:25,503 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+1 ms
+2026-08-08 11:16:25,507 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+2 ms
+2026-08-08 11:18:17,025 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+4 ms
+2026-08-08 11:18:17,030 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:18
+3 ms
+2026-08-08 11:18:31,970 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:18:31,974 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:15
+3 ms
+2026-08-08 11:20:23,796 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:20:24,035 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+1 ms
+2026-08-08 11:20:24,036 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:20:24,041 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,042 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,043 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,044 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,044 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,045 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,047 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:24,048 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:24,049 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+1 ms
+2026-08-08 11:20:24,050 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:24,051 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,052 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,054 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:20:24,054 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:4
+0 ms
+2026-08-08 11:20:24,055 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:20:24,056 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+0 ms
+2026-08-08 11:20:24,057 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:20:24,059 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:20:24,060 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:20:24,061 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:24,062 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,063 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:20:24,064 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+0 ms
+2026-08-08 11:20:24,065 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:20:24,066 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:20:24,071 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+0 ms
+2026-08-08 11:20:24,072 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:4
+0 ms
+2026-08-08 11:20:24,075 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,075 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,076 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,077 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,079 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:20:24,080 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,081 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:24,082 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:24,082 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:20:24,083 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:24,084 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,085 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,086 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:24,086 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:4
+0 ms
+2026-08-08 11:20:24,087 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:20:24,088 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+0 ms
+2026-08-08 11:20:24,089 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+1 ms
+2026-08-08 11:20:24,091 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:20:24,092 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:20:24,093 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:24,094 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,095 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:20:24,096 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+0 ms
+2026-08-08 11:20:24,097 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:20:24,098 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:20:24,101 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:20:24,102 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+0 ms
+2026-08-08 11:20:24,105 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+0 ms
+2026-08-08 11:20:24,106 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+0 ms
+2026-08-08 11:20:24,107 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,108 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:24,109 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:20:24,110 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,111 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,112 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,113 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,114 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,115 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,116 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,116 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,117 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,118 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,120 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:24,121 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,122 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,123 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,124 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,124 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,125 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,126 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,127 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:24,130 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:20:24,131 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,132 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:24,133 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:20:24,134 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:20:24,134 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:20:24,135 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:20:24,138 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:24,140 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:20:24,141 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:20:24,142 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:24,143 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:20:24,143 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:24,145 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:4
+0 ms
+2026-08-08 11:20:24,146 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+0 ms
+2026-08-08 11:20:24,146 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+0 ms
+2026-08-08 11:20:24,147 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+0 ms
+2026-08-08 11:20:24,152 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+0 ms
+2026-08-08 11:20:24,152 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:20:24,153 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+0 ms
+2026-08-08 11:20:24,156 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:23
+0 ms
+2026-08-08 11:20:24,157 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:20:26,611 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+5 ms
+2026-08-08 11:20:26,614 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:4
+1 ms
+2026-08-08 11:20:28,846 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+3 ms
+2026-08-08 11:20:28,848 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:4
+1 ms
+2026-08-08 11:20:30,530 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:20:30,531 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:30,532 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:30,533 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:30,533 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:30,534 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:20:30,535 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:30,536 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:30,537 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:20:30,537 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:30,538 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:30,539 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:30,540 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:20:30,540 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:4
+0 ms
+2026-08-08 11:20:30,541 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:20:30,545 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+3 ms
+2026-08-08 11:20:30,546 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:20:30,547 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:20:30,548 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:20:30,548 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:20:30,549 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:20:30,550 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:20:30,551 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+0 ms
+2026-08-08 11:20:30,552 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:20:30,555 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+2 ms
+2026-08-08 11:20:33,767 - db - INFO - 
+[DB]
+SELECT ONE
+users u
+Rows:1
+2 ms
+2026-08-08 11:20:33,772 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:4
+4 ms
+2026-08-08 11:20:34,330 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:1
+2 ms
+2026-08-08 11:20:34,333 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+Rows:17
+1 ms
+2026-08-08 11:20:36,466 - db - INFO - 
+[DB]
+SELECT ONE
+problems p
+Rows:1
+3 ms
+2026-08-08 11:20:36,469 - db - INFO - 
+[DB]
+SELECT
+problems p
+            LEFT JOIN (
+                SELECT 
+                    problem_id,
+                    COUNT(*) as total_attempts,
+                    SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
+                    SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
+                    ROUND(AVG(execution_time), 1) as avg_runtime
+Rows:25
+2 ms
+2026-08-08 11:20:36,474 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+3 ms
+2026-08-08 11:20:36,477 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+2 ms
+2026-08-08 11:20:36,480 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:20:36,484 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:20:36,486 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,488 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,490 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,493 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:20:36,495 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,497 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,499 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,500 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,504 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+3 ms
+2026-08-08 11:20:36,506 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:36,507 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:36,508 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:36,509 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:36,512 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,514 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,516 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:36,517 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,519 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,520 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:20:36,522 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:20:36,525 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+2 ms
+2026-08-08 11:20:36,526 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id 
+            GROUP BY ps.problem_id 
+            ORDER BY count DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:20:36,527 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:20:36,529 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps 
+            JOIN problems p ON ps.problem_id = p.id
+Rows:1
+0 ms
+2026-08-08 11:20:36,530 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions ps
+            JOIN problems p ON ps.problem_id = p.id
+            GROUP BY ps.problem_id
+            HAVING total >= 2
+            ORDER BY rate ASC, total DESC LIMIT 1
+Rows:1
+0 ms
+2026-08-08 11:20:37,862 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:20:37,865 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:20:37,869 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+3 ms
+2026-08-08 11:20:37,871 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+1 ms
+2026-08-08 11:20:37,873 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+1 ms
+2026-08-08 11:20:37,874 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+1 ms
+2026-08-08 11:20:37,879 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+Rows:4
+4 ms
+2026-08-08 11:20:37,883 - db - INFO - 
+[DB]
+SELECT
+chat_history 
+            GROUP BY day_date 
+            ORDER BY day_date DESC 
+            LIMIT 7
+Rows:4
+1 ms
+2026-08-08 11:20:37,885 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY week_num
+            ORDER BY week_num DESC
+            LIMIT 4
+Rows:2
+1 ms
+2026-08-08 11:20:37,888 - db - INFO - 
+[DB]
+SELECT
+chat_history
+            GROUP BY month_num
+            ORDER BY month_num DESC
+            LIMIT 6
+Rows:1
+2 ms
+2026-08-08 11:20:38,794 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+3 ms
+2026-08-08 11:20:38,797 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+1 ms
+2026-08-08 11:20:38,800 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+1 ms
+2026-08-08 11:20:46,519 - db - INFO - 
+[DB]
+SELECT
+admin_audit_logs ORDER BY created_at DESC LIMIT ? OFFSET ?
+Rows:23
+3 ms
+2026-08-08 11:20:46,524 - db - INFO - 
+[DB]
+SELECT ONE
+admin_audit_logs
+Rows:1
+2 ms
+2026-08-08 11:20:48,095 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+2 ms
+2026-08-08 11:20:48,099 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+2 ms
+2026-08-08 11:20:48,103 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+3 ms
+2026-08-08 11:20:54,506 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+3 ms
+2026-08-08 11:21:08,583 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+9 ms
+2026-08-08 11:21:08,856 - db - INFO - 
+[DB]
+UPDATE
+admin_users
+Rows:1
+0 ms
+2026-08-08 11:21:08,858 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+0 ms
+2026-08-08 11:21:08,863 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:08,864 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:08,865 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:08,866 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:21:08,867 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:21:08,868 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:21:08,870 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:21:08,871 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:21:08,872 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:21:08,873 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:21:08,874 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:21:08,875 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:21:08,875 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:08,876 - db - INFO - 
+[DB]
+SELECT
+users 
+            GROUP BY reg_date 
+            ORDER BY reg_date ASC 
+            LIMIT 14
+Rows:4
+0 ms
+2026-08-08 11:21:08,877 - db - INFO - 
+[DB]
+SELECT
+problem_submissions 
+            GROUP BY sub_date 
+            ORDER BY sub_date ASC 
+            LIMIT 14
+Rows:1
+0 ms
+2026-08-08 11:21:08,881 - db - INFO - 
+[DB]
+SELECT
+problems 
+            GROUP BY difficulty
+Rows:3
+3 ms
+2026-08-08 11:21:08,882 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:3
+0 ms
+2026-08-08 11:21:08,883 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:21:08,884 - db - INFO - 
+[DB]
+SELECT ONE
+code_reviews
+Rows:1
+0 ms
+2026-08-08 11:21:08,884 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:21:08,885 - db - INFO - 
+[DB]
+SELECT ONE
+ai_problem_feedback
+Rows:1
+0 ms
+2026-08-08 11:21:08,886 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+0 ms
+2026-08-08 11:21:08,887 - db - INFO - 
+[DB]
+SELECT
+users ORDER BY created_at DESC LIMIT 20
+Rows:4
+0 ms
+2026-08-08 11:21:08,888 - db - INFO - 
+[DB]
+SELECT
+problem_submissions ps
+            LEFT JOIN users u ON ps.user_id = u.id
+            LEFT JOIN problems p ON ps.problem_id = p.id
+            ORDER BY ps.created_at DESC
+            LIMIT 30
+Rows:17
+0 ms
+2026-08-08 11:21:08,890 - db - INFO - 
+[DB]
+SELECT
+chat_history ch
+            LEFT JOIN users u ON ch.user_id = u.id
+            ORDER BY ch.created_at DESC
+            LIMIT 20
+Rows:20
+2 ms
+2026-08-08 11:21:13,601 - db - INFO - 
+[DB]
+INSERT
+admin_audit_logs
+Rows:1
+1 ms
+2026-08-08 11:21:25,774 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:0
+3 ms
+2026-08-08 11:21:25,776 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:21:26,049 - db - INFO - 
+[DB]
+UPDATE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:26,053 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:26,053 - db - INFO - 
+[DB]
+SELECT ONE
+resume_versions
+Rows:1
+2 ms
+2026-08-08 11:21:26,054 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:1
+3 ms
+2026-08-08 11:21:26,056 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-08-08 11:21:26,058 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+3 ms
+2026-08-08 11:21:26,058 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+3 ms
+2026-08-08 11:21:26,063 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+6 ms
+2026-08-08 11:21:26,065 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+0 ms
+2026-08-08 11:21:26,066 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+0 ms
+2026-08-08 11:21:26,067 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+0 ms
+2026-08-08 11:21:26,068 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+0 ms
+2026-08-08 11:21:26,069 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 11:21:26,070 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+0 ms
+2026-08-08 11:21:26,070 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+0 ms
+2026-08-08 11:21:26,071 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-08-08 11:21:26,072 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+0 ms
+2026-08-08 11:21:42,507 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+4 ms
+2026-08-08 11:21:42,510 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,513 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,515 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,518 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,520 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,524 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-08-08 11:21:42,526 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,528 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,530 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,533 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,535 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,537 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,539 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,540 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,542 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,544 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:21:42,546 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,548 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:42,549 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:21:51,115 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+2 ms
+2026-08-08 11:21:51,119 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+3 ms
+2026-08-08 11:21:56,020 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+2 ms
+2026-08-08 11:21:56,023 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 11:21:59,143 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+2 ms
+2026-08-08 11:21:59,146 - db - INFO - 
+[DB]
+SELECT
+chat_sessions cs
+            LEFT JOIN chat_history ch ON cs.session_id = ch.session_id
+Rows:1
+2 ms
+2026-08-08 11:22:09,051 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+3 ms
+2026-08-08 11:22:09,057 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+4 ms
+2026-08-08 11:22:09,062 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+3 ms
+2026-08-08 11:22:09,064 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 11:22:09,066 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+2 ms
+2026-08-08 11:22:09,068 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+1 ms
+2026-08-08 11:22:09,070 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-08-08 11:22:09,071 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+0 ms
+2026-08-08 11:22:09,073 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+1 ms
+2026-08-08 11:22:09,075 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:22:09,080 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+4 ms
+2026-08-08 11:22:09,082 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms
+2026-08-08 11:22:13,094 - db - INFO - 
+[DB]
+SELECT
+learning_roadmaps
+Rows:0
+1 ms
+2026-08-08 11:22:13,097 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+2 ms
+2026-08-08 11:22:13,101 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+3 ms
+2026-08-08 11:22:17,944 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+2 ms
+2026-08-08 11:22:17,948 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+2 ms
+2026-08-08 11:22:17,952 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+3 ms
+2026-08-08 11:22:21,623 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:1
+3 ms
+2026-08-08 11:22:21,623 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+3 ms
+2026-08-08 11:22:21,627 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:0
+3 ms
+2026-08-08 11:22:21,628 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+3 ms
+2026-08-08 11:22:21,638 - db - INFO - 
+[DB]
+SELECT
+job_history
+Rows:50
+9 ms
+2026-08-08 11:22:21,641 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+1 ms
+2026-08-08 11:22:24,803 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+3 ms
+2026-08-08 11:22:24,807 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+2 ms
+2026-08-08 11:22:24,809 - db - INFO - 
+[DB]
+SELECT ONE
+agent_profiles
+Rows:1
+1 ms
+2026-08-08 11:22:24,810 - db - INFO - 
+[DB]
+SELECT ONE
+agent_runs
+Rows:1
+0 ms
+2026-08-08 11:22:24,996 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+4 ms
+2026-08-08 11:22:24,999 - db - INFO - 
+[DB]
+SELECT ONE
+agent_profiles
+Rows:1
+6 ms
+2026-08-08 11:22:25,002 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+8 ms
+2026-08-08 11:22:25,003 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+2 ms
+2026-08-08 11:22:25,004 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+1 ms
+2026-08-08 11:22:25,005 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+0 ms
+2026-08-08 11:22:25,006 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:10
+1 ms
+2026-08-08 11:22:25,007 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+0 ms
+2026-08-08 11:22:25,193 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,196 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,199 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,201 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,203 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,205 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,207 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,210 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,212 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,214 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,216 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,219 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+1 ms
+2026-08-08 11:22:25,220 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,222 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,224 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,225 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,227 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,230 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+2 ms
+2026-08-08 11:22:25,233 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,234 - db - INFO - 
+[DB]
+INSERT
+job_history
+Rows:1
+0 ms
+2026-08-08 11:22:25,819 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+2 ms
+2026-08-08 11:22:25,823 - db - INFO - 
+[DB]
+SELECT ONE
+job_notifications
+Rows:1
+1 ms
+2026-08-08 11:22:25,827 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:10
+2 ms
+2026-08-08 11:22:25,829 - db - INFO - 
+[DB]
+SELECT
+job_notifications
+Rows:25
+1 ms
+2026-08-08 11:22:48,629 - db - INFO - 
+[DB]
+SELECT
+problems
+Rows:105
+6 ms
+2026-08-08 11:22:48,819 - db - INFO - 
+[DB]
+SELECT ONE
+problems
+Rows:1
+1 ms
+2026-08-08 11:22:48,821 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:22:48,822 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:22:48,824 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+1 ms
+2026-08-08 11:22:48,825 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:22:48,826 - db - INFO - 
+[DB]
+SELECT
+problems p 
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-08-08 11:22:48,827 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:1
+0 ms
+2026-08-08 11:22:48,828 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+1 ms
+2026-08-08 11:22:48,830 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-08-08 11:22:48,831 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:22:48,832 - db - INFO - 
+[DB]
+SELECT
+problem_submissions s
+            JOIN problems p ON s.problem_id = p.id
+Rows:0
+1 ms
+2026-08-08 11:22:48,834 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+1 ms
+2026-08-08 11:22:48,835 - db - INFO - 
+[DB]
+SELECT
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:22:48,836 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-08-08 11:22:48,837 - db - INFO - 
+[DB]
+SELECT
+problems p
+            JOIN problem_submissions s ON p.id = s.problem_id
+Rows:0
+0 ms
+2026-08-08 11:22:48,838 - db - INFO - 
+[DB]
+SELECT ONE
+problem_submissions
+Rows:0
+0 ms
+2026-08-08 11:22:56,038 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+3 ms
+2026-08-08 11:22:56,041 - db - INFO - 
+[DB]
+SELECT
+chat_sessions cs
+            LEFT JOIN chat_history ch ON cs.session_id = ch.session_id
+Rows:1
+2 ms
+2026-08-08 11:22:59,961 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:0
+2 ms
+2026-08-08 11:22:59,964 - db - INFO - 
+[DB]
+SELECT
+chat_sessions cs
+            LEFT JOIN chat_history ch ON cs.session_id = ch.session_id
+Rows:1
+2 ms
+2026-08-08 11:23:00,805 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+2 ms
+2026-08-08 11:23:00,808 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+2 ms
+2026-08-08 11:23:00,815 - db - INFO - 
+[DB]
+SELECT ONE
+job_history
+Rows:1
+5 ms
+2026-08-08 11:23:00,817 - db - INFO - 
+[DB]
+SELECT ONE
+interview_history
+Rows:1
+1 ms
+2026-08-08 11:23:00,819 - db - INFO - 
+[DB]
+SELECT
+chat_history
+Rows:4
+1 ms
+2026-08-08 11:23:00,822 - db - INFO - 
+[DB]
+SELECT
+resumes
+Rows:1
+2 ms
+2026-08-08 11:23:00,825 - db - INFO - 
+[DB]
+SELECT ONE
+learning_roadmaps
+Rows:0
+1 ms
+2026-08-08 11:23:00,827 - db - INFO - 
+[DB]
+SELECT
+interview_history
+Rows:0
+1 ms
+2026-08-08 11:23:00,829 - db - INFO - 
+[DB]
+SELECT ONE
+chat_history
+Rows:1
+2 ms
+2026-08-08 11:23:00,833 - db - INFO - 
+[DB]
+SELECT ONE
+career_profiles
+Rows:1
+2 ms
+2026-08-08 11:23:00,835 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+1 ms
+2026-08-08 11:23:00,837 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:0
+1 ms

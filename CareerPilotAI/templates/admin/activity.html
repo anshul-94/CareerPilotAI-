@@ -1,0 +1,40 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Activity Feed{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <div>
+        <h1 class="admin-title">Activity Timeline</h1>
+        <p class="admin-subtitle">Chronological record of user registrations, submissions, problem solving, and AI interactions.</p>
+    </div>
+    <div>
+        <span class="adm-badge adm-badge-info" style="padding: 4px 10px; font-size: 0.75rem;">
+            Showing Last {{ events|length }} Events
+        </span>
+    </div>
+</div>
+
+<div class="adm-card">
+    {% if events %}
+        <div class="adm-timeline">
+            {% for act in events %}
+                <div class="adm-timeline-item">
+                    <div class="adm-timeline-dot">{{ act.icon }}</div>
+                    <div class="adm-timeline-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.5rem;">
+                            <strong style="color: var(--text-primary); font-size: 0.85rem;">{{ act.title }}</strong>
+                            <span style="font-size: 0.75rem; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">{{ act.timestamp }}</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">{{ act.detail }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p style="text-align: center; padding: 2.5rem; color: var(--text-muted); font-size: 0.85rem;">
+            No activity events recorded yet.
+        </p>
+    {% endif %}
+</div>
+{% endblock %}

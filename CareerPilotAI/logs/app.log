@@ -3485,3 +3485,1497 @@ GET /problem_solving/problem/23
 User: 13
 Status: 200
 Duration: 26ms
+2026-07-28 12:45:17,413 - app - INFO - 
+[12:45:17]
+GET /
+User: Guest
+Status: 200
+Duration: 23ms
+2026-07-28 12:45:17,705 - app - INFO - 
+[12:45:17]
+GET /favicon.ico
+User: Guest
+Status: 404
+Duration: 3ms
+2026-07-28 12:45:37,577 - app - INFO - 
+[12:45:37]
+GET /login
+User: Guest
+Status: 200
+Duration: 6ms
+2026-07-28 12:45:47,239 - app - INFO - 
+[12:45:47]
+POST /login
+User: 12
+Status: 302
+Duration: 287ms
+2026-07-28 12:45:47,274 - app - INFO - 
+[12:45:47]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 30ms
+2026-07-28 12:46:17,470 - app - INFO - 
+[12:46:17]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 33ms
+2026-07-28 12:48:28,185 - app - INFO - 
+[12:48:28]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 47ms
+2026-07-28 12:48:28,470 - app - INFO - 
+[12:48:28]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 31ms
+2026-07-28 12:48:31,444 - app - INFO - 
+[12:48:31]
+GET /problem_solving/problem/23
+User: 12
+Status: 200
+Duration: 33ms
+2026-07-28 12:48:39,581 - app - INFO - 
+[12:48:39]
+GET /chat/
+User: 12
+Status: 200
+Duration: 28ms
+2026-07-28 12:48:59,263 - app - INFO - 
+[12:48:59]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 19ms
+2026-08-08 10:46:24,690 - app - INFO - 
+[10:46:24]
+GET /
+User: Guest
+Status: 200
+Duration: 17ms
+2026-08-08 10:46:29,655 - app - INFO - 
+[10:46:29]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:46:30,064 - app - INFO - 
+[10:46:30]
+GET /favicon.ico
+User: Guest
+Status: 404
+Duration: 1ms
+2026-08-08 10:46:42,549 - app - INFO - 
+[10:46:42]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 10:46:49,702 - app - INFO - 
+[10:46:49]
+GET /login
+User: Guest
+Status: 200
+Duration: 6ms
+2026-08-08 10:47:01,454 - app - INFO - 
+[10:47:01]
+GET /register
+User: Guest
+Status: 200
+Duration: 3ms
+2026-08-08 10:47:07,664 - app - INFO - 
+[10:47:07]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:48:22,141 - app - INFO - 
+[10:48:22]
+GET /register
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 10:48:25,635 - app - INFO - 
+[10:48:25]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 10:48:36,666 - app - INFO - 
+[10:48:36]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:49:59,000 - app - INFO - 
+[10:49:59]
+POST /register
+User: Guest
+Status: 302
+Duration: 287ms
+2026-08-08 10:49:59,011 - app - INFO - 
+[10:49:59]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:50:12,229 - app - INFO - 
+[10:50:12]
+POST /login
+User: 14
+Status: 302
+Duration: 286ms
+2026-08-08 10:50:12,266 - app - INFO - 
+[10:50:12]
+GET /dashboard
+User: 14
+Status: 200
+Duration: 33ms
+2026-08-08 10:51:05,509 - app - INFO - 
+[10:51:05]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 10:51:05,515 - app - INFO - 
+[10:51:05]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:53:36,454 - app - INFO - 
+[10:53:36]
+GET /login
+User: Guest
+Status: 200
+Duration: 8ms
+2026-08-08 10:53:36,707 - app - INFO - 
+[10:53:36]
+POST /register
+User: 15
+Status: 302
+Duration: 248ms
+2026-08-08 10:53:36,743 - app - INFO - 
+[10:53:36]
+GET /dashboard
+User: 15
+Status: 200
+Duration: 33ms
+2026-08-08 10:53:36,756 - app - INFO - 
+[10:53:36]
+GET /dashboard
+User: 15
+Status: 200
+Duration: 11ms
+2026-08-08 10:53:36,758 - app - INFO - 
+[10:53:36]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 10:53:36,761 - app - INFO - 
+[10:53:36]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 10:53:36,762 - app - INFO - 
+[10:53:36]
+GET /dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 10:53:37,003 - app - INFO - 
+[10:53:37]
+POST /login
+User: 15
+Status: 302
+Duration: 238ms
+2026-08-08 10:53:37,016 - app - INFO - 
+[10:53:37]
+GET /dashboard
+User: 15
+Status: 200
+Duration: 12ms
+2026-08-08 10:54:17,431 - app - INFO - 
+[10:54:17]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 10:54:18,667 - app - INFO - 
+[10:54:18]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:54:20,773 - app - INFO - 
+[10:54:20]
+GET /
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 10:54:23,616 - app - INFO - 
+[10:54:23]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:54:24,984 - app - INFO - 
+[10:54:24]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:54:30,438 - app - INFO - 
+[10:54:30]
+GET /register
+User: Guest
+Status: 200
+Duration: 3ms
+2026-08-08 10:55:08,871 - app - INFO - 
+[10:55:08]
+POST /register
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 10:55:40,898 - app - INFO - 
+[10:55:40]
+POST /register
+User: 16
+Status: 302
+Duration: 284ms
+2026-08-08 10:55:40,920 - app - INFO - 
+[10:55:40]
+GET /dashboard
+User: 16
+Status: 200
+Duration: 16ms
+2026-08-08 10:56:56,091 - app - INFO - 
+[10:56:56]
+GET /
+User: 16
+Status: 200
+Duration: 2ms
+2026-08-08 10:56:58,502 - app - INFO - 
+[10:56:58]
+GET /
+User: 16
+Status: 200
+Duration: 0ms
+2026-08-08 10:57:14,197 - app - INFO - 
+[10:57:14]
+GET /dashboard
+User: 16
+Status: 200
+Duration: 41ms
+2026-08-08 10:57:15,887 - app - INFO - 
+[10:57:15]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 10:57:15,895 - app - INFO - 
+[10:57:15]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:57:19,449 - app - INFO - 
+[10:57:19]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 10:57:22,936 - app - INFO - 
+[10:57:22]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:01:25,212 - app - INFO - 
+[11:01:25]
+GET /
+User: Guest
+Status: 200
+Duration: 24ms
+2026-08-08 11:01:26,333 - app - INFO - 
+[11:01:26]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:01:33,698 - app - INFO - 
+[11:01:33]
+GET /admin
+User: Guest
+Status: 308
+Duration: 0ms
+2026-08-08 11:01:33,700 - app - INFO - 
+[11:01:33]
+GET /admin/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:01:33,703 - app - INFO - 
+[11:01:33]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:01:33,946 - app - INFO - 
+[11:01:33]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 240ms
+2026-08-08 11:01:33,985 - app - INFO - 
+[11:01:33]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 36ms
+2026-08-08 11:01:34,231 - app - INFO - 
+[11:01:34]
+POST /register
+User: 17
+Status: 302
+Duration: 244ms
+2026-08-08 11:01:34,261 - app - INFO - 
+[11:01:34]
+GET /dashboard
+User: 17
+Status: 200
+Duration: 27ms
+2026-08-08 11:01:34,263 - app - INFO - 
+[11:01:34]
+GET /admin/dashboard
+User: 17
+Status: 302
+Duration: 0ms
+2026-08-08 11:01:34,265 - app - INFO - 
+[11:01:34]
+POST /admin/api/users/1/status
+User: 17
+Status: 403
+Duration: 0ms
+2026-08-08 11:01:34,275 - app - INFO - 
+[11:01:34]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:01:34,300 - app - INFO - 
+[11:01:34]
+GET /admin/users/17
+User: Guest
+Status: 200
+Duration: 23ms
+2026-08-08 11:01:34,312 - app - INFO - 
+[11:01:34]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:01:34,350 - app - INFO - 
+[11:01:34]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 36ms
+2026-08-08 11:01:34,365 - app - INFO - 
+[11:01:34]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 12ms
+2026-08-08 11:01:34,372 - app - INFO - 
+[11:01:34]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 5ms
+2026-08-08 11:01:34,378 - app - INFO - 
+[11:01:34]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 5ms
+2026-08-08 11:01:34,381 - app - INFO - 
+[11:01:34]
+POST /admin/logout
+User: Guest
+Status: 302
+Duration: 1ms
+2026-08-08 11:01:34,383 - app - INFO - 
+[11:01:34]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:01:34,384 - app - INFO - 
+[11:01:34]
+GET /admin/dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:01:34,386 - app - INFO - 
+[11:01:34]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:01:34,389 - app - INFO - 
+[11:01:34]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:01:50,054 - app - INFO - 
+[11:01:50]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:01:51,469 - app - INFO - 
+[11:01:51]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:02:01,639 - app - INFO - 
+[11:02:01]
+POST /login
+User: Guest
+Status: 200
+Duration: 8ms
+2026-08-08 11:02:06,394 - app - INFO - 
+[11:02:06]
+POST /login
+User: Guest
+Status: 200
+Duration: 7ms
+2026-08-08 11:02:12,219 - app - INFO - 
+[11:02:12]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:03:32,907 - app - INFO - 
+[11:03:32]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:04:14,840 - app - INFO - 
+[11:04:14]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:04:19,271 - app - INFO - 
+[11:04:19]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:04:27,215 - app - INFO - 
+[11:04:27]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:04:41,595 - app - INFO - 
+[11:04:41]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 281ms
+2026-08-08 11:04:41,625 - app - INFO - 
+[11:04:41]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 25ms
+2026-08-08 11:05:56,372 - app - INFO - 
+[11:05:56]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:06:09,858 - app - INFO - 
+[11:06:09]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 14ms
+2026-08-08 11:06:12,983 - app - INFO - 
+[11:06:12]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 7ms
+2026-08-08 11:06:19,453 - app - INFO - 
+[11:06:19]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:06:22,768 - app - INFO - 
+[11:06:22]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:06:29,768 - app - INFO - 
+[11:06:29]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:06:36,033 - app - INFO - 
+[11:06:36]
+GET /admin/users/17
+User: Guest
+Status: 200
+Duration: 41ms
+2026-08-08 11:06:52,251 - app - INFO - 
+[11:06:52]
+POST /admin/api/users/3/status
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:06:56,444 - app - INFO - 
+[11:06:56]
+GET /admin/users/3
+User: Guest
+Status: 200
+Duration: 35ms
+2026-08-08 11:07:09,302 - app - INFO - 
+[11:07:09]
+GET /admin/users/12
+User: Guest
+Status: 200
+Duration: 44ms
+2026-08-08 11:07:21,602 - app - INFO - 
+[11:07:21]
+GET /admin/users/7
+User: Guest
+Status: 200
+Duration: 42ms
+2026-08-08 11:07:35,720 - app - INFO - 
+[11:07:35]
+GET /admin/users/1
+User: Guest
+Status: 200
+Duration: 44ms
+2026-08-08 11:07:52,869 - app - INFO - 
+[11:07:52]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:08:01,066 - app - INFO - 
+[11:08:01]
+GET /admin/users/13
+User: Guest
+Status: 200
+Duration: 40ms
+2026-08-08 11:08:38,187 - app - INFO - 
+[11:08:38]
+GET /admin/users/12
+User: Guest
+Status: 200
+Duration: 44ms
+2026-08-08 11:09:02,937 - app - INFO - 
+[11:09:02]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 12ms
+2026-08-08 11:09:07,302 - app - INFO - 
+[11:09:07]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 63ms
+2026-08-08 11:09:10,321 - app - INFO - 
+[11:09:10]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 64ms
+2026-08-08 11:09:12,542 - app - INFO - 
+[11:09:12]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 65ms
+2026-08-08 11:09:21,773 - app - INFO - 
+[11:09:21]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 33ms
+2026-08-08 11:09:32,876 - app - INFO - 
+[11:09:32]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 14ms
+2026-08-08 11:09:36,784 - app - INFO - 
+[11:09:36]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 7ms
+2026-08-08 11:09:48,701 - app - INFO - 
+[11:09:48]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 59ms
+2026-08-08 11:10:25,938 - app - INFO - 
+[11:10:25]
+GET /
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:10:35,408 - app - INFO - 
+[11:10:35]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:11:20,749 - app - INFO - 
+[11:11:20]
+POST /login
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:12:45,144 - app - INFO - 
+[11:12:45]
+POST /login
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:12:45,222 - app - INFO - 
+[11:12:45]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 72ms
+2026-08-08 11:12:49,691 - app - INFO - 
+[11:12:49]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 29ms
+2026-08-08 11:12:50,738 - app - INFO - 
+[11:12:50]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 29ms
+2026-08-08 11:12:51,573 - app - INFO - 
+[11:12:51]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 64ms
+2026-08-08 11:12:52,962 - app - INFO - 
+[11:12:52]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 35ms
+2026-08-08 11:12:55,040 - app - INFO - 
+[11:12:55]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 14ms
+2026-08-08 11:12:56,080 - app - INFO - 
+[11:12:56]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 20ms
+2026-08-08 11:12:57,934 - app - INFO - 
+[11:12:57]
+POST /admin/logout
+User: Guest
+Status: 302
+Duration: 5ms
+2026-08-08 11:12:57,944 - app - INFO - 
+[11:12:57]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 5ms
+2026-08-08 11:13:04,563 - app - INFO - 
+[11:13:04]
+GET /
+User: Guest
+Status: 200
+Duration: 20ms
+2026-08-08 11:13:12,863 - app - INFO - 
+[11:13:12]
+GET /
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 11:13:14,678 - app - INFO - 
+[11:13:14]
+GET /login
+User: Guest
+Status: 200
+Duration: 4ms
+2026-08-08 11:13:22,249 - app - INFO - 
+[11:13:22]
+POST /login
+User: Guest
+Status: 302
+Duration: 283ms
+2026-08-08 11:13:22,283 - app - INFO - 
+[11:13:22]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 32ms
+2026-08-08 11:13:31,133 - app - INFO - 
+[11:13:31]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 56ms
+2026-08-08 11:13:31,893 - app - INFO - 
+[11:13:31]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 54ms
+2026-08-08 11:13:32,027 - app - INFO - 
+[11:13:32]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 41ms
+2026-08-08 11:13:32,153 - app - INFO - 
+[11:13:32]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 34ms
+2026-08-08 11:13:32,334 - app - INFO - 
+[11:13:32]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 32ms
+2026-08-08 11:13:35,576 - app - INFO - 
+[11:13:35]
+GET /admin
+User: Guest
+Status: 308
+Duration: 0ms
+2026-08-08 11:13:35,585 - app - INFO - 
+[11:13:35]
+GET /admin/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:13:35,642 - app - INFO - 
+[11:13:35]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 53ms
+2026-08-08 11:13:38,851 - app - INFO - 
+[11:13:38]
+POST /admin/logout
+User: Guest
+Status: 302
+Duration: 4ms
+2026-08-08 11:13:38,854 - app - INFO - 
+[11:13:38]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:13:46,477 - app - INFO - 
+[11:13:46]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:13:49,957 - app - INFO - 
+[11:13:49]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:13:53,748 - app - INFO - 
+[11:13:53]
+POST /register
+User: 18
+Status: 302
+Duration: 247ms
+2026-08-08 11:13:53,786 - app - INFO - 
+[11:13:53]
+GET /dashboard
+User: 18
+Status: 200
+Duration: 35ms
+2026-08-08 11:13:53,787 - app - INFO - 
+[11:13:53]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:13:53,789 - app - INFO - 
+[11:13:53]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:13:54,030 - app - INFO - 
+[11:13:54]
+POST /login
+User: 18
+Status: 302
+Duration: 239ms
+2026-08-08 11:13:54,046 - app - INFO - 
+[11:13:54]
+GET /dashboard
+User: 18
+Status: 200
+Duration: 14ms
+2026-08-08 11:13:54,293 - app - INFO - 
+[11:13:54]
+POST /login
+User: Guest
+Status: 302
+Duration: 245ms
+2026-08-08 11:13:54,322 - app - INFO - 
+[11:13:54]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 26ms
+2026-08-08 11:13:54,565 - app - INFO - 
+[11:13:54]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 242ms
+2026-08-08 11:13:54,593 - app - INFO - 
+[11:13:54]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 25ms
+2026-08-08 11:13:54,594 - app - INFO - 
+[11:13:54]
+GET /admin/dashboard
+User: 18
+Status: 302
+Duration: 0ms
+2026-08-08 11:13:54,598 - app - INFO - 
+[11:13:54]
+POST /admin/logout
+User: Guest
+Status: 302
+Duration: 2ms
+2026-08-08 11:13:54,599 - app - INFO - 
+[11:13:54]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:13:54,600 - app - INFO - 
+[11:13:54]
+GET /admin/dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-08-08 11:13:54,626 - app - INFO - 
+[11:13:54]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 23ms
+2026-08-08 11:13:54,639 - app - INFO - 
+[11:13:54]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:13:54,651 - app - INFO - 
+[11:13:54]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:13:54,735 - app - INFO - 
+[11:13:54]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 75ms
+2026-08-08 11:13:54,753 - app - INFO - 
+[11:13:54]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 14ms
+2026-08-08 11:13:54,759 - app - INFO - 
+[11:13:54]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 4ms
+2026-08-08 11:13:54,767 - app - INFO - 
+[11:13:54]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 5ms
+2026-08-08 11:14:00,708 - app - INFO - 
+[11:14:00]
+POST /login
+User: Guest
+Status: 302
+Duration: 291ms
+2026-08-08 11:14:00,738 - app - INFO - 
+[11:14:00]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 26ms
+2026-08-08 11:14:07,981 - app - INFO - 
+[11:14:07]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 57ms
+2026-08-08 11:14:12,623 - app - INFO - 
+[11:14:12]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:14:25,284 - app - INFO - 
+[11:14:25]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:14:28,688 - app - INFO - 
+[11:14:28]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 64ms
+2026-08-08 11:14:36,877 - app - INFO - 
+[11:14:36]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 34ms
+2026-08-08 11:14:43,905 - app - INFO - 
+[11:14:43]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:14:47,948 - app - INFO - 
+[11:14:47]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 6ms
+2026-08-08 11:15:00,987 - app - INFO - 
+[11:15:00]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 12ms
+2026-08-08 11:15:01,874 - app - INFO - 
+[11:15:01]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 31ms
+2026-08-08 11:15:07,369 - app - INFO - 
+[11:15:07]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:15:14,517 - app - INFO - 
+[11:15:14]
+GET /admin/users/12
+User: Guest
+Status: 200
+Duration: 57ms
+2026-08-08 11:15:33,003 - app - INFO - 
+[11:15:33]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:15:42,889 - app - INFO - 
+[11:15:42]
+POST /admin/api/users/18/status
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:15:47,019 - app - INFO - 
+[11:15:47]
+POST /admin/api/users/17/status
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:15:49,816 - app - INFO - 
+[11:15:49]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:15:52,049 - app - INFO - 
+[11:15:52]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 11:16:03,763 - app - INFO - 
+[11:16:03]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 8ms
+2026-08-08 11:16:25,508 - app - INFO - 
+[11:16:25]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 31ms
+2026-08-08 11:18:17,032 - app - INFO - 
+[11:18:17]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:18:31,978 - app - INFO - 
+[11:18:31]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:20:24,037 - app - INFO - 
+[11:20:24]
+POST /admin/login
+User: Guest
+Status: 302
+Duration: 242ms
+2026-08-08 11:20:24,067 - app - INFO - 
+[11:20:24]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 27ms
+2026-08-08 11:20:24,073 - app - INFO - 
+[11:20:24]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:20:24,098 - app - INFO - 
+[11:20:24]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 24ms
+2026-08-08 11:20:24,103 - app - INFO - 
+[11:20:24]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:20:24,136 - app - INFO - 
+[11:20:24]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 31ms
+2026-08-08 11:20:24,148 - app - INFO - 
+[11:20:24]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:20:24,154 - app - INFO - 
+[11:20:24]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:20:24,157 - app - INFO - 
+[11:20:24]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 11:20:24,158 - app - INFO - 
+[11:20:24]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:20:24,160 - app - INFO - 
+[11:20:24]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:20:26,616 - app - INFO - 
+[11:20:26]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:20:28,849 - app - INFO - 
+[11:20:28]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 6ms
+2026-08-08 11:20:30,555 - app - INFO - 
+[11:20:30]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 27ms
+2026-08-08 11:20:33,774 - app - INFO - 
+[11:20:33]
+GET /admin/users
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:20:34,336 - app - INFO - 
+[11:20:34]
+GET /admin/submissions
+User: Guest
+Status: 200
+Duration: 7ms
+2026-08-08 11:20:36,531 - app - INFO - 
+[11:20:36]
+GET /admin/problems
+User: Guest
+Status: 200
+Duration: 67ms
+2026-08-08 11:20:37,890 - app - INFO - 
+[11:20:37]
+GET /admin/ai-analytics
+User: Guest
+Status: 200
+Duration: 29ms
+2026-08-08 11:20:38,804 - app - INFO - 
+[11:20:38]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 13ms
+2026-08-08 11:20:46,526 - app - INFO - 
+[11:20:46]
+GET /admin/audit-logs
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 11:20:48,105 - app - INFO - 
+[11:20:48]
+GET /admin/activity
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 11:20:54,509 - app - INFO - 
+[11:20:54]
+POST /admin/logout
+User: Guest
+Status: 302
+Duration: 6ms
+2026-08-08 11:20:54,517 - app - INFO - 
+[11:20:54]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:20:56,679 - app - INFO - 
+[11:20:56]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:20:58,727 - app - INFO - 
+[11:20:58]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:21:00,875 - app - INFO - 
+[11:21:00]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:21:08,859 - app - INFO - 
+[11:21:08]
+POST /login
+User: Guest
+Status: 302
+Duration: 286ms
+2026-08-08 11:21:08,892 - app - INFO - 
+[11:21:08]
+GET /admin/dashboard
+User: Guest
+Status: 200
+Duration: 29ms
+2026-08-08 11:21:13,604 - app - INFO - 
+[11:21:13]
+POST /admin/logout
+User: Guest
+Status: 302
+Duration: 4ms
+2026-08-08 11:21:13,608 - app - INFO - 
+[11:21:13]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:21:17,200 - app - INFO - 
+[11:21:17]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:21:18,843 - app - INFO - 
+[11:21:18]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 11:21:26,050 - app - INFO - 
+[11:21:26]
+POST /login
+User: 12
+Status: 302
+Duration: 280ms
+2026-08-08 11:21:26,073 - app - INFO - 
+[11:21:26]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 20ms
+2026-08-08 11:21:31,035 - app - INFO - 
+[11:21:31]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:21:51,135 - app - INFO - 
+[11:21:51]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 22ms
+2026-08-08 11:21:51,189 - app - INFO - 
+[11:21:51]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:21:56,025 - app - INFO - 
+[11:21:56]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:21:56,073 - app - INFO - 
+[11:21:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:21:59,157 - app - INFO - 
+[11:21:59]
+GET /chat/
+User: 12
+Status: 200
+Duration: 17ms
+2026-08-08 11:21:59,217 - app - INFO - 
+[11:21:59]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:22:09,084 - app - INFO - 
+[11:22:09]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-08-08 11:22:09,169 - app - INFO - 
+[11:22:09]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:22:13,108 - app - INFO - 
+[11:22:13]
+GET /learning/
+User: 12
+Status: 200
+Duration: 16ms
+2026-08-08 11:22:13,167 - app - INFO - 
+[11:22:13]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:22:17,960 - app - INFO - 
+[11:22:17]
+GET /interview/
+User: 12
+Status: 200
+Duration: 19ms
+2026-08-08 11:22:18,007 - app - INFO - 
+[11:22:18]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:22:21,657 - app - INFO - 
+[11:22:21]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 37ms
+2026-08-08 11:22:21,699 - app - INFO - 
+[11:22:21]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:22:24,838 - app - INFO - 
+[11:22:24]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 38ms
+2026-08-08 11:22:24,861 - app - INFO - 
+[11:22:24]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 2ms
+2026-08-08 11:22:24,998 - app - INFO - 
+[11:22:24]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 6ms
+2026-08-08 11:22:25,007 - app - INFO - 
+[11:22:25]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 11:22:25,009 - app - INFO - 
+[11:22:25]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 16ms
+2026-08-08 11:22:25,830 - app - INFO - 
+[11:22:25]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 13ms
+2026-08-08 11:22:48,658 - app - INFO - 
+[11:22:48]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 34ms
+2026-08-08 11:22:48,734 - app - INFO - 
+[11:22:48]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:22:48,839 - app - INFO - 
+[11:22:48]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 21ms
+2026-08-08 11:22:56,042 - app - INFO - 
+[11:22:56]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-08-08 11:22:56,088 - app - INFO - 
+[11:22:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:22:59,953 - app - INFO - 
+[11:22:59]
+GET /chat
+User: 12
+Status: 308
+Duration: 0ms
+2026-08-08 11:22:59,966 - app - INFO - 
+[11:22:59]
+GET /chat/
+User: 12
+Status: 200
+Duration: 7ms
+2026-08-08 11:23:00,018 - app - INFO - 
+[11:23:00]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 1ms
+2026-08-08 11:23:00,838 - app - INFO - 
+[11:23:00]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 35ms
+2026-08-08 11:23:00,887 - app - INFO - 
+[11:23:00]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms
+2026-08-08 11:23:01,214 - app - INFO - 
+[11:23:01]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-08-08 11:23:01,269 - app - INFO - 
+[11:23:01]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 0ms

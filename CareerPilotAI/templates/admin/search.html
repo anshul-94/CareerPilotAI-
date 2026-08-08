@@ -1,0 +1,145 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Search: "{{ q }}"{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <div>
+        <h1 class="admin-title">Global Search</h1>
+        <p class="admin-subtitle">Search results for query: <strong style="color: var(--accent);">"{{ q }}"</strong></p>
+    </div>
+</div>
+
+<!-- 1. Matching Users -->
+<div class="adm-card" style="margin-bottom: 1.5rem;">
+    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+        👥 Users ({{ results.users|length }})
+    </h3>
+    {% if results.users %}
+        <div class="adm-table-scroll">
+            <table class="adm-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th style="text-align: right;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in results.users %}
+                        <tr>
+                            <td class="font-mono" style="font-size: 0.8rem; color: var(--primary-light);">#{{ u.id }}</td>
+                            <td style="font-weight: 600; color: var(--text-primary);">{{ u.full_name or u.username }}</td>
+                            <td><span style="color: var(--primary-light);">@{{ u.username }}</span></td>
+                            <td>{{ u.email }}</td>
+                            <td>
+                                <span class="adm-badge {% if u.is_active %}adm-badge-success{% else %}adm-badge-danger{% endif %}">
+                                    {{ 'Active' if u.is_active else 'Inactive' }}
+                                </span>
+                            </td>
+                            <td style="text-align: right;">
+                                <a href="{{ url_for('admin.user_detail', user_id=u.id) }}" class="adm-btn adm-btn-secondary adm-btn-sm">
+                                    View Profile →
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p style="color: var(--text-muted); padding: 0.75rem 0; font-size: 0.85rem;">No matching users found.</p>
+    {% endif %}
+</div>
+
+<!-- 2. Matching Problems -->
+<div class="adm-card" style="margin-bottom: 1.5rem;">
+    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+        🧩 Problems ({{ results.problems|length }})
+    </h3>
+    {% if results.problems %}
+        <div class="adm-table-scroll">
+            <table class="adm-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Difficulty</th>
+                        <th>Topic</th>
+                        <th style="text-align: right;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in results.problems %}
+                        <tr>
+                            <td class="font-mono" style="font-size: 0.8rem; color: var(--primary-light);">#{{ p.id }}</td>
+                            <td style="font-weight: 600; color: var(--text-primary);">{{ p.title }}</td>
+                            <td>
+                                <span class="adm-badge {% if p.difficulty == 'Easy' %}adm-badge-success{% elif p.difficulty == 'Medium' %}adm-badge-warning{% else %}adm-badge-danger{% endif %}">
+                                    {{ p.difficulty }}
+                                </span>
+                            </td>
+                            <td>{{ p.topic }}</td>
+                            <td style="text-align: right;">
+                                <a href="{{ url_for('admin.problems', search=p.title) }}" class="adm-btn adm-btn-secondary adm-btn-sm">
+                                    View Analytics →
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p style="color: var(--text-muted); padding: 0.75rem 0; font-size: 0.85rem;">No matching problems found.</p>
+    {% endif %}
+</div>
+
+<!-- 3. Matching Submissions -->
+<div class="adm-card">
+    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+        📝 Submissions ({{ results.submissions|length }})
+    </h3>
+    {% if results.submissions %}
+        <div class="adm-table-scroll">
+            <table class="adm-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User</th>
+                        <th>Problem</th>
+                        <th>Language</th>
+                        <th>Verdict</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for s in results.submissions %}
+                        <tr>
+                            <td class="font-mono" style="font-size: 0.8rem; color: var(--primary-light);">#{{ s.id }}</td>
+                            <td>
+                                <a href="{{ url_for('admin.user_detail', user_id=s.user_id) }}" style="font-weight: 600;">
+                                    @{{ s.username }}
+                                </a>
+                            </td>
+                            <td style="font-weight: 600; color: var(--text-primary);">{{ s.problem_title or ('Problem #' ~ s.problem_id) }}</td>
+                            <td><span class="adm-badge adm-badge-info">{{ (s.language or 'python')|capitalize }}</span></td>
+                            <td>
+                                <span class="adm-badge {% if s.status == 'Accepted' %}adm-badge-success{% else %}adm-badge-danger{% endif %}">
+                                    {{ s.status }}
+                                </span>
+                            </td>
+                            <td class="font-mono" style="font-size: 0.75rem; color: var(--text-tertiary);">{{ s.created_at }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p style="color: var(--text-muted); padding: 0.75rem 0; font-size: 0.85rem;">No matching submissions found.</p>
+    {% endif %}
+</div>
+{% endblock %}

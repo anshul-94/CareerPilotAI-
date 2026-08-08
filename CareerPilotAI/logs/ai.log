@@ -329,3 +329,123 @@ Success/Failed: Success
 2026-07-27 16:46:15,352 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-27 16:46:15,611 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-07-27 16:49:51,427 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-28 12:45:03,333 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-28 12:45:03,680 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-07-28 12:46:12,070 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 24.82 sec
+Success/Failed: Success
+================================
+2026-07-28 12:46:20,850 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Evaluate this resume for a  position:  {...
+Prompt Tokens : N/A
+Execution Time: 8.78 sec
+Success/Failed: Success
+================================
+2026-08-08 10:45:49,031 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 10:45:49,336 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 10:50:12,267 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.02 sec
+Success/Failed: Failed
+================================
+2026-08-08 10:52:47,365 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 10:53:36,726 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================
+2026-08-08 10:53:37,009 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================
+2026-08-08 10:55:40,913 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================
+2026-08-08 10:58:20,935 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 10:58:28,547 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 10:58:56,245 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 10:59:08,694 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 11:01:34,249 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================
+2026-08-08 11:12:00,140 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 11:13:53,767 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================
+2026-08-08 11:13:54,034 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================
+2026-08-08 11:21:26,066 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 0.01 sec
+Success/Failed: Failed
+================================
+2026-08-08 11:22:25,008 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 12
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Generate insights for: Target Role: Back...
+Prompt Tokens : N/A
+Execution Time: 0.00 sec
+Success/Failed: Failed
+================================

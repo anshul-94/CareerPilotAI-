@@ -1,0 +1,342 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <div>
+        <h1 class="admin-title">Admin Dashboard</h1>
+        <p class="admin-subtitle">Platform overview and activity summary.</p>
+    </div>
+    <div style="display: flex; gap: 0.65rem;">
+        <a href="{{ url_for('admin.users') }}" class="adm-btn adm-btn-secondary">
+            👥 Users
+        </a>
+        <a href="{{ url_for('admin.submissions') }}" class="adm-btn adm-btn-primary">
+            📝 Submissions
+        </a>
+    </div>
+</div>
+
+<!-- Key Performance Metrics Grid 1 -->
+<div class="adm-grid-4">
+    <!-- Total Users -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Total Users</div>
+            <div class="adm-metric-value">{{ stats.total_users }}</div>
+            <div class="adm-metric-desc" style="color: var(--success);">
+                +{{ stats.new_users }} joined this month
+            </div>
+        </div>
+        <div class="adm-metric-icon primary">👥</div>
+    </div>
+
+    <!-- Active Users -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Active Users</div>
+            <div class="adm-metric-value">{{ stats.active_users }}</div>
+            <div class="adm-metric-desc" style="color: var(--info);">
+                Account status enabled
+            </div>
+        </div>
+        <div class="adm-metric-icon success">⚡</div>
+    </div>
+
+    <!-- New Users -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">New Users</div>
+            <div class="adm-metric-value">{{ stats.new_users }}</div>
+            <div class="adm-metric-desc" style="color: var(--text-tertiary);">
+                Last 30-day registrations
+            </div>
+        </div>
+        <div class="adm-metric-icon info">✨</div>
+    </div>
+
+    <!-- Active Sessions -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Active Sessions</div>
+            <div class="adm-metric-value">{{ stats.active_sessions }}</div>
+            <div class="adm-metric-desc" style="color: var(--accent);">
+                Recent platform activity
+            </div>
+        </div>
+        <div class="adm-metric-icon accent">🌐</div>
+    </div>
+</div>
+
+<!-- Key Performance Metrics Grid 2 -->
+<div class="adm-grid-4">
+    <!-- Total Submissions -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Total Submissions</div>
+            <div class="adm-metric-value">{{ stats.total_submissions }}</div>
+            <div class="adm-metric-desc" style="color: var(--text-tertiary);">
+                All code evaluations
+            </div>
+        </div>
+        <div class="adm-metric-icon primary">📝</div>
+    </div>
+
+    <!-- Problems Solved -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Problems Solved</div>
+            <div class="adm-metric-value">{{ stats.total_problems_solved }}</div>
+            <div class="adm-metric-desc" style="color: var(--success);">
+                Distinct problems completed
+            </div>
+        </div>
+        <div class="adm-metric-icon success">🎯</div>
+    </div>
+
+    <!-- Acceptance Rate -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Acceptance Rate</div>
+            <div class="adm-metric-value">{{ stats.acceptance_rate }}%</div>
+            <div class="adm-metric-desc" style="color: var(--info);">
+                Submission success ratio
+            </div>
+        </div>
+        <div class="adm-metric-icon info">📊</div>
+    </div>
+
+    <!-- Total AI Requests -->
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">AI Requests</div>
+            <div class="adm-metric-value">{{ stats.total_ai_requests }}</div>
+            <div class="adm-metric-desc" style="color: var(--accent);">
+                Chat, agents, code review
+            </div>
+        </div>
+        <div class="adm-metric-icon accent">🤖</div>
+    </div>
+</div>
+
+<!-- Interactive Analytics Charts Grid -->
+<div class="adm-grid-2">
+    <!-- Submissions & User Growth Trend -->
+    <div class="adm-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
+                📈 Submissions Activity Over Time
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-tertiary);">Real database records</span>
+        </div>
+        <div style="position: relative; height: 250px;">
+            <canvas id="submissionsChart"></canvas>
+        </div>
+    </div>
+
+    <!-- AI Feature Distribution -->
+    <div class="adm-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
+                🤖 AI Usage by Feature
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-tertiary);">Platform utilization</span>
+        </div>
+        <div style="position: relative; height: 250px;">
+            <canvas id="aiUsageChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="adm-grid-2">
+    <!-- Language Distribution -->
+    <div class="adm-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
+                💻 Programming Language Breakdown
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-tertiary);">From code submissions</span>
+        </div>
+        <div style="position: relative; height: 240px;">
+            <canvas id="langChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Problem Difficulty Distribution -->
+    <div class="adm-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
+                🧩 Problem Difficulty Distribution
+            </h3>
+            <span style="font-size: 0.75rem; color: var(--text-tertiary);">Available challenges</span>
+        </div>
+        <div style="position: relative; height: 240px;">
+            <canvas id="difficultyChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Platform Activity Feed -->
+<div class="adm-table-container">
+    <div class="adm-table-header">
+        <div>
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">Recent Platform Events</h3>
+            <span style="font-size: 0.75rem; color: var(--text-tertiary);">Real-time activity audit</span>
+        </div>
+        <a href="{{ url_for('admin.activity') }}" class="adm-btn adm-btn-secondary adm-btn-sm">
+            View All →
+        </a>
+    </div>
+
+    <div style="padding: 1.25rem;">
+        {% if recent_activities %}
+            <div class="adm-timeline">
+                {% for act in recent_activities %}
+                    <div class="adm-timeline-item">
+                        <div class="adm-timeline-dot">{{ act.icon }}</div>
+                        <div class="adm-timeline-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem; flex-wrap: wrap; gap: 0.5rem;">
+                                <strong style="color: var(--text-primary); font-size: 0.85rem;">{{ act.title }}</strong>
+                                <span style="font-size: 0.75rem; color: var(--text-tertiary); font-family: 'JetBrains Mono', monospace;">{{ act.timestamp }}</span>
+                            </div>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">{{ act.detail }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p style="color: var(--text-muted); text-align: center; padding: 1.5rem; font-size: 0.85rem;">
+                No recent activity recorded.
+            </p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chartData = {{ chart_data | tojson | safe }};
+
+        // Chart.js Global Config
+        Chart.defaults.color = '#94A3B8';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.font.size = 11;
+
+        // 1. Submissions Activity Trend Chart
+        const subCtx = document.getElementById('submissionsChart');
+        if (subCtx) {
+            const hasData = chartData.submissions_trend && chartData.submissions_trend.data && chartData.submissions_trend.data.length > 0;
+            new Chart(subCtx, {
+                type: 'line',
+                data: {
+                    labels: hasData ? chartData.submissions_trend.labels : ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+                    datasets: [{
+                        label: 'Submissions',
+                        data: hasData ? chartData.submissions_trend.data : [0, 0, 0, 0, 0],
+                        borderColor: '#4F8DB1',
+                        backgroundColor: 'rgba(79, 141, 177, 0.12)',
+                        borderWidth: 2,
+                        tension: 0.35,
+                        fill: true,
+                        pointBackgroundColor: '#4F8DB1',
+                        pointRadius: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#17212B', borderColor: '#344452', borderWidth: 1 }
+                    },
+                    scales: {
+                        x: { grid: { color: 'rgba(52, 68, 82, 0.4)' }, ticks: { color: '#94A3B8' } },
+                        y: { grid: { color: 'rgba(52, 68, 82, 0.4)' }, ticks: { color: '#94A3B8', beginAtZero: true } }
+                    }
+                }
+            });
+        }
+
+        // 2. AI Usage by Feature Chart
+        const aiCtx = document.getElementById('aiUsageChart');
+        if (aiCtx) {
+            new Chart(aiCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: chartData.ai_usage.labels,
+                    datasets: [{
+                        data: chartData.ai_usage.data,
+                        backgroundColor: ['#2E6F95', '#D9A441', '#3BA55C', '#5DA9E9', '#E25555'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#C8D2DC', boxWidth: 10, padding: 12 } },
+                        tooltip: { backgroundColor: '#17212B', borderColor: '#344452', borderWidth: 1 }
+                    },
+                    cutout: '68%'
+                }
+            });
+        }
+
+        // 3. Programming Languages Bar Chart
+        const langCtx = document.getElementById('langChart');
+        if (langCtx) {
+            new Chart(langCtx, {
+                type: 'bar',
+                data: {
+                    labels: chartData.language_distribution.labels,
+                    datasets: [{
+                        label: 'Submissions',
+                        data: chartData.language_distribution.data,
+                        backgroundColor: '#2E6F95',
+                        hoverBackgroundColor: '#4F8DB1',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#17212B', borderColor: '#344452', borderWidth: 1 }
+                    },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#94A3B8' } },
+                        y: { grid: { color: 'rgba(52, 68, 82, 0.4)' }, ticks: { color: '#94A3B8', beginAtZero: true } }
+                    }
+                }
+            });
+        }
+
+        // 4. Difficulty Breakdown Pie Chart
+        const diffCtx = document.getElementById('difficultyChart');
+        if (diffCtx) {
+            new Chart(diffCtx, {
+                type: 'pie',
+                data: {
+                    labels: chartData.difficulty_distribution.labels,
+                    datasets: [{
+                        data: chartData.difficulty_distribution.data,
+                        backgroundColor: ['#3BA55C', '#F4B942', '#E25555', '#5DA9E9'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { color: '#C8D2DC', boxWidth: 10, padding: 12 } },
+                        tooltip: { backgroundColor: '#17212B', borderColor: '#344452', borderWidth: 1 }
+                    }
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

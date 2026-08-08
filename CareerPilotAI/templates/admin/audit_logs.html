@@ -1,0 +1,102 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}Admin Audit Logs{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <div>
+        <h1 class="admin-title">Administrative Audit Logs</h1>
+        <p class="admin-subtitle">Security trail of administrative logins, user status modifications, and data inspection.</p>
+    </div>
+    <div>
+        <span class="adm-badge adm-badge-warning" style="padding: 4px 10px; font-size: 0.75rem;">
+            {{ total_count }} Log Entries
+        </span>
+    </div>
+</div>
+
+<div class="adm-table-container">
+    <div class="adm-table-scroll">
+        <table class="adm-table">
+            <thead>
+                <tr>
+                    <th>Log ID</th>
+                    <th>Admin</th>
+                    <th>Action</th>
+                    <th>Target / Details</th>
+                    <th>IP Address</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if logs %}
+                    {% for l in logs %}
+                        <tr>
+                            <td class="font-mono" style="font-size: 0.8rem; color: var(--primary-light);">
+                                #{{ l.id }}
+                            </td>
+                            <td style="font-weight: 600; color: var(--text-primary);">
+                                @{{ l.admin_username }}
+                            </td>
+                            <td>
+                                <span class="adm-badge {% if 'LOGIN' in l.action %}adm-badge-success{% elif 'ACTIVATE' in l.action %}adm-badge-info{% elif 'DEACTIVATE' in l.action %}adm-badge-danger{% else %}adm-badge-primary{% endif %}">
+                                    {{ l.action }}
+                                </span>
+                            </td>
+                            <td style="font-size: 0.85rem; color: var(--text-secondary);">
+                                {{ l.target or '-' }}
+                            </td>
+                            <td class="font-mono" style="font-size: 0.8rem; color: var(--text-tertiary);">
+                                {{ l.ip_address or 'Local' }}
+                            </td>
+                            <td class="font-mono" style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                {{ l.created_at }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="6" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+                            No administrative audit entries found.
+                        </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="adm-pagination">
+        <div>
+            Page <strong>{{ page }}</strong> of <strong>{{ total_pages }}</strong> ({{ total_count }} records)
+        </div>
+        <div class="adm-page-controls">
+            {% if page > 1 %}
+                <a href="{{ url_for('admin.audit_logs', page=page-1) }}" class="adm-page-btn">
+                    ‹ Prev
+                </a>
+            {% else %}
+                <span class="adm-page-btn disabled">‹ Prev</span>
+            {% endif %}
+
+            {% for p in range(1, total_pages + 1) %}
+                {% if p == page %}
+                    <span class="adm-page-btn active">{{ p }}</span>
+                {% elif p <= 3 or p >= total_pages - 1 %}
+                    <a href="{{ url_for('admin.audit_logs', page=p) }}" class="adm-page-btn">
+                        {{ p }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page < total_pages %}
+                <a href="{{ url_for('admin.audit_logs', page=page+1) }}" class="adm-page-btn">
+                    Next ›
+                </a>
+            {% else %}
+                <span class="adm-page-btn disabled">Next ›</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

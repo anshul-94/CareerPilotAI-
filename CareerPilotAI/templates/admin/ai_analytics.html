@@ -1,0 +1,136 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}AI Usage Analytics{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <div>
+        <h1 class="admin-title">AI Usage Analytics</h1>
+        <p class="admin-subtitle">Inspect real LLM interactions, autonomous agent activity, and feature utilization.</p>
+    </div>
+    <div>
+        <span class="adm-badge adm-badge-accent" style="padding: 4px 10px; font-size: 0.75rem;">
+            {{ analytics.total_ai_requests }} Total Requests
+        </span>
+    </div>
+</div>
+
+<!-- Features Breakdown Grid -->
+<div class="adm-grid-4">
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">AI Mentor / Chat</div>
+            <div class="adm-metric-value">{{ analytics.mentor_requests }}</div>
+            <div class="adm-metric-desc">Chat messages logged</div>
+        </div>
+        <div class="adm-metric-icon info">💬</div>
+    </div>
+
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">AI Code Reviews</div>
+            <div class="adm-metric-value">{{ analytics.code_reviews }}</div>
+            <div class="adm-metric-desc">Code evaluation sessions</div>
+        </div>
+        <div class="adm-metric-icon success">💻</div>
+    </div>
+
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Autonomous Agent</div>
+            <div class="adm-metric-value">{{ analytics.agent_usage }}</div>
+            <div class="adm-metric-desc">Job matching runs</div>
+        </div>
+        <div class="adm-metric-icon accent">⚡</div>
+    </div>
+
+    <div class="adm-card adm-metric-card">
+        <div>
+            <div class="adm-metric-label">Resume AI & Feedback</div>
+            <div class="adm-metric-value">{{ analytics.resume_ai + analytics.problem_feedback }}</div>
+            <div class="adm-metric-desc">ATS & problem insights</div>
+        </div>
+        <div class="adm-metric-icon primary">📄</div>
+    </div>
+</div>
+
+<div class="adm-grid-2">
+    <!-- Top Users by AI Consumption -->
+    <div class="adm-card">
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+            🏆 Top Users by AI Consumption
+        </h3>
+        {% if analytics.top_users %}
+            <div class="adm-table-scroll">
+                <table class="adm-table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Username</th>
+                            <th style="text-align: right;">Total Requests</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for u in analytics.top_users %}
+                            <tr>
+                                <td style="font-weight: 600;">
+                                    <a href="{{ url_for('admin.user_detail', user_id=u.id) }}">
+                                        {{ u.full_name or u.username }}
+                                    </a>
+                                </td>
+                                <td><span style="color: var(--primary-light);">@{{ u.username }}</span></td>
+                                <td style="text-align: right; font-weight: 700; color: var(--accent);">
+                                    {{ u.total_ai_requests }} req
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p style="color: var(--text-muted); padding: 1.5rem; text-align: center; font-size: 0.85rem;">
+                No data available
+            </p>
+        {% endif %}
+    </div>
+
+    <!-- AI Request Frequency Trends -->
+    <div class="adm-card">
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+            📅 AI Request Frequency
+        </h3>
+
+        <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-tertiary); letter-spacing: 0.05em; margin-bottom: 0.5rem;">Daily Requests (Recent)</h4>
+            {% if analytics.daily_requests %}
+                <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                    {% for d in analytics.daily_requests %}
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.45rem 0.65rem; background: var(--bg-input); border-radius: var(--radius-sm);">
+                            <span>{{ d.day_date }}</span>
+                            <strong style="color: var(--primary-light);">{{ d.count }} requests</strong>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p style="color: var(--text-muted); font-size: 0.8rem;">No data available</p>
+            {% endif %}
+        </div>
+
+        <div>
+            <h4 style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-tertiary); letter-spacing: 0.05em; margin-bottom: 0.5rem;">Monthly Aggregates</h4>
+            {% if analytics.monthly_requests %}
+                <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                    {% for m in analytics.monthly_requests %}
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 0.45rem 0.65rem; background: var(--bg-input); border-radius: var(--radius-sm);">
+                            <span>Month: {{ m.month_num }}</span>
+                            <strong style="color: var(--success);">{{ m.count }} requests</strong>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p style="color: var(--text-muted); font-size: 0.8rem;">No data available</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

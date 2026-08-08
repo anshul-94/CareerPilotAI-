@@ -268,3 +268,129 @@ Jobs Filtered   : 5
 Jobs Saved      : 5
 Completed in    : 4218 ms
 ================================
+2026-08-08 10:50:18,662 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 14
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 6431 ms
+================================
+2026-08-08 10:53:37,651 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 15
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 941 ms
+================================
+2026-08-08 10:55:41,899 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 16
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 999 ms
+================================
+2026-08-08 11:01:35,150 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 17
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 917 ms
+================================
+2026-08-08 11:13:54,667 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 18
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 915 ms
+================================
+2026-08-08 11:21:42,550 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 16495 ms
+================================
+2026-08-08 11:22:21,624 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 4 ms
+===============================
+2026-08-08 11:22:21,628 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : All
+Rows Returned   : 0
+Execution Time  : 3 ms
+===============================
+2026-08-08 11:22:21,639 - jobs - INFO - 
+========== JOB CACHE ==========
+User            : 12
+Limit           : 50
+Rows Returned   : 50
+Execution Time  : 10 ms
+===============================
+2026-08-08 11:22:25,235 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 20
+Jobs Filtered   : 20
+Jobs Saved      : 20
+Completed in    : 3611 ms
+================================

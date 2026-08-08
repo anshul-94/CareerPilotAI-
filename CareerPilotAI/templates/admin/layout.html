@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin Console{% endblock %} — CareerPilot AI</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Admin Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="admin-body">
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div class="admin-backdrop" id="adminBackdrop" onclick="closeMobileSidebar()"></div>
+
+    <!-- Flash Messages Container -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="adm-alerts-container" id="adminAlerts">
+                {% for category, message in messages %}
+                    <div class="adm-alert adm-alert-{{ category }}">
+                        <span>{{ message }}</span>
+                        <button style="background:none;border:none;color:inherit;cursor:pointer;margin-left:12px;font-size:1.1rem;line-height:1;" onclick="this.parentElement.remove()">✕</button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="admin-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <a href="{{ url_for('admin.dashboard') }}" class="admin-brand">
+                    <div class="admin-brand-icon">🛡️</div>
+                    <div class="admin-brand-text">
+                        CareerPilot <span style="color:var(--primary-light);">AI</span>
+                    </div>
+                </a>
+                <span class="admin-badge-console">Admin</span>
+            </div>
+
+            <nav class="admin-nav">
+                <a href="{{ url_for('admin.dashboard') }}" class="admin-nav-item {% if request.endpoint == 'admin.dashboard' %}active{% endif %}" title="Dashboard">
+                    <span class="admin-nav-icon">📊</span>
+                    <span class="admin-nav-label">Dashboard</span>
+                </a>
+                <a href="{{ url_for('admin.users') }}" class="admin-nav-item {% if 'admin.user' in request.endpoint %}active{% endif %}" title="Users">
+                    <span class="admin-nav-icon">👥</span>
+                    <span class="admin-nav-label">Users</span>
+                </a>
+                <a href="{{ url_for('admin.submissions') }}" class="admin-nav-item {% if request.endpoint == 'admin.submissions' %}active{% endif %}" title="Submissions">
+                    <span class="admin-nav-icon">📝</span>
+                    <span class="admin-nav-label">Submissions</span>
+                </a>
+                <a href="{{ url_for('admin.problems') }}" class="admin-nav-item {% if request.endpoint == 'admin.problems' %}active{% endif %}" title="Problems">
+                    <span class="admin-nav-icon">🧩</span>
+                    <span class="admin-nav-label">Problems</span>
+                </a>
+                <a href="{{ url_for('admin.ai_analytics') }}" class="admin-nav-item {% if request.endpoint == 'admin.ai_analytics' %}active{% endif %}" title="AI Analytics">
+                    <span class="admin-nav-icon">🤖</span>
+                    <span class="admin-nav-label">AI Analytics</span>
+                </a>
+                <a href="{{ url_for('admin.activity') }}" class="admin-nav-item {% if request.endpoint == 'admin.activity' %}active{% endif %}" title="Activity Timeline">
+                    <span class="admin-nav-icon">⚡</span>
+                    <span class="admin-nav-label">Activity Feed</span>
+                </a>
+                <a href="{{ url_for('admin.audit_logs') }}" class="admin-nav-item {% if request.endpoint == 'admin.audit_logs' %}active{% endif %}" title="Audit Logs">
+                    <span class="admin-nav-icon">📜</span>
+                    <span class="admin-nav-label">Audit Logs</span>
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <div class="admin-sidebar-footer-text" style="font-size:0.75rem; color:var(--text-muted);">
+                    CareerPilot v1.0
+                </div>
+                <form action="{{ url_for('admin.logout') }}" method="POST" style="margin:0;">
+                    <button type="submit" class="adm-btn adm-btn-secondary adm-btn-sm" title="Sign Out">
+                        🚪
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+        <!-- Main Wrapper -->
+        <div class="admin-main-wrapper">
+            <!-- Top Navbar -->
+            <header class="admin-navbar">
+                <div class="admin-navbar-left">
+                    <button id="sidebarToggleBtn" class="admin-toggle-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
+                        ☰
+                    </button>
+
+                    <!-- Global Search Box -->
+                    <form action="{{ url_for('admin.search') }}" method="GET" class="admin-search-wrapper">
+                        <span class="admin-search-icon-left">🔍</span>
+                        <input type="text" id="globalSearchInput" name="q" class="admin-search-input" placeholder="Search platform..." value="{{ request.args.get('q', '') }}">
+                        <kbd class="admin-search-kbd">⌘K</kbd>
+                    </form>
+                </div>
+
+                <div class="admin-navbar-right">
+                    <div class="admin-status-pill">
+                        <span class="admin-status-dot"></span>
+                        <span>Live DB Connected</span>
+                    </div>
+
+                    <div class="admin-user-pill">
+                        <div class="admin-avatar">{{ (session.get('admin_username') or 'A')[:1]|upper }}</div>
+                        <span style="font-size:0.85rem; font-weight:600; color:var(--text-primary);">{{ session.get('admin_username') or 'adminuser85' }}</span>
+                        <span class="adm-badge adm-badge-primary">SuperAdmin</span>
+                    </div>
+
+                    <form action="{{ url_for('admin.logout') }}" method="POST" style="margin:0;">
+                        <button type="submit" class="adm-btn adm-btn-danger adm-btn-sm">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+            </header>
+
+            <!-- Main Page Content -->
+            <main class="admin-content">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <!-- Layout Scripts -->
+    <script>
+        // Sidebar Toggle for Desktop & Mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById('adminSidebar');
+            const backdrop = document.getElementById('adminBackdrop');
+            if (window.innerWidth <= 992) {
+                const isActive = sidebar.classList.toggle('active');
+                if (backdrop) backdrop.classList.toggle('active', isActive);
+            } else {
+                document.body.classList.toggle('sidebar-collapsed');
+            }
+        }
+
+        function closeMobileSidebar() {
+            const sidebar = document.getElementById('adminSidebar');
+            const backdrop = document.getElementById('adminBackdrop');
+            if (sidebar) sidebar.classList.remove('active');
+            if (backdrop) backdrop.classList.remove('active');
+        }
+
+        // Global Search Shortcut (Cmd+K / Ctrl+K)
+        document.addEventListener('keydown', function(e) {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                const input = document.getElementById('globalSearchInput');
+                if (input) input.focus();
+            }
+        });
+
+        // Auto dismiss flash alerts
+        setTimeout(() => {
+            const alerts = document.querySelectorAll('.adm-alert');
+            alerts.forEach(a => {
+                a.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                a.style.opacity = '0';
+                a.style.transform = 'translateY(-10px)';
+                setTimeout(() => a.remove(), 300);
+            });
+        }, 5000);
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

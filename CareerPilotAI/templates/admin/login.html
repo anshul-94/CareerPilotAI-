@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Console Login — CareerPilot AI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body class="admin-body">
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="adm-alerts-container">
+                {% for category, message in messages %}
+                    <div class="adm-alert adm-alert-{{ category }}">
+                        <span>{{ message }}</span>
+                        <button style="background:none;border:none;color:inherit;cursor:pointer;margin-left:12px;font-size:1.1rem;" onclick="this.parentElement.remove()">✕</button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="admin-login-wrapper">
+        <div class="admin-login-card">
+            <div class="admin-login-header">
+                <div class="admin-login-logo">🛡️</div>
+                <h1 class="admin-login-title">CareerPilot AI</h1>
+                <div style="margin-top: 4px;">
+                    <span class="adm-badge adm-badge-accent">Admin Console</span>
+                </div>
+                <p class="admin-login-subtitle">Secure administrator access</p>
+            </div>
+
+            <form method="POST" action="{{ url_for('admin.login', next=request.args.get('next', '')) }}">
+                <div class="adm-form-group">
+                    <label class="adm-form-label" for="username">Username</label>
+                    <input type="text" id="username" name="username" class="adm-input" placeholder="e.g. adminuser85" required autofocus autocomplete="username">
+                </div>
+
+                <div class="adm-form-group" style="margin-bottom: 1.75rem;">
+                    <label class="adm-form-label" for="password">Password</label>
+                    <input type="password" id="password" name="password" class="adm-input" placeholder="••••••••••••" required autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="adm-btn adm-btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.9rem;">
+                    Sign In to Admin Console
+                </button>
+            </form>
+
+            <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border); text-align: center;">
+                <a href="/" style="font-size: 0.8rem; color: var(--text-tertiary);">
+                    ← Return to CareerPilot AI
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

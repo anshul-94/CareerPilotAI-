@@ -8,6 +8,7 @@ from backend.models.resume_version import migrate_resume_versions_table
 from backend.models.job_notification import migrate_notification_tables
 from backend.models.chat import migrate_chat_sessions_table
 from backend.models.problem import migrate_problem_solving_tables
+from backend.models.admin import migrate_admin_tables
 
 def initialize_database():
     """Run all database creation and migrations in one place."""
@@ -34,6 +35,9 @@ def initialize_database():
     
     migrate_problem_solving_tables()
     print("\n[✓] problem_solving", flush=True)
+    
+    migrate_admin_tables()
+    print("\n[✓] admin_tables", flush=True)
     
     print("\nDatabase Ready.", flush=True)
     print("\nServer Ready.", flush=True)

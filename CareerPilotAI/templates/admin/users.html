@@ -1,54 +1,216 @@
-{% extends "base.html" %}
+{% extends "admin/layout.html" %}
+
+{% block title %}User Management{% endblock %}
 
 {% block content %}
-{% include "components/sidebar.html" %}
-
-<main class="main-content">
-    <div class="page-header reveal flex-between">
-        <div>
-            <h1>👥 Manage Users</h1>
-            <p class="page-subtitle">View and manage all registered users.</p>
-        </div>
-        <a href="{{ url_for('admin.index') }}" class="btn btn-ghost">← Back to Admin</a>
+<div class="admin-header">
+    <div>
+        <h1 class="admin-title">User Management</h1>
+        <p class="admin-subtitle">Inspect registered users, activity metrics, and manage account statuses.</p>
     </div>
+    <div>
+        <span class="adm-badge adm-badge-info" style="padding: 4px 10px; font-size: 0.75rem;">
+            {{ total_count }} Total Users
+        </span>
+    </div>
+</div>
 
-    <div class="card reveal delay-1">
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; text-align: left;">
-                <thead>
-                    <tr style="border-bottom: 1px solid var(--border);">
-                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">ID</th>
-                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Username</th>
-                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Email</th>
-                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Full Name</th>
-                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Joined</th>
-                        <th style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">Admin</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for user in users %}
-                    <tr style="border-bottom: 1px solid var(--border); transition: background 0.2s ease;" onmouseover="this.style.background='var(--bg-tertiary)'" onmouseout="this.style.background='transparent'">
-                        <td style="padding: 1rem;">{{ user.id }}</td>
-                        <td style="padding: 1rem; font-weight: 600;">{{ user.username }}</td>
-                        <td style="padding: 1rem; color: var(--text-tertiary);">{{ user.email }}</td>
-                        <td style="padding: 1rem;">{{ user.full_name or '-' }}</td>
-                        <td style="padding: 1rem;">{{ user.created_at.split(' ')[0] }}</td>
-                        <td style="padding: 1rem;">
-                            {% if user.is_admin %}
-                                <span class="badge badge-danger">Admin</span>
-                            {% else %}
-                                <span class="badge badge-info">User</span>
-                            {% endif %}
+<!-- Search & Filters Toolbar -->
+<div class="adm-card" style="margin-bottom: 1.25rem; padding: 1rem;">
+    <form method="GET" action="{{ url_for('admin.users') }}" class="adm-filter-bar">
+        <div style="flex: 1; min-width: 200px;">
+            <input type="text" name="search" class="adm-input" placeholder="Search by name, email, username..." value="{{ search }}">
+        </div>
+
+        <div style="width: 140px;">
+            <select name="status" class="adm-select">
+                <option value="">All Statuses</option>
+                <option value="active" {% if status == 'active' %}selected{% endif %}>Active</option>
+                <option value="inactive" {% if status == 'inactive' %}selected{% endif %}>Inactive</option>
+            </select>
+        </div>
+
+        <div style="width: 160px;">
+            <select name="sort" class="adm-select">
+                <option value="created_at" {% if sort == 'created_at' %}selected{% endif %}>Registration Date</option>
+                <option value="last_login" {% if sort == 'last_login' %}selected{% endif %}>Last Active</option>
+                <option value="submissions" {% if sort == 'submissions' %}selected{% endif %}>Submissions</option>
+                <option value="solved" {% if sort == 'solved' %}selected{% endif %}>Problems Solved</option>
+                <option value="username" {% if sort == 'username' %}selected{% endif %}>Username</option>
+            </select>
+        </div>
+
+        <div style="width: 120px;">
+            <select name="order" class="adm-select">
+                <option value="DESC" {% if order == 'DESC' %}selected{% endif %}>Descending</option>
+                <option value="ASC" {% if order == 'ASC' %}selected{% endif %}>Ascending</option>
+            </select>
+        </div>
+
+        <button type="submit" class="adm-btn adm-btn-primary">
+            Filter
+        </button>
+
+        {% if search or status or sort != 'created_at' or order != 'DESC' %}
+            <a href="{{ url_for('admin.users') }}" class="adm-btn adm-btn-secondary">
+                Reset
+            </a>
+        {% endif %}
+    </form>
+</div>
+
+<!-- Users Data Table -->
+<div class="adm-table-container">
+    <div class="adm-table-scroll">
+        <table class="adm-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Joined</th>
+                    <th>Last Active</th>
+                    <th>Problems</th>
+                    <th>Submissions</th>
+                    <th>Acceptance</th>
+                    <th>Status</th>
+                    <th style="text-align: right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if users %}
+                    {% for u in users %}
+                        <tr id="userRow{{ u.id }}">
+                            <td class="font-mono" style="font-size: 0.8rem; color: var(--primary-light);">
+                                #{{ u.id }}
+                            </td>
+                            <td>
+                                <div style="display: flex; flex-direction: column;">
+                                    <span style="font-weight: 600; color: var(--text-primary);">{{ u.full_name or u.username }}</span>
+                                    <span style="font-size: 0.75rem; color: var(--text-tertiary);">@{{ u.username }}</span>
+                                </div>
+                            </td>
+                            <td style="font-size: 0.8rem;">
+                                {{ u.email }}
+                            </td>
+                            <td style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                {{ (u.created_at or '')[:10] }}
+                            </td>
+                            <td style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                {{ (u.last_login or 'Never')[:16] }}
+                            </td>
+                            <td style="font-weight: 600; color: var(--success);">
+                                {{ u.problems_solved }}
+                            </td>
+                            <td>
+                                {{ u.total_submissions }}
+                            </td>
+                            <td>
+                                {{ u.acceptance_rate }}%
+                            </td>
+                            <td>
+                                <span id="statusBadge{{ u.id }}" class="adm-badge {% if u.is_active %}adm-badge-success{% else %}adm-badge-danger{% endif %}">
+                                    {{ 'Active' if u.is_active else 'Inactive' }}
+                                </span>
+                            </td>
+                            <td style="text-align: right; white-space: nowrap;">
+                                <a href="{{ url_for('admin.user_detail', user_id=u.id) }}" class="adm-btn adm-btn-secondary adm-btn-sm" style="margin-right: 4px;">
+                                    View
+                                </a>
+                                <button type="button"
+                                        id="toggleBtn{{ u.id }}"
+                                        onclick="toggleUserStatus({{ u.id }}, {{ 1 if u.is_active else 0 }})"
+                                        class="adm-btn adm-btn-sm {% if u.is_active %}adm-btn-danger{% else %}adm-btn-success{% endif %}">
+                                    {{ 'Deactivate' if u.is_active else 'Activate' }}
+                                </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="10" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+                            No users found matching your criteria.
                         </td>
                     </tr>
-                    {% else %}
-                    <tr>
-                        <td colspan="6" style="padding: 2rem; text-align: center; color: var(--text-tertiary);">No users found.</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="adm-pagination">
+        <div>
+            Page <strong>{{ page }}</strong> of <strong>{{ total_pages }}</strong> ({{ total_count }} total users)
+        </div>
+        <div class="adm-page-controls">
+            {% if page > 1 %}
+                <a href="{{ url_for('admin.users', page=page-1, search=search, status=status, sort=sort, order=order) }}" class="adm-page-btn">
+                    ‹ Prev
+                </a>
+            {% else %}
+                <span class="adm-page-btn disabled">‹ Prev</span>
+            {% endif %}
+
+            {% for p in range(1, total_pages + 1) %}
+                {% if p == page %}
+                    <span class="adm-page-btn active">{{ p }}</span>
+                {% elif p <= 3 or p >= total_pages - 1 or (p >= page - 1 and p <= page + 1) %}
+                    <a href="{{ url_for('admin.users', page=p, search=search, status=status, sort=sort, order=order) }}" class="adm-page-btn">
+                        {{ p }}
+                    </a>
+                {% elif p == 4 or p == total_pages - 2 %}
+                    <span class="adm-page-btn disabled">...</span>
+                {% endif %}
+            {% endfor %}
+
+            {% if page < total_pages %}
+                <a href="{{ url_for('admin.users', page=page+1, search=search, status=status, sort=sort, order=order) }}" class="adm-page-btn">
+                    Next ›
+                </a>
+            {% else %}
+                <span class="adm-page-btn disabled">Next ›</span>
+            {% endif %}
         </div>
     </div>
-</main>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    async function toggleUserStatus(userId, currentActive) {
+        const nextActive = currentActive === 1 ? 0 : 1;
+        const confirmMsg = nextActive === 1 ? "Activate this user account?" : "Deactivate this user account? They will not be able to log in.";
+        if (!confirm(confirmMsg)) return;
+
+        try {
+            const res = await fetch(`/admin/api/users/${userId}/status`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ active: nextActive })
+            });
+            const data = await res.json();
+            if (data.success) {
+                const badge = document.getElementById(`statusBadge${userId}`);
+                const btn = document.getElementById(`toggleBtn${userId}`);
+                if (nextActive === 1) {
+                    badge.className = 'adm-badge adm-badge-success';
+                    badge.innerText = 'Active';
+                    btn.className = 'adm-btn adm-btn-sm adm-btn-danger';
+                    btn.innerText = 'Deactivate';
+                    btn.setAttribute('onclick', `toggleUserStatus(${userId}, 1)`);
+                } else {
+                    badge.className = 'adm-badge adm-badge-danger';
+                    badge.innerText = 'Inactive';
+                    btn.className = 'adm-btn adm-btn-sm adm-btn-success';
+                    btn.innerText = 'Activate';
+                    btn.setAttribute('onclick', `toggleUserStatus(${userId}, 0)`);
+                }
+            } else {
+                alert(data.error || 'Failed to update user status');
+            }
+        } catch (e) {
+            alert('Network error while updating user status');
+        }
+    }
+</script>
 {% endblock %}

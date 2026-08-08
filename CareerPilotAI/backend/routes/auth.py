@@ -14,14 +14,39 @@ def login():
     """Login page and authentication."""
     if 'user_id' in session:
         return redirect(url_for('dashboard.index'))
+    if session.get('admin_id') and session.get('admin_role') == 'admin':
+        return redirect(url_for('admin.dashboard'))
     
     if request.method == 'POST':
         username = request.form.get('username', '').strip()
         password = request.form.get('password', '')
         
+        # 1. Server-side Admin authentication check
+        from backend.services.admin_service import AdminAuthService
+        admin_success, admin_msg, admin_user = AdminAuthService.login(
+            username, password, request.remote_addr or ""
+        )
+        if admin_success and admin_user:
+            session['admin_id'] = admin_user['id']
+            session['admin_username'] = admin_user['username']
+            session['admin_email'] = admin_user['email']
+            session['admin_role'] = admin_user['role']
+            flash("Welcome to CareerPilot AI Admin Panel.", "success")
+            return redirect(url_for('admin.dashboard'))
+        
+        # 2. Normal user authentication flow
         success, message, user = AuthService.login(username, password)
         
         if success and user:
+            # If user has admin role in users table
+            if user.get('role') == 'admin':
+                session['admin_id'] = user['id']
+                session['admin_username'] = user['username']
+                session['admin_email'] = user['email']
+                session['admin_role'] = 'admin'
+                flash("Welcome to CareerPilot AI Admin Panel.", "success")
+                return redirect(url_for('admin.dashboard'))
+            
             session_data = AuthService.get_session_data(user)
             session.update(session_data)
             flash(message, 'success')
@@ -35,7 +60,7 @@ def login():
             next_url = request.args.get('next')
             return redirect(next_url or url_for('dashboard.index'))
         else:
-            flash(message, 'danger')
+            flash(message or admin_msg or "Invalid username or password", 'danger')
     
     return render_template('login.html')
 

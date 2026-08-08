@@ -1,0 +1,365 @@
+{% extends "admin/layout.html" %}
+
+{% block title %}User: {{ user.username }}{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="{{ url_for('admin.users') }}" class="adm-btn adm-btn-secondary adm-btn-sm">
+            ← Back
+        </a>
+        <div>
+            <h1 class="admin-title">{{ user.full_name or user.username }}</h1>
+            <p class="admin-subtitle">User ID: #{{ user.id }} • @{{ user.username }}</p>
+        </div>
+    </div>
+    
+    <div>
+        <button type="button"
+                id="toggleBtn"
+                onclick="toggleUserStatus({{ user.id }}, {{ 1 if user.is_active else 0 }})"
+                class="adm-btn {% if user.is_active %}adm-btn-danger{% else %}adm-btn-success{% endif %}">
+            {{ 'Deactivate Account' if user.is_active else 'Activate Account' }}
+        </button>
+    </div>
+</div>
+
+<!-- Profile Overview Header Card -->
+<div class="adm-card" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;">
+    <div class="admin-avatar" style="width: 52px; height: 52px; font-size: 1.35rem; background: var(--bg-tertiary); border: 1px solid var(--border);">
+        {{ (user.username or 'U')[:1]|upper }}
+    </div>
+    <div style="flex: 1; min-width: 240px;">
+        <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.25rem; flex-wrap: wrap;">
+            <h2 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);">{{ user.full_name or user.username }}</h2>
+            <span id="statusBadge" class="adm-badge {% if user.is_active %}adm-badge-success{% else %}adm-badge-danger{% endif %}">
+                {{ 'Active' if user.is_active else 'Inactive' }}
+            </span>
+            <span class="adm-badge adm-badge-info">{{ user.role|capitalize }}</span>
+        </div>
+        <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">
+            <div>📧 {{ user.email }}</div>
+            <div>📅 Joined: <strong>{{ (user.created_at or '')[:10] }}</strong></div>
+            <div>🕒 Last Active: <strong>{{ (user.last_login or 'Never')[:16] }}</strong></div>
+            {% if user.location %}<div>📍 {{ user.location }}</div>{% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Tabs Navigation -->
+<div class="adm-tabs">
+    <div class="adm-tab active" onclick="showTab('codingTab', this)">💻 Coding Activity</div>
+    <div class="adm-tab" onclick="showTab('historyTab', this)">📝 Submissions ({{ submissions|length }})</div>
+    <div class="adm-tab" onclick="showTab('aiTab', this)">🤖 AI Usage</div>
+    <div class="adm-tab" onclick="showTab('learningTab', this)">📊 Learning Analytics</div>
+    <div class="adm-tab" onclick="showTab('profileTab', this)">👤 Profile Info</div>
+</div>
+
+<!-- TAB 1: Coding Activity -->
+<div id="codingTab" class="tab-content-panel">
+    <div class="adm-grid-4">
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Attempted</div>
+                <div class="adm-metric-value">{{ coding_stats.problems_attempted }}</div>
+            </div>
+            <div class="adm-metric-icon primary">🧩</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Solved</div>
+                <div class="adm-metric-value">{{ coding_stats.problems_solved }}</div>
+            </div>
+            <div class="adm-metric-icon success">🎯</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Submissions</div>
+                <div class="adm-metric-value">{{ coding_stats.total_submissions }}</div>
+            </div>
+            <div class="adm-metric-icon info">📝</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Acceptance</div>
+                <div class="adm-metric-value">{{ coding_stats.acceptance_rate }}%</div>
+            </div>
+            <div class="adm-metric-icon accent">📊</div>
+        </div>
+    </div>
+
+    <!-- Verdict Breakdown Grid -->
+    <div class="adm-card" style="margin-bottom: 1.5rem;">
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">Submission Outcomes</h3>
+        <div class="adm-grid-4" style="margin-bottom: 0;">
+            <div style="background: var(--bg-input); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <span class="adm-badge adm-badge-success" style="margin-bottom: 0.35rem;">Accepted</span>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--success);">{{ coding_stats.accepted }}</div>
+            </div>
+
+            <div style="background: var(--bg-input); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <span class="adm-badge adm-badge-danger" style="margin-bottom: 0.35rem;">Wrong Answer</span>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--danger);">{{ coding_stats.wrong_answer }}</div>
+            </div>
+
+            <div style="background: var(--bg-input); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <span class="adm-badge adm-badge-warning" style="margin-bottom: 0.35rem;">Compilation Error</span>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--warning);">{{ coding_stats.compilation_error }}</div>
+            </div>
+
+            <div style="background: var(--bg-input); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <span class="adm-badge adm-badge-danger" style="margin-bottom: 0.35rem;">Runtime / TLE</span>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--danger);">{{ coding_stats.runtime_error + coding_stats.time_limit_exceeded }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TAB 2: Submissions History -->
+<div id="historyTab" class="tab-content-panel" style="display: none;">
+    <div class="adm-table-container">
+        <div class="adm-table-scroll">
+            <table class="adm-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Problem</th>
+                        <th>Difficulty</th>
+                        <th>Topic</th>
+                        <th>Language</th>
+                        <th>Verdict</th>
+                        <th>Runtime</th>
+                        <th>Memory</th>
+                        <th>Submitted At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if submissions %}
+                        {% for s in submissions %}
+                            <tr>
+                                <td class="font-mono" style="font-size: 0.8rem; color: var(--primary-light);">
+                                    #{{ s.id }}
+                                </td>
+                                <td style="font-weight: 600; color: var(--text-primary);">
+                                    {{ s.problem_title or ('Problem #' ~ s.problem_id) }}
+                                </td>
+                                <td>
+                                    <span class="adm-badge {% if s.problem_difficulty == 'Easy' %}adm-badge-success{% elif s.problem_difficulty == 'Medium' %}adm-badge-warning{% else %}adm-badge-danger{% endif %}">
+                                        {{ s.problem_difficulty or 'Standard' }}
+                                    </span>
+                                </td>
+                                <td>{{ s.problem_topic or 'General' }}</td>
+                                <td><span class="adm-badge adm-badge-info">{{ (s.language or 'python')|capitalize }}</span></td>
+                                <td>
+                                    <span class="adm-badge {% if s.status == 'Accepted' %}adm-badge-success{% elif s.status == 'Wrong Answer' %}adm-badge-danger{% else %}adm-badge-warning{% endif %}">
+                                        {{ s.status }}
+                                    </span>
+                                </td>
+                                <td class="font-mono" style="font-size: 0.8rem;">
+                                    {{ s.execution_time or 0 }} ms
+                                </td>
+                                <td class="font-mono" style="font-size: 0.8rem;">
+                                    {{ s.memory or 0 }} KB
+                                </td>
+                                <td style="font-size: 0.75rem; color: var(--text-tertiary);">
+                                    {{ (s.created_at or '')[:16] }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                                No submission history recorded for this user.
+                            </td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- TAB 3: AI Activity -->
+<div id="aiTab" class="tab-content-panel" style="display: none;">
+    <div class="adm-grid-4">
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">AI Mentor</div>
+                <div class="adm-metric-value">{{ ai_stats.ai_mentor_requests }}</div>
+            </div>
+            <div class="adm-metric-icon info">💬</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Code Reviews</div>
+                <div class="adm-metric-value">{{ ai_stats.ai_code_reviews }}</div>
+            </div>
+            <div class="adm-metric-icon success">💻</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Agent Runs</div>
+                <div class="adm-metric-value">{{ ai_stats.ai_agent_usage }}</div>
+            </div>
+            <div class="adm-metric-icon accent">⚡</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Resume AI</div>
+                <div class="adm-metric-value">{{ ai_stats.resume_versions }}</div>
+            </div>
+            <div class="adm-metric-icon primary">📄</div>
+        </div>
+    </div>
+
+    <div class="adm-card">
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">AI Usage Overview</h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+            <strong>Conversations:</strong> {{ ai_stats.total_ai_conversations }} sessions<br>
+            <strong>Last AI Activity:</strong> {{ ai_stats.last_ai_activity }}
+        </p>
+    </div>
+</div>
+
+<!-- TAB 4: Learning Analytics -->
+<div id="learningTab" class="tab-content-panel" style="display: none;">
+    <div class="adm-grid-4">
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Current Rating</div>
+                <div class="adm-metric-value">{{ learning_analytics.current_rating }}</div>
+            </div>
+            <div class="adm-metric-icon accent">⭐</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Streak</div>
+                <div class="adm-metric-value">{{ learning_analytics.streak }} <span style="font-size: 0.9rem; color: var(--text-tertiary);">days</span></div>
+            </div>
+            <div class="adm-metric-icon success">🔥</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Velocity</div>
+                <div class="adm-metric-value">{{ learning_analytics.learning_velocity }}x</div>
+            </div>
+            <div class="adm-metric-icon info">⚡</div>
+        </div>
+
+        <div class="adm-card adm-metric-card">
+            <div>
+                <div class="adm-metric-label">Target Role</div>
+                <div style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-top: 0.35rem;">
+                    {{ learning_analytics.company_alignment }}
+                </div>
+            </div>
+            <div class="adm-metric-icon primary">💼</div>
+        </div>
+    </div>
+
+    <div class="adm-grid-2">
+        <div class="adm-card">
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Strong Topics</h4>
+            <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
+                {% for topic in learning_analytics.strong_topics %}
+                    <span class="adm-badge adm-badge-success" style="padding: 4px 10px;">{{ topic }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="adm-card">
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Topics for Practice</h4>
+            <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
+                {% for topic in learning_analytics.weak_topics %}
+                    <span class="adm-badge adm-badge-warning" style="padding: 4px 10px;">{{ topic }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TAB 5: Profile Info -->
+<div id="profileTab" class="tab-content-panel" style="display: none;">
+    <div class="adm-card">
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">Profile Metadata</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; font-size: 0.85rem;">
+            <div>
+                <span class="adm-form-label">Full Name</span>
+                <p style="color: var(--text-primary);">{{ user.full_name or 'Not specified' }}</p>
+            </div>
+            <div>
+                <span class="adm-form-label">Email</span>
+                <p style="color: var(--text-primary);">{{ user.email }}</p>
+            </div>
+            <div>
+                <span class="adm-form-label">Username</span>
+                <p style="color: var(--text-primary);">@{{ user.username }}</p>
+            </div>
+            <div>
+                <span class="adm-form-label">Phone</span>
+                <p style="color: var(--text-primary);">{{ user.phone or 'Not provided' }}</p>
+            </div>
+            <div>
+                <span class="adm-form-label">Location</span>
+                <p style="color: var(--text-primary);">{{ user.location or 'Not provided' }}</p>
+            </div>
+            <div>
+                <span class="adm-form-label">Target Role</span>
+                <p style="color: var(--text-primary);">{{ career_profile.preferred_role or 'Software Engineer' }}</p>
+            </div>
+        </div>
+
+        {% if user.bio %}
+            <div style="margin-top: 1rem;">
+                <span class="adm-form-label">Bio</span>
+                <p style="color: var(--text-secondary); background: var(--bg-input); padding: 0.65rem; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                    {{ user.bio }}
+                </p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function showTab(tabId, el) {
+        document.querySelectorAll('.tab-content-panel').forEach(p => p.style.display = 'none');
+        document.querySelectorAll('.adm-tab').forEach(t => t.classList.remove('active'));
+        
+        document.getElementById(tabId).style.display = 'block';
+        el.classList.add('active');
+    }
+
+    async function toggleUserStatus(userId, currentActive) {
+        const nextActive = currentActive === 1 ? 0 : 1;
+        const msg = nextActive === 1 ? "Activate this user?" : "Deactivate this user account?";
+        if (!confirm(msg)) return;
+
+        try {
+            const res = await fetch(`/admin/api/users/${userId}/status`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ active: nextActive })
+            });
+            const data = await res.json();
+            if (data.success) {
+                location.reload();
+            } else {
+                alert(data.error || 'Failed to update status');
+            }
+        } catch (e) {
+            alert('Network error');
+        }
+    }
+</script>
+{% endblock %}
