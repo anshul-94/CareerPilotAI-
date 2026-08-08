@@ -7734,3 +7734,129 @@ GET /.well-known/appspecific/com.chrome.devtools.json
 User: Guest
 Status: 404
 Duration: 1ms
+2026-08-08 12:36:40,664 - app - INFO - 
+[12:36:40]
+GET /register
+User: Guest
+Status: 200
+Duration: 18ms
+2026-08-08 12:36:40,741 - app - INFO - 
+[12:36:40]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 3ms
+2026-08-08 12:37:01,417 - app - INFO - 
+[12:37:01]
+GET /register
+User: Guest
+Status: 200
+Duration: 11ms
+2026-08-08 12:37:15,699 - app - INFO - 
+[12:37:15]
+GET /
+User: Guest
+Status: 200
+Duration: 12ms
+2026-08-08 12:37:20,174 - app - INFO - 
+[12:37:20]
+GET /register
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:37:53,146 - app - INFO - 
+[12:37:53]
+GET /register
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:37:53,273 - app - INFO - 
+[12:37:53]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:37:53,407 - app - INFO - 
+[12:37:53]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:37:53,539 - app - INFO - 
+[12:37:53]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:37:53,674 - app - INFO - 
+[12:37:53]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:37:53,773 - app - INFO - 
+[12:37:53]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:37:56,510 - app - INFO - 
+[12:37:56]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 1ms
+2026-08-08 12:37:59,806 - app - INFO - 
+[12:37:59]
+GET /login
+User: Guest
+Status: 200
+Duration: 13ms
+2026-08-08 12:37:59,832 - app - INFO - 
+[12:37:59]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 2ms
+2026-08-08 12:38:01,402 - app - INFO - 
+[12:38:01]
+GET /register
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:38:01,451 - app - INFO - 
+[12:38:01]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 1ms
+2026-08-08 12:38:06,884 - app - INFO - 
+[12:38:06]
+GET /
+User: Guest
+Status: 200
+Duration: 12ms
+2026-08-08 12:38:06,936 - app - INFO - 
+[12:38:06]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 1ms
+2026-08-08 12:38:15,838 - app - INFO - 
+[12:38:15]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:38:15,883 - app - INFO - 
+[12:38:15]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 12:38:21,236 - app - INFO - 
+[12:38:21]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms

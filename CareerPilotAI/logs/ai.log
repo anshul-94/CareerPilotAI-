@@ -612,3 +612,5 @@ Prompt Tokens : N/A
 Execution Time: 8.91 sec
 Success/Failed: Success
 ================================
+2026-08-08 12:36:34,751 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 12:36:35,000 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b

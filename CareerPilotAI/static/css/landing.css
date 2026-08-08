@@ -497,25 +497,221 @@
 
 @media (max-width: 768px) {
     .landing-hero {
-        padding-top: 120px;
+        padding-top: 110px;
+        padding-bottom: 40px;
         min-height: auto;
+        height: auto;
+        overflow: visible;
     }
+    
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
+        width: 100%;
     }
+
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-headline {
-        font-size: 2.5rem;
+        font-size: 2.35rem;
+        line-height: 1.2;
+        word-break: break-word;
     }
+
+    .hero-subheading {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+
+    /* ISSUE 2: Perfectly Centered Login + Explore Features Buttons */
+    .hero-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .landing-nav-center {
         display: none;
     }
+
+    /* ISSUE 1: Eliminate Overlaps & Allow Natural Height */
+    .hero-visual {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: visible;
+    }
+
+    .hero-glow-bg {
+        width: 260px;
+        height: 260px;
+        max-width: 90vw;
+    }
+
+    .glass-card-stack {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 1.25rem 1rem;
+        gap: 0.75rem;
+        height: auto;
+        min-height: auto;
+    }
+
+    .glass-metric-row {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.85rem 1rem;
+        height: auto;
+        min-height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .metric-left {
+        flex: 1;
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .metric-title,
+    .metric-sub {
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .landing-section {
+        padding: 4.5rem 5%;
+        height: auto;
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+        line-height: 1.25;
+        word-break: break-word;
+    }
+
     .features-grid, .why-grid, .timeline-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
+
+    .feature-card,
+    .step-card,
+    .why-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        height: auto;
+        min-height: auto;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .landing-cta {
+        padding: 4rem 5%;
+        height: auto;
+    }
+
+    .cta-box h2 {
+        font-size: 1.85rem;
+        line-height: 1.25;
+        word-break: break-word;
+        margin-bottom: 1.25rem;
+    }
+
+    .cta-box .btn-hero-primary {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        display: inline-flex;
+        justify-content: center;
+        padding: 0.85rem 1.5rem;
+        font-size: 1rem;
+    }
+
     .minimal-footer {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .landing-hero {
+        padding-top: 100px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .glass-metric-row {
+        padding: 0.75rem 0.85rem;
+    }
+
+    .metric-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .metric-title {
+        font-size: 0.85rem;
+    }
+
+    .metric-value {
+        font-size: 0.95rem;
     }
 }
