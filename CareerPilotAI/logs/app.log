@@ -7313,3 +7313,424 @@ GET /register
 User: Guest
 Status: 200
 Duration: 14ms
+2026-08-08 12:18:48,354 - app - INFO - 
+[12:18:48]
+GET /login
+User: Guest
+Status: 200
+Duration: 19ms
+2026-08-08 12:19:13,209 - app - INFO - 
+[12:19:13]
+GET /
+User: Guest
+Status: 200
+Duration: 21ms
+2026-08-08 12:19:17,310 - app - INFO - 
+[12:19:17]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:19:19,165 - app - INFO - 
+[12:19:19]
+GET /login
+User: Guest
+Status: 200
+Duration: 10ms
+2026-08-08 12:19:35,517 - app - INFO - 
+[12:19:35]
+GET /register
+User: Guest
+Status: 200
+Duration: 13ms
+2026-08-08 12:19:48,923 - app - INFO - 
+[12:19:48]
+GET /login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 12:19:48,931 - app - INFO - 
+[12:19:48]
+GET /register
+User: Guest
+Status: 200
+Duration: 3ms
+2026-08-08 12:19:48,947 - app - INFO - 
+[12:19:48]
+POST /login
+User: Guest
+Status: 200
+Duration: 12ms
+2026-08-08 12:19:49,196 - app - INFO - 
+[12:19:49]
+POST /login
+User: 1
+Status: 302
+Duration: 247ms
+2026-08-08 12:19:49,230 - app - INFO - 
+[12:19:49]
+GET /dashboard
+User: 1
+Status: 200
+Duration: 30ms
+2026-08-08 12:19:49,479 - app - INFO - 
+[12:19:49]
+POST /register
+User: 19
+Status: 302
+Duration: 247ms
+2026-08-08 12:19:49,505 - app - INFO - 
+[12:19:49]
+GET /dashboard
+User: 19
+Status: 200
+Duration: 24ms
+2026-08-08 12:19:55,303 - app - INFO - 
+[12:19:55]
+GET /register
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 12:23:07,485 - app - INFO - 
+[12:23:07]
+GET /login
+User: Guest
+Status: 200
+Duration: 8ms
+2026-08-08 12:23:08,187 - app - INFO - 
+[12:23:08]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:25:06,521 - app - INFO - 
+[12:25:06]
+GET /profile/settings
+User: Guest
+Status: 302
+Duration: 7ms
+2026-08-08 12:25:06,544 - app - INFO - 
+[12:25:06]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:25:12,236 - app - INFO - 
+[12:25:12]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:25:12,594 - app - INFO - 
+[12:25:12]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:25:12,732 - app - INFO - 
+[12:25:12]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:25:12,851 - app - INFO - 
+[12:25:12]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:25:32,846 - app - INFO - 
+[12:25:32]
+GET /register
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:26:16,273 - app - INFO - 
+[12:26:16]
+POST /register
+User: 20
+Status: 302
+Duration: 310ms
+2026-08-08 12:26:16,319 - app - INFO - 
+[12:26:16]
+GET /dashboard
+User: 20
+Status: 200
+Duration: 41ms
+2026-08-08 12:26:30,696 - app - INFO - 
+[12:26:30]
+GET /learning/
+User: 20
+Status: 200
+Duration: 33ms
+2026-08-08 12:26:31,515 - app - INFO - 
+[12:26:31]
+GET /chat/
+User: 20
+Status: 200
+Duration: 30ms
+2026-08-08 12:26:48,762 - app - ERROR - Error generating title for session 081d0c60-016b-4346-9b73-7dd59ed33fa2: No module named 'backend.services.ollama_service'
+2026-08-08 12:26:48,763 - app - INFO - 
+[12:26:48]
+POST /chat/stream
+User: 20
+Status: 200
+Duration: 29ms
+2026-08-08 12:27:12,045 - app - INFO - 
+[12:27:12]
+GET /chat/
+User: 20
+Status: 200
+Duration: 10ms
+2026-08-08 12:27:13,963 - app - INFO - 
+[12:27:13]
+GET /chat/
+User: 20
+Status: 200
+Duration: 13ms
+2026-08-08 12:27:26,354 - app - INFO - 
+[12:27:26]
+GET /
+User: 20
+Status: 200
+Duration: 4ms
+2026-08-08 12:27:28,590 - app - INFO - 
+[12:27:28]
+GET /login
+User: 20
+Status: 302
+Duration: 1ms
+2026-08-08 12:27:28,654 - app - INFO - 
+[12:27:28]
+GET /dashboard
+User: 20
+Status: 200
+Duration: 28ms
+2026-08-08 12:27:34,415 - app - INFO - 
+[12:27:34]
+GET /admin
+User: 20
+Status: 308
+Duration: 4ms
+2026-08-08 12:27:34,425 - app - INFO - 
+[12:27:34]
+GET /admin/
+User: 20
+Status: 302
+Duration: 1ms
+2026-08-08 12:27:34,453 - app - INFO - 
+[12:27:34]
+GET /admin/login
+User: 20
+Status: 200
+Duration: 24ms
+2026-08-08 12:28:10,962 - app - INFO - 
+[12:28:10]
+GET /login
+User: Guest
+Status: 200
+Duration: 32ms
+2026-08-08 12:28:10,970 - app - INFO - 
+[12:28:10]
+GET /register
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 12:28:11,472 - app - INFO - 
+[12:28:11]
+POST /login
+User: 1
+Status: 302
+Duration: 498ms
+2026-08-08 12:28:11,514 - app - INFO - 
+[12:28:11]
+GET /dashboard
+User: 1
+Status: 200
+Duration: 29ms
+2026-08-08 12:28:11,783 - app - INFO - 
+[12:28:11]
+POST /register
+User: 21
+Status: 302
+Duration: 265ms
+2026-08-08 12:28:11,882 - app - INFO - 
+[12:28:11]
+GET /dashboard
+User: 21
+Status: 200
+Duration: 90ms
+2026-08-08 12:28:57,478 - app - INFO - 
+[12:28:57]
+GET /admin/login
+User: 20
+Status: 200
+Duration: 13ms
+2026-08-08 12:28:59,985 - app - INFO - 
+[12:28:59]
+GET /admin/
+User: 20
+Status: 302
+Duration: 0ms
+2026-08-08 12:28:59,997 - app - INFO - 
+[12:28:59]
+GET /admin/login
+User: 20
+Status: 200
+Duration: 2ms
+2026-08-08 12:29:00,758 - app - INFO - 
+[12:29:00]
+GET /
+User: 20
+Status: 200
+Duration: 3ms
+2026-08-08 12:29:02,992 - app - INFO - 
+[12:29:02]
+GET /dashboard
+User: 20
+Status: 200
+Duration: 31ms
+2026-08-08 12:29:04,892 - app - INFO - 
+[12:29:04]
+GET /logout
+User: Guest
+Status: 302
+Duration: 1ms
+2026-08-08 12:29:04,921 - app - INFO - 
+[12:29:04]
+GET /login
+User: Guest
+Status: 200
+Duration: 16ms
+2026-08-08 12:29:09,882 - app - INFO - 
+[12:29:09]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:29:13,526 - app - INFO - 
+[12:29:13]
+GET /register
+User: Guest
+Status: 200
+Duration: 9ms
+2026-08-08 12:29:18,447 - app - INFO - 
+[12:29:18]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:29:22,305 - app - INFO - 
+[12:29:22]
+GET /register
+User: Guest
+Status: 200
+Duration: 2ms
+2026-08-08 12:29:26,014 - app - INFO - 
+[12:29:26]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:29:29,886 - app - INFO - 
+[12:29:29]
+GET /register
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:29:32,694 - app - INFO - 
+[12:29:32]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:29:37,285 - app - INFO - 
+[12:29:37]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 8ms
+2026-08-08 12:29:42,438 - app - INFO - 
+[12:29:42]
+GET /register
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:29:42,527 - app - INFO - 
+[12:29:42]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 12:32:17,552 - app - INFO - 
+[12:32:17]
+GET /chat/
+User: Guest
+Status: 302
+Duration: 11ms
+2026-08-08 12:32:17,573 - app - INFO - 
+[12:32:17]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:32:37,855 - app - INFO - 
+[12:32:37]
+GET /
+User: Guest
+Status: 200
+Duration: 5ms
+2026-08-08 12:32:43,161 - app - INFO - 
+[12:32:43]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:32:49,834 - app - INFO - 
+[12:32:49]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-08-08 12:32:54,228 - app - INFO - 
+[12:32:54]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 12:33:15,831 - app - INFO - 
+[12:33:15]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 2ms
+2026-08-08 12:33:27,267 - app - INFO - 
+[12:33:27]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 12:33:29,269 - app - INFO - 
+[12:33:29]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-08-08 12:33:29,301 - app - INFO - 
+[12:33:29]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 0ms
+2026-08-08 12:33:32,083 - app - INFO - 
+[12:33:32]
+GET /register
+User: Guest
+Status: 200
+Duration: 3ms
+2026-08-08 12:33:32,142 - app - INFO - 
+[12:33:32]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: Guest
+Status: 404
+Duration: 1ms

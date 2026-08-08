@@ -583,3 +583,33 @@ Jobs Filtered   : 20
 Jobs Saved      : 20
 Completed in    : 13383 ms
 ================================
+2026-08-08 12:19:50,221 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 1
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 1023 ms
+================================
+2026-08-08 12:28:12,746 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 1
+Career DNA      : Loaded
+Resume Loaded   : No
+Role            : Not specified
+Skills          : 0 extracted
+Location        : Not specified
+Generated Query : Software Developer fresher hiring jobs 2024 2025
+Provider        : tavily
+Jobs Retrieved  : 5
+Jobs Filtered   : 5
+Jobs Saved      : 5
+Completed in    : 1267 ms
+================================

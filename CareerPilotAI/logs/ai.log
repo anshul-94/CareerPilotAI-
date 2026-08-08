@@ -550,3 +550,65 @@ Prompt Tokens : N/A
 Execution Time: 8.70 sec
 Success/Failed: Success
 ================================
+2026-08-08 12:19:10,755 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 12:19:11,018 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-08-08 12:20:20,321 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 30.82 sec
+Success/Failed: Success
+================================
+2026-08-08 12:20:28,685 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Evaluate this resume for a  position:  {...
+Prompt Tokens : N/A
+Execution Time: 8.36 sec
+Success/Failed: Success
+================================
+2026-08-08 12:26:45,136 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 28.79 sec
+Success/Failed: Success
+================================
+2026-08-08 12:26:54,015 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Evaluate this resume for a  position:  {...
+Prompt Tokens : N/A
+Execution Time: 8.87 sec
+Success/Failed: Success
+================================
+2026-08-08 12:28:39,464 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 27.59 sec
+Success/Failed: Success
+================================
+2026-08-08 12:28:48,383 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Evaluate this resume for a  position:  {...
+Prompt Tokens : N/A
+Execution Time: 8.91 sec
+Success/Failed: Success
+================================

@@ -334,3 +334,67 @@ Started     : Yes
 Duration    : 13384 ms
 Result      : Success
 =====================================
+2026-08-08 12:19:50,222 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 1
+Started     : Yes
+Duration    : 1023 ms
+Result      : Success
+=====================================
+2026-08-08 12:19:50,500 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 19
+Started     : Yes
+Duration    : 1017 ms
+Result      : Failed (FOREIGN KEY constraint failed)
+=====================================
+2026-08-08 12:20:28,696 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 19
+Started     : Yes
+Duration    : 39215 ms
+Result      : Failed (FOREIGN KEY constraint failed)
+=====================================
+2026-08-08 12:26:46,370 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 20
+Started     : Yes
+Duration    : 30094 ms
+Result      : Success
+=====================================
+2026-08-08 12:26:54,026 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 20
+Started     : Yes
+Duration    : 37748 ms
+Result      : Success
+=====================================
+2026-08-08 12:28:12,747 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 1
+Started     : Yes
+Duration    : 1267 ms
+Result      : Success
+=====================================
+2026-08-08 12:28:12,798 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : AI Job Refresh
+User ID     : 21
+Started     : Yes
+Duration    : 1006 ms
+Result      : Failed (FOREIGN KEY constraint failed)
+=====================================
+2026-08-08 12:28:48,400 - scheduler - INFO - 
+========== BACKGROUND JOB ==========
+Task        : Daily Resume Optimization
+User ID     : 21
+Started     : Yes
+Duration    : 36610 ms
+Result      : Failed (FOREIGN KEY constraint failed)
+=====================================

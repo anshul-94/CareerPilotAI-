@@ -1,52 +1,491 @@
 {% extends "base.html" %}
 
+{% block title %}Create Account — CareerPilot AI{% endblock %}
 {% block navbar %}{% endblock %}
 
 {% block content %}
-<div class="auth-page">
-    <div id="particles-js"></div>
-    
-    <div class="auth-card" data-aos="zoom-in" data-aos-duration="500">
-        <div class="auth-header">
-            <div class="auth-logo">🚀 CareerPilot <span class="text-gradient">AI</span></div>
-            <p>Create your free account to supercharge your career.</p>
-        </div>
+<div class="auth-wrapper">
+    <div class="auth-container register-container">
         
-        <form method="POST" action="{{ url_for('auth.register') }}">
-            <div class="form-group">
-                <label class="form-label" for="full_name">Full Name</label>
-                <input type="text" id="full_name" name="full_name" class="form-input" placeholder="John Doe" required autofocus>
+        <!-- LEFT SIDE: REGISTRATION FORM -->
+        <div class="auth-form-side">
+            <div class="auth-brand">
+                <span class="auth-brand-icon">🚀</span>
+                <span class="auth-brand-text">CareerPilot <span class="brand-gradient">AI</span></span>
             </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="username">Username</label>
-                <input type="text" id="username" name="username" class="form-input" placeholder="johndoe" required>
+
+            <div class="auth-header">
+                <h1 class="auth-title">Create an account</h1>
+                <p class="auth-subtitle">Start your AI-powered career journey today.</p>
             </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="email">Email Address</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+
+            <form method="POST" action="{{ url_for('auth.register') }}" class="auth-form">
+                <div class="form-group">
+                    <label class="form-label" for="full_name">Full Name</label>
+                    <input type="text" 
+                           id="full_name" 
+                           name="full_name" 
+                           class="form-control" 
+                           placeholder="e.g. Alex Morgan" 
+                           required 
+                           autofocus 
+                           autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" 
+                           id="username" 
+                           name="username" 
+                           class="form-control" 
+                           placeholder="e.g. alex85" 
+                           required 
+                           autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           class="form-control" 
+                           placeholder="alex@example.com" 
+                           required 
+                           autocomplete="email">
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label class="form-label" for="password">Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" 
+                                   id="password" 
+                                   name="password" 
+                                   class="form-control" 
+                                   placeholder="Min 6 chars" 
+                                   required 
+                                   minlength="6"
+                                   autocomplete="new-password">
+                            <button type="button" 
+                                    class="pwd-toggle-btn" 
+                                    onclick="togglePwdVisibility('password', this)" 
+                                    aria-label="Toggle password view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="confirm_password">Confirm Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" 
+                                   id="confirm_password" 
+                                   name="confirm_password" 
+                                   class="form-control" 
+                                   placeholder="Confirm key" 
+                                   required 
+                                   minlength="6"
+                                   autocomplete="new-password">
+                            <button type="button" 
+                                    class="pwd-toggle-btn" 
+                                    onclick="togglePwdVisibility('confirm_password', this)" 
+                                    aria-label="Toggle password view">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-auth-primary">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="auth-switch-text">
+                Already have an account? <a href="{{ url_for('auth.login') }}" class="switch-link">Log in</a>
             </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-input" placeholder="Create a strong password" required minlength="6">
-                <div class="form-hint">Must be at least 6 characters long.</div>
-            </div>
-            
-            <div class="form-group">
-                <label class="form-label" for="confirm_password">Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" class="form-input" placeholder="Confirm your password" required minlength="6">
-            </div>
-            
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
-                Create Account
-            </button>
-        </form>
-        
-        <div class="auth-footer">
-            Already have an account? <a href="{{ url_for('auth.login') }}">Log in</a>
         </div>
+
+        <!-- RIGHT SIDE: BRANDING PANEL -->
+        <div class="auth-brand-side">
+            <div class="brand-panel-content">
+                <div class="brand-icon-large">🚀</div>
+                <h2 class="brand-side-title">CareerPilot AI</h2>
+                <p class="brand-side-tagline">Your AI-powered career companion.</p>
+
+                <div class="brand-features-list">
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Build your career profile</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Improve your resume with AI</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Prepare for technical interviews</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Discover better opportunities</span>
+                    </div>
+                </div>
+
+                <div class="brand-side-footer">
+                    <span class="brand-footer-text">Already registered?</span>
+                    <a href="{{ url_for('auth.login') }}" class="btn-brand-outline">Sign In</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<style>
+/* ==========================================================================
+   CareerPilot AI — Clean 2-Column Professional SaaS Auth Layout (Register)
+   Reuses existing project CSS tokens: var(--bg-primary), var(--primary), etc.
+   ========================================================================== */
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 980px;
+    min-height: 600px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl, 24px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    overflow: hidden;
+}
+
+/* ── LEFT: Form Side ── */
+.auth-form-side {
+    padding: 2.75rem 2.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-card);
+}
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-brand-icon {
+    font-size: 1.25rem;
+}
+
+.auth-brand-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.brand-gradient {
+    color: var(--primary-light);
+}
+
+.auth-header {
+    margin-bottom: 1.5rem;
+}
+
+.auth-title {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.4rem 0;
+}
+
+.auth-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+.form-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.form-control {
+    width: 100%;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md, 10px);
+    padding: 0.75rem 1rem;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color var(--transition-fast, 0.2s), box-shadow var(--transition-fast, 0.2s);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.password-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-wrapper .form-control {
+    padding-right: 2.75rem;
+}
+
+.pwd-toggle-btn {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.pwd-toggle-btn:hover {
+    color: var(--text-primary);
+}
+
+.btn-auth-primary {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md, 10px);
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast, 0.2s);
+    margin-top: 0.4rem;
+    box-shadow: 0 4px 12px rgba(46, 111, 149, 0.25);
+}
+
+.btn-auth-primary:hover {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    box-shadow: 0 6px 16px rgba(46, 111, 149, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-auth-primary:active {
+    transform: translateY(0);
+}
+
+.auth-switch-text {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+}
+
+.switch-link {
+    color: var(--primary-light);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
+    transition: color 0.2s;
+}
+
+.switch-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ── RIGHT: Brand Side ── */
+.auth-brand-side {
+    background: linear-gradient(145deg, var(--bg-secondary) 0%, #131a24 100%);
+    border-left: 1px solid var(--border);
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.brand-panel-content {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.brand-icon-large {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.brand-side-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.4rem 0;
+}
+
+.brand-side-tagline {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0 0 2rem 0;
+    line-height: 1.4;
+}
+
+.brand-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 2.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.feature-check {
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.brand-side-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.brand-footer-text {
+    font-size: 0.82rem;
+    color: var(--text-tertiary);
+}
+
+.btn-brand-outline {
+    display: inline-block;
+    text-align: center;
+    padding: 0.65rem 1.25rem;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-primary);
+    font-size: 0.86rem;
+    font-weight: 600;
+    border-radius: var(--radius-md, 10px);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-brand-outline:hover {
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+    background: var(--primary-glow);
+}
+
+/* ── Responsive Mobile ── */
+@media (max-width: 850px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+    
+    .auth-brand-side {
+        display: none; /* Keep clean single-column focus on mobile */
+    }
+    
+    .auth-form-side {
+        padding: 2.5rem 1.75rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-wrapper {
+        padding: 1rem 0.75rem;
+    }
+    
+    .auth-container {
+        border-radius: var(--radius-lg, 16px);
+    }
+    
+    .auth-form-side {
+        padding: 2rem 1.25rem;
+    }
+    
+    .auth-title {
+        font-size: 1.45rem;
+    }
+}
+</style>
+
+<script>
+function togglePwdVisibility(fieldId, btn) {
+    const input = document.getElementById(fieldId);
+    const icon = btn.querySelector('i');
+    if (!input || !icon) return;
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+</script>
 {% endblock %}
