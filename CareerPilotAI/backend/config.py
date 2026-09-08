@@ -22,20 +22,25 @@ class BaseConfig:
     
     # AI Routing Logic (Determined by .env flags)
     USE_OLLAMA = os.getenv('USE_OLLAMA', 'False').lower() == 'true'
-    USE_GROQ = os.getenv('USE_GROQ', 'False').lower() == 'true'
+    USE_GROQ = os.getenv('USE_GROQ', 'True').lower() == 'true'
     
     @property
     def AI_PROVIDER(self):
+        # Explicit AI_PROVIDER setting takes precedence
+        explicit = os.getenv('AI_PROVIDER', '').lower()
+        if explicit in ('groq', 'ollama'):
+            return explicit
+
         # Strict logic: Production NEVER uses Ollama
         if self.ENVIRONMENT == 'production' or os.getenv('RENDER') == 'true':
             return 'groq'
             
-        if self.USE_OLLAMA:
-            return 'ollama'
-        elif self.USE_GROQ:
+        if self.USE_GROQ:
             return 'groq'
+        elif self.USE_OLLAMA:
+            return 'ollama'
             
-        return 'ollama' # default fallback for local
+        return 'groq' if self.GROQ_API_KEY else 'ollama'
     
     # Ollama settings
     OLLAMA_HOST = os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')
@@ -43,7 +48,7 @@ class BaseConfig:
     
     # Groq settings
     GROQ_API_KEY = os.getenv('GROQ_API_KEY', '')
-    GROQ_MODEL = os.getenv('GROQ_MODEL', 'llama-3.3-70b-versatile')
+    GROQ_MODEL = os.getenv('GROQ_MODEL', 'qwen/qwen3.8-27b')
     GROQ_TIMEOUT = int(os.getenv('GROQ_TIMEOUT', 60))
     
     # AI Retry / Resilience
@@ -65,8 +70,8 @@ class DevelopmentConfig(BaseConfig):
     """Development-specific overrides."""
     ENVIRONMENT = 'development'
     DEBUG = True
-    USE_OLLAMA = True
-    USE_GROQ = False
+    USE_OLLAMA = os.getenv('USE_OLLAMA', 'False').lower() == 'true'
+    USE_GROQ = os.getenv('USE_GROQ', 'True').lower() == 'true'
 
 
 class ProductionConfig(BaseConfig):

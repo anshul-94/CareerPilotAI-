@@ -658,3 +658,29 @@ Prompt Tokens : N/A
 Execution Time: 35.51 sec
 Success/Failed: Success
 ================================
+2026-09-08 11:22:52,132 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-09-08 11:22:52,318 - ai - INFO - [GroqProvider] Initialized — model=llama-3.3-70b-versatile
+2026-09-08 11:22:52,780 - ai - ERROR - [GroqProvider] API status error: 404 — Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-09-08 11:24:59,562 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-09-08 11:25:00,610 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'user', 'content': 'Respond wi...
+Prompt Tokens : 18
+Execution Time: 0.43 sec
+Success/Failed: Success
+================================
+2026-09-08 11:26:38,374 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-09-08 11:26:39,113 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-09-08 11:32:53,618 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 12
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 447
+Execution Time: 3.85 sec
+Success/Failed: Success
+================================

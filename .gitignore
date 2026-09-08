@@ -1,0 +1,17 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Bytecode & Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Secrets & Keys
+*.pem
+*.key
+*.cert
+
+# OS files
+.DS_Store

@@ -54,6 +54,30 @@ class GroqProvider(BaseProvider):
         self._client = None
         if self.api_key:
             self._client = self._Groq(api_key=self.api_key, timeout=self.timeout)
+            try:
+                available_models = [m.id for m in self._client.models.list().data]
+                if self.model not in available_models and available_models:
+                    preferred_order = [
+                        "qwen/qwen3.8-27b",
+                        "openai/gpt-oss-120b",
+                        "qwen/qwen3.6-27b",
+                        "openai/gpt-oss-20b",
+                        "allam-2-7b"
+                    ]
+                    matched = next((p for p in preferred_order if p in available_models), None)
+                    if not matched:
+                        chat_candidates = [
+                            m for m in available_models
+                            if not m.startswith("whisper") and "guard" not in m
+                        ]
+                        matched = chat_candidates[0] if chat_candidates else available_models[0]
+                    ai_logger.info(
+                        f"[GroqProvider] Model '{self.model}' not in available list. Auto-selected '{matched}'."
+                    )
+                    self.model = matched
+            except Exception as exc:
+                ai_logger.debug(f"[GroqProvider] Model list check: {exc}")
+
             ai_logger.info(f"[GroqProvider] Initialized — model={self.model}")
         else:
             ai_logger.warning("[GroqProvider] GROQ_API_KEY is missing! API calls will fail.")
@@ -128,6 +152,11 @@ class GroqProvider(BaseProvider):
             f"[GroqProvider] chat() | model={self.model}, msgs={len(messages)}, "
             f"json_mode={json_mode}, temp={temperature}"
         )
+
+        try:
+            self._ensure_client()
+        except ValueError as e:
+            return self._error_response(str(e))
 
         start_time = time.time()
         kwargs = {

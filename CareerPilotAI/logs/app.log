@@ -7969,3 +7969,64 @@ GET /interview/
 User: 12
 Status: 200
 Duration: 94ms
+2026-09-08 11:26:43,142 - app - INFO - 
+[11:26:43]
+GET /interview/
+User: 12
+Status: 200
+Duration: 43ms
+2026-09-08 11:26:49,435 - app - INFO - 
+[11:26:49]
+GET /chat/
+User: 12
+Status: 200
+Duration: 26ms
+2026-09-08 11:26:50,517 - app - INFO - 
+[11:26:50]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 17ms
+2026-09-08 11:26:50,517 - app - ERROR - Error generating title for session ea427d94-c9b4-411f-9eb3-1e8d97e396e0: No module named 'backend.services.ollama_service'
+2026-09-08 11:27:38,757 - app - INFO - 
+[11:27:38]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 26ms
+2026-09-08 11:31:26,967 - app - INFO - 
+[11:31:26]
+GET /chat/
+User: 12
+Status: 200
+Duration: 14ms
+2026-09-08 11:31:29,389 - app - INFO - 
+[11:31:29]
+GET /chat/
+User: 12
+Status: 200
+Duration: 6ms
+2026-09-08 11:31:41,726 - app - INFO - 
+[11:31:41]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 18ms
+2026-09-08 11:32:22,819 - app - INFO - 
+[11:32:22]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-09-08 11:32:24,071 - app - INFO - 
+[11:32:24]
+GET /learning/
+User: 12
+Status: 200
+Duration: 12ms
+2026-09-08 11:32:53,627 - app - INFO - 
+[11:32:53]
+POST /learning/generate
+User: 12
+Status: 200
+Duration: 3861ms
