@@ -7860,3 +7860,112 @@ GET /
 User: Guest
 Status: 200
 Duration: 0ms
+2026-09-08 11:03:03,692 - app - INFO - 
+[11:03:03]
+GET /
+User: Guest
+Status: 200
+Duration: 17ms
+2026-09-08 11:03:04,211 - app - INFO - 
+[11:03:04]
+GET /favicon.ico
+User: Guest
+Status: 404
+Duration: 2ms
+2026-09-08 11:03:07,823 - app - INFO - 
+[11:03:07]
+GET /login
+User: Guest
+Status: 200
+Duration: 7ms
+2026-09-08 11:03:17,125 - app - INFO - 
+[11:03:17]
+POST /login
+User: 12
+Status: 302
+Duration: 284ms
+2026-09-08 11:03:17,157 - app - INFO - 
+[11:03:17]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 21ms
+2026-09-08 11:03:31,522 - app - INFO - 
+[11:03:31]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 30ms
+2026-09-08 11:03:33,773 - app - INFO - 
+[11:03:33]
+GET /resume/analyze/11
+User: 12
+Status: 200
+Duration: 47ms
+2026-09-08 11:04:22,915 - app - INFO - 
+[11:04:22]
+POST /resume/analyze/run
+User: 12
+Status: 200
+Duration: 46047ms
+2026-09-08 11:08:19,650 - app - INFO - 
+[11:08:19]
+GET /chat/
+User: 12
+Status: 200
+Duration: 78ms
+2026-09-08 11:08:23,892 - app - INFO - 
+[11:08:23]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 32ms
+2026-09-08 11:08:23,893 - app - ERROR - Error generating title for session e1263aca-f444-4e00-b821-6c51a15f759a: No module named 'backend.services.ollama_service'
+2026-09-08 11:08:51,223 - app - INFO - 
+[11:08:51]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 25ms
+2026-09-08 11:09:52,682 - app - INFO - 
+[11:09:52]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 41ms
+2026-09-08 11:10:01,421 - app - INFO - 
+[11:10:01]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 17ms
+2026-09-08 11:10:02,501 - app - INFO - 
+[11:10:02]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-09-08 11:10:04,326 - app - INFO - 
+[11:10:04]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 36ms
+2026-09-08 11:10:05,542 - app - INFO - 
+[11:10:05]
+GET /learning/
+User: 12
+Status: 200
+Duration: 28ms
+2026-09-08 11:11:38,706 - app - INFO - 
+[11:11:38]
+POST /learning/generate
+User: 12
+Status: 200
+Duration: 35533ms
+2026-09-08 11:11:59,457 - app - INFO - 
+[11:11:59]
+GET /interview/
+User: 12
+Status: 200
+Duration: 94ms

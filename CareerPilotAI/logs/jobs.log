@@ -613,3 +613,18 @@ Jobs Filtered   : 5
 Jobs Saved      : 5
 Completed in    : 1267 ms
 ================================
+2026-09-08 11:03:36,343 - jobs - INFO - 
+========== JOB SEARCH ==========
+User            : 12
+Career DNA      : Loaded
+Resume Loaded   : Yes
+Role            : Not specified
+Skills          : 12 extracted
+Location        : Not specified
+Generated Query : Python Java Django Spring developer jobs fresher 2024 2025, Python fresher jobs hiring, Java fresher jobs hiring, AI fresher jobs hiring
+Provider        : tavily
+Jobs Retrieved  : 19
+Jobs Filtered   : 19
+Jobs Saved      : 19
+Completed in    : 19214 ms
+================================

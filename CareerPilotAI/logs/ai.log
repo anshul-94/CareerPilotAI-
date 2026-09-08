@@ -614,3 +614,47 @@ Success/Failed: Success
 ================================
 2026-08-08 12:36:34,751 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
 2026-08-08 12:36:35,000 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-09-08 11:00:58,919 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-09-08 11:01:03,300 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-09-08 11:02:49,191 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-09-08 11:02:49,450 - ai - INFO - [OllamaProvider] Initialized — host=http://localhost:11434, model=llama3.2:3b
+2026-09-08 11:03:55,521 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Here is the candidate's raw profile data...
+Prompt Tokens : N/A
+Execution Time: 38.39 sec
+Success/Failed: Success
+================================
+2026-09-08 11:04:22,881 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 12
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Please analyze this resume thoroughly:...
+Prompt Tokens : N/A
+Execution Time: 46.01 sec
+Success/Failed: Success
+================================
+2026-09-08 11:04:31,672 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : Background
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Evaluate this resume for a  position:  {...
+Prompt Tokens : N/A
+Execution Time: 36.14 sec
+Success/Failed: Success
+================================
+2026-09-08 11:11:38,682 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 12
+Provider      : Ollama
+Model         : llama3.2:3b
+Prompt Name   : Create a personalized learning roadmap:...
+Prompt Tokens : N/A
+Execution Time: 35.51 sec
+Success/Failed: Success
+================================
