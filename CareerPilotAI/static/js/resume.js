@@ -88,18 +88,20 @@ function initAnalysis() {
         try {
             const data = await CareerPilot.api('/resume/analyze/run', {
                 method: 'POST',
-                body: { resume_id: parseInt(resumeId), target_role: targetRole }
+                body: { resume_id: parseInt(resumeId, 10), target_role: targetRole }
             });
 
-            if (data.success) {
+            if (data && data.success) {
                 displayAnalysis(data.analysis);
                 CareerPilot.showNotification('Resume analysis complete!', 'success');
             }
         } catch (error) {
-            CareerPilot.showNotification('Analysis failed. Please try again.', 'danger');
+            console.error('[ResumeAnalysis] Analysis failed:', error);
+            // CareerPilot.api already shows the server's specific error message via showNotification.
+            // Do not fire a duplicate generic notification here.
         } finally {
             analyzeBtn.disabled = false;
-            analyzeBtn.innerHTML = '🔍 Analyze Resume';
+            analyzeBtn.innerHTML = '🔍 Run AI Analysis';
             CareerPilot.hideAIProcessing();
         }
     });

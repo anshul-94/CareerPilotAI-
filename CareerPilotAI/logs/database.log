@@ -37756,3 +37756,1107 @@ SELECT ONE
 admin_users
 Rows:1
 0 ms
+2026-10-14 15:47:37,339 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+3 ms
+2026-10-14 15:47:37,341 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+1 ms
+2026-10-14 15:47:40,103 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+1 ms
+2026-10-14 15:48:50,567 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+2 ms
+2026-10-14 15:48:53,346 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+2 ms
+2026-10-14 15:54:00,888 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-10-14 15:54:00,888 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,888 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,889 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,889 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,889 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,890 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,890 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,890 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,891 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,891 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:00,892 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-10-14 15:54:25,363 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-10-14 15:54:25,363 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,364 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,364 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,365 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,365 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,365 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,365 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,366 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,366 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,366 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:25,367 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-10-14 15:54:40,524 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-10-14 15:54:40,525 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,525 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,526 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,526 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,526 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,527 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,527 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,527 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,528 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,528 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:54:40,528 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-10-14 15:55:03,838 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-10-14 15:55:03,838 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,839 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,839 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,839 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,840 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,840 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,840 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,841 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,841 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,841 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:03,842 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-10-14 15:55:22,134 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-10-14 15:55:22,134 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,135 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,135 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,135 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,136 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,136 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,136 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,137 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,137 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,138 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:55:22,138 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-10-14 15:56:37,495 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:56:37,496 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:56:37,497 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:56:37,498 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:56:37,499 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,501 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,501 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,504 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,505 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:37,506 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:37,508 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,508 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:37,512 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,513 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-10-14 15:56:37,515 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,518 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,520 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,522 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,525 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,527 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+1 ms
+2026-10-14 15:56:37,529 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,529 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:37,531 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,532 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:37,534 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,535 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:37,537 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:56:37,538 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:56:48,637 - db - INFO - 
+[DB]
+DELETE
+unknown
+Rows:-1
+0 ms
+2026-10-14 15:56:48,637 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,638 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,638 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,639 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,639 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,639 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,640 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,640 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,640 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,641 - db - INFO - 
+[DB]
+SELECT ONE
+sqlite_master
+Rows:1
+0 ms
+2026-10-14 15:56:48,641 - db - INFO - 
+[DB]
+SELECT ONE
+admin_users
+Rows:1
+0 ms
+2026-10-14 15:57:01,017 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:57:01,018 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:57:01,019 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:57:01,020 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:57:01,020 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,021 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,022 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,025 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,026 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,027 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,029 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,030 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,033 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,035 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-10-14 15:57:01,036 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,038 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,040 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,042 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,043 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,044 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,046 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,046 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,048 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,049 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,051 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,052 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,054 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,055 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,057 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,058 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,060 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,060 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,062 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,063 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:01,065 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:57:01,066 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:57:13,666 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-10-14 15:57:13,667 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:0
+0 ms
+2026-10-14 15:57:13,903 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:57:13,904 - db - INFO - 
+[DB]
+SELECT ONE
+settings
+Rows:0
+0 ms
+2026-10-14 15:57:13,906 - db - INFO - 
+[DB]
+INSERT
+settings
+Rows:1
+0 ms
+2026-10-14 15:58:02,873 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:58:02,874 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:59:13,017 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:59:13,018 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:59:13,019 - db - INFO - 
+[DB]
+INSERT
+users
+Rows:1
+0 ms
+2026-10-14 15:59:13,020 - db - INFO - 
+[DB]
+SELECT ONE
+users
+Rows:1
+0 ms
+2026-10-14 15:59:13,021 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,022 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,023 - db - INFO - 
+[DB]
+INSERT
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,025 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,026 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,027 - db - INFO - 
+[DB]
+SELECT ONE
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,029 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,030 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,033 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,034 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:0
+0 ms
+2026-10-14 15:59:13,036 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,037 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,039 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,041 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,042 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,043 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,045 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,046 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,047 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,048 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,050 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,051 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,053 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,054 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,055 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,056 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,058 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,059 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,060 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,062 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms
+2026-10-14 15:59:13,064 - db - INFO - 
+[DB]
+SELECT ONE
+resumes
+Rows:1
+0 ms
+2026-10-14 15:59:13,064 - db - INFO - 
+[DB]
+INSERT
+resume_analysis
+Rows:1
+0 ms

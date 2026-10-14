@@ -15,6 +15,7 @@ def get_resume_analysis_prompt(resume_text: str, target_role: str = "") -> list[
     Returns:
         List of message dicts for the Ollama API
     """
+    target_role = " ".join(str(target_role or "").split()).strip()
     role_context = f" targeting the role of {target_role}" if target_role else ""
     
     system_prompt = f"""You are an expert ATS (Applicant Tracking System) Resume Analyst and Career Consultant with 15+ years of experience in technical recruitment.

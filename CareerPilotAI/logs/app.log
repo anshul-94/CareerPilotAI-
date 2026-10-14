@@ -8036,3 +8036,637 @@ GET /
 User: Guest
 Status: 200
 Duration: 14ms
+2026-10-14 15:48:50,563 - app - INFO - 
+[15:48:50]
+POST /resume/analyze/run
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:48:53,348 - app - INFO - 
+[15:48:53]
+POST /resume/analyze/run
+User: 7
+Status: 200
+Duration: 2783ms
+2026-10-14 15:56:37,503 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,505 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,505 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:56:37,507 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='Data Scientist'
+2026-10-14 15:56:37,509 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,509 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:56:37,510 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:56:37,510 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:56:37,511 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:56:37,511 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=2, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,512 - app - WARNING - [ResumeService] [ValidationStage] Resume text too short or unextracted: resume_id=2, text_len=9
+2026-10-14 15:56:37,512 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=2: Resume text is too short or could not be extracted. Please upload a clear text PDF. (status 400)
+2026-10-14 15:56:37,512 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 1ms
+2026-10-14 15:56:37,513 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=99999, target_role=''
+2026-10-14 15:56:37,514 - app - WARNING - [ResumeService] [ResumeLookupStage] Resume not found: resume_id=99999, user_id=1
+2026-10-14 15:56:37,514 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=99999: Resume not found (status 404)
+2026-10-14 15:56:37,514 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 404
+Duration: 0ms
+2026-10-14 15:56:37,515 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=3, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,516 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=3: You do not have permission to access this resume (status 403)
+2026-10-14 15:56:37,516 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 403
+Duration: 1ms
+2026-10-14 15:56:37,517 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,518 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: Unable to parse AI analysis results. Please try again. (status 500)
+2026-10-14 15:56:37,519 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 500
+Duration: 1ms
+2026-10-14 15:56:37,520 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,520 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: AI service rate limit reached. Please wait a moment and try again. (status 502)
+2026-10-14 15:56:37,521 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 502
+Duration: 1ms
+2026-10-14 15:56:37,522 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,523 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: AI analysis request timed out. Please try again. (status 502)
+2026-10-14 15:56:37,523 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 502
+Duration: 1ms
+2026-10-14 15:56:37,524 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:56:37,527 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,528 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 3ms
+2026-10-14 15:56:37,528 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:56:37,530 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,530 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:56:37,531 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:56:37,533 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,533 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:56:37,533 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:56:37,535 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,536 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:56:37,536 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:56:37,539 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:56:37,539 - app - INFO - 
+[15:56:37]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,024 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,026 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,026 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,028 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='Data Scientist'
+2026-10-14 15:57:01,030 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,030 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,031 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:57:01,031 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:57:01,032 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:57:01,032 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=2, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,033 - app - WARNING - [ResumeService] [ValidationStage] Resume text too short or unextracted: resume_id=2, text_len=9
+2026-10-14 15:57:01,033 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=2: Resume text is too short or could not be extracted. Please upload a clear text PDF. (status 400)
+2026-10-14 15:57:01,033 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 1ms
+2026-10-14 15:57:01,034 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=99999, target_role=''
+2026-10-14 15:57:01,035 - app - WARNING - [ResumeService] [ResumeLookupStage] Resume not found: resume_id=99999, user_id=1
+2026-10-14 15:57:01,035 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=99999: Resume not found (status 404)
+2026-10-14 15:57:01,035 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 404
+Duration: 0ms
+2026-10-14 15:57:01,036 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=3, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,037 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=3: You do not have permission to access this resume (status 403)
+2026-10-14 15:57:01,037 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 403
+Duration: 0ms
+2026-10-14 15:57:01,038 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,039 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: Unable to parse AI analysis results. Please try again. (status 500)
+2026-10-14 15:57:01,039 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 500
+Duration: 1ms
+2026-10-14 15:57:01,039 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,040 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: AI service rate limit reached. Please wait a moment and try again. (status 502)
+2026-10-14 15:57:01,040 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 502
+Duration: 0ms
+2026-10-14 15:57:01,041 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,042 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: AI analysis request timed out. Please try again. (status 502)
+2026-10-14 15:57:01,042 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 502
+Duration: 0ms
+2026-10-14 15:57:01,043 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:57:01,045 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,045 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,045 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:57:01,047 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,047 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 1ms
+2026-10-14 15:57:01,047 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:57:01,050 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,050 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,051 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:57:01,053 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,053 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,054 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,056 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,056 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,056 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,059 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,059 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,059 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,061 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,061 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 1ms
+2026-10-14 15:57:01,061 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,064 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,064 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:01,064 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:57:01,067 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:57:01,067 - app - INFO - 
+[15:57:01]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:57:13,918 - app - INFO - 
+[15:57:13]
+POST /login
+User: Guest
+Status: 500
+Duration: 11ms
+2026-10-14 15:57:13,919 - app - INFO - 
+[15:57:13]
+POST /chat/send
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,920 - app - INFO - 
+[15:57:13]
+POST /learning/generate
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,920 - app - INFO - 
+[15:57:13]
+POST /interview/start
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,921 - app - INFO - 
+[15:57:13]
+POST /sql-coach/analyze
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,923 - app - INFO - 
+[15:57:13]
+POST /projects/generate
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,924 - app - INFO - 
+[15:57:13]
+POST /code-review/analyze
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,925 - app - INFO - 
+[15:57:13]
+GET /jobs/match/1
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:57:13,926 - app - INFO - 
+[15:57:13]
+POST /resume/analyze/run
+User: Guest
+Status: 401
+Duration: 0ms
+2026-10-14 15:58:02,882 - app - INFO - 
+[15:58:02]
+POST /auth/login
+User: Guest
+Status: 404
+Duration: 6ms
+2026-10-14 15:58:02,896 - app - INFO - 
+[15:58:02]
+POST /auth/login
+User: Guest
+Status: 404
+Duration: 0ms
+2026-10-14 15:58:02,900 - app - INFO - 
+[15:58:02]
+GET /
+User: Guest
+Status: 200
+Duration: 3ms
+2026-10-14 15:58:02,901 - app - INFO - 
+[15:58:02]
+GET /dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,904 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 2ms
+2026-10-14 15:58:02,905 - app - INFO - 
+[15:58:02]
+GET /resume/upload
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,906 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,906 - app - INFO - 
+[15:58:02]
+GET /chat/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,907 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,907 - app - INFO - 
+[15:58:02]
+GET /learning/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,908 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,908 - app - INFO - 
+[15:58:02]
+GET /interview/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,909 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,909 - app - INFO - 
+[15:58:02]
+GET /jobs/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,910 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,910 - app - INFO - 
+[15:58:02]
+GET /code-review
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,911 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,911 - app - INFO - 
+[15:58:02]
+GET /projects/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,912 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,912 - app - INFO - 
+[15:58:02]
+GET /profile/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-14 15:58:02,912 - app - INFO - 
+[15:58:02]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-14 15:58:02,913 - app - INFO - 
+[15:58:02]
+POST /auth/login
+User: Guest
+Status: 404
+Duration: 0ms
+2026-10-14 15:59:13,025 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,026 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,026 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,028 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='Data Scientist'
+2026-10-14 15:59:13,030 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,030 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,031 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:59:13,031 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:59:13,032 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:59:13,032 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=2, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,033 - app - WARNING - [ResumeService] [ValidationStage] Resume text too short or unextracted: resume_id=2, text_len=9
+2026-10-14 15:59:13,033 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=2: Resume text is too short or could not be extracted. Please upload a clear text PDF. (status 400)
+2026-10-14 15:59:13,033 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 400
+Duration: 0ms
+2026-10-14 15:59:13,034 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=99999, target_role=''
+2026-10-14 15:59:13,034 - app - WARNING - [ResumeService] [ResumeLookupStage] Resume not found: resume_id=99999, user_id=1
+2026-10-14 15:59:13,034 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=99999: Resume not found (status 404)
+2026-10-14 15:59:13,035 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 404
+Duration: 0ms
+2026-10-14 15:59:13,035 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=3, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,036 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=3: You do not have permission to access this resume (status 403)
+2026-10-14 15:59:13,036 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 403
+Duration: 0ms
+2026-10-14 15:59:13,037 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,038 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: Unable to parse AI analysis results. Please try again. (status 500)
+2026-10-14 15:59:13,038 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 500
+Duration: 1ms
+2026-10-14 15:59:13,039 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,039 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: AI service rate limit reached. Please wait a moment and try again. (status 502)
+2026-10-14 15:59:13,040 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 502
+Duration: 0ms
+2026-10-14 15:59:13,040 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,041 - app - WARNING - [ResumeRoute] Analysis failed for resume_id=1: AI analysis request timed out. Please try again. (status 502)
+2026-10-14 15:59:13,041 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 502
+Duration: 0ms
+2026-10-14 15:59:13,042 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:59:13,044 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,044 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,044 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:59:13,046 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,046 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,047 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:59:13,049 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,049 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,049 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role=''
+2026-10-14 15:59:13,052 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,052 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,053 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,054 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,055 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,055 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,057 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,057 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 1ms
+2026-10-14 15:59:13,057 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,059 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,059 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,060 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,062 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,062 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms
+2026-10-14 15:59:13,063 - app - INFO - [ResumeRoute] Running analysis for user_id=1, resume_id=1, target_role='AI/ML Engineer'
+2026-10-14 15:59:13,065 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=1, user_id=1
+2026-10-14 15:59:13,065 - app - INFO - 
+[15:59:13]
+POST /resume/analyze/run
+User: 1
+Status: 200
+Duration: 2ms

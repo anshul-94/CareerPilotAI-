@@ -11,6 +11,7 @@ from backend.services.career_profile_service import CareerProfileService
 from backend.models.resume import ResumeModel
 from backend.models.project import ResumeAnalysisModel
 from backend.utils.helpers import safe_json_loads
+from backend.utils.logger import app_logger
 
 resume_bp = Blueprint('resume', __name__, url_prefix='/resume')
 
@@ -116,9 +117,8 @@ def analyze(resume_id=None):
     try:
         profile = CareerProfileService.get_profile(user_id)
         # Use the profile's preferred_role (set by AI extraction or manual input)
-        suggested_role = profile.get('preferred_role', '') or ''
-        # Trim whitespace; if the value looks like a placeholder, ignore it
-        suggested_role = suggested_role.strip()
+        raw_suggested = profile.get('preferred_role', '') or ''
+        suggested_role = " ".join(str(raw_suggested).split()).strip()
     except Exception:
         pass
 
@@ -134,21 +134,58 @@ def analyze(resume_id=None):
 @api_login_required
 def run_analysis():
     """API: Run AI analysis on a resume."""
-    user_id = session['user_id']
-    resume_id = request.json.get('resume_id')
-    target_role = request.json.get('target_role', '')
+    user_id = session.get('user_id')
+    if not user_id:
+        return jsonify({"success": False, "error": "Authentication required"}), 401
     
-    if not resume_id:
+    data = request.get_json(silent=True)
+    if not data or not isinstance(data, dict):
+        return jsonify({"success": False, "error": "Invalid request payload. Expected JSON object."}), 400
+    
+    raw_resume_id = data.get('resume_id')
+    if raw_resume_id is None:
         return jsonify({"success": False, "error": "Resume ID required"}), 400
+    
+    try:
+        resume_id = int(raw_resume_id)
+        if resume_id <= 0:
+            raise ValueError()
+    except (ValueError, TypeError):
+        return jsonify({"success": False, "error": "Invalid resume ID provided."}), 400
+    
+    # Target Role normalization:
+    # "AI/ML Engineer", "AI/ML Engineer ", " AI/ML Engineer", "AI/ML   Engineer"
+    # are all normalized to "AI/ML Engineer". Whitespace-only or None becomes "".
+    raw_target_role = data.get('target_role', '')
+    target_role = " ".join(str(raw_target_role or '').split()).strip()
+    
+    app_logger.info(
+        f"[ResumeRoute] Running analysis for user_id={user_id}, resume_id={resume_id}, target_role='{target_role}'"
+    )
     
     success, message, analysis = ResumeService.analyze_resume(
         resume_id, user_id, target_role
     )
     
     if success:
-        return jsonify({"success": True, "analysis": analysis})
+        return jsonify({"success": True, "analysis": analysis}), 200
     else:
-        return jsonify({"success": False, "error": message}), 400
+        msg_lower = message.lower()
+        if "not found" in msg_lower:
+            status_code = 404
+        elif "permission" in msg_lower or "unauthorized" in msg_lower:
+            status_code = 403
+        elif "too short" in msg_lower or "required" in msg_lower or "invalid" in msg_lower:
+            status_code = 400
+        elif any(k in msg_lower for k in ["rate limit", "timed out", "unreachable", "offline", "ai service", "provider"]):
+            status_code = 502
+        else:
+            status_code = 500
+        
+        app_logger.warning(
+            f"[ResumeRoute] Analysis failed for resume_id={resume_id}: {message} (status {status_code})"
+        )
+        return jsonify({"success": False, "error": message}), status_code
 
 
 @resume_bp.route('/builder')

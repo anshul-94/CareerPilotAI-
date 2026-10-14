@@ -582,3 +582,41 @@ Traceback (most recent call last):
 NameError: name 'json' is not defined. Did you forget to import 'json'?
 
 =======================================
+2026-10-14 15:56:37,518 - error - ERROR - [ResumeService] [ResponseParsingStage] Response JSON parsing failed for resume_id=1
+2026-10-14 15:56:37,520 - error - ERROR - [ResumeService] [AIProviderStage] AI provider failed for resume_id=1: Groq API error 429: rate_limit_exceeded
+2026-10-14 15:56:37,523 - error - ERROR - [ResumeService] [AIProviderStage] AI provider failed for resume_id=1: Request timed out after 60s
+2026-10-14 15:57:01,038 - error - ERROR - [ResumeService] [ResponseParsingStage] Response JSON parsing failed for resume_id=1
+2026-10-14 15:57:01,040 - error - ERROR - [ResumeService] [AIProviderStage] AI provider failed for resume_id=1: Groq API error 429: rate_limit_exceeded
+2026-10-14 15:57:01,042 - error - ERROR - [ResumeService] [AIProviderStage] AI provider failed for resume_id=1: Request timed out after 60s
+2026-10-14 15:57:13,911 - error - ERROR - 
+================ ERROR ================
+Route       : /login
+Function    : auth.login
+User        : Guest
+Reason      : no such table: admin_users
+Stack Trace :
+Traceback (most recent call last):
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/routes/auth.py", line 26, in login
+    admin_success, admin_msg, admin_user = AdminAuthService.login(
+                                           ~~~~~~~~~~~~~~~~~~~~~~^
+        username, password, request.remote_addr or ""
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/services/admin_service.py", line 22, in login
+    admin = AdminModel.get_by_username(username.strip())
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/models/admin.py", line 66, in get_by_username
+    return execute_one("SELECT * FROM admin_users WHERE username = ?", (username,))
+  File "/Users/vijaypatidar/vijay/Anshul/cico ai project/CareerPilotAI/backend/database/db.py", line 101, in execute_one
+    cursor = db.execute(query, params)
+sqlite3.OperationalError: no such table: admin_users
+
+=======================================
+2026-10-14 15:59:13,038 - error - ERROR - [ResumeService] [ResponseParsingStage] Response JSON parsing failed for resume_id=1
+2026-10-14 15:59:13,039 - error - ERROR - [ResumeService] [AIProviderStage] AI provider failed for resume_id=1: Groq API error 429: rate_limit_exceeded
+2026-10-14 15:59:13,041 - error - ERROR - [ResumeService] [AIProviderStage] AI provider failed for resume_id=1: Request timed out after 60s

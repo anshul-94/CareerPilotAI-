@@ -17,6 +17,8 @@ from backend.prompts.resume_prompt import (
 from backend.utils.helpers import (
     secure_filename, allowed_file, extract_skills_from_text, safe_json_loads
 )
+from backend.utils.logger import app_logger, error_logger, security_logger
+
 
 # Import here to avoid circular imports at module level
 def _sync_career_profile(user_id: int, raw_text: str) -> None:
@@ -136,32 +138,123 @@ class ResumeService:
         """
         Run AI analysis on a resume.
         
+        Args:
+            resume_id: ID of the resume to analyze
+            user_id: ID of the requesting user (for ownership verification)
+            target_role: Optional target job role for tailored ATS evaluation
+            
         Returns:
             Tuple of (success, message, analysis_dict)
         """
+        # 1. Target Role Normalization
+        # Ensures "AI/ML Engineer", "AI/ML Engineer ", " AI/ML Engineer", "AI/ML   Engineer"
+        # are treated identically; whitespace-only or None becomes "".
+        target_role = " ".join(str(target_role or "").split()).strip()
+
+        # 2. Resume Lookup
         resume = ResumeModel.get_by_id(resume_id)
         if not resume:
+            app_logger.warning(
+                f"[ResumeService] [ResumeLookupStage] Resume not found: resume_id={resume_id}, user_id={user_id}"
+            )
             return False, "Resume not found", None
-        
-        if not resume.get('raw_text') or len(resume['raw_text'].strip()) < 50:
-            return False, "Resume text is too short for analysis", None
-        
-        # Build prompt and call AI
-        messages = get_resume_analysis_prompt(resume['raw_text'], target_role)
-        response = AIService.chat_completion(messages, temperature=0.3, json_mode=True)
-        
-        if not response.get("success"):
-            return False, "AI analysis failed. Please try again.", None
-        
-        # Parse the response
-        analysis = parse_json_response(response["content"], fallback_structure={
+
+        # 3. Ownership Verification
+        if resume.get('user_id') != user_id:
+            security_logger.warning(
+                f"[ResumeService] [OwnershipStage] Unauthorized resume access attempt: "
+                f"resume_id={resume_id}, requesting_user_id={user_id}, owner_id={resume.get('user_id')}"
+            )
+            return False, "You do not have permission to access this resume", None
+
+        # 4. Text Extraction & Validation
+        raw_text = (resume.get('raw_text') or "").strip()
+        if not raw_text or len(raw_text) < 50 or raw_text.startswith("Text extraction failed"):
+            filename = resume.get('filename')
+            if filename:
+                filepath = os.path.join(ResumeService.UPLOAD_FOLDER, filename)
+                if os.path.exists(filepath):
+                    app_logger.info(
+                        f"[ResumeService] [TextRetrievalStage] Re-attempting PDF text extraction for resume_id={resume_id}"
+                    )
+                    extracted = ResumeService.extract_text_from_pdf(filepath)
+                    if extracted and len(extracted.strip()) >= 50:
+                        raw_text = extracted.strip()
+                        ResumeModel.update_raw_text(resume_id, raw_text)
+
+        if not raw_text or len(raw_text) < 50 or raw_text.startswith("Text extraction failed"):
+            app_logger.warning(
+                f"[ResumeService] [ValidationStage] Resume text too short or unextracted: "
+                f"resume_id={resume_id}, text_len={len(raw_text)}"
+            )
+            return False, "Resume text is too short or could not be extracted. Please upload a clear text PDF.", None
+
+        # 5. Prompt Construction
+        try:
+            messages = get_resume_analysis_prompt(raw_text, target_role)
+        except Exception as e:
+            error_logger.error(
+                f"[ResumeService] [PromptStage] Failed to build prompt: {type(e).__name__} - {str(e)}",
+                exc_info=True
+            )
+            return False, "Failed to build resume analysis prompt", None
+
+        # 6. AI Provider Invocation
+        try:
+            response = AIService.chat_completion(messages, temperature=0.3, json_mode=True)
+        except Exception as e:
+            error_logger.error(
+                f"[ResumeService] [AIInvocationStage] Exception calling AI service for resume_id={resume_id}: "
+                f"{type(e).__name__} - {str(e)}",
+                exc_info=True
+            )
+            return False, "AI service encountered an unexpected error. Please try again later.", None
+
+        if not response or not response.get("success"):
+            error_detail = response.get("error", "AI provider failure") if response else "Empty response from AI service"
+            error_logger.error(
+                f"[ResumeService] [AIProviderStage] AI provider failed for resume_id={resume_id}: {error_detail}"
+            )
+            
+            err_lower = str(error_detail).lower()
+            if "rate limit" in err_lower or "429" in err_lower:
+                user_msg = "AI service rate limit reached. Please wait a moment and try again."
+            elif "timeout" in err_lower or "timed out" in err_lower:
+                user_msg = "AI analysis request timed out. Please try again."
+            elif "auth" in err_lower or "api key" in err_lower or "401" in err_lower:
+                user_msg = "AI service authentication error. Please contact administrator."
+            elif "offline" in err_lower or "connection" in err_lower or "unreachable" in err_lower:
+                user_msg = "AI service is offline or unreachable. Please try again shortly."
+            else:
+                user_msg = "AI analysis failed. Please try again."
+            return False, user_msg, None
+
+        # 7. Response Parsing & Validation
+        content = response.get("content", "")
+        if not content or not isinstance(content, str) or not content.strip():
+            error_logger.error(
+                f"[ResumeService] [ResponseParsingStage] AI provider returned empty content for resume_id={resume_id}"
+            )
+            return False, "AI returned an empty analysis. Please try again.", None
+
+        analysis = parse_json_response(content, fallback_structure={
             "ats_score": 0, "strong_skills": [], "weak_skills": [], 
             "missing_keywords": [], "grammar_issues": [], 
             "experience_analysis": "", "project_analysis": "", 
             "summary": "Analysis unavailable", "action_plan": []
         })
-        
-        # Save analysis to database
+
+        if (
+            analysis.get("summary") == "Analysis unavailable"
+            and analysis.get("ats_score") == 0
+            and not analysis.get("strong_skills")
+        ):
+            error_logger.error(
+                f"[ResumeService] [ResponseParsingStage] Response JSON parsing failed for resume_id={resume_id}"
+            )
+            return False, "Unable to parse AI analysis results. Please try again.", None
+
+        # 8. Database Persistence
         try:
             ResumeAnalysisModel.create(
                 resume_id=resume_id,
@@ -177,10 +270,18 @@ class ResumeService:
                 action_plan=analysis.get("action_plan", []),
                 full_analysis=analysis
             )
+            app_logger.info(
+                f"[ResumeService] [DatabaseStage] Analysis saved to DB for resume_id={resume_id}, user_id={user_id}"
+            )
         except Exception as e:
-            print(f"[WARN] Failed to save analysis: {str(e)}")
-        
+            error_logger.error(
+                f"[ResumeService] [DatabaseStage] Failed to persist analysis for resume_id={resume_id}: "
+                f"{type(e).__name__} - {str(e)}",
+                exc_info=True
+            )
+
         analysis["mock"] = response.get("mock", False)
+        analysis["target_role"] = target_role
         return True, "Analysis complete!", analysis
 
     @staticmethod
