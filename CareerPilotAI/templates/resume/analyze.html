@@ -18,8 +18,17 @@
     <div class="card reveal delay-1" style="margin-bottom: 2rem; background: var(--bg-secondary);">
         <div class="flex-between" style="flex-wrap: wrap; gap: 1rem;">
             <div style="flex: 1; min-width: 300px;">
-                <label class="form-label" for="targetRole">Target Role (Optional, for tailored feedback)</label>
-                <input type="text" id="targetRole" class="form-input" placeholder="e.g., Senior Full Stack Engineer">
+                <label class="form-label" for="targetRole">
+                Target Role (Optional, for tailored feedback)
+                {% if suggested_role %}
+                    <span style="font-size:0.75rem; color:var(--text-tertiary); margin-left:0.4rem;">
+                        ✨ Auto-detected from your profile — feel free to edit
+                    </span>
+                {% endif %}
+            </label>
+                <input type="text" id="targetRole" class="form-input"
+                       placeholder="e.g., Senior Full Stack Engineer"
+                       value="{{ suggested_role | e }}">
             </div>
             <div style="padding-top: 1.5rem;">
                 <button id="analyzeBtn" class="btn btn-primary" data-resume-id="{{ resume.id }}">

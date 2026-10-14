@@ -8030,3 +8030,9 @@ POST /learning/generate
 User: 12
 Status: 200
 Duration: 3861ms
+2026-10-14 15:14:10,541 - app - INFO - 
+[15:14:10]
+GET /
+User: Guest
+Status: 200
+Duration: 14ms

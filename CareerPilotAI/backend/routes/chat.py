@@ -219,20 +219,78 @@ def duplicate_session(session_id):
 
 
 def _get_user_context(user_id: int) -> dict:
-    """Build user context from profile and resume."""
-    from backend.models.resume import ResumeModel
-    from backend.utils.helpers import extract_skills_from_text
-    
-    context = {}
-    resume = ResumeModel.get_primary(user_id)
-    if resume and resume.get('raw_text'):
-        context['skills'] = extract_skills_from_text(resume['raw_text'])
-        context['has_resume'] = True
-    
-    from backend.models.project import SettingsModel
-    settings = SettingsModel.get_by_user(user_id)
-    if settings:
-        context['target_role'] = settings.get('preferred_role', '')
-        context['experience'] = settings.get('experience_level', '')
-    
+    """
+    Build a rich user context from the career profile and resume.
+
+    Bug-3 Fix — Profile/Resume Memory:
+    Reads from CareerProfileService (the single source of truth) and the
+    primary resume's raw_text so the AI always has the user's actual data.
+    The context dict keys match what get_career_chat_prompt() expects.
+    """
+    context: dict = {}
+
+    try:
+        from backend.services.career_profile_service import CareerProfileService
+        profile = CareerProfileService.get_profile(user_id)
+        if profile:
+            # Skills (prefer top_skills if available; fall back to full skills list)
+            skills = profile.get('top_skills') or profile.get('skills') or []
+            if skills:
+                context['skills'] = skills[:20]  # cap to keep prompt concise
+
+            # Role / experience
+            if profile.get('preferred_role'):
+                context['target_role'] = profile['preferred_role']
+            if profile.get('seniority_level'):
+                context['experience'] = profile['seniority_level']
+            if profile.get('experience_years'):
+                context['experience_years'] = profile['experience_years']
+
+            # Education
+            if profile.get('education'):
+                context['education'] = profile['education']
+
+            # Career goal
+            if profile.get('career_goal'):
+                context['career_goal'] = profile['career_goal']
+
+            # Projects  (list → brief summary string)
+            projects = profile.get('projects') or []
+            if projects:
+                if isinstance(projects, list):
+                    context['projects'] = projects[:5]
+                else:
+                    context['projects'] = str(projects)
+
+            # Certifications
+            if profile.get('certifications'):
+                context['certifications'] = profile['certifications'][:5]
+
+            # Soft skills
+            if profile.get('soft_skills'):
+                context['soft_skills'] = profile['soft_skills'][:5]
+
+            context['has_profile'] = True
+    except Exception as _e:
+        app_logger.warning(f"[_get_user_context] profile fetch failed: {_e}")
+
+    # Primary resume raw text (for resume-grounded questions)
+    try:
+        from backend.models.resume import ResumeModel
+        resume = ResumeModel.get_primary(user_id)
+        if resume:
+            context['has_resume'] = True
+            context['resume_name'] = resume.get('original_name', '')
+            raw = resume.get('raw_text', '') or ''
+            if raw.strip():
+                # Include a trimmed excerpt so the context stays within token limits
+                context['resume_text'] = raw[:4000]
+            # Fallback skills extraction if profile has no skills yet
+            if not context.get('skills') and raw.strip():
+                from backend.utils.helpers import extract_skills_from_text
+                context['skills'] = extract_skills_from_text(raw)
+    except Exception as _e:
+        app_logger.warning(f"[_get_user_context] resume fetch failed: {_e}")
+
     return context
+

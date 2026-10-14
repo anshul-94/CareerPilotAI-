@@ -19,9 +19,7 @@ class CareerPilotQA(unittest.TestCase):
         Config.DATABASE_PATH = "test_qa.db"
         if os.path.exists(Config.DATABASE_PATH):
             os.remove(Config.DATABASE_PATH)
-            
-        init_db(Config.DATABASE_PATH)
-        
+        init_db(Config.DATABASE_PATH)  
         cls.app = create_app()
         cls.app.config['TESTING'] = True
         cls.app.config['WTF_CSRF_ENABLED'] = False

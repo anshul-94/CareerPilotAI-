@@ -9,6 +9,7 @@ from backend.services.resume_service import ResumeService
 from backend.services.resume_intelligence_service import ResumeIntelligenceService
 from backend.services.career_profile_service import CareerProfileService
 from backend.models.resume import ResumeModel
+from backend.models.project import ResumeAnalysisModel
 from backend.utils.helpers import safe_json_loads
 
 resume_bp = Blueprint('resume', __name__, url_prefix='/resume')
@@ -17,26 +18,67 @@ resume_bp = Blueprint('resume', __name__, url_prefix='/resume')
 @resume_bp.route('/upload', methods=['GET', 'POST'])
 @login_required
 def upload():
-    """Resume upload page."""
+    """Resume upload page (GET renders the page; POST is legacy fallback)."""
     user_id = session['user_id']
-    
+
     if request.method == 'POST':
+        # Legacy form-POST fallback (used if JS is disabled)
         file = request.files.get('resume')
         success, message, resume_id = ResumeService.upload_resume(user_id, file)
-        
+
         if success:
             flash(message, 'success')
-            
-            # Smart Synchronization: invalidate and regenerate
             from backend.services.autonomous_agent import AutonomousAgent
             AutonomousAgent.invalidate_and_regenerate(user_id)
-            
             return redirect(url_for('resume.analyze', resume_id=resume_id))
         else:
             flash(message, 'danger')
-    
+
     resumes = ResumeService.get_user_resumes(user_id)
     return render_template('resume/upload.html', resumes=resumes)
+
+
+@resume_bp.route('/api/upload', methods=['POST'])
+@api_login_required
+def api_upload():
+    """
+    AJAX resume upload — returns JSON with the new resume record.
+    Frontend calls this to upload without a page refresh.
+    """
+    user_id = session['user_id']
+    file = request.files.get('resume')
+
+    success, message, resume_id = ResumeService.upload_resume(user_id, file)
+
+    if not success:
+        return jsonify({'success': False, 'error': message}), 400
+
+    # Background profile sync / AI invalidation
+    try:
+        from backend.services.autonomous_agent import AutonomousAgent
+        AutonomousAgent.invalidate_and_regenerate(user_id)
+    except Exception:
+        pass
+
+    # Fetch the saved record so we can return all fields the card needs
+    resume = ResumeModel.get_by_id(resume_id)
+    if not resume:
+        return jsonify({'success': False, 'error': 'Resume saved but could not be retrieved'}), 500
+
+    analysis = ResumeAnalysisModel.get_by_resume(resume_id)
+    resume_out = {
+        'id':            resume['id'],
+        'original_name': resume.get('original_name', resume.get('filename', '')),
+        'filename':      resume.get('filename', ''),
+        'file_size':     resume.get('file_size', 0),
+        'uploaded_at':   resume.get('uploaded_at', ''),
+        'is_primary':    bool(resume.get('is_primary', 0)),
+        'has_analysis':  analysis is not None,
+        'ats_score':     analysis.get('ats_score', 0) if analysis else None,
+        'analyze_url':   url_for('resume.analyze', resume_id=resume_id),
+    }
+
+    return jsonify({'success': True, 'message': message, 'resume': resume_out})
 
 
 @resume_bp.route('/analyze')
@@ -45,7 +87,7 @@ def upload():
 def analyze(resume_id=None):
     """Resume analysis page."""
     user_id = session['user_id']
-    
+
     if not resume_id:
         primary = ResumeModel.get_primary(user_id)
         if primary:
@@ -53,22 +95,39 @@ def analyze(resume_id=None):
         else:
             flash("Please upload a resume first.", 'warning')
             return redirect(url_for('resume.upload'))
-    
+
     resume = ResumeModel.get_by_id(resume_id)
     if not resume or resume['user_id'] != user_id:
         flash("Resume not found.", 'danger')
         return redirect(url_for('resume.upload'))
-    
+
     # Check for existing analysis
-    from backend.models.project import ResumeAnalysisModel
     analysis = ResumeAnalysisModel.get_by_resume(resume_id)
     if analysis:
         for field in ['strong_skills', 'weak_skills', 'missing_keywords',
                       'grammar_issues', 'action_plan', 'full_analysis']:
             if isinstance(analysis.get(field), str):
                 analysis[field] = safe_json_loads(analysis[field], [])
-    
-    return render_template('resume/analyze.html', resume=resume, analysis=analysis)
+
+    # ── Bug 2 Fix: Auto-prefill Target Role ───────────────────────────────────
+    # Priority: (1) preferred_role from career profile (may come from resume AI
+    # extraction), (2) preferred_role from settings, (3) blank — never invented.
+    suggested_role = ''
+    try:
+        profile = CareerProfileService.get_profile(user_id)
+        # Use the profile's preferred_role (set by AI extraction or manual input)
+        suggested_role = profile.get('preferred_role', '') or ''
+        # Trim whitespace; if the value looks like a placeholder, ignore it
+        suggested_role = suggested_role.strip()
+    except Exception:
+        pass
+
+    return render_template(
+        'resume/analyze.html',
+        resume=resume,
+        analysis=analysis,
+        suggested_role=suggested_role,
+    )
 
 
 @resume_bp.route('/analyze/run', methods=['POST'])

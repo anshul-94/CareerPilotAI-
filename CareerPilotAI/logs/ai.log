@@ -684,3 +684,9 @@ Prompt Tokens : 447
 Execution Time: 3.85 sec
 Success/Failed: Success
 ================================
+2026-10-14 15:12:18,136 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-10-14 15:13:42,119 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-10-14 15:14:07,460 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-10-14 15:14:08,721 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-10-14 15:16:01,023 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b
+2026-10-14 15:17:28,464 - ai - INFO - [GroqProvider] Initialized — model=qwen/qwen3.8-27b

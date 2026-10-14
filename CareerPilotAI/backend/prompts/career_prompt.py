@@ -35,45 +35,83 @@ def get_career_chat_prompt(user_message: str, chat_history: list = None,
                            user_context: dict = None) -> list[dict]:
     """
     Build the complete prompt for a career coaching conversation.
-    
+
     Args:
         user_message: Current user message
-        chat_history: Previous messages in the session
-        user_context: User's profile/resume context
-        
+        chat_history: Previous messages in the session (EXCLUDING the current message)
+        user_context: User's profile/resume context from _get_user_context()
+
     Returns:
-        List of message dicts for the Ollama API
+        List of message dicts for the AI provider
     """
     messages = [{"role": "system", "content": get_career_coach_system_prompt()}]
-    
+
     # Add user context if available
     if user_context:
         context_parts = []
+
         if user_context.get("skills"):
-            context_parts.append(f"Skills: {', '.join(user_context['skills'][:15])}")
+            context_parts.append(f"Skills: {', '.join(str(s) for s in user_context['skills'][:20])}")
+        if user_context.get("top_skills"):
+            context_parts.append(f"Top Skills: {', '.join(str(s) for s in user_context['top_skills'][:10])}")
+        if user_context.get("soft_skills"):
+            context_parts.append(f"Soft Skills: {', '.join(str(s) for s in user_context['soft_skills'][:5])}")
         if user_context.get("experience"):
-            context_parts.append(f"Experience: {user_context['experience']}")
+            context_parts.append(f"Experience Level: {user_context['experience']}")
+        if user_context.get("experience_years"):
+            context_parts.append(f"Years of Experience: {user_context['experience_years']}")
         if user_context.get("education"):
             context_parts.append(f"Education: {user_context['education']}")
         if user_context.get("target_role"):
             context_parts.append(f"Target Role: {user_context['target_role']}")
-        
+        if user_context.get("career_goal"):
+            context_parts.append(f"Career Goal: {user_context['career_goal']}")
+        if user_context.get("certifications"):
+            certs = user_context['certifications']
+            context_parts.append(f"Certifications: {', '.join(str(c) for c in certs[:5])}")
+        if user_context.get("projects"):
+            projects = user_context['projects']
+            if isinstance(projects, list):
+                proj_str = "; ".join(
+                    (p.get("title", str(p)) if isinstance(p, dict) else str(p))
+                    for p in projects[:5]
+                )
+                context_parts.append(f"Recent Projects: {proj_str}")
+
+        if user_context.get("resume_name"):
+            context_parts.append(f"Uploaded Resume: {user_context['resume_name']}")
+
         if context_parts:
-            context_msg = "User Profile:\n" + "\n".join(context_parts)
+            context_msg = "User Career Profile:\n" + "\n".join(context_parts)
             messages.append({"role": "system", "content": context_msg})
-    
-    # Add chat history (last 10 messages for context window management)
+
+        # Include resume text as a separate system message so the AI can answer
+        # resume-specific questions without the user re-pasting it.
+        resume_text = user_context.get("resume_text", "")
+        if resume_text and resume_text.strip():
+            messages.append({
+                "role": "system",
+                "content": (
+                    "The user's uploaded resume text (first 4000 characters) is provided "
+                    "below. Use it to answer questions about their resume, skills, projects, "
+                    "and experience. Do NOT fabricate details not present in the text.\n\n"
+                    f"--- RESUME START ---\n{resume_text}\n--- RESUME END ---"
+                )
+            })
+
+    # Add chat history (prior messages only — current message NOT included here)
     if chat_history:
         for msg in chat_history[-10:]:
             messages.append({
                 "role": msg.get("role", "user"),
                 "content": msg.get("message", msg.get("content", ""))
             })
-    
+
     # Add current message
     messages.append({"role": "user", "content": user_message})
-    
+
     return messages
+
 
 
 def get_suggested_questions(category: str = "general") -> list[str]:
