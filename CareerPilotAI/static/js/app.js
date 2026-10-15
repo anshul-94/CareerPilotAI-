@@ -9,6 +9,7 @@ const CareerPilot = {
     
     // ── Initialize App ──────────────────────────
     init() {
+        this.initTheme();
         this.initNavbar();
         this.initSidebar();
         this.initAlerts();
@@ -17,11 +18,45 @@ const CareerPilot = {
         this.initIcons();
     },
 
+    // ── Theme Manager (Light & Dark) ────────────
+    initTheme() {
+        const updateThemeButtons = (theme) => {
+            document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+                const isLight = theme === 'light';
+                btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+                btn.setAttribute('title', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+                btn.innerHTML = isLight
+                    ? '<i data-lucide="moon" style="width:18px;height:18px;"></i>'
+                    : '<i data-lucide="sun" style="width:18px;height:18px;"></i>';
+            });
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        };
+
+        const currentTheme = document.documentElement.getAttribute('data-theme') || localStorage.getItem('careerpilot_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeButtons(currentTheme);
+
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.theme-toggle-btn');
+            if (!btn) return;
+            e.preventDefault();
+            const active = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = active === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('careerpilot_theme', next);
+            updateThemeButtons(next);
+            window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme: next } }));
+        });
+    },
+
     initIcons() {
         if (typeof lucide !== 'undefined' && lucide.createIcons) {
             lucide.createIcons();
         }
     },
+
 
     // ── Navbar Scroll Effect ────────────────────
     initNavbar() {

@@ -53,7 +53,7 @@
                 <!-- Problem Statement Card -->
                 <div class="premium-content-card">
                     <h3 class="card-title"><i class="fa-solid fa-file-lines" style="color:var(--primary-light);margin-right:8px;"></i>Problem Statement</h3>
-                    <div class="problem-description" style="font-size: 0.95rem; line-height: 1.7; color: #cbd5e1;">
+                    <div class="problem-description">
                         {{ problem.description | safe }}
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                 <div class="example-line"><strong>Input:</strong> {{ ex.input }}</div>
                                 <div class="example-line"><strong>Output:</strong> {{ ex.output }}</div>
                                 {% if ex.explanation %}
-                                    <div class="example-line" style="color: #94a3b8; font-size: 0.8rem; margin-top: 0.5rem;"><strong>Explanation:</strong> {{ ex.explanation }}</div>
+                                    <div class="example-line example-explanation"><strong>Explanation:</strong> {{ ex.explanation }}</div>
                                 {% endif %}
                             </div>
                         {% endfor %}
@@ -124,7 +124,7 @@
             <div class="pane-content-area" id="pane-editorial" style="display: none;">
                 <div class="premium-content-card">
                     <h3 class="card-title"><i class="fa-solid fa-book-open" style="color:var(--info);margin-right:8px;"></i>Optimal Solution Strategy</h3>
-                    <div style="line-height: 1.7; font-size: 0.92rem; color: #94a3b8;">
+                    <div class="editorial-content">
                         {{ problem.editorial or 'Editorial explanation is currently not available.' }}
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                             <span><i class="fa-solid fa-thumbs-up" style="font-size:11px;margin-right:4px;"></i>32 upvotes</span>
                         </div>
                         <h4 class="discussion-title">Simple O(N) Hash Map solution (Step by step guide)</h4>
-                        <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Map difference of target - current to its index. Single-pass traversal is the standard approach here.</p>
+                        <p class="discussion-text">Map difference of target - current to its index. Single-pass traversal is the standard approach here.</p>
                     </div>
                     <div class="discussion-card">
                         <div class="discussion-header">
@@ -169,7 +169,7 @@
                             <span><i class="fa-solid fa-thumbs-up" style="font-size:11px;margin-right:4px;"></i>18 upvotes</span>
                         </div>
                         <h4 class="discussion-title">Python 3 solution using dict - 99.8% speed percentile</h4>
-                        <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">One-pass dict approach with complete edge-cases analysis.</p>
+                        <p class="discussion-text">One-pass dict approach with complete edge-cases analysis.</p>
                     </div>
                 </div>
             </div>
@@ -449,15 +449,15 @@
                 if (status === "Compilation Error") {
                     detailsHtml = `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
                         <div><strong style="color:#ef4444">Compiler Output:</strong></div>
-                        <pre style="margin-top:5px; color:#cbd5e1; font-family: monospace; white-space: pre-wrap; font-size: 0.85rem;">${data.compiler_output || message}</pre>
+                        <pre style="margin-top:5px; color:var(--text-primary); font-family: monospace; white-space: pre-wrap; font-size: 0.85rem;">${data.compiler_output || message}</pre>
                     </div>`;
                 } else {
-                    detailsHtml = `<pre style="color: #e2e8f0; font-family: monospace; white-space: pre-wrap;">${message}</pre>`;
+                    detailsHtml = `<pre style="color: var(--text-primary); font-family: monospace; white-space: pre-wrap;">${message}</pre>`;
                     if (status === "Wrong Answer" && data.failed_case) {
                         detailsHtml += `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
                             <div><strong style="color:#ef4444">Failed Test Case ${data.failed_case}:</strong></div>
-                            <div style="margin-top:5px; color:#cbd5e1;">Expected: <code style="color:#10b981">${data.expected}</code></div>
-                            <div style="color:#cbd5e1;">Actual: <code style="color:#f87171">${data.actual}</code></div>
+                            <div style="margin-top:5px; color:var(--text-primary);">Expected: <code style="color:#10b981">${data.expected}</code></div>
+                            <div style="color:var(--text-primary);">Actual: <code style="color:#f87171">${data.actual}</code></div>
                         </div>`;
                     }
                 }
@@ -526,17 +526,17 @@
                 if (status === "Compilation Error") {
                     detailsHtml = `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
                         <div><strong style="color:#ef4444">Compiler Output:</strong></div>
-                        <pre style="margin-top:5px; color:#cbd5e1; font-family: monospace; white-space: pre-wrap; font-size: 0.85rem;">${data.compiler_output || message}</pre>
+                        <pre style="margin-top:5px; color:var(--text-primary); font-family: monospace; white-space: pre-wrap; font-size: 0.85rem;">${data.compiler_output || message}</pre>
                     </div>`;
                 } else {
                     if (message) {
-                        detailsHtml = `<pre style="color: #e2e8f0; font-family: monospace; white-space: pre-wrap;">${message}</pre>`;
+                        detailsHtml = `<pre style="color: var(--text-primary); font-family: monospace; white-space: pre-wrap;">${message}</pre>`;
                     }
                     if (status === "Wrong Answer") {
                         detailsHtml += `<div style="margin-top: 10px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-radius: 4px; border-left: 3px solid #ef4444;">
                             <div><strong style="color:#ef4444">Failed Test Case:</strong></div>
-                            <div style="margin-top:5px; color:#cbd5e1;">Expected: <code style="color:#10b981">${data.expected}</code></div>
-                            <div style="color:#cbd5e1;">Actual: <code style="color:#f87171">${data.actual}</code></div>
+                            <div style="margin-top:5px; color:var(--text-primary);">Expected: <code style="color:#10b981">${data.expected}</code></div>
+                            <div style="color:var(--text-primary);">Actual: <code style="color:#f87171">${data.actual}</code></div>
                         </div>`;
                     }
                 }

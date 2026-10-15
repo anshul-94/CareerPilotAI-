@@ -13,10 +13,10 @@
 <div class="agent-running-overlay" id="agentOverlay">
     <div class="agent-running-modal">
         <div class="agent-running-anim">
-            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a5b4fc;"><i data-lucide="bot" style="width:32px;height:32px;"></i></span>
+            <span class="agent-running-icon"><i data-lucide="bot" style="width:32px;height:32px;"></i></span>
         </div>
-        <h3 style="color:#e2e8f0;margin:0 0 0.5rem;font-size:1.3rem;font-weight:800;">AI Agent Working...</h3>
-        <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 1.5rem;">Your personal AI recruiter is scanning the job market</p>
+        <h3 class="agent-running-title">AI Agent Working...</h3>
+        <p class="agent-running-subtitle">Your personal AI recruiter is scanning the job market</p>
         <div class="agent-running-steps">
             <div class="agent-step active" id="step1">
                 <div class="step-indicator active">1</div>
@@ -97,12 +97,12 @@
 
     <!-- ─── No Resume Warning ─────────────────────────── -->
     {% if not has_profile and not has_data %}
-    <div style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;" data-aos="fade-up">
-        <i data-lucide="alert-triangle" style="width:24px;height:24px;color:#fde68a;flex-shrink:0;"></i>
+    <div class="notif-warning-banner" data-aos="fade-up">
+        <i data-lucide="alert-triangle" class="notif-warning-icon" style="width:24px;height:24px;flex-shrink:0;"></i>
         <div>
-            <div style="font-weight:700;color:#fde68a;margin-bottom:0.2rem;">No Resume Uploaded</div>
-            <div style="font-size:0.87rem;color:#94a3b8;">
-                Please <a href="{{ url_for('resume.upload') }}" style="color:#a5b4fc;font-weight:600;">upload your resume</a> first, then run the AI Agent.
+            <div class="notif-warning-title">No Resume Uploaded</div>
+            <div class="notif-warning-text">
+                Please <a href="{{ url_for('resume.upload') }}" class="notif-warning-link">upload your resume</a> first, then run the AI Agent.
             </div>
         </div>
     </div>
@@ -311,14 +311,14 @@
             <div class="profile-preview-card" data-aos="fade-left">
                 <h3>Your AI Profile</h3>
                 <div style="margin-bottom:0.75rem;">
-                    <div style="font-size:0.78rem;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;">Target Role</div>
-                    <div style="font-size:0.95rem;font-weight:700;color:#a5b4fc;">{{ profile.preferred_role or 'Not set' }}</div>
+                    <div class="profile-preview-lbl">Target Role</div>
+                    <div class="profile-preview-role">{{ profile.preferred_role or 'Not set' }}</div>
                 </div>
                 <div style="margin-bottom:0.75rem;">
-                    <div style="font-size:0.78rem;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;">Domain</div>
-                    <div style="font-size:0.85rem;color:#e2e8f0;">{{ profile.domain or 'Technology' }}</div>
+                    <div class="profile-preview-lbl">Domain</div>
+                    <div class="profile-preview-domain">{{ profile.domain or 'Technology' }}</div>
                 </div>
-                <div style="font-size:0.78rem;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;">Top Skills</div>
+                <div class="profile-preview-lbl">Top Skills</div>
                 <div class="profile-top-skills">
                     {% for skill in (profile.top_skills or [])[:8] %}
                     <span class="profile-skill-chip">{{ skill }}</span>
@@ -428,10 +428,10 @@
 
             <!-- Missing Skills Card -->
             {% if has_data %}
-            <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:16px;padding:1.5rem;" data-aos="fade-left" data-aos-delay="150">
-                <h3 style="font-size:1rem;font-weight:700;color:#fca5a5;margin:0 0 1rem;display:flex;align-items:center;gap:0.5rem;">Top Missing Skills</h3>
+            <div class="missing-skills-panel" data-aos="fade-left" data-aos-delay="150">
+                <h3 class="missing-skills-title">Top Missing Skills</h3>
                 <div id="missingSkillsList">
-                    <p style="color:#94a3b8;font-size:0.85rem;">Loading...</p>
+                    <p class="missing-skills-loading">Loading...</p>
                 </div>
             </div>
             {% endif %}
@@ -441,7 +441,7 @@
     <!-- ─── Charts Section ───────────────────────────── -->
     {% if has_data %}
     <div class="charts-section" data-aos="fade-up" data-aos-delay="200">
-        <h2 style="font-size:1.25rem;font-weight:700;color:#e2e8f0;margin:0 0 1.5rem;display:flex;align-items:center;gap:0.5rem;">
+        <h2 class="charts-section-title">
             AI Analytics Dashboard
         </h2>
         <div class="charts-grid">

@@ -759,3 +759,152 @@
         gap: 0.5rem;
     }
 }
+
+/* ==========================================================
+   LIGHT THEME COMPONENT STYLES
+   ========================================================== */
+[data-theme="light"] .btn-primary {
+    background: var(--primary);
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .btn-accent {
+    background: var(--primary);
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .btn-ghost {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .btn-ghost:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--primary);
+}
+
+[data-theme="light"] .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .card:hover {
+    border-color: var(--pistachio);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select,
+[data-theme="light"] .form-textarea {
+    background: #FFFFFF;
+    border: 1.5px solid var(--border);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus,
+[data-theme="light"] .form-textarea:focus {
+    background: #FFFFFF;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+[data-theme="light"] .form-select option {
+    background: #FFFFFF;
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .code-block {
+    background: #FAF7F0;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .code-block .code-lang {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .modal-overlay {
+    background: rgba(41, 39, 34, 0.45);
+}
+
+[data-theme="light"] .modal {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+}
+
+[data-theme="light"] .table th {
+    background: var(--muted-sage);
+    color: var(--cocoa);
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .table td {
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .table tr:hover td {
+    background: #FAF7F0;
+}
+
+[data-theme="light"] .tag {
+    background: var(--muted-sage);
+    border: 1px solid var(--border);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .tag:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[data-theme="light"] .badge-primary {
+    background: rgba(46, 111, 149, 0.12);
+    color: var(--primary);
+}
+
+[data-theme="light"] .badge-accent {
+    background: rgba(217, 164, 65, 0.15);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .progress-bar {
+    background: var(--border);
+}
+
+[data-theme="light"] .progress-fill.accent {
+    background: var(--peach-blush);
+}
+
+[data-theme="light"] .chat-bubble code {
+    background: rgba(165, 165, 141, 0.22);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .chat-message.user .chat-avatar {
+    background: var(--muted-sage);
+    color: var(--cocoa);
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .chat-message.user .chat-bubble {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+}
+
+[data-theme="light"] .chat-message.user .chat-bubble strong {
+    color: #FFFFFF;
+}
+
+[data-theme="light"] .chat-message.assistant .chat-avatar {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+

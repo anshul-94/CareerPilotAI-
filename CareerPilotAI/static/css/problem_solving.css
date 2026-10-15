@@ -39,6 +39,28 @@
     --shadow-glow: 0 0 35px rgba(46,111,149,.18);
 }
 
+html[data-theme="light"],
+:root[data-theme="light"] {
+    --bg-primary: #F5F0E8;
+    --bg-secondary: #EBE5DB;
+    --bg-tertiary: #DDE0D0;
+    --bg-card: #FFFDF8;
+    --bg-card-hover: #F8F4EC;
+    --bg-input: #FFFFFF;
+    --bg-glass: rgba(255, 253, 248, 0.90);
+    --text-primary: #292722;
+    --text-secondary: #4A2F28;
+    --text-tertiary: #716B62;
+    --text-muted: #8E877C;
+    --border: #E5DDD2;
+    --border-light: rgba(74, 47, 40, 0.08);
+    --shadow-sm: 0 2px 6px rgba(74, 47, 40, 0.05);
+    --shadow-md: 0 8px 24px rgba(74, 47, 40, 0.08);
+    --shadow-lg: 0 18px 45px rgba(74, 47, 40, 0.12);
+    --shadow-glow: 0 0 35px rgba(46, 111, 149, 0.12);
+}
+
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -415,3 +437,137 @@ body {
         padding: 0.85rem;
     }
 }
+
+/* ==========================================================
+   LIGHT THEME PROBLEM SOLVING OVERRIDES
+   ========================================================== */
+[data-theme="light"] .glass-panel {
+    background: #FFFDF8;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(74, 47, 40, 0.05);
+}
+
+[data-theme="light"] .ide-left-pane {
+    background: #FFFDF8;
+    border-right: 1px solid var(--border);
+}
+
+[data-theme="light"] .ide-right-pane {
+    background: #FAF7F0;
+}
+
+[data-theme="light"] .editor-toolbar {
+    background: #EFE9DF;
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .terminal-panel {
+    background: #FAF7F0;
+    border-top: 1px solid var(--border);
+}
+
+[data-theme="light"] .example-box {
+    background: #FAF7F0;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .problem-row:hover {
+    background: #FAF7F0;
+}
+
+[data-theme="light"] .problem-card {
+    background: #FFFDF8;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .problem-card:hover {
+    background: #F8F4EC;
+    border-color: var(--pistachio);
+}
+
+[data-theme="light"] .problem-description {
+    color: var(--primary-text);
+}
+
+[data-theme="light"] .example-explanation {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .editorial-content {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .discussion-text {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .discussion-card {
+    background: #FAF7F0;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .discussion-title {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .discussion-header {
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .premium-content-card {
+    background: #FFFDF8;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .premium-content-card .card-title {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .chat-bubble.assistant {
+    background: #FAF7F0;
+    border: 1px solid var(--border);
+    color: var(--primary-text);
+}
+
+[data-theme="light"] .ai-chat-input {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    color: var(--primary-text);
+}
+
+[data-theme="light"] .console-header {
+    background: #EFE9DF;
+    border-bottom: 1px solid var(--border);
+    color: var(--primary-text);
+}
+
+[data-theme="light"] .console-body {
+    background: #FAF7F0;
+    color: var(--primary-text);
+}
+
+/* ─── Dark Mode Fallbacks ─── */
+.problem-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.example-explanation {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.editorial-content {
+    line-height: 1.7;
+    font-size: 0.92rem;
+    color: #94a3b8;
+}
+
+.discussion-text {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+

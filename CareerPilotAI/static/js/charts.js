@@ -19,20 +19,29 @@ const ChartFactory = {
     // Apply global defaults
     applyDefaults() {
         if (typeof Chart === 'undefined') return;
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
         
-        Chart.defaults.color = this.defaults.fontColor;
+        Chart.defaults.color = isLight ? '#716B62' : this.defaults.fontColor;
         Chart.defaults.font.family = this.defaults.fontFamily;
         Chart.defaults.font.size = 12;
         Chart.defaults.plugins.legend.labels.usePointStyle = true;
         Chart.defaults.plugins.legend.labels.padding = 15;
-        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(15, 12, 41, 0.95)';
-        Chart.defaults.plugins.tooltip.borderColor = 'rgba(255, 255, 255, 0.1)';
+        Chart.defaults.plugins.tooltip.backgroundColor = isLight ? 'rgba(255, 253, 248, 0.96)' : 'rgba(15, 12, 41, 0.95)';
+        Chart.defaults.plugins.tooltip.titleColor = isLight ? '#292722' : '#FFFFFF';
+        Chart.defaults.plugins.tooltip.bodyColor = isLight ? '#4A2F28' : '#C8D2DC';
+        Chart.defaults.plugins.tooltip.borderColor = isLight ? '#E5DDD2' : 'rgba(255, 255, 255, 0.1)';
         Chart.defaults.plugins.tooltip.borderWidth = 1;
         Chart.defaults.plugins.tooltip.cornerRadius = 8;
         Chart.defaults.plugins.tooltip.padding = 12;
         Chart.defaults.plugins.tooltip.titleFont = { size: 13, weight: '600' };
         Chart.defaults.plugins.tooltip.bodyFont = { size: 12 };
     },
+
+    getGridColor() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        return isLight ? 'rgba(74, 47, 40, 0.08)' : this.defaults.gridColor;
+    },
+
 
     // ── Line Chart ──────────────────────────────
     createLineChart(ctx, labels, datasets, options = {}) {
@@ -61,11 +70,11 @@ const ChartFactory = {
                 maintainAspectRatio: false,
                 scales: {
                     x: {
-                        grid: { color: this.defaults.gridColor, drawBorder: false },
+                        grid: { color: this.getGridColor(), drawBorder: false },
                         ticks: { padding: 10 }
                     },
                     y: {
-                        grid: { color: this.defaults.gridColor, drawBorder: false },
+                        grid: { color: this.getGridColor(), drawBorder: false },
                         ticks: { padding: 10 },
                         beginAtZero: true
                     }
@@ -104,7 +113,7 @@ const ChartFactory = {
                         ticks: { padding: 10 }
                     },
                     y: {
-                        grid: { color: this.defaults.gridColor, drawBorder: false },
+                        grid: { color: this.getGridColor(), drawBorder: false },
                         ticks: { padding: 10 },
                         beginAtZero: true
                     }
@@ -219,3 +228,8 @@ const ChartFactory = {
 document.addEventListener('DOMContentLoaded', () => {
     ChartFactory.applyDefaults();
 });
+
+window.addEventListener('themeChanged', () => {
+    ChartFactory.applyDefaults();
+});
+

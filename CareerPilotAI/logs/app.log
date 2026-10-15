@@ -8718,3 +8718,1708 @@ GET /login
 User: Guest
 Status: 200
 Duration: 3ms
+2026-10-15 15:48:50,535 - app - INFO - 
+[15:48:50]
+POST /login
+User: 12
+Status: 302
+Duration: 282ms
+2026-10-15 15:48:50,587 - app - INFO - 
+[15:48:50]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 33ms
+2026-10-15 15:49:02,800 - app - INFO - 
+[15:49:02]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 49ms
+2026-10-15 15:49:02,892 - app - INFO - 
+[15:49:02]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 8ms
+2026-10-15 15:49:02,934 - app - INFO - 
+[15:49:02]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 47ms
+2026-10-15 15:49:03,906 - app - INFO - 
+[15:49:03]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 1021ms
+2026-10-15 15:49:04,036 - app - INFO - 
+[15:49:04]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 15:49:18,613 - app - INFO - 
+[15:49:18]
+GET /profile/
+User: 12
+Status: 200
+Duration: 41ms
+2026-10-15 15:49:34,073 - app - INFO - 
+[15:49:34]
+GET /profile/history
+User: 12
+Status: 200
+Duration: 20ms
+2026-10-15 15:49:42,007 - app - INFO - 
+[15:49:42]
+GET /profile/settings
+User: 12
+Status: 200
+Duration: 37ms
+2026-10-15 15:49:45,502 - app - INFO - 
+[15:49:45]
+GET /profile/api/test-ollama
+User: 12
+Status: 200
+Duration: 71ms
+2026-10-15 15:49:52,100 - app - INFO - 
+[15:49:52]
+GET /chat/
+User: 12
+Status: 200
+Duration: 27ms
+2026-10-15 15:49:53,879 - app - INFO - 
+[15:49:53]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 11ms
+2026-10-15 15:49:53,880 - app - ERROR - Error generating title for session 6c865c7a-7c67-4621-96b6-8c673a5501b0: No module named 'backend.services.ollama_service'
+2026-10-15 15:50:04,305 - app - INFO - 
+[15:50:04]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 34ms
+2026-10-15 15:50:07,637 - app - INFO - 
+[15:50:07]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 31ms
+2026-10-15 15:50:07,694 - app - INFO - 
+[15:50:07]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 15:50:07,715 - app - INFO - 
+[15:50:07]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 23ms
+2026-10-15 15:50:08,545 - app - INFO - 
+[15:50:08]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 15:50:32,687 - app - INFO - 
+[15:50:32]
+POST /notifications/api/run-agent
+User: 12
+Status: 200
+Duration: 23648ms
+2026-10-15 15:50:32,701 - app - INFO - 
+[15:50:32]
+GET /notifications/api/notifications
+User: 12
+Status: 200
+Duration: 2ms
+2026-10-15 15:50:32,775 - app - INFO - 
+[15:50:32]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 5ms
+2026-10-15 15:50:50,222 - app - INFO - 
+[15:50:50]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 42530ms
+2026-10-15 15:50:53,207 - app - INFO - 
+[15:50:53]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 2971ms
+2026-10-15 15:50:53,233 - app - INFO - 
+[15:50:53]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 2ms
+2026-10-15 15:54:51,987 - app - INFO - 
+[15:54:51]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 45ms
+2026-10-15 15:54:52,149 - app - INFO - 
+[15:54:52]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 28ms
+2026-10-15 15:55:30,620 - app - INFO - 
+[15:55:30]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 21ms
+2026-10-15 15:55:30,724 - app - INFO - 
+[15:55:30]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 2ms
+2026-10-15 15:55:30,752 - app - INFO - 
+[15:55:30]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 29ms
+2026-10-15 15:55:31,561 - app - INFO - 
+[15:55:31]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 13ms
+2026-10-15 15:55:31,609 - app - INFO - 
+[15:55:31]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 886ms
+2026-10-15 15:55:36,970 - app - INFO - 
+[15:55:36]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 21ms
+2026-10-15 15:55:37,067 - app - INFO - 
+[15:55:37]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 8ms
+2026-10-15 15:55:37,089 - app - INFO - 
+[15:55:37]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 25ms
+2026-10-15 15:55:37,906 - app - INFO - 
+[15:55:37]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 21ms
+2026-10-15 15:55:37,919 - app - INFO - 
+[15:55:37]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 859ms
+2026-10-15 15:55:58,920 - app - INFO - 
+[15:55:58]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 34ms
+2026-10-15 15:56:13,520 - app - INFO - 
+[15:56:13]
+GET /profile/
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 15:56:20,425 - app - INFO - 
+[15:56:20]
+GET /projects/
+User: 12
+Status: 200
+Duration: 17ms
+2026-10-15 15:56:22,491 - app - INFO - 
+[15:56:22]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 7ms
+2026-10-15 15:59:06,827 - app - INFO - 
+[15:59:06]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 12ms
+2026-10-15 15:59:09,073 - app - INFO - 
+[15:59:09]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 30ms
+2026-10-15 15:59:11,945 - app - INFO - 
+[15:59:11]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 31ms
+2026-10-15 16:00:07,575 - app - INFO - 
+[16:00:07]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-10-15 16:01:17,405 - app - INFO - 
+[16:01:17]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-10-15 16:02:09,616 - app - INFO - 
+[16:02:09]
+GET /
+User: 12
+Status: 200
+Duration: 30ms
+2026-10-15 16:02:29,452 - app - INFO - 
+[16:02:29]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 54ms
+2026-10-15 16:02:37,437 - app - INFO - 
+[16:02:37]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 22ms
+2026-10-15 16:02:40,270 - app - INFO - 
+[16:02:40]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:02:42,895 - app - INFO - 
+[16:02:42]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 34ms
+2026-10-15 16:02:44,140 - app - INFO - 
+[16:02:44]
+GET /learning/
+User: 12
+Status: 200
+Duration: 15ms
+2026-10-15 16:02:47,432 - app - INFO - 
+[16:02:47]
+GET /interview/
+User: 12
+Status: 200
+Duration: 22ms
+2026-10-15 16:02:53,182 - app - INFO - 
+[16:02:53]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 48ms
+2026-10-15 16:02:57,723 - app - INFO - 
+[16:02:57]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 14ms
+2026-10-15 16:02:57,820 - app - INFO - 
+[16:02:57]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 16:02:57,830 - app - INFO - 
+[16:02:57]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 12ms
+2026-10-15 16:02:58,649 - app - INFO - 
+[16:02:58]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:02:58,906 - app - INFO - 
+[16:02:58]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 1088ms
+2026-10-15 16:03:07,016 - app - INFO - 
+[16:03:07]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 20ms
+2026-10-15 16:03:07,152 - app - INFO - 
+[16:03:07]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 25ms
+2026-10-15 16:03:21,178 - app - INFO - 
+[16:03:21]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 19ms
+2026-10-15 16:03:21,244 - app - INFO - 
+[16:03:21]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 30ms
+2026-10-15 16:03:25,966 - app - INFO - 
+[16:03:25]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 13ms
+2026-10-15 16:03:26,111 - app - INFO - 
+[16:03:26]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 48ms
+2026-10-15 16:03:31,639 - app - INFO - 
+[16:03:31]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 18ms
+2026-10-15 16:03:31,883 - app - INFO - 
+[16:03:31]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 55ms
+2026-10-15 16:03:35,581 - app - INFO - 
+[16:03:35]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 28ms
+2026-10-15 16:03:35,650 - app - INFO - 
+[16:03:35]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 16:03:43,656 - app - INFO - 
+[16:03:43]
+GET /code-review
+User: 12
+Status: 200
+Duration: 13ms
+2026-10-15 16:03:49,049 - app - INFO - 
+[16:03:49]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 16:03:52,422 - app - INFO - 
+[16:03:52]
+GET /projects/
+User: 12
+Status: 200
+Duration: 8ms
+2026-10-15 16:03:55,572 - app - INFO - 
+[16:03:55]
+GET /profile/
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:04:04,937 - app - INFO - 
+[16:04:04]
+GET /projects/
+User: 12
+Status: 200
+Duration: 15ms
+2026-10-15 16:04:06,951 - app - INFO - 
+[16:04:06]
+GET /profile/
+User: 12
+Status: 200
+Duration: 17ms
+2026-10-15 16:04:18,781 - app - INFO - 
+[16:04:18]
+GET /profile/history
+User: 12
+Status: 200
+Duration: 13ms
+2026-10-15 16:04:24,499 - app - INFO - 
+[16:04:24]
+GET /profile/settings
+User: 12
+Status: 200
+Duration: 20ms
+2026-10-15 16:04:27,123 - app - INFO - 
+[16:04:27]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 41ms
+2026-10-15 16:04:46,808 - app - INFO - 
+[16:04:46]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-10-15 16:05:17,282 - app - INFO - 
+[16:05:17]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:05:41,772 - app - INFO - 
+[16:05:41]
+GET /auth/login
+User: Guest
+Status: 404
+Duration: 0ms
+2026-10-15 16:06:03,574 - app - INFO - 
+[16:06:03]
+GET /admin/login
+User: Guest
+Status: 200
+Duration: 13ms
+2026-10-15 16:06:22,044 - app - INFO - 
+[16:06:22]
+GET /
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 16:06:22,321 - app - INFO - 
+[16:06:22]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-10-15 16:06:22,487 - app - INFO - 
+[16:06:22]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-10-15 16:06:22,620 - app - INFO - 
+[16:06:22]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-10-15 16:06:22,787 - app - INFO - 
+[16:06:22]
+GET /
+User: 12
+Status: 200
+Duration: 0ms
+2026-10-15 16:07:25,799 - app - INFO - 
+[16:07:25]
+GET /
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 16:07:29,180 - app - INFO - 
+[16:07:29]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-10-15 16:07:45,029 - app - INFO - 
+[16:07:45]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:07:47,275 - app - INFO - 
+[16:07:47]
+GET /chat/
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:07:50,113 - app - INFO - 
+[16:07:50]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 12ms
+2026-10-15 16:07:50,113 - app - ERROR - Error generating title for session 93d3078d-ac26-4819-953f-28ecda1e2ae6: No module named 'backend.services.ollama_service'
+2026-10-15 16:07:52,068 - app - INFO - 
+[16:07:52]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 22ms
+2026-10-15 16:07:53,448 - app - INFO - 
+[16:07:53]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-10-15 16:07:55,244 - app - INFO - 
+[16:07:55]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 32ms
+2026-10-15 16:07:56,081 - app - INFO - 
+[16:07:56]
+GET /learning/
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:07:59,077 - app - INFO - 
+[16:07:59]
+GET /interview/
+User: 12
+Status: 200
+Duration: 14ms
+2026-10-15 16:08:01,225 - app - INFO - 
+[16:08:01]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 30ms
+2026-10-15 16:08:05,899 - app - INFO - 
+[16:08:05]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 18ms
+2026-10-15 16:08:05,994 - app - INFO - 
+[16:08:05]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 4ms
+2026-10-15 16:08:06,023 - app - INFO - 
+[16:08:06]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 32ms
+2026-10-15 16:08:06,819 - app - INFO - 
+[16:08:06]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:08:06,907 - app - INFO - 
+[16:08:06]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 917ms
+2026-10-15 16:08:15,963 - app - INFO - 
+[16:08:15]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 16:08:16,019 - app - INFO - 
+[16:08:16]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 20ms
+2026-10-15 16:08:20,153 - app - INFO - 
+[16:08:20]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:08:20,190 - app - INFO - 
+[16:08:20]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 2ms
+2026-10-15 16:08:25,553 - app - INFO - 
+[16:08:25]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 23ms
+2026-10-15 16:08:25,751 - app - INFO - 
+[16:08:25]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 54ms
+2026-10-15 16:08:28,854 - app - INFO - 
+[16:08:28]
+GET /code-review
+User: 12
+Status: 200
+Duration: 8ms
+2026-10-15 16:08:30,679 - app - INFO - 
+[16:08:30]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 4ms
+2026-10-15 16:08:31,548 - app - INFO - 
+[16:08:31]
+GET /projects/
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 16:08:33,216 - app - INFO - 
+[16:08:33]
+GET /profile/
+User: 12
+Status: 200
+Duration: 19ms
+2026-10-15 16:09:05,021 - app - INFO - 
+[16:09:05]
+GET /profile/history
+User: 12
+Status: 200
+Duration: 14ms
+2026-10-15 16:09:07,955 - app - INFO - 
+[16:09:07]
+GET /interview/
+User: 12
+Status: 200
+Duration: 12ms
+2026-10-15 16:09:10,277 - app - INFO - 
+[16:09:10]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 31ms
+2026-10-15 16:11:22,992 - app - INFO - 
+[16:11:22]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 31ms
+2026-10-15 16:19:06,286 - app - INFO - 
+[16:19:06]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 32ms
+2026-10-15 16:20:39,201 - app - INFO - 
+[16:20:39]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 59ms
+2026-10-15 16:20:49,901 - app - INFO - 
+[16:20:49]
+GET /
+User: 12
+Status: 200
+Duration: 1ms
+2026-10-15 16:21:06,633 - app - INFO - 
+[16:21:06]
+GET /.well-known/appspecific/com.chrome.devtools.json
+User: 12
+Status: 404
+Duration: 3ms
+2026-10-15 16:21:27,977 - app - INFO - 
+[16:21:27]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 39ms
+2026-10-15 16:21:30,860 - app - INFO - 
+[16:21:30]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 27ms
+2026-10-15 16:21:35,126 - app - INFO - 
+[16:21:35]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 14ms
+2026-10-15 16:21:40,941 - app - INFO - 
+[16:21:40]
+GET /chat/
+User: 12
+Status: 200
+Duration: 8ms
+2026-10-15 16:21:44,119 - app - INFO - 
+[16:21:44]
+POST /chat/stream
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:21:44,119 - app - ERROR - Error generating title for session eebb6c9a-04aa-417c-aef7-c06331fb7fa6: No module named 'backend.services.ollama_service'
+2026-10-15 16:21:49,444 - app - INFO - 
+[16:21:49]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 35ms
+2026-10-15 16:21:50,672 - app - INFO - 
+[16:21:50]
+GET /learning/
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:22:41,163 - app - INFO - 
+[16:22:41]
+POST /learning/generate
+User: 12
+Status: 200
+Duration: 31866ms
+2026-10-15 16:22:49,405 - app - INFO - 
+[16:22:49]
+GET /interview/
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 16:22:55,121 - app - INFO - 
+[16:22:55]
+POST /interview/start
+User: 12
+Status: 200
+Duration: 1742ms
+2026-10-15 16:22:59,637 - app - INFO - 
+[16:22:59]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 33ms
+2026-10-15 16:23:27,711 - app - INFO - 
+[16:23:27]
+POST /jobs/search
+User: 12
+Status: 200
+Duration: 17097ms
+2026-10-15 16:23:51,013 - app - INFO - 
+[16:23:51]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 18ms
+2026-10-15 16:23:51,204 - app - INFO - 
+[16:23:51]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 4ms
+2026-10-15 16:23:51,228 - app - INFO - 
+[16:23:51]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 27ms
+2026-10-15 16:23:52,026 - app - INFO - 
+[16:23:52]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:23:54,218 - app - INFO - 
+[16:23:54]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 3018ms
+2026-10-15 16:23:59,534 - app - INFO - 
+[16:23:59]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 16:23:59,664 - app - INFO - 
+[16:23:59]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 39ms
+2026-10-15 16:24:03,191 - app - INFO - 
+[16:24:03]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:24:03,217 - app - INFO - 
+[16:24:03]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 1ms
+2026-10-15 16:24:32,393 - app - INFO - 
+[16:24:32]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 41ms
+2026-10-15 16:24:36,144 - app - INFO - 
+[16:24:36]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 29ms
+2026-10-15 16:24:51,656 - app - INFO - 
+[16:24:51]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 18ms
+2026-10-15 16:24:51,814 - app - INFO - 
+[16:24:51]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 5ms
+2026-10-15 16:24:51,830 - app - INFO - 
+[16:24:51]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 20ms
+2026-10-15 16:24:52,637 - app - INFO - 
+[16:24:52]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 11ms
+2026-10-15 16:24:53,004 - app - INFO - 
+[16:24:53]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 1193ms
+2026-10-15 16:25:18,161 - app - INFO - 
+[16:25:18]
+GET /profile/
+User: 12
+Status: 200
+Duration: 17ms
+2026-10-15 16:25:40,739 - app - INFO - 
+[16:25:40]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 66ms
+2026-10-15 16:25:40,846 - app - INFO - 
+[16:25:40]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 6ms
+2026-10-15 16:25:40,864 - app - INFO - 
+[16:25:40]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 21ms
+2026-10-15 16:25:41,676 - app - INFO - 
+[16:25:41]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:25:41,779 - app - INFO - 
+[16:25:41]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 937ms
+2026-10-15 16:28:56,385 - app - INFO - 
+[16:28:56]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 40ms
+2026-10-15 16:28:56,528 - app - INFO - 
+[16:28:56]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 5ms
+2026-10-15 16:28:56,540 - app - INFO - 
+[16:28:56]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 16:28:57,356 - app - INFO - 
+[16:28:57]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:28:58,042 - app - INFO - 
+[16:28:58]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 1518ms
+2026-10-15 16:34:09,313 - app - INFO - 
+[16:34:09]
+GET /
+User: Guest
+Status: 200
+Duration: 2ms
+2026-10-15 16:35:02,186 - app - INFO - 
+[16:35:02]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-10-15 16:35:09,563 - app - INFO - 
+[16:35:09]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 22ms
+2026-10-15 16:35:09,694 - app - INFO - 
+[16:35:09]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 6ms
+2026-10-15 16:35:09,763 - app - INFO - 
+[16:35:09]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 74ms
+2026-10-15 16:35:10,519 - app - INFO - 
+[16:35:10]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 12ms
+2026-10-15 16:35:10,855 - app - INFO - 
+[16:35:10]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 1166ms
+2026-10-15 16:39:21,331 - app - INFO - 
+[16:39:21]
+POST /login
+User: Guest
+Status: 200
+Duration: 3ms
+2026-10-15 16:39:21,334 - app - INFO - 
+[16:39:21]
+GET /dashboard
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-15 16:39:21,340 - app - INFO - 
+[16:39:21]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:39:21,345 - app - INFO - 
+[16:39:21]
+GET /jobs
+User: Guest
+Status: 308
+Duration: 0ms
+2026-10-15 16:39:21,348 - app - INFO - 
+[16:39:21]
+GET /jobs/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-15 16:39:21,351 - app - INFO - 
+[16:39:21]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:39:21,352 - app - INFO - 
+[16:39:21]
+GET /notifications
+User: Guest
+Status: 308
+Duration: 0ms
+2026-10-15 16:39:21,354 - app - INFO - 
+[16:39:21]
+GET /notifications/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-15 16:39:21,356 - app - INFO - 
+[16:39:21]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:39:21,358 - app - INFO - 
+[16:39:21]
+GET /profile/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-15 16:39:21,360 - app - INFO - 
+[16:39:21]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:39:21,362 - app - INFO - 
+[16:39:21]
+GET /problem_solving/
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-15 16:39:21,364 - app - INFO - 
+[16:39:21]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:41:22,167 - app - INFO - 
+[16:41:22]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 16:41:22,179 - app - INFO - 
+[16:41:22]
+POST /login
+User: Guest
+Status: 200
+Duration: 8ms
+2026-10-15 16:42:17,439 - app - INFO - 
+[16:42:17]
+POST /login
+User: 12
+Status: 302
+Duration: 245ms
+2026-10-15 16:42:17,462 - app - INFO - 
+[16:42:17]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 17ms
+2026-10-15 16:42:17,464 - app - INFO - 
+[16:42:17]
+GET /jobs
+User: 12
+Status: 308
+Duration: 0ms
+2026-10-15 16:42:17,471 - app - INFO - 
+[16:42:17]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 5ms
+2026-10-15 16:42:17,473 - app - INFO - 
+[16:42:17]
+GET /notifications
+User: 12
+Status: 308
+Duration: 0ms
+2026-10-15 16:42:17,481 - app - INFO - 
+[16:42:17]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 6ms
+2026-10-15 16:42:17,501 - app - INFO - 
+[16:42:17]
+GET /profile/
+User: 12
+Status: 200
+Duration: 17ms
+2026-10-15 16:42:17,511 - app - INFO - 
+[16:42:17]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 7ms
+2026-10-15 16:49:27,348 - app - INFO - 
+[16:49:27]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 21ms
+2026-10-15 16:49:27,526 - app - INFO - 
+[16:49:27]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 2ms
+2026-10-15 16:49:27,565 - app - INFO - 
+[16:49:27]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 39ms
+2026-10-15 16:49:28,359 - app - INFO - 
+[16:49:28]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 13ms
+2026-10-15 16:49:28,442 - app - INFO - 
+[16:49:28]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 917ms
+2026-10-15 16:49:38,880 - app - INFO - 
+[16:49:38]
+GET /profile/
+User: 12
+Status: 200
+Duration: 19ms
+2026-10-15 16:49:54,240 - app - INFO - 
+[16:49:54]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 37ms
+2026-10-15 16:50:02,652 - app - INFO - 
+[16:50:02]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:50:04,617 - app - INFO - 
+[16:50:04]
+GET /chat/
+User: 12
+Status: 200
+Duration: 14ms
+2026-10-15 16:50:08,038 - app - INFO - 
+[16:50:08]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 35ms
+2026-10-15 16:50:09,677 - app - INFO - 
+[16:50:09]
+GET /learning/
+User: 12
+Status: 200
+Duration: 9ms
+2026-10-15 16:50:14,040 - app - INFO - 
+[16:50:14]
+GET /interview/
+User: 12
+Status: 200
+Duration: 6ms
+2026-10-15 16:50:16,517 - app - INFO - 
+[16:50:16]
+GET /jobs/
+User: 12
+Status: 200
+Duration: 32ms
+2026-10-15 16:50:19,414 - app - INFO - 
+[16:50:19]
+GET /notifications/
+User: 12
+Status: 200
+Duration: 15ms
+2026-10-15 16:50:19,503 - app - INFO - 
+[16:50:19]
+GET /notifications/api/missing-skills
+User: 12
+Status: 200
+Duration: 4ms
+2026-10-15 16:50:19,514 - app - INFO - 
+[16:50:19]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 15ms
+2026-10-15 16:50:20,329 - app - INFO - 
+[16:50:20]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 16:50:20,458 - app - INFO - 
+[16:50:20]
+GET /notifications/api/insights
+User: 12
+Status: 200
+Duration: 959ms
+2026-10-15 16:50:22,981 - app - INFO - 
+[16:50:22]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 11ms
+2026-10-15 16:50:23,081 - app - INFO - 
+[16:50:23]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 26ms
+2026-10-15 16:50:30,170 - app - INFO - 
+[16:50:30]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 16:50:30,392 - app - INFO - 
+[16:50:30]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 34ms
+2026-10-15 17:04:32,961 - app - INFO - 
+[17:04:32]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 18ms
+2026-10-15 17:04:32,968 - app - INFO - 
+[17:04:32]
+GET /notifications/api/chart-data
+User: 12
+Status: 200
+Duration: 26ms
+2026-10-15 17:04:35,134 - app - INFO - 
+[17:04:35]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 34ms
+2026-10-15 21:05:01,874 - app - INFO - 
+[21:05:01]
+GET /resume/upload
+User: 12
+Status: 200
+Duration: 28ms
+2026-10-15 21:05:03,922 - app - INFO - 
+[21:05:03]
+GET /learning/
+User: 12
+Status: 200
+Duration: 18ms
+2026-10-15 21:05:04,985 - app - INFO - 
+[21:05:04]
+GET /chat/
+User: 12
+Status: 200
+Duration: 10ms
+2026-10-15 21:05:07,332 - app - INFO - 
+[21:05:07]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 38ms
+2026-10-15 21:05:09,166 - app - INFO - 
+[21:05:09]
+GET /problem_solving/
+User: 12
+Status: 200
+Duration: 19ms
+2026-10-15 21:05:09,228 - app - INFO - 
+[21:05:09]
+GET /problem_solving/api/dashboard
+User: 12
+Status: 200
+Duration: 25ms
+2026-10-15 21:05:22,439 - app - INFO - 
+[21:05:22]
+GET /resume/builder
+User: 12
+Status: 200
+Duration: 35ms
+2026-10-15 21:05:22,470 - app - INFO - 
+[21:05:22]
+GET /resume/api/intelligence/versions
+User: 12
+Status: 200
+Duration: 1ms
+2026-10-15 21:05:28,218 - app - INFO - 
+[21:05:28]
+GET /code-review
+User: 12
+Status: 200
+Duration: 5ms
+2026-10-15 21:05:31,433 - app - INFO - 
+[21:05:31]
+GET /sql-coach
+User: 12
+Status: 200
+Duration: 5ms
+2026-10-15 21:05:33,468 - app - INFO - 
+[21:05:33]
+GET /projects/
+User: 12
+Status: 200
+Duration: 4ms
+2026-10-15 21:05:35,798 - app - INFO - 
+[21:05:35]
+GET /profile/
+User: 12
+Status: 200
+Duration: 16ms
+2026-10-15 21:12:02,117 - app - INFO - 
+[21:12:02]
+GET /
+User: 12
+Status: 200
+Duration: 3ms
+2026-10-15 21:12:04,729 - app - INFO - 
+[21:12:04]
+GET /dashboard
+User: 12
+Status: 200
+Duration: 40ms
+2026-10-15 21:12:06,317 - app - INFO - 
+[21:12:06]
+GET /logout
+User: Guest
+Status: 302
+Duration: 0ms
+2026-10-15 21:12:06,324 - app - INFO - 
+[21:12:06]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-10-15 22:36:44,037 - app - INFO - 
+[22:36:44]
+GET /register
+User: Guest
+Status: 200
+Duration: 12ms
+2026-10-15 22:37:32,400 - app - INFO - 
+[22:37:32]
+POST /register
+User: 22
+Status: 302
+Duration: 285ms
+2026-10-15 22:37:32,463 - app - INFO - 
+[22:37:32]
+GET /dashboard
+User: 22
+Status: 200
+Duration: 47ms
+2026-10-15 22:37:42,708 - app - INFO - 
+[22:37:42]
+GET /resume/upload
+User: 22
+Status: 200
+Duration: 4ms
+2026-10-15 22:38:05,513 - app - INFO - 
+[22:38:05]
+GET /resume/upload
+User: 22
+Status: 200
+Duration: 9ms
+2026-10-15 22:38:08,533 - app - INFO - 
+[22:38:08]
+GET /resume/upload
+User: 22
+Status: 200
+Duration: 8ms
+2026-10-15 22:38:10,996 - app - INFO - 
+[22:38:10]
+GET /resume/analyze/12
+User: 22
+Status: 200
+Duration: 20ms
+2026-10-15 22:38:13,288 - app - INFO - [ResumeRoute] Running analysis for user_id=22, resume_id=12, target_role='AI/ML Engineer'
+2026-10-15 22:38:32,230 - app - INFO - [ResumeService] [DatabaseStage] Analysis saved to DB for resume_id=12, user_id=22
+2026-10-15 22:38:32,231 - app - INFO - 
+[22:38:32]
+POST /resume/analyze/run
+User: 22
+Status: 200
+Duration: 18943ms
+2026-10-15 22:38:38,447 - app - INFO - 
+[22:38:38]
+GET /chat/
+User: 22
+Status: 200
+Duration: 8ms
+2026-10-15 22:38:39,646 - app - INFO - 
+[22:38:39]
+POST /chat/stream
+User: 22
+Status: 200
+Duration: 6ms
+2026-10-15 22:38:39,646 - app - ERROR - Error generating title for session 81ee58ce-235f-435a-aa67-27dc921c2f21: No module named 'backend.services.ollama_service'
+2026-10-15 22:38:52,389 - app - INFO - 
+[22:38:52]
+POST /resume/api/upload
+User: 22
+Status: 200
+Duration: 46898ms
+2026-10-15 22:39:03,341 - app - INFO - 
+[22:39:03]
+POST /chat/stream
+User: 22
+Status: 200
+Duration: 8ms
+2026-10-15 22:39:09,392 - app - INFO - 
+[22:39:09]
+GET /chat/
+User: 22
+Status: 200
+Duration: 7ms
+2026-10-15 22:39:11,142 - app - INFO - 
+[22:39:11]
+GET /chat/
+User: 22
+Status: 200
+Duration: 7ms
+2026-10-15 22:39:18,351 - app - INFO - 
+[22:39:18]
+GET /learning/
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 22:40:11,269 - app - INFO - 
+[22:40:11]
+POST /learning/generate
+User: 22
+Status: 200
+Duration: 44610ms
+2026-10-15 22:40:17,973 - app - INFO - 
+[22:40:17]
+GET /interview/
+User: 22
+Status: 200
+Duration: 12ms
+2026-10-15 22:53:09,024 - app - INFO - 
+[22:53:09]
+POST /interview/start
+User: 22
+Status: 200
+Duration: 1624ms
+2026-10-15 23:30:55,769 - app - INFO - 
+[23:30:55]
+POST /interview/evaluate
+User: 22
+Status: 200
+Duration: 53605ms
+2026-10-15 23:31:22,881 - app - INFO - 
+[23:31:22]
+GET /interview/
+User: 22
+Status: 200
+Duration: 11ms
+2026-10-15 23:31:31,648 - app - INFO - 
+[23:31:31]
+POST /interview/start
+User: 22
+Status: 200
+Duration: 3850ms
+2026-10-15 23:32:12,572 - app - INFO - 
+[23:32:12]
+GET /profile/history
+User: 22
+Status: 200
+Duration: 15ms
+2026-10-15 23:32:15,092 - app - INFO - 
+[23:32:15]
+GET /profile/
+User: 22
+Status: 200
+Duration: 17ms
+2026-10-15 23:32:18,556 - app - INFO - 
+[23:32:18]
+GET /profile/settings
+User: 22
+Status: 200
+Duration: 17ms
+2026-10-15 23:32:20,445 - app - INFO - 
+[23:32:20]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 24ms
+2026-10-15 23:32:22,127 - app - INFO - 
+[23:32:22]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 23:32:24,431 - app - INFO - 
+[23:32:24]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 15ms
+2026-10-15 23:32:26,809 - app - INFO - 
+[23:32:26]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 23:32:29,004 - app - INFO - 
+[23:32:29]
+GET /profile/settings
+User: 22
+Status: 200
+Duration: 19ms
+2026-10-15 23:32:31,213 - app - INFO - 
+[23:32:31]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 23:32:33,879 - app - INFO - 
+[23:32:33]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 11ms
+2026-10-15 23:32:35,960 - app - INFO - 
+[23:32:35]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 9ms
+2026-10-15 23:32:37,542 - app - INFO - 
+[23:32:37]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 23:32:39,633 - app - INFO - 
+[23:32:39]
+GET /jobs/
+User: 22
+Status: 200
+Duration: 28ms
+2026-10-15 23:32:42,754 - app - INFO - 
+[23:32:42]
+GET /interview/
+User: 22
+Status: 200
+Duration: 13ms
+2026-10-15 23:32:49,038 - app - INFO - 
+[23:32:49]
+GET /jobs/
+User: 22
+Status: 200
+Duration: 15ms
+2026-10-15 23:32:50,912 - app - INFO - 
+[23:32:50]
+GET /learning/
+User: 22
+Status: 200
+Duration: 8ms
+2026-10-15 23:32:54,915 - app - INFO - 
+[23:32:54]
+GET /chat/
+User: 22
+Status: 200
+Duration: 9ms
+2026-10-15 23:32:56,370 - app - INFO - 
+[23:32:56]
+POST /chat/stream
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 23:32:56,370 - app - ERROR - Error generating title for session a116e473-dc19-4443-8f4f-81f9ee6b5a90: No module named 'backend.services.ollama_service'
+2026-10-15 23:33:09,898 - app - INFO - 
+[23:33:09]
+POST /chat/stream
+User: 22
+Status: 200
+Duration: 9ms
+2026-10-15 23:33:18,742 - app - INFO - 
+[23:33:18]
+GET /dashboard
+User: 22
+Status: 200
+Duration: 36ms
+2026-10-15 23:33:25,275 - app - INFO - 
+[23:33:25]
+GET /interview/
+User: 22
+Status: 200
+Duration: 15ms
+2026-10-15 23:33:28,949 - app - INFO - 
+[23:33:28]
+GET /jobs/
+User: 22
+Status: 200
+Duration: 25ms
+2026-10-15 23:33:32,909 - app - INFO - 
+[23:33:32]
+GET /profile/settings
+User: 22
+Status: 200
+Duration: 19ms
+2026-10-15 23:33:34,872 - app - INFO - 
+[23:33:34]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 22ms
+2026-10-15 23:33:37,011 - app - INFO - 
+[23:33:37]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 12ms
+2026-10-15 23:33:38,731 - app - INFO - 
+[23:33:38]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 13ms
+2026-10-15 23:33:40,560 - app - INFO - 
+[23:33:40]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 11ms
+2026-10-15 23:33:42,477 - app - INFO - 
+[23:33:42]
+GET /profile/api/test-ollama
+User: 22
+Status: 200
+Duration: 11ms
+2026-10-15 23:33:54,043 - app - INFO - 
+[23:33:54]
+GET /jobs/
+User: 22
+Status: 200
+Duration: 33ms
+2026-10-15 23:33:56,295 - app - INFO - 
+[23:33:56]
+GET /interview/
+User: 22
+Status: 200
+Duration: 10ms
+2026-10-15 23:33:58,201 - app - INFO - 
+[23:33:58]
+GET /jobs/
+User: 22
+Status: 200
+Duration: 29ms
+2026-10-15 23:34:13,891 - app - INFO - 
+[23:34:13]
+POST /jobs/search
+User: 22
+Status: 200
+Duration: 11103ms

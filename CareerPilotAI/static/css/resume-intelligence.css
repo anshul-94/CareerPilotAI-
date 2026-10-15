@@ -261,3 +261,36 @@
         font-size: 1.35rem;
     }
 }
+
+/* ==========================================================
+   LIGHT THEME RESUME INTELLIGENCE OVERRIDES
+   ========================================================== */
+[data-theme="light"] .control-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .score-card {
+    background: #FAF7F0;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .score-value.high { color: var(--success); }
+[data-theme="light"] .score-value.mid { color: var(--warning); }
+[data-theme="light"] .score-value.low { color: var(--danger); }
+
+[data-theme="light"] .suggestion-item {
+    background: rgba(217, 164, 65, 0.12);
+    border: 1px solid rgba(217, 164, 65, 0.25);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .version-title {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .version-meta {
+    color: var(--text-tertiary);
+}
+

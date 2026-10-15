@@ -19,7 +19,10 @@
         <a href="#contact">Contact</a>
     </div>
     
-    <div class="landing-nav-right">
+    <div class="landing-nav-right" style="display:flex;align-items:center;gap:1rem;">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <i data-lucide="sun" style="width:18px;height:18px;"></i>
+        </button>
         {% if not current_user.is_authenticated %}
             <a href="{{ url_for('auth.login') }}" class="btn-nav-login">Login</a>
         {% else %}

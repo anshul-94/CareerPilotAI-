@@ -13,15 +13,15 @@
     <div class="card reveal delay-1 career-snapshot-card">
         <div class="snapshot-top-row">
             <div class="snapshot-user-meta">
-                <div style="width: 50px; height: 50px; background: var(--primary-glow); color: var(--primary-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; flex-shrink: 0;">
+                <div class="snapshot-avatar">
                     {{ (user.full_name or user.username)[0]|upper }}
                 </div>
                 <div>
-                    <div style="font-weight: 700; font-size: 1.1rem; color: #e2e8f0;">
+                    <div class="snapshot-role">
                         {{ career_snapshot.preferred_role or 'Career Profile Incomplete' }}
                     </div>
-                    <div style="font-size: 0.85rem; color: #94a3b8; display: flex; gap: 0.5rem; align-items: center; margin-top: 0.2rem; flex-wrap: wrap;">
-                        <span style="display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> {{ career_snapshot.preferred_location or 'Any location' }}</span>
+                    <div class="snapshot-meta">
+                        <span class="snapshot-meta-loc"><i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> {{ career_snapshot.preferred_location or 'Any location' }}</span>
                         <span>•</span>
                         <span>{{ career_snapshot.seniority_level|capitalize }}</span>
                         {% if career_snapshot.experience_years %}
@@ -33,25 +33,25 @@
             </div>
             
             <div class="snapshot-stats-row">
-                <div style="text-align: center;">
-                    <div style="font-size: 1.25rem; font-weight: 800; color: #a5b4fc;">{{ career_snapshot.profile_completeness or 0 }}%</div>
-                    <div style="font-size: 0.7rem; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em;">Profile Complete</div>
+                <div class="snapshot-stat-item">
+                    <div class="snapshot-stat-num complete">{{ career_snapshot.profile_completeness or 0 }}%</div>
+                    <div class="snapshot-stat-lbl">Profile Complete</div>
                 </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 1.25rem; font-weight: 800; color: #86efac;">{{ career_snapshot.ai_readiness or 0 }}%</div>
-                    <div style="font-size: 0.7rem; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em;">AI Readiness</div>
+                <div class="snapshot-stat-item">
+                    <div class="snapshot-stat-num readiness">{{ career_snapshot.ai_readiness or 0 }}%</div>
+                    <div class="snapshot-stat-lbl">AI Readiness</div>
                 </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 1.25rem; font-weight: 800; color: #fca5a5;">{{ career_snapshot.ats_score or 0 }}%</div>
-                    <div style="font-size: 0.7rem; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em;">ATS Score</div>
+                <div class="snapshot-stat-item">
+                    <div class="snapshot-stat-num ats">{{ career_snapshot.ats_score or 0 }}%</div>
+                    <div class="snapshot-stat-lbl">ATS Score</div>
                 </div>
             </div>
         </div>
         
         <div class="snapshot-bottom-row">
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <div class="snapshot-skills-wrap">
                 {% for skill in (career_snapshot.top_skills or [])[:5] %}
-                <span style="font-size: 0.72rem; padding: 0.2rem 0.6rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #cbd5e1;">{{ skill }}</span>
+                <span class="snapshot-skill-pill">{{ skill }}</span>
                 {% endfor %}
             </div>
             <a href="{{ url_for('profile.index') }}" class="btn btn-outline btn-sm">Edit Career DNA</a>

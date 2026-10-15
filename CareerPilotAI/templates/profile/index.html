@@ -87,16 +87,16 @@
                 <svg width="0" height="0" style="position:absolute;">
                     <defs>
                         <linearGradient id="atsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%"   stop-color="#6366f1"/>
-                            <stop offset="100%" stop-color="#8b5cf6"/>
+                            <stop offset="0%"   stop-color="var(--ring-ats-start, #6366f1)"/>
+                            <stop offset="100%" stop-color="var(--ring-ats-end, #8b5cf6)"/>
                         </linearGradient>
                         <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%"   stop-color="#8b5cf6"/>
-                            <stop offset="100%" stop-color="#ec4899"/>
+                            <stop offset="0%"   stop-color="var(--ring-ai-start, #8b5cf6)"/>
+                            <stop offset="100%" stop-color="var(--ring-ai-end, #ec4899)"/>
                         </linearGradient>
                         <linearGradient id="completeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%"   stop-color="#22c55e"/>
-                            <stop offset="100%" stop-color="#16a34a"/>
+                            <stop offset="0%"   stop-color="var(--ring-complete-start, #22c55e)"/>
+                            <stop offset="100%" stop-color="var(--ring-complete-end, #16a34a)"/>
                         </linearGradient>
                     </defs>
                 </svg>
@@ -197,7 +197,7 @@
                 {% if snapshot.career_goal %}
                 <hr class="dna-divider">
                 <div class="dna-section-label">Career Goal</div>
-                <p style="font-size:0.85rem;color:#94a3b8;line-height:1.6;margin:0;">
+                <p class="dna-career-goal">
                     {{ snapshot.career_goal }}
                 </p>
                 {% endif %}
@@ -238,10 +238,10 @@
             <div class="profile-form-card">
                 <div class="profile-form-header">
                     <h2>Edit Career DNA</h2>
-                    <div style="font-size:0.78rem;color:#64748b;">
-                        <span style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.2);color:#86efac;padding:0.15rem 0.45rem;border-radius:5px;font-weight:700;">MANUAL</span> = your input (never overwritten)
+                    <div class="profile-source-legend">
+                        <span class="legend-badge manual">MANUAL</span> = your input (never overwritten)
                         &nbsp;
-                        <span style="background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.2);color:#a5b4fc;padding:0.15rem 0.45rem;border-radius:5px;font-weight:700;">AI</span> = resume-extracted
+                        <span class="legend-badge ai">AI</span> = resume-extracted
                     </div>
                 </div>
 

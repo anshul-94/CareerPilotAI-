@@ -11,7 +11,7 @@
             <h1>AI Job Finder</h1>
             <p class="page-subtitle">
                 {% if prefill and prefill.preferred_role %}
-                Searching for <strong style="color:#a5b4fc;">{{ prefill.preferred_role }}</strong> roles in <strong style="color:#a5b4fc;">{{ prefill.preferred_location or 'all locations' }}</strong> — from your Career DNA.
+                Searching for <strong class="job-prefill-highlight">{{ prefill.preferred_role }}</strong> roles in <strong class="job-prefill-highlight">{{ prefill.preferred_location or 'all locations' }}</strong> — from your Career DNA.
                 {% else %}
                 AI scours LinkedIn, Indeed, Naukri & more to find roles that match your profile.
                 {% endif %}
@@ -19,9 +19,7 @@
         </div>
         {% if prefill and prefill.preferred_role %}
         <div>
-            <span style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);
-                         color:#86efac;border-radius:10px;padding:0.4rem 0.9rem;
-                         font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:5px;">
+            <span class="career-dna-badge">
                 <i data-lucide="check" style="width:13px;height:13px;"></i> Using Career DNA Profile
             </span>
         </div>
@@ -30,19 +28,16 @@
 
     <!-- ─── AI Autonomous Status ──────────────────────────── -->
     {% if total_searched and total_searched > 0 %}
-    <div style="background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.07));
-                border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:1.25rem 1.5rem;
-                margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
-                flex-wrap:wrap;gap:1rem;" class="reveal delay-1">
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-            <div style="width:40px;height:40px;border-radius:10px;background:rgba(99,102,241,0.2);display:flex;align-items:center;justify-content:center;color:#a5b4fc;"><i data-lucide="bot"></i></div>
+    <div class="ai-ranking-banner reveal delay-1">
+        <div class="ai-ranking-banner-left">
+            <div class="ai-ranking-banner-icon"><i data-lucide="bot"></i></div>
             <div>
-                <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem; font-size: 1.1rem;">
-                    AI autonomously ranked <span style="color:#a5b4fc;">{{ total_searched }} jobs</span> for you today.
+                <div class="ai-ranking-banner-title">
+                    AI autonomously ranked <span class="ai-ranking-banner-count">{{ total_searched }} jobs</span> for you today.
                 </div>
-                <div style="font-size:0.85rem;color:#94a3b8;">
+                <div class="ai-ranking-banner-subtitle">
                     Showing your top {{ recent_jobs|length }} matches &nbsp;·&nbsp;
-                    Last updated: <span style="color:#fbbf24;">{{ last_updated }}</span>
+                    Last updated: <span class="ai-ranking-banner-time">{{ last_updated }}</span>
                 </div>
             </div>
         </div>
@@ -51,17 +46,14 @@
         </button>
     </div>
     {% elif prefill and prefill.preferred_role %}
-    <div style="background:linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.07));
-                border:1px solid rgba(99,102,241,0.25);border-radius:16px;padding:1.25rem 1.5rem;
-                margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
-                flex-wrap:wrap;gap:1rem;" class="reveal delay-1">
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-            <div style="width:36px;height:36px;border-radius:8px;background:rgba(99,102,241,0.2);display:flex;align-items:center;justify-content:center;color:#a5b4fc;"><i data-lucide="bot"></i></div>
+    <div class="ai-ranking-banner reveal delay-1">
+        <div class="ai-ranking-banner-left">
+            <div class="ai-ranking-banner-icon"><i data-lucide="bot"></i></div>
             <div>
-                <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem;">
-                    AI is currently searching for: <span style="color:#a5b4fc;">{{ prefill.preferred_role }}</span>
+                <div class="ai-ranking-banner-title">
+                    AI is currently searching for: <span class="ai-ranking-banner-count">{{ prefill.preferred_role }}</span>
                 </div>
-                <div style="font-size:0.82rem;color:#64748b;">
+                <div class="ai-ranking-banner-subtitle">
                     Generating background job matches. This usually takes ~10 seconds.
                 </div>
             </div>
@@ -75,11 +67,9 @@
     <!-- ─── Default Search (Profile-Based) ──────────────── -->
     <div class="card reveal delay-1" style="margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
-            <h3 style="font-size:1rem;font-weight:700;color:#e2e8f0;margin:0;">
+            <h3 class="profile-search-title">
                 Profile-Based Search
-                <span style="font-size:0.7rem;font-weight:600;background:rgba(99,102,241,0.15);
-                             border:1px solid rgba(99,102,241,0.25);color:#a5b4fc;
-                             padding:0.15rem 0.5rem;border-radius:5px;margin-left:0.5rem;">DEFAULT</span>
+                <span class="profile-search-badge">DEFAULT</span>
             </h3>
         </div>
         <form id="jobSearchForm" style="display:flex;gap:1rem;align-items:flex-end;flex-wrap:wrap;">
@@ -90,7 +80,7 @@
             </div>
             <div style="flex:1;min-width:200px;">
                 <label class="form-label" for="jobRole">Target Role
-                    {% if prefill and prefill.preferred_role %}<span style="font-size:0.65rem;color:#a5b4fc;margin-left:0.3rem;">AUTO</span>{% endif %}
+                    {% if prefill and prefill.preferred_role %}<span class="badge-auto-tag">AUTO</span>{% endif %}
                 </label>
                 <input type="text" id="jobRole" class="form-input"
                        value="{{ prefill.preferred_role if prefill else '' }}"
@@ -98,7 +88,7 @@
             </div>
             <div style="flex:1;min-width:180px;">
                 <label class="form-label" for="jobLocation">Location
-                    {% if prefill and prefill.preferred_location %}<span style="font-size:0.65rem;color:#a5b4fc;margin-left:0.3rem;">AUTO</span>{% endif %}
+                    {% if prefill and prefill.preferred_location %}<span class="badge-auto-tag">AUTO</span>{% endif %}
                 </label>
                 <input type="text" id="jobLocation" class="form-input"
                        value="{{ prefill.preferred_location if prefill else '' }}"
@@ -113,27 +103,22 @@
     </div>
 
     <!-- ─── Override Search ──────────────────────────────── -->
-    <div class="card reveal delay-2" style="margin-bottom:2rem;
-         background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.2);">
-        <div style="display:flex;align-items:center;justify-content:space-between;
-                    cursor:pointer;" onclick="toggleOverride()" id="overrideToggle">
+    <div class="card reveal delay-2 override-search-card" style="margin-bottom:2rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;" onclick="toggleOverride()" id="overrideToggle">
             <div style="display:flex;align-items:center;gap:0.75rem;">
-                <i data-lucide="sliders-horizontal" style="width:18px;height:18px;color:#fde68a;"></i>
+                <i data-lucide="sliders-horizontal" class="override-icon" style="width:18px;height:18px;"></i>
                 <div>
-                    <div style="font-weight:700;color:#fde68a;font-size:0.9rem;">Override Search</div>
-                    <div style="font-size:0.75rem;color:#64748b;">
+                    <div class="override-header-title">Override Search</div>
+                    <div class="override-header-sub">
                         Temporarily search for a different role/tech — won't change your profile
                     </div>
                 </div>
             </div>
-            <span id="overrideChevron" style="color:#94a3b8;font-size:1.2rem;transition:transform 0.2s;">▼</span>
+            <span id="overrideChevron" class="override-chevron">▼</span>
         </div>
 
-        <div id="overridePanel" style="display:none;margin-top:1.25rem;padding-top:1.25rem;
-             border-top:1px solid rgba(245,158,11,0.15);">
-            <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);
-                        border-radius:10px;padding:0.75rem 1rem;margin-bottom:1rem;
-                        font-size:0.82rem;color:#fde68a;display:flex;gap:0.5rem;align-items:center;">
+        <div id="overridePanel" style="display:none;margin-top:1.25rem;padding-top:1.25rem;" class="override-panel-inner">
+            <div class="override-alert-box">
                 <i data-lucide="alert-triangle" style="width:14px;height:14px;flex-shrink:0;"></i> Override search is <strong>session-only</strong> and does NOT update your Career DNA profile.
             </div>
 
@@ -156,14 +141,10 @@
             </div>
 
             <!-- Popular override tags -->
-            <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
-                <span style="font-size:0.72rem;color:#64748b;margin-right:0.25rem;">Quick:</span>
+            <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+                <span class="override-quick-lbl">Quick:</span>
                 {% for tech in ['MERN Stack', 'Django Developer', 'Java Backend', 'DevOps', 'Cyber Security', 'Flutter Developer', 'iOS Developer', 'Data Analyst'] %}
-                <button onclick="setOverrideQuick('{{ tech }}')"
-                        style="font-size:0.72rem;font-weight:600;padding:0.2rem 0.6rem;
-                               border-radius:6px;border:1px solid rgba(245,158,11,0.25);
-                               background:rgba(245,158,11,0.08);color:#fde68a;cursor:pointer;
-                               transition:all 0.2s;">
+                <button onclick="setOverrideQuick('{{ tech }}')" class="override-quick-btn">
                     {{ tech }}
                 </button>
                 {% endfor %}
@@ -176,11 +157,7 @@
         <div class="flex-between" style="margin-bottom:1.5rem;">
             <h2 style="font-size:1.25rem;display:flex;align-items:center;gap:0.5rem;">
                 Search Results
-                <span id="searchContextBadge" style="font-size:0.72rem;font-weight:600;
-                      padding:0.15rem 0.55rem;border-radius:6px;
-                      background:rgba(99,102,241,0.15);color:#a5b4fc;
-                      border:1px solid rgba(99,102,241,0.25);display:none;">
-                </span>
+                <span id="searchContextBadge" class="search-context-badge" style="display:none;"></span>
             </h2>
             <span class="text-tertiary" id="jobCount">{{ recent_jobs|length }} jobs</span>
         </div>
@@ -309,9 +286,7 @@ function renderJobResults(jobs, total, isOverride, ctx) {
     if (badge && isOverride) {
         badge.textContent = `Override: ${ctx?.role || ''}`;
         badge.style.display = 'inline-flex';
-        badge.style.background = 'rgba(245,158,11,0.15)';
-        badge.style.color = '#fde68a';
-        badge.style.borderColor = 'rgba(245,158,11,0.3)';
+        badge.className = 'search-context-badge override';
     } else if (badge) {
         badge.style.display = 'none';
     }

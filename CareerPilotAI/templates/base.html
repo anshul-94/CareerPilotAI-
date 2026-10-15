@@ -33,6 +33,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
     
+    <!-- Immediate Theme Init (Zero-FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('careerpilot_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -66,6 +74,9 @@
             <li><a href="{{ url_for('home') }}#testimonials" class="nav-link">Testimonials</a></li>
         </ul>
         <div class="navbar-actions">
+            <button class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+                <i data-lucide="sun" style="width:18px;height:18px;"></i>
+            </button>
             <a href="{{ url_for('auth.login') }}" class="btn btn-ghost">Log In</a>
             <a href="{{ url_for('auth.register') }}" class="btn btn-primary">Get Started</a>
         </div>
@@ -80,6 +91,9 @@
             <li><a href="{{ url_for('chat.index') }}" class="nav-link">AI Coach</a></li>
         </ul>
         <div class="navbar-actions">
+            <button class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+                <i data-lucide="sun" style="width:18px;height:18px;"></i>
+            </button>
             <span style="color: var(--text-secondary); font-size: 0.85rem;">{{ current_user.full_name }}</span>
             <a href="{{ url_for('auth.logout') }}" class="btn btn-ghost btn-sm">Logout</a>
         </div>
@@ -88,6 +102,7 @@
         <button class="navbar-toggle" id="sidebarToggle" aria-label="Toggle Navigation"><i data-lucide="menu" style="width:22px;height:22px;"></i></button>
     </nav>
     <div class="mobile-backdrop" id="mobileBackdrop"></div>
+
     {% endblock %}
     
     <!-- Page Content -->

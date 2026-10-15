@@ -63,6 +63,85 @@
     gap: 0.75rem;
 }
 
+.snapshot-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-glow);
+    color: var(--primary-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.snapshot-role {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+.snapshot-meta {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.snapshot-meta-loc {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.snapshot-stat-item {
+    text-align: center;
+}
+
+.snapshot-stat-num {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.snapshot-stat-num.complete {
+    color: #a5b4fc;
+}
+
+.snapshot-stat-num.readiness {
+    color: #86efac;
+}
+
+.snapshot-stat-num.ats {
+    color: #fca5a5;
+}
+
+.snapshot-stat-lbl {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.snapshot-skills-wrap {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.snapshot-skill-pill {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #cbd5e1;
+}
+
 @media (max-width: 768px) {
     .career-snapshot-card {
         margin-bottom: 1.25rem;
@@ -423,3 +502,81 @@
         gap: 0.75rem;
     }
 }
+
+/* ==========================================================
+   LIGHT THEME DASHBOARD OVERRIDES
+   ========================================================== */
+[data-theme="light"] .career-snapshot-card {
+    background: linear-gradient(135deg, #FFFDF8 0%, #FAF7F0 60%, #EAE6DA 100%);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(74, 47, 40, 0.04);
+}
+
+[data-theme="light"] .snapshot-role {
+    color: var(--primary-text);
+}
+
+[data-theme="light"] .snapshot-meta {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .snapshot-stat-num.complete {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .snapshot-stat-num.readiness {
+    color: var(--success);
+}
+
+[data-theme="light"] .snapshot-stat-num.ats {
+    color: var(--warning);
+}
+
+[data-theme="light"] .snapshot-stat-lbl {
+    color: var(--muted-text);
+    font-weight: 600;
+}
+
+[data-theme="light"] .snapshot-skill-pill {
+    background: var(--muted-sage);
+    border: 1px solid var(--border);
+    color: var(--cocoa);
+    font-weight: 600;
+}
+
+[data-theme="light"] .snapshot-bottom-row {
+    border-top: 1px solid var(--border);
+}
+
+[data-theme="light"] .dash-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .dash-stat:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--pistachio);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .chart-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .activity-item {
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .quick-action {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .quick-action:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--primary);
+}
+

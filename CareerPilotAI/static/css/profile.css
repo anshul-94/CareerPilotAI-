@@ -664,3 +664,218 @@
     justify-content: center;
   }
 }
+
+/* ==========================================================
+   LIGHT THEME PROFILE & CAREER DNA OVERRIDES
+   ========================================================== */
+[data-theme="light"] .career-dna-card {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF7F0 60%, #EAE6DA 100%);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(74, 47, 40, 0.06);
+}
+
+[data-theme="light"] .career-dna-card::before {
+  display: none;
+}
+
+[data-theme="light"] .dna-name {
+  color: var(--primary-text);
+}
+
+[data-theme="light"] .dna-role {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: var(--cocoa) !important;
+  color: var(--cocoa) !important;
+  font-weight: 700;
+}
+
+[data-theme="light"] .dna-level {
+  color: var(--secondary-text);
+}
+
+[data-theme="light"] .dna-badge {
+  background: rgba(165, 165, 141, 0.25);
+  border: 1px solid var(--pistachio);
+  color: var(--cocoa);
+}
+
+[data-theme="light"] .score-ring-value {
+  color: var(--primary-text) !important;
+  font-weight: 800;
+}
+
+[data-theme="light"] .score-ring-label {
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+[data-theme="light"] .score-ring .ring-bg {
+  stroke: #E0D6C8;
+}
+
+[data-theme="light"] .dna-divider {
+  border-color: var(--border);
+}
+
+[data-theme="light"] .dna-section-label {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+[data-theme="light"] .skill-chip {
+  background: var(--muted-sage);
+  border: 1px solid var(--border);
+  color: var(--cocoa);
+  font-weight: 600;
+}
+
+[data-theme="light"] .skill-chip.top {
+  background: var(--muted-sage);
+  border-color: var(--border);
+  color: var(--cocoa);
+  font-weight: 600;
+}
+
+[data-theme="light"] .skill-chip.secondary {
+  background: #FAF7F0;
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .skill-chip.missing {
+  background: rgba(217, 154, 140, 0.22);
+  border-color: rgba(217, 154, 140, 0.45);
+  color: var(--cocoa);
+  font-weight: 600;
+}
+
+[data-theme="light"] .skill-chip:hover {
+  border-color: var(--border-focus);
+  color: var(--cocoa);
+}
+
+[data-theme="light"] .dna-stat-label {
+  color: var(--secondary-text);
+}
+
+[data-theme="light"] .dna-stat-value {
+  color: var(--primary-text);
+  font-weight: 700;
+}
+
+[data-theme="light"] .dna-stat-value.gradient {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: var(--cocoa) !important;
+  color: var(--cocoa) !important;
+  font-weight: 700;
+}
+
+[data-theme="light"] .dna-career-goal {
+  color: var(--secondary-text);
+}
+
+[data-theme="light"] .profile-link-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .profile-link-chip:hover {
+  background: var(--bg-card-hover);
+  color: var(--cocoa);
+  border-color: var(--pistachio);
+}
+
+[data-theme="light"] .profile-card,
+[data-theme="light"] .profile-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(74, 47, 40, 0.04);
+}
+
+[data-theme="light"] .profile-card-header,
+[data-theme="light"] .profile-form-header {
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .profile-card-header h2,
+[data-theme="light"] .profile-form-header h2 {
+  color: var(--cocoa);
+}
+
+[data-theme="light"] .profile-card-footer {
+  border-top: 1px solid var(--border);
+  background: #FAF7F0;
+}
+
+[data-theme="light"] .dna-stat-box,
+[data-theme="light"] .snapshot-stat {
+  background: #FFFDF8;
+  border: 1px solid var(--border);
+}
+
+[data-theme="light"] .snapshot-stat-value {
+  color: var(--primary-text);
+  font-weight: 800;
+}
+
+[data-theme="light"] .snapshot-stat-label {
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+[data-theme="light"] .form-section-title {
+  color: var(--cocoa);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .profile-source-legend {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .legend-badge.manual {
+  background: rgba(46, 133, 75, 0.12);
+  border: 1px solid rgba(46, 133, 75, 0.25);
+  color: var(--success);
+}
+
+[data-theme="light"] .legend-badge.ai {
+  background: var(--muted-sage);
+  border: 1px solid var(--border);
+  color: var(--cocoa);
+}
+
+/* ─── Dark Mode Fallbacks for new profile elements ──────── */
+.dna-career-goal {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.profile-source-legend {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.legend-badge {
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.legend-badge.manual {
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.2);
+  color: #86efac;
+}
+
+.legend-badge.ai {
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.2);
+  color: #a5b4fc;
+}
+
+

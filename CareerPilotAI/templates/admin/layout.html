@@ -18,6 +18,14 @@
     
     <!-- Admin Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    
+    <!-- Immediate Theme Init (Zero-FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('careerpilot_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     {% block extra_css %}{% endblock %}
 </head>
 <body class="admin-body">
@@ -112,6 +120,10 @@
                 </div>
 
                 <div class="admin-navbar-right">
+                    <button class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme" style="margin-right: 0.25rem;">
+                        <i data-lucide="sun" style="width:16px;height:16px;"></i>
+                    </button>
+
                     <div class="admin-status-pill">
                         <span class="admin-status-dot"></span>
                         <span>Live DB Connected</span>
@@ -179,9 +191,33 @@
             });
         }, 5000);
 
-        // Initialize Lucide icons
+        // Initialize Lucide icons & Admin Theme
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) lucide.createIcons();
+            
+            const updateButtons = (theme) => {
+                document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+                    btn.innerHTML = theme === 'light'
+                        ? '<i data-lucide="moon" style="width:16px;height:16px;"></i>'
+                        : '<i data-lucide="sun" style="width:16px;height:16px;"></i>';
+                });
+                if (window.lucide && window.lucide.createIcons) lucide.createIcons();
+            };
+
+            const current = document.documentElement.getAttribute('data-theme') || localStorage.getItem('careerpilot_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', current);
+            updateButtons(current);
+
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.theme-toggle-btn');
+                if (!btn) return;
+                e.preventDefault();
+                const active = document.documentElement.getAttribute('data-theme') || 'dark';
+                const next = active === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('careerpilot_theme', next);
+                updateButtons(next);
+            });
         });
     </script>
     {% block extra_js %}{% endblock %}

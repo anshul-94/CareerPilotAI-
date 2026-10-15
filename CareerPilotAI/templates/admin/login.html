@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Immediate Theme Init (Zero-FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('careerpilot_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
     <style>
         /* ─── 3D Admin Console Environment ───────────────────────── */
@@ -22,6 +30,80 @@
             --adm-card-glass: rgba(19, 28, 38, 0.78);
             --adm-border-glass: rgba(79, 141, 177, 0.28);
         }
+
+        /* ── Light Theme Overrides ── */
+        html[data-theme="light"],
+        :root[data-theme="light"] {
+            --adm-cyan: #3D7F9E;
+            --adm-blue: #2E6F95;
+            --adm-glow: rgba(46, 111, 149, 0.16);
+            --adm-dark-1: #F5F0E8;
+            --adm-dark-2: #EBE5DB;
+            --adm-card-glass: #FFFDF8;
+            --adm-border-glass: #E5DDD2;
+        }
+
+        [data-theme="light"] body.admin-body {
+            background-color: var(--adm-dark-1);
+            color: #292722;
+        }
+
+        [data-theme="light"] .admin-3d-scene {
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 165, 141, 0.22), transparent 70%),
+                radial-gradient(circle 600px at 85% 75%, rgba(217, 154, 140, 0.15), transparent 70%),
+                radial-gradient(circle 500px at 15% 85%, rgba(165, 165, 141, 0.15), transparent 70%),
+                linear-gradient(180deg, #FAF7F0 0%, #F5F0E8 100%);
+        }
+
+        [data-theme="light"] .perspective-grid {
+            background-image: 
+                linear-gradient(rgba(74, 47, 40, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74, 47, 40, 0.06) 1px, transparent 1px);
+        }
+
+        [data-theme="light"] .admin-3d-card {
+            background: #FFFDF8;
+            border: 1px solid #E5DDD2;
+            box-shadow: 0 25px 50px -12px rgba(74, 47, 40, 0.12), 0 0 35px -10px rgba(46, 111, 149, 0.15);
+        }
+
+        [data-theme="light"] .admin-brand-title {
+            color: #292722;
+        }
+
+        [data-theme="light"] .admin-brand-subtitle {
+            color: #716B62;
+        }
+
+        [data-theme="light"] .adm-input-field {
+            background: #FFFFFF;
+            border: 1px solid #E5DDD2;
+            color: #292722;
+        }
+
+        [data-theme="light"] .adm-input-field:focus {
+            background: #FFFFFF;
+            border-color: #2E6F95;
+            box-shadow: 0 0 0 3px rgba(46, 111, 149, 0.15);
+        }
+
+        [data-theme="light"] .security-badge-footer {
+            border-top: 1px solid #E5DDD2;
+        }
+
+        [data-theme="light"] .sec-env-label {
+            color: #716B62;
+        }
+
+        [data-theme="light"] .return-link {
+            color: #4A2F28;
+        }
+
+        [data-theme="light"] .return-link:hover {
+            color: #2E6F95;
+        }
+
 
         body.admin-body {
             margin: 0;
@@ -515,6 +597,11 @@
 
     <!-- Login Container -->
     <div class="admin-login-wrapper">
+        <div style="position: absolute; top: 1.5rem; right: 1.5rem; z-index: 20;">
+            <button class="theme-toggle-btn" id="loginThemeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme" style="background:var(--adm-card-glass);border:1px solid var(--adm-border-glass);color:inherit;border-radius:10px;width:40px;height:40px;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
 
         <!-- Flash Alerts -->
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -660,6 +747,26 @@
             document.addEventListener('mouseleave', function() {
                 card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0px)';
             });
+
+            // Theme toggle support on login page
+            const toggleBtn = document.getElementById('loginThemeToggle');
+            if (toggleBtn) {
+                const updateIcon = (theme) => {
+                    toggleBtn.innerHTML = theme === 'light'
+                        ? '<i class="fa-solid fa-moon"></i>'
+                        : '<i class="fa-solid fa-sun"></i>';
+                };
+                updateIcon(document.documentElement.getAttribute('data-theme') || 'dark');
+
+                toggleBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+                    const next = current === 'light' ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', next);
+                    localStorage.setItem('careerpilot_theme', next);
+                    updateIcon(next);
+                });
+            }
         })();
     </script>
 </body>

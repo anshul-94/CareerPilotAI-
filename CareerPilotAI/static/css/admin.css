@@ -44,6 +44,31 @@
     --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ── Light Theme Token System ────────────────────────────────── */
+html[data-theme="light"],
+:root[data-theme="light"] {
+    --bg-primary: #F5F0E8;
+    --bg-secondary: #EAE6DA;
+    --bg-tertiary: #DDE0D0;
+    --bg-card: #FFFDF8;
+    --bg-card-hover: #F8F4EC;
+    --bg-input: #FFFFFF;
+    --text-primary: #292722;
+    --text-secondary: #625B52;
+    --text-tertiary: #625B52;
+    --text-muted: #716B62;
+    --border: #E0D6C8;
+    --border-light: rgba(74, 47, 40, 0.08);
+    --border-focus: #8C765B;
+    --cocoa: #4A2F28;
+    --pistachio: #A5A58D;
+    --peach-blush: #D99A8C;
+    --shadow-sm: 0 1px 4px rgba(74, 47, 40, 0.06);
+    --shadow-md: 0 4px 16px rgba(74, 47, 40, 0.08);
+    --shadow-lg: 0 12px 32px rgba(74, 47, 40, 0.12);
+}
+
+
 /* ── Reset & Global ─────────────────────────────────────────── */
 *, *::before, *::after {
     margin: 0;
@@ -991,3 +1016,109 @@ body.sidebar-collapsed .admin-main-wrapper {
         align-items: flex-start;
     }
 }
+
+/* ==========================================================
+   LIGHT THEME ADMIN COMPONENT OVERRIDES
+   ========================================================== */
+[data-theme="light"] .admin-sidebar {
+    background: #FAF6EE;
+    border-right: 1px solid var(--border);
+}
+
+[data-theme="light"] .admin-navbar {
+    background: rgba(255, 253, 248, 0.92);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 14px rgba(74, 47, 40, 0.04);
+}
+
+[data-theme="light"] .admin-search-wrapper {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .admin-search-input {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .admin-search-kbd {
+    background: #DDE0D0;
+    color: #4A2F28;
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .admin-status-pill,
+[data-theme="light"] .admin-user-pill {
+    background: #DDE0D0;
+    border: 1px solid var(--border);
+    color: #4A2F28;
+}
+
+[data-theme="light"] .admin-nav-item {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .admin-nav-item:hover {
+    background: #EFE9DF;
+    color: #4A2F28;
+}
+
+[data-theme="light"] .admin-nav-item.active {
+    background: rgba(165, 165, 141, 0.25);
+    color: var(--primary);
+    border-left: 3px solid var(--primary);
+}
+
+[data-theme="light"] .adm-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .adm-table th {
+    background: #DDE0D0;
+    color: #4A2F28;
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .adm-table td {
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .adm-table tr:hover td {
+    background: #FAF7F0;
+}
+
+[data-theme="light"] .adm-form-control {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .adm-form-control:focus {
+    background: #FFFFFF;
+    border-color: var(--primary);
+}
+
+[data-theme="light"] .admin-login-wrapper {
+    background: radial-gradient(circle at top right, rgba(165, 165, 141, 0.2), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(217, 154, 140, 0.15), transparent 50%),
+                var(--bg-primary);
+}
+
+[data-theme="light"] .admin-login-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+}
+
+[data-theme="light"] .adm-stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .adm-chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+

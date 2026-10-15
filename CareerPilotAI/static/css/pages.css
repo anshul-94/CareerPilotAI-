@@ -834,3 +834,393 @@
         border-radius: var(--radius-lg);
     }
 }
+
+/* ==========================================================
+   LIGHT THEME PAGE-SPECIFIC OVERRIDES
+   ========================================================== */
+[data-theme="light"] .auth-wrapper {
+    background: var(--bg-primary);
+}
+
+[data-theme="light"] .auth-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px -15px rgba(74, 47, 40, 0.12);
+}
+
+[data-theme="light"] .auth-form-side {
+    background: var(--bg-card);
+}
+
+[data-theme="light"] .auth-brand-side {
+    background: linear-gradient(145deg, var(--muted-sage) 0%, var(--bg-secondary) 100%);
+    border-left: 1px solid var(--border);
+}
+
+[data-theme="light"] .brand-side-footer {
+    border-top: 1px solid var(--border);
+}
+
+[data-theme="light"] .btn-brand-outline {
+    background: var(--soft-ivory);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .btn-brand-outline:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[data-theme="light"] .job-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .job-card:hover {
+    border-color: var(--pistachio);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .job-card .job-title {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .job-card .job-company {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .job-card .job-meta span {
+    color: var(--text-tertiary);
+}
+
+[data-theme="light"] .upload-box,
+[data-theme="light"] .resume-upload-zone {
+    background: #FAF7F0;
+    border: 2px dashed var(--border);
+}
+
+[data-theme="light"] .upload-box:hover,
+[data-theme="light"] .resume-upload-zone:hover {
+    border-color: var(--primary);
+    background: #FFFDF8;
+}
+
+[data-theme="light"] .builder-preview {
+    background: #FFFFFF;
+    color: #292722;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .builder-preview * {
+    color: #292722;
+}
+
+[data-theme="light"] .builder-preview a {
+    color: var(--primary);
+}
+
+[data-theme="light"] .roadmap-step,
+[data-theme="light"] .roadmap-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+[data-theme="light"] .interview-card,
+[data-theme="light"] .question-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+/* ─── AI Job Finder Component Styles (Dark Default) ────── */
+.job-prefill-highlight {
+    color: #a5b4fc;
+    font-weight: 700;
+}
+
+.career-dna-badge {
+    background: rgba(34,197,94,0.12);
+    border: 1px solid rgba(34,197,94,0.25);
+    color: #86efac;
+    border-radius: 10px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ai-ranking-banner {
+    background: linear-gradient(135deg,rgba(99,102,241,0.1),rgba(139,92,246,0.07));
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ai-ranking-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ai-ranking-banner-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(99,102,241,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a5b4fc;
+    flex-shrink: 0;
+}
+
+.ai-ranking-banner-title {
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+}
+
+.ai-ranking-banner-count {
+    color: #a5b4fc;
+    font-weight: 800;
+}
+
+.ai-ranking-banner-subtitle {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.ai-ranking-banner-time {
+    color: #fbbf24;
+    font-weight: 600;
+}
+
+.profile-search-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.profile-search-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: rgba(99,102,241,0.15);
+    border: 1px solid rgba(99,102,241,0.25);
+    color: #a5b4fc;
+    padding: 0.15rem 0.5rem;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+}
+
+.badge-auto-tag {
+    font-size: 0.65rem;
+    color: #a5b4fc;
+    margin-left: 0.3rem;
+    font-weight: 700;
+}
+
+.override-search-card {
+    background: rgba(245,158,11,0.04);
+    border: 1px solid rgba(245,158,11,0.2);
+}
+
+.override-icon {
+    color: #fde68a;
+}
+
+.override-header-title {
+    font-weight: 700;
+    color: #fde68a;
+    font-size: 0.9rem;
+}
+
+.override-header-sub {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.override-chevron {
+    color: #94a3b8;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.override-panel-inner {
+    border-top: 1px solid rgba(245,158,11,0.15);
+}
+
+.override-alert-box {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    color: #fde68a;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.override-quick-lbl {
+    font-size: 0.72rem;
+    color: #64748b;
+    margin-right: 0.25rem;
+}
+
+.override-quick-btn {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(245,158,11,0.25);
+    background: rgba(245,158,11,0.08);
+    color: #fde68a;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.search-context-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+    background: rgba(99,102,241,0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99,102,241,0.25);
+}
+
+.search-context-badge.override {
+    background: rgba(245,158,11,0.15);
+    color: #fde68a;
+    border-color: rgba(245,158,11,0.3);
+}
+
+/* ─── AI Job Finder Light Theme Overrides ──────────────── */
+[data-theme="light"] .job-prefill-highlight {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .career-dna-badge {
+    background: rgba(46,133,75,0.12);
+    border: 1px solid rgba(46,133,75,0.25);
+    color: var(--success);
+}
+
+[data-theme="light"] .ai-ranking-banner {
+    background: linear-gradient(135deg, #FFFDF8 0%, #FAF7F0 60%, #EAE6DA 100%);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(74, 47, 40, 0.04);
+}
+
+[data-theme="light"] .ai-ranking-banner-icon {
+    background: rgba(165,165,141,0.25);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .ai-ranking-banner-title {
+    color: var(--primary-text);
+}
+
+[data-theme="light"] .ai-ranking-banner-count {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .ai-ranking-banner-subtitle {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .ai-ranking-banner-time {
+    color: var(--warning);
+}
+
+[data-theme="light"] .profile-search-title {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .profile-search-badge {
+    background: var(--muted-sage);
+    border: 1px solid var(--border);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .badge-auto-tag {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .override-search-card {
+    background: #FFFDF8;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(74, 47, 40, 0.03);
+}
+
+[data-theme="light"] .override-icon {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .override-header-title {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .override-header-sub {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .override-chevron {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .override-panel-inner {
+    border-top: 1px solid var(--border);
+}
+
+[data-theme="light"] .override-alert-box {
+    background: #FAF7F0;
+    border: 1px solid var(--border);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .override-quick-lbl {
+    color: var(--secondary-text);
+}
+
+[data-theme="light"] .override-quick-btn {
+    background: var(--muted-sage);
+    border: 1px solid var(--border);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .override-quick-btn:hover {
+    border-color: var(--pistachio);
+    background: var(--bg-card-hover);
+}
+
+[data-theme="light"] .search-context-badge {
+    background: var(--muted-sage);
+    border: 1px solid var(--border);
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .search-context-badge.override {
+    background: rgba(194, 125, 14, 0.12);
+    border: 1px solid rgba(194, 125, 14, 0.3);
+    color: var(--warning);
+}
+

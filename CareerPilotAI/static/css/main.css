@@ -55,6 +55,18 @@
     --border-active: var(--primary);
 
     /* ==========================================================
+       SVG RING DEFAULTS (Dark Mode)
+    ========================================================== */
+    --ring-ats-start: #6366f1;
+    --ring-ats-end: #8b5cf6;
+    --ring-ai-start: #8b5cf6;
+    --ring-ai-end: #ec4899;
+    --ring-complete-start: #22c55e;
+    --ring-complete-end: #16a34a;
+
+    --border-focus: #4F8DB1;
+
+    /* ==========================================================
        STATUS
     ========================================================== */
 
@@ -226,6 +238,110 @@
     --scrollbar-hover: #2E6F95;
 
 }
+
+/* ==========================================================
+   LIGHT THEME DESIGN SYSTEM (Bold & Stylish SaaS Direction)
+   Scoped to html[data-theme="light"] and :root[data-theme="light"]
+   Dark theme variables on :root remain 100% intact and untouched
+   ========================================================== */
+html[data-theme="light"],
+:root[data-theme="light"] {
+
+    /* ── Reference Palette Tokens (Strict Intended Palette) ── */
+    --pistachio: #A5A58D;       /* Pistachio accent */
+    --cocoa: #4A2F28;           /* Cocoa accent & headings */
+    --peach-blush: #D99A8C;     /* Peach blush accent */
+    --warm-cream: #F5F0E8;      /* Main page background */
+    --soft-ivory: #FFFDF8;      /* Primary card background */
+    --muted-sage: #DDE0D0;      /* Soft sage surface */
+    --warm-border: #E0D6C8;     /* Borders */
+    --primary-text: #292722;    /* Primary text */
+    --secondary-text: #625B52;  /* Secondary text */
+    --muted-text: #716B62;      /* Muted text */
+
+    /* ── Brand Colors (Preserving Button & Primary Identity) ─ */
+    --primary: #2E6F95;
+    --primary-light: #3D7F9E;
+    --primary-dark: #1E5678;
+    --primary-glow: rgba(46, 111, 149, 0.16);
+
+    --accent: #D9A441;
+    --accent-light: #E8C66D;
+    --accent-dark: #B98524;
+    --accent-glow: rgba(217, 164, 65, 0.16);
+
+    /* ── Surfaces / Backgrounds ────────────────────────────── */
+    --bg-primary: #F5F0E8;      /* Main page background */
+    --bg-secondary: #EAE6DA;    /* Secondary surface */
+    --bg-tertiary: #DDE0D0;     /* Soft sage surface */
+
+    --bg-card: #FFFDF8;         /* Primary card background */
+    --bg-card-hover: #F8F4EC;
+
+    --bg-input: #FFFFFF;
+
+    --bg-glass: rgba(255, 253, 248, 0.95);
+    --glass-bg: rgba(255, 253, 248, 0.95);
+    --glass-border: #E0D6C8;
+    --glass-blur: blur(20px);
+
+    /* ── Typography (High Contrast Charcoal, Cocoa & Brown-Gray) ─ */
+    --text-primary: #292722;    /* Primary text */
+    --text-secondary: #625B52;  /* Secondary text */
+    --text-tertiary: #625B52;   /* Secondary text */
+    --text-muted: #716B62;      /* Muted text */
+
+    /* ── Borders & Dividers ────────────────────────────────── */
+    --border: #E0D6C8;          /* Borders */
+    --border-light: rgba(74, 47, 40, 0.08);
+    --border-focus: #8C765B;    /* Focus border */
+    --border-active: #8C765B;
+
+    /* ── SVG Ring Gradients (Career DNA Light Mode) ────────── */
+    --ring-ats-start: #4A2F28;
+    --ring-ats-end: #A5A58D;
+    --ring-ai-start: #2E6F95;
+    --ring-ai-end: #D99A8C;
+    --ring-complete-start: #2E854B;
+    --ring-complete-end: #A5A58D;
+
+    /* ── Status Colors (Calibrated for High Contrast on Warm Light) ─ */
+    --success: #2E854B;
+    --warning: #C27D0E;
+    --danger: #D13B3B;
+    --info: #2E6F95;
+
+    /* ── Shadows (Warm Cocoa Ambient Tint) ─────────────────── */
+    --shadow-sm: 0 2px 6px rgba(74, 47, 40, 0.05);
+    --shadow-md: 0 8px 24px rgba(74, 47, 40, 0.08);
+    --shadow-lg: 0 18px 45px rgba(74, 47, 40, 0.12);
+    --shadow-glow: 0 0 35px rgba(46, 111, 149, 0.12);
+    --shadow-card: 0 2px 8px rgba(74, 47, 40, 0.04), 0 1px 2px rgba(74, 47, 40, 0.02);
+
+    /* ── Sidebar Gradient ──────────────────────────────────── */
+    --gradient-sidebar: linear-gradient(180deg, #FAF6EE 0%, #F5F0E8 100%);
+
+    /* ── Buttons (Preserving Identity as explicitly requested) ─── */
+    --btn-primary-bg: var(--gradient-primary);
+    --btn-primary-hover: linear-gradient(135deg, #3C7CA3, #5C99BD);
+    --btn-primary-text: #FFFFFF;
+
+    --btn-secondary-bg: var(--gradient-accent);
+    --btn-secondary-text: #292722;
+
+    /* ── Hero Overlay & Gradients ──────────────────────────── */
+    --hero-overlay: linear-gradient(135deg, rgba(245, 240, 232, 0.94), rgba(235, 229, 219, 0.92));
+    --gradient-card: linear-gradient(180deg, #FFFDF8 0%, #FAF7F0 100%);
+    --gradient-bg: radial-gradient(circle at top right, rgba(165, 165, 141, 0.14), transparent 45%),
+                    radial-gradient(circle at bottom left, rgba(217, 154, 140, 0.10), transparent 40%);
+
+    /* ── Scrollbars ────────────────────────────────────────── */
+    --scrollbar-bg: #EBE5DB;
+    --scrollbar-thumb: #D5CCC0;
+    --scrollbar-hover: #A5A58D;
+
+}
+
 /* ── Reset & Base ────────────────────────────── */
 *, *::before, *::after {
     margin: 0;
@@ -831,3 +947,152 @@ p {
     
     h1 { font-size: 1.3rem; }
 }
+
+/* ==========================================================
+   LIGHT THEME COMPONENT OVERRIDES & UTILITIES
+   ========================================================== */
+[data-theme="light"] .navbar {
+    background: rgba(255, 253, 248, 0.90);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 14px rgba(74, 47, 40, 0.05);
+}
+
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 253, 248, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .mobile-backdrop {
+    background: rgba(41, 39, 34, 0.45);
+}
+
+[data-theme="light"] .sidebar {
+    background: #FAF6EE;
+    border-right: 1px solid var(--border);
+}
+
+[data-theme="light"] .sidebar-nav .nav-link {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .sidebar-nav .nav-link:hover {
+    background: #EFE9DF;
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .sidebar-nav .nav-link.active {
+    background: rgba(165, 165, 141, 0.22);
+    color: var(--primary);
+    border-left-color: var(--primary);
+}
+
+[data-theme="light"] .sidebar-nav .nav-label {
+    color: var(--text-tertiary);
+}
+
+[data-theme="light"] .footer {
+    background: #EBE5DB;
+    border-top: 1px solid var(--border);
+}
+
+[data-theme="light"] .footer-brand {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .footer h4 {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .footer-bottom {
+    border-top: 1px solid var(--border);
+    color: var(--text-tertiary);
+}
+
+[data-theme="light"] .navbar-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+/* ── Theme Toggle Button ────────────────────────────── */
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-card-hover);
+    border-color: var(--border-active);
+    transform: translateY(-1px);
+}
+
+.theme-toggle-btn svg,
+.theme-toggle-btn [data-lucide] {
+    width: 18px;
+    height: 18px;
+}
+
+/* ==========================================================
+   GLOBAL LIGHT THEME CONTRAST & TYPOGRAPHY ENFORCEMENT
+   ========================================================== */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .page-title,
+[data-theme="light"] .section-title {
+    color: var(--cocoa);
+}
+
+[data-theme="light"] .page-subtitle {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] strong,
+[data-theme="light"] b {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .text-muted,
+[data-theme="light"] .form-hint,
+[data-theme="light"] .helper-text {
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .form-label {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select,
+[data-theme="light"] .form-textarea {
+    background: #FFFFFF;
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus,
+[data-theme="light"] .form-textarea:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(140, 118, 91, 0.15);
+}
+
