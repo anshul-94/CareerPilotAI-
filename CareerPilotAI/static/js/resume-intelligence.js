@@ -20,7 +20,7 @@ async function generateResume(isDaily = false) {
     if (overlay) overlay.style.display = 'flex';
     if (btn) {
         btn.disabled = true;
-        btn.innerHTML = '⏳ Generating...';
+        btn.innerHTML = '<span class="spinner spinner-sm"></span> Generating...';
     }
     
     try {
@@ -48,7 +48,8 @@ async function generateResume(isDaily = false) {
         if (overlay) overlay.style.display = 'none';
         if (btn) {
             btn.disabled = false;
-            btn.innerHTML = '✨ Generate AI Resume';
+            btn.innerHTML = '<i data-lucide="refresh-cw" style="width:14px;height:14px;margin-right:6px;vertical-align:-2px;"></i>Refresh AI Resume';
+            if (window.lucide) lucide.createIcons();
         }
     }
 }
@@ -65,7 +66,7 @@ async function loadVersions() {
             container.innerHTML = data.versions.map((v, idx) => `
                 <div class="version-item ${idx === 0 ? 'active' : ''}" style="cursor:pointer;" onclick='renderResume(${JSON.stringify(v).replace(/'/g, "&#39;")})'>
                     <div class="version-title">v${data.versions.length - idx}: ${esc(v.role_target)}</div>
-                    <div class="version-meta">${v.version_type === 'daily_optimization' ? '🤖 Daily Optimized' : '⚡ AI Generated'}</div>
+                    <div class="version-meta">${v.version_type === 'daily_optimization' ? 'Daily Optimized' : 'AI Generated'}</div>
                     <div class="version-meta" style="color:#a5b4fc;">ATS: ${(v.scores && v.scores.ats) || 0}%</div>
                 </div>
             `).join('');
@@ -96,10 +97,11 @@ function renderResume(versionData) {
         } else {
             suggContainer.innerHTML = suggestions.map(s => `
                 <div class="suggestion-item">
-                    <span style="font-size:1.1rem;">💡</span>
+                    <i data-lucide="lightbulb" style="width:14px;height:14px;color:var(--warning);flex-shrink:0;margin-top:2px;"></i>
                     <span>${esc(s)}</span>
                 </div>
             `).join('');
+            if (window.lucide) lucide.createIcons();
         }
     }
     

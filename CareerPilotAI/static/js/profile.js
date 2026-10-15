@@ -20,13 +20,13 @@ async function resyncResume() {
         const data = await resp.json();
 
         if (data.success) {
-            showToast('✅ Profile synced from resume! Refreshing...', 'success');
+            showToast('Profile synced from resume! Refreshing...', 'success');
             setTimeout(() => window.location.reload(), 1500);
         } else {
-            showToast('❌ ' + (data.error || 'Sync failed. Upload a resume first.'), 'error');
+            showToast(data.error || 'Sync failed. Upload a resume first.', 'error');
         }
     } catch (err) {
-        showToast('❌ Network error. Please try again.', 'error');
+        showToast('Network error. Please try again.', 'error');
     } finally {
         btn.classList.remove('spinning');
         btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg> Re-sync from Resume`;

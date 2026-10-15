@@ -164,20 +164,26 @@ Background Jobs : Active
 
 
 # ── Utilities ────────────────────────────────────────────────────
-def get_available_port(start_port: int, max_port: int = 65535) -> int:
+def is_port_in_use(port: int) -> bool:
+    """Checks whether a port is already actively listening / occupied."""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.settimeout(0.3)
+        return s.connect_ex(('127.0.0.1', port)) == 0
+
+def get_available_port(start_port: int = 5001, max_port: int = 65535) -> int:
     """
     Finds the next available open port starting from `start_port`.
-    Cross-platform solution using the standard `socket` library to detect free ports.
+    Skips ports that are in active use (e.g. macOS AirPlay Receiver on port 5000).
     """
     for port in range(start_port, max_port + 1):
+        if is_port_in_use(port):
+            continue
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            # SO_REUSEADDR prevents "Address already in use" for sockets in TIME_WAIT
-            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             try:
                 sock.bind(('0.0.0.0', port))
                 return port
             except OSError:
-                continue # Port is in use, try the next one
+                continue
     raise RuntimeError(f"No available ports found between {start_port} and {max_port}.")
 
 
@@ -186,8 +192,12 @@ def get_available_port(start_port: int, max_port: int = 65535) -> int:
 app = create_app()
 
 if __name__ == '__main__':
-    # 1. Use environment variable PORT if exists, otherwise fallback to FLASK_PORT or 5000
+    # 1. Use environment variable PORT if exists, otherwise fallback to FLASK_PORT or 5001
     preferred_port = Config.PORT
+    if preferred_port == 5000 and is_port_in_use(5000):
+        # macOS AirPlay Receiver occupies 5000 by default and returns 403 Forbidden
+        preferred_port = 5001
+        
     debug = Config.DEBUG
     
     # 2. Handle Werkzeug reloader (child process) correctly
@@ -196,12 +206,10 @@ if __name__ == '__main__':
     if not is_reloader:
         # Parent process: Find next free port automatically without crashing
         port = get_available_port(preferred_port)
-        
-        # Save the found port so the child process uses the same one
         os.environ['PORT'] = str(port)
+        print(f"\n* Running on http://127.0.0.1:{port} (http://localhost:{port})\n", flush=True)
     else:
         # Child process: Use the port provided by the parent
         port = int(os.environ.get('PORT', preferred_port))
-
 
     app.run(host='0.0.0.0', port=port, debug=debug)

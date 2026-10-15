@@ -146,6 +146,13 @@
     flex-shrink: 0;
 }
 
+.dash-stat .stat-icon svg,
+.dash-stat .stat-icon [data-lucide] {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.85px;
+}
+
 .dash-stat.primary .stat-icon { background: var(--primary-glow); color: var(--primary-light); }
 .dash-stat.accent .stat-icon { background: var(--accent-glow); color: var(--accent); }
 .dash-stat.warning .stat-icon { background: rgba(255, 179, 71, 0.15); color: var(--warning); }
@@ -247,6 +254,13 @@
     flex-shrink: 0;
 }
 
+.activity-icon svg,
+.activity-icon [data-lucide] {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.85px;
+}
+
 .activity-content {
     flex: 1;
 }
@@ -309,6 +323,13 @@
     background: var(--bg-card);
     border-radius: var(--radius-md);
     transition: all var(--transition-fast);
+}
+
+.quick-action .action-icon svg,
+.quick-action .action-icon [data-lucide] {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.85px;
 }
 
 .quick-action:hover .action-icon {

@@ -9,11 +9,11 @@
         <p class="admin-subtitle">Platform overview and activity summary.</p>
     </div>
     <div style="display: flex; gap: 0.65rem;">
-        <a href="{{ url_for('admin.users') }}" class="adm-btn adm-btn-secondary">
-            👥 Users
+        <a href="{{ url_for('admin.users') }}" class="adm-btn adm-btn-secondary" style="display:inline-flex;align-items:center;gap:6px;">
+            <i data-lucide="users" style="width:15px;height:15px;"></i> Users
         </a>
-        <a href="{{ url_for('admin.submissions') }}" class="adm-btn adm-btn-primary">
-            📝 Submissions
+        <a href="{{ url_for('admin.submissions') }}" class="adm-btn adm-btn-primary" style="display:inline-flex;align-items:center;gap:6px;">
+            <i data-lucide="file-text" style="width:15px;height:15px;"></i> Submissions
         </a>
     </div>
 </div>
@@ -29,7 +29,7 @@
                 +{{ stats.new_users }} joined this month
             </div>
         </div>
-        <div class="adm-metric-icon primary">👥</div>
+        <div class="adm-metric-icon primary"><i data-lucide="users"></i></div>
     </div>
 
     <!-- Active Users -->
@@ -41,7 +41,7 @@
                 Account status enabled
             </div>
         </div>
-        <div class="adm-metric-icon success">⚡</div>
+        <div class="adm-metric-icon success"><i data-lucide="activity"></i></div>
     </div>
 
     <!-- New Users -->
@@ -53,7 +53,7 @@
                 Last 30-day registrations
             </div>
         </div>
-        <div class="adm-metric-icon info">✨</div>
+        <div class="adm-metric-icon info"><i data-lucide="user-plus"></i></div>
     </div>
 
     <!-- Active Sessions -->
@@ -65,7 +65,7 @@
                 Recent platform activity
             </div>
         </div>
-        <div class="adm-metric-icon accent">🌐</div>
+        <div class="adm-metric-icon accent"><i data-lucide="globe"></i></div>
     </div>
 </div>
 
@@ -80,7 +80,7 @@
                 All code evaluations
             </div>
         </div>
-        <div class="adm-metric-icon primary">📝</div>
+        <div class="adm-metric-icon primary"><i data-lucide="file-text"></i></div>
     </div>
 
     <!-- Problems Solved -->
@@ -92,7 +92,7 @@
                 Distinct problems completed
             </div>
         </div>
-        <div class="adm-metric-icon success">🎯</div>
+        <div class="adm-metric-icon success"><i data-lucide="check-circle-2"></i></div>
     </div>
 
     <!-- Acceptance Rate -->
@@ -104,7 +104,7 @@
                 Submission success ratio
             </div>
         </div>
-        <div class="adm-metric-icon info">📊</div>
+        <div class="adm-metric-icon info"><i data-lucide="bar-chart-2"></i></div>
     </div>
 
     <!-- Total AI Requests -->
@@ -116,7 +116,7 @@
                 Chat, agents, code review
             </div>
         </div>
-        <div class="adm-metric-icon accent">🤖</div>
+        <div class="adm-metric-icon accent"><i data-lucide="sparkles"></i></div>
     </div>
 </div>
 
@@ -125,8 +125,8 @@
     <!-- Submissions & User Growth Trend -->
     <div class="adm-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
-                📈 Submissions Activity Over Time
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); display:flex; align-items:center; gap:6px;">
+                <i data-lucide="trending-up" style="width:16px;height:16px;"></i> Submissions Activity Over Time
             </h3>
             <span style="font-size: 0.75rem; color: var(--text-tertiary);">Real database records</span>
         </div>
@@ -138,8 +138,8 @@
     <!-- AI Feature Distribution -->
     <div class="adm-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
-                🤖 AI Usage by Feature
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); display:flex; align-items:center; gap:6px;">
+                <i data-lucide="sparkles" style="width:16px;height:16px;"></i> AI Usage by Feature
             </h3>
             <span style="font-size: 0.75rem; color: var(--text-tertiary);">Platform utilization</span>
         </div>
@@ -153,8 +153,8 @@
     <!-- Language Distribution -->
     <div class="adm-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
-                💻 Programming Language Breakdown
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); display:flex; align-items:center; gap:6px;">
+                <i data-lucide="code" style="width:16px;height:16px;"></i> Programming Language Breakdown
             </h3>
             <span style="font-size: 0.75rem; color: var(--text-tertiary);">From code submissions</span>
         </div>
@@ -166,8 +166,8 @@
     <!-- Problem Difficulty Distribution -->
     <div class="adm-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
-                🧩 Problem Difficulty Distribution
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); display:flex; align-items:center; gap:6px;">
+                <i data-lucide="layers" style="width:16px;height:16px;"></i> Problem Difficulty Distribution
             </h3>
             <span style="font-size: 0.75rem; color: var(--text-tertiary);">Available challenges</span>
         </div>

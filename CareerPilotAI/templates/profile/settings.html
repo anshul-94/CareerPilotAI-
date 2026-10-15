@@ -5,7 +5,7 @@
 
 <main class="main-content">
     <div class="page-header reveal">
-        <h1>⚙️ Account Settings</h1>
+        <h1>Account Settings</h1>
         <p class="page-subtitle">Configure your preferences and security settings.</p>
     </div>
 
@@ -77,7 +77,7 @@
         <!-- AI Integration Status -->
         <div class="card" style="align-self: start;">
             <div class="card-header">
-                <h3 class="card-title">🦙 Ollama Integration Status</h3>
+                <h3 class="card-title">Ollama Integration Status</h3>
             </div>
             
             <div style="margin-bottom: 1rem;">
@@ -110,7 +110,7 @@ document.getElementById('test-ai-btn').addEventListener('click', async function(
         
         if (data.success) {
             resultsDiv.innerHTML = `
-                <div style="color: #4ade80; margin-bottom: 0.5rem;"><strong>✅ Ollama is Running</strong></div>
+                <div style="color: #4ade80; margin-bottom: 0.5rem;"><strong>Ollama is Running</strong></div>
                 <div style="color: var(--text-secondary);">
                     <div><strong>Version:</strong> ${data.version}</div>
                     <div><strong>Model:</strong> ${data.model} (Found)</div>
@@ -118,9 +118,9 @@ document.getElementById('test-ai-btn').addEventListener('click', async function(
                 </div>
             `;
         } else {
-            let errorHtml = `<div style="color: #ef4444;"><strong>❌ Connection Failed</strong></div>`;
+            let errorHtml = `<div style="color: #ef4444;"><strong>Connection Failed</strong></div>`;
             if (data.running && !data.model_found) {
-                 errorHtml = `<div style="color: #f59e0b;"><strong>⚠️ Model Missing</strong></div>`;
+                 errorHtml = `<div style="color: #f59e0b;"><strong>Model Missing</strong></div>`;
             }
             resultsDiv.innerHTML = `
                 ${errorHtml}
@@ -129,7 +129,7 @@ document.getElementById('test-ai-btn').addEventListener('click', async function(
         }
     } catch (err) {
         resultsDiv.innerHTML = `
-            <div style="color: #ef4444;"><strong>❌ Network Error</strong></div>
+            <div style="color: #ef4444;"><strong>Network Error</strong></div>
             <div style="color: var(--text-secondary); margin-top: 0.25rem;">${err.message}</div>
         `;
     } finally {

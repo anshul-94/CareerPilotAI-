@@ -391,8 +391,7 @@ body.chat-app-mode .sidebar {
     background: var(--bg-card);
     border: 1px solid var(--border);
 }
-.chat-avatar.bg-primary { background: var(--primary); border: none; }
-.chat-avatar i { width: 20px; height: 20px; }
+.chat-avatar i, .chat-avatar svg { width: 20px; height: 20px; }
 
 .chat-content {
     display: flex;

@@ -8,7 +8,7 @@
     <!-- ─── Page Header ───────────────────────────────────── -->
     <div class="page-header reveal flex-between">
         <div>
-            <h1>💼 AI Job Finder</h1>
+            <h1>AI Job Finder</h1>
             <p class="page-subtitle">
                 {% if prefill and prefill.preferred_role %}
                 Searching for <strong style="color:#a5b4fc;">{{ prefill.preferred_role }}</strong> roles in <strong style="color:#a5b4fc;">{{ prefill.preferred_location or 'all locations' }}</strong> — from your Career DNA.
@@ -21,8 +21,8 @@
         <div>
             <span style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);
                          color:#86efac;border-radius:10px;padding:0.4rem 0.9rem;
-                         font-size:0.78rem;font-weight:700;">
-                ✅ Using Career DNA Profile
+                         font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:5px;">
+                <i data-lucide="check" style="width:13px;height:13px;"></i> Using Career DNA Profile
             </span>
         </div>
         {% endif %}
@@ -35,7 +35,7 @@
                 margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
                 flex-wrap:wrap;gap:1rem;" class="reveal delay-1">
         <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-            <span style="font-size:2rem; animation: pulse 2s infinite;">🤖</span>
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(99,102,241,0.2);display:flex;align-items:center;justify-content:center;color:#a5b4fc;"><i data-lucide="bot"></i></div>
             <div>
                 <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem; font-size: 1.1rem;">
                     AI autonomously ranked <span style="color:#a5b4fc;">{{ total_searched }} jobs</span> for you today.
@@ -46,8 +46,8 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn">
-            🔄 Refresh Jobs
+        <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn" style="display:inline-flex;align-items:center;gap:6px;">
+            <i data-lucide="refresh-cw" style="width:13px;height:13px;"></i> Refresh Jobs
         </button>
     </div>
     {% elif prefill and prefill.preferred_role %}
@@ -56,7 +56,7 @@
                 margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;
                 flex-wrap:wrap;gap:1rem;" class="reveal delay-1">
         <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-            <span style="font-size:1.3rem;">🤖</span>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(99,102,241,0.2);display:flex;align-items:center;justify-content:center;color:#a5b4fc;"><i data-lucide="bot"></i></div>
             <div>
                 <div style="font-weight:700;color:#e2e8f0;margin-bottom:0.2rem;">
                     AI is currently searching for: <span style="color:#a5b4fc;">{{ prefill.preferred_role }}</span>
@@ -66,8 +66,8 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn">
-            ⚡ Refresh Status
+        <button class="btn btn-primary btn-sm" onclick="autoSearchFromProfile()" id="autoSearchBtn" style="display:inline-flex;align-items:center;gap:6px;">
+            <i data-lucide="refresh-cw" style="width:13px;height:13px;"></i> Refresh Status
         </button>
     </div>
     {% endif %}
@@ -76,7 +76,7 @@
     <div class="card reveal delay-1" style="margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
             <h3 style="font-size:1rem;font-weight:700;color:#e2e8f0;margin:0;">
-                🔍 Profile-Based Search
+                Profile-Based Search
                 <span style="font-size:0.7rem;font-weight:600;background:rgba(99,102,241,0.15);
                              border:1px solid rgba(99,102,241,0.25);color:#a5b4fc;
                              padding:0.15rem 0.5rem;border-radius:5px;margin-left:0.5rem;">DEFAULT</span>
@@ -105,8 +105,8 @@
                        placeholder="e.g. Bengaluru, Remote">
             </div>
             <div>
-                <button type="submit" id="searchJobsBtn" class="btn btn-primary" style="height:44px;padding:0 2rem;">
-                    🔍 Search
+                <button type="submit" id="searchJobsBtn" class="btn btn-primary" style="height:44px;padding:0 2rem;display:inline-flex;align-items:center;gap:6px;">
+                    <i data-lucide="search" style="width:14px;height:14px;"></i> Search
                 </button>
             </div>
         </form>
@@ -118,7 +118,7 @@
         <div style="display:flex;align-items:center;justify-content:space-between;
                     cursor:pointer;" onclick="toggleOverride()" id="overrideToggle">
             <div style="display:flex;align-items:center;gap:0.75rem;">
-                <span style="font-size:1.1rem;">🔄</span>
+                <i data-lucide="sliders-horizontal" style="width:18px;height:18px;color:#fde68a;"></i>
                 <div>
                     <div style="font-weight:700;color:#fde68a;font-size:0.9rem;">Override Search</div>
                     <div style="font-size:0.75rem;color:#64748b;">
@@ -134,7 +134,7 @@
             <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);
                         border-radius:10px;padding:0.75rem 1rem;margin-bottom:1rem;
                         font-size:0.82rem;color:#fde68a;display:flex;gap:0.5rem;align-items:center;">
-                ⚠️ Override search is <strong>session-only</strong> and does NOT update your Career DNA profile.
+                <i data-lucide="alert-triangle" style="width:14px;height:14px;flex-shrink:0;"></i> Override search is <strong>session-only</strong> and does NOT update your Career DNA profile.
             </div>
 
             <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-end;">
@@ -149,8 +149,8 @@
                            placeholder="e.g. Remote, Delhi">
                 </div>
                 <div>
-                    <button onclick="runOverrideSearch()" class="btn btn-warning" style="height:44px;">
-                        🔍 Override Search
+                    <button onclick="runOverrideSearch()" class="btn btn-warning" style="height:44px;display:inline-flex;align-items:center;gap:6px;">
+                        <i data-lucide="search" style="width:14px;height:14px;"></i> Override Search
                     </button>
                 </div>
             </div>
@@ -193,12 +193,12 @@
                 {% endfor %}
             {% else %}
                 <div class="empty-state" style="grid-column:1/-1;">
-                    <div class="empty-icon">🔍</div>
+                    <div class="empty-icon"><i data-lucide="search"></i></div>
                     <h3>No jobs yet</h3>
                     <p>Click "Search My Jobs" above to start your AI-powered job search.</p>
                     {% if not prefill or not prefill.preferred_role %}
-                    <a href="{{ url_for('resume.upload') }}" class="btn btn-sm btn-primary" style="margin-top:0.75rem;">
-                        📄 Upload Resume to Auto-Search
+                    <a href="{{ url_for('resume.upload') }}" class="btn btn-sm btn-primary" style="margin-top:0.75rem;display:inline-flex;align-items:center;gap:6px;">
+                        <i data-lucide="upload" style="width:14px;height:14px;"></i> Upload Resume to Auto-Search
                     </a>
                     {% endif %}
                 </div>
@@ -220,9 +220,9 @@ const PROFILE_PREFILL = {
 // ─── Auto search from profile ─────────────────────────────
 async function autoSearchFromProfile() {
     const btn = document.getElementById('autoSearchBtn');
-    if (btn) { btn.textContent = '⏳ Searching...'; btn.disabled = true; }
+    if (btn) { btn.innerHTML = '<span class="spinner spinner-sm"></span> Searching...'; btn.disabled = true; }
     await runSearch(false);
-    if (btn) { btn.textContent = '⚡ Search My Jobs'; btn.disabled = false; }
+    if (btn) { btn.innerHTML = '<i data-lucide="search" style="width:13px;height:13px;margin-right:4px;"></i>Search My Jobs'; if (window.lucide) lucide.createIcons(); btn.disabled = false; }
 }
 
 // ─── Main search form submit ──────────────────────────────
@@ -233,7 +233,7 @@ document.getElementById('jobSearchForm')?.addEventListener('submit', async (e) =
 
 async function runSearch(isOverride, overrideRole, overrideLoc) {
     const btn = document.getElementById('searchJobsBtn');
-    if (btn && !isOverride) { btn.textContent = '⏳ Searching...'; btn.disabled = true; }
+    if (btn && !isOverride) { btn.innerHTML = '<span class="spinner spinner-sm"></span> Searching...'; btn.disabled = true; }
 
     const payload = isOverride ? {
         override: true,
@@ -265,7 +265,7 @@ async function runSearch(isOverride, overrideRole, overrideLoc) {
         console.error('Search error:', err);
         alert('Network error. Please try again.');
     } finally {
-        if (btn && !isOverride) { btn.textContent = '🔍 Search'; btn.disabled = false; }
+        if (btn && !isOverride) { btn.innerHTML = '<i data-lucide="search" style="width:14px;height:14px;margin-right:4px;"></i>Search'; if (window.lucide) lucide.createIcons(); btn.disabled = false; }
     }
 }
 
@@ -307,7 +307,7 @@ function renderJobResults(jobs, total, isOverride, ctx) {
     if (countEl) countEl.textContent = `${total || jobs.length} jobs found`;
 
     if (badge && isOverride) {
-        badge.textContent = `🔄 Override: ${ctx?.role || ''}`;
+        badge.textContent = `Override: ${ctx?.role || ''}`;
         badge.style.display = 'inline-flex';
         badge.style.background = 'rgba(245,158,11,0.15)';
         badge.style.color = '#fde68a';
@@ -319,10 +319,11 @@ function renderJobResults(jobs, total, isOverride, ctx) {
     if (!jobs.length) {
         grid.innerHTML = `
             <div class="empty-state" style="grid-column:1/-1;">
-                <div class="empty-icon">😕</div>
+                <div class="empty-icon"><i data-lucide="search"></i></div>
                 <h3>No jobs found</h3>
                 <p>Try different keywords or check your internet connection.</p>
             </div>`;
+        if (window.lucide) lucide.createIcons();
         return;
     }
 
@@ -339,9 +340,9 @@ function renderJobResults(jobs, total, isOverride, ctx) {
             </div>
         </div>
         <div class="job-meta">
-            <span>📍 ${esc(job.location || 'Remote')}</span>
-            <span>💰 ${esc(job.salary || 'Not disclosed')}</span>
-            <span>🏢 ${esc(job.job_type || 'Full-time')}</span>
+            <span><i data-lucide="map-pin" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${esc(job.location || 'Remote')}</span>
+            <span><i data-lucide="banknote" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${esc(job.salary || 'Not disclosed')}</span>
+            <span><i data-lucide="briefcase" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${esc(job.job_type || 'Full-time')}</span>
         </div>
         ${(job.skills_required || []).length ? `
         <div class="job-tags">
@@ -353,11 +354,12 @@ function renderJobResults(jobs, total, isOverride, ctx) {
         <div class="job-footer">
             <span class="badge badge-info">${esc(job.source || 'Web')}</span>
             <div class="flex gap-1">
-                <button class="btn btn-sm btn-ghost" onclick="saveJob(${job.id})">💾 Save</button>
+                <button class="btn btn-sm btn-ghost" onclick="saveJob(${job.id})" style="display:inline-flex;align-items:center;gap:4px;"><i data-lucide="bookmark" style="width:12px;height:12px;"></i>Save</button>
                 <a href="${job.apply_link || '#'}" target="_blank" class="btn btn-sm btn-primary">Apply →</a>
             </div>
         </div>
     </div>`).join('');
+    if (window.lucide) lucide.createIcons();
 }
 
 function esc(str) {

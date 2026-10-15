@@ -42,7 +42,8 @@ async function searchJobs() {
         resultsContainer.innerHTML = '<div class="empty-state"><h3>Search failed</h3><p>Please try again.</p></div>';
     } finally {
         searchBtn.disabled = false;
-        searchBtn.innerHTML = '🔍 Search Jobs';
+        searchBtn.innerHTML = '<i data-lucide="search" style="width:14px;height:14px;margin-right:6px;vertical-align:-2px;"></i>Search Jobs';
+        if (window.lucide) lucide.createIcons();
     }
 }
 
@@ -53,11 +54,12 @@ function displayJobResults(jobs, userSkills) {
     if (!jobs.length) {
         container.innerHTML = `
             <div class="empty-state">
-                <div class="empty-icon">🔍</div>
+                <div class="empty-icon"><i data-lucide="search"></i></div>
                 <h3>No jobs found</h3>
                 <p>Try different keywords or upload your resume for personalized results.</p>
             </div>
         `;
+        if (window.lucide) lucide.createIcons();
         return;
     }
 
@@ -75,10 +77,10 @@ function displayJobResults(jobs, userSkills) {
             </div>
             
             <div class="job-meta">
-                <span>📍 ${escapeHtml(job.location || 'Remote')}</span>
-                <span>💰 ${escapeHtml(job.salary || 'Not disclosed')}</span>
-                <span>🏢 ${escapeHtml(job.job_type || 'Full-time')}</span>
-                <span>📅 ${escapeHtml(job.posted_date || job.found_at || 'Recent')}</span>
+                <span><i data-lucide="map-pin" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${escapeHtml(job.location || 'Remote')}</span>
+                <span><i data-lucide="banknote" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${escapeHtml(job.salary || 'Not disclosed')}</span>
+                <span><i data-lucide="briefcase" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${escapeHtml(job.job_type || 'Full-time')}</span>
+                <span><i data-lucide="calendar" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${escapeHtml(job.posted_date || job.found_at || 'Recent')}</span>
             </div>
 
             ${job.skills_required ? `
@@ -97,12 +99,13 @@ function displayJobResults(jobs, userSkills) {
             <div class="job-footer">
                 <span class="badge badge-info">${escapeHtml(job.source || 'Web')}</span>
                 <div class="flex gap-1">
-                    <button class="btn btn-sm btn-ghost" onclick="saveJob(${job.id || i})">💾 Save</button>
+                    <button class="btn btn-sm btn-ghost" onclick="saveJob(${job.id || i})" style="display:inline-flex;align-items:center;gap:4px;"><i data-lucide="bookmark" style="width:12px;height:12px;"></i>Save</button>
                     <a href="${job.apply_link || '#'}" target="_blank" class="btn btn-sm btn-primary">Apply →</a>
                 </div>
             </div>
         </div>
     `).join('');
+    if (window.lucide) lucide.createIcons();
 }
 
 async function saveJob(jobId) {

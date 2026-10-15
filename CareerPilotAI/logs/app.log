@@ -8670,3 +8670,51 @@ POST /resume/analyze/run
 User: 1
 Status: 200
 Duration: 2ms
+2026-10-15 15:39:57,894 - app - INFO - 
+[15:39:57]
+GET /
+User: Guest
+Status: 200
+Duration: 36ms
+2026-10-15 15:39:58,558 - app - INFO - 
+[15:39:58]
+GET /favicon.ico
+User: Guest
+Status: 404
+Duration: 2ms
+2026-10-15 15:40:06,153 - app - INFO - 
+[15:40:06]
+GET /login
+User: Guest
+Status: 200
+Duration: 5ms
+2026-10-15 15:40:26,122 - app - INFO - 
+[15:40:26]
+GET /login
+User: Guest
+Status: 200
+Duration: 1ms
+2026-10-15 15:40:26,493 - app - INFO - 
+[15:40:26]
+GET /favicon.ico
+User: Guest
+Status: 404
+Duration: 0ms
+2026-10-15 15:40:30,224 - app - INFO - 
+[15:40:30]
+GET /
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 15:40:42,116 - app - INFO - 
+[15:40:42]
+GET /login
+User: Guest
+Status: 200
+Duration: 0ms
+2026-10-15 15:44:32,844 - app - INFO - 
+[15:44:32]
+GET /login
+User: Guest
+Status: 200
+Duration: 3ms

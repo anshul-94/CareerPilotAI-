@@ -47,7 +47,8 @@ async function reviewCode() {
         CareerPilot.hideAIProcessing();
     } finally {
         btn.disabled = false;
-        btn.innerHTML = '🔍 Review Code';
+        btn.innerHTML = '<i data-lucide="search"></i> Review Code';
+        if (window.lucide) lucide.createIcons();
     }
 }
 
@@ -86,7 +87,7 @@ function displayCodeReview(review) {
 
             ${bugs.length ? `
                 <div class="card" style="margin-bottom: 1rem;">
-                    <div class="card-header"><h3 class="card-title">🐛 Bugs Detected</h3></div>
+                    <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="bug" style="width:16px;height:16px;"></i> Bugs Detected</h3></div>
                     ${bugs.map(b => `
                         <div style="padding: 0.75rem; margin-bottom: 0.5rem; background: rgba(255,107,107,0.1); border-radius: var(--radius-sm); border-left: 3px solid var(--${b.severity === 'High' ? 'danger' : b.severity === 'Medium' ? 'warning' : 'info'});">
                             <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
@@ -101,7 +102,7 @@ function displayCodeReview(review) {
 
             ${optimizations.length ? `
                 <div class="card" style="margin-bottom: 1rem;">
-                    <div class="card-header"><h3 class="card-title">⚡ Optimizations</h3></div>
+                    <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="zap" style="width:16px;height:16px;"></i> Optimizations</h3></div>
                     <ul class="skill-list">
                         ${optimizations.map(o => `<li><span class="skill-icon" style="color:var(--accent)">●</span> ${o}</li>`).join('')}
                     </ul>
@@ -109,7 +110,7 @@ function displayCodeReview(review) {
             ` : ''}
 
             <div class="card">
-                <div class="card-header"><h3 class="card-title">📊 Complexity</h3></div>
+                <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="activity" style="width:16px;height:16px;"></i> Complexity</h3></div>
                 <div class="grid-3">
                     <div><strong>Time:</strong> ${complexity.time || 'N/A'}</div>
                     <div><strong>Space:</strong> ${complexity.space || 'N/A'}</div>
@@ -118,6 +119,7 @@ function displayCodeReview(review) {
             </div>
         </div>
     `;
+    if (window.lucide) lucide.createIcons();
 }
 
 // ── SQL Coach ───────────────────────────────────
@@ -150,7 +152,8 @@ async function analyzeSql() {
         CareerPilot.hideAIProcessing();
     } finally {
         btn.disabled = false;
-        btn.innerHTML = '🔍 Analyze SQL';
+        btn.innerHTML = '<i data-lucide="search"></i> Analyze SQL';
+        if (window.lucide) lucide.createIcons();
     }
 }
 
@@ -161,20 +164,20 @@ function displaySqlAnalysis(analysis) {
     container.innerHTML = `
         <div style="animation: fadeInUp 0.4s ease;">
             <div class="card" style="margin-bottom: 1rem;">
-                <div class="card-header"><h3 class="card-title">📖 Explanation</h3></div>
+                <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="book-open" style="width:16px;height:16px;"></i> Explanation</h3></div>
                 <p style="line-height: 1.8;">${analysis.explanation || 'No explanation available.'}</p>
             </div>
             
             ${analysis.optimized_query ? `
                 <div class="card" style="margin-bottom: 1rem;">
-                    <div class="card-header"><h3 class="card-title">⚡ Optimized Query</h3></div>
+                    <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="zap" style="width:16px;height:16px;"></i> Optimized Query</h3></div>
                     <div class="code-block"><code>${analysis.optimized_query}</code></div>
                 </div>
             ` : ''}
 
             ${analysis.suggestions?.length ? `
                 <div class="card">
-                    <div class="card-header"><h3 class="card-title">💡 Suggestions</h3></div>
+                    <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="lightbulb" style="width:16px;height:16px;"></i> Suggestions</h3></div>
                     <ul class="skill-list">
                         ${analysis.suggestions.map(s => `<li><span class="skill-icon" style="color:var(--accent)">●</span> ${s}</li>`).join('')}
                     </ul>
@@ -182,6 +185,7 @@ function displaySqlAnalysis(analysis) {
             ` : ''}
         </div>
     `;
+    if (window.lucide) lucide.createIcons();
 }
 
 // ── Project Generator ───────────────────────────
@@ -216,7 +220,8 @@ async function generateProject() {
         CareerPilot.hideAIProcessing();
     } finally {
         btn.disabled = false;
-        btn.innerHTML = '🚀 Generate Projects';
+        btn.innerHTML = '<i data-lucide="sparkles"></i> Generate Ideas';
+        if (window.lucide) lucide.createIcons();
     }
 }
 

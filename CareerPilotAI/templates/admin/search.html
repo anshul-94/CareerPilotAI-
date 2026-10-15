@@ -12,8 +12,8 @@
 
 <!-- 1. Matching Users -->
 <div class="adm-card" style="margin-bottom: 1.5rem;">
-    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
-        👥 Users ({{ results.users|length }})
+    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display:flex; align-items:center; gap:6px;">
+        <i data-lucide="users" style="width:16px;height:16px;"></i> Users ({{ results.users|length }})
     </h3>
     {% if results.users %}
         <div class="adm-table-scroll">
@@ -57,8 +57,8 @@
 
 <!-- 2. Matching Problems -->
 <div class="adm-card" style="margin-bottom: 1.5rem;">
-    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
-        🧩 Problems ({{ results.problems|length }})
+    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display:flex; align-items:center; gap:6px;">
+        <i data-lucide="code-2" style="width:16px;height:16px;"></i> Problems ({{ results.problems|length }})
     </h3>
     {% if results.problems %}
         <div class="adm-table-scroll">
@@ -100,8 +100,8 @@
 
 <!-- 3. Matching Submissions -->
 <div class="adm-card">
-    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
-        📝 Submissions ({{ results.submissions|length }})
+    <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display:flex; align-items:center; gap:6px;">
+        <i data-lucide="file-text" style="width:16px;height:16px;"></i> Submissions ({{ results.submissions|length }})
     </h3>
     {% if results.submissions %}
         <div class="adm-table-scroll">

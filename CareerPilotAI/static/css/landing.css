@@ -263,6 +263,14 @@
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.metric-icon svg,
+.metric-icon [data-lucide] {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2px;
 }
 
 .metric-title {
@@ -318,6 +326,13 @@
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: #60a5fa;
+}
+
+.feature-icon-box svg,
+.feature-icon-box [data-lucide] {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
 }
 
 .feature-card h3 {
@@ -400,10 +415,23 @@
 }
 
 .why-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     font-size: 1.6rem;
     background: rgba(59, 130, 246, 0.1);
-    padding: 0.6rem;
+    color: #60a5fa;
     border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.why-icon svg,
+.why-icon [data-lucide] {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2px;
 }
 
 .why-card h4 {

@@ -41,7 +41,8 @@ async function startInterview() {
         CareerPilot.showNotification('Failed to start interview', 'danger');
     } finally {
         startBtn.disabled = false;
-        startBtn.innerHTML = '🎯 Start Interview';
+        startBtn.innerHTML = '<i data-lucide="play"></i> Start Interview';
+        if (window.lucide) lucide.createIcons();
     }
 }
 
@@ -95,12 +96,13 @@ function displayQuestion(index) {
                 <div class="flex gap-2">
                     ${index < currentQuestions.length - 1 ? 
                         `<button class="btn btn-primary" onclick="saveAndNext(${index})">Next →</button>` :
-                        `<button class="btn btn-accent" onclick="saveAndNext(${index})">🎯 Submit All</button>`
+                        `<button class="btn btn-accent" onclick="saveAndNext(${index})"><i data-lucide="check-circle-2"></i> Submit All</button>`
                     }
                 </div>
             </div>
         </div>
     `;
+    if (window.lucide) lucide.createIcons();
 }
 
 function saveAndNext(index) {
@@ -181,16 +183,17 @@ function displayResults(data) {
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">📝 Feedback</h3>
+                    <h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="file-text" style="width:16px;height:16px;"></i> Feedback</h3>
                 </div>
                 <p style="line-height: 1.8;">${data.feedback || 'No feedback available.'}</p>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
                 <button class="btn btn-primary btn-lg" onclick="location.reload()">
-                    🔄 New Interview
+                    <i data-lucide="rotate-ccw"></i> New Interview
                 </button>
             </div>
         </div>
     `;
+    if (window.lucide) lucide.createIcons();
 }

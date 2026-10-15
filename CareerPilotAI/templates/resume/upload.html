@@ -5,7 +5,7 @@
 
 <main class="main-content">
     <div class="page-header reveal">
-        <h1>📄 Upload Resume</h1>
+        <h1>Upload Resume</h1>
         <p class="page-subtitle">Upload your resume for AI-powered ATS analysis and skill extraction.</p>
     </div>
 
@@ -19,7 +19,7 @@
             <!-- No action/method — JS intercepts and posts via fetch -->
             <form id="uploadForm" enctype="multipart/form-data">
                 <div class="upload-zone" id="uploadZone">
-                    <div class="upload-icon">📄</div>
+                    <div class="upload-icon"><i data-lucide="upload-cloud"></i></div>
                     <h3>Drag &amp; Drop your resume here</h3>
                     <p>or click to browse files (PDF only, max 10MB)</p>
                 </div>
@@ -28,7 +28,7 @@
             </form>
 
             <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-tertiary); font-size: 0.85rem;">
-                <span style="color: var(--primary-light);">🔒</span> Your data is private and secure. We never share your resume.
+                <i data-lucide="shield-check" style="width:16px;height:16px;color:var(--primary-light);"></i> Your data is private and secure. We never share your resume.
             </div>
         </div>
 
@@ -43,7 +43,7 @@
                 {% if resumes %}
                     {% for resume in resumes %}
                     <li class="activity-item" id="resume-item-{{ resume.id }}">
-                        <div class="activity-icon" style="background: var(--bg-tertiary);">📄</div>
+                        <div class="activity-icon" style="background: var(--bg-tertiary);"><i data-lucide="file-text"></i></div>
                         <div class="activity-content">
                             <div class="flex-between">
                                 <div class="activity-title">{{ resume.original_name }}</div>
@@ -73,7 +73,7 @@
                     {% endfor %}
                 {% else %}
                     <li id="emptyState" class="empty-state">
-                        <div class="empty-icon">📂</div>
+                        <div class="empty-icon"><i data-lucide="folder-open"></i></div>
                         <p>No resumes uploaded yet.</p>
                     </li>
                 {% endif %}
@@ -125,11 +125,12 @@
         // Disable double-submit
         zone.style.pointerEvents = 'none';
         zone.innerHTML = `
-            <div style="font-size:2rem; margin-bottom:0.75rem;">⏳</div>
+            <div style="margin-bottom:0.75rem; color:var(--primary-light);"><i data-lucide="loader-2" class="spin" style="width:36px;height:36px;"></i></div>
             <h3>Uploading ${escHtml(file.name)}…</h3>
             <p style="color:var(--text-tertiary);">${(file.size/1024).toFixed(1)} KB</p>
             <p style="color:var(--primary-light); margin-top:0.5rem;">Please wait while we process your resume…</p>
         `;
+        if (window.lucide) lucide.createIcons();
 
         const fd = new FormData();
         fd.append('resume', file);
@@ -143,11 +144,12 @@
                 }
                 // Success — show confirmation zone
                 zone.innerHTML = `
-                    <div style="color:var(--success); font-size:2rem; margin-bottom:0.75rem;">✅</div>
+                    <div style="color:var(--success); margin-bottom:0.75rem;"><i data-lucide="check-circle" style="width:36px;height:36px;"></i></div>
                     <h3>${escHtml(data.resume.original_name)}</h3>
                     <p style="color:var(--success);">Upload complete!</p>
                     <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-tertiary);">Click to upload another</p>
                 `;
+                if (window.lucide) lucide.createIcons();
                 zone.style.pointerEvents = '';
                 zone.addEventListener('click', () => fileInput.click(), { once: true });
 
@@ -157,6 +159,7 @@
 
                 // Prepend the new card to the list
                 list.insertAdjacentHTML('afterbegin', buildResumeCard(data.resume));
+                if (window.lucide) lucide.createIcons();
 
                 // Update counter
                 const current = parseInt(countBadge.textContent || '0', 10);
@@ -175,11 +178,12 @@
     function showZoneError(msg) {
         zone.style.pointerEvents = '';
         zone.innerHTML = `
-            <div style="color:var(--danger); font-size:2rem; margin-bottom:0.75rem;">⚠️</div>
+            <div style="color:var(--danger); margin-bottom:0.75rem;"><i data-lucide="alert-circle" style="width:36px;height:36px;"></i></div>
             <h3>Upload failed</h3>
             <p style="color:var(--danger);">${escHtml(msg)}</p>
             <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-tertiary);">Click to try again</p>
         `;
+        if (window.lucide) lucide.createIcons();
     }
 
     function buildResumeCard(r) {
@@ -194,7 +198,7 @@
 
         return `
         <li class="activity-item" id="resume-item-${r.id}">
-            <div class="activity-icon" style="background: var(--bg-tertiary);">📄</div>
+            <div class="activity-icon" style="background: var(--bg-tertiary);"><i data-lucide="file-text"></i></div>
             <div class="activity-content">
                 <div class="flex-between">
                     <div class="activity-title">${escHtml(r.original_name)}</div>

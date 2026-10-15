@@ -57,11 +57,12 @@ function handleFileSelect(file) {
 
     const zone = document.getElementById('uploadZone');
     zone.innerHTML = `
-        <div style="color: var(--success); font-size: 2rem; margin-bottom: 0.75rem;">📄</div>
+        <div style="color: var(--success); font-size: 2rem; margin-bottom: 0.75rem;"><i data-lucide="file-text"></i></div>
         <h3>${file.name}</h3>
         <p>${(file.size / 1024).toFixed(1)} KB</p>
-        <p style="color: var(--success); margin-top: 0.5rem;">✓ Ready to upload</p>
+        <p style="color: var(--success); margin-top: 0.5rem;">Ready to upload</p>
     `;
+    if (window.lucide) lucide.createIcons();
 
     // Auto-submit
     const form = document.getElementById('uploadForm');
@@ -101,7 +102,8 @@ function initAnalysis() {
             // Do not fire a duplicate generic notification here.
         } finally {
             analyzeBtn.disabled = false;
-            analyzeBtn.innerHTML = '🔍 Run AI Analysis';
+            analyzeBtn.innerHTML = '<i data-lucide="file-search" style="width:14px;height:14px;margin-right:6px;vertical-align:-2px;"></i>Run AI Analysis';
+            if (window.lucide) lucide.createIcons();
             CareerPilot.hideAIProcessing();
         }
     });
@@ -139,7 +141,7 @@ function displayAnalysis(analysis) {
         <div class="analysis-grid">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">✅ Strong Skills</h3>
+                    <h3 class="card-title">Strong Skills</h3>
                 </div>
                 <ul class="skill-list">
                     ${(analysis.strong_skills || []).map(s => `
@@ -150,7 +152,7 @@ function displayAnalysis(analysis) {
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">⚠️ Weak Areas</h3>
+                    <h3 class="card-title">Weak Areas</h3>
                 </div>
                 <ul class="skill-list">
                     ${(analysis.weak_skills || []).map(s => `
@@ -161,7 +163,7 @@ function displayAnalysis(analysis) {
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">🔑 Missing Keywords</h3>
+                    <h3 class="card-title">Missing Keywords</h3>
                 </div>
                 <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
                     ${(analysis.missing_keywords || []).map(k => `
@@ -172,7 +174,7 @@ function displayAnalysis(analysis) {
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">📝 Grammar & Style</h3>
+                    <h3 class="card-title">Grammar &amp; Style</h3>
                 </div>
                 <ul class="skill-list">
                     ${(analysis.grammar_issues || []).map(g => `
@@ -184,7 +186,7 @@ function displayAnalysis(analysis) {
 
         <div class="card" style="margin-top: 1.5rem;">
             <div class="card-header">
-                <h3 class="card-title">🎯 Action Plan</h3>
+                <h3 class="card-title">Action Plan</h3>
             </div>
             <ol style="padding-left: 1.25rem; color: var(--text-secondary);">
                 ${(analysis.action_plan || []).map(a => `
@@ -194,6 +196,7 @@ function displayAnalysis(analysis) {
         </div>
     `;
 
+    if (window.lucide) lucide.createIcons();
     initScoreCircles();
 }
 

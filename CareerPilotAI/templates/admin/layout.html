@@ -13,6 +13,9 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <!-- Admin Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
     {% block extra_css %}{% endblock %}
@@ -28,7 +31,7 @@
                 {% for category, message in messages %}
                     <div class="adm-alert adm-alert-{{ category }}">
                         <span>{{ message }}</span>
-                        <button style="background:none;border:none;color:inherit;cursor:pointer;margin-left:12px;font-size:1.1rem;line-height:1;" onclick="this.parentElement.remove()">✕</button>
+                        <button style="background:none;border:none;color:inherit;cursor:pointer;margin-left:12px;display:inline-flex;align-items:center;" onclick="this.parentElement.remove()"><i data-lucide="x" style="width:14px;height:14px;"></i></button>
                     </div>
                 {% endfor %}
             </div>
@@ -40,7 +43,7 @@
         <aside class="admin-sidebar" id="adminSidebar">
             <div class="admin-sidebar-header">
                 <a href="{{ url_for('admin.dashboard') }}" class="admin-brand">
-                    <div class="admin-brand-icon">🛡️</div>
+                    <div class="admin-brand-icon"><i data-lucide="shield-check"></i></div>
                     <div class="admin-brand-text">
                         CareerPilot <span style="color:var(--primary-light);">AI</span>
                     </div>
@@ -50,31 +53,31 @@
 
             <nav class="admin-nav">
                 <a href="{{ url_for('admin.dashboard') }}" class="admin-nav-item {% if request.endpoint == 'admin.dashboard' %}active{% endif %}" title="Dashboard">
-                    <span class="admin-nav-icon">📊</span>
+                    <span class="admin-nav-icon"><i data-lucide="layout-dashboard"></i></span>
                     <span class="admin-nav-label">Dashboard</span>
                 </a>
                 <a href="{{ url_for('admin.users') }}" class="admin-nav-item {% if 'admin.user' in request.endpoint %}active{% endif %}" title="Users">
-                    <span class="admin-nav-icon">👥</span>
+                    <span class="admin-nav-icon"><i data-lucide="users"></i></span>
                     <span class="admin-nav-label">Users</span>
                 </a>
                 <a href="{{ url_for('admin.submissions') }}" class="admin-nav-item {% if request.endpoint == 'admin.submissions' %}active{% endif %}" title="Submissions">
-                    <span class="admin-nav-icon">📝</span>
+                    <span class="admin-nav-icon"><i data-lucide="file-text"></i></span>
                     <span class="admin-nav-label">Submissions</span>
                 </a>
                 <a href="{{ url_for('admin.problems') }}" class="admin-nav-item {% if request.endpoint == 'admin.problems' %}active{% endif %}" title="Problems">
-                    <span class="admin-nav-icon">🧩</span>
+                    <span class="admin-nav-icon"><i data-lucide="code-2"></i></span>
                     <span class="admin-nav-label">Problems</span>
                 </a>
                 <a href="{{ url_for('admin.ai_analytics') }}" class="admin-nav-item {% if request.endpoint == 'admin.ai_analytics' %}active{% endif %}" title="AI Analytics">
-                    <span class="admin-nav-icon">🤖</span>
+                    <span class="admin-nav-icon"><i data-lucide="sparkles"></i></span>
                     <span class="admin-nav-label">AI Analytics</span>
                 </a>
                 <a href="{{ url_for('admin.activity') }}" class="admin-nav-item {% if request.endpoint == 'admin.activity' %}active{% endif %}" title="Activity Timeline">
-                    <span class="admin-nav-icon">⚡</span>
+                    <span class="admin-nav-icon"><i data-lucide="activity"></i></span>
                     <span class="admin-nav-label">Activity Feed</span>
                 </a>
                 <a href="{{ url_for('admin.audit_logs') }}" class="admin-nav-item {% if request.endpoint == 'admin.audit_logs' %}active{% endif %}" title="Audit Logs">
-                    <span class="admin-nav-icon">📜</span>
+                    <span class="admin-nav-icon"><i data-lucide="history"></i></span>
                     <span class="admin-nav-label">Audit Logs</span>
                 </a>
             </nav>
@@ -85,7 +88,7 @@
                 </div>
                 <form action="{{ url_for('admin.logout') }}" method="POST" style="margin:0;">
                     <button type="submit" class="adm-btn adm-btn-secondary adm-btn-sm" title="Sign Out">
-                        🚪
+                        <i data-lucide="log-out" style="width:15px;height:15px;"></i>
                     </button>
                 </form>
             </div>
@@ -97,12 +100,12 @@
             <header class="admin-navbar">
                 <div class="admin-navbar-left">
                     <button id="sidebarToggleBtn" class="admin-toggle-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
-                        ☰
+                        <i data-lucide="menu"></i>
                     </button>
 
                     <!-- Global Search Box -->
                     <form action="{{ url_for('admin.search') }}" method="GET" class="admin-search-wrapper">
-                        <span class="admin-search-icon-left">🔍</span>
+                        <span class="admin-search-icon-left"><i data-lucide="search" style="width:14px;height:14px;"></i></span>
                         <input type="text" id="globalSearchInput" name="q" class="admin-search-input" placeholder="Search platform..." value="{{ request.args.get('q', '') }}">
                         <kbd class="admin-search-kbd">⌘K</kbd>
                     </form>
@@ -175,6 +178,11 @@
                 setTimeout(() => a.remove(), 300);
             });
         }, 5000);
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
     </script>
     {% block extra_js %}{% endblock %}
 </body>

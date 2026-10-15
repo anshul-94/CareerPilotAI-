@@ -23,7 +23,7 @@
             <div class="adm-metric-value">{{ analytics.mentor_requests }}</div>
             <div class="adm-metric-desc">Chat messages logged</div>
         </div>
-        <div class="adm-metric-icon info">💬</div>
+        <div class="adm-metric-icon info"><i data-lucide="message-circle"></i></div>
     </div>
 
     <div class="adm-card adm-metric-card">
@@ -32,7 +32,7 @@
             <div class="adm-metric-value">{{ analytics.code_reviews }}</div>
             <div class="adm-metric-desc">Code evaluation sessions</div>
         </div>
-        <div class="adm-metric-icon success">💻</div>
+        <div class="adm-metric-icon success"><i data-lucide="code"></i></div>
     </div>
 
     <div class="adm-card adm-metric-card">
@@ -41,7 +41,7 @@
             <div class="adm-metric-value">{{ analytics.agent_usage }}</div>
             <div class="adm-metric-desc">Job matching runs</div>
         </div>
-        <div class="adm-metric-icon accent">⚡</div>
+        <div class="adm-metric-icon accent"><i data-lucide="activity"></i></div>
     </div>
 
     <div class="adm-card adm-metric-card">
@@ -50,15 +50,15 @@
             <div class="adm-metric-value">{{ analytics.resume_ai + analytics.problem_feedback }}</div>
             <div class="adm-metric-desc">ATS & problem insights</div>
         </div>
-        <div class="adm-metric-icon primary">📄</div>
+        <div class="adm-metric-icon primary"><i data-lucide="file-text"></i></div>
     </div>
 </div>
 
 <div class="adm-grid-2">
     <!-- Top Users by AI Consumption -->
     <div class="adm-card">
-        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
-            🏆 Top Users by AI Consumption
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display:flex; align-items:center; gap:6px;">
+            <i data-lucide="award" style="width:16px;height:16px;"></i> Top Users by AI Consumption
         </h3>
         {% if analytics.top_users %}
             <div class="adm-table-scroll">
@@ -96,8 +96,8 @@
 
     <!-- AI Request Frequency Trends -->
     <div class="adm-card">
-        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
-            📅 AI Request Frequency
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem; display:flex; align-items:center; gap:6px;">
+            <i data-lucide="calendar" style="width:16px;height:16px;"></i> AI Request Frequency
         </h3>
 
         <div style="margin-bottom: 1.25rem;">

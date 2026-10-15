@@ -23,6 +23,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
@@ -52,7 +55,7 @@
     {% block navbar %}
     <nav class="navbar" id="mainNavbar">
         <a href="{{ url_for('home') }}" class="navbar-brand">
-            <div class="brand-icon">🚀</div>
+            <div class="brand-icon"><i data-lucide="compass" style="width:20px;height:20px;color:#fff;"></i></div>
             <span>CareerPilot <span class="text-gradient">AI</span></span>
         </a>
         
@@ -70,8 +73,8 @@
         <ul class="navbar-nav">
             <li><a href="{{ url_for('dashboard.index') }}" class="nav-link">Dashboard</a></li>
             <li><a href="{{ url_for('jobs.index') }}" class="nav-link">Jobs</a></li>
-            <li><a href="{{ url_for('notifications.index') }}" class="nav-link" style="position:relative;">
-                🔔 AI Agent
+            <li><a href="{{ url_for('notifications.index') }}" class="nav-link" style="position:relative;display:inline-flex;align-items:center;gap:0.35rem;">
+                <i data-lucide="bell" style="width:16px;height:16px;"></i> AI Agent
                 <span id="navNotifBadge" style="position:absolute;top:-6px;right:-10px;background:var(--accent-pink,#f472b6);color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;display:flex;align-items:center;justify-content:center;display:none;">●</span>
             </a></li>
             <li><a href="{{ url_for('chat.index') }}" class="nav-link">AI Coach</a></li>
@@ -82,7 +85,7 @@
         </div>
         {% endif %}
         
-        <button class="navbar-toggle" id="sidebarToggle" aria-label="Toggle Navigation">☰</button>
+        <button class="navbar-toggle" id="sidebarToggle" aria-label="Toggle Navigation"><i data-lucide="menu" style="width:22px;height:22px;"></i></button>
     </nav>
     <div class="mobile-backdrop" id="mobileBackdrop"></div>
     {% endblock %}

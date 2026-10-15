@@ -95,7 +95,7 @@ function appendMessage(role, content) {
     if (!container) return;
 
     const isUser = role === 'user';
-    const avatar = isUser ? '👤' : '🤖';
+    const avatar = isUser ? '<i data-lucide="user"></i>' : '<i data-lucide="bot"></i>';
     
     const messageEl = document.createElement('div');
     messageEl.className = `chat-message ${role}`;
@@ -105,6 +105,7 @@ function appendMessage(role, content) {
     `;
     
     container.appendChild(messageEl);
+    if (window.lucide) lucide.createIcons();
 }
 
 async function typeMessage(htmlContent) {
@@ -114,10 +115,11 @@ async function typeMessage(htmlContent) {
     const messageEl = document.createElement('div');
     messageEl.className = 'chat-message assistant';
     messageEl.innerHTML = `
-        <div class="chat-avatar">🤖</div>
+        <div class="chat-avatar"><i data-lucide="bot"></i></div>
         <div class="chat-bubble"></div>
     `;
     container.appendChild(messageEl);
+    if (window.lucide) lucide.createIcons();
 
     const bubble = messageEl.querySelector('.chat-bubble');
     
@@ -142,7 +144,7 @@ function showTypingIndicator() {
     el.id = id;
     el.className = 'chat-message assistant';
     el.innerHTML = `
-        <div class="chat-avatar">🤖</div>
+        <div class="chat-avatar"><i data-lucide="bot"></i></div>
         <div class="chat-bubble">
             <div class="typing-indicator">
                 <span></span><span></span><span></span>
@@ -150,6 +152,7 @@ function showTypingIndicator() {
         </div>
     `;
     container.appendChild(el);
+    if (window.lucide) lucide.createIcons();
     scrollToBottom();
     return id;
 }

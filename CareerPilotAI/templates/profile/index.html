@@ -14,7 +14,7 @@
     <div class="page-header" data-aos="fade-up">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
             <div>
-                <h1>🧬 Career DNA Profile</h1>
+                <h1>Career DNA Profile</h1>
                 <p class="page-subtitle">Your AI-powered career identity — auto-populated from your resume. Edit once, used everywhere.</p>
             </div>
             <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
@@ -22,7 +22,7 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
                     Re-sync from Resume
                 </button>
-                <a href="{{ url_for('resume.upload') }}" class="btn btn-ghost btn-sm">📄 Upload Resume</a>
+                <a href="{{ url_for('resume.upload') }}" class="btn btn-ghost btn-sm" style="display:inline-flex;align-items:center;gap:6px;"><i data-lucide="upload" style="width:14px;height:14px;"></i> Upload Resume</a>
             </div>
         </div>
     </div>
@@ -50,12 +50,12 @@
         </div>
         {% if (snapshot.profile_completeness or 0) < 80 %}
         <p style="font-size:0.78rem;color:#f59e0b;margin-top:0.5rem;">
-            💡 Complete your profile to improve job matches and AI accuracy.
+            Complete your profile to improve job matches and AI accuracy.
             {% if not snapshot.has_profile %}Upload a resume to auto-fill 80% of fields.{% endif %}
         </p>
         {% else %}
-        <p style="font-size:0.78rem;color:#86efac;margin-top:0.5rem;">
-            ✅ Great profile! All modules are using your Career DNA automatically.
+        <p style="font-size:0.78rem;color:#86efac;margin-top:0.5rem;display:flex;align-items:center;gap:6px;">
+            <i data-lucide="check-circle" style="width:14px;height:14px;"></i> Great profile! All modules are using your Career DNA automatically.
         </p>
         {% endif %}
     </div>
@@ -142,7 +142,7 @@
 
                 <!-- Top Skills -->
                 {% if snapshot.top_skills %}
-                <div class="dna-section-label">⭐ Primary Skills</div>
+                <div class="dna-section-label">Primary Skills</div>
                 <div class="skill-chips">
                     {% for skill in snapshot.top_skills[:8] %}
                     <span class="skill-chip top">{{ skill }}</span>
@@ -152,7 +152,7 @@
 
                 <!-- Technologies -->
                 {% if snapshot.technologies %}
-                <div class="dna-section-label">🔧 Technologies</div>
+                <div class="dna-section-label">Technologies</div>
                 <div class="skill-chips">
                     {% for tech in snapshot.technologies[:6] %}
                     <span class="skill-chip secondary">{{ tech }}</span>
@@ -162,10 +162,10 @@
 
                 <!-- Missing Skills -->
                 {% if snapshot.missing_skills %}
-                <div class="dna-section-label">📚 Missing Skills (from job analysis)</div>
+                <div class="dna-section-label">Missing Skills (from job analysis)</div>
                 <div class="skill-chips">
                     {% for skill in snapshot.missing_skills[:5] %}
-                    <span class="skill-chip missing">✗ {{ skill }}</span>
+                    <span class="skill-chip missing">{{ skill }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -175,20 +175,20 @@
                 <!-- Key Stats -->
                 <div>
                     <div class="dna-stat-row">
-                        <span class="dna-stat-label">💰 Expected Salary</span>
+                        <span class="dna-stat-label">Expected Salary</span>
                         <span class="dna-stat-value gradient">{{ snapshot.expected_salary or 'Not set' }}</span>
                     </div>
                     <div class="dna-stat-row">
-                        <span class="dna-stat-label">📍 Preferred Location</span>
+                        <span class="dna-stat-label">Preferred Location</span>
                         <span class="dna-stat-value">{{ snapshot.preferred_location or 'Not set' }}</span>
                     </div>
                     <div class="dna-stat-row">
-                        <span class="dna-stat-label">🌐 Domain</span>
+                        <span class="dna-stat-label">Domain</span>
                         <span class="dna-stat-value">{{ snapshot.domain or 'Not set' }}</span>
                     </div>
                     {% if snapshot.last_resume_scan %}
                     <div class="dna-stat-row">
-                        <span class="dna-stat-label">📅 Last Resume Scan</span>
+                        <span class="dna-stat-label">Last Resume Scan</span>
                         <span class="dna-stat-value" style="font-size:0.75rem;">{{ snapshot.last_resume_scan[:16] if snapshot.last_resume_scan else '—' }}</span>
                     </div>
                     {% endif %}
@@ -196,7 +196,7 @@
 
                 {% if snapshot.career_goal %}
                 <hr class="dna-divider">
-                <div class="dna-section-label">🎯 Career Goal</div>
+                <div class="dna-section-label">Career Goal</div>
                 <p style="font-size:0.85rem;color:#94a3b8;line-height:1.6;margin:0;">
                     {{ snapshot.career_goal }}
                 </p>
@@ -205,13 +205,13 @@
                 <!-- Quick links -->
                 <div class="profile-quick-links" style="margin-top:1.25rem;">
                     {% if snapshot.linkedin_url %}
-                    <a href="{{ snapshot.linkedin_url }}" target="_blank" class="profile-link-chip">🔗 LinkedIn</a>
+                    <a href="{{ snapshot.linkedin_url }}" target="_blank" class="profile-link-chip" style="display:inline-flex;align-items:center;gap:4px;"><i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn</a>
                     {% endif %}
                     {% if snapshot.github_url %}
-                    <a href="{{ snapshot.github_url }}" target="_blank" class="profile-link-chip">🐙 GitHub</a>
+                    <a href="{{ snapshot.github_url }}" target="_blank" class="profile-link-chip" style="display:inline-flex;align-items:center;gap:4px;"><i data-lucide="github" style="width:13px;height:13px;"></i> GitHub</a>
                     {% endif %}
                     {% if snapshot.portfolio_url %}
-                    <a href="{{ snapshot.portfolio_url }}" target="_blank" class="profile-link-chip">🌐 Portfolio</a>
+                    <a href="{{ snapshot.portfolio_url }}" target="_blank" class="profile-link-chip" style="display:inline-flex;align-items:center;gap:4px;"><i data-lucide="globe" style="width:13px;height:13px;"></i> Portfolio</a>
                     {% endif %}
                 </div>
             </div>
@@ -237,7 +237,7 @@
         <div data-aos="fade-left">
             <div class="profile-form-card">
                 <div class="profile-form-header">
-                    <h2>✏️ Edit Career DNA</h2>
+                    <h2>Edit Career DNA</h2>
                     <div style="font-size:0.78rem;color:#64748b;">
                         <span style="background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.2);color:#86efac;padding:0.15rem 0.45rem;border-radius:5px;font-weight:700;">MANUAL</span> = your input (never overwritten)
                         &nbsp;
@@ -249,7 +249,7 @@
                     <form action="{{ url_for('profile.update') }}" method="POST" id="profileForm">
 
                         <!-- Identity -->
-                        <div class="form-section-title">👤 Identity</div>
+                        <div class="form-section-title">Identity</div>
                         <div class="form-grid-2">
                             <div class="form-group">
                                 <label class="form-label" for="full_name">Full Name
@@ -273,7 +273,7 @@
                         </div>
 
                         <!-- Career Goals -->
-                        <div class="form-section-title">🎯 Career Identity</div>
+                        <div class="form-section-title">Career Identity</div>
                         <div class="form-grid-2">
                             <div class="form-group">
                                 <label class="form-label" for="preferred_role">Target Role
@@ -317,7 +317,7 @@
                         </div>
 
                         <!-- Online Links -->
-                        <div class="form-section-title">🔗 Online Presence</div>
+                        <div class="form-section-title">Online Presence</div>
                         <div class="form-grid-2">
                             <div class="form-group">
                                 <label class="form-label" for="linkedin_url">LinkedIn URL
@@ -345,7 +345,7 @@
 
                         <!-- AI Skills (read-only display) -->
                         {% if snapshot.skills %}
-                        <div class="form-section-title">🛠️ Skills (AI-extracted from Resume)</div>
+                        <div class="form-section-title">Skills (AI-extracted from Resume)</div>
                         <div style="background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.15);border-radius:12px;padding:1rem;margin-bottom:0.5rem;">
                             <div class="skill-chips">
                                 {% for skill in snapshot.skills[:20] %}
@@ -353,13 +353,13 @@
                                 {% endfor %}
                             </div>
                             <p style="font-size:0.72rem;color:#64748b;margin:0.5rem 0 0;">
-                                💡 Skills are extracted from your resume. Upload a new resume to update them.
+                                Skills are extracted from your resume. Upload a new resume to update them.
                             </p>
                         </div>
                         {% endif %}
 
                         <button type="submit" class="btn-save-profile">
-                            💾 Save Career DNA Profile
+                            Save Career DNA Profile
                         </button>
                     </form>
                 </div>
@@ -368,7 +368,7 @@
             <!-- Change Password card -->
             <div class="profile-form-card" style="margin-top:1.5rem;" data-aos="fade-left" data-aos-delay="50">
                 <div class="profile-form-header">
-                    <h2>🔒 Change Password</h2>
+                    <h2>Change Password</h2>
                 </div>
                 <div class="profile-form-body">
                     <form action="{{ url_for('profile.change_password') }}" method="POST">

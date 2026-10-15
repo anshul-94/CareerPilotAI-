@@ -626,7 +626,7 @@
                                                 <span class="meta-chip">{{ problem.topic }}</span>
                                                 <span><i class="fa-solid fa-check-double"></i> {{ (60 + problem.id * 5) }}% Accuracy</span>
                                                 <span>• Solved by {{ (problem.id * 3) + 120 }}k users</span>
-                                                <span style="color:var(--accent);">★★★★★</span>
+                                                <span style="color:var(--accent); display:inline-flex; gap:2px;"><i class="fa-solid fa-star" style="font-size:10px;"></i><i class="fa-solid fa-star" style="font-size:10px;"></i><i class="fa-solid fa-star" style="font-size:10px;"></i><i class="fa-solid fa-star" style="font-size:10px;"></i><i class="fa-solid fa-star" style="font-size:10px;"></i></span>
                                             </div>
                                             <!-- Company target list -->
                                             {% if problem.companies and problem.companies|length > 0 %}

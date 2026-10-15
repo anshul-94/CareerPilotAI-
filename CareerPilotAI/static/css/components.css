@@ -619,6 +619,16 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-state .empty-icon svg,
+.empty-state .empty-icon [data-lucide] {
+    width: 44px;
+    height: 44px;
+    stroke-width: 1.5px;
 }
 
 .empty-state h3 {

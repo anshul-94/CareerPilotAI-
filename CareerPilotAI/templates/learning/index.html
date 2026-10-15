@@ -6,7 +6,7 @@
 <main class="main-content">
     <div class="page-header reveal flex-between">
         <div>
-            <h1>🗺️ AI Learning Roadmap</h1>
+            <h1>AI Learning Roadmap</h1>
             <p class="page-subtitle">Generate a personalized learning path to reach your career goals.</p>
         </div>
     </div>
@@ -38,7 +38,7 @@
             </div>
             
             <button id="generateRoadmap" class="btn btn-primary" style="width: 100%;">
-                🗺️ Generate Roadmap
+                <i data-lucide="map"></i> Generate Roadmap
             </button>
         </div>
 
@@ -49,7 +49,7 @@
                 <div style="animation: fadeInUp 0.5s ease;">
                     <div class="card" style="margin-bottom: 1.5rem;">
                         <div class="flex-between">
-                            <h3>🎯 {{ active_roadmap.target_role }} Learning Roadmap</h3>
+                            <h3>{{ active_roadmap.target_role }} Learning Roadmap</h3>
                             <span class="badge badge-primary">{{ active_roadmap.roadmap_data.estimated_duration | default('N/A') }}</span>
                         </div>
                         <div style="margin-top: 1rem;">
@@ -65,7 +65,7 @@
 
                     {% if active_roadmap.roadmap_data.weekly_plan %}
                     <div class="card" style="margin-bottom: 1.5rem;">
-                        <div class="card-header"><h3 class="card-title">📊 Weekly Plan</h3></div>
+                        <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="calendar" style="width:16px;height:16px;"></i> Weekly Plan</h3></div>
                         {% for w in active_roadmap.roadmap_data.weekly_plan %}
                             <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
                                 <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; color: white; flex-shrink: 0;">{{ loop.index }}</div>
@@ -81,7 +81,7 @@
                 </div>
             {% else %}
                 <div class="empty-state">
-                    <div class="empty-icon">🧭</div>
+                    <div class="empty-icon"><i data-lucide="compass"></i></div>
                     <h3>No Active Roadmap</h3>
                     <p>Fill out the form on the left to generate a personalized learning path tailored to your skills and goals.</p>
                 </div>

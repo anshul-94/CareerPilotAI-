@@ -52,7 +52,7 @@
             <div class="pane-content-area" id="pane-description">
                 <!-- Problem Statement Card -->
                 <div class="premium-content-card">
-                    <h3 class="card-title">📝 Problem Statement</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-file-lines" style="color:var(--primary-light);margin-right:8px;"></i>Problem Statement</h3>
                     <div class="problem-description" style="font-size: 0.95rem; line-height: 1.7; color: #cbd5e1;">
                         {{ problem.description | safe }}
                     </div>
@@ -61,7 +61,7 @@
                 <!-- Examples Card -->
                 {% if problem.examples %}
                     <div class="premium-content-card">
-                        <h3 class="card-title">💡 Examples</h3>
+                        <h3 class="card-title"><i class="fa-solid fa-lightbulb" style="color:var(--accent);margin-right:8px;"></i>Examples</h3>
                         {% for ex in problem.examples %}
                             <div class="example-box">
                                 <div class="example-header" style="margin-bottom: 0.5rem; font-weight: 700; color: var(--text-primary);">
@@ -80,12 +80,12 @@
                 <!-- Constraints Card -->
                 {% if problem.constraints %}
                     <div class="premium-content-card">
-                        <h3 class="card-title">⚙️ Constraints</h3>
+                        <h3 class="card-title"><i class="fa-solid fa-sliders" style="color:var(--primary-light);margin-right:8px;"></i>Constraints</h3>
                         <div class="constraint-badge-list">
                             {% for constraint in problem.constraints.split('\n') %}
                                 {% if constraint.strip() %}
                                     <div class="constraint-badge">
-                                        <span class="check">✓</span> {{ constraint }}
+                                        <span class="check"><i class="fa-solid fa-check" style="font-size:10px;"></i></span> {{ constraint }}
                                     </div>
                                 {% endif %}
                             {% endfor %}
@@ -97,7 +97,7 @@
             <!-- Tab Content: Hints -->
             <div class="pane-content-area" id="pane-hints" style="display: none;">
                 <div class="premium-content-card">
-                    <h3 class="card-title">💡 Progressive Hints</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-lightbulb" style="color:var(--accent);margin-right:8px;"></i>Progressive Hints</h3>
                     {% if problem.hints %}
                         {% for hint in problem.hints %}
                             <div class="hint-box" id="hint-box-{{ loop.index0 }}" style="background: rgba(234, 179, 8, 0.03); border: 1px solid rgba(234, 179, 8, 0.1); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
@@ -123,7 +123,7 @@
             <!-- Tab Content: Editorial -->
             <div class="pane-content-area" id="pane-editorial" style="display: none;">
                 <div class="premium-content-card">
-                    <h3 class="card-title">📚 Optimal Solution Strategy</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-book-open" style="color:var(--info);margin-right:8px;"></i>Optimal Solution Strategy</h3>
                     <div style="line-height: 1.7; font-size: 0.92rem; color: #94a3b8;">
                         {{ problem.editorial or 'Editorial explanation is currently not available.' }}
                     </div>
@@ -154,19 +154,19 @@
             <!-- Tab Content: Discussion -->
             <div class="pane-content-area" id="pane-discussion" style="display: none;">
                 <div class="premium-content-card">
-                    <h3 class="card-title">💬 Community Discussion</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-comments" style="color:var(--primary-light);margin-right:8px;"></i>Community Discussion</h3>
                     <div class="discussion-card">
                         <div class="discussion-header">
-                            <span>👤 user_991</span>
-                            <span>👍 32 upvotes</span>
+                            <span><i class="fa-solid fa-user" style="font-size:11px;margin-right:4px;"></i>user_991</span>
+                            <span><i class="fa-solid fa-thumbs-up" style="font-size:11px;margin-right:4px;"></i>32 upvotes</span>
                         </div>
                         <h4 class="discussion-title">Simple O(N) Hash Map solution (Step by step guide)</h4>
                         <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Map difference of target - current to its index. Single-pass traversal is the standard approach here.</p>
                     </div>
                     <div class="discussion-card">
                         <div class="discussion-header">
-                            <span>👤 dev_elite</span>
-                            <span>👍 18 upvotes</span>
+                            <span><i class="fa-solid fa-user" style="font-size:11px;margin-right:4px;"></i>dev_elite</span>
+                            <span><i class="fa-solid fa-thumbs-up" style="font-size:11px;margin-right:4px;"></i>18 upvotes</span>
                         </div>
                         <h4 class="discussion-title">Python 3 solution using dict - 99.8% speed percentile</h4>
                         <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">One-pass dict approach with complete edge-cases analysis.</p>
@@ -177,7 +177,7 @@
             <!-- Tab Content: Notes -->
             <div class="pane-content-area" id="pane-notes" style="display: none; height: 100%;">
                 <div class="premium-content-card" style="height: calc(100% - 40px); display: flex; flex-direction: column;">
-                    <h3 class="card-title">📝 Private Notes</h3>
+                    <h3 class="card-title"><i class="fa-solid fa-pen-to-square" style="color:var(--primary-light);margin-right:8px;"></i>Private Notes</h3>
                     <p style="color: #64748b; font-size: 0.8rem; margin-bottom: 0.8rem;">Auto-saves directly to local storage.</p>
                     <textarea class="notes-textarea" id="notesTextarea" placeholder="Write down notes, pseudocodes, or thoughts here..."></textarea>
                 </div>
@@ -186,7 +186,7 @@
             <!-- Tab Content: AI Report -->
             <div class="pane-content-area" id="pane-ai-report" style="display: none;">
                 <div id="aiReportLoader" style="display: none; text-align: center; padding: 4rem 1rem;">
-                    <span style="font-size: 2.2rem; display: block; animation: floatGlow 2s infinite alternate;">🧠</span>
+                    <span style="font-size: 2.2rem; display: block; animation: floatGlow 2s infinite alternate; color: var(--primary-light);"><i class="fa-solid fa-brain"></i></span>
                     <p style="color: #94a3b8; margin-top: 1rem; font-size: 0.9rem;">AI Mentor is evaluating your code quality, complexity, and readability...</p>
                 </div>
                 <div id="aiReportBox">

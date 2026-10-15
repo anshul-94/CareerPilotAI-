@@ -6,7 +6,7 @@
 <main class="main-content">
     <div class="page-header reveal flex-between">
         <div>
-            <h1>🛡️ Admin Dashboard</h1>
+            <h1>Admin Dashboard</h1>
             <p class="page-subtitle">Platform overview and management.</p>
         </div>
         <div>
@@ -17,7 +17,7 @@
     <!-- Admin Stats -->
     <div class="dashboard-grid reveal delay-1" style="margin-bottom: 2rem;">
         <div class="dash-stat primary">
-            <div class="stat-icon">👥</div>
+            <div class="stat-icon"><i data-lucide="users"></i></div>
             <div class="stat-info">
                 <div class="stat-value" data-counter="{{ stats.total_users }}">0</div>
                 <div class="stat-label">Total Users</div>
@@ -25,7 +25,7 @@
         </div>
         
         <div class="dash-stat accent">
-            <div class="stat-icon">📄</div>
+            <div class="stat-icon"><i data-lucide="file-text"></i></div>
             <div class="stat-info">
                 <div class="stat-value" data-counter="{{ stats.total_resumes }}">0</div>
                 <div class="stat-label">Resumes</div>
@@ -33,7 +33,7 @@
         </div>
         
         <div class="dash-stat info">
-            <div class="stat-icon">💬</div>
+            <div class="stat-icon"><i data-lucide="message-circle"></i></div>
             <div class="stat-info">
                 <div class="stat-value" data-counter="{{ stats.total_chats }}">0</div>
                 <div class="stat-label">Chat Messages</div>
@@ -41,7 +41,7 @@
         </div>
         
         <div class="dash-stat warning">
-            <div class="stat-icon">💼</div>
+            <div class="stat-icon"><i data-lucide="briefcase"></i></div>
             <div class="stat-info">
                 <div class="stat-value" data-counter="{{ stats.saved_jobs }}">0</div>
                 <div class="stat-label">Saved Jobs</div>
@@ -52,31 +52,31 @@
     <!-- Admin Links -->
     <div class="grid-3 reveal delay-2">
         <a href="{{ url_for('admin.users') }}" class="card" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; transition: all 0.2s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">👥</div>
+            <div style="margin-bottom: 1rem; color: var(--primary-light);"><i data-lucide="users" style="width:40px;height:40px;"></i></div>
             <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">Manage Users</h3>
             <p style="color: var(--text-tertiary); font-size: 0.9rem;">View and manage registered users</p>
         </a>
         
         <a href="{{ url_for('admin.resumes') }}" class="card" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; transition: all 0.2s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">📄</div>
+            <div style="margin-bottom: 1rem; color: var(--accent);"><i data-lucide="file-text" style="width:40px;height:40px;"></i></div>
             <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">View Resumes</h3>
             <p style="color: var(--text-tertiary); font-size: 0.9rem;">Monitor resume uploads</p>
         </a>
         
         <a href="{{ url_for('admin.chats') }}" class="card" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; transition: all 0.2s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+            <div style="margin-bottom: 1rem; color: var(--info);"><i data-lucide="message-circle" style="width:40px;height:40px;"></i></div>
             <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">Chat Logs</h3>
             <p style="color: var(--text-tertiary); font-size: 0.9rem;">Review AI coach interactions</p>
         </a>
         
         <a href="{{ url_for('admin.jobs') }}" class="card" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; transition: all 0.2s ease;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">💼</div>
+            <div style="margin-bottom: 1rem; color: var(--warning);"><i data-lucide="briefcase" style="width:40px;height:40px;"></i></div>
             <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">Job Activity</h3>
             <p style="color: var(--text-tertiary); font-size: 0.9rem;">Track saved job interactions</p>
         </a>
         
         <div class="card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; opacity: 0.6;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+            <div style="margin-bottom: 1rem; color: var(--text-tertiary);"><i data-lucide="settings" style="width:40px;height:40px;"></i></div>
             <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">System Settings</h3>
             <p style="color: var(--text-tertiary); font-size: 0.9rem;">Coming soon</p>
         </div>

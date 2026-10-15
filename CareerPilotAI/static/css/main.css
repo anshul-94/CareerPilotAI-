@@ -363,6 +363,16 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.navbar-brand .brand-icon svg,
+.navbar-brand .brand-icon [data-lucide] {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    stroke-width: 2px;
 }
 
 .navbar-nav {
@@ -459,14 +469,26 @@ p {
 }
 
 .sidebar-nav .nav-link .nav-icon {
-    font-size: 1.1rem;
-    width: 24px;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.65rem;
+    flex-shrink: 0;
     opacity: 0.8;
+}
+
+.sidebar-nav .nav-link .nav-icon svg,
+.sidebar-nav .nav-link .nav-icon [data-lucide] {
+    width: 17px;
+    height: 17px;
+    stroke-width: 1.85px;
 }
 
 .sidebar-nav .nav-link.active .nav-icon {
     opacity: 1;
+    color: var(--primary);
 }
 
 /* ── Main Content ────────────────────────────── */

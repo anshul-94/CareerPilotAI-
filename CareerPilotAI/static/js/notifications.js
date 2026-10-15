@@ -90,10 +90,11 @@ function filterJobs(filter) {
             emptyEl.className = 'agent-empty notif-empty-filter';
             emptyEl.style.gridColumn = '1 / -1';
             emptyEl.innerHTML = `
-                <div class="agent-empty-icon">🔎</div>
+                <div class="agent-empty-icon"><i data-lucide="search"></i></div>
                 <h3>No ${filter.replace('_', ' ')} jobs</h3>
                 <p>Try running the AI Agent again or switch to another filter.</p>
             `;
+            if (window.lucide) lucide.createIcons();
             grid.appendChild(emptyEl);
         }
         emptyEl.style.display = '';
@@ -136,7 +137,7 @@ async function runAgent() {
             // Update briefing
             updateDailyBriefing(data.daily_summary, data);
             updateStats(data.stats, data.jobs_searched, data.jobs_matched);
-            showSuccess(`✅ AI Agent found ${data.jobs_matched} job matches!`);
+            showSuccess(`AI Agent found ${data.jobs_matched} job matches!`);
 
             // Reload notifications
             await loadNotifications();
@@ -154,7 +155,7 @@ async function runAgent() {
         if (overlay)  overlay.style.display = 'none';
         btn.disabled = false;
         if (spinner) spinner.style.display = 'none';
-        if (btnText) btnText.textContent   = '⚡ Run AI Agent';
+        if (btnText) btnText.textContent   = 'Run AI Agent';
     }
 }
 
@@ -169,7 +170,8 @@ function animateStep(stepNum) {
             stepEl.classList.add('done');
             indEl.classList.remove('active');
             indEl.classList.add('done');
-            indEl.textContent = '✓';
+            indEl.innerHTML = '<i data-lucide="check" style="width:14px;height:14px;"></i>';
+            if (window.lucide) lucide.createIcons();
         } else if (i === stepNum) {
             stepEl.classList.add('active');
             indEl.classList.add('active');
@@ -204,10 +206,11 @@ function renderNotificationCards(jobs) {
     if (!jobs.length) {
         grid.innerHTML = `
             <div class="agent-empty">
-                <div class="agent-empty-icon">🤖</div>
+                <div class="agent-empty-icon"><i data-lucide="bot"></i></div>
                 <h3>No matches found</h3>
                 <p>Try uploading your resume and running the AI Agent again.</p>
             </div>`;
+        if (window.lucide) lucide.createIcons();
         return;
     }
 
@@ -256,15 +259,15 @@ function buildJobCard(job) {
         `https://ui-avatars.com/api/?name=${encodeURIComponent(job.company.slice(0,2))}&background=4f46e5&color=fff&size=64`;
 
     const matchingSkills = (job.matching_skills || []).slice(0,4).map(s =>
-        `<span class="skill-tag matching">✓ ${esc(s)}</span>`).join('');
+        `<span class="skill-tag matching">${esc(s)}</span>`).join('');
     const missingSkills = (job.missing_skills || []).slice(0,3).map(s =>
-        `<span class="skill-tag missing">✗ ${esc(s)}</span>`).join('');
+        `<span class="skill-tag missing">${esc(s)}</span>`).join('');
 
-    const remoteBadge  = job.is_remote ? `<span class="notif-meta-chip remote">🌍 Remote</span>` : '';
+    const remoteBadge  = job.is_remote ? `<span class="notif-meta-chip remote">Remote</span>` : '';
     const urgentBadge  = job.urgency === 'urgent'
-        ? `<span class="notif-meta-chip urgent">⚡ Urgent</span>` : '';
+        ? `<span class="notif-meta-chip urgent">Urgent</span>` : '';
     const freshBadge   = job.freshness === 'today'
-        ? `<span class="notif-meta-chip" style="background:rgba(34,197,94,0.12);color:#86efac;">🔥 Today</span>` : '';
+        ? `<span class="notif-meta-chip" style="background:rgba(34,197,94,0.12);color:#86efac;">Today</span>` : '';
 
     return `
     <div class="notif-card ${matchClass}" id="notif-${job.id}"
@@ -290,7 +293,7 @@ function buildJobCard(job) {
         </div>
 
         <div class="shortlist-badge ${shortClass}">
-            🎯 Shortlist: ${shortlist}% &nbsp;·&nbsp; 📞 Interview: ${interview}%
+            Shortlist: ${shortlist}% &nbsp;·&nbsp; Interview: ${interview}%
         </div>
 
         <div class="score-bars">
@@ -318,13 +321,13 @@ function buildJobCard(job) {
         </div>
 
         <div class="notif-meta">
-            <span class="notif-meta-chip">📍 ${esc(job.location || 'Remote')}</span>
-            <span class="notif-meta-chip">💰 ${esc(job.salary_estimate || job.salary_raw || 'Not disclosed')}</span>
-            <span class="notif-meta-chip">💼 ${esc(job.job_type || 'Full-time')}</span>
+            <span class="notif-meta-chip"><i data-lucide="map-pin" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${esc(job.location || 'Remote')}</span>
+            <span class="notif-meta-chip"><i data-lucide="banknote" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${esc(job.salary_estimate || job.salary_raw || 'Not disclosed')}</span>
+            <span class="notif-meta-chip"><i data-lucide="briefcase" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>${esc(job.job_type || 'Full-time')}</span>
             ${remoteBadge}${urgentBadge}${freshBadge}
         </div>
 
-        ${job.ai_summary ? `<div class="notif-ai-summary">🤖 ${esc(job.ai_summary)}</div>` : ''}
+        ${job.ai_summary ? `<div class="notif-ai-summary">${esc(job.ai_summary)}</div>` : ''}
 
         <div class="notif-skills">
             ${matchingSkills}${missingSkills}
@@ -335,10 +338,10 @@ function buildJobCard(job) {
             <div class="notif-card-actions">
                 <button class="btn-notif btn-notif-save ${job.status === 'saved' ? 'active' : ''}"
                         onclick="updateNotifStatus(${job.id}, 'save', this)">
-                    ${job.status === 'saved' ? '💾 Saved' : '💾 Save'}
+                    ${job.status === 'saved' ? 'Saved' : 'Save'}
                 </button>
                 <button class="btn-notif btn-notif-hide"
-                        onclick="updateNotifStatus(${job.id}, 'hide', this)">✕</button>
+                        onclick="updateNotifStatus(${job.id}, 'hide', this)"><i data-lucide="x" style="width:13px;height:13px;"></i></button>
                 <a href="${job.apply_link || '#'}" target="_blank"
                    class="btn-notif btn-notif-apply"
                    onclick="updateNotifStatus(${job.id}, 'apply', null)">Apply →</a>
@@ -375,7 +378,7 @@ async function updateNotifStatus(jobId, action, btnEl) {
                 setTimeout(() => card.remove(), 400);
             } else if (action === 'save' && btnEl) {
                 card.dataset.status = 'saved';
-                btnEl.innerHTML     = '💾 Saved';
+                btnEl.innerHTML     = 'Saved';
                 btnEl.classList.add('active');
             } else if (action === 'apply') {
                 card.dataset.status = 'applied';
@@ -421,7 +424,7 @@ function updateDailyBriefing(summary, runData) {
     setElText('briefingInsightText', summary.top_insight || '');
     setElText('briefingActionText', summary.action_item || '');
     if (summary.unlock_tip) {
-        setElText('unlockTip', `📚 Learn ${summary.unlock_tip} to unlock more job opportunities.`);
+        setElText('unlockTip', `Learn ${summary.unlock_tip} to unlock more job opportunities.`);
     }
 }
 
@@ -443,9 +446,10 @@ function renderInsights(insights) {
     if (!list || !insights.length) return;
     list.innerHTML = insights.map(item => `
         <div class="insight-item">
-            <div class="insight-icon">${item.icon || '💡'}</div>
+            <div class="insight-icon"><i data-lucide="lightbulb" style="width:16px;height:16px;"></i></div>
             <div class="insight-text">${esc(item.text || '')}</div>
         </div>`).join('');
+    if (window.lucide) lucide.createIcons();
 }
 
 // ─── Load Missing Skills ───────────────────────────────────
@@ -472,9 +476,10 @@ function renderMissingSkills(skills) {
         <div style="display:flex;align-items:center;justify-content:space-between;
                     margin-bottom:0.5rem;padding:0.4rem 0.5rem;
                     background:rgba(239,68,68,0.07);border-radius:8px;">
-            <span style="font-size:0.82rem;color:#fca5a5;font-weight:600;">✗ ${esc(s.skill)}</span>
+            <span style="font-size:0.82rem;color:#fca5a5;font-weight:600;display:inline-flex;align-items:center;gap:4px;"><i data-lucide="x" style="width:13px;height:13px;"></i> ${esc(s.skill)}</span>
             <span style="font-size:0.72rem;color:#94a3b8;">${s.job_count} jobs</span>
         </div>`).join('');
+    if (window.lucide) lucide.createIcons();
 }
 
 // ─── Charts ────────────────────────────────────────────────

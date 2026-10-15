@@ -5,7 +5,7 @@
 
 <main class="main-content">
     <div class="page-header reveal">
-        <h1>🎯 Mock Interview Pro</h1>
+        <h1>Mock Interview Pro</h1>
         <p class="page-subtitle">Practice with a tough AI interviewer tailored to your target role.</p>
     </div>
 
@@ -13,28 +13,28 @@
     <div id="interviewSetup" class="reveal delay-1">
         <div class="dashboard-grid" style="margin-bottom: 2rem;">
             <div class="dash-stat primary">
-                <div class="stat-icon">📈</div>
+                <div class="stat-icon"><i data-lucide="trending-up"></i></div>
                 <div class="stat-info">
                     <div class="stat-value">{{ stats.total_interviews }}</div>
                     <div class="stat-label">Total Interviews</div>
                 </div>
             </div>
             <div class="dash-stat accent">
-                <div class="stat-icon">⭐</div>
+                <div class="stat-icon"><i data-lucide="star"></i></div>
                 <div class="stat-info">
                     <div class="stat-value">{{ stats.avg_overall }}</div>
                     <div class="stat-label">Average Score</div>
                 </div>
             </div>
             <div class="dash-stat info">
-                <div class="stat-icon">🗣️</div>
+                <div class="stat-icon"><i data-lucide="message-square"></i></div>
                 <div class="stat-info">
                     <div class="stat-value">{{ stats.avg_comm }}</div>
                     <div class="stat-label">Avg Communication</div>
                 </div>
             </div>
             <div class="dash-stat warning">
-                <div class="stat-icon">💻</div>
+                <div class="stat-icon"><i data-lucide="code"></i></div>
                 <div class="stat-info">
                     <div class="stat-value">{{ stats.avg_tech }}</div>
                     <div class="stat-label">Avg Technical</div>
@@ -80,7 +80,7 @@
                 </div>
                 
                 <button id="startInterview" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
-                    🎯 Start Interview
+                    <i data-lucide="play"></i> Start Interview
                 </button>
             </div>
 
@@ -93,7 +93,7 @@
                     <ul class="activity-list">
                         {% for session in history[:5] %}
                         <li class="activity-item">
-                            <div class="activity-icon" style="background: var(--bg-tertiary);">🎙️</div>
+                            <div class="activity-icon" style="background: var(--bg-tertiary);"><i data-lucide="mic"></i></div>
                             <div class="activity-content">
                                 <div class="flex-between">
                                     <div class="activity-title">{{ session.role }}</div>
@@ -110,7 +110,7 @@
                     </ul>
                 {% else %}
                     <div class="empty-state">
-                        <div class="empty-icon">📝</div>
+                        <div class="empty-icon"><i data-lucide="file-text"></i></div>
                         <p>No interviews completed yet.</p>
                     </div>
                 {% endif %}

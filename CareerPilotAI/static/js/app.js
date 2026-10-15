@@ -14,6 +14,13 @@ const CareerPilot = {
         this.initAlerts();
         this.initRevealAnimations();
         this.initMobileMenu();
+        this.initIcons();
+    },
+
+    initIcons() {
+        if (typeof lucide !== 'undefined' && lucide.createIcons) {
+            lucide.createIcons();
+        }
     },
 
     // ── Navbar Scroll Effect ────────────────────

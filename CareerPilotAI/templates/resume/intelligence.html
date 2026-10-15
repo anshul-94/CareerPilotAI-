@@ -11,12 +11,12 @@
 <main class="main-content">
     <div class="page-header flex-between" data-aos="fade-down">
         <div>
-            <h1>🧠 AI Resume Intelligence Engine</h1>
+            <h1>AI Resume Intelligence Engine</h1>
             <p class="page-subtitle">Your autonomous AI resume writer. No manual typing required.</p>
         </div>
         <div>
-            <button class="btn btn-primary" onclick="alert('PDF generation requires LaTeX or PDF renderer which is mocked in demo')">
-                ⬇️ Download PDF
+            <button class="btn btn-primary" onclick="alert('PDF generation requires LaTeX or PDF renderer which is mocked in demo')" style="display:inline-flex;align-items:center;gap:6px;">
+                <i data-lucide="download" style="width:14px;height:14px;"></i> Download PDF
             </button>
         </div>
     </div>
@@ -43,8 +43,8 @@
                         <option value="Product Manager">Product Manager</option>
                     </select>
                 </div>
-                <button id="generateBtn" class="btn-generate" onclick="generateResume()">
-                    🔄 Refresh AI Resume
+                <button id="generateBtn" class="btn-generate" onclick="generateResume()" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;">
+                    <i data-lucide="refresh-cw" style="width:14px;height:14px;"></i> Refresh AI Resume
                 </button>
                 <div style="font-size:0.72rem;color:var(--text-tertiary);margin-top:0.5rem;text-align:center;">
                     AI will rewrite your experiences using FAANG standards.
@@ -90,8 +90,8 @@
             <div>
                 <div class="control-section-title" style="display:flex;justify-content:space-between;align-items:center;">
                     <span>Version History</span>
-                    <button class="btn btn-ghost btn-sm" onclick="generateResume(true)" style="padding:0.2rem 0.5rem;font-size:0.7rem;" title="Simulate daily background optimization">
-                        🔄 Daily Optimize
+                    <button class="btn btn-ghost btn-sm" onclick="generateResume(true)" style="padding:0.2rem 0.5rem;font-size:0.7rem;display:inline-flex;align-items:center;gap:4px;" title="Simulate daily background optimization">
+                        <i data-lucide="sparkles" style="width:12px;height:12px;"></i> Daily Optimize
                     </button>
                 </div>
                 <div id="versionTimeline" class="version-timeline">
@@ -115,9 +115,9 @@
             <div class="preview-panel">
                 <div id="resumePreview">
                     <div style="text-align:center;padding:5rem 0;color:#94a3b8;">
-                        <div style="font-size:3rem;margin-bottom:1rem;">📄</div>
+                        <div style="margin-bottom:1rem;color:var(--text-tertiary);"><i data-lucide="file-text" style="width:48px;height:48px;"></i></div>
                         <h3>No Resume Generated</h3>
-                        <p>Click "Generate AI Resume" to build your professional profile.</p>
+                        <p>Click "Refresh AI Resume" to build your professional profile.</p>
                     </div>
                 </div>
             </div>

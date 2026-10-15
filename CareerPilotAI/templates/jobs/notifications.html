@@ -13,7 +13,7 @@
 <div class="agent-running-overlay" id="agentOverlay">
     <div class="agent-running-modal">
         <div class="agent-running-anim">
-            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.8rem;">🤖</span>
+            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#a5b4fc;"><i data-lucide="bot" style="width:32px;height:32px;"></i></span>
         </div>
         <h3 style="color:#e2e8f0;margin:0 0 0.5rem;font-size:1.3rem;font-weight:800;">AI Agent Working...</h3>
         <p style="color:#94a3b8;font-size:0.9rem;margin:0 0 1.5rem;">Your personal AI recruiter is scanning the job market</p>
@@ -52,16 +52,16 @@
                     <span class="pulse-dot"></span>
                     AI-Powered · Always On · Proactive
                 </div>
-                <h1>🤖 AI Job Notification Agent</h1>
+                <h1>Job Notification Agent</h1>
                 <p>Your personal AI recruiter that scans 1,000+ job postings daily and delivers only the best matches — no manual searching required.</p>
                 <div class="agent-hero-actions">
                     <button class="btn-agent-run" id="runAgentBtn" onclick="runAgent()">
                         <div class="run-spinner" id="runSpinner"></div>
-                        <span id="runBtnText">⚡ Run AI Agent</span>
+                        <span id="runBtnText">Run AI Agent</span>
                     </button>
-                    <button class="btn btn-ghost" onclick="refreshPage()">🔄 Refresh</button>
+                    <button class="btn btn-ghost" onclick="refreshPage()">Refresh</button>
                     {% if has_profile %}
-                    <button class="btn btn-ghost btn-sm" onclick="viewProfile()">👤 View Profile</button>
+                    <button class="btn btn-ghost btn-sm" onclick="viewProfile()">View Profile</button>
                     {% endif %}
                 </div>
             </div>
@@ -98,7 +98,7 @@
     <!-- ─── No Resume Warning ─────────────────────────── -->
     {% if not has_profile and not has_data %}
     <div style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:14px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;" data-aos="fade-up">
-        <span style="font-size:1.5rem;">⚠️</span>
+        <i data-lucide="alert-triangle" style="width:24px;height:24px;color:#fde68a;flex-shrink:0;"></i>
         <div>
             <div style="font-weight:700;color:#fde68a;margin-bottom:0.2rem;">No Resume Uploaded</div>
             <div style="font-size:0.87rem;color:#94a3b8;">
@@ -113,7 +113,7 @@
             <!-- ─── Daily AI Briefing ─────────────────────────── -->
             <div class="daily-briefing" id="dailyBriefingCard" data-aos="fade-up" data-aos-delay="50">
                 <div class="briefing-header">
-                    <div class="briefing-ai-icon">🧠</div>
+                    <div class="briefing-ai-icon"><i data-lucide="bot"></i></div>
                     <div>
                         <div class="briefing-headline" id="briefingHeadline">
                             {% if has_data %}Your AI Recruiter Found Great Matches Today{% else %}Run the AI Agent to get your personalized briefing{% endif %}
@@ -130,37 +130,37 @@
                     {% endif %}
                 </div>
                 <div class="briefing-insight" id="briefingInsight">
-                    💡 <span id="briefingInsightText">
+                    <span id="briefingInsightText">
                         {% if has_data %}{{ stats.high_shortlist or 0 }} jobs have 80%+ shortlist probability — act on them today.{% else %}Upload your resume and run the agent to see personalized insights.{% endif %}
                     </span>
                 </div>
                 <div class="briefing-action" id="briefingAction">
-                    ✅ <span id="briefingActionText">{% if has_data %}Apply to your top 3 high-match jobs today for maximum results.{% else %}Step 1: Upload Resume → Step 2: Run Agent → Step 3: Apply to top matches.{% endif %}</span>
+                    <span id="briefingActionText">{% if has_data %}Apply to your top 3 high-match jobs today for maximum results.{% else %}Step 1: Upload Resume → Step 2: Run Agent → Step 3: Apply to top matches.{% endif %}</span>
                 </div>
             </div>
 
             <!-- ─── Filter Tabs ───────────────────────────────── -->
             <div class="filter-tabs" data-aos="fade-up" data-aos-delay="100">
                 <button class="filter-tab active" id="tab-all" onclick="filterJobs('all')">
-                    🔍 All <span class="tab-count">{{ notifications|length }}</span>
+                    All <span class="tab-count">{{ notifications|length }}</span>
                 </button>
                 <button class="filter-tab tab-high" id="tab-high_match" onclick="filterJobs('high_match')">
-                    🎯 High Match <span class="tab-count">{{ high_match|length }}</span>
+                    High Match <span class="tab-count">{{ high_match|length }}</span>
                 </button>
                 <button class="filter-tab tab-medium" id="tab-medium_match" onclick="filterJobs('medium_match')">
-                    ⭐ Medium <span class="tab-count">{{ medium_match|length }}</span>
+                    Medium <span class="tab-count">{{ medium_match|length }}</span>
                 </button>
                 <button class="filter-tab tab-low" id="tab-low_match" onclick="filterJobs('low_match')">
-                    📋 Low Match <span class="tab-count">{{ low_match|length }}</span>
+                    Low Match <span class="tab-count">{{ low_match|length }}</span>
                 </button>
                 <button class="filter-tab tab-urgent" id="tab-urgent" onclick="filterJobs('urgent')">
-                    ⚡ Urgent <span class="tab-count">{{ urgent|length }}</span>
+                    Urgent <span class="tab-count">{{ urgent|length }}</span>
                 </button>
                 <button class="filter-tab tab-remote" id="tab-remote" onclick="filterJobs('remote')">
-                    🌍 Remote <span class="tab-count">{{ remote_jobs|length }}</span>
+                    Remote <span class="tab-count">{{ remote_jobs|length }}</span>
                 </button>
                 <button class="filter-tab tab-saved" id="tab-saved" onclick="filterJobs('saved')">
-                    💾 Saved
+                    Saved
                 </button>
             </div>
 
@@ -205,7 +205,7 @@
 
                         <!-- Shortlist Badge -->
                         <div class="shortlist-badge {% if shortlist >= 80 %}high{% elif shortlist >= 60 %}medium{% else %}low{% endif %}">
-                            🎯 Shortlist: {{ shortlist }}% &nbsp;·&nbsp; 📞 Interview: {{ job.interview_probability or 0 }}%
+                            Shortlist: {{ shortlist }}% &nbsp;·&nbsp; Interview: {{ job.interview_probability or 0 }}%
                         </div>
 
                         <!-- Score Bars -->
@@ -235,37 +235,37 @@
 
                         <!-- Meta -->
                         <div class="notif-meta">
-                            <span class="notif-meta-chip">📍 {{ job.location or 'Remote' }}</span>
-                            <span class="notif-meta-chip">💰 {{ job.salary_estimate or job.salary_raw or 'Not disclosed' }}</span>
-                            <span class="notif-meta-chip">💼 {{ job.job_type or 'Full-time' }}</span>
+                            <span class="notif-meta-chip"><i data-lucide="map-pin" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>{{ job.location or 'Remote' }}</span>
+                            <span class="notif-meta-chip"><i data-lucide="banknote" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>{{ job.salary_estimate or job.salary_raw or 'Not disclosed' }}</span>
+                            <span class="notif-meta-chip"><i data-lucide="briefcase" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px;"></i>{{ job.job_type or 'Full-time' }}</span>
                             {% if job.is_remote %}
-                            <span class="notif-meta-chip remote">🌍 Remote</span>
+                            <span class="notif-meta-chip remote">Remote</span>
                             {% endif %}
                             {% if job.urgency == 'urgent' %}
-                            <span class="notif-meta-chip urgent">⚡ Urgent</span>
+                            <span class="notif-meta-chip urgent">Urgent</span>
                             {% endif %}
                             {% if job.experience_required %}
-                            <span class="notif-meta-chip">👤 {{ job.experience_required }}</span>
+                            <span class="notif-meta-chip">{{ job.experience_required }}</span>
                             {% endif %}
                             {% if job.freshness == 'today' %}
-                            <span class="notif-meta-chip" style="background:rgba(34,197,94,0.12);color:#86efac;">🔥 Today</span>
+                            <span class="notif-meta-chip" style="background:rgba(34,197,94,0.12);color:#86efac;">Today</span>
                             {% endif %}
                         </div>
 
                         <!-- AI Summary -->
                         {% if job.ai_summary %}
                         <div class="notif-ai-summary">
-                            🤖 {{ job.ai_summary }}
+                            {{ job.ai_summary }}
                         </div>
                         {% endif %}
 
                         <!-- Skills -->
                         <div class="notif-skills">
                             {% for skill in (job.matching_skills or [])[:4] %}
-                            <span class="skill-tag matching">✓ {{ skill }}</span>
+                            <span class="skill-tag matching">{{ skill }}</span>
                             {% endfor %}
                             {% for skill in (job.missing_skills or [])[:3] %}
-                            <span class="skill-tag missing">✗ {{ skill }}</span>
+                            <span class="skill-tag missing">{{ skill }}</span>
                             {% endfor %}
                         </div>
 
@@ -276,11 +276,11 @@
                                 <button class="btn-notif btn-notif-save {% if job.status == 'saved' %}active{% endif %}"
                                         onclick="updateNotifStatus({{ job.id }}, 'save', this)"
                                         title="Save job">
-                                    {% if job.status == 'saved' %}💾 Saved{% else %}💾 Save{% endif %}
+                                    {% if job.status == 'saved' %}Saved{% else %}Save{% endif %}
                                 </button>
                                 <button class="btn-notif btn-notif-hide"
                                         onclick="updateNotifStatus({{ job.id }}, 'hide', this)"
-                                        title="Hide this job">✕</button>
+                                        title="Hide this job"><i data-lucide="x" style="width:13px;height:13px;"></i></button>
                                 <a href="{{ job.apply_link or '#' }}" target="_blank"
                                    class="btn-notif btn-notif-apply"
                                    onclick="updateNotifStatus({{ job.id }}, 'apply', null)">
@@ -293,11 +293,11 @@
                 {% else %}
                     <!-- Empty State -->
                     <div class="agent-empty">
-                        <div class="agent-empty-icon">🤖</div>
+                        <div class="agent-empty-icon"><i data-lucide="bot"></i></div>
                         <h3>Your AI Agent is Ready</h3>
                         <p>Click "Run AI Agent" to start your personalized job search.<br>The AI will scan 1,200+ jobs and deliver only the best matches.</p>
                         <button class="btn-agent-run" onclick="runAgent()">
-                            ⚡ Run AI Agent Now
+                            Run AI Agent Now
                         </button>
                     </div>
                 {% endif %}
@@ -309,7 +309,7 @@
             <!-- AI Profile Card -->
             {% if has_profile %}
             <div class="profile-preview-card" data-aos="fade-left">
-                <h3>👤 Your AI Profile</h3>
+                <h3>Your AI Profile</h3>
                 <div style="margin-bottom:0.75rem;">
                     <div style="font-size:0.78rem;color:#64748b;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.4rem;">Target Role</div>
                     <div style="font-size:0.95rem;font-weight:700;color:#a5b4fc;">{{ profile.preferred_role or 'Not set' }}</div>
@@ -343,32 +343,32 @@
 
             <!-- AI Insights Panel -->
             <div class="insights-panel" data-aos="fade-left" data-aos-delay="50">
-                <h3>💡 AI Insights</h3>
+                <h3>AI Insights</h3>
                 <div id="insightsList">
                     {% if has_data %}
                         <div class="insight-item">
-                            <div class="insight-icon">🎯</div>
+                            <div class="insight-icon"><i data-lucide="target" style="width:16px;height:16px;"></i></div>
                             <div class="insight-text">You have <strong>{{ stats.high_match or 0 }}</strong> high-quality matches today (80%+ resume match).</div>
                         </div>
                         <div class="insight-item">
-                            <div class="insight-icon">⚡</div>
+                            <div class="insight-icon"><i data-lucide="zap" style="width:16px;height:16px;"></i></div>
                             <div class="insight-text"><strong>{{ stats.high_shortlist or 0 }}</strong> jobs have an estimated shortlist probability above 80%.</div>
                         </div>
                         <div class="insight-item">
-                            <div class="insight-icon">🌍</div>
+                            <div class="insight-icon"><i data-lucide="globe" style="width:16px;height:16px;"></i></div>
                             <div class="insight-text"><strong>{{ stats.remote_count or 0 }}</strong> remote opportunities found matching your profile.</div>
                         </div>
                         <div class="insight-item">
-                            <div class="insight-icon">📚</div>
+                            <div class="insight-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
                             <div class="insight-text" id="unlockTip">Learn new skills to unlock more job opportunities.</div>
                         </div>
                         <div class="insight-item">
-                            <div class="insight-icon">⏰</div>
+                            <div class="insight-icon"><i data-lucide="clock" style="width:16px;height:16px;"></i></div>
                             <div class="insight-text">Some listings show urgent hiring — act within 48 hours for best results.</div>
                         </div>
                     {% else %}
                         <div class="insight-item">
-                            <div class="insight-icon">🔍</div>
+                            <div class="insight-icon"><i data-lucide="search" style="width:16px;height:16px;"></i></div>
                             <div class="insight-text">Run the AI Agent to get personalized insights about your job market.</div>
                         </div>
                     {% endif %}
@@ -378,26 +378,26 @@
             <!-- Notification Center -->
             <div class="notif-center" data-aos="fade-left" data-aos-delay="100">
                 <div class="notif-center-header">
-                    <h3>🔔 Activity Center</h3>
-                    <button class="btn btn-ghost btn-sm" onclick="loadInsights()">↻</button>
+                    <h3>Activity Center</h3>
+                    <button class="btn btn-ghost btn-sm" onclick="loadInsights()" title="Refresh"><i data-lucide="rotate-cw" style="width:12px;height:12px;"></i></button>
                 </div>
                 <div class="notif-group-label">Today</div>
                 {% if has_data %}
                 <div class="notif-activity-item">
-                    <div class="notif-activity-icon new">🤖</div>
+                    <div class="notif-activity-icon new"><i data-lucide="bot" style="width:14px;height:14px;"></i></div>
                     <div class="notif-activity-text">AI Agent found <strong>{{ stats.total or 0 }}</strong> job matches for your profile</div>
                     <div class="notif-activity-time">Now</div>
                 </div>
                 {% if stats.high_shortlist %}
                 <div class="notif-activity-item">
-                    <div class="notif-activity-icon urgent">⚡</div>
+                    <div class="notif-activity-icon urgent"><i data-lucide="zap" style="width:14px;height:14px;"></i></div>
                     <div class="notif-activity-text"><strong>{{ stats.high_shortlist }}</strong> jobs with 80%+ shortlist probability</div>
                     <div class="notif-activity-time">Now</div>
                 </div>
                 {% endif %}
                 {% if stats.remote_count %}
                 <div class="notif-activity-item">
-                    <div class="notif-activity-icon new">🌍</div>
+                    <div class="notif-activity-icon new"><i data-lucide="globe" style="width:14px;height:14px;"></i></div>
                     <div class="notif-activity-text"><strong>{{ stats.remote_count }}</strong> remote opportunities found</div>
                     <div class="notif-activity-time">Now</div>
                 </div>
@@ -405,21 +405,21 @@
                 {% if stats.saved_count %}
                 <div class="notif-group-label">Saved</div>
                 <div class="notif-activity-item">
-                    <div class="notif-activity-icon saved">💾</div>
+                    <div class="notif-activity-icon saved"><i data-lucide="bookmark" style="width:14px;height:14px;"></i></div>
                     <div class="notif-activity-text">You have <strong>{{ stats.saved_count }}</strong> saved jobs</div>
                     <div class="notif-activity-time">-</div>
                 </div>
                 {% endif %}
                 {% if stats.applied_count %}
                 <div class="notif-activity-item">
-                    <div class="notif-activity-icon applied">✅</div>
+                    <div class="notif-activity-icon applied"><i data-lucide="check" style="width:14px;height:14px;"></i></div>
                     <div class="notif-activity-text">Applied to <strong>{{ stats.applied_count }}</strong> positions</div>
                     <div class="notif-activity-time">-</div>
                 </div>
                 {% endif %}
                 {% else %}
                 <div class="notif-activity-item">
-                    <div class="notif-activity-icon new">🤖</div>
+                    <div class="notif-activity-icon new"><i data-lucide="bot" style="width:14px;height:14px;"></i></div>
                     <div class="notif-activity-text">Run the AI Agent to see activity here</div>
                     <div class="notif-activity-time">-</div>
                 </div>
@@ -429,7 +429,7 @@
             <!-- Missing Skills Card -->
             {% if has_data %}
             <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:16px;padding:1.5rem;" data-aos="fade-left" data-aos-delay="150">
-                <h3 style="font-size:1rem;font-weight:700;color:#fca5a5;margin:0 0 1rem;display:flex;align-items:center;gap:0.5rem;">📚 Top Missing Skills</h3>
+                <h3 style="font-size:1rem;font-weight:700;color:#fca5a5;margin:0 0 1rem;display:flex;align-items:center;gap:0.5rem;">Top Missing Skills</h3>
                 <div id="missingSkillsList">
                     <p style="color:#94a3b8;font-size:0.85rem;">Loading...</p>
                 </div>
@@ -442,31 +442,31 @@
     {% if has_data %}
     <div class="charts-section" data-aos="fade-up" data-aos-delay="200">
         <h2 style="font-size:1.25rem;font-weight:700;color:#e2e8f0;margin:0 0 1.5rem;display:flex;align-items:center;gap:0.5rem;">
-            📊 AI Analytics Dashboard
+            AI Analytics Dashboard
         </h2>
         <div class="charts-grid">
             <div class="chart-card">
-                <div class="chart-card-title">🔽 Application Funnel</div>
+                <div class="chart-card-title">Application Funnel</div>
                 <canvas id="funnelChart"></canvas>
             </div>
             <div class="chart-card">
-                <div class="chart-card-title">📈 Resume Match Distribution</div>
+                <div class="chart-card-title">Resume Match Distribution</div>
                 <canvas id="matchDistChart"></canvas>
             </div>
             <div class="chart-card">
-                <div class="chart-card-title">🏢 Top Companies</div>
+                <div class="chart-card-title">Top Companies</div>
                 <canvas id="companyChart"></canvas>
             </div>
             <div class="chart-card">
-                <div class="chart-card-title">🔥 Skills Gap Heatmap</div>
+                <div class="chart-card-title">Skills Gap Heatmap</div>
                 <canvas id="skillsChart"></canvas>
             </div>
             <div class="chart-card full-width">
-                <div class="chart-card-title">📅 Hiring Trend (This Week)</div>
+                <div class="chart-card-title">Hiring Trend (This Week)</div>
                 <canvas id="trendChart" style="max-height:200px;"></canvas>
             </div>
             <div class="chart-card full-width">
-                <div class="chart-card-title">💰 Salary Distribution</div>
+                <div class="chart-card-title">Salary Distribution</div>
                 <canvas id="salaryChart" style="max-height:180px;"></canvas>
             </div>
         </div>

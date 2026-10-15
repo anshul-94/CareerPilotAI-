@@ -44,7 +44,8 @@ async function generateRoadmap() {
         CareerPilot.showNotification('Failed to generate roadmap', 'danger');
     } finally {
         btn.disabled = false;
-        btn.innerHTML = '🗺️ Generate Roadmap';
+        btn.innerHTML = '<i data-lucide="map"></i> Generate Roadmap';
+        if (window.lucide) lucide.createIcons();
     }
 }
 
@@ -61,14 +62,14 @@ function displayRoadmap(roadmap) {
     container.innerHTML = `
         <div style="animation: fadeInUp 0.5s ease;">
             <div class="card" style="margin-bottom: 1.5rem;">
-                <h3>🎯 ${roadmap.target_role || 'Your'} Learning Roadmap</h3>
+                <h3>${roadmap.target_role || 'Your'} Learning Roadmap</h3>
                 <p>Estimated Duration: <strong>${roadmap.estimated_duration || '6 months'}</strong></p>
                 ${roadmap.mock ? '<span class="badge badge-warning">Demo Data</span>' : ''}
             </div>
 
             ${Object.keys(dailyPlan).length ? `
                 <div class="card" style="margin-bottom: 1.5rem;">
-                    <div class="card-header"><h3 class="card-title">📅 Daily Schedule</h3></div>
+                    <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="clock" style="width:16px;height:16px;"></i> Daily Schedule</h3></div>
                     <div class="grid-2">
                         ${Object.entries(dailyPlan).map(([time, task]) => `
                             <div style="padding: 0.75rem; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border);">
@@ -82,7 +83,7 @@ function displayRoadmap(roadmap) {
 
             ${weeklyPlan.length ? `
                 <div class="card" style="margin-bottom: 1.5rem;">
-                    <div class="card-header"><h3 class="card-title">📊 Weekly Plan</h3></div>
+                    <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="calendar" style="width:16px;height:16px;"></i> Weekly Plan</h3></div>
                     ${weeklyPlan.map((w, i) => `
                         <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
                             <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; color: white; flex-shrink: 0;">${i + 1}</div>
@@ -99,7 +100,7 @@ function displayRoadmap(roadmap) {
             <div class="grid-2" style="margin-bottom: 1.5rem;">
                 ${courses.length ? `
                     <div class="card">
-                        <div class="card-header"><h3 class="card-title">📚 Courses</h3></div>
+                        <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="book-open" style="width:16px;height:16px;"></i> Courses</h3></div>
                         ${courses.map(c => `
                             <div style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">
                                 <div style="font-weight: 500; font-size: 0.9rem;">${c.name}</div>
@@ -111,7 +112,7 @@ function displayRoadmap(roadmap) {
                 
                 ${projects.length ? `
                     <div class="card">
-                        <div class="card-header"><h3 class="card-title">🛠️ Projects</h3></div>
+                        <div class="card-header"><h3 class="card-title" style="display:flex;align-items:center;gap:6px;"><i data-lucide="folder-git-2" style="width:16px;height:16px;"></i> Projects</h3></div>
                         ${projects.map(p => `
                             <div style="padding: 0.6rem 0; border-bottom: 1px solid var(--border);">
                                 <div style="font-weight: 500; font-size: 0.9rem;">${p.name}</div>
@@ -123,4 +124,5 @@ function displayRoadmap(roadmap) {
             </div>
         </div>
     `;
+    if (window.lucide) lucide.createIcons();
 }

@@ -38,21 +38,21 @@
             <span class="adm-badge adm-badge-info">{{ user.role|capitalize }}</span>
         </div>
         <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">
-            <div>📧 {{ user.email }}</div>
-            <div>📅 Joined: <strong>{{ (user.created_at or '')[:10] }}</strong></div>
-            <div>🕒 Last Active: <strong>{{ (user.last_login or 'Never')[:16] }}</strong></div>
-            {% if user.location %}<div>📍 {{ user.location }}</div>{% endif %}
+            <div><i data-lucide="mail" style="width:13px;height:13px;display:inline-block;vertical-align:-1px;margin-right:4px;"></i>{{ user.email }}</div>
+            <div><i data-lucide="calendar" style="width:13px;height:13px;display:inline-block;vertical-align:-1px;margin-right:4px;"></i>Joined: <strong>{{ (user.created_at or '')[:10] }}</strong></div>
+            <div><i data-lucide="clock" style="width:13px;height:13px;display:inline-block;vertical-align:-1px;margin-right:4px;"></i>Last Active: <strong>{{ (user.last_login or 'Never')[:16] }}</strong></div>
+            {% if user.location %}<div><i data-lucide="map-pin" style="width:13px;height:13px;display:inline-block;vertical-align:-1px;margin-right:4px;"></i>{{ user.location }}</div>{% endif %}
         </div>
     </div>
 </div>
 
 <!-- Tabs Navigation -->
 <div class="adm-tabs">
-    <div class="adm-tab active" onclick="showTab('codingTab', this)">💻 Coding Activity</div>
-    <div class="adm-tab" onclick="showTab('historyTab', this)">📝 Submissions ({{ submissions|length }})</div>
-    <div class="adm-tab" onclick="showTab('aiTab', this)">🤖 AI Usage</div>
-    <div class="adm-tab" onclick="showTab('learningTab', this)">📊 Learning Analytics</div>
-    <div class="adm-tab" onclick="showTab('profileTab', this)">👤 Profile Info</div>
+    <div class="adm-tab active" onclick="showTab('codingTab', this)" style="display:inline-flex;align-items:center;gap:6px;"><i data-lucide="code" style="width:14px;height:14px;"></i> Coding Activity</div>
+    <div class="adm-tab" onclick="showTab('historyTab', this)" style="display:inline-flex;align-items:center;gap:6px;"><i data-lucide="file-text" style="width:14px;height:14px;"></i> Submissions ({{ submissions|length }})</div>
+    <div class="adm-tab" onclick="showTab('aiTab', this)" style="display:inline-flex;align-items:center;gap:6px;"><i data-lucide="sparkles" style="width:14px;height:14px;"></i> AI Usage</div>
+    <div class="adm-tab" onclick="showTab('learningTab', this)" style="display:inline-flex;align-items:center;gap:6px;"><i data-lucide="bar-chart-2" style="width:14px;height:14px;"></i> Learning Analytics</div>
+    <div class="adm-tab" onclick="showTab('profileTab', this)" style="display:inline-flex;align-items:center;gap:6px;"><i data-lucide="user" style="width:14px;height:14px;"></i> Profile Info</div>
 </div>
 
 <!-- TAB 1: Coding Activity -->
@@ -63,7 +63,7 @@
                 <div class="adm-metric-label">Attempted</div>
                 <div class="adm-metric-value">{{ coding_stats.problems_attempted }}</div>
             </div>
-            <div class="adm-metric-icon primary">🧩</div>
+            <div class="adm-metric-icon primary"><i data-lucide="code-2"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -71,7 +71,7 @@
                 <div class="adm-metric-label">Solved</div>
                 <div class="adm-metric-value">{{ coding_stats.problems_solved }}</div>
             </div>
-            <div class="adm-metric-icon success">🎯</div>
+            <div class="adm-metric-icon success"><i data-lucide="check-circle-2"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -79,7 +79,7 @@
                 <div class="adm-metric-label">Submissions</div>
                 <div class="adm-metric-value">{{ coding_stats.total_submissions }}</div>
             </div>
-            <div class="adm-metric-icon info">📝</div>
+            <div class="adm-metric-icon info"><i data-lucide="file-text"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -87,7 +87,7 @@
                 <div class="adm-metric-label">Acceptance</div>
                 <div class="adm-metric-value">{{ coding_stats.acceptance_rate }}%</div>
             </div>
-            <div class="adm-metric-icon accent">📊</div>
+            <div class="adm-metric-icon accent"><i data-lucide="bar-chart-2"></i></div>
         </div>
     </div>
 
@@ -190,7 +190,7 @@
                 <div class="adm-metric-label">AI Mentor</div>
                 <div class="adm-metric-value">{{ ai_stats.ai_mentor_requests }}</div>
             </div>
-            <div class="adm-metric-icon info">💬</div>
+            <div class="adm-metric-icon info"><i data-lucide="message-circle"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -198,7 +198,7 @@
                 <div class="adm-metric-label">Code Reviews</div>
                 <div class="adm-metric-value">{{ ai_stats.ai_code_reviews }}</div>
             </div>
-            <div class="adm-metric-icon success">💻</div>
+            <div class="adm-metric-icon success"><i data-lucide="code"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -206,7 +206,7 @@
                 <div class="adm-metric-label">Agent Runs</div>
                 <div class="adm-metric-value">{{ ai_stats.ai_agent_usage }}</div>
             </div>
-            <div class="adm-metric-icon accent">⚡</div>
+            <div class="adm-metric-icon accent"><i data-lucide="activity"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -214,7 +214,7 @@
                 <div class="adm-metric-label">Resume AI</div>
                 <div class="adm-metric-value">{{ ai_stats.resume_versions }}</div>
             </div>
-            <div class="adm-metric-icon primary">📄</div>
+            <div class="adm-metric-icon primary"><i data-lucide="file-text"></i></div>
         </div>
     </div>
 
@@ -235,7 +235,7 @@
                 <div class="adm-metric-label">Current Rating</div>
                 <div class="adm-metric-value">{{ learning_analytics.current_rating }}</div>
             </div>
-            <div class="adm-metric-icon accent">⭐</div>
+            <div class="adm-metric-icon accent"><i data-lucide="star"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -243,7 +243,7 @@
                 <div class="adm-metric-label">Streak</div>
                 <div class="adm-metric-value">{{ learning_analytics.streak }} <span style="font-size: 0.9rem; color: var(--text-tertiary);">days</span></div>
             </div>
-            <div class="adm-metric-icon success">🔥</div>
+            <div class="adm-metric-icon success"><i data-lucide="flame"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -251,7 +251,7 @@
                 <div class="adm-metric-label">Velocity</div>
                 <div class="adm-metric-value">{{ learning_analytics.learning_velocity }}x</div>
             </div>
-            <div class="adm-metric-icon info">⚡</div>
+            <div class="adm-metric-icon info"><i data-lucide="zap"></i></div>
         </div>
 
         <div class="adm-card adm-metric-card">
@@ -261,7 +261,7 @@
                     {{ learning_analytics.company_alignment }}
                 </div>
             </div>
-            <div class="adm-metric-icon primary">💼</div>
+            <div class="adm-metric-icon primary"><i data-lucide="briefcase"></i></div>
         </div>
     </div>
 
@@ -338,6 +338,7 @@
         
         document.getElementById(tabId).style.display = 'block';
         el.classList.add('active');
+        if (window.lucide) lucide.createIcons();
     }
 
     async function toggleUserStatus(userId, currentActive) {
