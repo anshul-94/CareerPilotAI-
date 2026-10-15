@@ -41,19 +41,27 @@
 
 html[data-theme="light"],
 :root[data-theme="light"] {
-    --bg-primary: #F5F0E8;
-    --bg-secondary: #EBE5DB;
-    --bg-tertiary: #DDE0D0;
-    --bg-card: #FFFDF8;
-    --bg-card-hover: #F8F4EC;
-    --bg-input: #FFFFFF;
-    --bg-glass: rgba(255, 253, 248, 0.90);
-    --text-primary: #292722;
-    --text-secondary: #4A2F28;
-    --text-tertiary: #716B62;
-    --text-muted: #8E877C;
-    --border: #E5DDD2;
+    --bg-primary: #F5F0E9;
+    --bg-secondary: #EAE6DA;
+    --bg-tertiary: #E1E3D5;
+    --bg-card: #FFFCF7;
+    --bg-card-hover: #F6F1E6;
+    --bg-input: #FFFCF7;
+    --bg-glass: rgba(255, 252, 247, 0.95);
+    --text-primary: #44372F;
+    --text-heading: #302720;
+    --text-secondary: #65594F;
+    --text-tertiary: #65594F;
+    --text-muted: #71675E;
+    --border: #DED3C5;
     --border-light: rgba(74, 47, 40, 0.08);
+    --border-focus: #755344;
+    --cocoa: #4A2F28;
+    --cocoa-dark: #35221D;
+    --pistachio: #A5A58D;
+    --pistachio-soft: #E1E3D5;
+    --peach-blush: #D9A092;
+    --peach-soft: #F1DDD5;
     --shadow-sm: 0 2px 6px rgba(74, 47, 40, 0.05);
     --shadow-md: 0 8px 24px rgba(74, 47, 40, 0.08);
     --shadow-lg: 0 18px 45px rgba(74, 47, 40, 0.12);
@@ -442,108 +450,117 @@ body {
    LIGHT THEME PROBLEM SOLVING OVERRIDES
    ========================================================== */
 [data-theme="light"] .glass-panel {
-    background: #FFFDF8;
+    background: #FFFCF7;
     border: 1px solid var(--border);
     box-shadow: 0 4px 16px rgba(74, 47, 40, 0.05);
 }
 
 [data-theme="light"] .ide-left-pane {
-    background: #FFFDF8;
+    background: #FFFCF7;
     border-right: 1px solid var(--border);
 }
 
 [data-theme="light"] .ide-right-pane {
-    background: #FAF7F0;
+    background: #F6F1E6;
 }
 
 [data-theme="light"] .editor-toolbar {
-    background: #EFE9DF;
+    background: #E1E3D5;
     border-bottom: 1px solid var(--border);
 }
 
 [data-theme="light"] .terminal-panel {
-    background: #FAF7F0;
+    background: #FFFCF7;
     border-top: 1px solid var(--border);
 }
 
 [data-theme="light"] .example-box {
-    background: #FAF7F0;
+    background: #F6F1E6;
     border: 1px solid var(--border);
 }
 
 [data-theme="light"] .problem-row:hover {
-    background: #FAF7F0;
+    background: #F6F1E6;
 }
 
 [data-theme="light"] .problem-card {
-    background: #FFFDF8;
+    background: #FFFCF7;
     border: 1px solid var(--border);
 }
 
 [data-theme="light"] .problem-card:hover {
-    background: #F8F4EC;
+    background: #F6F1E6;
     border-color: var(--pistachio);
 }
 
 [data-theme="light"] .problem-description {
-    color: var(--primary-text);
+    color: #44372F;
 }
 
 [data-theme="light"] .example-explanation {
-    color: var(--secondary-text);
+    color: #65594F;
 }
 
 [data-theme="light"] .editorial-content {
-    color: var(--secondary-text);
+    color: #44372F;
 }
 
 [data-theme="light"] .discussion-text {
-    color: var(--secondary-text);
+    color: #44372F;
 }
 
 [data-theme="light"] .discussion-card {
-    background: #FAF7F0;
+    background: #FFFCF7;
     border: 1px solid var(--border);
 }
 
 [data-theme="light"] .discussion-title {
-    color: var(--cocoa);
+    color: #302720;
 }
 
 [data-theme="light"] .discussion-header {
-    color: var(--text-muted);
+    color: #71675E;
 }
 
 [data-theme="light"] .premium-content-card {
-    background: #FFFDF8;
+    background: #FFFCF7;
     border: 1px solid var(--border);
 }
 
 [data-theme="light"] .premium-content-card .card-title {
-    color: var(--cocoa);
+    color: #302720;
 }
 
 [data-theme="light"] .chat-bubble.assistant {
-    background: #FAF7F0;
+    background: #E1E3D5;
     border: 1px solid var(--border);
-    color: var(--primary-text);
+    color: #4A2F28;
 }
 
 [data-theme="light"] .ai-chat-input {
-    background: #FFFFFF;
+    background: #FFFCF7;
     border: 1px solid var(--border);
-    color: var(--primary-text);
+    color: #302720;
+}
+
+[data-theme="light"] .ai-chat-input::placeholder {
+    color: #766B60;
+}
+
+[data-theme="light"] .ai-chat-input:focus {
+    border-color: #755344;
+    box-shadow: 0 0 0 3px rgba(117, 83, 68, 0.18);
 }
 
 [data-theme="light"] .console-header {
-    background: #EFE9DF;
+    background: #E1E3D5;
     border-bottom: 1px solid var(--border);
-    color: var(--primary-text);
+    color: #302720;
 }
 
 [data-theme="light"] .console-body {
-    background: #FAF7F0;
-    color: var(--primary-text);
+    background: #FFFCF7;
+    color: #44372F;
 }
 
 /* ─── Dark Mode Fallbacks ─── */

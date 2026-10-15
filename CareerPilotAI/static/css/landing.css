@@ -753,27 +753,27 @@
 }
 
 [data-theme="light"] .landing-navbar {
-    background: rgba(255, 253, 248, 0.90);
+    background: rgba(255, 252, 247, 0.92);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 16px rgba(74, 47, 40, 0.05);
 }
 
 [data-theme="light"] .landing-nav-center a {
-    color: var(--text-secondary);
+    color: #65594F;
 }
 
 [data-theme="light"] .landing-nav-center a:hover {
-    color: var(--cocoa);
+    color: #35221D;
 }
 
 [data-theme="light"] .section-title,
 [data-theme="light"] .hero-headline {
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .section-subtitle,
 [data-theme="light"] .hero-subheading {
-    color: var(--text-secondary);
+    color: #65594F;
 }
 
 [data-theme="light"] .section-tag {
@@ -781,15 +781,15 @@
 }
 
 [data-theme="light"] .hero-badge {
-    background: rgba(165, 165, 141, 0.18);
+    background: #E1E3D5;
     border: 1px solid var(--pistachio);
-    color: var(--cocoa);
+    color: #4A2F28;
 }
 
 [data-theme="light"] .btn-hero-secondary {
-    background: var(--bg-card);
+    background: #FFFCF7;
     border: 1px solid var(--border);
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .btn-hero-secondary:hover {
@@ -799,7 +799,7 @@
 }
 
 [data-theme="light"] .hero-glow-bg {
-    background: radial-gradient(circle, rgba(165, 165, 141, 0.22) 0%, rgba(217, 154, 140, 0.15) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(165, 165, 141, 0.22) 0%, rgba(217, 160, 146, 0.15) 50%, transparent 70%);
 }
 
 [data-theme="light"] .glass-card-stack {
@@ -819,11 +819,11 @@
 }
 
 [data-theme="light"] .metric-title {
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .metric-sub {
-    color: var(--text-tertiary);
+    color: #71675E;
 }
 
 [data-theme="light"] .feature-card,
@@ -843,9 +843,9 @@
 
 [data-theme="light"] .feature-icon-box,
 [data-theme="light"] .why-icon {
-    background: rgba(165, 165, 141, 0.2);
+    background: #E1E3D5;
     border: 1px solid var(--border);
-    color: var(--cocoa);
+    color: #4A2F28;
 }
 
 [data-theme="light"] .feature-card h3,
@@ -853,13 +853,13 @@
 [data-theme="light"] .why-card h4,
 [data-theme="light"] .cta-box h2,
 [data-theme="light"] .footer-left h4 {
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .feature-card p,
 [data-theme="light"] .step-card p,
 [data-theme="light"] .why-card p {
-    color: var(--text-secondary);
+    color: #44372F;
 }
 
 [data-theme="light"] .step-num {
@@ -869,7 +869,7 @@
 }
 
 [data-theme="light"] .landing-cta {
-    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--muted-sage) 100%);
+    background: linear-gradient(180deg, #F5F0E9 0%, #E1E3D5 100%);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }

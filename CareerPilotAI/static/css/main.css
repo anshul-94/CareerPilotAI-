@@ -247,21 +247,25 @@
 html[data-theme="light"],
 :root[data-theme="light"] {
 
-    /* ── Reference Palette Tokens (Strict Intended Palette) ── */
-    --pistachio: #A5A58D;       /* Pistachio accent */
-    --cocoa: #4A2F28;           /* Cocoa accent & headings */
-    --peach-blush: #D99A8C;     /* Peach blush accent */
-    --warm-cream: #F5F0E8;      /* Main page background */
-    --soft-ivory: #FFFDF8;      /* Primary card background */
-    --muted-sage: #DDE0D0;      /* Soft sage surface */
-    --warm-border: #E0D6C8;     /* Borders */
-    --primary-text: #292722;    /* Primary text */
-    --secondary-text: #625B52;  /* Secondary text */
-    --muted-text: #716B62;      /* Muted text */
+    /* ── Reference Palette Tokens (Strict Exact Palette) ── */
+    --pistachio: #A5A58D;          /* Pistachio accent */
+    --pistachio-soft: #E1E3D5;     /* Soft pistachio background */
+    --cocoa: #4A2F28;              /* Rich dark chocolate cocoa */
+    --cocoa-dark: #35221D;         /* Dark cocoa */
+    --peach-blush: #D9A092;        /* Warm dusty peach blush */
+    --peach-soft: #F1DDD5;         /* Soft peach background */
+    --warm-cream: #F5F0E9;         /* Main page background */
+    --soft-ivory: #FFFCF7;         /* Primary card background */
+    --muted-sage: #E1E3D5;         /* Soft pistachio surface */
+    --warm-border: #DED3C5;        /* Borders */
+    --heading-text: #302720;       /* Main headings */
+    --primary-text: #44372F;       /* Body text */
+    --secondary-text: #65594F;     /* Secondary text */
+    --muted-text: #71675E;         /* Muted metadata */
 
     /* ── Brand Colors (Preserving Button & Primary Identity) ─ */
     --primary: #2E6F95;
-    --primary-light: #3D7F9E;
+    --primary-light: #4F8DB1;
     --primary-dark: #1E5678;
     --primary-glow: rgba(46, 111, 149, 0.16);
 
@@ -271,37 +275,37 @@ html[data-theme="light"],
     --accent-glow: rgba(217, 164, 65, 0.16);
 
     /* ── Surfaces / Backgrounds ────────────────────────────── */
-    --bg-primary: #F5F0E8;      /* Main page background */
-    --bg-secondary: #EAE6DA;    /* Secondary surface */
-    --bg-tertiary: #DDE0D0;     /* Soft sage surface */
+    --bg-primary: #F5F0E9;         /* Main page background */
+    --bg-secondary: #EAE6DA;       /* Secondary card backgrounds */
+    --bg-tertiary: #E1E3D5;        /* Soft pistachio background */
 
-    --bg-card: #FFFDF8;         /* Primary card background */
-    --bg-card-hover: #F8F4EC;
+    --bg-card: #FFFCF7;            /* Main content cards */
+    --bg-card-hover: #F6F1E6;
 
-    --bg-input: #FFFFFF;
+    --bg-input: #FFFCF7;           /* Input background */
 
-    --bg-glass: rgba(255, 253, 248, 0.95);
-    --glass-bg: rgba(255, 253, 248, 0.95);
-    --glass-border: #E0D6C8;
+    --bg-glass: rgba(255, 252, 247, 0.95);
+    --glass-bg: rgba(255, 252, 247, 0.95);
+    --glass-border: #DED3C5;
     --glass-blur: blur(20px);
 
-    /* ── Typography (High Contrast Charcoal, Cocoa & Brown-Gray) ─ */
-    --text-primary: #292722;    /* Primary text */
-    --text-secondary: #625B52;  /* Secondary text */
-    --text-tertiary: #625B52;   /* Secondary text */
-    --text-muted: #716B62;      /* Muted text */
+    /* ── Typography (High Contrast Cocoa & Charcoal) ───────── */
+    --text-primary: #44372F;       /* Body text */
+    --text-secondary: #65594F;     /* Secondary text */
+    --text-tertiary: #65594F;      /* Secondary text */
+    --text-muted: #71675E;         /* Muted metadata */
 
     /* ── Borders & Dividers ────────────────────────────────── */
-    --border: #E0D6C8;          /* Borders */
+    --border: #DED3C5;             /* Borders */
     --border-light: rgba(74, 47, 40, 0.08);
-    --border-focus: #8C765B;    /* Focus border */
-    --border-active: #8C765B;
+    --border-focus: #755344;       /* Focus indicator */
+    --border-active: #755344;
 
     /* ── SVG Ring Gradients (Career DNA Light Mode) ────────── */
     --ring-ats-start: #4A2F28;
     --ring-ats-end: #A5A58D;
     --ring-ai-start: #2E6F95;
-    --ring-ai-end: #D99A8C;
+    --ring-ai-end: #D9A092;
     --ring-complete-start: #2E854B;
     --ring-complete-end: #A5A58D;
 
@@ -319,7 +323,7 @@ html[data-theme="light"],
     --shadow-card: 0 2px 8px rgba(74, 47, 40, 0.04), 0 1px 2px rgba(74, 47, 40, 0.02);
 
     /* ── Sidebar Gradient ──────────────────────────────────── */
-    --gradient-sidebar: linear-gradient(180deg, #FAF6EE 0%, #F5F0E8 100%);
+    --gradient-sidebar: linear-gradient(180deg, #FFFCF7 0%, #EAE6DA 100%);
 
     /* ── Buttons (Preserving Identity as explicitly requested) ─── */
     --btn-primary-bg: var(--gradient-primary);
@@ -327,17 +331,17 @@ html[data-theme="light"],
     --btn-primary-text: #FFFFFF;
 
     --btn-secondary-bg: var(--gradient-accent);
-    --btn-secondary-text: #292722;
+    --btn-secondary-text: #302720;
 
     /* ── Hero Overlay & Gradients ──────────────────────────── */
-    --hero-overlay: linear-gradient(135deg, rgba(245, 240, 232, 0.94), rgba(235, 229, 219, 0.92));
-    --gradient-card: linear-gradient(180deg, #FFFDF8 0%, #FAF7F0 100%);
+    --hero-overlay: linear-gradient(135deg, rgba(245, 240, 233, 0.94), rgba(234, 230, 218, 0.92));
+    --gradient-card: linear-gradient(180deg, #FFFCF7 0%, #F8F4EC 100%);
     --gradient-bg: radial-gradient(circle at top right, rgba(165, 165, 141, 0.14), transparent 45%),
-                    radial-gradient(circle at bottom left, rgba(217, 154, 140, 0.10), transparent 40%);
+                    radial-gradient(circle at bottom left, rgba(217, 160, 146, 0.10), transparent 40%);
 
     /* ── Scrollbars ────────────────────────────────────────── */
-    --scrollbar-bg: #EBE5DB;
-    --scrollbar-thumb: #D5CCC0;
+    --scrollbar-bg: #EAE6DA;
+    --scrollbar-thumb: #DED3C5;
     --scrollbar-hover: #A5A58D;
 
 }
@@ -952,46 +956,47 @@ p {
    LIGHT THEME COMPONENT OVERRIDES & UTILITIES
    ========================================================== */
 [data-theme="light"] .navbar {
-    background: rgba(255, 253, 248, 0.90);
+    background: rgba(255, 252, 247, 0.92);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 2px 14px rgba(74, 47, 40, 0.05);
 }
 
 [data-theme="light"] .navbar.scrolled {
-    background: rgba(255, 253, 248, 0.98);
+    background: rgba(255, 252, 247, 0.98);
     box-shadow: var(--shadow-md);
 }
 
 [data-theme="light"] .mobile-backdrop {
-    background: rgba(41, 39, 34, 0.45);
+    background: rgba(48, 39, 32, 0.45);
 }
 
 [data-theme="light"] .sidebar {
-    background: #FAF6EE;
+    background: #FFFCF7;
     border-right: 1px solid var(--border);
 }
 
 [data-theme="light"] .sidebar-nav .nav-link {
-    color: var(--text-secondary);
+    color: var(--secondary-text);
 }
 
 [data-theme="light"] .sidebar-nav .nav-link:hover {
-    background: #EFE9DF;
-    color: var(--cocoa);
+    background: var(--pistachio-soft);
+    color: var(--cocoa-dark);
 }
 
 [data-theme="light"] .sidebar-nav .nav-link.active {
-    background: rgba(165, 165, 141, 0.22);
-    color: var(--primary);
-    border-left-color: var(--primary);
+    background: var(--pistachio-soft);
+    color: var(--cocoa-dark);
+    border-left-color: var(--cocoa);
+    font-weight: 600;
 }
 
 [data-theme="light"] .sidebar-nav .nav-label {
-    color: var(--text-tertiary);
+    color: var(--muted-text);
 }
 
 [data-theme="light"] .footer {
-    background: #EBE5DB;
+    background: var(--bg-secondary);
     border-top: 1px solid var(--border);
 }
 
@@ -1005,13 +1010,13 @@ p {
 
 [data-theme="light"] .footer-bottom {
     border-top: 1px solid var(--border);
-    color: var(--text-tertiary);
+    color: var(--muted-text);
 }
 
 [data-theme="light"] .navbar-toggle {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    color: var(--text-primary);
+    color: var(--primary-text);
 }
 
 /* ── Theme Toggle Button ────────────────────────────── */
@@ -1053,46 +1058,59 @@ p {
 [data-theme="light"] h4,
 [data-theme="light"] h5,
 [data-theme="light"] h6 {
-    color: var(--cocoa);
+    color: #302720;
 }
 
 [data-theme="light"] .page-title,
 [data-theme="light"] .section-title {
-    color: var(--cocoa);
+    color: #302720;
 }
 
-[data-theme="light"] .page-subtitle {
-    color: var(--text-secondary);
+[data-theme="light"] p {
+    color: #44372F;
+}
+
+[data-theme="light"] .page-subtitle,
+[data-theme="light"] .section-subtitle {
+    color: #65594F;
 }
 
 [data-theme="light"] strong,
 [data-theme="light"] b {
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .text-muted,
 [data-theme="light"] .form-hint,
 [data-theme="light"] .helper-text {
-    color: var(--text-muted);
+    color: #71675E !important;
 }
 
 [data-theme="light"] .form-label {
-    color: var(--text-primary);
+    color: #302720;
     font-weight: 600;
 }
 
 [data-theme="light"] .form-input,
 [data-theme="light"] .form-select,
 [data-theme="light"] .form-textarea {
-    background: #FFFFFF;
-    color: var(--text-primary);
-    border-color: var(--border);
+    background: #FFFCF7;
+    color: #302720;
+    border-color: #DED3C5;
+}
+
+[data-theme="light"] .form-input::placeholder,
+[data-theme="light"] .form-textarea::placeholder,
+[data-theme="light"] ::placeholder {
+    color: #766B60 !important;
+    opacity: 1;
 }
 
 [data-theme="light"] .form-input:focus,
 [data-theme="light"] .form-select:focus,
 [data-theme="light"] .form-textarea:focus {
-    border-color: var(--border-focus);
-    box-shadow: 0 0 0 3px rgba(140, 118, 91, 0.15);
+    border-color: #755344 !important;
+    box-shadow: 0 0 0 3px rgba(117, 83, 68, 0.18) !important;
+    background: #FFFCF7 !important;
 }
 

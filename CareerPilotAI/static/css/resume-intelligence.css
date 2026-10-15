@@ -272,8 +272,12 @@
 }
 
 [data-theme="light"] .score-card {
-    background: #FAF7F0;
+    background: #FFFCF7;
     border: 1px solid var(--border);
+}
+
+[data-theme="light"] .score-label {
+    color: #65594F;
 }
 
 [data-theme="light"] .score-value.high { color: var(--success); }
@@ -281,16 +285,38 @@
 [data-theme="light"] .score-value.low { color: var(--danger); }
 
 [data-theme="light"] .suggestion-item {
-    background: rgba(217, 164, 65, 0.12);
-    border: 1px solid rgba(217, 164, 65, 0.25);
-    color: var(--cocoa);
+    background: #F1DDD5;
+    border: 1px solid #D9A092;
+    color: #4A2F28;
 }
 
 [data-theme="light"] .version-title {
-    color: var(--text-primary);
+    color: #302720;
+    font-weight: 600;
 }
 
 [data-theme="light"] .version-meta {
-    color: var(--text-tertiary);
+    color: #71675E;
+}
+
+[data-theme="light"] .resume-modern h1 {
+    color: #302720;
+}
+
+[data-theme="light"] .resume-modern h2 {
+    color: #4A2F28;
+    border-bottom: 2px solid #DED3C5;
+}
+
+[data-theme="light"] .resume-modern .contact-info {
+    color: #65594F;
+}
+
+[data-theme="light"] .resume-modern .job-header {
+    color: #302720;
+}
+
+[data-theme="light"] .resume-modern li {
+    color: #44372F;
 }
 

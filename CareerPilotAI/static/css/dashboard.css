@@ -507,21 +507,22 @@
    LIGHT THEME DASHBOARD OVERRIDES
    ========================================================== */
 [data-theme="light"] .career-snapshot-card {
-    background: linear-gradient(135deg, #FFFDF8 0%, #FAF7F0 60%, #EAE6DA 100%);
+    background: linear-gradient(135deg, #FFFCF7 0%, #F8F4EC 60%, #EAE6DA 100%);
     border: 1px solid var(--border);
     box-shadow: 0 4px 16px rgba(74, 47, 40, 0.04);
 }
 
 [data-theme="light"] .snapshot-role {
-    color: var(--primary-text);
+    color: #302720;
+    font-weight: 700;
 }
 
 [data-theme="light"] .snapshot-meta {
-    color: var(--secondary-text);
+    color: #65594F;
 }
 
 [data-theme="light"] .snapshot-stat-num.complete {
-    color: var(--cocoa);
+    color: #4A2F28;
 }
 
 [data-theme="light"] .snapshot-stat-num.readiness {
@@ -533,14 +534,14 @@
 }
 
 [data-theme="light"] .snapshot-stat-lbl {
-    color: var(--muted-text);
+    color: #71675E;
     font-weight: 600;
 }
 
 [data-theme="light"] .snapshot-skill-pill {
-    background: var(--muted-sage);
+    background: #E1E3D5;
     border: 1px solid var(--border);
-    color: var(--cocoa);
+    color: #4A2F28;
     font-weight: 600;
 }
 

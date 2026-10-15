@@ -833,37 +833,42 @@ body.chat-app-mode .sidebar {
    LIGHT THEME CHAT APP OVERRIDES
    ========================================================== */
 [data-theme="light"] .chat-app-sidebar {
-    background: #FAF6EE;
+    background: #FFFCF7;
     border-right: 1px solid var(--border);
 }
 
 [data-theme="light"] .sidebar-header {
-    background: #FAF6EE;
+    background: #FFFCF7;
     border-bottom: 1px solid var(--border);
 }
 
 [data-theme="light"] .chat-search-wrapper .form-control {
-    background: #FFFFFF;
+    background: #FFFCF7;
     border: 1px solid var(--border);
-    color: var(--text-primary);
+    color: #302720;
+}
+
+[data-theme="light"] .chat-search-wrapper .form-control::placeholder {
+    color: #766B60;
 }
 
 [data-theme="light"] .session-card {
-    color: var(--text-secondary);
+    color: #65594F;
 }
 
 [data-theme="light"] .session-card:hover {
-    background: #EFE9DF;
-    color: var(--cocoa);
+    background: #E1E3D5;
+    color: #35221D;
 }
 
 [data-theme="light"] .session-card.active {
-    background: rgba(165, 165, 141, 0.22);
-    color: var(--primary);
+    background: #E1E3D5;
+    color: #35221D;
+    font-weight: 600;
 }
 
 [data-theme="light"] .chat-top-navbar {
-    background: rgba(255, 253, 248, 0.90);
+    background: rgba(255, 252, 247, 0.92);
     border-bottom: 1px solid var(--border);
 }
 
@@ -880,11 +885,11 @@ body.chat-app-mode .sidebar {
 }
 
 [data-theme="light"] .sugg-text {
-    color: var(--text-secondary);
+    color: #65594F;
 }
 
 [data-theme="light"] .suggestion-card:hover .sugg-text {
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .chat-bubble.user-bubble {
@@ -897,7 +902,9 @@ body.chat-app-mode .sidebar {
 }
 
 [data-theme="light"] .chat-message-row.assistant .chat-bubble {
-    color: var(--text-primary);
+    color: #44372F;
+    background: #FFFCF7;
+    border: 1px solid var(--border);
 }
 
 [data-theme="light"] .chat-avatar {
@@ -906,32 +913,33 @@ body.chat-app-mode .sidebar {
 }
 
 [data-theme="light"] .code-block-wrapper {
-    background: #FAF7F0;
+    background: #F6F1E6;
     border: 1px solid var(--border);
 }
 
 [data-theme="light"] .code-block-header {
-    background: var(--muted-sage);
+    background: #E1E3D5;
     border-bottom: 1px solid var(--border);
-    color: var(--cocoa);
+    color: #302720;
+    font-weight: 600;
 }
 
 [data-theme="light"] .markdown-content code {
-    background: rgba(165, 165, 141, 0.2);
-    color: var(--cocoa);
+    background: #E1E3D5;
+    color: #4A2F28;
 }
 
 [data-theme="light"] .chat-input-box {
-    background: var(--bg-card);
+    background: #FFFCF7;
     border: 1px solid var(--border);
     box-shadow: 0 8px 30px rgba(74, 47, 40, 0.08);
 }
 
 [data-theme="light"] .app-input-field {
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .app-input-field::placeholder {
-    color: var(--text-muted);
+    color: #766B60;
 }
 

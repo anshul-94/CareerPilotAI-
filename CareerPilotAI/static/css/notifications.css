@@ -1098,41 +1098,42 @@
    LIGHT THEME AI AGENT NOTIFICATIONS OVERRIDES
    ========================================================== */
 [data-theme="light"] .agent-hero {
-  background: linear-gradient(135deg, #FFFDF8 0%, #F5F0E8 50%, #DDE0D0 100%);
+  background: linear-gradient(135deg, #FFFCF7 0%, #F5F0E9 50%, #E1E3D5 100%);
   border: 1px solid var(--border);
   box-shadow: 0 4px 20px rgba(74, 47, 40, 0.05);
 }
 
 [data-theme="light"] .agent-hero-badge {
-  background: rgba(165, 165, 141, 0.2);
+  background: #E1E3D5;
   border: 1px solid var(--pistachio);
-  color: var(--cocoa);
+  color: #4A2F28;
 }
 
 [data-theme="light"] .agent-stat-chip {
-  background: #FFFDF8;
+  background: #FFFCF7;
   border: 1px solid var(--border);
   box-shadow: 0 1px 4px rgba(74, 47, 40, 0.04);
 }
 
 [data-theme="light"] .daily-briefing {
-  background: linear-gradient(135deg, #FFFDF8 0%, #F8F4EC 100%);
+  background: linear-gradient(135deg, #FFFCF7 0%, #F8F4EC 100%);
   border: 1px solid var(--border);
   box-shadow: 0 4px 16px rgba(74, 47, 40, 0.04);
 }
 
 [data-theme="light"] .briefing-headline {
-  color: var(--text-primary);
+  color: #302720;
+  font-weight: 700;
 }
 
 [data-theme="light"] .briefing-body {
-  color: var(--text-secondary);
+  color: #44372F;
 }
 
 [data-theme="light"] .briefing-insight {
-  background: rgba(165, 165, 141, 0.15);
-  border: 1px solid rgba(165, 165, 141, 0.3);
-  color: var(--cocoa);
+  background: #E1E3D5;
+  border: 1px solid #DED3C5;
+  color: #4A2F28;
 }
 
 [data-theme="light"] .insights-panel {
@@ -1141,11 +1142,11 @@
 }
 
 [data-theme="light"] .insights-panel h3 {
-  color: var(--text-primary);
+  color: #302720;
 }
 
 [data-theme="light"] .insight-text {
-  color: var(--text-secondary);
+  color: #44372F;
 }
 
 [data-theme="light"] .filter-tabs {
@@ -1154,23 +1155,24 @@
 }
 
 [data-theme="light"] .filter-tab {
-  color: var(--text-secondary);
+  color: #65594F;
 }
 
 [data-theme="light"] .filter-tab:hover {
-  background: var(--bg-card-hover);
-  color: var(--cocoa);
+  background: #E1E3D5;
+  color: #35221D;
   border-color: var(--pistachio);
 }
 
 [data-theme="light"] .filter-tab.active {
-  background: rgba(165, 165, 141, 0.25);
+  background: #E1E3D5;
   border-color: var(--pistachio);
-  color: var(--cocoa);
+  color: #35221D;
+  font-weight: 600;
 }
 
 [data-theme="light"] .notif-card {
-  background: var(--bg-card);
+  background: #FFFCF7;
   border: 1px solid var(--border);
   box-shadow: 0 2px 8px rgba(74, 47, 40, 0.04);
 }
@@ -1182,21 +1184,22 @@
 }
 
 [data-theme="light"] .notif-job-title {
-  color: var(--text-primary);
+  color: #302720;
+  font-weight: 700;
 }
 
 [data-theme="light"] .notif-company,
 [data-theme="light"] .company-name {
-  color: var(--cocoa);
+  color: #4A2F28;
 }
 
 [data-theme="light"] .score-circle-value {
-  color: var(--text-primary);
+  color: #302720;
   font-weight: 800;
 }
 
 [data-theme="light"] .score-circle-label {
-  color: var(--text-secondary);
+  color: #65594F;
   font-weight: 600;
 }
 
@@ -1222,12 +1225,12 @@
 }
 
 [data-theme="light"] .score-bar-label {
-  color: var(--text-secondary);
+  color: #65594F;
   font-weight: 600;
 }
 
 [data-theme="light"] .score-bar-value {
-  color: var(--text-primary);
+  color: #302720;
   font-weight: 700;
 }
 
@@ -1238,15 +1241,15 @@
 [data-theme="light"] .notif-meta-chip,
 [data-theme="light"] .location-pill,
 [data-theme="light"] .salary-pill {
-  background: var(--muted-sage);
-  color: var(--cocoa);
+  background: #E1E3D5;
+  color: #4A2F28;
   border: 1px solid var(--border);
   font-weight: 600;
 }
 
 [data-theme="light"] .notif-meta-chip.remote {
-  background: rgba(165, 165, 141, 0.25);
-  color: var(--cocoa);
+  background: #E1E3D5;
+  color: #4A2F28;
   border-color: var(--pistachio);
 }
 
@@ -1258,9 +1261,9 @@
 
 [data-theme="light"] .notif-ai-summary,
 [data-theme="light"] .why-match-box {
-  background: #FAF7F0;
+  background: #F6F1E6;
   border: 1px solid var(--border);
-  color: var(--text-secondary);
+  color: #44372F;
 }
 
 [data-theme="light"] .skill-tag.matching,
@@ -1273,35 +1276,35 @@
 
 [data-theme="light"] .skill-tag.missing,
 [data-theme="light"] .skill-pill.missing {
-  background: rgba(217, 154, 140, 0.22);
-  color: var(--cocoa);
-  border: 1px solid rgba(217, 154, 140, 0.45);
+  background: #F1DDD5;
+  color: #4A2F28;
+  border: 1px solid #D9A092;
   font-weight: 600;
 }
 
 [data-theme="light"] .notif-source-badge {
-  background: var(--muted-sage);
-  color: var(--cocoa);
+  background: #E1E3D5;
+  color: #4A2F28;
   border: 1px solid var(--border);
   font-weight: 600;
 }
 
 [data-theme="light"] .btn-notif-save {
   background: var(--bg-card);
-  color: var(--text-secondary);
+  color: #65594F;
   border: 1px solid var(--border);
 }
 
 [data-theme="light"] .btn-notif-hide {
   background: var(--bg-card);
-  color: var(--text-muted);
+  color: #71675E;
   border: 1px solid var(--border);
 }
 
 [data-theme="light"] .interview-tip-box {
   background: rgba(217, 164, 65, 0.1);
   border: 1px solid rgba(217, 164, 65, 0.25);
-  color: var(--cocoa);
+  color: #4A2F28;
 }
 
 [data-theme="light"] .profile-preview-card {
@@ -1311,43 +1314,43 @@
 }
 
 [data-theme="light"] .profile-preview-card h3 {
-  color: var(--cocoa);
+  color: #302720;
 }
 
 [data-theme="light"] .profile-preview-lbl {
-  color: var(--text-muted);
+  color: #71675E;
   font-weight: 600;
 }
 
 [data-theme="light"] .profile-preview-role {
-  color: var(--cocoa);
+  color: #35221D;
   font-weight: 700;
 }
 
 [data-theme="light"] .profile-preview-domain {
-  color: var(--primary-text);
+  color: #44372F;
   font-weight: 600;
 }
 
 [data-theme="light"] .profile-skill-chip {
-  background: var(--muted-sage);
-  color: var(--cocoa);
+  background: #E1E3D5;
+  color: #4A2F28;
   border: 1px solid var(--border);
   font-weight: 600;
 }
 
 [data-theme="light"] .profile-stat {
-  background: #FAF7F0;
+  background: #F6F1E6;
   border: 1px solid var(--border);
 }
 
 [data-theme="light"] .profile-stat-val {
-  color: var(--primary-text);
+  color: #302720;
   font-weight: 800;
 }
 
 [data-theme="light"] .profile-stat-lbl {
-  color: var(--secondary-text);
+  color: #65594F;
 }
 
 [data-theme="light"] .agent-running-modal {
@@ -1356,28 +1359,28 @@
 }
 
 [data-theme="light"] .agent-running-icon {
-  color: var(--cocoa);
+  color: #4A2F28;
 }
 
 [data-theme="light"] .agent-running-title {
-  color: var(--cocoa);
+  color: #302720;
 }
 
 [data-theme="light"] .agent-running-subtitle {
-  color: var(--secondary-text);
+  color: #65594F;
 }
 
 [data-theme="light"] .agent-step {
-  color: var(--secondary-text);
+  color: #65594F;
 }
 
 [data-theme="light"] .agent-step.active {
-  color: var(--cocoa);
+  color: #35221D;
   font-weight: 700;
 }
 
 [data-theme="light"] .notif-warning-banner {
-  background: #FFFDF8;
+  background: #FFFCF7;
   border: 1px solid var(--border);
   box-shadow: 0 2px 8px rgba(74, 47, 40, 0.04);
 }
@@ -1387,12 +1390,12 @@
 }
 
 [data-theme="light"] .notif-warning-title {
-  color: var(--cocoa);
+  color: #302720;
   font-weight: 700;
 }
 
 [data-theme="light"] .notif-warning-text {
-  color: var(--secondary-text);
+  color: #65594F;
 }
 
 [data-theme="light"] .notif-warning-link {
@@ -1401,20 +1404,20 @@
 }
 
 [data-theme="light"] .missing-skills-panel {
-  background: rgba(217, 154, 140, 0.12);
-  border: 1px solid rgba(217, 154, 140, 0.3);
+  background: #F1DDD5;
+  border: 1px solid #D9A092;
 }
 
 [data-theme="light"] .missing-skills-title {
-  color: var(--cocoa);
+  color: #35221D;
 }
 
 [data-theme="light"] .missing-skills-loading {
-  color: var(--secondary-text);
+  color: #65594F;
 }
 
 [data-theme="light"] .charts-section-title {
-  color: var(--cocoa);
+  color: #302720;
 }
 
 [data-theme="light"] .chart-card {
@@ -1424,7 +1427,7 @@
 }
 
 [data-theme="light"] .chart-card-title {
-  color: var(--cocoa);
+  color: #302720;
   font-weight: 700;
 }
 

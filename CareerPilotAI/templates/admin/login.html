@@ -37,23 +37,23 @@
             --adm-cyan: #3D7F9E;
             --adm-blue: #2E6F95;
             --adm-glow: rgba(46, 111, 149, 0.16);
-            --adm-dark-1: #F5F0E8;
-            --adm-dark-2: #EBE5DB;
-            --adm-card-glass: #FFFDF8;
-            --adm-border-glass: #E5DDD2;
+            --adm-dark-1: #F5F0E9;
+            --adm-dark-2: #EAE6DA;
+            --adm-card-glass: #FFFCF7;
+            --adm-border-glass: #DED3C5;
         }
 
         [data-theme="light"] body.admin-body {
             background-color: var(--adm-dark-1);
-            color: #292722;
+            color: #44372F;
         }
 
         [data-theme="light"] .admin-3d-scene {
             background: 
                 radial-gradient(ellipse 80% 50% at 50% -20%, rgba(165, 165, 141, 0.22), transparent 70%),
-                radial-gradient(circle 600px at 85% 75%, rgba(217, 154, 140, 0.15), transparent 70%),
+                radial-gradient(circle 600px at 85% 75%, rgba(217, 160, 146, 0.15), transparent 70%),
                 radial-gradient(circle 500px at 15% 85%, rgba(165, 165, 141, 0.15), transparent 70%),
-                linear-gradient(180deg, #FAF7F0 0%, #F5F0E8 100%);
+                linear-gradient(180deg, #FFFCF7 0%, #F5F0E9 100%);
         }
 
         [data-theme="light"] .perspective-grid {
@@ -63,37 +63,41 @@
         }
 
         [data-theme="light"] .admin-3d-card {
-            background: #FFFDF8;
-            border: 1px solid #E5DDD2;
+            background: #FFFCF7;
+            border: 1px solid #DED3C5;
             box-shadow: 0 25px 50px -12px rgba(74, 47, 40, 0.12), 0 0 35px -10px rgba(46, 111, 149, 0.15);
         }
 
         [data-theme="light"] .admin-brand-title {
-            color: #292722;
+            color: #302720;
         }
 
         [data-theme="light"] .admin-brand-subtitle {
-            color: #716B62;
+            color: #65594F;
         }
 
         [data-theme="light"] .adm-input-field {
-            background: #FFFFFF;
-            border: 1px solid #E5DDD2;
-            color: #292722;
+            background: #FFFCF7;
+            border: 1px solid #DED3C5;
+            color: #302720;
+        }
+
+        [data-theme="light"] .adm-input-field::placeholder {
+            color: #766B60;
         }
 
         [data-theme="light"] .adm-input-field:focus {
-            background: #FFFFFF;
-            border-color: #2E6F95;
-            box-shadow: 0 0 0 3px rgba(46, 111, 149, 0.15);
+            background: #FFFCF7;
+            border-color: #755344;
+            box-shadow: 0 0 0 3px rgba(117, 83, 68, 0.18);
         }
 
         [data-theme="light"] .security-badge-footer {
-            border-top: 1px solid #E5DDD2;
+            border-top: 1px solid #DED3C5;
         }
 
         [data-theme="light"] .sec-env-label {
-            color: #716B62;
+            color: #71675E;
         }
 
         [data-theme="light"] .return-link {

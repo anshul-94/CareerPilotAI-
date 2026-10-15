@@ -1106,3 +1106,169 @@ Success/Failed: Success
 ================================
 2026-10-15 23:33:44,851 - ai - ERROR - [GroqProvider] Rate limit hit during streaming.
 2026-10-15 23:34:13,887 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 1/3). Retrying in 2s…
+2026-10-15 23:34:35,099 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 285
+Execution Time: 80.53 sec
+Success/Failed: Success
+================================
+2026-10-15 23:35:34,633 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 1555
+Execution Time: 1.91 sec
+Success/Failed: Success
+================================
+2026-10-15 23:36:16,984 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 417
+Execution Time: 24.82 sec
+Success/Failed: Success
+================================
+2026-10-15 23:36:30,142 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 13.04 sec
+Success/Failed: Success
+================================
+2026-10-15 23:37:12,850 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 1140
+Execution Time: 2.65 sec
+Success/Failed: Success
+================================
+2026-10-15 23:38:03,072 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 1/3). Retrying in 2s…
+2026-10-15 23:38:11,057 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 1506
+Execution Time: 58.21 sec
+Success/Failed: Success
+================================
+2026-10-15 23:45:35,048 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 1.10 sec
+Success/Failed: Success
+================================
+2026-10-15 23:46:07,382 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 0.95 sec
+Success/Failed: Success
+================================
+2026-10-15 23:46:27,799 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 0.90 sec
+Success/Failed: Success
+================================
+2026-10-15 23:46:30,764 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 0.98 sec
+Success/Failed: Success
+================================
+2026-10-15 23:46:32,515 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 2.02 sec
+Success/Failed: Success
+================================
+2026-10-15 23:46:37,566 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 1/3). Retrying in 2s…
+2026-10-15 23:46:46,355 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 1/3). Retrying in 2s…
+2026-10-15 23:46:54,814 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 18.05 sec
+Success/Failed: Success
+================================
+2026-10-15 23:47:18,876 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 2/3). Retrying in 4s…
+2026-10-15 23:47:19,638 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 49.65 sec
+Success/Failed: Success
+================================
+2026-10-15 23:47:20,046 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 1/3). Retrying in 2s…
+2026-10-15 23:47:45,353 - ai - WARNING - [GroqProvider] Rate limit hit (attempt 2/3). Retrying in 4s…
+2026-10-15 23:47:45,689 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 75.36 sec
+Success/Failed: Success
+================================
+2026-10-15 23:48:06,327 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 11.07 sec
+Success/Failed: Success
+================================
+2026-10-15 23:48:30,435 - ai - INFO - 
+========== AI REQUEST ==========
+User ID       : 22
+Provider      : Groq
+Model         : qwen/qwen3.8-27b
+Prompt Name   : [{'role': 'system', 'content': 'You are...
+Prompt Tokens : 175
+Execution Time: 102.60 sec
+Success/Failed: Success
+================================

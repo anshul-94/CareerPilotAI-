@@ -800,36 +800,36 @@
 [data-theme="light"] .form-input,
 [data-theme="light"] .form-select,
 [data-theme="light"] .form-textarea {
-    background: #FFFFFF;
+    background: #FFFCF7;
     border: 1.5px solid var(--border);
-    color: var(--text-primary);
+    color: #302720;
 }
 
 [data-theme="light"] .form-input:focus,
 [data-theme="light"] .form-select:focus,
 [data-theme="light"] .form-textarea:focus {
-    background: #FFFFFF;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px var(--primary-glow);
+    background: #FFFCF7;
+    border-color: #755344;
+    box-shadow: 0 0 0 3px rgba(117, 83, 68, 0.18);
 }
 
 [data-theme="light"] .form-select option {
-    background: #FFFFFF;
-    color: var(--text-primary);
+    background: #FFFCF7;
+    color: #302720;
 }
 
 [data-theme="light"] .code-block {
-    background: #FAF7F0;
+    background: #F6F1E6;
     border: 1px solid var(--border);
-    color: var(--text-primary);
+    color: #44372F;
 }
 
 [data-theme="light"] .code-block .code-lang {
-    color: var(--cocoa);
+    color: #302720;
 }
 
 [data-theme="light"] .modal-overlay {
-    background: rgba(41, 39, 34, 0.45);
+    background: rgba(48, 39, 32, 0.45);
 }
 
 [data-theme="light"] .modal {
@@ -839,39 +839,43 @@
 }
 
 [data-theme="light"] .table th {
-    background: var(--muted-sage);
-    color: var(--cocoa);
+    background: #E1E3D5;
+    color: #302720;
+    font-weight: 600;
     border-bottom: 1px solid var(--border);
 }
 
 [data-theme="light"] .table td {
-    color: var(--text-secondary);
+    color: #44372F;
     border-bottom: 1px solid var(--border);
 }
 
 [data-theme="light"] .table tr:hover td {
-    background: #FAF7F0;
+    background: #F6F1E6;
 }
 
 [data-theme="light"] .tag {
-    background: var(--muted-sage);
+    background: #E1E3D5;
     border: 1px solid var(--border);
-    color: var(--cocoa);
+    color: #4A2F28;
 }
 
 [data-theme="light"] .tag:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: #755344;
+    color: #35221D;
 }
 
 [data-theme="light"] .badge-primary {
     background: rgba(46, 111, 149, 0.12);
     color: var(--primary);
+    font-weight: 600;
 }
 
 [data-theme="light"] .badge-accent {
-    background: rgba(217, 164, 65, 0.15);
-    color: var(--cocoa);
+    background: #F1DDD5;
+    color: #4A2F28;
+    border: 1px solid #D9A092;
+    font-weight: 600;
 }
 
 [data-theme="light"] .progress-bar {
@@ -883,13 +887,13 @@
 }
 
 [data-theme="light"] .chat-bubble code {
-    background: rgba(165, 165, 141, 0.22);
-    color: var(--cocoa);
+    background: #E1E3D5;
+    color: #4A2F28;
 }
 
 [data-theme="light"] .chat-message.user .chat-avatar {
-    background: var(--muted-sage);
-    color: var(--cocoa);
+    background: #E1E3D5;
+    color: #4A2F28;
     border: 1px solid var(--border);
 }
 
