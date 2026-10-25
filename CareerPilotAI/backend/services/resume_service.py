@@ -6,6 +6,7 @@ Handles PDF upload, text extraction, storage, and resume building.
 import os
 import json
 from typing import Tuple, Optional
+from backend.config import Config
 from backend.models.resume import ResumeModel
 from backend.models.project import ResumeAnalysisModel
 from backend.services.ai_service import AIService
@@ -38,96 +39,142 @@ def parse_resume_analysis(raw_text: str) -> dict:
 class ResumeService:
     """Business logic for resume operations."""
 
+    # Default static path preserved for backward-compatibility
     UPLOAD_FOLDER = os.path.join(
         os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
         "static", "uploads"
     )
 
+    @classmethod
+    def get_upload_folder(cls) -> str:
+        """Return the absolute path to the configured upload folder."""
+        from backend.config import Config
+        folder = getattr(Config, 'UPLOAD_FOLDER', 'static/uploads')
+        if not os.path.isabs(folder):
+            base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            folder = os.path.join(base_dir, folder)
+        os.makedirs(folder, exist_ok=True)
+        return folder
+
     @staticmethod
     def upload_resume(user_id: int, file) -> Tuple[bool, str, Optional[int]]:
         """
-        Upload and process a resume PDF.
+        Upload and process a resume PDF using the configured storage engine.
         
         Args:
             user_id: ID of the user uploading
-            file: FileStorage object from Flask request
+            file: FileStorage object or stream from Flask request
             
         Returns:
             Tuple of (success, message, resume_id)
         """
-        if not file or not file.filename:
+        if not file or not getattr(file, 'filename', None):
             return False, "No file selected", None
         
         if not allowed_file(file.filename):
             return False, "Only PDF files are allowed", None
         
-        # Ensure upload directory exists
-        os.makedirs(ResumeService.UPLOAD_FOLDER, exist_ok=True)
+        import uuid
+        from werkzeug.utils import secure_filename
+        from backend.models.resume_storage import ResumeStorageModel
+        from backend.services.storage_service import StorageFactory, SupabaseStorageService
         
-        # Generate secure filename
-        filename = secure_filename(file.filename)
-        filepath = os.path.join(ResumeService.UPLOAD_FOLDER, filename)
-        
+        # Read content and validate size (10MB max)
         try:
-            # Save file
-            file.save(filepath)
-            file_size = os.path.getsize(filepath)
+            if hasattr(file, "read"):
+                content_bytes = file.read()
+            elif isinstance(file, bytes):
+                content_bytes = file
+            else:
+                return False, "Invalid file stream", None
+        except Exception as e:
+            return False, f"Could not read upload file: {str(e)}", None
             
-            # Check file size (10MB max)
-            if file_size > 10 * 1024 * 1024:
-                os.remove(filepath)
-                return False, "File size must be less than 10MB", None
+        file_size = len(content_bytes)
+        if file_size > 10 * 1024 * 1024:
+            return False, "File size must be less than 10MB", None
             
-            # Extract text from PDF
-            raw_text = ResumeService.extract_text_from_pdf(filepath)
+        # Extract text from in-memory PDF
+        raw_text = ResumeService.extract_text_from_pdf(content_bytes)
+        if not raw_text or len(raw_text.strip()) < 50:
+            raw_text = raw_text or "Text extraction failed. Please try a different PDF format."
             
-            if not raw_text or len(raw_text.strip()) < 50:
-                # Keep the file but warn about extraction
-                raw_text = raw_text or "Text extraction failed. Please try a different PDF format."
+        # Storage provider selection
+        storage = StorageFactory.get_storage()
+        backend_name = "supabase" if isinstance(storage, SupabaseStorageService) else "local"
+        bucket_name = Config.SUPABASE_RESUME_BUCKET if backend_name == "supabase" else ""
+        
+        # Server-generated unique, non-user-controlled object key
+        token = uuid.uuid4().hex[:12]
+        safe_name = secure_filename(file.filename) or "resume.pdf"
+        if backend_name == "supabase":
+            object_key = f"{user_id}/{token}_{safe_name}"
+        else:
+            object_key = f"{token}_{safe_name}"
             
-            # Save to database
+        # Upload to storage provider first
+        upload_ok, upload_msg = storage.upload_file(content_bytes, object_key, content_type="application/pdf")
+        if not upload_ok:
+            error_logger.error(f"[ResumeService] Storage upload failed for user {user_id}: {upload_msg}")
+            return False, f"Upload failed: {upload_msg}", None
+            
+        # Database insertion with rollback on failure
+        try:
             resume_id = ResumeModel.create(
                 user_id=user_id,
-                filename=filename,
+                filename=object_key,
                 original_name=file.filename,
                 raw_text=raw_text,
                 file_size=file_size
             )
-            
-            # Set as primary if it's the first resume
-            if ResumeModel.count_by_user(user_id) == 1:
-                ResumeModel.set_primary(resume_id, user_id)
-
-            # ── Smart Profile Sync ─────────────────────────────────
-            # Automatically extract and populate Career DNA profile.
-            # Runs in the same request (fast due to deterministic fallback).
-            _sync_career_profile(user_id, raw_text)
-            # ─────────────────────────────────────────────────────
-
-            return True, "Resume uploaded and profile synced!", resume_id
-            
+            ResumeStorageModel.create(
+                resume_id=resume_id,
+                backend=backend_name,
+                bucket_name=bucket_name,
+                object_key=object_key,
+                file_size=file_size,
+                content_type="application/pdf"
+            )
         except Exception as e:
-            # Cleanup on failure
-            if os.path.exists(filepath):
-                os.remove(filepath)
-            return False, f"Upload failed: {str(e)}", None
+            # Clean up uploaded storage object if database record creation fails
+            storage.delete_file(object_key)
+            error_logger.error(
+                f"[ResumeService] Database insert failed after storage upload; rolled back {object_key}: {e}",
+                exc_info=True
+            )
+            return False, "Failed to register resume in database. Upload rolled back.", None
+            
+        # Set as primary if it's the first resume
+        if ResumeModel.count_by_user(user_id) == 1:
+            ResumeModel.set_primary(resume_id, user_id)
+            
+        # ── Smart Profile Sync ─────────────────────────────────
+        _sync_career_profile(user_id, raw_text)
+        
+        return True, "Resume uploaded and processed successfully", resume_id
 
     @staticmethod
-    def extract_text_from_pdf(filepath: str) -> str:
-        """Extract text content from a PDF file."""
+    def extract_text_from_pdf(filepath_or_bytes) -> str:
+        """Extract text content from a PDF file path, bytes, or file-like stream."""
         try:
             from PyPDF2 import PdfReader
+            import io
             
-            reader = PdfReader(filepath)
+            if isinstance(filepath_or_bytes, bytes):
+                stream = io.BytesIO(filepath_or_bytes)
+                reader = PdfReader(stream)
+            elif isinstance(filepath_or_bytes, (io.BytesIO, io.BufferedReader)):
+                reader = PdfReader(filepath_or_bytes)
+            else:
+                reader = PdfReader(filepath_or_bytes)
+                
             text_parts = []
-            
             for page in reader.pages:
                 page_text = page.extract_text()
                 if page_text:
                     text_parts.append(page_text)
             
             return "\n".join(text_parts)
-            
         except Exception as e:
             print(f"[ERROR] PDF extraction failed: {str(e)}")
             return ""
@@ -170,14 +217,21 @@ class ResumeService:
         # 4. Text Extraction & Validation
         raw_text = (resume.get('raw_text') or "").strip()
         if not raw_text or len(raw_text) < 50 or raw_text.startswith("Text extraction failed"):
-            filename = resume.get('filename')
-            if filename:
-                filepath = os.path.join(ResumeService.UPLOAD_FOLDER, filename)
-                if os.path.exists(filepath):
+            from backend.models.resume_storage import ResumeStorageModel
+            from backend.services.storage_service import StorageFactory
+            
+            meta = ResumeStorageModel.get_by_resume_id(resume_id)
+            backend_name = meta['backend'] if meta else 'local'
+            object_key = meta['object_key'] if meta else resume.get('filename')
+            
+            if object_key:
+                storage = StorageFactory.get_storage(backend_name)
+                download_ok, pdf_bytes, _ = storage.download_file(object_key)
+                if download_ok and pdf_bytes:
                     app_logger.info(
-                        f"[ResumeService] [TextRetrievalStage] Re-attempting PDF text extraction for resume_id={resume_id}"
+                        f"[ResumeService] [TextRetrievalStage] Re-attempting PDF text extraction from storage for resume_id={resume_id}"
                     )
-                    extracted = ResumeService.extract_text_from_pdf(filepath)
+                    extracted = ResumeService.extract_text_from_pdf(pdf_bytes)
                     if extracted and len(extracted.strip()) >= 50:
                         raw_text = extracted.strip()
                         ResumeModel.update_raw_text(resume_id, raw_text)

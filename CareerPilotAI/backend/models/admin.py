@@ -11,12 +11,14 @@ from backend.database.db import execute_query, execute_one, execute_insert, exec
 
 def migrate_admin_tables():
     """Create admin_users and admin_audit_logs tables if they do not exist, and seed default admin."""
+    from backend.database.db import is_postgres
+    pk_type = "SERIAL PRIMARY KEY" if is_postgres() else "INTEGER PRIMARY KEY AUTOINCREMENT"
     
     # 1. Admin Users Table
     if not table_exists("admin_users"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE admin_users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 username TEXT UNIQUE NOT NULL,
                 email TEXT UNIQUE NOT NULL,
                 password_hash TEXT NOT NULL,
@@ -29,9 +31,9 @@ def migrate_admin_tables():
         
     # 2. Admin Audit Logs Table
     if not table_exists("admin_audit_logs"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE admin_audit_logs (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 admin_id INTEGER,
                 admin_username TEXT,
                 action TEXT NOT NULL,

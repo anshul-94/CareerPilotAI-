@@ -16,9 +16,6 @@ body.chat-app-mode nav,
 body.chat-app-mode .sidebar {
     display: none !important; /* Hide global dashboard elements */
 }
-
-
-
 .chat-app-layout {
     display: flex;
     width: 100%;

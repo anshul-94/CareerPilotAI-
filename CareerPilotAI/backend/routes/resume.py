@@ -249,19 +249,90 @@ def intelligence_daily_optimize():
     return jsonify(result)
 
 
+@resume_bp.route('/download/<int:resume_id>', methods=['GET'])
+@login_required
+def download(resume_id):
+    """Securely download a resume PDF with user ownership verification."""
+    import os
+    import io
+    from flask import send_file
+    from backend.models.resume_storage import ResumeStorageModel
+    from backend.services.storage_service import StorageFactory
+
+    user_id = session.get('user_id')
+    resume = ResumeModel.get_by_id(resume_id)
+    
+    if not resume:
+        flash("Resume not found.", 'danger')
+        return redirect(url_for('resume.upload'))
+        
+    # Ownership and Admin authorization check
+    is_admin = session.get('is_admin', False) or session.get('admin_id') is not None
+    if resume.get('user_id') != user_id and not is_admin:
+        app_logger.warning(
+            f"[ResumeDownload] Unauthorized access attempt: resume_id={resume_id}, user_id={user_id}"
+        )
+        flash("You do not have permission to download this resume.", 'danger')
+        return redirect(url_for('resume.upload'))
+        
+    meta = ResumeStorageModel.get_by_resume_id(resume_id)
+    backend_name = meta['backend'] if meta else 'local'
+    object_key = meta['object_key'] if meta else resume.get('filename')
+    
+    if not object_key:
+        flash("Resume file could not be found on storage.", 'danger')
+        return redirect(url_for('resume.upload'))
+        
+    storage = StorageFactory.get_storage(backend_name)
+    if not storage.file_exists(object_key):
+        flash("Resume file could not be found on storage.", 'danger')
+        return redirect(url_for('resume.upload'))
+        
+    ok, content, err = storage.download_file(object_key)
+    if not ok or not content:
+        app_logger.error(f"[ResumeDownload] Download failed for resume_id={resume_id}: {err}")
+        flash("Resume file could not be retrieved from storage.", 'danger')
+        return redirect(url_for('resume.upload'))
+        
+    download_name = resume.get('original_name') or os.path.basename(object_key)
+    return send_file(
+        io.BytesIO(content),
+        mimetype='application/pdf',
+        as_attachment=True,
+        download_name=download_name
+    )
+
+
 @resume_bp.route('/delete/<int:resume_id>', methods=['POST'])
 @login_required
 def delete(resume_id):
-    """Delete a resume."""
-    user_id = session['user_id']
+    """Delete a resume and its storage object safely."""
+    from backend.models.resume_storage import ResumeStorageModel
+    from backend.services.storage_service import StorageFactory
+
+    user_id = session.get('user_id')
     resume = ResumeModel.get_by_id(resume_id)
+    is_admin = session.get('is_admin', False) or session.get('admin_id') is not None
     
-    if resume and resume['user_id'] == user_id:
-        import os
-        filepath = os.path.join(ResumeService.UPLOAD_FOLDER, resume['filename'])
-        if os.path.exists(filepath):
-            os.remove(filepath)
-        ResumeModel.delete(resume_id)
-        flash("Resume deleted.", 'info')
+    if not resume or (resume.get('user_id') != user_id and not is_admin):
+        flash("Unauthorized or resume not found.", 'danger')
+        return redirect(url_for('resume.upload'))
+        
+    meta = ResumeStorageModel.get_by_resume_id(resume_id)
+    backend_name = meta['backend'] if meta else 'local'
+    object_key = meta['object_key'] if meta else resume.get('filename')
+    
+    storage = StorageFactory.get_storage(backend_name)
+    if object_key:
+        del_ok, del_msg = storage.delete_file(object_key)
+        if not del_ok:
+            app_logger.error(f"[ResumeDelete] Storage deletion failed for resume_id={resume_id}: {del_msg}")
+            flash(f"Failed to delete resume file from storage: {del_msg}. Resume record was retained.", 'danger')
+            return redirect(url_for('resume.upload'))
+            
+    ResumeModel.delete(resume_id)
+    ResumeStorageModel.delete_by_resume_id(resume_id)
+    flash("Resume deleted.", 'info')
     
     return redirect(url_for('resume.upload'))
+

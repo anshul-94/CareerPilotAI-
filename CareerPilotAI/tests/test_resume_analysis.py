@@ -25,6 +25,7 @@ from backend.services.resume_service import ResumeService
 class ResumeAnalysisRegressionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        os.environ["DATABASE_PATH"] = "test_regression.db"
         Config.DATABASE_PATH = "test_regression.db"
         if os.path.exists(Config.DATABASE_PATH):
             os.remove(Config.DATABASE_PATH)

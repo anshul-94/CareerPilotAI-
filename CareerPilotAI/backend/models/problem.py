@@ -9,12 +9,14 @@ import json
 
 def migrate_problem_solving_tables():
     """Create all coding platform tables if they do not exist."""
+    from backend.database.db import is_postgres
+    pk_type = "SERIAL PRIMARY KEY" if is_postgres() else "INTEGER PRIMARY KEY AUTOINCREMENT"
     
     # 1. Problems Table
     if not table_exists("problems"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE problems (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 title TEXT NOT NULL,
                 difficulty TEXT NOT NULL, -- Easy, Medium, Hard, Interview, Contest
                 topic TEXT NOT NULL,      -- Arrays, Strings, DP, Trees, Graphs, etc
@@ -38,9 +40,9 @@ def migrate_problem_solving_tables():
 
     # 2. Problem Templates Table
     if not table_exists("problem_templates"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE problem_templates (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 problem_id INTEGER NOT NULL,
                 language TEXT NOT NULL,
                 function_signature TEXT,
@@ -53,9 +55,9 @@ def migrate_problem_solving_tables():
 
     # 3. Test Cases Table
     if not table_exists("problem_test_cases"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE problem_test_cases (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 problem_id INTEGER NOT NULL,
                 input TEXT NOT NULL,
                 expected_output TEXT NOT NULL,
@@ -67,9 +69,9 @@ def migrate_problem_solving_tables():
 
     # 3. Submissions Table
     if not table_exists("problem_submissions"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE problem_submissions (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 user_id INTEGER NOT NULL,
                 problem_id INTEGER NOT NULL,
                 code TEXT NOT NULL,
@@ -79,15 +81,16 @@ def migrate_problem_solving_tables():
                 memory INTEGER DEFAULT 0, -- in KB
                 coding_metrics TEXT,      -- JSON of typing speed, keypresses, deletes, reading time
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
                 FOREIGN KEY (problem_id) REFERENCES problems(id) ON DELETE CASCADE
             )
         """)
 
     # 4. Learning Analytics Table
     if not table_exists("user_problem_analytics"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE user_problem_analytics (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 user_id INTEGER UNIQUE NOT NULL,
                 streak INTEGER DEFAULT 0,
                 confidence_score INTEGER DEFAULT 50,
@@ -98,9 +101,9 @@ def migrate_problem_solving_tables():
 
     # 5. User Topic Scores Table
     if not table_exists("user_topic_scores"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE user_topic_scores (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 user_id INTEGER NOT NULL,
                 topic TEXT NOT NULL,
                 score INTEGER DEFAULT 0,
@@ -110,9 +113,9 @@ def migrate_problem_solving_tables():
 
     # 6. AI Problem Feedback Table
     if not table_exists("ai_problem_feedback"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE ai_problem_feedback (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 submission_id INTEGER NOT NULL,
                 correctness INTEGER, -- Score out of 100
                 time_complexity TEXT,
@@ -135,9 +138,9 @@ def migrate_problem_solving_tables():
 
     # 7. Hints Used Table
     if not table_exists("problem_hints_used"):
-        execute_query("""
+        execute_update(f"""
             CREATE TABLE problem_hints_used (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id {pk_type},
                 user_id INTEGER NOT NULL,
                 problem_id INTEGER NOT NULL,
                 hint_index INTEGER NOT NULL, -- 0 to 4

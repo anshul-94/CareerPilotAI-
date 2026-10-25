@@ -83,12 +83,21 @@ CREATE INDEX IF NOT EXISTS idx_career_profiles_user_id ON career_profiles(user_i
 
 def migrate_career_profile_table() -> None:
     """Run schema migration to add career_profiles table."""
-    from backend.database.db import get_db_path
-    import sqlite3
-    path = get_db_path()
-    with sqlite3.connect(path) as conn:
-        conn.executescript(CAREER_PROFILE_SCHEMA)
-        conn.commit()
+    from backend.database.db import get_db, is_postgres
+    if is_postgres():
+        schema = CAREER_PROFILE_SCHEMA.replace("INTEGER PRIMARY KEY AUTOINCREMENT", "SERIAL PRIMARY KEY")
+        with get_db() as db:
+            for stmt in schema.split(";"):
+                stmt = stmt.strip()
+                if stmt:
+                    db.execute(stmt)
+    else:
+        from backend.database.db import get_db_path
+        import sqlite3
+        path = get_db_path()
+        with sqlite3.connect(path) as conn:
+            conn.executescript(CAREER_PROFILE_SCHEMA)
+            conn.commit()
 
 
 # ─────────────────────────────────────────────────────────────
@@ -123,10 +132,12 @@ class CareerProfileModel:
     @staticmethod
     def create_empty(user_id: int) -> int:
         """Create an empty career profile stub for a new user."""
-        return execute_insert(
-            "INSERT OR IGNORE INTO career_profiles (user_id) VALUES (?)",
-            (user_id,)
-        )
+        from backend.database.db import is_postgres
+        if is_postgres():
+            query = "INSERT INTO career_profiles (user_id) VALUES (%s) ON CONFLICT (user_id) DO NOTHING"
+        else:
+            query = "INSERT OR IGNORE INTO career_profiles (user_id) VALUES (?)"
+        return execute_insert(query, (user_id,))
 
     @staticmethod
     def update_from_resume(user_id: int, resume_data: dict) -> None:

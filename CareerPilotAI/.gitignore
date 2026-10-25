@@ -12,3 +12,11 @@ __pycache__/
 *.pem
 *.key
 *.cert
+
+# Database temporary and backup files
+*.db-shm
+*.db-wal
+database_backup_*.db
+temp_staging_source*
+test_*.db
+

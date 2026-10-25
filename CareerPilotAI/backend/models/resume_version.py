@@ -32,12 +32,21 @@ CREATE INDEX IF NOT EXISTS idx_resume_versions_user_id ON resume_versions(user_i
 
 def migrate_resume_versions_table() -> None:
     """Run schema migration to add resume_versions table."""
-    from backend.database.db import get_db_path
-    import sqlite3
-    path = get_db_path()
-    with sqlite3.connect(path) as conn:
-        conn.executescript(RESUME_VERSIONS_SCHEMA)
-        conn.commit()
+    from backend.database.db import get_db, is_postgres
+    if is_postgres():
+        schema = RESUME_VERSIONS_SCHEMA.replace("INTEGER PRIMARY KEY AUTOINCREMENT", "SERIAL PRIMARY KEY")
+        with get_db() as db:
+            for stmt in schema.split(";"):
+                stmt = stmt.strip()
+                if stmt:
+                    db.execute(stmt)
+    else:
+        from backend.database.db import get_db_path
+        import sqlite3
+        path = get_db_path()
+        with sqlite3.connect(path) as conn:
+            conn.executescript(RESUME_VERSIONS_SCHEMA)
+            conn.commit()
 
 
 class ResumeVersionModel:

@@ -56,13 +56,16 @@
                                 {{ (resume.file_size / 1024)|round(1) }} KB
                             </div>
 
-                            <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem;">
+                            <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; align-items: center;">
                                 <a href="{{ url_for('resume.analyze', resume_id=resume.id) }}" class="btn btn-sm btn-outline">
                                     {% if resume.has_analysis %}
                                         View Analysis (Score: {{ resume.ats_score }})
                                     {% else %}
                                         Run AI Analysis
                                     {% endif %}
+                                </a>
+                                <a href="{{ url_for('resume.download', resume_id=resume.id) }}" class="btn btn-sm btn-ghost" style="display: inline-flex; align-items: center; gap: 4px;" title="Download PDF">
+                                    <i data-lucide="download" style="width: 14px; height: 14px;"></i> Download
                                 </a>
                                 <form action="{{ url_for('resume.delete', resume_id=resume.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this resume?');">
                                     <button type="submit" class="btn btn-sm btn-danger">Delete</button>
@@ -205,8 +208,11 @@
                     ${primaryBadge}
                 </div>
                 <div class="activity-desc">Uploaded on ${escHtml(date)} • ${kb} KB</div>
-                <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem;">
+                <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; align-items: center;">
                     <a href="${analyzeHref}" class="btn btn-sm btn-outline">${analyzeLabel}</a>
+                    <a href="/resume/download/${r.id}" class="btn btn-sm btn-ghost" style="display: inline-flex; align-items: center; gap: 4px;" title="Download PDF">
+                        <i data-lucide="download" style="width: 14px; height: 14px;"></i> Download
+                    </a>
                     <form action="${deleteAction}" method="POST" style="display:inline;"
                           onsubmit="return confirm('Are you sure you want to delete this resume?');">
                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>

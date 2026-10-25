@@ -63,6 +63,19 @@ CREATE TABLE IF NOT EXISTS resume_analysis (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
+-- Resume Storage Metadata Table
+CREATE TABLE IF NOT EXISTS resume_storage_metadata (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    resume_id INTEGER NOT NULL UNIQUE,
+    backend TEXT NOT NULL DEFAULT 'local',
+    bucket_name TEXT DEFAULT '',
+    object_key TEXT NOT NULL,
+    file_size INTEGER DEFAULT 0,
+    content_type TEXT DEFAULT 'application/pdf',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (resume_id) REFERENCES resumes(id) ON DELETE CASCADE
+);
+
 -- Chat Sessions Table
 CREATE TABLE IF NOT EXISTS chat_sessions (
     session_id TEXT PRIMARY KEY,
@@ -202,6 +215,7 @@ CREATE TABLE IF NOT EXISTS sql_queries (
 -- Indexes for Performance
 -- ============================================
 CREATE INDEX IF NOT EXISTS idx_resumes_user_id ON resumes(user_id);
+CREATE INDEX IF NOT EXISTS idx_resume_storage_resume_id ON resume_storage_metadata(resume_id);
 CREATE INDEX IF NOT EXISTS idx_resume_analysis_user_id ON resume_analysis(user_id);
 CREATE INDEX IF NOT EXISTS idx_resume_analysis_resume_id ON resume_analysis(resume_id);
 CREATE INDEX IF NOT EXISTS idx_chat_sessions_user_id ON chat_sessions(user_id);
@@ -218,14 +232,29 @@ CREATE INDEX IF NOT EXISTS idx_sql_queries_user_id ON sql_queries(user_id);
 """
 
 
+def get_postgres_schema_sql() -> str:
+    """Return the base schema SQL adapted for PostgreSQL."""
+    return SCHEMA_SQL.replace("INTEGER PRIMARY KEY AUTOINCREMENT", "SERIAL PRIMARY KEY")
+
+
 def init_db(db_path: str = "database.db") -> None:
-    """Initialize the database with the complete schema."""
-    import sqlite3
-    conn = sqlite3.connect(db_path)
-    conn.executescript(SCHEMA_SQL)
-    conn.commit()
-    conn.close()
-    print(f"[✓] Database initialized at {db_path}")
+    """Initialize the database with the complete base schema."""
+    from backend.database.db import is_postgres, get_db
+    if is_postgres():
+        pg_sql = get_postgres_schema_sql()
+        with get_db() as db:
+            for statement in pg_sql.split(";"):
+                stmt = statement.strip()
+                if stmt:
+                    db.execute(stmt)
+        print("[✓] PostgreSQL base schema initialized.")
+    else:
+        import sqlite3
+        conn = sqlite3.connect(db_path)
+        conn.executescript(SCHEMA_SQL)
+        conn.commit()
+        conn.close()
+        print(f"[✓] Database initialized at {db_path}")
 
 
 def reset_db(db_path: str = "database.db") -> None:

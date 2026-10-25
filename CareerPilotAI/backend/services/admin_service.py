@@ -7,7 +7,7 @@ import bcrypt
 from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 from backend.models.admin import AdminModel
-from backend.database.db import execute_query, execute_one, execute_update
+from backend.database.db import execute_query, execute_one, execute_update, is_postgres
 
 
 class AdminAuthService:
@@ -63,9 +63,12 @@ class AdminAnalyticsService:
         active_users_res = execute_one("SELECT COUNT(*) as c FROM users WHERE is_active = 1")
         active_users = active_users_res["c"] if active_users_res else 0
 
-        new_users_res = execute_one(
-            "SELECT COUNT(*) as c FROM users WHERE created_at >= datetime('now', '-30 days')"
+        new_users_sql = (
+            "SELECT COUNT(*) as c FROM users WHERE created_at >= NOW() - INTERVAL '30 days'"
+            if is_postgres()
+            else "SELECT COUNT(*) as c FROM users WHERE created_at >= datetime('now', '-30 days')"
         )
+        new_users_res = execute_one(new_users_sql)
         new_users = new_users_res["c"] if new_users_res else 0
 
         # Submissions & Problems
@@ -110,7 +113,7 @@ class AdminAnalyticsService:
 
         # Problem Solving Score
         avg_score_res = execute_one(
-            "SELECT ROUND(AVG(overall_score), 1) as avg_score FROM ai_problem_feedback"
+            "SELECT ROUND(CAST(AVG(overall_score) AS NUMERIC), 1) as avg_score FROM ai_problem_feedback"
         )
         avg_problem_score = (
             avg_score_res["avg_score"]
@@ -119,9 +122,12 @@ class AdminAnalyticsService:
         )
 
         # Active Sessions / Recently Active Users (last 7 days)
-        active_sessions_res = execute_one(
-            "SELECT COUNT(*) as c FROM users WHERE last_login >= datetime('now', '-7 days')"
+        active_sessions_sql = (
+            "SELECT COUNT(*) as c FROM users WHERE last_login >= NOW() - INTERVAL '7 days'"
+            if is_postgres()
+            else "SELECT COUNT(*) as c FROM users WHERE last_login >= datetime('now', '-7 days')"
         )
+        active_sessions_res = execute_one(active_sessions_sql)
         active_sessions = (
             active_users_res["c"]
             if active_sessions_res and active_sessions_res["c"] == 0 and active_users > 0
@@ -145,8 +151,9 @@ class AdminAnalyticsService:
     def get_dashboard_chart_data() -> Dict[str, Any]:
         """Fetch aggregated data sets for Chart.js rendering."""
         # 1. User Growth (by day for recent registrations)
-        growth_rows = execute_query("""
-            SELECT substr(created_at, 1, 10) as reg_date, COUNT(*) as count 
+        date_col = "TO_CHAR(created_at, 'YYYY-MM-DD')" if is_postgres() else "substr(CAST(created_at AS TEXT), 1, 10)"
+        growth_rows = execute_query(f"""
+            SELECT {date_col} as reg_date, COUNT(*) as count 
             FROM users 
             GROUP BY reg_date 
             ORDER BY reg_date ASC 
@@ -156,8 +163,8 @@ class AdminAnalyticsService:
         growth_counts = [r["count"] for r in growth_rows]
 
         # 2. Submissions Over Time
-        sub_rows = execute_query("""
-            SELECT substr(created_at, 1, 10) as sub_date, COUNT(*) as count 
+        sub_rows = execute_query(f"""
+            SELECT {date_col} as sub_date, COUNT(*) as count 
             FROM problem_submissions 
             GROUP BY sub_date 
             ORDER BY sub_date ASC 
@@ -579,7 +586,7 @@ class AdminAnalyticsService:
                 COALESCE(sub.avg_runtime, 0) as avg_runtime,
                 CASE 
                     WHEN COALESCE(sub.total_attempts, 0) > 0 
-                    THEN ROUND((CAST(COALESCE(sub.accepted_count, 0) AS REAL) / sub.total_attempts) * 100, 1)
+                    THEN ROUND(CAST(((CAST(COALESCE(sub.accepted_count, 0) AS REAL) / sub.total_attempts) * 100) AS NUMERIC), 1)
                     ELSE 0.0
                 END as acceptance_rate
             FROM problems p
@@ -589,7 +596,7 @@ class AdminAnalyticsService:
                     COUNT(*) as total_attempts,
                     SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted_count,
                     SUM(CASE WHEN status = 'Wrong Answer' THEN 1 ELSE 0 END) as wrong_count,
-                    ROUND(AVG(execution_time), 1) as avg_runtime
+                    ROUND(CAST(AVG(execution_time) AS NUMERIC), 1) as avg_runtime
                 FROM problem_submissions
                 GROUP BY problem_id
             ) sub ON p.id = sub.problem_id
@@ -615,7 +622,7 @@ class AdminAnalyticsService:
             SELECT p.title, COUNT(ps.id) as count 
             FROM problem_submissions ps 
             JOIN problems p ON ps.problem_id = p.id 
-            GROUP BY ps.problem_id 
+            GROUP BY p.id, p.title 
             ORDER BY count DESC LIMIT 1
         """)
         most_solved = execute_one("""
@@ -623,7 +630,7 @@ class AdminAnalyticsService:
             FROM problem_submissions ps 
             JOIN problems p ON ps.problem_id = p.id 
             WHERE ps.status = 'Accepted'
-            GROUP BY ps.problem_id 
+            GROUP BY p.id, p.title 
             ORDER BY count DESC LIMIT 1
         """)
         most_failed = execute_one("""
@@ -631,17 +638,17 @@ class AdminAnalyticsService:
             FROM problem_submissions ps 
             JOIN problems p ON ps.problem_id = p.id 
             WHERE ps.status != 'Accepted'
-            GROUP BY ps.problem_id 
+            GROUP BY p.id, p.title 
             ORDER BY count DESC LIMIT 1
         """)
         most_difficult = execute_one("""
             SELECT p.title, 
                    COUNT(ps.id) as total,
-                   ROUND(SUM(CASE WHEN ps.status='Accepted' THEN 1.0 ELSE 0.0 END) / COUNT(ps.id) * 100, 1) as rate
+                   ROUND(CAST(SUM(CASE WHEN ps.status='Accepted' THEN 1.0 ELSE 0.0 END) / COUNT(ps.id) * 100 AS NUMERIC), 1) as rate
             FROM problem_submissions ps
             JOIN problems p ON ps.problem_id = p.id
-            GROUP BY ps.problem_id
-            HAVING total >= 2
+            GROUP BY p.id, p.title
+            HAVING COUNT(ps.id) >= 2
             ORDER BY rate ASC, total DESC LIMIT 1
         """)
 
@@ -690,8 +697,9 @@ class AdminAnalyticsService:
         """)
 
         # 3. Daily Requests (last 7 days)
-        daily_requests = execute_query("""
-            SELECT substr(created_at, 1, 10) as day_date, COUNT(*) as count 
+        day_date_expr = "TO_CHAR(created_at, 'YYYY-MM-DD')" if is_postgres() else "substr(CAST(created_at AS TEXT), 1, 10)"
+        daily_requests = execute_query(f"""
+            SELECT {day_date_expr} as day_date, COUNT(*) as count 
             FROM chat_history 
             GROUP BY day_date 
             ORDER BY day_date DESC 
@@ -699,8 +707,9 @@ class AdminAnalyticsService:
         """)
 
         # 4. Weekly Requests (approx by week)
-        weekly_requests = execute_query("""
-            SELECT strftime('%Y-W%W', created_at) as week_num, COUNT(*) as count
+        week_expr = "TO_CHAR(created_at, 'YYYY-\"W\"WW')" if is_postgres() else "strftime('%Y-W%W', created_at)"
+        weekly_requests = execute_query(f"""
+            SELECT {week_expr} as week_num, COUNT(*) as count
             FROM chat_history
             GROUP BY week_num
             ORDER BY week_num DESC
@@ -708,8 +717,9 @@ class AdminAnalyticsService:
         """)
 
         # 5. Monthly Requests
-        monthly_requests = execute_query("""
-            SELECT strftime('%Y-%m', created_at) as month_num, COUNT(*) as count
+        month_expr = "TO_CHAR(created_at, 'YYYY-MM')" if is_postgres() else "strftime('%Y-%m', created_at)"
+        monthly_requests = execute_query(f"""
+            SELECT {month_expr} as month_num, COUNT(*) as count
             FROM chat_history
             GROUP BY month_num
             ORDER BY month_num DESC

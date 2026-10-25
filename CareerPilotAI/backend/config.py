@@ -13,12 +13,14 @@ class BaseConfig:
     ENVIRONMENT = os.getenv('ENVIRONMENT', 'development').lower()
     
     # Flask Settings
-    SECRET_KEY = os.getenv('SECRET_KEY', 'careerpilot-dev-secret-key')
+    SECRET_KEY = os.getenv('SECRET_KEY', os.getenv('FLASK_SECRET_KEY', 'careerpilot-dev-secret-key'))
     DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
     PORT = int(os.getenv('PORT', os.getenv('FLASK_PORT', 5000)))
     
     # Database
     DATABASE_PATH = os.getenv('DATABASE_PATH', 'database.db')
+    DATABASE_URL = os.getenv('DATABASE_URL', '')
+    DB_ENGINE = 'postgresql' if os.getenv('DATABASE_URL', '').strip() else 'sqlite'
     
     # AI Routing Logic (Determined by .env flags)
     USE_OLLAMA = os.getenv('USE_OLLAMA', 'False').lower() == 'true'
@@ -61,6 +63,11 @@ class BaseConfig:
     # Uploads & Cache
     MAX_UPLOAD_SIZE_MB = int(os.getenv('MAX_UPLOAD_SIZE', 10485760)) / 1024 / 1024
     UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', 'static/uploads')
+    RESUME_STORAGE_BACKEND = os.getenv('RESUME_STORAGE_BACKEND', 'local').lower()
+    SUPABASE_URL = os.getenv('SUPABASE_URL', '').rstrip('/')
+    SUPABASE_SERVICE_ROLE_KEY = os.getenv('SUPABASE_SERVICE_ROLE_KEY', '')
+    SUPABASE_RESUME_BUCKET = os.getenv('SUPABASE_RESUME_BUCKET', 'careerpilot-resumes')
+    SUPABASE_TIMEOUT = int(os.getenv('SUPABASE_TIMEOUT', 30))
     CACHE_DIR = os.getenv('CACHE_DIR', 'backend/cache/data')
     CACHE_TTL = int(os.getenv('CACHE_TTL_SECONDS', 3600))
     LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')

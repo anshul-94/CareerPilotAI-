@@ -31,3 +31,9 @@ markdown==3.7
 # Groq AI SDK (required for production / Render deployment)
 # Not needed for local Ollama development
 groq>=0.11.0
+
+# PostgreSQL Database Driver
+psycopg2-binary>=2.9.9
+
+# Production WSGI Server (Render / Linux Deployment)
+gunicorn>=22.0.0

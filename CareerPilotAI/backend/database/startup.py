@@ -9,14 +9,20 @@ from backend.models.job_notification import migrate_notification_tables
 from backend.models.chat import migrate_chat_sessions_table
 from backend.models.problem import migrate_problem_solving_tables
 from backend.models.admin import migrate_admin_tables
+from backend.models.resume_storage import migrate_resume_storage_table
 
 def initialize_database():
     """Run all database creation and migrations in one place."""
+    from backend.database.db import is_postgres, table_exists
     
     # 1. Base Schema (users, resumes, projects, code_reviews, etc)
-    db_path = Config.DATABASE_PATH
-    if not os.path.exists(db_path):
-        init_db(db_path)
+    if is_postgres():
+        if not table_exists("users"):
+            init_db()
+    else:
+        db_path = Config.DATABASE_PATH
+        if not os.path.exists(db_path):
+            init_db(db_path)
     
     print("\nInitializing database...\n", flush=True)
     
@@ -26,6 +32,9 @@ def initialize_database():
     
     migrate_resume_versions_table()
     print("\n[✓] resume_versions", flush=True)
+
+    migrate_resume_storage_table()
+    print("\n[✓] resume_storage_metadata", flush=True)
     
     migrate_notification_tables()
     print("\n[✓] notification_agent", flush=True)

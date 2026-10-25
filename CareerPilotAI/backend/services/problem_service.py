@@ -11,7 +11,7 @@ from io import StringIO
 from typing import Optional, Tuple
 from multiprocessing import Process, Queue
 
-from backend.database.db import execute_query, execute_one, execute_insert, execute_update
+from backend.database.db import execute_query, execute_one, execute_insert, execute_update, is_postgres
 from backend.ai.providers import get_provider
 
 class ProblemService:
@@ -332,8 +332,9 @@ class ProblemService:
         acceptance_rate = round((accepted_submissions / total_submissions * 100), 1) if total_submissions > 0 else 0.0
         
         # 4. Streak calculations (consecutive daily accepted submissions)
-        history_dates = execute_query("""
-            SELECT DISTINCT date(created_at) as sub_date 
+        sub_date_expr = "TO_CHAR(created_at, 'YYYY-MM-DD')" if is_postgres() else "date(created_at)"
+        history_dates = execute_query(f"""
+            SELECT DISTINCT {sub_date_expr} as sub_date 
             FROM problem_submissions 
             WHERE user_id = ? AND status = 'Accepted'
             ORDER BY sub_date DESC
@@ -345,7 +346,7 @@ class ProblemService:
             today_str = date.today().isoformat()
             yesterday_str = (date.today() - timedelta(days=1)).isoformat()
             
-            sub_dates_set = {row["sub_date"] for row in history_dates}
+            sub_dates_set = {str(row["sub_date"]) for row in history_dates if row.get("sub_date")}
             
             if today_str in sub_dates_set:
                 current_date = date.today()
@@ -470,25 +471,46 @@ class ProblemService:
             })
             
         # 10. Daily Heatmap (GitHub style, past 365 days)
-        heatmap_data = execute_query("""
-            SELECT date(created_at) as day, COUNT(*) as count
-            FROM problem_submissions
-            WHERE user_id = ? AND status = 'Accepted' AND created_at >= date('now', '-365 days')
-            GROUP BY day
-        """, (user_id,))
-        heatmap = {h["day"]: h["count"] for h in heatmap_data}
+        if is_postgres():
+            heatmap_query = """
+                SELECT TO_CHAR(created_at, 'YYYY-MM-DD') as day, COUNT(*) as count
+                FROM problem_submissions
+                WHERE user_id = ? AND status = 'Accepted' AND created_at >= CURRENT_DATE - INTERVAL '365 days'
+                GROUP BY TO_CHAR(created_at, 'YYYY-MM-DD')
+            """
+        else:
+            heatmap_query = """
+                SELECT date(created_at) as day, COUNT(*) as count
+                FROM problem_submissions
+                WHERE user_id = ? AND status = 'Accepted' AND created_at >= date('now', '-365 days')
+                GROUP BY day
+            """
+        heatmap_data = execute_query(heatmap_query, (user_id,))
+        heatmap = {str(h["day"]): h["count"] for h in heatmap_data if h.get("day")}
         
         # 11. Timeline Graph (last 30 days)
-        timeline_data = execute_query("""
-            SELECT date(created_at) as day, 
-                   SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted,
-                   SUM(CASE WHEN status != 'Accepted' THEN 1 ELSE 0 END) as failed
-            FROM problem_submissions
-            WHERE user_id = ? AND created_at >= date('now', '-30 days')
-            GROUP BY day
-            ORDER BY day ASC
-        """, (user_id,))
-        timeline = [{"day": t["day"], "accepted": t["accepted"], "failed": t["failed"]} for t in timeline_data]
+        if is_postgres():
+            timeline_query = """
+                SELECT TO_CHAR(created_at, 'YYYY-MM-DD') as day, 
+                       SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted,
+                       SUM(CASE WHEN status != 'Accepted' THEN 1 ELSE 0 END) as failed
+                FROM problem_submissions
+                WHERE user_id = ? AND created_at >= CURRENT_DATE - INTERVAL '30 days'
+                GROUP BY TO_CHAR(created_at, 'YYYY-MM-DD')
+                ORDER BY day ASC
+            """
+        else:
+            timeline_query = """
+                SELECT date(created_at) as day, 
+                       SUM(CASE WHEN status = 'Accepted' THEN 1 ELSE 0 END) as accepted,
+                       SUM(CASE WHEN status != 'Accepted' THEN 1 ELSE 0 END) as failed
+                FROM problem_submissions
+                WHERE user_id = ? AND created_at >= date('now', '-30 days')
+                GROUP BY day
+                ORDER BY day ASC
+            """
+        timeline_data = execute_query(timeline_query, (user_id,))
+        timeline = [{"day": str(t["day"]), "accepted": t["accepted"], "failed": t["failed"]} for t in timeline_data if t.get("day")]
         
         # 12. Company Progress
         company_list = ["Google", "Amazon", "Microsoft", "Meta", "Adobe", "Uber", "Oracle"]

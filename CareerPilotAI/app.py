@@ -44,7 +44,7 @@ Version         : 1.0.0
 Environment     : {Config.ENVIRONMENT.capitalize()}
 Provider        : {Config.AI_PROVIDER.capitalize()}
 Model           : {Config.OLLAMA_MODEL if Config.AI_PROVIDER == 'ollama' else Config.GROQ_MODEL}
-Database        : SQLite
+Database        : {Config.DB_ENGINE.capitalize()}
 Scheduler       : Active
 Redis           : Disabled
 Background Jobs : Active

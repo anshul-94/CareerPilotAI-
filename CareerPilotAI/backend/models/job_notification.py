@@ -109,12 +109,21 @@ CREATE INDEX IF NOT EXISTS idx_agent_runs_user_id ON agent_runs(user_id);
 
 def migrate_notification_tables() -> None:
     """Run schema migration to add notification agent tables."""
-    from backend.database.db import get_db_path
-    import sqlite3
-    path = get_db_path()
-    with sqlite3.connect(path) as conn:
-        conn.executescript(NOTIFICATION_SCHEMA_SQL)
-        conn.commit()
+    from backend.database.db import get_db, is_postgres
+    if is_postgres():
+        schema = NOTIFICATION_SCHEMA_SQL.replace("INTEGER PRIMARY KEY AUTOINCREMENT", "SERIAL PRIMARY KEY")
+        with get_db() as db:
+            for stmt in schema.split(";"):
+                stmt = stmt.strip()
+                if stmt:
+                    db.execute(stmt)
+    else:
+        from backend.database.db import get_db_path
+        import sqlite3
+        path = get_db_path()
+        with sqlite3.connect(path) as conn:
+            conn.executescript(NOTIFICATION_SCHEMA_SQL)
+            conn.commit()
 
 
 # ─────────────────────────────────────────────────────────────

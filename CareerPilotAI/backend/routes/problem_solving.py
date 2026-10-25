@@ -7,7 +7,7 @@ from flask import Blueprint, render_template, request, jsonify, session, redirec
 import json
 from backend.utils.decorators import login_required, api_login_required
 from backend.services.problem_service import ProblemService
-from backend.database.db import execute_insert, execute_update, execute_one
+from backend.database.db import execute_insert, execute_update, execute_one, is_postgres
 
 problem_solving_bp = Blueprint('problem_solving', __name__, url_prefix='/problem_solving')
 
@@ -152,17 +152,31 @@ def submit_code(problem_id: int):
         
         # Update stats
         if result["status"] == "Accepted":
-            execute_update("""
-                INSERT INTO user_problem_analytics (user_id, streak, last_submission_at)
-                VALUES (?, 1, date('now'))
-                ON CONFLICT(user_id) DO UPDATE SET 
-                    streak = CASE 
-                        WHEN last_submission_at = date('now', '-1 day') THEN streak + 1
-                        WHEN last_submission_at = date('now') THEN streak
-                        ELSE 1
-                    END,
-                    last_submission_at = date('now')
-            """, (user_id,))
+            if is_postgres():
+                streak_sql = """
+                    INSERT INTO user_problem_analytics (user_id, streak, last_submission_at)
+                    VALUES (?, 1, TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD'))
+                    ON CONFLICT(user_id) DO UPDATE SET 
+                        streak = CASE 
+                            WHEN user_problem_analytics.last_submission_at = TO_CHAR(CURRENT_DATE - INTERVAL '1 day', 'YYYY-MM-DD') THEN user_problem_analytics.streak + 1
+                            WHEN user_problem_analytics.last_submission_at = TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD') THEN user_problem_analytics.streak
+                            ELSE 1
+                        END,
+                        last_submission_at = TO_CHAR(CURRENT_DATE, 'YYYY-MM-DD')
+                """
+            else:
+                streak_sql = """
+                    INSERT INTO user_problem_analytics (user_id, streak, last_submission_at)
+                    VALUES (?, 1, date('now'))
+                    ON CONFLICT(user_id) DO UPDATE SET 
+                        streak = CASE 
+                            WHEN last_submission_at = date('now', '-1 day') THEN streak + 1
+                            WHEN last_submission_at = date('now') THEN streak
+                            ELSE 1
+                        END,
+                        last_submission_at = date('now')
+                """
+            execute_update(streak_sql, (user_id,))
             
         # 3. Analyze solution via AI mentor ONLY if Accepted
         ai_feedback = None
