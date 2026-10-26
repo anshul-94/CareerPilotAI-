@@ -17,6 +17,9 @@
     }
 }
 
+
+
+
 /* ─── Control Panel (Left Sidebar) ─── */
 .control-panel {
     background: var(--bg-secondary);
@@ -323,4 +326,3 @@
 [data-theme="light"] .resume-modern li {
     color: #44372F;
 }
-

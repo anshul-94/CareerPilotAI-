@@ -15,3 +15,21 @@ __pycache__/
 
 # OS files
 .DS_Store
+*/.DS_Store
+
+# Local logs
+*.log
+logs/
+CareerPilotAI/logs/
+
+# Database backups & temporary files
+*.db-shm
+*.db-wal
+database_backup_*.db
+temp_staging_source*
+test_*.db
+*.dump
+
+# Local Virtual Environments
+venv/
+CareerPilotAI/venv/
